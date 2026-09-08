@@ -1248,4 +1248,152 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
  document.addEventListener('mouseout',e=>{if(e.target.closest&&e.target.closest('[data-gloss]')&&typeof hideTip==='function')hideTip();});
 })();
 </script>
+<!-- ===== Use-case-first tab shell + Choose-a-model app (client-side) ===== -->
+<style>
+ .tabnav{display:flex;gap:3px;flex-wrap:nowrap;overflow-x:auto;max-width:100%}
+ .tabnav::-webkit-scrollbar{height:0}
+ .tabbtn{font-family:var(--mono);font-size:12.5px;color:var(--mut);background:none;border:none;border-radius:8px;cursor:pointer;padding:7px 11px;white-space:nowrap}
+ .tabbtn:hover{color:var(--ink)}
+ .tabbtn.on{background:var(--acc);color:#0a0f1a;font-weight:600}
+ .chapdiv{display:none!important}
+ #use{display:none!important}
+ [data-atab][hidden]{display:none!important}
+ /* home use-case cards */
+ #uc-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin-top:22px}
+ .uc-card{text-align:left;background:var(--surface2);border:1px solid var(--line);border-radius:14px;padding:18px 18px 16px;cursor:pointer;transition:border-color .15s,transform .15s}
+ .uc-card:hover{border-color:var(--acc);transform:translateY(-2px)}
+ .uc-card .n{font-family:var(--mono);font-size:12px;color:var(--acc)}
+ .uc-card h3{margin:8px 0 6px;font-size:18px;color:var(--ink);line-height:1.2}
+ .uc-card p{margin:0;color:var(--mut);font-size:13.5px;line-height:1.5}
+ .uc-card .go{margin-top:12px;font-family:var(--mono);font-size:11.5px;color:var(--acc)}
+ /* chooser */
+ #choose-needs{display:flex;flex-wrap:wrap;gap:9px;margin-top:14px}
+ .needchip{font-family:var(--mono);font-size:12.5px;color:var(--mut);background:var(--surface2);border:1px solid var(--line2);border-radius:20px;padding:7px 14px;cursor:pointer;user-select:none}
+ .needchip.on{background:var(--acc);color:#0a0f1a;border-color:var(--acc);font-weight:600}
+ .rec-card{display:flex;gap:14px;align-items:flex-start;background:var(--surface2);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:11px;padding:13px 15px;margin-top:10px}
+ .rec-rank{font-family:var(--mono);font-size:20px;font-weight:700;color:var(--acc);min-width:26px}
+ .rec-name{font-family:var(--mono);font-weight:700;font-size:15px;color:var(--ink)}
+ .rec-why{color:var(--mut);font-size:13px;margin-top:3px;line-height:1.5}
+ .rec-why b{color:var(--ink)}
+ table.choose{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px}
+ table.choose th{text-align:right;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.4px;color:var(--faint);padding:8px 10px;border-bottom:1px solid var(--line2);cursor:pointer;white-space:nowrap}
+ table.choose th:first-child,table.choose td:first-child{text-align:left}
+ table.choose th.sorton{color:var(--acc)}
+ table.choose td{padding:9px 10px;border-bottom:1px solid var(--line);color:var(--mut);text-align:right}
+ table.choose td.m{font-family:var(--mono);color:var(--ink);text-align:left}
+ table.choose tr.hi td{background:color-mix(in srgb,var(--acc) 9%,transparent)}
+ .bar{display:inline-block;height:7px;border-radius:4px;background:linear-gradient(90deg,var(--teal),var(--acc));vertical-align:middle;margin-left:6px}
+</style>
+<script>
+(function(){
+ const D=JSON.parse(document.getElementById('atlas-data').textContent);
+ const MODELS=D.models.slice();
+ const MCOL={AIDO:'#5b8cff',UCE:'#f0629b',tGPT:'#2fc6b6',Geneformer:'#a884ff',scGPT:'#ffb14d',C2S:'#ff6079',MaxToki:'#5ad1e6',Tahoe:'#4dd07a',scFoundation:'#e8c34a',GeneCompass:'#cf6dd6'};
+ const NAME={C2S:'C2S-Scale',Tahoe:'Tahoe-x1',Geneformer:'Geneformer',AIDO:'AIDO.Cell'};
+ const nm=m=>NAME[m]||m;
+ const pmM=s=>{s=String(s).replace('~','');const n=parseFloat(s)||0;return /B/i.test(s)?n*1000:n;};
+ // tissue-invariance from the tissue×depth analysis (masked/rank objectives stay tissue-invariant)
+ const TISS_INV=new Set(['AIDO','Geneformer','tGPT']);
+
+ // per-model profile from the data
+ const P={};
+ MODELS.forEach(m=>{const c=D.coverage[m]||{},s=D.svd[m]||{};
+  P[m]={params:D.params[m]||'—',pm:pmM(D.params[m]),axis:c.axis||'—',annot:c.annot_rate||0,concepts:c.n_concepts||0,
+        tiss:TISS_INV.has(m),sae:(s.sae_var||0)*100};});
+ const rng=k=>{const v=MODELS.map(m=>P[m][k]);const lo=Math.min(...v),hi=Math.max(...v);return m=>hi>lo?(P[m][k]-lo)/(hi-lo):0.5;};
+ const nInterp=rng('annot'),nCover=rng('concepts'),nSize=rng('pm');
+ const NEEDS=[
+  {id:'interp',label:'Interpretable pathway features',score:m=>nInterp(m),why:m=>`highest annotation rate (<b>${P[m].annot}%</b> of features map to a pathway)`},
+  {id:'cover',label:'Widest concept coverage',score:m=>nCover(m),why:m=>`broadest vocabulary (<b>${P[m].concepts.toLocaleString()}</b> distinct concepts)`},
+  {id:'tiss',label:'Tissue-invariant (transfers across organs)',score:m=>P[m].tiss?1:0,why:m=>P[m].tiss?`stays <b>tissue-invariant</b> with depth`:`binds tissue with depth`},
+  {id:'small',label:'Small / fast',score:m=>1-nSize(m),why:m=>`compact (<b>${P[m].params}</b> params)`},
+  {id:'large',label:'Large / high-capacity',score:m=>nSize(m),why:m=>`most capacity (<b>${P[m].params}</b> params)`},
+ ];
+ let sel=new Set();
+
+ // ---- build the Choose section ----
+ const sec=document.createElement('section');sec.id='usecase-choose';
+ sec.innerHTML=`<div class="wrap">
+   <div class="sec-head"><div class="sec-q">use case · for scientists</div>
+    <h2>Choose the right model for your task</h2>
+    <p class="sec-sub">Tell the atlas what you need — it ranks the ten models on the evidence measured here (annotation rate, concept coverage, tissue behaviour, scale). Pick one or more needs; the full comparison table is below.</p></div>
+   <div class="panel"><div class="ptitle">What do you need?</div>
+     <div id="choose-needs"></div>
+     <div id="choose-rec" style="margin-top:16px"></div></div>
+   <div class="panel" style="margin-top:14px"><div class="ptitle">Compare all ten — click a column to sort</div>
+     <div style="overflow-x:auto"><table class="choose" id="choose-table"></table></div>
+     <div class="pnote" style="margin-top:8px">Interpretability = % of features that map to a curated pathway. Coverage = distinct concepts. Tissue from the tissue×depth analysis. SAE var = reconstruction at matched sparsity. All numbers are from this atlas.</div></div>
+   </div>`;
+ (document.getElementById('intro')||document.body).insertAdjacentElement('afterend',sec);
+
+ const needsEl=sec.querySelector('#choose-needs');
+ needsEl.innerHTML=NEEDS.map(n=>`<span class="needchip" data-n="${n.id}">${n.label}</span>`).join('');
+ needsEl.querySelectorAll('.needchip').forEach(c=>c.onclick=()=>{c.classList.toggle('on');const id=c.dataset.n;sel.has(id)?sel.delete(id):sel.add(id);renderRec();renderTable();});
+
+ function scoreOf(m){if(!sel.size)return null;let s=0;NEEDS.forEach(n=>{if(sel.has(n.id))s+=n.score(m);});return s/sel.size;}
+ function renderRec(){const el=sec.querySelector('#choose-rec');
+   if(!sel.size){el.innerHTML='<div class="pnote">Pick one or more needs above to get a ranked recommendation — or just read the table.</div>';return;}
+   const ranked=MODELS.map(m=>({m,s:scoreOf(m)})).sort((a,b)=>b.s-a.s).slice(0,3);
+   el.innerHTML='<div class="ptitle" style="margin-bottom:2px">Recommended</div>'+ranked.map((r,i)=>{
+     const reasons=NEEDS.filter(n=>sel.has(n.id)).sort((a,b)=>b.score(r.m)-a.score(r.m)).slice(0,2).map(n=>n.why(r.m)).join('; ');
+     return `<div class="rec-card" style="border-left-color:${MCOL[r.m]||'var(--acc)'}"><div class="rec-rank">${i+1}</div><div><div class="rec-name" style="color:${MCOL[r.m]||'var(--ink)'}">${nm(r.m)}</div><div class="rec-why">${reasons}. <span style="color:var(--faint)">${P[r.m].axis}</span></div></div></div>`;}).join('');
+ }
+ let sortKey='concepts',sortDir=-1;
+ const COLS=[['model','Model','m'],['params','Params','pm'],['axis','Inductive axis','axis'],['annot','Interpretability','annot'],['concepts','Coverage','concepts'],['tiss','Tissue','tiss'],['sae','SAE var','sae']];
+ function renderTable(){const t=sec.querySelector('#choose-table');
+   const rows=MODELS.map(m=>({m,...P[m],rec:sel.size?scoreOf(m):null}))
+     .sort((a,b)=> sortKey==='m'? a.m.localeCompare(b.m)*(-sortDir) : (b[sortKey]>a[sortKey]?1:-1)*(-sortDir)*-1 );
+   // header
+   let h='<tr>'+COLS.map(c=>`<th data-k="${c[2]}" class="${sortKey===c[2]?'sorton':''}">${c[1]}${sortKey===c[2]?(sortDir<0?' ▾':' ▴'):''}</th>`).join('')+'</tr>';
+   const topRec=sel.size?rows.slice().sort((a,b)=>b.rec-a.rec)[0].m:null;
+   const cmax=Math.max(...MODELS.map(m=>P[m].concepts)),amax=Math.max(...MODELS.map(m=>P[m].annot));
+   h+=rows.map(r=>`<tr class="${r.m===topRec?'hi':''}">
+     <td class="m" style="color:${MCOL[r.m]||'var(--ink)'}">${nm(r.m)}</td>
+     <td>${r.params}</td>
+     <td style="text-align:left;color:var(--faint);font-size:12px">${r.axis}</td>
+     <td>${r.annot}%<span class="bar" style="width:${Math.round(38*r.annot/amax)}px"></span></td>
+     <td>${r.concepts.toLocaleString()}<span class="bar" style="width:${Math.round(38*r.concepts/cmax)}px"></span></td>
+     <td style="color:${r.tiss?'var(--teal)':'var(--faint)'}">${r.tiss?'invariant':'specialises'}</td>
+     <td>${r.sae.toFixed(0)}%</td></tr>`).join('');
+   t.innerHTML=h;
+   t.querySelectorAll('th').forEach(th=>th.onclick=()=>{const k=th.dataset.k;if(k===sortKey)sortDir*=-1;else{sortKey=k;sortDir=(k==='m'||k==='axis')?1:-1;}renderTable();});
+ }
+ renderRec();renderTable();
+
+ // ---- home use-case cards ----
+ const cards=document.createElement('div');cards.id='uc-cards';
+ cards.innerHTML=[
+  ['choose','①','Choose a model for your task','Scientists: tell the atlas what you need — interpretable features, broad coverage, tissue-invariance, scale — and get a ranked, evidence-backed pick.','Open the chooser →'],
+  ['compare','②','Compare models (for developers)','Benchmark a new model against the ten: cross-model similarity (CKA), concept coverage, and how much of the calibrated shared backbone it recovers.','Open the comparison →'],
+  ['genes','③','Explore genes & new biology','Search any gene to see where it is encoded and what it links to — and mine the unannotated consensus several models agree on for potentially hidden biology.','Open gene search →'],
+ ].map(c=>`<button class="uc-card" data-go="${c[0]}"><div class="n">${c[1]}</div><h3>${c[2]}</h3><p>${c[3]}</p><div class="go">${c[4]}</div></button>`).join('');
+ const hdr=document.querySelector('header#overview .wrap');if(hdr)hdr.appendChild(cards);
+
+ // ---- tab shell ----
+ const TABS=[{id:'home',label:'Overview'},{id:'choose',label:'① Choose a model'},{id:'compare',label:'② Compare'},{id:'genes',label:'③ Genes & biology'},{id:'findings',label:'Findings'}];
+ const TABMAP={overview:'home',intro:'home','usecase-choose':'choose',
+   universality:'compare',coverage:'compare',cka:'compare',lineage:'compare',emerge:'compare',economy:'compare',
+   genes:'genes',novel:'genes',explorer:'genes',
+   depth:'findings',tissue:'findings',svd:'findings',linearity:'findings',flow:'findings',modules:'findings',axis:'findings',circuits:'findings',controls:'findings',roster:'findings'};
+ Object.keys(TABMAP).forEach(id=>{const el=document.getElementById(id);if(el)el.dataset.atab=TABMAP[id];});
+ const links=document.querySelector('nav .links');if(links){links.classList.add('tabnav');links.innerHTML=TABS.map(t=>`<button class="tabbtn" data-t="${t.id}">${t.label}</button>`).join('');}
+ let cur='home';
+ function show(tab){cur=tab;
+   document.querySelectorAll('[data-atab]').forEach(el=>{el.hidden=(el.dataset.atab!==tab);});
+   document.querySelectorAll('.tabbtn').forEach(b=>b.classList.toggle('on',b.dataset.t===tab));
+   window.scrollTo({top:0,behavior:'instant'});
+   requestAnimationFrame(()=>{window.dispatchEvent(new Event('resize'));try{if(tab==='genes'&&typeof exRender==='function')exRender();}catch(e){}});
+ }
+ document.querySelectorAll('.tabbtn').forEach(b=>b.onclick=()=>show(b.dataset.t));
+ document.querySelectorAll('.uc-card').forEach(c=>c.onclick=()=>show(c.dataset.go));
+ // cross-tab in-page links: switch to the target's tab, then scroll to it
+ document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;
+   const id=a.getAttribute('href').slice(1);const t=document.getElementById(id);if(!t)return;
+   const owner=t.closest('[data-atab]')||t;const tab=owner.dataset?owner.dataset.atab:null;
+   if(tab&&tab!==cur){e.preventDefault();show(tab);setTimeout(()=>t.scrollIntoView({behavior:'smooth',block:'start'}),40);}
+ });
+ show('home');
+})();
+</script>
+
 </body></html>
