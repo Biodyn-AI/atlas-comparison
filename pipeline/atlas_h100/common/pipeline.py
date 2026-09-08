@@ -12,12 +12,14 @@ def extract(adapter, adata, out_dir: str, batch_size: int = 8, max_positions: in
     """Run the adapter over the corpus, store per-layer activation memmaps + gene symbols."""
     os.makedirs(out_dir, exist_ok=True)
     buffers = {L: [] for L in adapter.layers}
-    syms_all = []
+    syms_all = []; cells_all = []
     total = 0
-    for acts, syms, *_ in adapter.iter_activations(adata, batch_size=batch_size):
+    for acts, syms, *rest in adapter.iter_activations(adata, batch_size=batch_size):
         for L in adapter.layers:
             buffers[L].append(acts[L])
         syms_all.append(syms)
+        if rest and rest[0] is not None:            # per-position cell ids (enables split-half by cell for held-out control)
+            cells_all.append(np.asarray(rest[0]))
         total += len(syms)
         if total >= max_positions:
             break
@@ -28,6 +30,8 @@ def extract(adapter, adata, out_dir: str, batch_size: int = 8, max_positions: in
         p = os.path.join(out_dir, f"layer_{L:02d}_activations.npy")
         np.save(p, A); paths[L] = p
     np.save(os.path.join(out_dir, "gene_symbols.npy"), syms)
+    if cells_all:
+        np.save(os.path.join(out_dir, "cell_ids.npy"), np.concatenate(cells_all))
     log(f"    extracted {total} positions x {adapter.d_model}d over layers {list(adapter.layers)}")
     return paths, syms
 

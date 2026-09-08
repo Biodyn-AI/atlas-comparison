@@ -58,8 +58,13 @@ def catof(term):
 
 
 def main():
-    mat = load("matrix_ts3_string.json")
-    assert mat, "need matrix_ts3_string.json (run reannotate_string.py with 8 models first)"
+    # prefer the ALL-LAYER concept matrix (union across every layer) when present; fall back to mid-layer.
+    mat = load("matrix_alllayer.json")
+    if mat:
+        print("  using ALL-LAYER concept matrix (matrix_alllayer.json)")
+    else:
+        mat = load("matrix_ts3_string.json")
+    assert mat, "need matrix_alllayer.json or matrix_ts3_string.json"
     models = [m for m in ORDER if m in mat]
     n = len(models)
     print(f"assembling {n} models: {models}", flush=True)
@@ -298,6 +303,10 @@ def main():
         ("module_themes", "module_themes.json", lambda x: x),
         ("flow", "flow_alllayers.json", lambda x: x),
         ("celltype", "celltype_difficulty.json", lambda x: x),
+        ("topn", "topn_sweep.json", lambda x: x),
+        ("gsea", "gsea_annot.json", lambda x: x),
+        ("controls", "controls.json", lambda x: x),
+        ("depth_calibrated", "depth_calibrated.json", lambda x: x),
         ("findings", "findings.json", lambda x: x),
     ]:
         v = load(fname)

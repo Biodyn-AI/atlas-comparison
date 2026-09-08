@@ -8,8 +8,9 @@ from __future__ import annotations
 import json, re, os
 
 C = "/Users/annaantipova/Desktop/biomech/outputs/atlas/comparative"
-SCRATCH = "/private/tmp/claude-501/-Users-annaantipova-Desktop-biomech/cff4254a-ea2f-48db-929f-897776ca3413/scratchpad"
-TEMPLATE = f"{SCRATCH}/atlas_ts3.html"
+REPO = "/Users/annaantipova/Desktop/biomech/comparative-sae-atlas"
+TEMPLATE = f"{REPO}/pipeline/atlas_template.html"  # canonical editable markup (data blocks are __DATA__ placeholders)
+OUT = "/Users/annaantipova/Desktop/biomech/outputs/atlas/comparative"  # builds land here; deploy = copy full -> REPO/index.html
 
 DATA = {
     "modules-data": f"{C}/modules_alllayers.json",
@@ -81,5 +82,6 @@ def build(explorer_path, out_path, label):
 
 
 if __name__ == "__main__":
-    build(f"{C}/explorer_slim_light.json", f"{SCRATCH}/atlas_ts3_light.html", "LIGHT")
-    build(f"{C}/explorer_slim_full.json", f"{SCRATCH}/atlas_ts3.html", "FULL")
+    build(f"{C}/explorer_slim_light.json", f"{OUT}/atlas_ts3_light.html", "LIGHT")
+    build(f"{C}/explorer_slim_full.json", f"{OUT}/atlas_ts3_full.html", "FULL")
+    print("deploy: cp outputs/atlas/comparative/atlas_ts3_full.html comparative-sae-atlas/index.html")
