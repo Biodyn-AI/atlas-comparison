@@ -1,0 +1,26 @@
+# raw activations / SAEs / large intermediates — reproducible, never commit
+*.npy
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+*.h5ad
+out_ts3/
+out_alllayers/
+out_smoke/
+external/
+# python
+__pycache__/
+*.pyc
+.venv/
+.venv-*/
+*.egg-info/
+# os
+.DS_Store
+# large component JSONs (regenerate via the pipeline; the atlas embeds what it needs)
+data/explorer_slim_full.json
+data/matrix_ts3_string.json
+data/freq_ts3.json
+# full-resolution build (61MB; build locally, see README)
+atlas_full.html

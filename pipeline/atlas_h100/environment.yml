@@ -1,0 +1,26 @@
+name: atlas
+channels: [conda-forge, pytorch, nvidia]
+dependencies:
+  - python=3.10
+  - pytorch>=2.1
+  - pytorch-cuda=12.1
+  - numpy
+  - scipy
+  - pandas
+  - scanpy
+  - anndata
+  - scikit-learn
+  - h5py
+  - tqdm
+  - pyyaml
+  - pip
+  - pip:
+      - gseapy            # GO/KEGG/Reactome gene sets via Enrichr (data/build_genesets.py)
+      # per-adapter model deps (install only what you run):
+      #   AIDO:        gb_cell  (genbio-ai/ModelGenerator gb.cell)
+      #   scPRINT:     scprint scdataloader lamindb  (conda-forge binaries first — see track1 notes)
+      #   UCE:         clone snap-stanford/UCE + its ESM2 token embeddings
+      #   GeneCompass: clone xCompass-AI/GeneCompass
+      #   scBERT:      clone TencentAILabHealthcare/scBERT (performer-pytorch)
+      #   tGPT:        transformers  (HF lixiangchun/transcriptome-gpt-*)
+      #   CellPLM:     cellplm  (OmicsML/CellPLM)

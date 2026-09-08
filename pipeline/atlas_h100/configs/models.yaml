@@ -1,0 +1,23 @@
+# Model roster for the comparative SAE atlas. `status`: verified = forward path tested by us;
+# scaffold = adapter recipe written, must be implemented + verified on H100.
+# All models extracted on the SAME shared corpus (data/corpus.h5ad) for a fair comparison.
+# SAE config is fixed (bio-sae): TopK k=32, d_sae = 4 x d_model, MSE, 4 epochs — join-compatible.
+
+corpus: data/corpus.h5ad          # shared cell panel (~2000 cells, broad gene coverage)
+sae: {k: 32, expansion: 4, epochs: 4}
+
+models:
+  AIDO:        {status: verified, d_model: 256,  layers: [0,2,4,6,8],          adapter: adapters.aido}
+  scPRINT:     {status: verified, d_model: 256,  layers: [0,2,4,6,8],          adapter: adapters.scprint}
+  UCE:         {status: scaffold, d_model: 1280, layers: [0,8,16,24,32],       axis: "ESM prior (replication)"}
+  GeneCompass: {status: scaffold, d_model: 768,  layers: [0,3,6,9,12],         axis: "knowledge-graph prior"}
+  scBERT:      {status: scaffold, d_model: 200,  layers: [0,1,2,3,4,5,6],      axis: "Performer MLM"}
+  tGPT:        {status: scaffold, d_model: 768,  layers: [0,3,6,9,12],         axis: "autoregressive"}
+  CellPLM:     {status: scaffold, d_model: 512,  layers: [0,1,2,3,4],          axis: "cell-token"}
+
+# Ingested from Igor's published atlases (not re-extracted; re-annotated uniformly):
+ingest:
+  Geneformer: {repo: Biodyn-AI/geneformer-atlas, data: public/data/layer_XX_features.json}
+  scGPT:      {repo: Biodyn-AI/scgpt-atlas,       data: public/data/layer_XX_features.json}
+  Novae:      {repo: Biodyn-AI/novae-atlas}
+  C2S-Scale:  {repo: Biodyn-AI/c2s-atlas}
