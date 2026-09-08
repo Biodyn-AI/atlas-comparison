@@ -4,8 +4,8 @@ A cross-model interpretability atlas for **single-cell foundation models (FMs)**
 autoencoders (SAEs) on the residual stream of ten single-cell FMs on **one shared, tissue-controlled human
 corpus**, annotate every feature against the same biological vocabulary, and compare *what* each model
 organises and *how* — with an explicit null model so the cross-model agreement we report is real, not an
-artefact of the gene-set databases. It extends the single-model atlases of Ihor Kendiukhov / Biodyn-AI
-([bio-sae](https://github.com/Biodyn-AI/bio-sae)) into one calibrated comparative frame.
+artefact of the gene-set databases. It extends the single-model **bio-sae** atlases (Biodyn-AI,
+[bio-sae](https://github.com/Biodyn-AI/bio-sae)) into one calibrated comparative frame.
 
 **▶ Live atlas:** open `index.html` (self-contained, full-resolution ~61 MB — heavy but complete; no server
 or build needed), or host it on GitHub Pages (see below).
@@ -170,6 +170,6 @@ It is heavy to load; `inject_atlas.py` can emit a capped (~17 MB) build from the
 
 ## Credit & citation
 
-Built on the method and single-model atlases of **Ihor Kendiukhov / Biodyn-AI**
+Built on the **bio-sae** method and single-model atlases (Biodyn-AI)
 ([bio-sae](https://github.com/Biodyn-AI/bio-sae)). This repository is the calibrated cross-model extension.
 A manuscript is in preparation; please cite the bio-sae work and this repository until it appears.
