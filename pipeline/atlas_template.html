@@ -430,7 +430,7 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
  <div class="callout" style="margin-top:12px"><span class="k">Considered but out of scope</span><div>The atlas needs <b>per-cell, gene-token</b> foundation models with an accessible <b>residual stream</b>, so the same TopK-SAE can be trained on the same representation across every model. Two prominent recent models fall outside that frame — both are <b>perturbation-response predictors that operate on cell <i>sets</i></b>, not per-cell representations, so there is no directly comparable residual to decompose:<br>· <b><a href="https://github.com/ArcInstitute/state" target="_blank" rel="noopener" style="color:var(--acc)">State</a></b> (Arc Institute) — State-Transition predicts post-perturbation expression, State-Embedding embeds cells at the <b>set</b> level; it models how cell sets <i>respond</i> to perturbations.<br>· <b><a href="https://huggingface.co/Xaira-Therapeutics/X-Cell" target="_blank" rel="noopener" style="color:var(--acc)">X-Cell</a></b> (Xaira Therapeutics) — a set-level <b>diffusion</b> transformer for genome-scale perturbation responses; additionally, its weights are <b>not yet public</b> ("coming soon") and it is non-commercially licensed.<br>Both belong in a <i>perturbation</i> atlas, not this representation atlas.</div></div>
 </div></section>
 
-<footer><div class="wrap"><b>Comparative SAE Atlas</b> — ten single-cell foundation models on a shared, tissue-controlled, depth-matched frame. Built on the <a href="https://github.com/Biodyn-AI/bio-sae" target="_blank" rel="noopener" style="color:var(--acc)">bio-sae</a> method. <span id="foot"></span></div></footer>
+<footer><div class="wrap"><b>Comparative SAE Atlas</b> — ten single-cell foundation models on a shared, tissue-controlled, depth-matched frame. Built on the <a href="https://github.com/Biodyn-AI/bio-sae" target="_blank" rel="noopener" style="color:var(--acc)">bio-sae</a> method. <b style="color:var(--ink)">Code &amp; data:</b> <a href="https://github.com/Biodyn-AI/atlas-comparison" target="_blank" rel="noopener" style="color:var(--acc)">github.com/Biodyn-AI/atlas-comparison</a> — full pipeline, controls and the assembled data to reproduce every number. <span id="foot"></span></div></footer>
 <div id="tip"></div>
 <script id="explorer-data" type="application/json">__DATA__</script>
 <script id="modules-data" type="application/json">__DATA__</script>
@@ -1252,6 +1252,17 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
 <style>
  .tabnav{display:flex;gap:3px;flex-wrap:nowrap;overflow-x:auto;max-width:100%}
  .tabnav::-webkit-scrollbar{height:0}
+ body{overflow-x:hidden}
+ @media (max-width:760px){
+  .grid2{grid-template-columns:1fr!important}
+  .grid2>*{min-width:0}
+  .toggle{flex-wrap:wrap!important}
+  .panel{overflow-x:auto;min-width:0}
+  .hmwrap{overflow-x:auto}
+  .callout{flex-wrap:wrap}
+  .callout>*{min-width:0}
+  table.choose,table.roster{min-width:520px}
+ }
  .tabbtn{font-family:var(--mono);font-size:12.5px;color:var(--mut);background:none;border:none;border-radius:8px;cursor:pointer;padding:7px 11px;white-space:nowrap}
  .tabbtn:hover{color:var(--ink)}
  .tabbtn.on{background:var(--acc);color:#0a0f1a;font-weight:600}
