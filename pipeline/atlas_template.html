@@ -451,7 +451,7 @@ const srcOf=t=>t.split(':')[0];
 
 /* verdict + stats */
 const T=D.totals;
-document.getElementById('verdict').innerHTML=`<div class="big">${(D.controls&&D.controls.recalibration?D.controls.recalibration.final.shared_ge8_real:78)}</div><div class="txt">biological concepts are shared by <b>≥8 of ${D.n_models}</b> models and hold up against a random-gene null (<b>~20×</b>) — a real <b>shared backbone</b> of core cellular and immune programmes. (A much larger "core" shared by all ${D.n_models} looks impressive but is an artefact of the gene-set databases, so we don't count it.) Past this backbone, each model <b>specialises</b> — its own biology, depth behaviour, and tissue tuning.</div>`;
+document.getElementById('verdict').innerHTML=`<div class="big">${(D.controls&&D.controls.recalibration?D.controls.recalibration.final.shared_ge8_real:78)}</div><div class="txt">biological concepts are shared by <b>≥8 of ${D.n_models}</b> models and beat a random-gene null (<b>~20×</b>) — a real <b>shared backbone</b> of core cellular and immune programmes. A larger "core" shared by all ${D.n_models} is an artefact of the gene-set databases, so we don't count it <a href="#controls" style="color:var(--acc)">(how we control for it)</a>. Beyond it, each model <b>specialises</b>.</div>`;
 document.getElementById('stats').innerHTML=[
  {n:D.n_models,l:'models',s:'gene-token FMs',c:''},
  {n:nf(T.total_features),l:'SAE features',s:'matched-depth layer',c:''},
@@ -1252,6 +1252,7 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
 <style>
  .tabnav{display:flex;gap:3px;flex-wrap:nowrap;overflow-x:auto;max-width:100%}
  .tabnav::-webkit-scrollbar{height:0}
+ .tabnav.scrollable:not(.atend){-webkit-mask-image:linear-gradient(90deg,#000 80%,transparent);mask-image:linear-gradient(90deg,#000 80%,transparent)}
  body{overflow-x:hidden}
  @media (max-width:760px){
   .grid2{grid-template-columns:1fr!important}
@@ -1396,10 +1397,13 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
  function show(tab){cur=tab;
    document.querySelectorAll('[data-atab]').forEach(el=>{el.hidden=(el.dataset.atab!==tab);});
    document.querySelectorAll('.tabbtn').forEach(b=>b.classList.toggle('on',b.dataset.t===tab));
+   const _act=links&&links.querySelector('.tabbtn.on');if(_act)_act.scrollIntoView({inline:'center',block:'nearest'});
    window.scrollTo({top:0,behavior:'instant'});
    requestAnimationFrame(()=>{window.dispatchEvent(new Event('resize'));try{if(tab==='genes'&&typeof exRender==='function')exRender();}catch(e){}});
  }
  document.querySelectorAll('.tabbtn').forEach(b=>b.onclick=()=>show(b.dataset.t));
+ function tabHint(){if(!links)return;const more=links.scrollWidth>links.clientWidth+2,end=links.scrollLeft+links.clientWidth>=links.scrollWidth-2;links.classList.toggle('scrollable',more);links.classList.toggle('atend',end);}
+ if(links)links.addEventListener('scroll',tabHint);addEventListener('resize',tabHint);tabHint();
  document.querySelectorAll('.uc-card').forEach(c=>c.onclick=()=>show(c.dataset.go));
  // cross-tab in-page links: switch to the target's tab, then scroll to it
  document.addEventListener('click',e=>{const a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;
