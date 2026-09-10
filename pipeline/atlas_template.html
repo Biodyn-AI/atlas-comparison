@@ -187,15 +187,6 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
   <div class="panel"><div class="ptitle">Concept composition</div><div class="pnote">source mix of each model's concepts</div><div id="compbars"></div>
    <div class="legend"><span><i style="background:var(--go)"></i>GO_BP</span><span><i style="background:var(--react)"></i>Reactome</span><span><i style="background:var(--kegg)"></i>KEGG</span><span><i style="background:var(--amber)"></i>STRING</span></div></div></div>
  <div class="fgrid" id="fgrid" style="margin-top:16px"></div>
- <div class="panel" style="margin-top:16px"><div class="ptitle">How we label a feature — does the method matter? — play with it <span style="color:var(--amber);font-size:11px">⚠ permissive annotator — supplementary; the calibrated result is in Controls</span></div><div class="pnote">Every feature is labelled from its <b>top genes</b> — this panel and the two below work at the <b>mid-depth layer</b> (the coverage bars above are averaged over all layers). Two knobs to try. <b>(1) The method:</b> <b>Fisher</b> counts how many of a feature's top genes fall in a known set (a hard cutoff); <b>GSEA</b> instead asks — using the feature's <i>whole</i> gene ranking — whether a set's genes are shifted toward the top (position-aware, cutoff-free). <b>(2) For Fisher, the cutoff:</b> top 5 / 10 / 15 / 20 genes. Bars = % of a model's features that get <b>any</b> annotation; the number on the right is the median <b>specificity</b> (Fisher: odds-ratio; GSEA: top-shift, i.e. how far above 0 the enrichment sits).</div>
-  <div class="toggle" id="annot-method" style="display:inline-flex;background:var(--surface2);border:1px solid var(--line);border-radius:9px;padding:3px;gap:2px;margin:12px 0 4px"></div>
-  <div class="toggle" id="topn-tabs" style="display:inline-flex;background:var(--surface2);border:1px solid var(--line);border-radius:9px;padding:3px;gap:2px;margin:4px 0 12px"></div>
-  <div id="topn-bars" style="margin-top:4px"></div></div>
- <div class="callout"><span class="k">What it means</span><div id="topn-read"></div></div>
- <div class="panel expert" style="margin-top:16px"><div class="ptitle">Concentration vs breadth — what the two methods reveal together <span style="color:var(--amber);font-size:11px">⚠ supplementary — underpowered (n=10)</span></div><div class="pnote"><b style="color:var(--amber)">Underpowered / not a headline finding:</b> the key correlation has a bootstrap 95% CI spanning ≈[−0.86, 0.85] at n=10 — it can be neither confirmed nor rejected. Shown as a descriptive lead only.The <i>gap</i> between the two methods is itself a finding. <b>Fisher(top-5) − GSEA</b> annotation rate per model: bars to the right = biology is <b>concentrated</b> in a feature's very top genes (sharp few-gene detectors); to the left = <b>spread</b> across many genes (broad multi-gene programs). The two rates anti-correlate (r = −0.46) — they measure complementary things.</div>
-  <div style="display:grid;grid-template-columns:96px 1fr;gap:10px;margin:2px 0 8px"><div></div><div style="display:flex;justify-content:space-between;font-size:10px;color:var(--faint)"><span>← spread (many genes)</span><span>concentrated (top genes) →</span></div></div>
-  <div id="conc-bars"></div></div>
- <div class="callout"><span class="k">Cross-check vs the inductive axes</span><div id="conc-read"></div></div>
 </div></section>
 <section id="depth"><div class="wrap">
  <div class="sec-head"><div class="sec-q">depth signatures</div>
@@ -354,9 +345,6 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
    <div id="curric-bars" style="margin-top:10px"></div></div>
  </div>
  <div class="callout"><span class="k">Convergence &amp; curriculum</span><div id="rosetta-read"></div></div>
- <div class="panel" style="margin-top:16px"><div class="ptitle">Which cell types are hardest to read out</div><div class="pnote">balanced-accuracy of a linear probe decoding cell type from each model's deepest-layer embedding, averaged across all models (2,000 Tabula Sapiens cells, 5-fold CV)</div>
-  <div id="celltype-bars" style="margin-top:10px"></div></div>
- <div class="callout"><span class="k">Hardest cells</span><div id="celltype-read"></div></div>
 </div></section>
 <section id="economy"><div class="wrap">
  <div class="sec-head"><div class="sec-q">feature economy &amp; frontier</div>
@@ -615,7 +603,7 @@ document.getElementById('stats').innerHTML=[
   plot.appendChild(mk('line',{x1:X(Math.pow(10,xmin)),y1:Y(b0+b1*xmin),x2:X(Math.pow(10,xmax)),y2:Y(b0+b1*xmax),stroke:'var(--faint)','stroke-dasharray':'5 4','stroke-width':1.4}));
   // points
   SC.forEach(s=>{const x=X(s.params_M),y=Y(s[key]);plot.appendChild(mk('circle',{cx:x,cy:y,r:6,fill:MC[s.model]||'var(--acc)',stroke:'#0a0f1a','stroke-width':1}));
-   const lab=mk('text',{x:x+(s.model==='C2S'?-10:9),y:y-9,'text-anchor':s.model==='C2S'?'end':'start',fill:'var(--txt)','font-size':11,'font-weight':600,'font-family':'var(--mono)'});lab.textContent=s.model;plot.appendChild(lab);});
+   const lab=mk('text',{x:x+(s.model==='C2S'?-10:9),y:y-9,'text-anchor':s.model==='C2S'?'end':'start',fill:'var(--ink)','font-size':11,'font-weight':600,'font-family':'var(--mono)'});lab.textContent=s.model;plot.appendChild(lab);});
   const r=metrics[cur][2];
   document.getElementById('scale-note').innerHTML=`y = ${metrics[cur][1]} · Pearson r(log-params) = <b style="color:${Math.abs(r)>.5?'var(--teal)':'var(--amber)'}">${r>0?'+':''}${r.toFixed(2)}</b>`;
  }
@@ -631,7 +619,7 @@ document.getElementById('stats').innerHTML=[
  M.map((m,i)=>({m,s:L.signature[m]})).sort((a,b)=>b.s.n_unique-a.s.n_unique).forEach(({m,s})=>{
   const c=document.createElement('div');c.style.cssText=`flex:1 1 220px;min-width:200px;background:var(--surface2);border:1px solid var(--line);border-left:3px solid ${MC[m]||'var(--acc)'};border-radius:9px;padding:11px 13px`;
   c.innerHTML=`<div style="font-family:var(--mono);font-weight:700;color:${MC[m]||'var(--acc)'};font-size:13px">${m}</div>
-   <div style="color:var(--txt);font-size:13px;margin-top:4px;line-height:1.35">${s.term}</div>
+   <div style="color:var(--ink);font-size:13px;margin-top:4px;line-height:1.35">${s.term}</div>
    <div style="color:var(--faint);font-size:11px;margin-top:6px;font-family:var(--mono)">×${s.count} feature${s.count>1?'s':''} · ${s.n_unique} exclusive concepts</div>`;host.appendChild(c);});
  /* --- reading --- */
  const bp=L.scaling.reduce((a,b)=>b.annot_rate>a.annot_rate?b:a),sm=[...L.scaling].sort((a,b)=>a.params_M-b.params_M);
@@ -730,7 +718,7 @@ document.getElementById('stats').innerHTML=[
  let s='';
  [0,.25,.5,.75,1].forEach(v=>{s+=`<line x1="${X(v)}" y1="${pT}" x2="${X(v)}" y2="${H-pB}" stroke="#213353"/><text x="${X(v)}" y="${H-pB+16}" fill="#5a6c8e" font-size="10" text-anchor="middle">${v}</text>`;});
  [0,25,50,75,100].forEach(v=>{s+=`<line x1="${pL}" y1="${Y(v)}" x2="${W-pR}" y2="${Y(v)}" stroke="#213353"/><text x="${pL-8}" y="${Y(v)+3}" fill="#5a6c8e" font-size="10" text-anchor="end">${v}%</text>`;});
- pts.forEach(p=>{s+=`<circle cx="${X(p.x)}" cy="${Y(p.y)}" r="6.5" fill="${tc(p.tok)}" stroke="#0a0f1a"/><text x="${X(p.x)+9}" y="${Y(p.y)+3}" fill="var(--txt)" font-size="10.5" font-family="var(--mono)">${p.m}</text>`;});
+ pts.forEach(p=>{s+=`<circle cx="${X(p.x)}" cy="${Y(p.y)}" r="6.5" fill="${tc(p.tok)}" stroke="#0a0f1a"/><text x="${X(p.x)+9}" y="${Y(p.y)+3}" fill="var(--ink)" font-size="10.5" font-family="var(--mono)">${p.m}</text>`;});
  s+=`<text x="${(pL+W-pR)/2}" y="${H-6}" fill="var(--mut)" font-size="10.5" text-anchor="middle">input→output CKA (← more transform · more stable →)</text>`;
  s+=`<text x="14" y="${H/2}" fill="var(--mut)" font-size="10.5" text-anchor="middle" transform="rotate(-90 14 ${H/2})">annotation rate</text>`;
  sp.innerHTML=s;
@@ -911,11 +899,7 @@ document.getElementById('ex-gene').addEventListener('input',e=>{exFilter=e.targe
 document.querySelectorAll('#ex-try .exchip').forEach(b=>b.onclick=()=>{var tb=document.querySelector('#ex-tabs button[data-m="'+b.dataset.model+'"]');if(tb){tb.click();document.getElementById('explorer').scrollIntoView({behavior:'smooth'});}});
 exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=setTimeout(exRender,150);});
 
-/* ===== SVD variance comparison (append to SVD reading) ===== */
-(function(){const S=D.svd;const el=document.getElementById('svd-read');
- el.innerHTML+=`<div style="margin-top:14px"><div class="pnote">SVD variance at matched k vs SAE variance</div>`
-  +M.map(m=>{const sv=S[m].svd_var*100,se=S[m].sae_var*100;return `<div class="rowbar" style="grid-template-columns:92px 1fr 1fr;gap:10px;margin:5px 0"><div class="name">${m}</div><div class="track"><div class="fill" style="width:${sv}%;background:#465872"></div></div><div class="track"><div class="fill" style="width:${se}%;background:linear-gradient(90deg,#2fc6b6,#5b8cff)"></div></div></div>`;}).join('')
-  +`<div class="legend" style="margin-top:8px"><span><i style="background:#465872"></i>SVD (top-k)</span><span><i style="background:#2fc6b6"></i>SAE (k-active)</span></div></div>`;})();
+/* (removed: SVD-vs-SAE variance bars — redundant with the SVD reading text) */
 
 /* ===== scale / convergence / curriculum ===== */
 (function(){const F=D.findings;if(!F)return;const E=F.emergence;
@@ -957,9 +941,9 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
  const lo=Math.min(...rows.map(r=>r.v)),hi=Math.max(...CT.classes.map(c=>CT.mean[c]));
  let h='';rows.forEach(r=>{const frac=(r.v-0.3)/(1-0.3);const col=r.v<0.75?'var(--acc)':(r.v<0.85?'var(--amber)':'var(--teal)');
   h+=`<div style="display:grid;grid-template-columns:210px 1fr auto;gap:10px;align-items:center;margin:4px 0"><div style="font-size:11px;color:var(--mut);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${r.c}</div><div class="track"><div class="fill" style="width:${Math.max(4,frac*100)}%;background:${col}"></div></div><div class="mono" style="font-size:10.5px;color:${col}">${(r.v*100).toFixed(0)}%</div></div>`;});
- document.getElementById('celltype-bars').innerHTML=h;
+ const _ctb=document.getElementById('celltype-bars');if(!_ctb)return;_ctb.innerHTML=h;
  const hard=CT.classes.map(c=>({c,v:CT.mean[c]})).sort((a,b)=>a.v-b.v);
- document.getElementById('celltype-read').innerHTML=`Averaged over all ${Object.keys(CT.per_model).length} models, the hardest cell types to decode are <b style="color:var(--acc)">${hard[0].c}</b> (${(hard[0].v*100).toFixed(0)}%), <b>${hard[1].c}</b> and <b>${hard[2].c}</b> — the myeloid/T–NK compartments whose sub-states (classical vs intermediate monocyte, CD4 vs CD8) blur into each other. The easiest are structural/epithelial identities. Difficulty is <b>shared across architectures</b>, not a quirk of one model: the same cells resist a linear readout everywhere, marking where single-cell foundation models still under-resolve biology.`;})();
+ const _ctr=document.getElementById('celltype-read');if(_ctr)_ctr.innerHTML=`Averaged over all ${Object.keys(CT.per_model).length} models, the hardest cell types to decode are <b style="color:var(--acc)">${hard[0].c}</b> (${(hard[0].v*100).toFixed(0)}%), <b>${hard[1].c}</b> and <b>${hard[2].c}</b> — the myeloid/T–NK compartments whose sub-states (classical vs intermediate monocyte, CD4 vs CD8) blur into each other. The easiest are structural/epithelial identities. Difficulty is <b>shared across architectures</b>, not a quirk of one model: the same cells resist a linear readout everywhere, marking where single-cell foundation models still under-resolve biology.`;})();
 /* ===== feature economy & frontier ===== */
 (function(){const E=D.extra;if(!E)return;const M=D.models;
  const eco=E.economy;
@@ -1020,19 +1004,20 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
 (function(){const T=D.topn;if(!T)return;const M=D.models;const GS=D.gsea&&D.gsea.models;
  let method='fisher',sel=T.cutoffs[0];
  const mtabs=document.getElementById('annot-method'),ctabs=document.getElementById('topn-tabs');
+ if(!mtabs||!ctabs)return;
  const at=(m,c)=>(T.models[m]||[]).find(x=>x.top===c);
  const METHODS=[['fisher','Fisher · counts'],['gsea','GSEA · ranks']];
  function paintMethod(){mtabs.innerHTML=METHODS.map(([k,lab])=>`<button data-m="${k}" style="font-family:var(--mono);font-size:12px;border:none;cursor:pointer;padding:6px 13px;border-radius:6px;background:${k===method?'var(--teal)':'none'};color:${k===method?'#0a0f1a':'var(--mut)'};font-weight:${k===method?600:400}">${lab}</button>`).join('');mtabs.querySelectorAll('button').forEach(b=>b.onclick=()=>{method=b.dataset.m;paintMethod();paintTabs();draw();read();});}
  function paintTabs(){ctabs.style.display=method==='fisher'?'inline-flex':'none';if(method!=='fisher')return;ctabs.innerHTML=T.cutoffs.map(c=>`<button data-c="${c}" style="font-family:var(--mono);font-size:12px;border:none;cursor:pointer;padding:6px 13px;border-radius:6px;background:${c===sel?'var(--acc)':'none'};color:${c===sel?'#0a0f1a':'var(--mut)'};font-weight:${c===sel?600:400}">top ${c}</button>`).join('');ctabs.querySelectorAll('button').forEach(b=>b.onclick=()=>{sel=+b.dataset.c;paintTabs();draw();read();});}
  function bar(m,rate,tail){return `<div style="display:grid;grid-template-columns:96px 1fr auto;gap:10px;align-items:center;margin:4px 0"><div style="font-size:11px;color:${MCOL[m]||'var(--mut)'}">${m}</div><div class="track"><div class="fill" style="width:${rate}%;background:${MCOL[m]||'var(--acc)'};transition:width .45s ease"></div></div><div class="mono" style="font-size:10.5px;color:var(--mut);white-space:nowrap">${rate}% <span style="color:var(--faint)">${tail}</span></div></div>`;}
- function draw(){const box=document.getElementById('topn-bars');
+ function draw(){const box=document.getElementById('topn-bars');if(!box)return;
    if(method==='gsea'){
      if(!GS){box.innerHTML=`<div style="padding:14px 12px;color:var(--mut);font-size:12.5px;border:1px dashed var(--line);border-radius:8px;background:var(--surface2)">GSEA runs on the full ~19k-gene ranking (SAE decoder attribution), computed on the cluster — <span class="mono">gsea_prerank.py</span>. Numbers appear here once that job is loaded. <br><span style="color:var(--faint)">Note: a rank test over only the stored top-20 genes is statistically underpowered (nothing survives multiple-testing), which is itself the point — rank methods need the whole ranking.</span></div>`;return;}
      box.innerHTML=M.filter(m=>GS[m]).map(m=>{const r=GS[m];return bar(m,r.annot_rate,`· shift ${r.med_shift}`);}).join('');return;}
    box.innerHTML=M.filter(m=>T.models[m]).map(m=>{const r=at(m,sel);return r?bar(m,r.annot_rate,`· OR ${r.med_or}`):'';}).join('');}
  const avg=c=>{const vs=M.map(m=>at(m,c)).filter(Boolean);return {rate:vs.reduce((a,x)=>a+x.annot_rate,0)/vs.length,or:vs.reduce((a,x)=>a+x.med_or,0)/vs.length};};
  const hi=T.cutoffs[T.cutoffs.length-1],a5=avg(5),aH=avg(hi);
- function read(){const el=document.getElementById('topn-read');
+ function read(){const el=document.getElementById('topn-read');if(!el)return;
    if(method==='gsea'){
      if(!GS){el.innerHTML=`<b>Same features, a different question.</b> Fisher asks “are enough of the top-5 genes inside a set?” — a hard cutoff. GSEA asks “are a set's genes shifted toward the <i>top</i> of the feature's whole ranking?” — it uses every gene and no cutoff. Because it needs the full per-gene ranking (the SAE decoder attribution over all ~19k genes), it's computed on the cluster. The takeaway you can already see from the Fisher knob: the biological signal in these features sits in the <b>very top few genes</b>, so a rank test over the full list should <b>agree with top-5 Fisher</b> on the sharp concepts and add little beyond it — the annotation is robust to method.`;return;}
      const vs=M.map(m=>GS[m]).filter(Boolean);const ar=vs.reduce((a,x)=>a+x.annot_rate,0)/vs.length;const js=vs.map(x=>x.concept_jaccard_vs_fisher||0);const jac=js.reduce((a,x)=>a+x,0)/js.length;const jlo=Math.min(...js),jhi=Math.max(...js);
@@ -1384,13 +1369,13 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
  // ---- tab shell ----
  const TABS=[{id:'home',label:'Overview'},{id:'choose',label:'① Choose a model'},{id:'compare',label:'② Compare'},{id:'genes',label:'③ Genes & biology'},{id:'findings',label:'Findings'}];
  const TABMAP={overview:'home',intro:'home','usecase-choose':'choose',
-   universality:'compare',coverage:'compare',cka:'compare',lineage:'compare',emerge:'compare',economy:'compare',
+   universality:'compare',coverage:'compare',cka:'compare',lineage:'compare',emerge:'findings',economy:'findings',
    genes:'genes',novel:'genes',explorer:'genes',
    depth:'findings',tissue:'findings',svd:'findings',linearity:'findings',flow:'findings',modules:'findings',axis:'findings',circuits:'findings',controls:'findings',roster:'findings'};
  Object.keys(TABMAP).forEach(id=>{const el=document.getElementById(id);if(el)el.dataset.atab=TABMAP[id];});
  // reorder sections within a tab so it opens with what the use-case promises
  function reorder(ids){const els=ids.map(id=>document.getElementById(id)).filter(Boolean);for(let i=1;i<els.length;i++)els[i-1].after(els[i]);}
- reorder(['cka','coverage','universality','lineage','emerge','economy']); // Compare: model similarity + per-model first, backbone science after
+ reorder(['cka','coverage','universality','lineage']); // Compare: model similarity + per-model first, backbone science after
  reorder(['genes','novel','explorer']);                                   // Genes: gene search + new biology first, feature browser last
  const links=document.querySelector('nav .links');if(links){links.classList.add('tabnav');links.innerHTML=TABS.map(t=>`<button class="tabbtn" data-t="${t.id}">${t.label}</button>`).join('');}
  let cur='home';
@@ -1441,6 +1426,7 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
   "GRN":"Gene regulatory network — which transcription factors control which genes.",
   "BERT":"A transformer trained by masking parts of its input and predicting them.",
   "CV":"Coefficient of variation — the spread of a measurement relative to its average. A small CV means the result barely changes between runs.",
+  "sharpest transition":"The pair of neighbouring layers where the model's internal state changes the most — where it does the biggest single rewrite of its representation.",
   "CKA":"Centred Kernel Alignment — a 0-to-1 score for how similarly two models arrange the same cells. 1 = identical geometry, 0 = unrelated. It compares shapes, so models of different sizes can still be compared.",
   "PCA":"Principal Component Analysis — the classic way to summarise data by keeping a few “main directions” that capture most of the variation.",
   "SVD":"Singular Value Decomposition — the maths behind PCA. Here “top-k SVD” means keeping only the k strongest directions.",
@@ -1452,7 +1438,6 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
   "random-gene null":"The same test run on random genes instead of a feature's real genes. It sets the bar a real result has to clear.",
   "degree-matched null":"A stricter random baseline: each gene is swapped for one belonging to just as many gene sets, so genes that appear in many pathways can't inflate the result.",
   "cell-shuffle null":"A baseline where cells are shuffled between the two models before comparing, destroying any real correspondence.",
-  "null":"A baseline built from randomised data. A result only counts if it beats what randomness alone produces.",
   "hypergeometric":"A test for whether the overlap between two gene lists is larger than you'd expect by chance.",
   "Fisher":"Fisher's exact test — checks whether an overlap between two gene lists is bigger than chance.",
   "Benjamini":"Benjamini–Hochberg correction — when you run thousands of tests, it keeps the share of false “hits” under control.",
@@ -1467,10 +1452,7 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
   "linear probe":"A simple classifier trained on a model's embeddings to test whether some information is present and easy to read out.",
   "z-score":"How many standard deviations a result sits above (or below) the random baseline. Bigger = less likely to be chance.",
   "held-out":"A second, independent sample of cells that the method never saw while it was being tuned.",
-  "annotation rate":"The share of a model's features that match at least one known pathway.",
-  "backbone":"The concepts shared by at least 8 of the 10 models under the calibrated annotator — the part that survives the null.",
   "tokenization":"How a cell is turned into model input: by gene rank, by expression level, by a protein embedding, or as a “cell sentence”.",
-  "autoregressive":"Trained to predict the next item in a sequence, one step at a time.",
   "Tabula Sapiens":"A public human single-cell atlas covering many organs. Our 6,000 cells are drawn from it.",
   "dead feature":"An SAE feature that never activates — wasted capacity.",
   "odds ratio":"How much more often two things co-occur than you'd expect by chance.",
