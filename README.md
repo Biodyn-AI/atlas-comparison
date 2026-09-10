@@ -1,69 +1,39 @@
 # Comparative SAE Feature Atlas
 
-A cross-model interpretability atlas for **single-cell foundation models (FMs)**. We train sparse
-autoencoders (SAEs) on the residual stream of ten single-cell FMs on **one shared, tissue-controlled human
-corpus**, annotate every feature against the same biological vocabulary, and compare *what* each model
-organises and *how* — with an explicit null model so the cross-model agreement we report is real, not an
-artefact of the gene-set databases. It extends the single-model **bio-sae** atlases (Biodyn-AI,
-[bio-sae](https://github.com/Biodyn-AI/bio-sae)) into one calibrated comparative frame.
+A cross-model interpretability atlas for **single-cell foundation models**. We train sparse
+autoencoders (SAEs) on the residual stream of many single-cell FMs on **one shared, tissue-controlled
+human corpus**, annotate every feature against the same biological vocabulary, and compare *what* each
+model organises and *how*. It extends the single-model atlases of Ihor Kendiukhov / Biodyn-AI
+([bio-sae](https://github.com/Biodyn-AI/bio-sae)) into one comparative frame.
 
-**▶ Live atlas:** open `index.html` (self-contained, full-resolution ~61 MB — heavy but complete; no server
-or build needed), or host it on GitHub Pages (see below).
+**▶ Live atlas:** open `index.html` (self-contained, full-resolution ~61 MB — heavy but complete) — or host it on GitHub Pages (below). It embeds all data; no server or build needed to view.
 
 ---
 
-## The headline, honestly
-
-The naive way to give SAE features biological meaning — test a feature's top genes for over-representation
-in curated gene sets — is **not safe for cross-model universality claims**. Curated databases are large and
-overlapping, so almost any gene list annotates, and a permissive annotator manufactures a large apparent
-"universal core" shared by all ten models. That core **fails a random-gene null** (random genes reproduce it),
-so it is a property of the databases, not the models.
-
-With a **calibrated annotator + null**, a small but genuine signal survives:
-
-- **A calibrated shared backbone of ~78 concepts** is annotated in **≥8 of 10** models — **22×** above a
-  uniform random-gene null and **59×** above a degree-matched null (empirical *p* < 0.004), and it
-  **replicates on a held-out cell sample** (backbone Jaccard 0.50 vs a 0.05 two-draw baseline, *p* < 0.007).
-- **~63 % of the backbone is specific programme biology** (antigen presentation / MHC-II, cytokine
-  signalling, defence response), not just housekeeping.
-- It is **robust**: to the annotator configuration (fold 2.3–166× across five), to **read-out depth**
-  (significant at every depth, 17–28× over null; exact membership drifts with depth), to dropping KEGG
-  (56 concepts at 19×), and across ≥3 SAE seeds (core CV ≈ 3 %).
-- **Annotation-free geometry agrees**: cross-model CKA runs 0.12–0.92 (far above a 0.002–0.009 cell-shuffle
-  floor), and at matched per-sample sparsity the SAE explains 0.61–0.87 of residual variance vs 0.23–0.44
-  for top-*k* PCA (an untrained random dictionary is negative); SAE directions are *reachable* by SVD only
-  with many axes (projection-across-*k*), so the edge is sparse allocation, not directions SVD can't span.
-
-The practical message is a **caution + a resource**: report cross-model SAE-feature agreement against an
-explicit random- (ideally degree-matched) gene null, and here is a null-controlled comparative atlas of ten
-FMs on a common corpus.
-
-## What's inside the atlas
+## What's inside
 
 A single interactive page with, for each analysis, a chart + a plain-language reading:
 
 | Section | Question |
 |---|---|
-| Universality | how many models share each concept — permissive core (artefact) vs the calibrated backbone vs null |
+| Universality | how many models share each biological concept (the universal core) |
 | Coverage | annotation rate, concept count, source mix per model |
-| Depth | how annotation / concept richness changes layer by layer |
-| Tissue | how tissue-specific features become with depth (linear vs MLP probe) |
-| SVD vs SAE | superposition — SAE vs matched-capacity top-*k* PCA, and projection across *k* |
+| Depth | how annotation/《concept richness》 changes layer by layer |
+| Tissue | how tissue-specific features become with depth |
+| SVD vs SAE | superposition — % of features invisible to a linear (SVD) basis |
+| Linearity | is a concept linearly readable? (linear vs MLP probe gap), per layer |
 | Modules | co-activation communities per layer (force-graph) |
-| Cross-layer flow | feature persistence between adjacent layers |
-| Layer Explorer | UMAP / t-SNE map of features per layer, per model (colour = module / SVD / freq) |
-| Gene Search | which models encode a given gene, at what depth, and under what concept |
+| Cross-layer flow | feature persistence between **every adjacent layer** |
+| Layer Explorer | UMAP / t-SNE map of features per layer, per model |
+| Gene Search | which models encode a given gene, and under what concept |
 | CKA | representational similarity across models (matched depth) + within-model layer×layer |
-| Controls | the nulls and robustness checks behind every headline number |
-| Models | roster with params, training species, inductive axis |
+| Scale · Emergence · Convergence · Curriculum | concept-acquisition curve vs model size; cross-model feature convergence; depth curriculum; hardest cell types |
+| Models | roster with params, **training species**, inductive axis |
 
 ## Model roster
 
-One shared corpus (6,000 Tabula Sapiens cells: immune + kidney + lung, raw counts), depth-matched layers,
-TopK-SAE (k = 32, dictionary = 4× the residual dim). **Two annotators**: a *permissive* field-default one
-(top-5 genes, 5 databases incl. STRING) used only to demonstrate the artefact, and the **calibrated** main
-annotator (top-10 genes, ≥3 in a curated GO / Reactome / KEGG set ≤200, no PPI, Fisher 'greater' + BH<0.05).
+Run on one shared corpus (6,000 Tabula Sapiens cells: immune + kidney + lung), depth-matched layers,
+one annotator (top-5 genes → Fisher + BH<0.05 vs GO_BP / Reactome / KEGG / STRING), TopK-SAE (k=32, d=4×).
 
 | Model | Params | Species | Tokenization / objective / prior |
 |---|---|---|---|
@@ -76,100 +46,93 @@ annotator (top-10 genes, ≥3 in a curated GO / Reactome / KEGG set ≤200, no P
 | Geneformer-V2 | 316M | human | rank + MLM |
 | UCE | 650M | multi-species | ESM protein-token prior |
 | C2S-Scale | 2B | human+mouse | cell-sentence LLM (Gemma-2) |
-| Tahoe-x1 | 3B | human | expression + MLM |
+| Tahoe-x1 | 3B | human | expression + MLM (MosaicX) |
 
 Cross-species models (UCE, GeneCompass, C2S) are run on the **human** corpus and only their human-gene
 features are read — the atlas stays a human atlas.
 
+## Headline findings
+
+- **A universal biological backbone** of concepts is shared by *every* model on a matched corpus.
+- **Superposition is universal**: ~100% of SAE features are invisible to the top SVD axes in every model —
+  linear methods can't recover the dictionary (reproduces Igor's result across the whole roster).
+- **Concepts are linearly represented** at every depth (MLP−linear probe gap ≈ 0), and more so deeper.
+- **Emergence with scale**: the concept vocabulary grows smoothly from the smallest model to the largest;
+  a third of all concepts are found only in the largest models, skewed to metabolism / membrane-transport,
+  while the universal backbone is signaling / immune / cell-cycle.
+- **Convergence on concepts, not features**: models agree on the same *biology* but almost never on the
+  same *feature* (near-identical top-gene features recur <1% of the time across architectures).
+- **Depth curriculum**: mitochondrial / RNA-processing / signaling features appear shallowest, metabolism
+  / transport deepest — universal machinery early, specialised programs late.
+- Architecture drives the differences (tokenization → how pathway-shaped features are; objective/prior →
+  tissue-binding and representational drift); the invariants above hold across all architectures.
+
+Live numbers are in the atlas (`Universality`, `Scale`, `SVD` sections).
+
+**Tested and rejected.** An earlier version of the atlas carried a "new biology" panel: genes that top an
+*unannotated* SAE feature in ≥5 of 10 models, offered as a shortlist of under-annotated biology. It does not
+survive a null and has been removed. `pipeline/scripts/novel_null.py` compares the shortlist against an
+equally-sized random subset of features (real 50 vs null 65.5 ± 6.4, z = −2.4); `pipeline/scripts/novel_calibrated.py`
+redoes the selection with the calibrated annotator and a degree-matched null that permutes the
+annotated/unannotated label within each model, holding every gene's degree exactly fixed (real 207 vs null
+248.8 ± 6.2, z = −6.78; **0 of 207 candidates survive at BH q ≤ 0.05**, 2,000 permutations). Both directions show a
+*deficit*, not an excess: cross-model agreement concentrates on genes the databases already cover well —
+annotation coverage rises monotonically with the number of models agreeing on a gene (59% → 87% of genes carry
+≥1 curated term; median 3 → 11 terms). Consensus tracks database coverage; it does not fill its gaps.
+
 ## Repository layout
 
 ```
-index.html                     the atlas (open directly, or serve via GitHub Pages)
-data/atlas_full_notf.json      the assembled cross-model data the page embeds
-data/controls.json             every reported null / CI / robustness result (source of truth)
-docs/METHODS.md                pipeline + inductive-axis writeup
+index.html               the atlas (open directly, or serve via GitHub Pages)
+data/atlas_full_notf.json the assembled cross-model data the page embeds
 pipeline/
-  atlas_template.html          editable markup for the page (data blocks are __DATA__ placeholders)
-  atlas_h100/                  extraction + SAE + per-model / aggregate analyses (GPU)
-    adapters/                  one adapter per model (base.py = the contract)
-    common/                    SAE, annotation, depth-matching, per-model runners
-    run_model.py               residual extraction + TopK-SAE + feature catalog for a model
-    {modules_alllayers,cka_layers,cell_cka,nonlinearity,layer_explorer,svd_vs_sae,
-     cka_svd_null,svd_projection_k,seed_variance,seed_variance_alllayer,gsea_prerank,
-     flow_alllayers,depth_profile,tissue_from_emb,celltype_difficulty,
-     build_explorer_slim}.py   the analyses
-    configs/models.yaml · environment.yml · data/{build_genesets,prepare_corpus}.py
-  scripts/                     assembly, controls & figures (CPU, run locally)
-    reannotate_string · alllayer_concepts · alllayer_matrix · module_themes ·
-    genes_search_ts3 · flow_ts3 · findings · atlas_assemble · inject_atlas   (build)
-    controls[2-4] · random_null · degree_null · stats_final · recalibrate[_final,_robust] ·
-    kegg_robust · depth_backbone · depth_calibrated · heldout_calibrated ·
-    heldout_compare · topn_sweep · gsea_annot                                (controls → controls.json)
-    make_figures · make_fig14 · make_figS1 · make_figS2                      (static figures)
-    geometry/                single-model embedding-geometry probes (scPRINT / AIDO / ESM-prior
-                             line — complexes, PPI, localization, clusters, orthologs, TF sign);
-                             a related but separate analysis, not part of the 10-model comparison
+  atlas_h100/            extraction + SAE + per-model analyses
+    adapters/            one adapter per model (base.py = the contract)
+    run_model.py         residual extraction + TopK-SAE + catalog for a model
+    common/              SAE, annotation, depth-matching, pipeline
+    {cell_cka,cka_layers,layer_explorer,modules_alllayers,depth_profile,
+     tissue_from_emb,nonlinearity,svd_vs_sae,build_explorer_slim,
+     flow_alllayers,celltype_difficulty}.py   the per-model / aggregate analyses
+  scripts/               assembly (run locally, CPU)
+    reannotate_string.py     uniform 5-DB annotation → matrix + coverage
+    alllayer_concepts.py     distinct concepts across depth-matched layers
+    module_themes.py         theme×model matrix
+    flow_ts3.py              depth-matched flow (all-layers = flow_alllayers.py)
+    genes_search_ts3.py      cross-model gene index
+    findings.py              emergence / rosetta / curriculum
+    atlas_assemble.py        → data/atlas_full_notf.json (the source of truth)
+    inject_atlas.py          embed the data blocks into index.html
+docs/METHODS.md          pipeline + inductive-axis writeup
 ```
-
-> **Paths.** The CPU scripts assume the repo checked out under a working directory and use a `BASE`/`C`
-> constant near the top of each file (currently an absolute path from the authors' machine) — set it to your
-> checkout before running. `data/controls.json` (all nulls / CIs) is committed so the figures and number
-> checks run without a GPU; the bulkier derived JSONs (per-model feature catalogs, `*_alllayers.json`,
-> activations) are regenerated by the pipeline and are not committed here.
 
 ## Reproduce
 
-Per-model extraction runs on a GPU (H100-class); assembly, controls and figures are CPU-only.
+Per-model extraction runs on a GPU (H100-class); the assembly is CPU-only.
 
-1. **Corpus** — `pipeline/atlas_h100/data/prepare_corpus.py` (Tabula Sapiens via cellxgene-census, seed 0;
-   seed 1 for the held-out draw) and `data/build_genesets.py` (GO_BP / Reactome / KEGG / STRING / TRRUST).
-2. **Per model (GPU)** — `run_model.py --model <M> --corpus <ts.h5ad> --out out_alllayers --all-layers`,
+1. **Per model** (GPU): `python pipeline/atlas_h100/run_model.py --model <M> --corpus <ts3.h5ad> --out out_alllayers --all-layers`
    then the per-model analyses (`cell_cka --all-layers`, `layer_explorer`, `svd_vs_sae`).
-3. **Aggregates (GPU/CPU)** — `modules_alllayers --all`, `depth_profile --all`, `cka_layers --all`,
+2. **Aggregates** (GPU/CPU): `modules_alllayers --all`, `depth_profile --all`, `cka_layers --all`,
    `cell_cka --cka`, `nonlinearity --all --layers all`, `tissue_from_emb --all`, `build_explorer_slim`,
-   `celltype_difficulty`, `flow_alllayers`; annotation-free nulls: `cka_svd_null`, `svd_projection_k`;
-   stability: `seed_variance`, `seed_variance_alllayer`; `gsea_prerank`.
-4. **Assembly (CPU)** — `reannotate_string` → `alllayer_concepts` → `alllayer_matrix` → `module_themes` →
+   `celltype_difficulty`, `flow_alllayers`.
+3. **Assembly** (CPU, local): `reannotate_string` → `alllayer_concepts` → `module_themes` →
    `genes_search_ts3` → `findings` → `atlas_assemble` → `inject_atlas` (rebuilds `index.html`).
-5. **Controls (CPU)** — `controls*` , `random_null`, `degree_null`, `stats_final`, `recalibrate*`,
-   `kegg_robust`, `depth_backbone`, `depth_calibrated`, `heldout_calibrated`, `heldout_compare`,
-   `topn_sweep` → everything lands in `controls.json` (the null/CI source of truth).
-6. **Figures (CPU)** — `make_figures` (artefact + backbone), `make_fig14` (overview + annotation-free),
-   `make_figS1` (SVD projection across *k*), `make_figS2` (depth robustness) from `controls.json`.
 
-Adding a model = write `pipeline/atlas_h100/adapters/<m>.py` (implement the extraction contract), register
-it in `run_model.py` and the roster lists, then re-run steps 2–6.
+Adding a model = write `pipeline/atlas_h100/adapters/<m>.py` (implement `iter_activations`), register it in
+`run_model.py`, add it to the `MODELS`/`PARAMS`/`AXIS` lists, run steps 1–3.
 
-## Controls & robustness
-
-Every headline number is tested against a null and is reproducible from `data/controls.json`:
-
-| Check | Result |
-|---|---|
-| Permissive "universal core" vs random-gene null | real < null → **artefact** (retracted as a result) |
-| Calibrated backbone (≥8/10) vs uniform null | 78 vs 3.5 ± 2.0, *p* < 0.004, 22× |
-| … vs **degree-matched** null | 78 vs 1.3 ± 1.3, 59× |
-| Held-out replication | Jaccard 0.50 vs 0.05 two-draw baseline, *p* < 0.007 |
-| Annotator-config robustness | fold 2.3–166× across five calibrated configs |
-| Depth robustness | ≥8/10 significant at every depth (17–28× over null) |
-| KEGG-drop | 56 concepts at 19× (GO+Reactome only) |
-| SAE seeds | mid-layer core CV ≈ 3 % across 3 seeds |
-| CKA reality | off-diag 0.12–0.92 vs 0.002–0.009 cell-shuffle floor |
-| SAE vs top-*k* PCA (matched sparsity) | 0.61–0.87 vs 0.23–0.44; random dict < 0 |
-
-## Host on GitHub Pages
+## Host on GitHub Pages (Igor-style)
 
 `index.html` is fully self-contained, so hosting is one setting:
 
-1. Push this repository (already done for `Biodyn-AI/atlas-comparison`).
-2. GitHub → **Settings → Pages → Source: Deploy from a branch → `main` / root** (needs repo-admin).
-3. Live at `https://<org>.github.io/<repo>/`.
+1. Create a repo and push this folder.
+2. GitHub → **Settings → Pages → Source: Deploy from a branch → `main` / root**.
+3. Your atlas is live at `https://<user>.github.io/<repo>/`.
 
-`index.html` is the full build (~61 MB, under GitHub's 100 MB file limit, so it commits and serves directly).
-It is heavy to load; `inject_atlas.py` can emit a capped (~17 MB) build from the same data.
+`index.html` is the full-resolution build (every feature, no per-layer cap, ~61 MB) — under GitHub's 100 MB
+file limit, so it commits and serves directly. It's heavy to load in a browser; if you want a snappier page,
+`inject_atlas.py` can emit a capped (~16–17 MB) build from the same data.
 
-## Credit & citation
+## Credit
 
-Built on the **bio-sae** method and single-model atlases (Biodyn-AI)
-([bio-sae](https://github.com/Biodyn-AI/bio-sae)). This repository is the calibrated cross-model extension.
-A manuscript is in preparation; please cite the bio-sae work and this repository until it appears.
+Built on the method and single-model atlases of Ihor Kendiukhov / Biodyn-AI (bio-sae; Geneformer / scGPT /
+Novae / MaxToki / C2S atlases). This repo is the cross-model extension.

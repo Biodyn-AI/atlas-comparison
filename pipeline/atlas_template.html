@@ -82,7 +82,7 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
  <div class="brand"><span class="dot"></span>Comparative&nbsp;SAE&nbsp;Atlas</div>
  <div class="links">
   <a href="#overview">Overview</a><a href="#intro">Start here</a><a href="#universality">Universality</a>
-  <a href="#coverage">Coverage</a><a href="#depth">Depth</a><a href="#tissue">Tissue</a><a href="#svd">SVD</a><a href="#linearity" class="expert">Linearity</a><a href="#flow" class="expert">Flow</a><a href="#modules">Modules</a><a href="#explorer">Layer Explorer</a><a href="#genes">Gene Search</a><a href="#cka">How alike</a><a href="#lineage">Scale</a><a href="#axis">Axis→findings</a><a href="#emerge">Emergence</a><a href="#economy">Economy</a><a href="#novel">New biology</a><a href="#circuits" class="expert">Circuits</a><a href="#controls" class="expert">Controls</a><a href="#use">Use cases</a><a href="#roster">Models</a>
+  <a href="#coverage">Coverage</a><a href="#depth">Depth</a><a href="#tissue">Tissue</a><a href="#svd">SVD</a><a href="#linearity" class="expert">Linearity</a><a href="#flow" class="expert">Flow</a><a href="#modules">Modules</a><a href="#explorer">Layer Explorer</a><a href="#genes">Gene Search</a><a href="#cka">How alike</a><a href="#lineage">Scale</a><a href="#axis">Axis→findings</a><a href="#emerge">Emergence</a><a href="#economy">Economy</a><a href="#circuits" class="expert">Circuits</a><a href="#controls" class="expert">Controls</a><a href="#use">Use cases</a><a href="#roster">Models</a>
  </div>
 </div></nav>
 <style>
@@ -267,11 +267,11 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
 </div></section>
 <section id="genes"><div class="wrap">
  <div class="sec-head"><div class="sec-q">cross-model gene search</div>
-  <h2>Where a gene lives across the seven models</h2>
+  <h2>Where a gene lives across the ten models</h2>
   <p class="sec-sub">Type a gene symbol to see which models build a feature around it, and which biological concept that feature matches. Because every model saw the same cells, coverage is comparable across models.</p></div>
  <div class="panel"><input id="gene-input" type="text" placeholder="e.g. CD3D, NPHS1, SFTPC, GATA1, MT-ND4…" autocomplete="off" spellcheck="false" style="width:100%;background:var(--surface2);border:1px solid var(--line2);border-radius:10px;padding:13px 16px;color:var(--ink);font-family:var(--mono);font-size:15px;outline:none">
   <div class="chips" id="gene-suggest" style="margin-top:12px"></div><div id="gene-results" style="margin-top:18px"></div></div>
- <div class="callout"><span class="k">Note</span><div>Coverage is bounded by each model's gene vocabulary (tGPT 6.6k here vs AIDO 19k), and the tissue markers land as expected — <b>SFTPC</b> (lung) in all seven, <b>NPHS1</b> (kidney podocyte) and <b>CD3D</b> (T cell) in a subset.</div></div>
+ <div class="callout"><span class="k">Note</span><div>Coverage is bounded by each model's gene vocabulary (tGPT 6.6k here vs AIDO 19k), and the tissue markers land as expected — <b>SFTPC</b> (lung) in all ten, <b>NPHS1</b> (kidney podocyte) and <b>CD3D</b> (T cell) in a subset.</div></div>
 </div></section>
 <div class="chapdiv"><div class="wrap"><span class="chapn">Chapter 5</span><h3>Comparing the models</h3><p>Which models are alike — in biology, in geometry, and by size?</p></div></div>
 <section id="cka"><div class="wrap">
@@ -363,14 +363,6 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
  <div class="callout"><span class="k">Universal genes</span><div id="geneu-read"></div></div>
  <div class="panel" style="margin-top:16px"><div class="ptitle">Rare-concept frontier</div><div class="pnote">named pathways encoded by only 1–2 of the models — the biology a few reach but most miss</div><div id="rare-cards" style="margin-top:10px;display:flex;flex-wrap:wrap;gap:6px"></div></div>
  <div class="callout"><span class="k">Frontier</span><div id="rare-read"></div></div>
-</div></section>
-<section id="novel"><div class="wrap">
- <div class="sec-head"><div class="sec-q">new biology to test</div>
-  <h2>Genes the models agree on that the databases miss</h2>
-  <p class="sec-sub">Unannotated features are real, active units — they just have no curated-pathway label. This panel lists genes that top an <b>unannotated</b> SAE feature in <span id="novel-k"></span> or more of the models, yet almost never a labelled one. Several architectures learn to represent these genes independently, while the pathway databases barely cover them. That makes them a <b>shortlist worth checking experimentally</b>. <span style="color:var(--faint)">⚠ Permissive annotation — illustrative; calibrated shared result in <a href="#controls" style="color:var(--acc)">Controls</a>.</span></p></div>
- <div class="panel"><div class="ptitle">Candidate under-annotated gene modules</div><div class="pnote">each card: the gene, how many models represent it unannotated, and the genes it co-fires with (its candidate module)</div>
-  <div id="novel-cards" style="display:flex;flex-wrap:wrap;gap:10px;margin-top:14px"></div></div>
- <div class="callout"><span class="k">How to read it</span><div id="novel-read"></div></div>
 </div></section>
 <section id="circuits" class="expert"><div class="wrap">
  <div class="sec-head"><div class="sec-q">cross-layer circuits &amp; hard cells</div>
@@ -752,24 +744,12 @@ document.getElementById('stats').innerHTML=[
   ['🧑‍🔬','Developers: benchmark &amp; compare your model','Score a new single-cell model against the atlas on the same corpus: how much of the <b>calibrated shared backbone</b> (~78 concepts shared by ≥8/10 models, ~20× over a random-gene null) and of the co-activation module vocabulary its features recover — and where it sits on the cross-model CKA map.','#universality','Universality · CKA'],
   ['🧬','Study a gene — where it lives, what it links to','Search any gene to see which models encode a feature for it, at what depth, what it <b>co-fires</b> with, and which concepts it falls into — a fast read on a gene’s learned neighbourhood across ten architectures.','#genes','Gene Search'],
   ['🔍','Check a model actually encodes your biology','Search a gene or pathway and see which models carry a feature for it, and at what depth — then build your downstream on the model that represents it best.','#genes','Gene Search'],
-  ['💡','Generate testable hypotheses','Mine the features that fire but match no database, and that several architectures agree on — a shortlist of under-characterised genes and candidate modules to take to the bench.','#novel','New biology'],
   ['🧭','Audit interpretability before you trust a model','Before using an FM downstream, confirm it linearly represents the axis you care about (tissue, cell state, a program) — and how pathway-shaped its features are.','#linearity','Linearity · Coverage'],
  ];
  g.innerHTML=U.map(([ic,t,b,href,sec])=>`<a href="${href}" style="text-decoration:none;display:block;background:var(--surface2);border:1px solid var(--line);border-radius:11px;padding:15px 16px">
   <div style="font-size:20px">${ic}</div><div style="color:var(--ink);font-weight:650;font-size:15px;margin-top:6px">${t}</div>
   <div style="color:var(--mut);font-size:13px;margin-top:6px;line-height:1.45">${b}</div>
   <div style="color:var(--acc);font-family:var(--mono);font-size:11px;margin-top:9px">→ ${sec}</div></a>`).join('');
-})();
-
-/* ===== new biology — candidate under-annotated genes ===== */
-(function(){const NB=D.novel_biology;if(!NB)return;
- document.getElementById('novel-k').textContent=NB.thresh;
- const host=document.getElementById('novel-cards');
- host.innerHTML=NB.candidates.map(c=>{const chips=c.co.map(g=>`<span style="display:inline-block;font-family:var(--mono);font-size:10.5px;color:var(--mut);background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:1px 6px;margin:2px 3px 0 0">${g}</span>`).join('');
-  return `<div style="flex:1 1 220px;min-width:200px;background:var(--surface2);border:1px solid var(--line);border-left:3px solid #4dd07a;border-radius:9px;padding:11px 13px">
-   <div style="display:flex;align-items:baseline;justify-content:space-between"><span style="font-family:var(--mono);font-weight:700;color:#4dd07a;font-size:14px">${c.gene}</span><span style="font-family:var(--mono);font-size:11px;color:var(--faint)">${c.n_models}/${NB.n_models} models</span></div>
-   <div class="pnote" style="margin:6px 0 3px">co-fires with</div><div>${chips}</div></div>`;}).join('');
- document.getElementById('novel-read').innerHTML=`These <b style="color:#4dd07a">${NB.candidates.length} genes</b> are learned as real, firing features by ${NB.thresh}+ of the ${NB.n_models} architectures, yet sit almost entirely in <b>unannotated</b> features — no GO / Reactome / KEGG / STRING term catches them. Some are known but pathway-poor (<b>AHSP</b> erythroid, <b>HOXC11</b> / <b>ONECUT2</b> transcription factors, <b>MYH9</b> myosin), others genuinely understudied (<b>XKR4</b>, <b>PRRT4</b>, <b>SPEGNB</b>). Cross-model agreement is the filter: one model finding a feature could be noise, but when independent tokenizations and objectives converge on the same gene with no database support, it is a signal that the annotation — not the biology — is missing. Each card's co-firing genes are the candidate module to test together. This is the atlas as a <b>hypothesis generator</b>: read the unannotated consensus, not just the labelled core. <span style="color:var(--faint)">Caveat: "unannotated" is relative to five databases at top-5 genes and a mid-layer snapshot; treat as a prioritised shortlist, not a claim of novelty.</span>`;
 })();
 
 /* roster */
@@ -782,7 +762,7 @@ addEventListener('scroll',()=>{if(tip.style.opacity!=='0')hideTip();},{passive:t
 (function(){const S=D.svd;const box=document.getElementById('svdbars');
  box.innerHTML=M.map(m=>{const v=S[m].novel;return `<div class="rowbar"><div class="name">${m}</div><div class="track"><div class="fill" style="width:${v}%;background:linear-gradient(90deg,#2fc6b6,#5b8cff)"></div></div><div class="val">${v}%</div></div>`;}).join('');
  const mn=Math.min(...M.map(m=>S[m].novel));
- document.getElementById('svd-read').innerHTML=`Across all seven models <b style="color:var(--teal)">${mn}–100%</b> of SAE features count as "novel" (cosine &lt; 0.7 to the top SVD axes), and the single-model ~99.4–100% reproduces. <b>But note:</b> in these dimensions <b>random directions clear the same bar ~100% of the time</b> (see <a href="#controls" style="color:var(--acc)">Controls</a>), so the novelty <i>percentage</i> is largely a <b>dimensional artefact, not evidence</b>. The non-trivial result is <b>variance</b>: at matched sparsity (k=32) the SAE explains far more than the top-k SVD (e.g. Geneformer 0.78 vs 0.23) — <i>that</i> is what says the dictionary lives in a superposition no linear method recovers. <span style="color:var(--faint)">The honest comparison is trained SAE var@k (0.61–0.87) vs top-k SVD (0.23–0.44) — the SAE wins. (A sanity check: an untrained random dictionary of the same shape explains negative variance, so overcompleteness alone buys nothing — but that baseline is weak; the SVD comparison is the real one.) See <a href="#controls" style="color:var(--acc)">Controls</a>.</span>`;})();
+ document.getElementById('svd-read').innerHTML=`Across all ten models <b style="color:var(--teal)">${mn}–100%</b> of SAE features count as "novel" (cosine &lt; 0.7 to the top SVD axes), and the single-model ~99.4–100% reproduces. <b>But note:</b> in these dimensions <b>random directions clear the same bar ~100% of the time</b> (see <a href="#controls" style="color:var(--acc)">Controls</a>), so the novelty <i>percentage</i> is largely a <b>dimensional artefact, not evidence</b>. The non-trivial result is <b>variance</b>: at matched sparsity (k=32) the SAE explains far more than the top-k SVD (e.g. Geneformer 0.78 vs 0.23) — <i>that</i> is what says the dictionary lives in a superposition no linear method recovers. <span style="color:var(--faint)">The honest comparison is trained SAE var@k (0.61–0.98) vs top-k SVD (0.23–0.96) — the SAE wins. (A sanity check: an untrained random dictionary of the same shape explains negative variance, so overcompleteness alone buys nothing — but that baseline is weak; the SVD comparison is the real one.) See <a href="#controls" style="color:var(--acc)">Controls</a>.</span>`;})();
 
 /* ===== Feature modules (co-activation) ===== */
 const MOD=JSON.parse(document.getElementById('modules-data').textContent);
@@ -841,7 +821,7 @@ function renderGene(q){q=(q||'').trim().toUpperCase();if(!q){gR.innerHTML='';ret
  if(!rows){const near=Object.keys(GENES.index).filter(g=>g.startsWith(q)).slice(0,12);gR.innerHTML=`<div style="color:var(--faint);font-size:13.5px">No feature indexes <b class="mono" style="color:var(--mut)">${q}</b>.`+(near.length?` Did you mean: `+near.map(g=>`<span class="chip" data-g="${g}" style="cursor:pointer;display:inline-block;margin:2px">${g}</span>`).join(''):'')+`</div>`;bindG();return;}
  const bars=rows.map(r=>{const m=gModels[r[0]],n=r[1],concept=gC[r[2]],ex=r[3],ours=new Set(['scPRINT','AIDO','UCE','tGPT']).has(m),frac=n/Math.max(...rows.map(x=>x[1]));
   return `<div class="rowbar" style="grid-template-columns:92px 1fr auto;gap:14px;margin:7px 0"><div class="name" style="color:${ours?'#f6a6c6':'var(--mut)'}">${m}${ours?' ●':''}</div><div style="font-size:13px;color:var(--mut);display:flex;align-items:center;gap:10px"><span style="height:8px;width:${18+frac*70}px;border-radius:4px;background:${ours?'var(--acc2)':'var(--acc)'};flex:none;opacity:.75"></span><span><span class="mono" style="color:var(--ink)">${n}</span> feature${n>1?'s':''} · <span style="color:var(--ink)">${concept}</span></span></div><div class="mono" style="font-size:11px;color:var(--faint)">#${ex}</div></div>`;}).join('');
- gR.innerHTML=`<div style="display:flex;align-items:baseline;gap:12px;margin-bottom:14px"><span class="mono" style="font-size:22px;color:var(--acc2)">${q}</span><span style="color:var(--mut);font-size:13.5px">encoded by <b style="color:var(--ink)">${rows.length}/7</b> models</span></div>${bars}`;}
+ gR.innerHTML=`<div style="display:flex;align-items:baseline;gap:12px;margin-bottom:14px"><span class="mono" style="font-size:22px;color:var(--acc2)">${q}</span><span style="color:var(--mut);font-size:13.5px">encoded by <b style="color:var(--ink)">${rows.length}/${gModels.length}</b> models</span></div>${bars}`;}
 gI.addEventListener('input',()=>renderGene(gI.value));bindG();
 
 /* ===== cross-layer flow ===== */
@@ -1126,7 +1106,14 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
   h+=`<td><div class="cell" data-t="${th}" data-m="${m}" data-v="${v}" style="width:46px;height:24px;background:${v>0?`color-mix(in srgb,var(--teal) ${Math.round(a*100)}%,var(--surface2))`:'var(--surface2)'}"><div class="simcell" style="color:${a>.55?'#0a0f1a':'var(--faint)'}">${v||''}</div></div></td>`;});h+='</tr>';});
  h+='</table>';const el=document.getElementById('themeheat');el.innerHTML=h;
  el.querySelectorAll('.cell').forEach(c=>{c.onmousemove=e=>showTip(`<span class="tt">${c.dataset.m}</span><br>${c.dataset.t}<br><b>${c.dataset.v}</b> modules`,e);c.onmouseleave=hideTip;});
- document.getElementById('theme-read').innerHTML=`The co-activation modules map to canonical biological programs. <b style="color:var(--teal)">Immune and signaling appear in all seven models</b>, metabolism in six, translation and membrane-traffic in five: the SAE organises features into a <b>shared module vocabulary</b> across architectures. And capacity scales it — the 2B C2S resolves all nine programs, the 10M AIDO only immune + signaling, so bigger models carve more distinct modules. The UMAP axes themselves are non-linear, but the clusters <b>are</b> these programs — that is what the module structure means.`;})();
+ const NM=T.models.length, nMod=i=>T.Z[i].filter(v=>v>0).length,
+   byTheme=T.themes.map((th,i)=>[th,nMod(i)]).sort((a,b)=>b[1]-a[1]),
+   wide=byTheme.filter(([,n])=>n>=NM-1).map(([t])=>t),
+   narrow=byTheme.slice(-2).map(([t,n])=>`${t} (${n})`),
+   nProg=m=>T.Z.filter(r=>r[T.models.indexOf(m)]>0).length,
+   big=nProg('C2S'), small=nProg('AIDO'),
+   smallList=T.themes.filter((th,i)=>T.Z[i][T.models.indexOf('AIDO')]>0).join(', ');
+ document.getElementById('theme-read').innerHTML=`The co-activation modules map to canonical biological programs. <b style="color:var(--teal)">${wide.join(', ')}</b> show up in ${NM-1}–${NM} of the ${NM} models, while ${narrow.join(' and ')} reach far fewer: the SAE organises features into a <b>shared module vocabulary</b> across architectures, but only part of that vocabulary is shared by everyone. Capacity scales it — the 2B C2S resolves ${big} of the ${T.themes.length} programs, the 10M AIDO only ${small} (${smallList}), so bigger models carve more distinct modules. The UMAP axes themselves are non-linear, but the clusters <b>are</b> these programs — that is what the module structure means.`;})();
 </script>
 <!-- ===== Ask-the-atlas helper (client-side, no server) + glossary tooltips ===== -->
 <style>
@@ -1370,13 +1357,13 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
  const TABS=[{id:'home',label:'Overview'},{id:'choose',label:'① Choose a model'},{id:'compare',label:'② Compare'},{id:'genes',label:'③ Genes & biology'},{id:'findings',label:'Findings'}];
  const TABMAP={overview:'home',intro:'home','usecase-choose':'choose',
    universality:'compare',coverage:'compare',cka:'compare',lineage:'compare',emerge:'findings',economy:'findings',
-   genes:'genes',novel:'genes',explorer:'genes',
+   genes:'genes',explorer:'genes',
    depth:'findings',tissue:'findings',svd:'findings',linearity:'findings',flow:'findings',modules:'findings',axis:'findings',circuits:'findings',controls:'findings',roster:'findings'};
  Object.keys(TABMAP).forEach(id=>{const el=document.getElementById(id);if(el)el.dataset.atab=TABMAP[id];});
  // reorder sections within a tab so it opens with what the use-case promises
  function reorder(ids){const els=ids.map(id=>document.getElementById(id)).filter(Boolean);for(let i=1;i<els.length;i++)els[i-1].after(els[i]);}
  reorder(['cka','coverage','universality','lineage']); // Compare: model similarity + per-model first, backbone science after
- reorder(['genes','novel','explorer']);                                   // Genes: gene search + new biology first, feature browser last
+ reorder(['genes','explorer']);                                           // Genes: gene search first, feature browser last
  const links=document.querySelector('nav .links');if(links){links.classList.add('tabnav');links.innerHTML=TABS.map(t=>`<button class="tabbtn" data-t="${t.id}">${t.label}</button>`).join('');}
  let cur='home';
  function show(tab){cur=tab;
