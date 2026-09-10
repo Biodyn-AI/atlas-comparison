@@ -201,31 +201,13 @@ def main():
                  "tax": {m: {"tok": TAX[m][0], "obj": TAX[m][1], "prior": TAX[m][2]} for m in models if m in TAX},
                  "metrics": axmet, "cat_universality": {"n_models": n, "programs": programs}}
 
-    # new biology (Analysis 14): genes that lead UNannotated features across many models
-    THRESH = max(4, n // 2)
-    gene_models = defaultdict(set); gene_co = defaultdict(Counter)
-    for m in models:
-        mid = mat[m]["layer"]; ann = set(str(k) for k in mat[m]["feat_terms"])
-        cat = None
-        for cp in _glob.glob(f"{TS_OUT}/{m}/feature_catalog_L*.json"):
-            j = json.load(open(cp))
-            if j.get("layer") == mid:
-                cat = j; break
-        if not cat:
-            continue
-        for fid, f in cat["features"].items():
-            if str(fid) in ann:
-                continue
-            tg = [str(x).upper() for x in f.get("top_genes", [])[:6] if not str(x).upper().startswith("ENSG")]
-            if not tg:
-                continue
-            gene_models[tg[0]].add(m)
-            for g in tg[1:5]:
-                gene_co[tg[0]][g] += 1
-    cands = [{"gene": g, "n_models": len(ms), "co": [x for x, _ in gene_co[g].most_common(5)]}
-             for g, ms in gene_models.items() if len(ms) >= THRESH]
-    cands.sort(key=lambda c: (-c["n_models"], -len(c["co"])))
-    d["novel_biology"] = {"thresh": THRESH, "n_models": n, "candidates": cands[:14]}
+    # Analysis 14 ("new biology": genes leading UNannotated features across many models) was REMOVED.
+    # It had no null. Two were run afterwards and both are negative -- see scripts/novel_null.py
+    # (real 50 vs random-feature-subset null 65.5 +- 6.4, z = -2.4) and scripts/novel_calibrated.py
+    # (calibrated annotator + degree-matched label-shuffle null: real 207 vs 248.8 +- 6.2, z = -6.78,
+    # 0/207 survive BH q <= 0.05 over 2000 permutations). Both show a deficit rather than an excess:
+    # cross-model consensus concentrates on genes the databases already cover well (annotation coverage
+    # rises monotonically with the number of models agreeing, 59% -> 87%). Do not reinstate without a null.
 
     # ---- extra findings (Analysis 16): feature economy + frontier ----
     extra = {}

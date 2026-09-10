@@ -8,9 +8,8 @@ from __future__ import annotations
 import json, re, os
 
 C = "/Users/annaantipova/Desktop/biomech/outputs/atlas/comparative"
-REPO = "/Users/annaantipova/Desktop/biomech/comparative-sae-atlas"
-TEMPLATE = f"{REPO}/pipeline/atlas_template.html"  # canonical editable markup (data blocks are __DATA__ placeholders)
-OUT = "/Users/annaantipova/Desktop/biomech/outputs/atlas/comparative"  # builds land here; deploy = copy full -> REPO/index.html
+SCRATCH = "/private/tmp/claude-501/-Users-annaantipova-Desktop-biomech/cff4254a-ea2f-48db-929f-897776ca3413/scratchpad"
+TEMPLATE = f"{SCRATCH}/atlas_ts3.html"
 
 DATA = {
     "modules-data": f"{C}/modules_alllayers.json",
@@ -24,7 +23,7 @@ NEW_THEME_READ = (
     "const perM=tm.map((m,j)=>Z.reduce((a,r)=>a+(r[j]>0?1:0),0));"
     "const rich=tm[perM.indexOf(Math.max(...perM))],poor=tm[perM.indexOf(Math.min(...perM))];"
     "const allTxt=inAll.length?inAll.join(', ')+' appear in all '+N+' models':'programs vary across all '+N+' models';"
-    "document.getElementById('theme-read').innerHTML=`The co-activation modules map to "
+    "document.getElementById('theme-read').innerHTML=`The co-activation modules aren't arbitrary — they map to "
     "canonical biological programs. <b style=\"color:var(--teal)\">${allTxt}</b> — the SAE organises features into a "
     "shared module vocabulary across architectures. Coverage varies: <b>${rich}</b> resolves ${Math.max(...perM)} of "
     "the nine programs, <b>${poor}</b> only ${Math.min(...perM)}, so architecture and scale carve different numbers of "
@@ -82,6 +81,5 @@ def build(explorer_path, out_path, label):
 
 
 if __name__ == "__main__":
-    build(f"{C}/explorer_slim_light.json", f"{OUT}/atlas_ts3_light.html", "LIGHT")
-    build(f"{C}/explorer_slim_full.json", f"{OUT}/atlas_ts3_full.html", "FULL")
-    print("deploy: cp outputs/atlas/comparative/atlas_ts3_full.html comparative-sae-atlas/index.html")
+    build(f"{C}/explorer_slim_light.json", f"{SCRATCH}/atlas_ts3_light.html", "LIGHT")
+    build(f"{C}/explorer_slim_full.json", f"{SCRATCH}/atlas_ts3.html", "FULL")
