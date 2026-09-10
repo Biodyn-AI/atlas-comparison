@@ -119,6 +119,22 @@ overlapping databases, so random genes annotate at nearly the real rate.
   as **prioritised predictions, not findings** (`data/hypothesis_final.json`). Caveat: TRRUST records regulation
   someone has already published, so this scores recovery of *known* links; recovered counts are 10–83 per model, so we
   rank models rather than read small gaps.
+- **The predictions hold against literature and against perturbation.** Two further, independent bodies of
+  evidence on the same 4,349 pairs. *Literature* (NCBI gene2pubmed, a dated bulk file, not live queries):
+  1,289 of 4,111 mappable pairs are co-mentioned versus **593 ± 17** under a null preserving each gene's
+  publication count — **2.2×, z = 40.5, p = 0.005**. Papers annotating >60 genes are excluded; without that
+  cap 96% of pairs are nominally co-mentioned and the measure is vacuous. *Perturbation* (Replogle et al.
+  2022 genome-wide CRISPRi — no annotation, no literature): knocking down one gene moves its predicted
+  partner into the top 5% of responders for **10.6% vs 8.8%** of pairs in K562 (**1.20×**, z = 3.8,
+  p = 0.005) and **23.8% vs 18.7%** in the independent RPE1 line (**1.28×**, z = 5.4, p = 0.005), against a
+  responsiveness-matched null with ranks taken within each perturbation. Magnitudes are small because the
+  screens are cancer/epithelial lines while the corpus is immune/kidney/lung — this is transfer *across*
+  biological context. Whether model agreement also raises the causal rate is **unresolved**: it does in RPE1
+  (1.28× → 1.53× at ≥3 models, p = 0.005) but not in K562 (1.42× on 76 pairs, p = 0.13).
+- **No evidence of *new* biology, from a third direction.** Only 171 of 4,111 pairs have never been
+  co-mentioned, and just **4** pair two well-studied genes (≥20 papers each) that never appear together — all
+  four long non-coding RNAs. Literature agrees with the databases and with TRRUST: cross-model consensus
+  concentrates on documented biology. The atlas prioritises testable links; it does not detect the unexplored.
 
 **What this means for model choice.** A downstream analysis inherits far more of one model's own vocabulary
 than of the shared backbone — the models share basic machinery, and most of what each learns is
@@ -178,7 +194,9 @@ pipeline/
     hypothesis_trrust2.py    permutation validation + does cross-model agreement raise precision?
     hypothesis_trrust3.py    final: validated models only, the released prediction list
     hypothesis_robust.py     paralogues / firing-features-only / stricter-evidence variants
-    make_fig5.py             Fig 5 (per-model enrichment + cross-model precision)
+    hypothesis_pubmed.py     literature co-mention vs a publication-count-preserving null
+    hypothesis_perturb.py    causal test on Replogle 2022 Perturb-seq (K562 + RPE1 replication)
+    make_fig5.py             Fig 5 (per-model enrichment, cross-model precision, independent evidence)
 docs/METHODS.md          pipeline + inductive-axis writeup
 ```
 

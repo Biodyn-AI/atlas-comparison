@@ -1,0 +1,2665 @@
+{
+ "source": "NCBI gene2pubmed + Homo_sapiens.gene_info, downloaded 2026-09-11",
+ "null": "degree-preserving shuffle of the gene-paper bipartite graph (each gene keeps its paper count)",
+ "n_perm": 200,
+ "n_pairs_testable": 4111,
+ "mega_paper_cap": 60,
+ "observed_pairs_comentioned": 1289,
+ "observed_total_comentions": 3632,
+ "null_pairs_comentioned_mean": 593.2,
+ "null_sd": 17.2,
+ "fold": 2.17,
+ "z": 40.48,
+ "p_emp": 0.00498,
+ "n_never_comentioned": 171,
+ "n_never_but_both_studied": 4,
+ "never_comentioned": [
+  {
+   "pair": [
+    "MTCO1P12",
+    "MTND1P23"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 134,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "MTCO1P12",
+    "MTCO1P40"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 107,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "MTND1P23",
+    "RPL10P9"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 90,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "MTCO1P12",
+    "MTND4P12"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 90,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "MTCO1P40",
+    "MTND1P23"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 84,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "LINC-PINT",
+    "LINC00513"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 78,
+   "co_mentions": 0,
+   "papers": [
+    47,
+    3
+   ]
+  },
+  {
+   "pair": [
+    "MTCO1P40",
+    "MTND4P12"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 75,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "GAS5",
+    "SNHG6"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 75,
+   "co_mentions": 0,
+   "papers": [
+    369,
+    54
+   ]
+  },
+  {
+   "pair": [
+    "MTND1P23",
+    "MTND4P12"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 71,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "MTCO1P12",
+    "RPL10P9"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 69,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "HLA-DMA",
+    "HLA-DRB6"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 67,
+   "co_mentions": 0,
+   "papers": [
+    119,
+    9
+   ]
+  },
+  {
+   "pair": [
+    "MTCO1P12",
+    "MTCO2P12"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 59,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    21
+   ]
+  },
+  {
+   "pair": [
+    "MTCO1P40",
+    "RPL10P9"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 53,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "MTCO2P12",
+    "MTND4P12"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 48,
+   "co_mentions": 0,
+   "papers": [
+    21,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "CHIAP2",
+    "KRT16P2"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 47,
+   "co_mentions": 0,
+   "papers": [
+    4,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "LAMP3",
+    "SLC22A31"
+   ],
+   "n_models": 3,
+   "models": [
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 46,
+   "co_mentions": 0,
+   "papers": [
+    122,
+    2
+   ]
+  },
+  {
+   "pair": [
+    "DYNLRB2",
+    "TMEM212"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 41,
+   "co_mentions": 0,
+   "papers": [
+    30,
+    9
+   ]
+  },
+  {
+   "pair": [
+    "MTATP6P1",
+    "MTCO1P12"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 39,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "MTND4P12",
+    "RPL10P9"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 35,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "ACOD1",
+    "IL6R-AS1"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 34,
+   "co_mentions": 0,
+   "papers": [
+    54,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "NEAT1",
+    "XIST"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 28,
+   "co_mentions": 0,
+   "papers": [
+    691,
+    2
+   ]
+  },
+  {
+   "pair": [
+    "MTATP6P1",
+    "MTCO1P40"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 27,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "ROS1",
+    "SLC22A31"
+   ],
+   "n_models": 3,
+   "models": [
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 27,
+   "co_mentions": 0,
+   "papers": [
+    914,
+    2
+   ]
+  },
+  {
+   "pair": [
+    "NEAT1",
+    "SAT1"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 25,
+   "co_mentions": 0,
+   "papers": [
+    691,
+    103
+   ]
+  },
+  {
+   "pair": [
+    "MTATP6P1",
+    "MTND4P12"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 22,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "LINC02218",
+    "PIWIL4"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "UCE"
+   ],
+   "weight": 116,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    65
+   ]
+  },
+  {
+   "pair": [
+    "IGKV3-11",
+    "IGKV4-1"
+   ],
+   "n_models": 2,
+   "models": [
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 110,
+   "co_mentions": 0,
+   "papers": [
+    3,
+    33
+   ]
+  },
+  {
+   "pair": [
+    "PARAL1",
+    "STAC"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 104,
+   "co_mentions": 0,
+   "papers": [
+    2,
+    28
+   ]
+  },
+  {
+   "pair": [
+    "AGRP",
+    "PARAL1"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 98,
+   "co_mentions": 0,
+   "papers": [
+    176,
+    2
+   ]
+  },
+  {
+   "pair": [
+    "LINC02218",
+    "PGLYRP1"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "UCE"
+   ],
+   "weight": 95,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    90
+   ]
+  },
+  {
+   "pair": [
+    "TSIX",
+    "XIST"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 93,
+   "co_mentions": 0,
+   "papers": [
+    12,
+    2
+   ]
+  },
+  {
+   "pair": [
+    "RNU6-60P",
+    "RNU7-41P"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 86,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "FFAR4",
+    "PARAL1"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 84,
+   "co_mentions": 0,
+   "papers": [
+    231,
+    2
+   ]
+  },
+  {
+   "pair": [
+    "FFAR4",
+    "IQSEC3-AS2"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 82,
+   "co_mentions": 0,
+   "papers": [
+    231,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "RNU7-41P",
+    "SNORD11"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 74,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    2
+   ]
+  },
+  {
+   "pair": [
+    "FCGR3B",
+    "LINC02218"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "UCE"
+   ],
+   "weight": 69,
+   "co_mentions": 0,
+   "papers": [
+    213,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "IQSEC3-AS2",
+    "MOGAT1"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 66,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    9
+   ]
+  },
+  {
+   "pair": [
+    "HOATZ",
+    "SNTN"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 63,
+   "co_mentions": 0,
+   "papers": [
+    3,
+    3
+   ]
+  },
+  {
+   "pair": [
+    "PARAL1",
+    "SLC19A3"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 61,
+   "co_mentions": 0,
+   "papers": [
+    2,
+    149
+   ]
+  },
+  {
+   "pair": [
+    "HLA-DPB1",
+    "HLA-DRB6"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 59,
+   "co_mentions": 0,
+   "papers": [
+    429,
+    9
+   ]
+  },
+  {
+   "pair": [
+    "GPX1",
+    "GPX1P1"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 59,
+   "co_mentions": 0,
+   "papers": [
+    656,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "INHBA",
+    "LINC03051"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 59,
+   "co_mentions": 0,
+   "papers": [
+    320,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "HLA-DPA1",
+    "HLA-DRB6"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 55,
+   "co_mentions": 0,
+   "papers": [
+    178,
+    9
+   ]
+  },
+  {
+   "pair": [
+    "SNHG6",
+    "ZFAS1"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 51,
+   "co_mentions": 0,
+   "papers": [
+    54,
+    126
+   ]
+  },
+  {
+   "pair": [
+    "GLT8D2",
+    "LINC02456"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 51,
+   "co_mentions": 0,
+   "papers": [
+    26,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "MTCO1P12",
+    "MTCO3P12"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "scGPT"
+   ],
+   "weight": 51,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "LINC03051",
+    "LSAMP"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 48,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    38
+   ]
+  },
+  {
+   "pair": [
+    "MTCO1P53",
+    "MTND1P23"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 48,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "HTN3",
+    "IGHV5-51"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 47,
+   "co_mentions": 0,
+   "papers": [
+    232,
+    6
+   ]
+  },
+  {
+   "pair": [
+    "HTN3",
+    "IGLV2-23"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 44,
+   "co_mentions": 0,
+   "papers": [
+    232,
+    11
+   ]
+  },
+  {
+   "pair": [
+    "MOGAT1",
+    "PARAL1"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 43,
+   "co_mentions": 0,
+   "papers": [
+    9,
+    2
+   ]
+  },
+  {
+   "pair": [
+    "MTCO3P12",
+    "MTND4P12"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "scGPT"
+   ],
+   "weight": 41,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "SFTPD",
+    "SLC22A31"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 39,
+   "co_mentions": 0,
+   "papers": [
+    280,
+    2
+   ]
+  },
+  {
+   "pair": [
+    "CXCR2",
+    "LINC02218"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "UCE"
+   ],
+   "weight": 39,
+   "co_mentions": 0,
+   "papers": [
+    561,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "IGHGP",
+    "IGKC"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 38,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    113
+   ]
+  },
+  {
+   "pair": [
+    "CD74",
+    "HLA-DRB6"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 37,
+   "co_mentions": 0,
+   "papers": [
+    221,
+    9
+   ]
+  },
+  {
+   "pair": [
+    "EPB41L4A-AS1",
+    "SNHG6"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 37,
+   "co_mentions": 0,
+   "papers": [
+    18,
+    54
+   ]
+  },
+  {
+   "pair": [
+    "MTCO2P12",
+    "MTCO3P12"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "scGPT"
+   ],
+   "weight": 37,
+   "co_mentions": 0,
+   "papers": [
+    21,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "MTCO2P2",
+    "RPL29P4"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 35,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "NUTM2A-AS1",
+    "NUTM2B-AS1"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 32,
+   "co_mentions": 0,
+   "papers": [
+    6,
+    7
+   ]
+  },
+  {
+   "pair": [
+    "MTCO1P53",
+    "MTND4P12"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 32,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "FTH1",
+    "FTH1P8"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 32,
+   "co_mentions": 0,
+   "papers": [
+    373,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "HLA-DMB",
+    "HLA-DRB6"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 31,
+   "co_mentions": 0,
+   "papers": [
+    127,
+    9
+   ]
+  },
+  {
+   "pair": [
+    "STARD13",
+    "STARD13-AS"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 31,
+   "co_mentions": 0,
+   "papers": [
+    85,
+    2
+   ]
+  },
+  {
+   "pair": [
+    "MTCO1P40",
+    "MTCO2P12"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 31,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    21
+   ]
+  },
+  {
+   "pair": [
+    "GLDN",
+    "PARAL1"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 31,
+   "co_mentions": 0,
+   "papers": [
+    19,
+    2
+   ]
+  },
+  {
+   "pair": [
+    "CMTM2",
+    "LINC01506"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 31,
+   "co_mentions": 0,
+   "papers": [
+    23,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "IGKV1-39",
+    "IGKV3-11"
+   ],
+   "n_models": 2,
+   "models": [
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 31,
+   "co_mentions": 0,
+   "papers": [
+    16,
+    3
+   ]
+  },
+  {
+   "pair": [
+    "MTCO1P12",
+    "MTCO1P53"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 30,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "MTCO1P40",
+    "MTCO1P53"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 30,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "IQSEC3-AS2",
+    "SLC19A3"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 30,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    149
+   ]
+  },
+  {
+   "pair": [
+    "RNU7-41P",
+    "TRAJ32"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 30,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "NEK5",
+    "TMEM212"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "scGPT"
+   ],
+   "weight": 30,
+   "co_mentions": 0,
+   "papers": [
+    26,
+    9
+   ]
+  },
+  {
+   "pair": [
+    "MIR3685",
+    "TRAJ32"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 29,
+   "co_mentions": 0,
+   "papers": [
+    2,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "CXCR1",
+    "LINC01506"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 29,
+   "co_mentions": 0,
+   "papers": [
+    244,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "LINC00431",
+    "SNAP25-AS1"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "scGPT"
+   ],
+   "weight": 28,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    2
+   ]
+  },
+  {
+   "pair": [
+    "IGKV3-11",
+    "IGKV3-20"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "UCE"
+   ],
+   "weight": 28,
+   "co_mentions": 0,
+   "papers": [
+    3,
+    29
+   ]
+  },
+  {
+   "pair": [
+    "MTCO1P40",
+    "MTCO3P12"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "scGPT"
+   ],
+   "weight": 27,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "GPX1P1",
+    "GPX4"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 26,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    297
+   ]
+  },
+  {
+   "pair": [
+    "IGHG4",
+    "IGHGP"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 26,
+   "co_mentions": 0,
+   "papers": [
+    29,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "IGKV1-5",
+    "IGKV3-11"
+   ],
+   "n_models": 2,
+   "models": [
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 26,
+   "co_mentions": 0,
+   "papers": [
+    30,
+    3
+   ]
+  },
+  {
+   "pair": [
+    "MTATP6P1",
+    "MTND2P28"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 25,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "PABPC1P4",
+    "YWHAZP4"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 25,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "RPL41",
+    "RPL41P1"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 25,
+   "co_mentions": 0,
+   "papers": [
+    43,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "ADAMTS15",
+    "LINC01436"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "scGPT"
+   ],
+   "weight": 25,
+   "co_mentions": 0,
+   "papers": [
+    26,
+    4
+   ]
+  },
+  {
+   "pair": [
+    "CD177",
+    "LINC02218"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "UCE"
+   ],
+   "weight": 25,
+   "co_mentions": 0,
+   "papers": [
+    238,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "ACOD1",
+    "ZNF341-AS1"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 24,
+   "co_mentions": 0,
+   "papers": [
+    54,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "SLC22A31",
+    "SLC34A2"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 24,
+   "co_mentions": 0,
+   "papers": [
+    2,
+    131
+   ]
+  },
+  {
+   "pair": [
+    "IGHGP",
+    "IGLC2"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 24,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    38
+   ]
+  },
+  {
+   "pair": [
+    "PNISR",
+    "XIST"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 24,
+   "co_mentions": 0,
+   "papers": [
+    53,
+    2
+   ]
+  },
+  {
+   "pair": [
+    "MTATP6P1",
+    "MTCO2P2"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 23,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "IGHG2",
+    "IGHGP"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 23,
+   "co_mentions": 0,
+   "papers": [
+    69,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "TMSB4X",
+    "TMSB4XP4"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 22,
+   "co_mentions": 0,
+   "papers": [
+    158,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "LINC00926",
+    "PAX5"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 22,
+   "co_mentions": 0,
+   "papers": [
+    7,
+    639
+   ]
+  },
+  {
+   "pair": [
+    "MTATP6P1",
+    "MTCO3P12"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 22,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "ADGRG3",
+    "LINC01506"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 22,
+   "co_mentions": 0,
+   "papers": [
+    23,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "IGHGP",
+    "IGLC3"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 22,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    36
+   ]
+  },
+  {
+   "pair": [
+    "OSMR",
+    "OSMR-DT"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 21,
+   "co_mentions": 0,
+   "papers": [
+    139,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "DDX4",
+    "LINC01387"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 21,
+   "co_mentions": 0,
+   "papers": [
+    119,
+    4
+   ]
+  },
+  {
+   "pair": [
+    "ADGRG3",
+    "LINC02218"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "UCE"
+   ],
+   "weight": 21,
+   "co_mentions": 0,
+   "papers": [
+    23,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "PCCA",
+    "PCCA-DT"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 20,
+   "co_mentions": 0,
+   "papers": [
+    148,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "MIR4420",
+    "RNU6-60P"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 20,
+   "co_mentions": 0,
+   "papers": [
+    3,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "IGHV4-39",
+    "TRAV8-2"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 20,
+   "co_mentions": 0,
+   "papers": [
+    8,
+    2
+   ]
+  },
+  {
+   "pair": [
+    "IGKV3-11",
+    "IGLV3-25"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "scGPT"
+   ],
+   "weight": 20,
+   "co_mentions": 0,
+   "papers": [
+    3,
+    14
+   ]
+  },
+  {
+   "pair": [
+    "MTCO3P12",
+    "MTND1P23"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "scGPT"
+   ],
+   "weight": 20,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "EPDR1",
+    "KRT16P2"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "scGPT"
+   ],
+   "weight": 20,
+   "co_mentions": 0,
+   "papers": [
+    46,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "FAM89A",
+    "PARAL1"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 19,
+   "co_mentions": 0,
+   "papers": [
+    12,
+    2
+   ]
+  },
+  {
+   "pair": [
+    "IGHG3",
+    "IGHGP"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 19,
+   "co_mentions": 0,
+   "papers": [
+    44,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "CARHSP1-DT",
+    "SEPTIN7-DT"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 19,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "PPP1R42",
+    "TMEM212"
+   ],
+   "n_models": 2,
+   "models": [
+    "Geneformer",
+    "scGPT"
+   ],
+   "weight": 19,
+   "co_mentions": 0,
+   "papers": [
+    9,
+    9
+   ]
+  },
+  {
+   "pair": [
+    "LINC01914",
+    "WT1"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "scGPT"
+   ],
+   "weight": 19,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    1222
+   ]
+  },
+  {
+   "pair": [
+    "DMBT1",
+    "SLC22A31"
+   ],
+   "n_models": 2,
+   "models": [
+    "Geneformer",
+    "UCE"
+   ],
+   "weight": 19,
+   "co_mentions": 0,
+   "papers": [
+    246,
+    2
+   ]
+  },
+  {
+   "pair": [
+    "MTCO1P12",
+    "MTCO2P2"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 18,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "FAM216B",
+    "SNTN"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 18,
+   "co_mentions": 0,
+   "papers": [
+    7,
+    3
+   ]
+  },
+  {
+   "pair": [
+    "DNASE2B",
+    "IQSEC3-AS2"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 18,
+   "co_mentions": 0,
+   "papers": [
+    22,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "LINC02218",
+    "TCN1"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "UCE"
+   ],
+   "weight": 18,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    62
+   ]
+  },
+  {
+   "pair": [
+    "MTCO1P40",
+    "MTND2P28"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 17,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "SUCLG2",
+    "SUCLG2-DT"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 17,
+   "co_mentions": 0,
+   "papers": [
+    94,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "MTCO1P12",
+    "MTND2P28"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 17,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "CD8B",
+    "LINC02446"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 17,
+   "co_mentions": 0,
+   "papers": [
+    50,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "BLK",
+    "LINC00926"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 17,
+   "co_mentions": 0,
+   "papers": [
+    156,
+    7
+   ]
+  },
+  {
+   "pair": [
+    "ERICH6-AS1",
+    "PPP1R42"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 17,
+   "co_mentions": 0,
+   "papers": [
+    2,
+    9
+   ]
+  },
+  {
+   "pair": [
+    "IGHG1",
+    "IGHGP"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 17,
+   "co_mentions": 0,
+   "papers": [
+    150,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "DDX17",
+    "XIST"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 17,
+   "co_mentions": 0,
+   "papers": [
+    465,
+    2
+   ]
+  },
+  {
+   "pair": [
+    "GDPD1",
+    "HDAC4-AS1"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "scGPT"
+   ],
+   "weight": 17,
+   "co_mentions": 0,
+   "papers": [
+    24,
+    2
+   ]
+  },
+  {
+   "pair": [
+    "IGHV3-23",
+    "IGKV3-11"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "UCE"
+   ],
+   "weight": 17,
+   "co_mentions": 0,
+   "papers": [
+    23,
+    3
+   ]
+  },
+  {
+   "pair": [
+    "PSME2P1",
+    "PSME2P2"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 16,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "HS3ST2",
+    "LINC02244"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 16,
+   "co_mentions": 0,
+   "papers": [
+    25,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "IGHA2",
+    "IGHGP"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 16,
+   "co_mentions": 0,
+   "papers": [
+    43,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "GMDS-DT",
+    "HCCS-DT"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 16,
+   "co_mentions": 0,
+   "papers": [
+    9,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "MPRIP-AS1",
+    "PHKG1"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 16,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    31
+   ]
+  },
+  {
+   "pair": [
+    "IGKV3-11",
+    "IGLV3-21"
+   ],
+   "n_models": 2,
+   "models": [
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 16,
+   "co_mentions": 0,
+   "papers": [
+    3,
+    17
+   ]
+  },
+  {
+   "pair": [
+    "TMSB4XP4",
+    "TMSB4XP8"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 15,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    3
+   ]
+  },
+  {
+   "pair": [
+    "CIMIP1",
+    "SNTN"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 15,
+   "co_mentions": 0,
+   "papers": [
+    13,
+    3
+   ]
+  },
+  {
+   "pair": [
+    "ARC",
+    "RPL21P12"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 15,
+   "co_mentions": 0,
+   "papers": [
+    80,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "LINC01857",
+    "TNFRSF13B"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 15,
+   "co_mentions": 0,
+   "papers": [
+    7,
+    276
+   ]
+  },
+  {
+   "pair": [
+    "IGHV5-10-1",
+    "IGKV3-11"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "scGPT"
+   ],
+   "weight": 15,
+   "co_mentions": 0,
+   "papers": [
+    5,
+    3
+   ]
+  },
+  {
+   "pair": [
+    "HSPE1-MOB4",
+    "MOB3B"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "UCE"
+   ],
+   "weight": 15,
+   "co_mentions": 0,
+   "papers": [
+    11,
+    31
+   ]
+  },
+  {
+   "pair": [
+    "SLC22A31",
+    "WIF1"
+   ],
+   "n_models": 2,
+   "models": [
+    "Geneformer",
+    "UCE"
+   ],
+   "weight": 15,
+   "co_mentions": 0,
+   "papers": [
+    2,
+    265
+   ]
+  },
+  {
+   "pair": [
+    "EEF1A1P19",
+    "RPL3P7"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 14,
+   "co_mentions": 0,
+   "papers": [
+    0,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "PCED1B-AS1",
+    "PRKCQ-AS1"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 14,
+   "co_mentions": 0,
+   "papers": [
+    11,
+    6
+   ]
+  },
+  {
+   "pair": [
+    "CHASERR",
+    "H1-10"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 14,
+   "co_mentions": 0,
+   "papers": [
+    6,
+    205
+   ]
+  },
+  {
+   "pair": [
+    "PARAL1",
+    "PCOLCE2"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 14,
+   "co_mentions": 0,
+   "papers": [
+    2,
+    29
+   ]
+  },
+  {
+   "pair": [
+    "MIR16-2",
+    "RNA5SP151"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 14,
+   "co_mentions": 0,
+   "papers": [
+    106,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "OR4T1P",
+    "VN1R7P"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "scGPT"
+   ],
+   "weight": 14,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    2
+   ]
+  },
+  {
+   "pair": [
+    "LINC01411",
+    "NPSR1"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 13,
+   "co_mentions": 0,
+   "papers": [
+    2,
+    167
+   ]
+  },
+  {
+   "pair": [
+    "BLK",
+    "LINC01781"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 13,
+   "co_mentions": 0,
+   "papers": [
+    156,
+    1
+   ]
+  },
+  {
+   "pair": [
+    "DIAPH2-AS1",
+    "DPYD-AS1"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 13,
+   "co_mentions": 0,
+   "papers": [
+    5,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "ACAP3",
+    "SIDT1-AS1"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "scGPT"
+   ],
+   "weight": 13,
+   "co_mentions": 0,
+   "papers": [
+    21,
+    0
+   ]
+  },
+  {
+   "pair": [
+    "LINC02306",
+    "PIEZO2"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 12,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    178
+   ]
+  }
+ ],
+ "never_but_both_studied": [
+  {
+   "pair": [
+    "GAS5",
+    "SNHG6"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 75,
+   "co_mentions": 0,
+   "papers": [
+    369,
+    54
+   ]
+  },
+  {
+   "pair": [
+    "NEAT1",
+    "SAT1"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 25,
+   "co_mentions": 0,
+   "papers": [
+    691,
+    103
+   ]
+  },
+  {
+   "pair": [
+    "SNHG6",
+    "ZFAS1"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 51,
+   "co_mentions": 0,
+   "papers": [
+    54,
+    126
+   ]
+  },
+  {
+   "pair": [
+    "N4BP2L2",
+    "NEAT1"
+   ],
+   "n_models": 2,
+   "models": [
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 10,
+   "co_mentions": 0,
+   "papers": [
+    32,
+    691
+   ]
+  }
+ ]
+}

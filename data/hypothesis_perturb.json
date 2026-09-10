@@ -1,0 +1,72 @@
+{
+ "data": "Replogle et al. 2022 genome-wide CRISPRi Perturb-seq, normalised pseudobulk",
+ "null": "measured gene replaced by a responsiveness-matched random gene; ranks taken within row",
+ "n_perm": 200,
+ "top_quantile": 0.05,
+ "K562": {
+  "n_ordered_pairs": 3489,
+  "mean_percentile": 0.5527,
+  "null_mean_percentile": 0.5377,
+  "p_mean": 0.00995,
+  "top5pct_rate": 0.1055,
+  "null_top5pct_rate": 0.0881,
+  "top5pct_fold": 1.2,
+  "z_top5": 3.82,
+  "p_top5": 0.00498,
+  "by_n_models": {
+   "2": {
+    "n": 3489,
+    "top5pct_rate": 0.1055,
+    "null_rate": 0.0883,
+    "fold": 1.19,
+    "z": 3.65,
+    "p_emp": 0.00498
+   },
+   "3": {
+    "n": 398,
+    "top5pct_rate": 0.1156,
+    "null_rate": 0.0973,
+    "fold": 1.19,
+    "z": 1.25,
+    "p_emp": 0.1393
+   },
+   "4": {
+    "n": 76,
+    "top5pct_rate": 0.1579,
+    "null_rate": 0.1116,
+    "fold": 1.42,
+    "z": 1.31,
+    "p_emp": 0.12935
+   }
+  }
+ },
+ "RPE1": {
+  "n_ordered_pairs": 1213,
+  "mean_percentile": 0.6596,
+  "null_mean_percentile": 0.6351,
+  "p_mean": 0.00498,
+  "top5pct_rate": 0.2383,
+  "null_top5pct_rate": 0.1868,
+  "top5pct_fold": 1.28,
+  "z_top5": 5.38,
+  "p_top5": 0.00498,
+  "by_n_models": {
+   "2": {
+    "n": 1213,
+    "top5pct_rate": 0.2383,
+    "null_rate": 0.1865,
+    "fold": 1.28,
+    "z": 5.19,
+    "p_emp": 0.00498
+   },
+   "3": {
+    "n": 131,
+    "top5pct_rate": 0.3435,
+    "null_rate": 0.2242,
+    "fold": 1.53,
+    "z": 3.3,
+    "p_emp": 0.00498
+   }
+  }
+ }
+}

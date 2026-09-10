@@ -18,11 +18,14 @@ DISP = {"AIDO": "AIDO.Cell", "C2S": "C2S-Scale", "Geneformer": "Geneformer-V2",
         "MaxToki": "MaxToki", "UCE": "UCE", "scGPT": "scGPT", "tGPT": "tGPT"}
 A = json.load(open(f"{C}/hypothesis_trrust2.json"))
 F = json.load(open(f"{C}/hypothesis_final.json"))
+PB = json.load(open(f"{C}/hypothesis_pubmed.json"))
+PT = json.load(open(f"{C}/hypothesis_perturb.json"))
 per = A["per_model"]; curve = F["cross_model_curve"]
 
 plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 8.5,
                      "axes.spines.top": False, "axes.spines.right": False})
-fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.2, 2.9), gridspec_kw={"width_ratios": [1.35, 1]})
+fig, (ax1, ax2, ax3) = plt.subplots(1, 3, figsize=(9.4, 2.9),
+                                    gridspec_kw={"width_ratios": [1.3, .95, .95]})
 
 # ---- A: per-model enrichment ----
 ms = sorted(per, key=lambda m: -(per[m]["fold"] or 0))
@@ -40,7 +43,7 @@ for yi, m in zip(y, ms):
              color="#2f7ed8" if d["p_emp"] <= 0.05 else "#8a8f96")
 ax1.set_ylim(-0.7, len(ms) - 0.3)
 ax1.set_xlim(0, max(fold) * 1.28)
-ax1.set_title("A   Which models generate testable predictions", loc="left", fontsize=9, fontweight="bold")
+ax1.set_title("A   Which models predict", loc="left", fontsize=9, fontweight="bold")
 ax1.text(.98, .04, "blue: p ≤ 0.05 (200 permutations)", transform=ax1.transAxes,
          ha="right", fontsize=6.8, color="#5a6169")
 
@@ -65,8 +68,27 @@ for k, p, n in zip(ks, prec, npairs):
                  xytext=(0, 9), ha="center", fontsize=7.5, color="#1b4f8a", fontweight="bold")
     ax2.annotate(f"n={n:,}", (k, p), textcoords="offset points", xytext=(0, -13),
                  ha="center", fontsize=6.5, color="#5a6169")
-ax2.set_title("B   Agreement between models raises precision", loc="left", fontsize=9, fontweight="bold")
+ax2.set_title("B   Agreement raises precision", loc="left", fontsize=9, fontweight="bold")
 ax2.margins(y=.35)
+
+
+# ---- C: independent evidence ----
+items = [("literature\nco-mention", PB["observed_pairs_comentioned"] / max(PB["null_pairs_comentioned_mean"], 1e-9),
+          f"{PB['observed_pairs_comentioned']} pairs"),
+         ("Perturb-seq\nK562", PT["K562"]["top5pct_fold"], f"{PT['K562']['n_ordered_pairs']:,} pairs"),
+         ("Perturb-seq\nRPE1", PT["RPE1"]["top5pct_fold"], f"{PT['RPE1']['n_ordered_pairs']:,} pairs")]
+x = np.arange(len(items))
+ax3.bar(x, [i[1] for i in items], color=["#7a5cc7", "#2f9e6e", "#2f9e6e"], width=.62)
+ax3.axhline(1, color="#444", lw=.9, ls="--", zorder=0)
+ax3.set_xticks(x); ax3.set_xticklabels([i[0] for i in items], fontsize=7.6)
+ax3.tick_params(axis="x", pad=13)
+ax3.set_ylabel("fold over its own matched null")
+for xi, (_, v, lab) in zip(x, items):
+    ax3.text(xi, v + .04, f"{v:.2f}×", ha="center", fontsize=8, fontweight="bold", color="#1b4f8a")
+    ax3.text(xi, -.13, lab, ha="center", fontsize=6.4, color="#5a6169", clip_on=False)
+ax3.set_ylim(0, max(i[1] for i in items) * 1.3)
+ax3.set_title("C   Independent evidence", loc="left", fontsize=9, fontweight="bold")
+ax3.text(.98, .93, "all p = 0.005", transform=ax3.transAxes, ha="right", fontsize=6.8, color="#5a6169")
 
 fig.tight_layout(pad=.7)
 fig.savefig(OUT, dpi=300, bbox_inches="tight", facecolor="white")
