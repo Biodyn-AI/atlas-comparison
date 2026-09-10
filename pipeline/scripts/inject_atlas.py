@@ -24,7 +24,7 @@ NEW_THEME_READ = (
     "const perM=tm.map((m,j)=>Z.reduce((a,r)=>a+(r[j]>0?1:0),0));"
     "const rich=tm[perM.indexOf(Math.max(...perM))],poor=tm[perM.indexOf(Math.min(...perM))];"
     "const allTxt=inAll.length?inAll.join(', ')+' appear in all '+N+' models':'programs vary across all '+N+' models';"
-    "document.getElementById('theme-read').innerHTML=`The co-activation modules aren't arbitrary — they map to "
+    "document.getElementById('theme-read').innerHTML=`The co-activation modules map to "
     "canonical biological programs. <b style=\"color:var(--teal)\">${allTxt}</b> — the SAE organises features into a "
     "shared module vocabulary across architectures. Coverage varies: <b>${rich}</b> resolves ${Math.max(...perM)} of "
     "the nine programs, <b>${poor}</b> only ${Math.min(...perM)}, so architecture and scale carve different numbers of "
