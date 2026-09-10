@@ -24,6 +24,7 @@ The page is organised as four tabs — *Overview*, *① Choose a model*, *② Co
 | Depth | how concept richness changes layer by layer | tested |
 | SVD vs SAE | variance explained at matched sparsity k = 32, SAE vs top-k PCA | tested |
 | Linearity | is cell identity linearly readable? (linear vs MLP probe gap), per layer | tested |
+| **Prediction test** | do co-firing gene pairs recover held-out regulatory links the atlas never used? | tested |
 | Gene Search | which models encode a given gene, and under what concept | descriptive |
 | Layer Explorer | UMAP / t-SNE map of features per layer, per model | descriptive |
 | Modules | co-activation communities per layer (force-graph) | descriptive |
@@ -102,6 +103,22 @@ overlapping databases, so random genes annotate at nearly the real rate.
   An untrained random dictionary of the same shape explains *negative* variance, so the advantage comes from
   trained adaptive allocation, not from having more directions.
 - **Cell identity is linearly decodable at every depth**, with no gain from a non-linear probe.
+- **The features predict, not just describe — in some models.** Gene pairs that repeatedly co-fire in the same SAE
+  features recover held-out **TRRUST** transcription-factor→target edges. The co-firing statistic uses no annotation
+  at all, and the calibrated annotator uses curated pathway sets only, so TRRUST is held out from both. (It does appear
+  in the *permissive* annotator, which is retracted as illustrative and plays no part here.)
+  Against a configuration-model null that preserves every gene's co-firing degree exactly (so abundance and study bias
+  cannot produce it), **5 of 10 models pass** at p ≤ 0.005 over 200 rewirings: Tahoe-x1 13.3× (59 edges recovered),
+  scGPT 11.9× (10), UCE 10.5× (43), C2S-Scale 4.1× (83), Geneformer-V2 3.9× (12). MaxToki reaches 3.5× but p = 0.11;
+  tGPT 1.3×; AIDO.Cell, scFoundation and GeneCompass recover nothing. **Cross-model agreement sharpens it**: pairs
+  predicted by one validated model are enriched 5.3×, by two independent models **28.4×** — the comparative design
+  paying off directly. Stable across every robustness variant (4.8–8.9× at one model, p ≤ 0.005 in all five),
+  including dropping same-family paralogues, raising the evidence bar, and keeping only features that actually fire —
+  the last *raises* enrichment (5.3× → 7.9×), ruling out a near-silent-gene artefact. It also holds within a single
+  layer (6.1×, p = 0.005). 4,349 corroborated pairs absent from TRRUST, STRING and every curated pathway are released
+  as **prioritised predictions, not findings** (`data/hypothesis_final.json`). Caveat: TRRUST records regulation
+  someone has already published, so this scores recovery of *known* links; recovered counts are 10–83 per model, so we
+  rank models rather than read small gaps.
 
 **What this means for model choice.** A downstream analysis inherits far more of one model's own vocabulary
 than of the shared backbone — the models share basic machinery, and most of what each learns is
@@ -156,6 +173,12 @@ pipeline/
     alllayer_null.py         random-gene null on the all-layer construction (retracts the naive core)
     novel_calibrated.py      calibrated + degree-matched null for the "new biology" idea — negative
     novel_null.py            random-feature-subset null for the same — also negative
+    --- held-out prediction test (the hypothesis generator that does work) ---
+    hypothesis_trrust.py     co-firing graph per model vs held-out TRRUST, analytic degree-matched null
+    hypothesis_trrust2.py    permutation validation + does cross-model agreement raise precision?
+    hypothesis_trrust3.py    final: validated models only, the released prediction list
+    hypothesis_robust.py     paralogues / firing-features-only / stricter-evidence variants
+    make_fig5.py             Fig 5 (per-model enrichment + cross-model precision)
 docs/METHODS.md          pipeline + inductive-axis writeup
 ```
 

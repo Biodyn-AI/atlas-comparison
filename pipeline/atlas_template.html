@@ -82,7 +82,7 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
  <div class="brand"><span class="dot"></span>Comparative&nbsp;SAE&nbsp;Atlas</div>
  <div class="links">
   <a href="#overview">Overview</a><a href="#intro">Start here</a><a href="#universality">Universality</a>
-  <a href="#coverage">Coverage</a><a href="#depth">Depth</a><a href="#tissue">Tissue</a><a href="#svd">SVD</a><a href="#linearity" class="expert">Linearity</a><a href="#flow" class="expert">Flow</a><a href="#modules">Modules</a><a href="#explorer">Layer Explorer</a><a href="#genes">Gene Search</a><a href="#cka">How alike</a><a href="#lineage">Scale</a><a href="#axis">Axis→findings</a><a href="#emerge">Emergence</a><a href="#economy">Economy</a><a href="#circuits" class="expert">Circuits</a><a href="#controls" class="expert">Controls</a><a href="#use">Use cases</a><a href="#roster">Models</a>
+  <a href="#coverage">Coverage</a><a href="#depth">Depth</a><a href="#tissue">Tissue</a><a href="#svd">SVD</a><a href="#linearity" class="expert">Linearity</a><a href="#flow" class="expert">Flow</a><a href="#modules">Modules</a><a href="#explorer">Layer Explorer</a><a href="#genes">Gene Search</a><a href="#predict">Prediction test</a><a href="#cka">How alike</a><a href="#lineage">Scale</a><a href="#axis">Axis→findings</a><a href="#emerge">Emergence</a><a href="#economy">Economy</a><a href="#circuits" class="expert">Circuits</a><a href="#controls" class="expert">Controls</a><a href="#use">Use cases</a><a href="#roster">Models</a>
  </div>
 </div></nav>
 <style>
@@ -363,6 +363,20 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
  <div class="callout"><span class="k">Universal genes</span><div id="geneu-read"></div></div>
  <div class="panel" style="margin-top:16px"><div class="ptitle">Rare-concept frontier</div><div class="pnote">named pathways encoded by only 1–2 of the models — the biology a few reach but most miss</div><div id="rare-cards" style="margin-top:10px;display:flex;flex-wrap:wrap;gap:6px"></div></div>
  <div class="callout"><span class="k">Frontier</span><div id="rare-read"></div></div>
+</div></section>
+<section id="predict"><div class="wrap">
+ <div class="sec-head"><div class="sec-q">can the features predict?</div>
+  <h2>Testing the features on data the atlas never saw</h2>
+  <p class="sec-sub">Everything else here describes what the models encode. This asks whether that is <b>useful</b>. Genes that repeatedly light up the same feature should be functionally linked — so we checked those pairs against <b>TRRUST</b>, a hand-curated database of transcription-factor→target regulation that no step of this atlas uses. The comparison is against a null that keeps every gene's number of partners exactly as it is, so a gene cannot score simply by being abundant or well studied.</p></div>
+ <div class="panel"><div class="ptitle">Which models produce testable predictions</div><div class="pnote">how much better than the degree-matched null each model recovers held-out regulatory links</div>
+  <div id="pred-bars" style="margin-top:14px"></div></div>
+ <div class="grid2" style="margin-top:14px">
+  <div class="panel"><div class="ptitle">Agreement between models sharpens it</div><div class="pnote">precision on held-out links, by how many validated models predict the same pair</div>
+   <div id="pred-curve" style="margin-top:12px"></div></div>
+  <div class="panel"><div class="ptitle">Example predictions</div><div class="pnote">pairs two or more validated models agree on, absent from every database we checked</div>
+   <div id="pred-ex" style="margin-top:12px"></div></div>
+ </div>
+ <div class="callout"><span class="k">How to read it</span><div id="pred-read"></div></div>
 </div></section>
 <section id="circuits" class="expert"><div class="wrap">
  <div class="sec-head"><div class="sec-q">cross-layer circuits &amp; hard cells</div>
@@ -742,6 +756,7 @@ document.getElementById('stats').innerHTML=[
  const U=[
   ['🎯','Pick the right model for a task','Need pathway-interpretable features? Choose a <b>rank</b> model (Geneformer, tGPT). Need the widest concept coverage? Go <b>big</b> (C2S, UCE). Need features that transfer across organs? Choose a <b>tissue-invariant</b> one (AIDO, Geneformer).','#axis','Axis → findings · Scale · Tissue'],
   ['🧑‍🔬','Developers: benchmark &amp; compare your model','Score a new single-cell model against the atlas on the same corpus: how much of the <b>calibrated shared backbone</b> (~78 concepts shared by ≥8/10 models, ~20× over a random-gene null) and of the co-activation module vocabulary its features recover — and where it sits on the cross-model CKA map.','#universality','Universality · CKA'],
+  ['🧪','Get predictions you can take to the bench','Gene pairs that share a feature recover known regulation the atlas never used — in five of the ten models, and more accurately when two models agree. The pairs with no database entry are the ones to test.','#predict','Prediction test'],
   ['🧬','Study a gene — where it lives, what it links to','Search any gene to see which models encode a feature for it, at what depth, what it <b>co-fires</b> with, and which concepts it falls into — a fast read on a gene’s learned neighbourhood across ten architectures.','#genes','Gene Search'],
   ['🔍','Check a model actually encodes your biology','Search a gene or pathway and see which models carry a feature for it, and at what depth — then build your downstream on the model that represents it best.','#genes','Gene Search'],
   ['🧭','Audit interpretability before you trust a model','Before using an FM downstream, confirm it linearly represents the axis you care about (tissue, cell state, a program) — and how pathway-shaped its features are.','#linearity','Linearity · Coverage'],
@@ -750,6 +765,45 @@ document.getElementById('stats').innerHTML=[
   <div style="font-size:20px">${ic}</div><div style="color:var(--ink);font-weight:650;font-size:15px;margin-top:6px">${t}</div>
   <div style="color:var(--mut);font-size:13px;margin-top:6px;line-height:1.45">${b}</div>
   <div style="color:var(--acc);font-family:var(--mono);font-size:11px;margin-top:9px">→ ${sec}</div></a>`).join('');
+})();
+
+/* ===== held-out prediction test ===== */
+(function(){const H=D.hypothesis;if(!H)return;
+ const DISP={AIDO:'AIDO.Cell',C2S:'C2S-Scale',Geneformer:'Geneformer-V2',Tahoe:'Tahoe-x1'};
+ const nm=m=>DISP[m]||m;
+ const P=H.per_model, ms=Object.keys(P).sort((a,b)=>(P[b].fold||0)-(P[a].fold||0));
+ const mx=Math.max(...ms.map(m=>P[m].fold||0));
+ const bars=document.getElementById('pred-bars');
+ if(bars) bars.innerHTML=ms.map(m=>{const d=P[m],ok=d.p_emp<=0.05,f=d.fold||0;
+  return `<div class="rowbar"><div class="name" style="color:${ok?'var(--ink)':'var(--faint)'}">${nm(m)}</div>`
+   +`<div class="track"><div class="fill" style="width:${Math.max(f/mx*100,0.6)}%;background:${ok?'linear-gradient(90deg,#2fc6b6,#5b8cff)':'var(--line2)'}"></div></div>`
+   +`<div class="val" style="color:${ok?'var(--teal)':'var(--faint)'}">${f?f.toFixed(1)+'×':'—'}</div>`
+   +`<div class="mono" style="font-size:11px;color:var(--faint);min-width:74px;text-align:right">${d.hits} link${d.hits===1?'':'s'}</div></div>`;}).join('')
+   +`<div class="pnote" style="margin-top:10px">Coloured bars pass the null at p ≤ 0.05 over ${H.n_perm} rewirings. Grey ones do not — those models give no usable predictions here.</div>`;
+
+ const cu=H.curve, ks=Object.keys(cu).map(Number).filter(k=>cu[k].hits>0).sort((a,b)=>a-b);
+ const cbox=document.getElementById('pred-curve');
+ if(cbox) cbox.innerHTML=ks.map(k=>{const c=cu[k],f=c.fold;
+  return `<div class="rowbar"><div class="name">${k} model${k>1?'s':''}</div>`
+   +`<div class="track"><div class="fill" style="width:${Math.min((f||60)/30*100,100)}%;background:linear-gradient(90deg,#5b8cff,#cf6dd6)"></div></div>`
+   +`<div class="val">${f?f.toFixed(1)+'×':'—'}</div>`
+   +`<div class="mono" style="font-size:11px;color:var(--faint);min-width:86px;text-align:right">${c.hits} of ${c.n_pairs.toLocaleString()}</div></div>`;}).join('')
+   +`<div class="pnote" style="margin-top:10px">Past two models the counts are too small to read (${ks.filter(k=>k>2).map(k=>cu[k].hits+' link'+(cu[k].hits===1?'':'s')).join(', ')||'no links'}), so we do not claim a trend.</div>`;
+
+ const ex=document.getElementById('pred-ex');
+ if(ex) ex.innerHTML=H.examples.slice(0,14).map(e=>
+  `<div style="display:flex;align-items:baseline;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--line)">`
+  +`<span class="mono" style="font-size:12.5px;color:var(--ink)">${e.pair[0]} — ${e.pair[1]}</span>`
+  +`<span class="mono" style="font-size:11px;color:var(--faint)">${e.n_models} models</span></div>`).join('')
+  +`<div class="pnote" style="margin-top:10px">${H.n_hypotheses.toLocaleString()} such pairs in total. These are predictions to test, not results.</div>`;
+
+ const k1=cu[1],k2=cu[2],val=H.validated.map(nm);
+ const rd=document.getElementById('pred-read');
+ if(rd) rd.innerHTML=`Gene pairs that share a feature really do recover known regulation the atlas never used. `
+  +`<b style="color:var(--teal)">${H.validated.length} of the ${Object.keys(P).length} models</b> beat the null (${val.slice(0,-1).join(', ')} and ${val.slice(-1)}); the other ${Object.keys(P).length-H.validated.length} recover little or nothing, `
+  +`which is a real difference between models that no single-model atlas can show. `
+  +`Requiring <b>two</b> models to agree on the same pair raises accuracy from <b>${k1.fold.toFixed(1)}×</b> to <b style="color:var(--teal)">${k2.fold.toFixed(1)}×</b> over chance — comparing models makes the predictions better, which is the point of this atlas. `
+  +`<span style="color:var(--faint)">Caveat: TRRUST records regulation someone has already published, so this measures recovery of <i>known</i> links, and the hit counts (${Math.min(...ms.map(m=>P[m].hits).filter(x=>x>0))}–${Math.max(...ms.map(m=>P[m].hits))} per model) are small enough that we rank models rather than read small gaps between them. The pairs listed are untested predictions.</span>`;
 })();
 
 /* roster */
@@ -1357,13 +1411,13 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
  const TABS=[{id:'home',label:'Overview'},{id:'choose',label:'① Choose a model'},{id:'compare',label:'② Compare'},{id:'genes',label:'③ Genes & biology'},{id:'findings',label:'Findings'}];
  const TABMAP={overview:'home',intro:'home','usecase-choose':'choose',
    universality:'compare',coverage:'compare',cka:'compare',lineage:'compare',emerge:'findings',economy:'findings',
-   genes:'genes',explorer:'genes',
+   genes:'genes',predict:'genes',explorer:'genes',
    depth:'findings',tissue:'findings',svd:'findings',linearity:'findings',flow:'findings',modules:'findings',axis:'findings',circuits:'findings',controls:'findings',roster:'findings'};
  Object.keys(TABMAP).forEach(id=>{const el=document.getElementById(id);if(el)el.dataset.atab=TABMAP[id];});
  // reorder sections within a tab so it opens with what the use-case promises
  function reorder(ids){const els=ids.map(id=>document.getElementById(id)).filter(Boolean);for(let i=1;i<els.length;i++)els[i-1].after(els[i]);}
  reorder(['cka','coverage','universality','lineage']); // Compare: model similarity + per-model first, backbone science after
- reorder(['genes','explorer']);                                           // Genes: gene search first, feature browser last
+ reorder(['genes','predict','explorer']);                                 // Genes: search, then the prediction test, browser last
  const links=document.querySelector('nav .links');if(links){links.classList.add('tabnav');links.innerHTML=TABS.map(t=>`<button class="tabbtn" data-t="${t.id}">${t.label}</button>`).join('');}
  let cur='home';
  function show(tab){cur=tab;

@@ -1,0 +1,1297 @@
+{
+ "design": "gene pairs co-firing in >=5 SAE features predict held-out TRRUST TF->target edges",
+ "truth": "TRRUST curated regulatory edges; excluded from the calibrated annotator (no PPI/regulatory DBs)",
+ "null": "configuration model, every gene's co-firing degree preserved exactly",
+ "models_validated": [
+  "Tahoe",
+  "scGPT",
+  "UCE",
+  "C2S",
+  "Geneformer"
+ ],
+ "top_genes_per_feature": 10,
+ "min_features_per_pair": 5,
+ "n_perm": 200,
+ "cross_model_curve": {
+  "1": {
+   "n_pairs": 273513,
+   "hits": 168,
+   "precision": 0.000614,
+   "null_precision_mean": 0.0001152,
+   "null_hits_mean": 32.3,
+   "null_pairs_mean": 280330.0,
+   "null_perms_with_zero_hits": 0,
+   "n_perm": 200,
+   "fold": 5.33,
+   "p_emp": 0.00498
+  },
+  "2": {
+   "n_pairs": 11667,
+   "hits": 31,
+   "precision": 0.002657,
+   "null_precision_mean": 9.344e-05,
+   "null_hits_mean": 0.07,
+   "null_pairs_mean": 798.3,
+   "null_perms_with_zero_hits": 187,
+   "n_perm": 200,
+   "fold": 28.43,
+   "p_emp": 0.00498
+  },
+  "3": {
+   "n_pairs": 2980,
+   "hits": 6,
+   "precision": 0.002013,
+   "null_precision_mean": 0.0,
+   "null_hits_mean": 0.0,
+   "null_pairs_mean": 4.0,
+   "null_perms_with_zero_hits": 200,
+   "n_perm": 200,
+   "fold": null,
+   "p_emp": 0.00498
+  },
+  "4": {
+   "n_pairs": 1132,
+   "hits": 2,
+   "precision": 0.001767,
+   "null_precision_mean": 0.0,
+   "null_hits_mean": 0.0,
+   "null_pairs_mean": 0.0,
+   "null_perms_with_zero_hits": 200,
+   "n_perm": 200,
+   "fold": null,
+   "p_emp": 0.00498
+  },
+  "5": {
+   "n_pairs": 425,
+   "hits": 0,
+   "precision": 0.0,
+   "null_precision_mean": 0.0,
+   "null_hits_mean": 0.0,
+   "null_pairs_mean": 0.0,
+   "null_perms_with_zero_hits": 200,
+   "n_perm": 200,
+   "fold": null,
+   "p_emp": 1.0
+  }
+ },
+ "k_used": 2,
+ "n_hypotheses": 4349,
+ "hypotheses": [
+  {
+   "pair": [
+    "CMTM2",
+    "CXCR2"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 182,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "ADGRG3",
+    "CMTM2"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 156,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "ATP5ME",
+    "ATP5MK"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 142,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "B2M",
+    "TMSB4X"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 130,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "S100A11",
+    "S100A4"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 108,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "CMTM2",
+    "CXCR1"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 99,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "ACTB",
+    "ACTG2"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 98,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "ATP5MK",
+    "COX7B"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 96,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "DUSP1",
+    "JUNB"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 96,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "IER2",
+    "JUN"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 91,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "RPL41",
+    "TPT1"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 71,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "MANF",
+    "PDIA6"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 70,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "ATP5F1E",
+    "SERF2"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 58,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "ATP5MK",
+    "NDUFA1"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 54,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "MYL6",
+    "S100A11"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 30,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "PRB3",
+    "PRH2"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 229,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "PRB3",
+    "STATH"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 192,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "CMTM2",
+    "FCGR3B"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 182,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "PRB4",
+    "STATH"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 169,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "HTN3",
+    "PRB4"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 133,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "PRB3",
+    "SMR3B"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 133,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "HTN1",
+    "PRB4"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 125,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "PRH2",
+    "SMR3B"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 124,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "PRB4",
+    "SMR3B"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 122,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "S100A13",
+    "S100A16"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 110,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "FCN3",
+    "TMEM100"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 110,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "ATP5MJ",
+    "ATP5MK"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 108,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "LAMP3",
+    "SFTPD"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 107,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "FTH1",
+    "TPT1"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 105,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "IGKC",
+    "IGLC2"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 105,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "HBQ1",
+    "KLF1"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 105,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "HTN1",
+    "SMR3B"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 98,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "CLEC9A",
+    "IDO1"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 97,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "ATP5MK",
+    "ATP5PF"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 94,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "HTN3",
+    "SMR3B"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 91,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "CYP2S1",
+    "IDO1"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 89,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "ADGRG3",
+    "CXCR1"
+   ],
+   "n_models": 4,
+   "models": [
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 81,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "CALR",
+    "MANF"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 79,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "IGKC",
+    "IGLC3"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 79,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "ATP5ME",
+    "ATP5MJ"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 77,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "CD209",
+    "LILRB5"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 69,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "GPX3",
+    "PDZK1IP1"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 67,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "APOC1",
+    "C1QA"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 67,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "PTMA",
+    "TMSB4X"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 66,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "PRMT9",
+    "ZNF331"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 65,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "ACTB",
+    "TMSB10"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 63,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "IGHA1",
+    "IGKC"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 62,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "INHBA",
+    "STAC"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 61,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "IGHA2",
+    "IGLC2"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 60,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "PTMA",
+    "TMSB10"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 59,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "ATP5MF",
+    "ATP5MK"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 58,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "ATP5MK",
+    "UQCR10"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 58,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "EIF1",
+    "H3-3B"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 58,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "TMSB4X",
+    "TPT1"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 58,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "ATP5MJ",
+    "UQCRQ"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 56,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "AKR1B10",
+    "AKR1C2"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 53,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "LGALS1",
+    "S100A6"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 53,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "AHNAK",
+    "FLNA"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 53,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "B2M",
+    "TMSB10"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 52,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "NDUFB1",
+    "ROMO1"
+   ],
+   "n_models": 4,
+   "models": [
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 51,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "NAPSA",
+    "SFTA2"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 51,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "IGHG1",
+    "IGLC2"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 51,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "IGHA2",
+    "IGLC3"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 51,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "CHORDC1",
+    "DNAJA4"
+   ],
+   "n_models": 4,
+   "models": [
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 50,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "IGHD",
+    "TCL1A"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 50,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "ATP5MJ",
+    "UQCR10"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 49,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "HNRNPA3",
+    "HNRNPDL"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 47,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "FTL",
+    "TMSB4X"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 47,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "FTH1",
+    "TMSB4X"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 47,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "TSC22D3",
+    "TXNIP"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 45,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "CD3D",
+    "TRAC"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 45,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "IGHG3",
+    "IGLC2"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 45,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "FCER2",
+    "TCL1A"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 45,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "CREM",
+    "ZNF331"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 44,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "ATP5MJ",
+    "COX7A2"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 44,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "B2M",
+    "MT-CO1"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 43,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "B2M",
+    "PTMA"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 43,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "FCER2",
+    "IGHD"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 43,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "GADD45B",
+    "IER2"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 41,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "NR4A3",
+    "ZNF331"
+   ],
+   "n_models": 4,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 40,
+   "same_family": false
+  }
+ ],
+ "n_same_family_dropped": 388
+}
