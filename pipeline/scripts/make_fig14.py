@@ -25,17 +25,27 @@ def save(fig, name):
     plt.close(fig); print("wrote", name)
 
 # ================= FIG 4 =================
-fig, ax = plt.subplots(1, 3, figsize=(12, 3.6)); fig.subplots_adjust(wspace=0.42)
+fig, ax = plt.subplots(1, 3, figsize=(13, 4.1)); fig.subplots_adjust(wspace=0.50)
 
 # 4A: cross-model CKA heatmap at 50% depth
-cka = atlas["cka"]; M = cka["models"]; Mat = np.array(cka["residual"]["2"])
+CK = d["survivor_nulls"]["cka_null"]          # all 45 pairs, each with its own cell-shuffle null
+M = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "scGPT", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]
+_ix = {m: i for i, m in enumerate(M)}
+Mat = np.eye(len(M))
+for r in CK:
+    p, q = r["pair"].split("-")
+    if p in _ix and q in _ix:
+        Mat[_ix[p], _ix[q]] = Mat[_ix[q], _ix[p]] = r["real_cka"]
+_real = [r["real_cka"] for r in CK]; _shuf = [r["shuffled_cka"] for r in CK]
 a = ax[0]
 im = a.imshow(Mat, cmap="Blues", vmin=0, vmax=1)
 a.set_xticks(range(len(M))); a.set_xticklabels(M, rotation=90, fontsize=6.5)
 a.set_yticks(range(len(M))); a.set_yticklabels(M, fontsize=6.5)
 a.set_title("A  Cross-model geometry — CKA, 50% depth", loc="left", fontweight="bold", fontsize=9.5)
 cb = fig.colorbar(im, ax=a, fraction=0.046, pad=0.04); cb.set_label("linear CKA", fontsize=8); cb.ax.tick_params(labelsize=7)
-a.text(0.0, -0.52, "off-diagonal real 0.12–0.92; cell-shuffle null ≈ 0.002–0.009", transform=a.transAxes, fontsize=7, color="#666")
+a.text(0.0, -0.52, f"all 45 pairs null-tested: real {min(_real):.2f}–{max(_real):.2f} vs cell-shuffle "
+                   f"{min(_shuf):.3f}–{max(_shuf):.3f}\n(every pair >10× its own shuffle floor)",
+       transform=a.transAxes, fontsize=7, color="#666")
 
 # 4B: SAE vs SVD variance at matched sparsity
 b = ax[1]
@@ -43,14 +53,16 @@ sv = d["survivor_nulls"]["svd_null"]; mods = [x["model"] for x in sv]
 x = np.arange(len(mods)); w = 0.36
 b.bar(x - w/2, [x_["sae_var_explained"] for x_ in sv], w, color=BLUE, label="SAE (trained)")
 b.bar(x + w/2, [x_["svd_var_at_k"] for x_ in sv], w, color=GREY_D, label="top-k PCA (SVD)")
-b.set_xticks(x); b.set_xticklabels(mods); b.set_ylabel("variance explained at k=32")
-b.set_ylim(0, 1.0)
-b.set_title("B  SAE ≫ PCA at matched per-sample sparsity", loc="left", fontweight="bold", fontsize=9.5)
-for i, x_ in enumerate(sv):
-    b.text(i - w/2, x_["sae_var_explained"] + 0.02, f"{x_['sae_var_explained']:.2f}", ha="center", fontsize=7.5, color=INK)
-    b.text(i + w/2, x_["svd_var_at_k"] + 0.02, f"{x_['svd_var_at_k']:.2f}", ha="center", fontsize=7.5, color="#555")
+b.set_xticks(x); b.set_xticklabels(mods, rotation=90, fontsize=7)
+b.set_ylabel("variance explained at k=32")
+b.set_ylim(0, 1.12)
+b.set_title("B  SAE > PCA in all ten (margin varies)", loc="left", fontweight="bold", fontsize=9.5)
+for i, x_ in enumerate(sv):   # gap annotation instead of two crowded numbers
+    gap = x_["sae_var_explained"] - x_["svd_var_at_k"]
+    b.text(i, max(x_["sae_var_explained"], x_["svd_var_at_k"]) + 0.03, f"+{gap:.2f}",
+           ha="center", fontsize=6.5, color=GREEN if gap > 0.1 else VERM)
 b.legend(frameon=False, fontsize=7.5, loc="upper left")
-b.text(0.05, 0.03, "(untrained random dict → negative variance)", transform=b.transAxes, fontsize=6.8, color="#888")
+
 
 # 4C: linear decodability of cell identity vs depth (all models)
 c = ax[2]
@@ -103,7 +115,7 @@ ax.text(72.5, 62.5, "✗  apparent 'universal core' ~2,000 — fails random-gene
 ax.text(72.5, 15.5, "✓  reproducible backbone ~78 concepts (≥8/10), 22–59× over null, replicates held-out",
         fontsize=7.6, color=GREEN, va="center")
 # annotation-free track
-box(19, 6, 48, 9, "Annotation-FREE (orthogonal, pass their own nulls):  cross-model CKA · SAE ≫ PCA · linear readout · tissue×depth",
+box(19, 6, 48, 9, "Annotation-FREE (orthogonal, pass their own nulls):  cross-model CKA · SAE > PCA · linear readout · tissue×depth",
     fc="#F3F0FA", ec="#b0a0d0", fs=7.6)
 arrow(43, 46, 43, 15)
 ax.set_title("Fig 1   A calibrated comparative SAE atlas of ten single-cell foundation models",

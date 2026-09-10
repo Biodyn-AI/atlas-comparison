@@ -1,0 +1,532 @@
+[
+ {
+  "model": "AIDO",
+  "layer": 4,
+  "d_model": 256,
+  "d_sae": 1024,
+  "curve": {
+   "1": {
+    "sae_proj": 0.0212,
+    "random_baseline": 0.0039,
+    "svd_var_at_k": 0.1065
+   },
+   "2": {
+    "sae_proj": 0.0358,
+    "random_baseline": 0.0078,
+    "svd_var_at_k": 0.1385
+   },
+   "4": {
+    "sae_proj": 0.0593,
+    "random_baseline": 0.0156,
+    "svd_var_at_k": 0.1786
+   },
+   "8": {
+    "sae_proj": 0.0995,
+    "random_baseline": 0.0312,
+    "svd_var_at_k": 0.2325
+   },
+   "16": {
+    "sae_proj": 0.1635,
+    "random_baseline": 0.0625,
+    "svd_var_at_k": 0.308
+   },
+   "32": {
+    "sae_proj": 0.2631,
+    "random_baseline": 0.125,
+    "svd_var_at_k": 0.4118
+   },
+   "64": {
+    "sae_proj": 0.414,
+    "random_baseline": 0.25,
+    "svd_var_at_k": 0.5582
+   },
+   "128": {
+    "sae_proj": 0.6499,
+    "random_baseline": 0.5,
+    "svd_var_at_k": 0.7621
+   },
+   "256": {
+    "sae_proj": 1.0,
+    "random_baseline": 1.0,
+    "svd_var_at_k": 1.0
+   }
+  }
+ },
+ {
+  "model": "C2S",
+  "layer": 13,
+  "d_model": 2304,
+  "d_sae": 9216,
+  "curve": {
+   "1": {
+    "sae_proj": 0.0022,
+    "random_baseline": 0.0004,
+    "svd_var_at_k": 0.0532
+   },
+   "2": {
+    "sae_proj": 0.0043,
+    "random_baseline": 0.0009,
+    "svd_var_at_k": 0.0988
+   },
+   "4": {
+    "sae_proj": 0.0092,
+    "random_baseline": 0.0017,
+    "svd_var_at_k": 0.1567
+   },
+   "8": {
+    "sae_proj": 0.0181,
+    "random_baseline": 0.0035,
+    "svd_var_at_k": 0.2311
+   },
+   "16": {
+    "sae_proj": 0.035,
+    "random_baseline": 0.0069,
+    "svd_var_at_k": 0.3265
+   },
+   "32": {
+    "sae_proj": 0.0628,
+    "random_baseline": 0.0139,
+    "svd_var_at_k": 0.4419
+   },
+   "64": {
+    "sae_proj": 0.1026,
+    "random_baseline": 0.0278,
+    "svd_var_at_k": 0.5728
+   },
+   "128": {
+    "sae_proj": 0.1619,
+    "random_baseline": 0.0556,
+    "svd_var_at_k": 0.6908
+   },
+   "256": {
+    "sae_proj": 0.2464,
+    "random_baseline": 0.1111,
+    "svd_var_at_k": 0.7923
+   }
+  }
+ },
+ {
+  "model": "Geneformer",
+  "layer": 9,
+  "d_model": 1152,
+  "d_sae": 4608,
+  "curve": {
+   "1": {
+    "sae_proj": 0.004,
+    "random_baseline": 0.0009,
+    "svd_var_at_k": 0.0168
+   },
+   "2": {
+    "sae_proj": 0.0079,
+    "random_baseline": 0.0017,
+    "svd_var_at_k": 0.0283
+   },
+   "4": {
+    "sae_proj": 0.0147,
+    "random_baseline": 0.0035,
+    "svd_var_at_k": 0.0485
+   },
+   "8": {
+    "sae_proj": 0.0255,
+    "random_baseline": 0.0069,
+    "svd_var_at_k": 0.0826
+   },
+   "16": {
+    "sae_proj": 0.0491,
+    "random_baseline": 0.0139,
+    "svd_var_at_k": 0.1408
+   },
+   "32": {
+    "sae_proj": 0.0971,
+    "random_baseline": 0.0278,
+    "svd_var_at_k": 0.2311
+   },
+   "64": {
+    "sae_proj": 0.1906,
+    "random_baseline": 0.0556,
+    "svd_var_at_k": 0.3636
+   },
+   "128": {
+    "sae_proj": 0.3591,
+    "random_baseline": 0.1111,
+    "svd_var_at_k": 0.5486
+   },
+   "256": {
+    "sae_proj": 0.5454,
+    "random_baseline": 0.2222,
+    "svd_var_at_k": 0.7326
+   }
+  }
+ },
+ {
+  "model": "MaxToki",
+  "layer": 5,
+  "d_model": 1232,
+  "d_sae": 4928,
+  "curve": {
+   "1": {
+    "sae_proj": 0.004,
+    "random_baseline": 0.0008,
+    "svd_var_at_k": 0.0716
+   },
+   "2": {
+    "sae_proj": 0.0082,
+    "random_baseline": 0.0016,
+    "svd_var_at_k": 0.1234
+   },
+   "4": {
+    "sae_proj": 0.0155,
+    "random_baseline": 0.0032,
+    "svd_var_at_k": 0.1822
+   },
+   "8": {
+    "sae_proj": 0.0304,
+    "random_baseline": 0.0065,
+    "svd_var_at_k": 0.2518
+   },
+   "16": {
+    "sae_proj": 0.0455,
+    "random_baseline": 0.013,
+    "svd_var_at_k": 0.3322
+   },
+   "32": {
+    "sae_proj": 0.0727,
+    "random_baseline": 0.026,
+    "svd_var_at_k": 0.4359
+   },
+   "64": {
+    "sae_proj": 0.119,
+    "random_baseline": 0.0519,
+    "svd_var_at_k": 0.5553
+   },
+   "128": {
+    "sae_proj": 0.2024,
+    "random_baseline": 0.1039,
+    "svd_var_at_k": 0.6733
+   },
+   "256": {
+    "sae_proj": 0.3477,
+    "random_baseline": 0.2078,
+    "svd_var_at_k": 0.7956
+   }
+  }
+ },
+ {
+  "model": "UCE",
+  "layer": 16,
+  "d_model": 1280,
+  "d_sae": 5120,
+  "curve": {
+   "1": {
+    "sae_proj": 0.0025,
+    "random_baseline": 0.0008,
+    "svd_var_at_k": 0.1248
+   },
+   "2": {
+    "sae_proj": 0.005,
+    "random_baseline": 0.0016,
+    "svd_var_at_k": 0.1956
+   },
+   "4": {
+    "sae_proj": 0.0105,
+    "random_baseline": 0.0031,
+    "svd_var_at_k": 0.2816
+   },
+   "8": {
+    "sae_proj": 0.0203,
+    "random_baseline": 0.0063,
+    "svd_var_at_k": 0.3752
+   },
+   "16": {
+    "sae_proj": 0.0363,
+    "random_baseline": 0.0125,
+    "svd_var_at_k": 0.4871
+   },
+   "32": {
+    "sae_proj": 0.0645,
+    "random_baseline": 0.025,
+    "svd_var_at_k": 0.6157
+   },
+   "64": {
+    "sae_proj": 0.1131,
+    "random_baseline": 0.05,
+    "svd_var_at_k": 0.742
+   },
+   "128": {
+    "sae_proj": 0.1947,
+    "random_baseline": 0.1,
+    "svd_var_at_k": 0.849
+   },
+   "256": {
+    "sae_proj": 0.3267,
+    "random_baseline": 0.2,
+    "svd_var_at_k": 0.9301
+   }
+  }
+ },
+ {
+  "model": "scGPT",
+  "layer": 6,
+  "d_model": 512,
+  "d_sae": 2048,
+  "curve": {
+   "1": {
+    "sae_proj": 0.0059,
+    "random_baseline": 0.002,
+    "svd_var_at_k": 0.0982
+   },
+   "2": {
+    "sae_proj": 0.0109,
+    "random_baseline": 0.0039,
+    "svd_var_at_k": 0.18
+   },
+   "4": {
+    "sae_proj": 0.0202,
+    "random_baseline": 0.0078,
+    "svd_var_at_k": 0.2902
+   },
+   "8": {
+    "sae_proj": 0.0364,
+    "random_baseline": 0.0156,
+    "svd_var_at_k": 0.4074
+   },
+   "16": {
+    "sae_proj": 0.0668,
+    "random_baseline": 0.0312,
+    "svd_var_at_k": 0.5306
+   },
+   "32": {
+    "sae_proj": 0.1249,
+    "random_baseline": 0.0625,
+    "svd_var_at_k": 0.654
+   },
+   "64": {
+    "sae_proj": 0.2313,
+    "random_baseline": 0.125,
+    "svd_var_at_k": 0.7622
+   },
+   "128": {
+    "sae_proj": 0.3909,
+    "random_baseline": 0.25,
+    "svd_var_at_k": 0.8544
+   },
+   "256": {
+    "sae_proj": 0.6216,
+    "random_baseline": 0.5,
+    "svd_var_at_k": 0.9352
+   }
+  }
+ },
+ {
+  "model": "tGPT",
+  "layer": 4,
+  "d_model": 1024,
+  "d_sae": 4096,
+  "curve": {
+   "1": {
+    "sae_proj": 0.0102,
+    "random_baseline": 0.001,
+    "svd_var_at_k": 0.8822
+   },
+   "2": {
+    "sae_proj": 0.0118,
+    "random_baseline": 0.002,
+    "svd_var_at_k": 0.9003
+   },
+   "4": {
+    "sae_proj": 0.0191,
+    "random_baseline": 0.0039,
+    "svd_var_at_k": 0.9217
+   },
+   "8": {
+    "sae_proj": 0.0274,
+    "random_baseline": 0.0078,
+    "svd_var_at_k": 0.9364
+   },
+   "16": {
+    "sae_proj": 0.0406,
+    "random_baseline": 0.0156,
+    "svd_var_at_k": 0.9479
+   },
+   "32": {
+    "sae_proj": 0.0635,
+    "random_baseline": 0.0312,
+    "svd_var_at_k": 0.9597
+   },
+   "64": {
+    "sae_proj": 0.1013,
+    "random_baseline": 0.0625,
+    "svd_var_at_k": 0.971
+   },
+   "128": {
+    "sae_proj": 0.1657,
+    "random_baseline": 0.125,
+    "svd_var_at_k": 0.9809
+   },
+   "256": {
+    "sae_proj": 0.2879,
+    "random_baseline": 0.25,
+    "svd_var_at_k": 0.9893
+   }
+  }
+ },
+ {
+  "model": "scFoundation",
+  "layer": 6,
+  "d_model": 768,
+  "d_sae": 3072,
+  "curve": {
+   "1": {
+    "sae_proj": 0.0072,
+    "random_baseline": 0.0013,
+    "svd_var_at_k": 0.3582
+   },
+   "2": {
+    "sae_proj": 0.0118,
+    "random_baseline": 0.0026,
+    "svd_var_at_k": 0.4802
+   },
+   "4": {
+    "sae_proj": 0.0175,
+    "random_baseline": 0.0052,
+    "svd_var_at_k": 0.5764
+   },
+   "8": {
+    "sae_proj": 0.0284,
+    "random_baseline": 0.0104,
+    "svd_var_at_k": 0.6706
+   },
+   "16": {
+    "sae_proj": 0.0484,
+    "random_baseline": 0.0208,
+    "svd_var_at_k": 0.736
+   },
+   "32": {
+    "sae_proj": 0.093,
+    "random_baseline": 0.0417,
+    "svd_var_at_k": 0.7868
+   },
+   "64": {
+    "sae_proj": 0.1568,
+    "random_baseline": 0.0833,
+    "svd_var_at_k": 0.829
+   },
+   "128": {
+    "sae_proj": 0.2574,
+    "random_baseline": 0.1667,
+    "svd_var_at_k": 0.8711
+   },
+   "256": {
+    "sae_proj": 0.4277,
+    "random_baseline": 0.3333,
+    "svd_var_at_k": 0.9197
+   }
+  }
+ },
+ {
+  "model": "GeneCompass",
+  "layer": 6,
+  "d_model": 768,
+  "d_sae": 3072,
+  "curve": {
+   "1": {
+    "sae_proj": 0.0044,
+    "random_baseline": 0.0013,
+    "svd_var_at_k": 0.0809
+   },
+   "2": {
+    "sae_proj": 0.0067,
+    "random_baseline": 0.0026,
+    "svd_var_at_k": 0.1165
+   },
+   "4": {
+    "sae_proj": 0.0178,
+    "random_baseline": 0.0052,
+    "svd_var_at_k": 0.1511
+   },
+   "8": {
+    "sae_proj": 0.037,
+    "random_baseline": 0.0104,
+    "svd_var_at_k": 0.1931
+   },
+   "16": {
+    "sae_proj": 0.0757,
+    "random_baseline": 0.0208,
+    "svd_var_at_k": 0.2595
+   },
+   "32": {
+    "sae_proj": 0.17,
+    "random_baseline": 0.0417,
+    "svd_var_at_k": 0.3706
+   },
+   "64": {
+    "sae_proj": 0.3274,
+    "random_baseline": 0.0833,
+    "svd_var_at_k": 0.5567
+   },
+   "128": {
+    "sae_proj": 0.52,
+    "random_baseline": 0.1667,
+    "svd_var_at_k": 0.7675
+   },
+   "256": {
+    "sae_proj": 0.6869,
+    "random_baseline": 0.3333,
+    "svd_var_at_k": 0.8972
+   }
+  }
+ },
+ {
+  "model": "Tahoe",
+  "layer": 16,
+  "d_model": 2560,
+  "d_sae": 10240,
+  "curve": {
+   "1": {
+    "sae_proj": 0.0057,
+    "random_baseline": 0.0004,
+    "svd_var_at_k": 0.1382
+   },
+   "2": {
+    "sae_proj": 0.0098,
+    "random_baseline": 0.0008,
+    "svd_var_at_k": 0.1893
+   },
+   "4": {
+    "sae_proj": 0.0131,
+    "random_baseline": 0.0016,
+    "svd_var_at_k": 0.243
+   },
+   "8": {
+    "sae_proj": 0.0178,
+    "random_baseline": 0.0031,
+    "svd_var_at_k": 0.3027
+   },
+   "16": {
+    "sae_proj": 0.0253,
+    "random_baseline": 0.0063,
+    "svd_var_at_k": 0.3548
+   },
+   "32": {
+    "sae_proj": 0.038,
+    "random_baseline": 0.0125,
+    "svd_var_at_k": 0.4071
+   },
+   "64": {
+    "sae_proj": 0.0603,
+    "random_baseline": 0.025,
+    "svd_var_at_k": 0.4699
+   },
+   "128": {
+    "sae_proj": 0.0966,
+    "random_baseline": 0.05,
+    "svd_var_at_k": 0.5487
+   },
+   "256": {
+    "sae_proj": 0.1581,
+    "random_baseline": 0.1,
+    "svd_var_at_k": 0.6476
+   }
+  }
+ }
+]

@@ -14,8 +14,10 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common.sae import TopKSAE, SAECfg
 
 R = "out_alllayers"
-PAIRS = [("MaxToki", "UCE"), ("AIDO", "C2S"), ("Geneformer", "scGPT"), ("AIDO", "MaxToki")]
-SVD_MODELS = ["AIDO", "Geneformer", "C2S"]
+import itertools
+ALL = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "scGPT", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]
+PAIRS = list(itertools.combinations(ALL, 2))   # all 45 pairs, not a hand-picked four
+SVD_MODELS = ALL                                # all ten, not a hand-picked three
 rng = np.random.default_rng(0)
 
 

@@ -15,8 +15,9 @@ FIG = f"{C}/figures"
 d = json.load(open(f"{C}/svd_projection_k.json"))
 
 # Okabe-Ito per model (distinct, colorblind-safe)
-COL = {"AIDO": "#E69F00", "Geneformer": "#56B4E9", "C2S": "#009E73", "MaxToki": "#CC79A7",
-       "UCE": "#0072B2", "GeneCompass": "#D55E00", "Tahoe": "#333333"}
+COL = {"AIDO": "#E69F00", "C2S": "#009E73", "Geneformer": "#56B4E9", "MaxToki": "#CC79A7",
+       "UCE": "#0072B2", "scGPT": "#D55E00", "tGPT": "#117733", "scFoundation": "#882255",
+       "GeneCompass": "#AA4499", "Tahoe": "#333333"}
 LABEL = {"C2S": "C2S-Scale", "Tahoe": "Tahoe-x1"}
 mpl.rcParams.update({"font.family": "DejaVu Sans", "font.size": 9, "axes.edgecolor": "#888", "axes.linewidth": 0.8,
                      "axes.spines.top": False, "axes.spines.right": False, "figure.dpi": 300, "svg.fonttype": "none"})

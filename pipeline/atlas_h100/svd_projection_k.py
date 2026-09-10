@@ -14,7 +14,7 @@ import numpy as np
 import torch
 
 R = "out_alllayers"
-MODELS = ["AIDO", "Geneformer", "C2S", "MaxToki", "UCE", "GeneCompass", "Tahoe"]
+MODELS = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "scGPT", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]
 KS = [1, 2, 4, 8, 16, 32, 64, 128, 256]
 NSUB = 100000  # rows for the covariance estimate
 
