@@ -1415,4 +1415,110 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
 })();
 </script>
 
+<!-- ===== inline glossary: hoverable "?" on jargon, first occurrence per section ===== -->
+<style>
+ .gl{border-bottom:1px dotted var(--acc,#5b8cff);cursor:help}
+ .gl .glq{font-size:.72em;vertical-align:super;color:var(--acc,#5b8cff);font-weight:700;margin-left:1px;line-height:0}
+ .gl:hover{color:var(--ink,#e8eefc)}
+</style>
+<script>
+(function(){
+ // plain-language definitions — no jargon inside the jargon
+ const G = {
+  "CKA":"Centred Kernel Alignment — a 0-to-1 score for how similarly two models arrange the same cells. 1 = identical geometry, 0 = unrelated. It compares shapes, so models of different sizes can still be compared.",
+  "PCA":"Principal Component Analysis — the classic way to summarise data by keeping a few “main directions” that capture most of the variation.",
+  "SVD":"Singular Value Decomposition — the maths behind PCA. Here “top-k SVD” means keeping only the k strongest directions.",
+  "SAE":"Sparse autoencoder — a small network trained to rewrite a model's internal state as a handful of active, human-readable features.",
+  "residual stream":"The running internal state a transformer carries from layer to layer. We read features out of it.",
+  "superposition":"The model packs more features than it has dimensions, so features share directions instead of each getting its own axis.",
+  "polysemanticity":"One feature responding to several unrelated things at once.",
+  "Jaccard":"An overlap score for two sets: shared items ÷ all items. 1 = identical, 0 = nothing in common.",
+  "random-gene null":"The same test run on random genes instead of a feature's real genes. It sets the bar a real result has to clear.",
+  "degree-matched null":"A stricter random baseline: each gene is swapped for one belonging to just as many gene sets, so genes that appear in many pathways can't inflate the result.",
+  "cell-shuffle null":"A baseline where cells are shuffled between the two models before comparing, destroying any real correspondence.",
+  "null":"A baseline built from randomised data. A result only counts if it beats what randomness alone produces.",
+  "hypergeometric":"A test for whether the overlap between two gene lists is larger than you'd expect by chance.",
+  "Fisher":"Fisher's exact test — checks whether an overlap between two gene lists is bigger than chance.",
+  "Benjamini":"Benjamini–Hochberg correction — when you run thousands of tests, it keeps the share of false “hits” under control.",
+  "FDR":"False discovery rate — the expected share of “significant” results that are actually false.",
+  "GO":"Gene Ontology — a curated catalogue of biological processes, each defined by a set of genes.",
+  "Reactome":"A curated database of biological pathways, each a set of genes that act together.",
+  "KEGG":"A curated database of biological pathways (Kyoto Encyclopedia of Genes and Genomes).",
+  "STRING":"A database of protein–protein interactions — which proteins physically or functionally associate.",
+  "TRRUST":"A database of transcription factors and the genes they regulate.",
+  "UMAP":"A way to flatten high-dimensional points into a 2-D picture. Positions show relative closeness; the axes themselves mean nothing.",
+  "t-SNE":"Another way to flatten high-dimensional points into 2-D. Like UMAP, the axes carry no meaning.",
+  "linear probe":"A simple classifier trained on a model's embeddings to test whether some information is present and easy to read out.",
+  "z-score":"How many standard deviations a result sits above (or below) the random baseline. Bigger = less likely to be chance.",
+  "held-out":"A second, independent sample of cells that the method never saw while it was being tuned.",
+  "annotation rate":"The share of a model's features that match at least one known pathway.",
+  "backbone":"The concepts shared by at least 8 of the 10 models under the calibrated annotator — the part that survives the null.",
+  "tokenization":"How a cell is turned into model input: by gene rank, by expression level, by a protein embedding, or as a “cell sentence”.",
+  "autoregressive":"Trained to predict the next item in a sequence, one step at a time.",
+  "Tabula Sapiens":"A public human single-cell atlas covering many organs. Our 6,000 cells are drawn from it.",
+  "dead feature":"An SAE feature that never activates — wasted capacity.",
+  "odds ratio":"How much more often two things co-occur than you'd expect by chance.",
+  "variance explained":"How much of the original signal a compressed version manages to reproduce. 1.0 = perfectly.",
+  "Top-K":"Only the k strongest features may be active at once (here k = 32), which is what makes the code sparse.",
+  "TopK":"Only the k strongest features may be active at once (here k = 32), which is what makes the code sparse."
+ };
+ // longest first so "random-gene null" wins over "null", "linear probe" over "PCA" etc.
+ const TERMS = Object.keys(G).sort((a,b)=>b.length-a.length);
+ const esc = s=>s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+ const RX = new RegExp('(?<![\\w-])(' + TERMS.map(esc).join('|') + ')(?![\\w-])');
+ const SKIP_TAGS = new Set(['SCRIPT','STYLE','CANVAS','SVG','INPUT','TEXTAREA','OPTION','CODE','PRE','H1']);
+
+ function tagIn(root){
+   const used = new Set();
+   const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+     acceptNode(n){
+       if(!n.nodeValue || n.nodeValue.length < 2) return NodeFilter.FILTER_REJECT;
+       for(let p=n.parentElement; p && p!==root.parentElement; p=p.parentElement){
+         if(SKIP_TAGS.has(p.tagName)) return NodeFilter.FILTER_REJECT;
+         if(p.classList && (p.classList.contains('gl')||p.classList.contains('tabnav'))) return NodeFilter.FILTER_REJECT;
+         if(p.id==='askpanel'||p.id==='tip'||p.id==='askbtn') return NodeFilter.FILTER_REJECT;
+       }
+       return NodeFilter.FILTER_ACCEPT;
+     }});
+   const nodes=[]; while(walker.nextNode()) nodes.push(walker.currentNode);
+   for(const node of nodes){
+     let n = node;
+     for(let guard=0; guard<8; guard++){
+       const m = RX.exec(n.nodeValue); if(!m) break;
+       const term = m[1];
+       if(used.has(term)){ // already explained in this section: skip past it
+         const after = n.splitText(m.index + term.length); n = after; continue;
+       }
+       used.add(term);
+       const rest = n.splitText(m.index);            // rest starts with the term
+       const tail = rest.splitText(term.length);     // tail = text after the term
+       const span = document.createElement('span');
+       span.className='gl'; span.setAttribute('data-gdef', G[term]);
+       span.textContent = term;
+       const q = document.createElement('sup'); q.className='glq'; q.textContent='?';
+       span.appendChild(q);
+       rest.parentNode.replaceChild(span, rest);
+       n = tail;
+     }
+   }
+ }
+
+ function run(){
+   document.querySelectorAll('section, header#overview').forEach(sec=>{ try{ tagIn(sec); }catch(e){} });
+ }
+ // run after the page's own scripts have written their content
+ if(document.readyState==='complete') setTimeout(run,0); else addEventListener('load',()=>setTimeout(run,0));
+
+ // hover -> tooltip (reuse the page's tooltip if present, else title attribute)
+ function show(el,ev){ const d=el.getAttribute('data-gdef'); if(!d) return;
+   if(typeof showTip==='function') showTip('<b>'+el.textContent.replace(/\?$/,'')+'</b><br>'+d, ev);
+   else if(!el.title) el.title=d; }
+ document.addEventListener('mouseover',e=>{const el=e.target.closest&&e.target.closest('.gl[data-gdef]'); if(el) show(el,e);});
+ document.addEventListener('mousemove',e=>{const el=e.target.closest&&e.target.closest('.gl[data-gdef]'); if(el&&typeof showTip==='function') show(el,e);});
+ document.addEventListener('mouseout',e=>{if(e.target.closest&&e.target.closest('.gl[data-gdef]')&&typeof hideTip==='function') hideTip();});
+ // tap on touch devices
+ document.addEventListener('click',e=>{const el=e.target.closest&&e.target.closest('.gl[data-gdef]'); if(el&&typeof showTip==='function'){show(el,e); setTimeout(()=>{typeof hideTip==='function'&&hideTip();},3500);}});
+})();
+</script>
+
 </body></html>
