@@ -213,6 +213,12 @@ pipeline/
     hypothesis_perturb.py    causal test on Replogle 2022 Perturb-seq (K562 + RPE1 replication)
     hypothesis_studybias.py  does predictive power depend on how studied a gene is? (it does not)
     make_fig5.py             Fig 5 (per-model enrichment, cross-model precision, independent evidence)
+    --- reproducibility guard ---
+    audit_manuscript.py      re-checks every number in Results 3.4-3.5 / Discussion / Limitations
+    audit_manuscript_core.py the same for Results 3.1-3.3 and Methods
+                             (103 checks, each pulling the value from the JSON that produced it;
+                              numeric comparison at the text's own rounding precision, so a
+                              mismatch means a real disagreement, not a formatting difference)
 docs/METHODS.md          pipeline + inductive-axis writeup
 ```
 
