@@ -25,6 +25,7 @@ The page is organised as four tabs — *Overview*, *① Choose a model*, *② Co
 | SVD vs SAE | variance explained at matched sparsity k = 32, SAE vs top-k PCA | tested |
 | Linearity | is cell identity linearly readable? (linear vs MLP probe gap), per layer | tested |
 | **Prediction test** | do co-firing gene pairs recover held-out regulatory links the atlas never used? | tested |
+| Prediction test · equal budget | is the per-model ranking about feature quality, or dictionary size? | tested |
 | Gene Search | which models encode a given gene, and under what concept | descriptive |
 | Layer Explorer | UMAP / t-SNE map of features per layer, per model | descriptive |
 | Modules | co-activation communities per layer (force-graph) | descriptive |
