@@ -131,6 +131,21 @@ overlapping databases, so random genes annotate at nearly the real rate.
   screens are cancer/epithelial lines while the corpus is immune/kidney/lung — this is transfer *across*
   biological context. Whether model agreement also raises the causal rate is **unresolved**: it does in RPE1
   (1.28× → 1.53× at ≥3 models, p = 0.005) but not in K562 (1.42× on 76 pairs, p = 0.13).
+- **Why no new biology was found — and why that says little about the models.** The validation
+  infrastructure has the same blind spot as the annotation infrastructure. The models place **4,003 genes
+  with <5 publications** into some feature's top genes (793 protein-coding; the other 3,097 non-coding or
+  pseudogenes). Our own confidence filter is **4.8× harsher** on those genes than on well-studied ones
+  (3.5% of understudied genes survive into the tested pairs vs 16.8% of genes with ≥50 papers), because
+  requiring recurrence across features selects for transcript abundance. And relaxing the filter does not
+  help, because the evidence runs out: **752 of the 793** protein-coding understudied genes are absent from
+  the genome-scale Perturb-seq screen entirely, whose perturbed set is **0.4% understudied against 9.9% of
+  all protein-coding genes**. A prediction about an unstudied gene currently cannot be confirmed or refuted
+  by any of these resources. Two results say the limit is the evidence, not the models: predictive power
+  does **not** decline with how studied a gene is (1.02–1.21× across publication strata in K562,
+  0.99–1.23× in RPE1, no trend, no agreement between lines on which stratum is strongest), and coverage of
+  the unstudied genome can be bought but only with precision — dropping the recurrence threshold from 5
+  features to 2 raises understudied genes in play from 141 to 703 while enrichment falls 1.20×→1.17×
+  (K562) and 1.28×→1.07× (RPE1). See `pipeline/scripts/hypothesis_studybias.py`.
 - **No evidence of *new* biology, from a third direction.** Only 171 of 4,111 pairs have never been
   co-mentioned, and just **4** pair two well-studied genes (≥20 papers each) that never appear together — all
   four long non-coding RNAs. Literature agrees with the databases and with TRRUST: cross-model consensus
@@ -196,6 +211,7 @@ pipeline/
     hypothesis_robust.py     paralogues / firing-features-only / stricter-evidence variants
     hypothesis_pubmed.py     literature co-mention vs a publication-count-preserving null
     hypothesis_perturb.py    causal test on Replogle 2022 Perturb-seq (K562 + RPE1 replication)
+    hypothesis_studybias.py  does predictive power depend on how studied a gene is? (it does not)
     make_fig5.py             Fig 5 (per-model enrichment, cross-model precision, independent evidence)
 docs/METHODS.md          pipeline + inductive-axis writeup
 ```
