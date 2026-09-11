@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 """Does the models' predictive power depend on how well studied a gene is?
 
-Motivation. The models feature 3,961 genes with fewer than 5 papers, but our pair list keeps only
-141 of them (3.6%, against 16.8% of well-studied genes), so the earlier "no new biology" result may
+Motivation. The models feature 4,003 genes with fewer than 5 papers, but our pair list keeps only
+141 of them (3.5%, against 16.8% of well-studied genes), so the earlier "no new biology" result may
 be a property of our filter rather than of the models. The direct fix -- validate understudied genes
 causally -- is blocked: of the 793 protein-coding understudied genes the models feature, 752 are
 absent from the Replogle screen entirely (the screen's perturbed set has 0.4% understudied genes

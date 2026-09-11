@@ -86,10 +86,12 @@ overlapping databases, so random genes annotate at nearly the real rate.
 - **It clears both nulls.** 22× the uniform random-gene null (78 vs 3.5 ± 2.0, z = 36.6) and **59× a
   degree-matched null** (78 vs 1.3 ± 1.3, z = 61.6). No permutation of 250 reached the observed value, so
   p < 0.004 at the floor.
-- **It is depth-robust and replicates.** 41–102 concepts at 16.7–27.6× over the null across the full depth
-  sweep, richest early-to-middle. Membership does drift with depth (Jaccard 0.34–0.48 versus the mid-layer
+- **It is depth-robust and replicates.** 41–102 concepts at 17.6–30.4× over the null across the full depth
+  sweep (250 permutations, every depth at the empirical floor p < 0.004), richest early-to-middle. Membership does drift with depth (Jaccard 0.34–0.48 versus the mid-layer
   set), so the ~78 are one depth's slice of a depth-invariant phenomenon, not a fixed list. On independent
-  held-out cells, backbone Jaccard 0.50 versus a 0.05 two-draw baseline (max 0.33, p < 0.007). About **63% is
+  held-out cells, backbone Jaccard 0.50 versus a 0.05 two-draw baseline (max 0.33, p < 0.007) — run on **nine of
+  ten models**, since scGPT could not be re-extracted on the held-out corpus, so the replicated object is the ≥7-of-9
+  backbone (81 concepts), not the headline ≥8-of-10 set of 78. About **63% is
   specific programme biology** (antigen presentation/MHC-II, cytokine signalling, defence response,
   muscle/cardiac signalling) and ~37% housekeeping.
 - **Geometry agrees, without using the annotator at all.** Linear CKA with a cell-shuffle null over **all 45
@@ -209,6 +211,8 @@ pipeline/
     hypothesis_trrust2.py    permutation validation + does cross-model agreement raise precision?
     hypothesis_trrust3.py    final: validated models only, the released prediction list
     hypothesis_robust.py     paralogues / firing-features-only / stricter-evidence variants
+    depth_backbone_fast.py   depth robustness at 250 permutations (sparse annotator; verifies it
+                             reproduces the 20-permutation observed counts before writing)
     hypothesis_pubmed.py     literature co-mention vs a publication-count-preserving null
     hypothesis_perturb.py    causal test on Replogle 2022 Perturb-seq (K562 + RPE1 replication)
     hypothesis_studybias.py  does predictive power depend on how studied a gene is? (it does not)
