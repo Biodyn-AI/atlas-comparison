@@ -20,7 +20,8 @@ A = json.load(open(f"{C}/hypothesis_trrust2.json"))
 F = json.load(open(f"{C}/hypothesis_final.json"))
 PB = json.load(open(f"{C}/hypothesis_pubmed.json"))
 PT = json.load(open(f"{C}/hypothesis_perturb.json"))
-per = A["per_model"]; curve = F["cross_model_curve"]
+SM = json.load(open(f"{C}/hypothesis_sizematched.json"))
+per = A["per_model"]; curve = A["cross_model_curve"]   # all ten models, not the selected five
 
 plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 8.5,
                      "axes.spines.top": False, "axes.spines.right": False})
@@ -39,19 +40,23 @@ ax1.set_yticks(y); ax1.set_yticklabels([DISP.get(m, m) for m in ms], fontsize=8)
 ax1.set_xlabel("held-out TRRUST recovery, fold over degree-matched null")
 for yi, m in zip(y, ms):
     d = per[m]
-    ax1.text(max(d["fold"] or 0, 0) + .25, yi, f"{d['hits']} hits", va="center", fontsize=7,
-             color="#2f7ed8" if d["p_emp"] <= 0.05 else "#8a8f96")
+    untested = not SM["models"].get(m, {}).get("testable", True)
+    lab = "untested" if untested else f"{d['hits']} hits"
+    ax1.text(max(d["fold"] or 0, 0) + .25, yi, lab, va="center", fontsize=7,
+             style="italic" if untested else "normal",
+             color="#b06a00" if untested else ("#2f7ed8" if d["p_emp"] <= 0.05 else "#8a8f96"))
 ax1.set_ylim(-0.7, len(ms) - 0.3)
 ax1.set_xlim(0, max(fold) * 1.28)
 ax1.set_title("A   Which models predict", loc="left", fontsize=9, fontweight="bold")
-ax1.text(.98, .04, "blue: p ≤ 0.05 (200 permutations)", transform=ax1.transAxes,
+ax1.text(.98, .04, "blue: p ≤ 0.05 · orange: too few pairs to test", transform=ax1.transAxes,
          ha="right", fontsize=6.8, color="#5a6169")
 
 # ---- B: precision vs cross-model corroboration ----
 ks = sorted(int(k) for k in curve)
 ks = [k for k in ks if curve[str(k)]["hits"] > 0]
 prec = [curve[str(k)]["precision"] for k in ks]
-null = [curve[str(k)]["null_precision_mean"] for k in ks]
+def _null(c): return c.get("null_precision_mean", c.get("null_precision", 0))
+null = [_null(curve[str(k)]) for k in ks]
 npairs = [curve[str(k)]["n_pairs"] for k in ks]
 ax2.plot(ks, prec, "-o", color="#2f7ed8", lw=1.7, ms=5, label="observed", zorder=3)
 nz = [(k, n) for k, n in zip(ks, null) if n > 0]                 # a log axis cannot show null = 0
@@ -61,10 +66,12 @@ ax2.set_yscale("log")
 ax2.set_xticks(ks)
 ax2.set_xlabel("models independently predicting the pair")
 ax2.set_ylabel("precision on held-out TRRUST")
+ax2.text(.02,.97,"all ten models",transform=ax2.transAxes,fontsize=6.8,color="#5a6169",va="top")
 ax2.legend(frameon=False, fontsize=7, loc="lower right")
 for k, p, n in zip(ks, prec, npairs):
-    f = curve[str(k)]["fold"]
-    ax2.annotate(f"{f:g}×" if f else "null = 0", (k, p), textcoords="offset points",
+    # a fold computed against a null mean of exactly 0 is not a number; the manuscript says so too
+    f = curve[str(k)]["fold"] if _null(curve[str(k)]) > 0 else None
+    ax2.annotate(f"{f:.1f}×" if f else "null = 0", (k, p), textcoords="offset points",
                  xytext=(0, 9), ha="center", fontsize=7.5, color="#1b4f8a", fontweight="bold")
     ax2.annotate(f"n={n:,}", (k, p), textcoords="offset points", xytext=(0, -13),
                  ha="center", fontsize=6.5, color="#5a6169")

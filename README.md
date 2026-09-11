@@ -112,9 +112,11 @@ overlapping databases, so random genes annotate at nearly the real rate.
   Against a configuration-model null that preserves every gene's co-firing degree exactly (so abundance and study bias
   cannot produce it), **5 of 10 models pass** at p ≤ 0.005 over 200 rewirings: Tahoe-x1 13.3× (59 edges recovered),
   scGPT 11.9× (10), UCE 10.5× (43), C2S-Scale 4.1× (83), Geneformer-V2 3.9× (12). MaxToki reaches 3.5× but p = 0.11;
-  tGPT 1.3×; AIDO.Cell, scFoundation and GeneCompass recover nothing. **Cross-model agreement sharpens it**: pairs
-  predicted by one validated model are enriched 5.3×, by two independent models **28.4×** — the comparative design
-  paying off directly. Stable across every robustness variant (4.8–8.9× at one model, p ≤ 0.005 in all five),
+  tGPT 1.3×; AIDO.Cell, scFoundation and GeneCompass recover nothing. **Cross-model agreement sharpens it**: over all ten models, pairs
+  predicted by one are enriched 4.8×, by two independently **20.8×** — the comparative design paying off directly,
+  though in absolute terms that is a precision of 0.21%, about one real edge per 480 pairs proposed. (Pooling only
+  the five models that passed gives 5.3× and 28.4×, but those were selected on TRRUST and re-scored against it, so
+  the all-ten figure is the one we report.) Stable across every robustness variant (4.8–8.9× at one model, p ≤ 0.005 in all five),
   including dropping same-family paralogues, raising the evidence bar, and keeping only features that actually fire —
   the last *raises* enrichment (5.3× → 7.9×), ruling out a near-silent-gene artefact. It also holds within a single
   layer (6.1×, p = 0.005). 4,349 corroborated pairs absent from TRRUST, STRING and every curated pathway are released
@@ -215,6 +217,10 @@ pipeline/
                              reproduces the 20-permutation observed counts before writing)
     hypothesis_pubmed.py     literature co-mention vs a publication-count-preserving null
     hypothesis_perturb.py    causal test on Replogle 2022 Perturb-seq (K562 + RPE1 replication)
+    hypothesis_sizematched.py  re-scores every model on an equal prediction budget, separating
+                             feature quality from dictionary size (the full-size ranking does not
+                             survive: UCE loses significance, MaxToki gains it, two models are
+                             untestable at any matched budget)
     hypothesis_studybias.py  does predictive power depend on how studied a gene is? (it does not)
     make_fig5.py             Fig 5 (per-model enrichment, cross-model precision, independent evidence)
     --- reproducibility guard ---

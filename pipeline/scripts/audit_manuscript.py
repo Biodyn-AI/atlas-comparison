@@ -69,11 +69,25 @@ check("3.4 MaxToki p", rf"MaxToki reaches [\d.]+× but p = {N}", dig(pm, "MaxTok
 check("3.4 tGPT fold", rf"tGPT {N}×", dig(pm, "tGPT", "fold"), "hypothesis_trrust2")
 
 # ---- 3.4 cross-model curve -------------------------------------------------
-cv = dig(FIN, "cross_model_curve", default={})
-check("3.4 k>=1 fold", rf"enriched {N}-fold over the degree-matched null", dig(cv, "1", "fold"), "hypothesis_final")
-check("3.4 k>=1 edges", rf"degree-matched null \({N} recovered edges\)", dig(cv, "1", "hits"), "hypothesis_final")
-check("3.4 k>=2 fold", rf"enriched \*\*{N}-fold\*\*", dig(cv, "2", "fold"), "hypothesis_final")
-check("3.4 k>=2 edges", rf"\*\*[\d.]+-fold\*\* \({N} edges\)", dig(cv, "2", "hits"), "hypothesis_final")
+cv = dig(TR2, "cross_model_curve", default={})   # all ten models: the unselected headline
+check("3.4 k>=1 fold", rf"enriched {N}-fold over the degree-matched null", dig(cv, "1", "fold"), "hypothesis_trrust2 (all 10)")
+check("3.4 k>=1 edges", rf"degree-matched null \({N} recovered edges\)", dig(cv, "1", "hits"), "hypothesis_trrust2 (all 10)")
+check("3.4 k>=2 fold", rf"enriched \*\*{N}-fold\*\*", dig(cv, "2", "fold"), "hypothesis_trrust2 (all 10)")
+check("3.4 k>=2 edges", rf"\*\*[\d.]+-fold\*\* \({N} edges\)", dig(cv, "2", "hits"), "hypothesis_trrust2 (all 10)")
+FINC = dig(FIN, "cross_model_curve", default={})
+check("3.4 selected-5 k>=1", rf"raises the same figures to {N}-fold", dig(FINC, "1", "fold"), "hypothesis_final (selected 5)")
+check("3.4 selected-5 k>=2", rf"to [\d.]+-fold and {N}-fold", dig(FINC, "2", "fold"), "hypothesis_final (selected 5)")
+check("3.4 absolute precision", rf"a\s*\n?precision of \*\*{N} %", 100*dig(cv, "2", "precision", default=0), "hypothesis_trrust2 (all 10)")
+SM = load("hypothesis_sizematched.json")
+for mm, pat in (("Tahoe",      rf"on this evidence \({N}× and"),
+                ("scGPT",      rf"on this evidence \([\d.]+× and {N}× at equal budget"),
+                ("C2S",        rf"also\s*hold \({N}× and"),
+                ("Geneformer", rf"also\s*hold \([\d.]+× and {N}×"),
+                ("UCE",        rf"falls to {N}× \(p = 0\.12"),
+                ("MaxToki",    rf"at matched budget \({N}×, p = 0\.04")):
+    check(f"3.4 matched {mm}", pat, dig(SM, "models", mm, "topN", "fold"), "hypothesis_sizematched")
+check("3.4 matched budget", rf"the {N} highest-weight pairs", dig(SM, "budget"), "hypothesis_sizematched")
+check("3.4 rank correlation", rf"rank correlation {N}\)", dig(SM, "spearman_full_vs_matched"), "hypothesis_sizematched")
 check("3.4 candidate links", rf"leaves {N} candidate links", dig(FIN, "n_hypotheses"), "hypothesis_final")
 
 # ---- 3.4 robustness --------------------------------------------------------
