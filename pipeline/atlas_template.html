@@ -459,7 +459,7 @@ document.getElementById('stats').innerHTML=[
  {n:nf(T.total_features),l:'SAE features',s:'matched-depth layer',c:''},
  {n:nf(T.total_concepts),l:'distinct concepts',s:'GO / Reactome / KEGG / TF',c:'teal'},
  {n:(D.controls&&D.controls.recalibration?D.controls.recalibration.final.shared_ge8_real:78),l:'shared backbone',s:'≥8/10 models · ~20× over a random-gene null (calibrated)',c:'teal'},
- {n:'≫ PCA',l:'richer than a linear summary',s:'features capture detail PCA misses',c:'teal'},
+ {n:'> PCA',l:'in all ten, by 0.02–0.53',s:'ahead at matched sparsity everywhere, but the margin is wide for some models and near zero for tGPT',c:'teal'},
 ].map(s=>`<div class="stat ${s.c}"><div class="n tnum">${s.n}</div><div class="l">${s.l}</div><div class="s">${s.s}</div></div>`).join('');
 
 /* universality */
@@ -1450,13 +1450,14 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
 
  // ---- tab shell ----
  const TABS=[{id:'home',label:'Overview'},{id:'choose',label:'① Choose a model'},{id:'compare',label:'② Compare'},{id:'genes',label:'③ Genes & biology'},{id:'findings',label:'Findings'}];
- const TABMAP={overview:'home',intro:'home','usecase-choose':'choose',
+ const TABMAP={overview:'home',intro:'home',use:'home','usecase-choose':'choose',
    universality:'compare',coverage:'compare',cka:'compare',lineage:'compare',emerge:'findings',economy:'findings',
    genes:'genes',predict:'genes',explorer:'genes',
    depth:'findings',tissue:'findings',svd:'findings',linearity:'findings',flow:'findings',modules:'findings',axis:'findings',circuits:'findings',controls:'findings',roster:'findings'};
  Object.keys(TABMAP).forEach(id=>{const el=document.getElementById(id);if(el)el.dataset.atab=TABMAP[id];});
  // reorder sections within a tab so it opens with what the use-case promises
  function reorder(ids){const els=ids.map(id=>document.getElementById(id)).filter(Boolean);for(let i=1;i<els.length;i++)els[i-1].after(els[i]);}
+ reorder(['intro','use']);                              // Overview: what this is, then how to use it
  reorder(['cka','coverage','universality','lineage']); // Compare: model similarity + per-model first, backbone science after
  reorder(['genes','predict','explorer']);                                 // Genes: search, then the prediction test, browser last
  const links=document.querySelector('nav .links');if(links){links.classList.add('tabnav');links.innerHTML=TABS.map(t=>`<button class="tabbtn" data-t="${t.id}">${t.label}</button>`).join('');}
