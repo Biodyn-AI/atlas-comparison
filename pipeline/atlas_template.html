@@ -45,6 +45,8 @@ h2{font-family:var(--cond);font-weight:700;font-size:clamp(25px,3.4vw,34px);lett
 .callout .k{color:var(--amber);font-family:var(--mono);font-size:11px;letter-spacing:1px;text-transform:uppercase;padding-top:2px;white-space:nowrap;font-weight:600}.callout b{color:var(--ink);font-weight:600}
 .ptitle{font-family:var(--cond);font-weight:600;font-size:15px;letter-spacing:.3px;margin-bottom:2px}.pnote{font-size:12.5px;color:var(--faint);margin-bottom:14px}
 .rowbar{display:grid;grid-template-columns:110px 1fr 62px;align-items:center;gap:12px;margin:8px 0}
+.rowbar.r4{grid-template-columns:110px 1fr 62px 104px}
+@media(max-width:760px){.rowbar.r4{grid-template-columns:84px 1fr 52px;}.rowbar.r4 .cnt{display:none}}
 .rowbar .name{font-family:var(--mono);font-size:12.5px;color:var(--mut);text-align:right;white-space:nowrap}
 .rowbar .track{height:22px;background:var(--surface2);border-radius:6px;overflow:hidden;position:relative}
 .rowbar .fill{height:100%;border-radius:6px;background:linear-gradient(90deg,#3f6fe0,#5b8cff);transition:width .8s cubic-bezier(.2,.7,.2,1)}
@@ -371,12 +373,18 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
  <div class="panel"><div class="ptitle">Which models produce testable predictions</div><div class="pnote">how much better than the degree-matched null each model recovers held-out regulatory links — at full size, which favours models with larger feature dictionaries</div>
   <div id="pred-bars" style="margin-top:14px"></div></div>
  <div class="grid2" style="margin-top:14px">
-  <div class="panel"><div class="ptitle">Agreement between models sharpens it</div><div class="pnote">precision on held-out links, by how many validated models predict the same pair</div>
+  <div class="panel"><div class="ptitle">Agreement between models sharpens it</div><div class="pnote">precision on held-out links, by how many of the ten models independently predict the same pair</div>
    <div id="pred-curve" style="margin-top:12px"></div></div>
-  <div class="panel"><div class="ptitle">Example predictions</div><div class="pnote">pairs two or more validated models agree on, absent from every database we checked</div>
+  <div class="panel"><div class="ptitle">Example predictions</div><div class="pnote">pairs that two or more of the validated models agree on, absent from every database we checked</div>
    <div id="pred-ex" style="margin-top:12px"></div></div>
  </div>
  <div class="callout"><span class="k">How to read it</span><div id="pred-read"></div></div>
+ <div class="grid2" style="margin-top:14px">
+  <div class="panel"><div class="ptitle">Checked twice more, on evidence of other kinds</div><div class="pnote">the same pairs against the published literature, and against what actually happens when you silence a gene</div>
+   <div id="pred-indep" style="margin-top:12px"></div></div>
+  <div class="panel"><div class="ptitle">Is any of it new biology?</div><div class="pnote">the honest answer, and why it is the one to expect</div>
+   <div id="pred-novel" style="margin-top:12px"></div></div>
+ </div>
 </div></section>
 <section id="circuits" class="expert"><div class="wrap">
  <div class="sec-head"><div class="sec-q">cross-layer circuits &amp; hard cells</div>
@@ -754,9 +762,10 @@ document.getElementById('stats').innerHTML=[
 /* ===== use cases ===== */
 (function(){const g=document.getElementById('use-grid');if(!g)return;
  const U=[
-  ['🎯','Pick the right model for a task','Need pathway-interpretable features? Choose a <b>rank</b> model (Geneformer, tGPT). Need the widest concept coverage? Go <b>big</b> (C2S, UCE). Need features that transfer across organs? Choose a <b>tissue-invariant</b> one (AIDO, Geneformer).','#axis','Axis → findings · Scale · Tissue'],
+  ['🎯','Pick the right model for a task','Start from what has been tested against held-out evidence: on recovering regulatory links the atlas never saw, <b>Tahoe-x1</b> and <b>scGPT</b> hold up when every model is given the same prediction budget, while four others do not and two are too small to judge. Then check coverage and similarity for your own genes. <span style="color:var(--faint)">The tokenisation-and-objective rules of thumb in Axis→findings rest on ten non-independent models and are exploratory — do not pick a model on them alone.</span>','#predict','Prediction test · Coverage'],
+
   ['🧑‍🔬','Developers: benchmark &amp; compare your model','Score a new single-cell model against the atlas on the same corpus: how much of the <b>calibrated shared backbone</b> (~78 concepts shared by ≥8/10 models, ~20× over a random-gene null) and of the co-activation module vocabulary its features recover — and where it sits on the cross-model CKA map.','#universality','Universality · CKA'],
-  ['🧪','Get predictions you can take to the bench','Gene pairs that share a feature recover known regulation the atlas never used — in five of the ten models, and more accurately when two models agree. The pairs with no database entry are the ones to test.','#predict','Prediction test'],
+  ['🧪','Get predictions you can take to the bench','Gene pairs that share a feature recover regulation the atlas was never shown, and two models agreeing beats one by fourfold. Read it as a ranking: the accuracy is <b>0.21%</b> — about one real link per 481 pairs — so it is a shortlist to test, not a result to cite. Checked again against the published literature and against gene-silencing screens, and both agree.','#predict','Prediction test'],
   ['🧬','Study a gene — where it lives, what it links to','Search any gene to see which models encode a feature for it, at what depth, what it <b>co-fires</b> with, and which concepts it falls into — a fast read on a gene’s learned neighbourhood across ten architectures.','#genes','Gene Search'],
   ['🔍','Check a model actually encodes your biology','Search a gene or pathway and see which models carry a feature for it, and at what depth — then build your downstream on the model that represents it best.','#genes','Gene Search'],
   ['🧭','Audit interpretability before you trust a model','Before using an FM downstream, confirm it linearly represents the axis you care about (tissue, cell state, a program) — and how pathway-shaped its features are.','#linearity','Linearity · Coverage'],
@@ -776,20 +785,21 @@ document.getElementById('stats').innerHTML=[
  const bars=document.getElementById('pred-bars');
  const UNT=new Set(H.untestable||[]);
  if(bars) bars.innerHTML=ms.map(m=>{const d=P[m],unt=UNT.has(m),ok=!unt&&d.p_emp<=0.05,f=d.fold||0;
-  return `<div class="rowbar"><div class="name" style="color:${ok?'var(--ink)':'var(--faint)'}">${nm(m)}</div>`
+  return `<div class="rowbar r4"><div class="name" style="color:${ok?'var(--ink)':'var(--faint)'}">${nm(m)}</div>`
    +`<div class="track"><div class="fill" style="width:${unt?0:Math.max(f/mx*100,0.6)}%;background:${ok?'linear-gradient(90deg,#2fc6b6,#5b8cff)':'var(--line2)'}"></div></div>`
    +`<div class="val" style="color:${ok?'var(--teal)':(unt?'var(--amber)':'var(--faint)')}">${unt?'—':(f?f.toFixed(1)+'×':'—')}</div>`
-   +`<div class="mono" style="font-size:11px;color:${unt?'var(--amber)':'var(--faint)'};min-width:96px;text-align:right">`
+   +`<div class="mono cnt" style="font-size:11px;color:${unt?'var(--amber)':'var(--faint)'};text-align:right">`
    +`${unt?'too few to test':d.hits+' link'+(d.hits===1?'':'s')}</div></div>`;}).join('')
    +`<div class="pnote" style="margin-top:10px">Coloured bars pass the null at p ≤ 0.05 over ${H.n_perm} rewirings; grey ones do not. <b style="color:var(--amber)">${[...UNT].map(nm).join(' and ')}</b> offer too few predictions to assess at all — they are untested, not failed, and reading them as zero would be wrong.</div>`;
 
  const cu=H.curve, ks=Object.keys(cu).map(Number).filter(k=>cu[k].hits>0).sort((a,b)=>a-b);
  const cbox=document.getElementById('pred-curve');
  if(cbox) cbox.innerHTML=ks.map(k=>{const c=cu[k],f=c.fold;
-  return `<div class="rowbar"><div class="name">${k} model${k>1?'s':''}</div>`
-   +`<div class="track"><div class="fill" style="width:${Math.min((f||60)/30*100,100)}%;background:linear-gradient(90deg,#5b8cff,#cf6dd6)"></div></div>`
-   +`<div class="val">${f?f.toFixed(1)+'×':'—'}</div>`
-   +`<div class="mono" style="font-size:11px;color:var(--faint);min-width:86px;text-align:right">${c.hits} of ${c.n_pairs.toLocaleString()}</div></div>`;}).join('')
+  return `<div class="rowbar r4"><div class="name">${k} model${k>1?'s':''}</div>`
+   +`<div class="track">`+(f?`<div class="fill" style="width:${Math.min(f/30*100,100)}%;background:linear-gradient(90deg,#5b8cff,#cf6dd6)"></div>`
+     :`<div style="height:100%;width:100%;background:repeating-linear-gradient(45deg,var(--surface2),var(--surface2) 5px,var(--line) 5px,var(--line) 10px)"></div>`)+`</div>`
+   +`<div class="val" style="color:${f?'var(--ink)':'var(--faint)'}">${f?f.toFixed(1)+'×':'n/a'}</div>`
+   +`<div class="mono cnt" style="font-size:11px;color:var(--faint);text-align:right">${c.hits} of ${c.n_pairs.toLocaleString()}</div></div>`;}).join('')
    +`<div class="pnote" style="margin-top:10px">Past two models the counts are too small to read (${ks.filter(k=>k>2).map(k=>cu[k].hits+' link'+(cu[k].hits===1?'':'s')).join(', ')||'no links'}), so we do not claim a trend.</div>`;
 
  const ex=document.getElementById('pred-ex');
@@ -811,6 +821,30 @@ document.getElementById('stats').innerHTML=[
   +`Second, how many predictions a model can offer is set by the size of its feature dictionary, not by how good it is. Giving every model the same budget of ${SM.budget?SM.budget.toLocaleString():''} predictions changes the order`
   +(lost.length?`: <b>${lost.map(nm).join(', ')}</b> ${lost.length>1?'lose':'loses'} significance, so ${lost.length>1?'their':'its'} place here rests on volume rather than quality`:'')+`. `
   +`<span style="color:var(--faint)">TRRUST records regulation someone has already published, so this measures recovery of <i>known</i> links. The pairs listed are untested predictions.</span>`;
+})();
+
+/* ===== independent evidence + the novelty question ===== */
+(function(){const H=D.hypothesis;if(!H||!H.independent)return;
+ const L=H.independent.literature, PT=H.independent.perturb, NV=H.novelty;
+ const row=(name,note,fold,detail)=>`<div class="rowbar r4"><div class="name">${name}</div>`
+  +`<div class="track"><div class="fill" style="width:${Math.min(fold/2.5*100,100)}%;background:linear-gradient(90deg,#7a5cc7,#5b8cff)"></div></div>`
+  +`<div class="val" style="color:var(--teal)">${fold.toFixed(2)}×</div>`
+  +`<div class="mono cnt" style="font-size:11px;color:var(--faint);text-align:right">${detail}</div></div>`
+  +`<div class="pnote" style="margin:-2px 0 8px 0">${note}</div>`;
+ const ind=document.getElementById('pred-indep');
+ if(ind) ind.innerHTML=
+   row('Literature','Do people write about these two genes in the same paper more than chance? Each gene keeps its own publication count in the null, so being famous does not help.',L.fold,`${L.observed.toLocaleString()} of ${L.testable.toLocaleString()}`)
+  +row('Silencing · K562','Switch one gene off — does the other move? This uses no database and no literature at all.',PT.K562.fold,`${PT.K562.pairs.toLocaleString()} pairs`)
+  +row('Silencing · RPE1','The same test in an unrelated cell line. That it replicates is what matters here.',PT.RPE1.fold,`${PT.RPE1.pairs.toLocaleString()} pairs`)
+  +`<div class="pnote" style="margin-top:10px">All three beat their own matched null (p ≤ 0.005). The silencing effects are small on purpose: those screens use cancer and retinal cell lines, while this atlas is built on immune, kidney and lung tissue — so they ask whether a link <i>transfers</i> to a different kind of cell, which is harder than asking whether it exists.</div>`;
+
+ const nv=document.getElementById('pred-novel');
+ if(nv) nv.innerHTML=
+  `<div style="font-size:14px;line-height:1.55">Mostly <b style="color:var(--amber)">no</b> — and that is worth knowing before you spend a week at the bench on it.</div>`
+  +`<div class="pnote" style="margin-top:10px">Of ${NV.testable.toLocaleString()} pairs we could check, only <b>${NV.never_comentioned}</b> have never appeared together in a paper. Narrow that to pairs where <i>both</i> genes are well studied — genuinely overlooked rather than simply obscure — and <b>${NV.both_studied}</b> remain: `
+  +NV.examples.map(e=>`<span class="mono" style="color:var(--mut)">${e[0]}–${e[1]}</span>`).join(', ')+`.</div>`
+  +`<div class="pnote" style="margin-top:8px">The reason is structural, not a shortcoming of these models. What several models agree on tends to be biology that is already well documented, because agreement and documentation both follow from a gene being abundant and much studied. And the resources that could <i>check</i> a prediction about an unstudied gene — pathway databases, the literature, even genome-scale silencing screens — cover that same well-studied slice of the genome. A prediction about a gene nobody has looked at can at present be neither confirmed nor refuted.</div>`
+  +`<div class="pnote" style="margin-top:8px;color:var(--mut)">Read this atlas as a way to <b>rank links worth testing</b>, not as a detector of the undiscovered.</div>`;
 })();
 
 /* roster */
@@ -1410,7 +1444,7 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
  cards.innerHTML=[
   ['choose','①','Choose a model for your task','Scientists: tell the atlas what you need — interpretable features, broad coverage, tissue-invariance, scale — and get a ranked, evidence-backed pick.','Open the chooser →'],
   ['compare','②','Compare models (for developers)','Benchmark a new model against the ten: cross-model similarity (CKA), concept coverage, and how much of the calibrated shared backbone it recovers.','Open the comparison →'],
-  ['genes','③','Explore genes & new biology','Search any gene to see where it is encoded and what it links to — and mine the unannotated consensus several models agree on for potentially hidden biology.','Open gene search →'],
+  ['genes','③','Explore genes & test predictions','Search any gene to see where it is encoded and what it links to, and see how well the models predict regulatory links they were never shown — including what that does, and does not, tell you about undiscovered biology.','Open gene search →'],
  ].map(c=>`<button class="uc-card" data-go="${c[0]}"><div class="n">${c[1]}</div><h3>${c[2]}</h3><p>${c[3]}</p><div class="go">${c[4]}</div></button>`).join('');
  const hdr=document.querySelector('header#overview .wrap');if(hdr)hdr.appendChild(cards);
 
