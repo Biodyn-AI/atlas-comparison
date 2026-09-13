@@ -23,6 +23,7 @@ def load(n):
 
 CTL, ALN = load("controls.json"), load("alllayer_null.json")
 DPB, KEG = load("depth_backbone.json"), load("kegg_robust.json")
+SAE = load("sae_health.json")
 rows = []
 
 
@@ -37,6 +38,9 @@ def dig(d, *path, default=None):
     return d
 
 
+WORDS = {"one":1,"two":2,"three":3,"four":4,"five":5,"six":6,"seven":7,"eight":8,"nine":9,"ten":10}
+
+
 def check(claim, pattern, expected, source):
     if expected is None:
         rows.append((claim, source, "-", "source missing", False)); return
@@ -44,7 +48,8 @@ def check(claim, pattern, expected, source):
     if not m:
         rows.append((claim, source, str(expected), "no such sentence", False)); return
     txt = m.group(1).replace(",", "").replace("−", "-")
-    got = float(txt)
+    got = float(WORDS[txt.lower()]) if txt.lower() in WORDS else float(txt)
+    if txt.lower() in WORDS: txt = str(int(got))
     dec = len(txt.split(".")[1]) if "." in txt else 0
     tol = 0.5 * 10 ** (-dec) + 1e-9
     ok = abs(got - float(expected)) <= tol
@@ -52,6 +57,7 @@ def check(claim, pattern, expected, source):
 
 
 N = r"([-−]?[\d,]+\.?\d*)"     # a number as the manuscript writes it
+W = r"([A-Za-z]+)"             # ... or spells it out
 D = r"[-–—]"                   # the manuscript typesets ranges with an en dash
 F = r"[\d.]+"                  # the other end of a range, unused
 
@@ -146,6 +152,19 @@ if sv:
                       and all(x["sae_var_explained"] > x["svd_var_at_k"] for x in sv)) else "MISMATCH",
              "SAE is ahead in all ten models" in FLAT and len(sv) == 10
              and all(x["sae_var_explained"] > x["svd_var_at_k"] for x in sv)))
+
+
+# ---- 2. SAE health (certified over every layer the analysis uses) ----------
+check("2 tGPT mid dead", rf"{N} % for tGPT", dig(SAE, "models", "tGPT", "mid"), "sae_health:tGPT.mid")
+check("2 C2S mid dead", rf"0 % for seven of ten models, {N} %", dig(SAE, "models", "C2S", "mid"), "sae_health:C2S.mid")
+check("2 Tahoe mid dead", rf"seven of ten models, [\d.]+ % and {N} %", dig(SAE, "models", "Tahoe", "mid"), "sae_health:Tahoe.mid")
+check("2 total layers", rf"across all {N} model-layers", dig(SAE, "total_layers"), "sae_health")
+check("2 layers over 10%", rf"model-layers: {N} of them", dig(SAE, "layers_over_threshold"), "sae_health")
+check("2 pct over 10%", rf"of them \({N} %\) exceed 10 % dead", dig(SAE, "pct_layers_over_threshold"), "sae_health")
+check("2 clean models", rf"not spread evenly — {W} models have no dead", len(dig(SAE, "clean_models", default=[])), "sae_health")
+check("2 tGPT mean", rf"tGPT averages {N} %", dig(SAE, "models", "tGPT", "mean"), "sae_health:tGPT.mean")
+check("2 tGPT bad layers", rf"exceeds 10 % in {W} of its eight layers", dig(SAE, "models", "tGPT", "layers_over_threshold"), "sae_health:tGPT")
+check("2 tGPT max", rf"layers \(maximum {N} %\)", dig(SAE, "models", "tGPT", "max"), "sae_health:tGPT.max")
 
 # ---- report ----------------------------------------------------------------
 bad = [x for x in rows if not x[4]]
