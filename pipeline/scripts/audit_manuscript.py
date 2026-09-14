@@ -96,8 +96,8 @@ check("3.4 candidate links", rf"leaves {N} candidate links", dig(FIN, "n_hypothe
 # ---- 3.4 robustness --------------------------------------------------------
 var = dig(ROB, "variants", default={})
 f1 = [dig(v, "1", "fold") for v in var.values() if dig(v, "1", "fold")]
-check("3.4 robustness min", rf"variant we ran \({N}–", min(f1) if f1 else None, "hypothesis_robust")
-check("3.4 robustness max", rf"variant we ran \([\d.]+–{N}×", max(f1) if f1 else None, "hypothesis_robust")
+check("3.4 robustness min", rf"five variants give\s*{N}–", min(f1) if f1 else None, "hypothesis_robust")
+check("3.4 robustness max", rf"five variants give\s*[\d.]+–{N}×", max(f1) if f1 else None, "hypothesis_robust")
 check("3.4 firing-only before", rf"\*raises\* the enrichment \({N}× →", dig(var, "R0 baseline (W>=5)", "1", "fold"),
       "hypothesis_robust:R0")
 check("3.4 firing-only after", rf"enrichment \([\d.]+× → {N}×\)", dig(var, "R2 firing features only", "1", "fold"),
@@ -153,4 +153,6 @@ if bad:
     print("\nneeds a look:")
     for claim, src, val, status, _ in bad:
         print(f"   {claim:<28} {status:<18} {val}   [{src}]")
-sys.exit(1 if any(x[3] == "MISMATCH" for x in rows) else 0)
+# A check that could not find its sentence did not run at all, which is worse than a mismatch:
+# rewording a sentence would otherwise switch its check off in silence. Any failure exits 1.
+sys.exit(1 if bad else 0)

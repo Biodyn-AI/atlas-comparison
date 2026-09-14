@@ -15,6 +15,7 @@ import json, re
 
 C = f"{_B}/outputs/atlas/comparative"
 G = f"{_B}/outputs/atlas/genesets"
+SCRIPTS = f"{_B}/scripts"
 SUP = f"{C}/SUPPLEMENTARY.md"
 DISP = {"AIDO": "AIDO.Cell", "C2S": "C2S-Scale", "Geneformer": "Geneformer-V2", "Tahoe": "Tahoe-x1"}
 nm = lambda m: DISP.get(m, m)
@@ -110,6 +111,31 @@ drift from them (`make_supp_tables.py`).
 | **Perturbation** (§3.5) | responder rank, responsiveness-matched null | {PRT['n_perm']} | K562 {PRT['K562']['top5pct_fold']}× (z = {PRT['K562']['z_top5']}), RPE1 {PRT['RPE1']['top5pct_fold']}× (z = {PRT['RPE1']['z_top5']}) — replicates in an unrelated line |
 | Correlations (n=10) | bootstrap 95 % CI | 5000 | n_conc~d_sae 0.79 [0.56,0.96]; conc~tokenisation −0.01 [−0.86,0.85] (underpowered) |"""]
 
+# ---- S11: the keyword list behind the specific/housekeeping split ----------
+# Section 3.2 promised "the keyword list is given in Supplementary" and it was not there.
+import re as _re
+_src = open(f"{SCRIPTS}/recalibrate_robust.py", encoding="utf-8").read()
+_hk = _re.search(r"HK = \[(.*?)\]", _src, _re.S)
+HK = [w.strip().strip('"\'') for w in _hk.group(1).replace("\n", " ").split(",") if w.strip()] if _hk else []
+TRIV = load("recalibrate_robust.json")["triviality"]
+s11 = [f"""## Table S11 — Keyword classification of the backbone
+
+Section 3.2 splits the {TRIV['n_ge8']}-concept backbone into specific programme biology and housekeeping. The split is
+by substring match on the concept name, with no manual curation: a concept counts as housekeeping if its name contains
+any of the {len(HK)} strings below, and as specific otherwise. That gives **{TRIV['specific']} specific
+({100 - TRIV['pct_housekeeping']:.1f} %)** and **{TRIV['housekeeping']} housekeeping ({TRIV['pct_housekeeping']} %)**.
+The rule is deliberately crude and stated here so it can be applied or disputed exactly
+(`recalibrate_robust.py`, `HK`).
+
+```
+{chr(10).join('  ' + ', '.join(HK[i:i + 6]) for i in range(0, len(HK), 6))}
+```
+
+A concept such as *cytoplasmic translation* or *rRNA processing* therefore lands in housekeeping, while *antigen
+processing and presentation of exogenous peptide antigen via MHC class II* or *defence response to bacterium* lands in
+specific. Borderline cases exist — *regulation of gene expression* is counted as housekeeping on the "gene expression"
+string — and the percentages should be read as approximate."""]
+
 # ---- S8: depth robustness, now at 250 permutations -------------------------
 s8 = [f"""## Table S8 — Backbone robustness to layer choice *(reviewer pre-empt)*
 
@@ -187,7 +213,7 @@ for m in order:
 # Rebuild by section, so running this twice cannot duplicate anything: drop whatever S8/S9/S10 are
 # already there, add the freshly generated ones, and sort the numbered tables back into sequence.
 # (The file had also drifted out of order -- S7 preceded S6, and S6 sat after the figures.)
-GENERATED = {2: "\n".join(s2), 5: "\n".join(s5), 8: "\n".join(s8), 9: "\n".join(s9), 10: "\n".join(s10)}
+GENERATED = {2: "\n".join(s2), 11: "\n".join(s11), 5: "\n".join(s5), 8: "\n".join(s8), 9: "\n".join(s9), 10: "\n".join(s10)}
 
 
 def patch_s3(sec: str) -> str:

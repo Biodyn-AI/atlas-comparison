@@ -111,9 +111,9 @@ check("3.2 depth concepts lo", rf"significant \({N}{D}\d+ concepts", min(ge8) if
 check("3.2 depth concepts hi", rf"significant \(\d+{D}{N} concepts", max(ge8) if ge8 else None, "depth_backbone")
 check("3.2 depth fold lo", rf"concepts, {N}{D}[\d.]+× over the random-gene", min(fld) if fld else None, "depth_backbone")
 check("3.2 depth fold hi", rf"concepts, [\d.]+{D}{N}× over the random-gene", max(fld) if fld else None, "depth_backbone")
-check("3.2 depth mid slice", rf"sweep gives {N} concepts", dig(mid, 0, "tiers", ">=8", "real"), "depth_backbone f=0.5")
-check("3.2 depth jaccard lo", rf"Jaccard {N}{D}[\d.]+ versus the mid-layer", min(jac) if jac else None, "depth_backbone")
-check("3.2 depth jaccard hi", rf"Jaccard [\d.]+{D}{N} versus the mid-layer", max(jac) if jac else None, "depth_backbone")
+check("3.2 depth mid slice", rf"own mid slice gives {N} rather than", dig(mid, 0, "tiers", ">=8", "real"), "depth_backbone f=0.5")
+check("3.2 depth jaccard lo", rf"Jaccard {N}{D}[\d.]+ against the mid-layer", min(jac) if jac else None, "depth_backbone")
+check("3.2 depth jaccard hi", rf"Jaccard [\d.]+{D}{N} against the mid-layer", max(jac) if jac else None, "depth_backbone")
 check("3.2 heldout jaccard", rf"backbone Jaccard {N} versus a", dig(HN, "observed_jaccard"), "controls:heldout_null")
 check("3.2 heldout null", rf"versus a {N} two-draw baseline", dig(HN, "null_mean"), "controls:heldout_null")
 check("3.2 heldout max", rf"two-draw baseline, max {N},", dig(HN, "null_max"), "controls:heldout_null")
@@ -181,4 +181,6 @@ if bad:
     print("\nneeds a look:")
     for claim, src, val, status, _ in bad:
         print(f"   {claim:<26} {status:<18} {val}   [{src}]")
-sys.exit(1 if any(x[3] == "MISMATCH" for x in rows) else 0)
+# A check that could not find its sentence did not run at all, which is worse than a mismatch:
+# rewording a sentence would otherwise switch its check off in silence. Any failure exits 1.
+sys.exit(1 if bad else 0)
