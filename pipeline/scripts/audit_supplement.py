@@ -109,6 +109,19 @@ for line in s7.split("\n"):
     rec(f"S7 {name} gap", round(d, 3), gap, ok=abs(d - gap) < 5e-4)
 rec("S7 covers every model", len(SVD), n7)
 
+# ---- supplementary figure captions, which also carry data-derived numbers ----
+DPB = load("depth_backbone.json")
+folds = [r["tiers"][">=8"]["fold"] for r in DPB["depths"]]
+caps = SUP.split("## Supplementary figures")[1].split("\n## ")[0]
+m = re.search(r"significant at every depth \(([\d.]+)–([\d.]+)× over null, (\d+) permutations\)", caps)
+if m:
+    rec("FigS2 caption fold range", f"{min(folds)}-{max(folds)}", f"{m.group(1)}-{m.group(2)}")
+    rec("FigS2 caption permutations", DPB["n_perm"], int(m.group(3)))
+else:
+    rec("FigS2 caption", "a fold range and permutation count", "pattern not found", False)
+order = re.findall(r"- \*\*Fig S(\d+)\*\*", caps)
+rec("supplementary figures in order", "1,2", ",".join(order))
+
 # ---- report ------------------------------------------------------------------
 bad = [r for r in rows if not r[2]]
 w = max(len(r[0]) for r in rows)
