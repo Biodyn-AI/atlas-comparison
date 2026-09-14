@@ -228,6 +228,8 @@ pipeline/
     audit_all.py             runs all three checks below and says whether it is safe to submit
     audit_manuscript.py      re-checks every number in Results 3.4-3.5 / Discussion / Limitations
     audit_manuscript_core.py the same for Results 3.1-3.3 and Methods
+    audit_supplement.py      checks the hand-written supplementary tables (S1/S4/S6/S7) against
+                             the data, the script constants and the running environment
     audit_figures.py         catches figures rendered from data that has since changed, by
                              hashing each plotting script's JSON inputs (--update to re-stamp)
     make_supp_tables.py      regenerates Tables S8-S10 from the results, idempotently

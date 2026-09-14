@@ -3,7 +3,8 @@
 
 Three separate things can drift apart, and each has bitten this project:
   the text vs the results        a fold range left at 166x where the source said 166.7
-  the supplement vs the text     Table S8 kept 20-permutation folds after the move to 250
+  the supplement vs the results  Table S8 kept 20-permutation folds after the move to 250, and
+                                 Table S2 printed unfiltered totals under a "5-500 genes" heading
   the figures vs the results     Fig S2 shipped for four days showing the numbers we had replaced
 
     python scripts/audit_all.py
@@ -15,6 +16,7 @@ HERE = "/Users/annaantipova/Desktop/biomech/scripts"
 CHECKS = [
     ("Results 3.4-3.5, Discussion, Limitations", "audit_manuscript.py"),
     ("Results 3.1-3.3 and Methods", "audit_manuscript_core.py"),
+    ("Supplementary tables against data and code", "audit_supplement.py"),
     ("Figures against the data they were drawn from", "audit_figures.py"),
 ]
 

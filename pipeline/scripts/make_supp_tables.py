@@ -11,6 +11,7 @@ from __future__ import annotations
 import json, re
 
 C = "/Users/annaantipova/Desktop/biomech/outputs/atlas/comparative"
+G = "/Users/annaantipova/Desktop/biomech/outputs/atlas/genesets"
 SUP = f"{C}/SUPPLEMENTARY.md"
 DISP = {"AIDO": "AIDO.Cell", "C2S": "C2S-Scale", "Geneformer": "Geneformer-V2", "Tahoe": "Tahoe-x1"}
 nm = lambda m: DISP.get(m, m)
@@ -26,6 +27,33 @@ ALN, KEG = load("alllayer_null.json"), load("kegg_robust.json")
 ROB, PUB, PRT = load("hypothesis_robust.json"), load("hypothesis_pubmed.json"), load("hypothesis_perturb.json")
 FIN, TR2 = load("hypothesis_final.json"), load("hypothesis_trrust2.json")
 PAIRS = load("hypothesis_pairs_full.json")
+
+# ---- S2: database sizes, whose column said 5-500 but held the totals -------
+def gs_counts(src):
+    d = json.load(open(f"{G}/{src}_gene_sets.json"))
+    return len(d), sum(1 for _, g in d.items() if 5 <= len(g) <= 500), sum(1 for _, g in d.items() if 5 <= len(g) <= 200)
+
+
+STR = json.load(open(f"{G}/string_edges.json"))
+TRR = json.load(open(f"{G}/trrust_edges.json"))
+BGN = len(json.load(open(f"{G}/background.json")))
+s2 = ["""## Table S2 — Gene-set / interaction databases
+
+Counts are generated from the retrieved files. The size filters matter and differ between the annotators: the
+permissive one admits sets of 5–500 genes, the calibrated one 5–200, so both columns are given. (An earlier version of
+this table put the unfiltered totals under a "5–500" heading.)
+
+| Database | Source | Version / retrieved | #terms total | 5–500 | 5–200 | Use |
+|---|---|---|---|---|---|---|"""]
+for src, label, when in (("GO_BP", "GO Biological Process", "retrieved 2026-08-17"),
+                         ("Reactome", "Reactome", "retrieved 2026-08-17"),
+                         ("KEGG", "KEGG (Human)", "retrieved 2026-08-17")):
+    tot, f500, f200 = gs_counts(src)
+    s2.append(f"| {label} | Enrichr via gseapy | {when} | {tot:,} | {f500:,} | {f200:,} | permissive + calibrated |")
+s2 += [f"| STRING (PPI) | STRING v12 | downloaded 2026-08-27 | {len(STR):,} hubs (combined score ≥ 700) | — | — | "
+       "permissive **only** (excluded from calibrated) |",
+       f"| TRRUST | TRRUST v2 | 2026-08-17 | {len(TRR):,} | — | — | permissive only; **held out** for the Section 3.4 test |",
+       f"| Background | union of DB genes + STRING | — | {BGN:,} genes | — | — | Fisher/hypergeometric universe |"]
 
 # ---- S3: the SAE-health rows, which had contradicted themselves ------------
 # "0 % for 7/10 models; UCE/C2S 0.1 %" counted UCE twice -- it is 0.0 % and already in the seven.
@@ -156,7 +184,7 @@ for m in order:
 # Rebuild by section, so running this twice cannot duplicate anything: drop whatever S8/S9/S10 are
 # already there, add the freshly generated ones, and sort the numbered tables back into sequence.
 # (The file had also drifted out of order -- S7 preceded S6, and S6 sat after the figures.)
-GENERATED = {5: "\n".join(s5), 8: "\n".join(s8), 9: "\n".join(s9), 10: "\n".join(s10)}
+GENERATED = {2: "\n".join(s2), 5: "\n".join(s5), 8: "\n".join(s8), 9: "\n".join(s9), 10: "\n".join(s10)}
 
 
 def patch_s3(sec: str) -> str:
