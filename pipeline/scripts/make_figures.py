@@ -4,14 +4,17 @@ Fig 2: the artefact and its fix (permissive core < random null; calibrated backb
        nulls; held-out replication). Fig 3: the backbone (universality spectrum real vs null; concept categories;
        example programmes)."""
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json
 import numpy as np
 import matplotlib as mpl
 mpl.use("Agg")
 import matplotlib.pyplot as plt
 
-C = "/Users/annaantipova/Desktop/biomech/outputs/atlas/comparative"
-FIG = "/Users/annaantipova/Desktop/biomech/outputs/atlas/comparative/figures"
+C = f"{_B}/outputs/atlas/comparative"
+FIG = f"{_B}/outputs/atlas/comparative/figures"
 import os; os.makedirs(FIG, exist_ok=True)
 d = json.load(open(f"{C}/controls.json"))
 
@@ -116,7 +119,7 @@ b.legend([f"specific programmes  {spc:.0f}%", f"housekeeping  {hk:.0f}%"],
          frameon=False, fontsize=8, loc="lower center", bbox_to_anchor=(0.5, -0.18))
 
 # 3C: example backbone programmes
-c = ax[2]; c.axis("off")
+c = ax[2]; c.axis("of")
 exs = ["Cytoplasmic translation", "SRP / ER protein targeting", "Nonsense-mediated mRNA decay",
        "Antigen processing (MHC-II)", "Defense response to bacterium", "Cytokine production / response",
        "Muscle contraction", "Adrenergic cardiac signalling"]

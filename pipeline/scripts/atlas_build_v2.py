@@ -10,12 +10,15 @@ C2S/MaxToki/Novae. Fast via inverted gene->term index (only real-overlap terms t
 -> outputs/atlas/comparative/matrix_v2.json  {model:{n_feat,n_annot,layer,term_count,feat_terms}}
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, os, sys, glob
 import numpy as np
 from collections import defaultdict, Counter
 from scipy.stats import fisher_exact
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 CL = f"{BASE}/outputs/atlas/cluster/out"
 GS_DIR = f"{BASE}/outputs/atlas/genesets"
 OUT = f"{BASE}/outputs/atlas/comparative/matrix_v2.json"

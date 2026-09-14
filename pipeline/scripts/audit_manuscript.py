@@ -12,9 +12,12 @@ implied by how many decimals the text shows. A check fails only when the values 
     python scripts/audit_manuscript.py
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, re, sys
 
-C = "/Users/annaantipova/Desktop/biomech/outputs/atlas/comparative"
+C = f"{_B}/outputs/atlas/comparative"
 MD = open(f"{C}/MANUSCRIPT.md", encoding="utf-8").read()
 FLAT = re.sub(r"\s+", " ", MD)
 

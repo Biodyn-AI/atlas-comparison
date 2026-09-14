@@ -8,12 +8,15 @@ and per-model concept-set Jaccard (does each model detect the same biology on ne
 scGPT is excluded — its held-out extraction crashed on a torchtext ABI mismatch in the shared venv.
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, glob, os
 import numpy as np
 from scipy.stats import hypergeom
 from collections import defaultdict, Counter
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 C = f"{BASE}/outputs/atlas/comparative"; G = f"{BASE}/outputs/atlas/genesets"
 HO = f"{BASE}/outputs/atlas/heldout_cat/out_heldout"
 ALLCAT = f"{BASE}/outputs/atlas/alllayer_cat"; TS = f"{BASE}/outputs/atlas/ts3_out"

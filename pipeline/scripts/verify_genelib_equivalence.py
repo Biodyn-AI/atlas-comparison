@@ -25,13 +25,16 @@ ranks models rather than reading small differences between them.
 
     python pipeline/scripts/verify_genelib_equivalence.py
 """
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import sys, json, itertools
 import numpy as np
 from collections import defaultdict
-sys.path.insert(0,"/Users/annaantipova/Desktop/biomech/comparative-sae-atlas/pipeline/scripts")
+sys.path.insert(0,f"{_B}/comparative-sae-atlas/pipeline/scripts")
 from genelib import MODELS, catalogs, features, top_genes
 
-BASE="/Users/annaantipova/Desktop/biomech"; C=f"{BASE}/outputs/atlas/comparative"; G=f"{BASE}/outputs/atlas/genesets"
+BASE=f"{_B}"; C=f"{BASE}/outputs/atlas/comparative"; G=f"{BASE}/outputs/atlas/genesets"
 TOPG,W0,NPERM = 10,5,200
 rng=np.random.default_rng(0)
 TRUTH=set()

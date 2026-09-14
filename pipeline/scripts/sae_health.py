@@ -8,10 +8,13 @@ where the manuscript audit can read it back.
     python scripts/sae_health.py -> outputs/atlas/comparative/sae_health.json
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import glob, json, re
 import numpy as np
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 C = f"{BASE}/outputs/atlas/comparative"
 ALLCAT, TS = f"{BASE}/outputs/atlas/alllayer_cat", f"{BASE}/outputs/atlas/ts3_out"
 ORDER = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "scGPT", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]

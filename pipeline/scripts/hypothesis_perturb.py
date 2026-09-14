@@ -17,11 +17,14 @@ Also   : does agreement between models raise the causal hit rate, as it does for
     python scripts/hypothesis_perturb.py [NPERM] -> outputs/atlas/comparative/hypothesis_perturb.json
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import h5py, json, sys
 import numpy as np
 from collections import defaultdict
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 C = f"{BASE}/outputs/atlas/comparative"; PD = f"{BASE}/outputs/atlas/perturb"
 NPERM = int(sys.argv[1]) if len(sys.argv) > 1 else 200
 TOPQ = 0.05                       # "B is among the 5% most-moved genes when A is knocked down"

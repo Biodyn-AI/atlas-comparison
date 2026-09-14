@@ -8,11 +8,14 @@ and the % of concepts it shares with the Fisher(top-5) call — does the method 
     python scripts/gsea_annot.py   -> outputs/atlas/comparative/gsea_annot.json
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, glob, math
 import numpy as np
 from collections import defaultdict, Counter
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 G = f"{BASE}/outputs/atlas/genesets"; TS = f"{BASE}/outputs/atlas/ts3_out"; C = f"{BASE}/outputs/atlas/comparative"
 MIN, MAX, ALPHA, N = 5, 500, 0.05, 20
 ORDER = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "scGPT", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]

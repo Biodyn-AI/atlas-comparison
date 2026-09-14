@@ -20,11 +20,14 @@ A, against a responsiveness-matched replacement for B.
     python scripts/hypothesis_studybias.py [NPERM] -> outputs/atlas/comparative/hypothesis_studybias.json
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import h5py, gzip, json, glob, sys, itertools
 import numpy as np
 from collections import defaultdict
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 C = f"{BASE}/outputs/atlas/comparative"; PD = f"{BASE}/outputs/atlas/perturb"; PB = f"{BASE}/outputs/atlas/pubmed"
 ALLCAT = f"{BASE}/outputs/atlas/alllayer_cat"; TS = f"{BASE}/outputs/atlas/ts3_out"
 PASSED = ["Tahoe", "scGPT", "UCE", "C2S", "Geneformer"]

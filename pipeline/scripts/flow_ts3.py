@@ -6,10 +6,13 @@ prior 7-model values (AIDO exact) from the current ts3_out catalogs.
     python scripts/flow_ts3.py
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, glob
 from collections import defaultdict
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 TS = f"{BASE}/outputs/atlas/ts3_out"; C = f"{BASE}/outputs/atlas/comparative"
 ORDER = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "scGPT", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]
 THR, NG = 0.3, 5

@@ -7,12 +7,15 @@ Calibrated annotator = top-10 genes, >=3 in a curated GO/Reactome/KEGG set of <=
     python scripts/stats_final.py -> outputs/atlas/comparative/stats_final.json
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, glob, os
 import numpy as np
 from scipy.stats import hypergeom
 from collections import defaultdict, Counter
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 C = f"{BASE}/outputs/atlas/comparative"; G = f"{BASE}/outputs/atlas/genesets"
 ALLCAT = f"{BASE}/outputs/atlas/alllayer_cat"; TS = f"{BASE}/outputs/atlas/ts3_out"; HO = f"{BASE}/outputs/atlas/heldout_cat/out_heldout"
 ALPHA, TOP, AMIN, MX = 0.05, 10, 3, 200

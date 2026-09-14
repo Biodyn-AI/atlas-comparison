@@ -2,6 +2,9 @@
 """Fig 1 (overview schematic) + Fig 4 (annotation-free structure: cross-model CKA heatmap + cell-shuffle null;
 SAE vs PCA variance at matched sparsity; linear decodability vs depth). Static, colorblind-safe, PNG 300dpi + PDF."""
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json
 import numpy as np
 import matplotlib as mpl
@@ -9,7 +12,7 @@ mpl.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 
-C = "/Users/annaantipova/Desktop/biomech/outputs/atlas/comparative"
+C = f"{_B}/outputs/atlas/comparative"
 FIG = f"{C}/figures"
 d = json.load(open(f"{C}/controls.json"))
 atlas = json.load(open(f"{C}/atlas_full_notf.json"))
@@ -81,7 +84,7 @@ c.text(0.02, 0.9, "each line = one model;\nMLP−linear gap ≈ 0 at every depth
 save(fig, "Fig4_annotation_free")
 
 # ================= FIG 1 (schematic) =================
-fig, ax = plt.subplots(figsize=(12, 4.4)); ax.set_xlim(0, 100); ax.set_ylim(0, 100); ax.axis("off")
+fig, ax = plt.subplots(figsize=(12, 4.4)); ax.set_xlim(0, 100); ax.set_ylim(0, 100); ax.axis("of")
 
 
 def box(x, y, w, h, text, fc="#F4F6F9", ec="#8aa0c0", tc=INK, fs=8.5, bold=False):

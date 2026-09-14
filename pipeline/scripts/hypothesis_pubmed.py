@@ -18,11 +18,14 @@ Two questions, one file:
     python scripts/hypothesis_pubmed.py [NPERM]  -> outputs/atlas/comparative/hypothesis_pubmed.json
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import gzip, json, sys
 import numpy as np
 from collections import defaultdict
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 C = f"{BASE}/outputs/atlas/comparative"; P = f"{BASE}/outputs/atlas/pubmed"
 NPERM = int(sys.argv[1]) if len(sys.argv) > 1 else 200
 TAXID = "9606"

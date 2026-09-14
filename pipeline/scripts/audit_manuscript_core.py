@@ -8,9 +8,12 @@ Ranges in the manuscript are typeset with an en dash, hence D below.
     python scripts/audit_manuscript_core.py
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, re, statistics, sys
 
-C = "/Users/annaantipova/Desktop/biomech/outputs/atlas/comparative"
+C = f"{_B}/outputs/atlas/comparative"
 FLAT = re.sub(r"\s+", " ", open(f"{C}/MANUSCRIPT.md", encoding="utf-8").read())
 
 

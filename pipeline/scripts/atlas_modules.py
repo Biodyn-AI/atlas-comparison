@@ -8,13 +8,16 @@ the aligned catalog. (2) per-layer annotation profile (rate + semantic richness)
     python scripts/atlas_modules.py -> outputs/atlas/comparative/modules_data.json
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, os, glob
 import numpy as np
 import networkx as nx
 from networkx.algorithms.community import greedy_modularity_communities
 from collections import Counter
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 CL = f"{BASE}/outputs/atlas/cluster/out"
 OUT = f"{BASE}/outputs/atlas/comparative/modules_data.json"
 # (model, layer, catalog path, annotations path, coact path)

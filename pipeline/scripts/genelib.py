@@ -17,10 +17,13 @@ Import it rather than re-deriving any of this:
     from genelib import GeneIndex, top_genes, catalogs, mid_catalog
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import glob, gzip, json, os
 from collections import defaultdict
 
-BASE = os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")
+BASE = _B
 ALLCAT = f"{BASE}/outputs/atlas/alllayer_cat"
 TS = f"{BASE}/outputs/atlas/ts3_out"
 PUBMED = f"{BASE}/outputs/atlas/pubmed"

@@ -8,10 +8,13 @@ Generating them from the JSONs means they cannot drift again.
     python scripts/make_supp_tables.py   (rewrites the S8/S9/S10 blocks in SUPPLEMENTARY.md)
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, re
 
-C = "/Users/annaantipova/Desktop/biomech/outputs/atlas/comparative"
-G = "/Users/annaantipova/Desktop/biomech/outputs/atlas/genesets"
+C = f"{_B}/outputs/atlas/comparative"
+G = f"{_B}/outputs/atlas/genesets"
 SUP = f"{C}/SUPPLEMENTARY.md"
 DISP = {"AIDO": "AIDO.Cell", "C2S": "C2S-Scale", "Geneformer": "Geneformer-V2", "Tahoe": "Tahoe-x1"}
 nm = lambda m: DISP.get(m, m)

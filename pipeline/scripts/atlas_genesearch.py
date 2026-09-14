@@ -7,10 +7,13 @@ in some architectures?" — a view no single-model atlas can give.
     python scripts/atlas_genesearch.py -> outputs/atlas/comparative/genes_index.json
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, os
 from collections import defaultdict
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 CL = f"{BASE}/outputs/atlas/cluster/out"
 M = json.load(open(f"{BASE}/outputs/atlas/comparative/matrix_v2.json"))
 OUT = f"{BASE}/outputs/atlas/comparative/genes_index.json"

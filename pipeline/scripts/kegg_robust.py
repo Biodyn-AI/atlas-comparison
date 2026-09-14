@@ -5,12 +5,15 @@ real vs random-gene null (fold). Also count how many of the >=8 backbone concept
 machinery of recalibrate_robust.py. -> outputs/atlas/comparative/kegg_robust.json
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, glob
 import numpy as np
 from scipy.stats import hypergeom
 from collections import defaultdict, Counter
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 C = f"{BASE}/outputs/atlas/comparative"; G = f"{BASE}/outputs/atlas/genesets"
 ALLCAT = f"{BASE}/outputs/atlas/alllayer_cat"; TS = f"{BASE}/outputs/atlas/ts3_out"
 ALPHA, NPERM = 0.05, 20

@@ -6,12 +6,15 @@ compare: Jaccard, % reproduced, per-model concept Jaccard. Baseline = calibrated
     python scripts/heldout_calibrated.py -> outputs/atlas/comparative/heldout_calibrated.json
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, glob, os
 import numpy as np
 from scipy.stats import hypergeom
 from collections import defaultdict, Counter
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 C = f"{BASE}/outputs/atlas/comparative"; G = f"{BASE}/outputs/atlas/genesets"
 HO = f"{BASE}/outputs/atlas/heldout_cat/out_heldout"; ALLCAT = f"{BASE}/outputs/atlas/alllayer_cat"; TS = f"{BASE}/outputs/atlas/ts3_out"
 ALPHA, TOP, AMIN, MX = 0.05, 10, 3, 200

@@ -239,6 +239,25 @@ pipeline/
 docs/METHODS.md          pipeline + inductive-axis writeup
 ```
 
+## Run it yourself
+
+Every script takes its data root from `ATLAS_BASE`, so nothing is tied to one machine:
+
+```bash
+git clone https://github.com/Biodyn-AI/atlas-comparison && cd atlas-comparison
+python -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+export ATLAS_BASE=/path/to/your/data/root      # holds outputs/atlas/... (see Reproduce below)
+python pipeline/scripts/audit_all.py           # checks text, supplement and figures against the data
+```
+
+`requirements.txt` pins the versions every null, figure and audit in the paper was computed under.
+Extraction and SAE training ran on a separate GPU host under a different NumPy major version —
+Supplementary Table S6 gives both environments and says which steps ran where.
+
+Without `ATLAS_BASE` the scripts fall back to the authors' path, which is what the published outputs
+were produced with; set it and they read and write wherever you point them.
+
 ## Reproduce
 
 Per-model extraction runs on a GPU (H100-class); the assembly is CPU-only.

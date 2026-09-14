@@ -5,9 +5,12 @@ summed across all layers. Rebuilds module_themes.json for all models present (ad
     python scripts/module_themes.py
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, re
 
-C = "/Users/annaantipova/Desktop/biomech/outputs/atlas/comparative"
+C = f"{_B}/outputs/atlas/comparative"
 ORDER = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "scGPT", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]
 THEMES = ["translation", "immune", "mito/OXPHOS", "cell-cycle/DNA", "RNA processing",
           "metabolism", "membrane/traffic", "signaling", "tissue-specific"]

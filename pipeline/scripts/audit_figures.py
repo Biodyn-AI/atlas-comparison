@@ -17,9 +17,12 @@ Add a new plotting script and it is picked up automatically, as long as it loads
 json.load(open(...)) and its outputs are listed in FIGURES below.
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import glob, hashlib, json, os, re, sys
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 C = f"{BASE}/outputs/atlas/comparative"
 FIG = f"{C}/figures"
 SCRIPTS = f"{BASE}/scripts"

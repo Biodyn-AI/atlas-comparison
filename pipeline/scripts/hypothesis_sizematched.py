@@ -21,10 +21,13 @@ Null and read-out are unchanged: configuration model, exact degree preserved, TR
         -> outputs/atlas/comparative/hypothesis_sizematched.json
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, pickle, sys, os
 import numpy as np
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 C = f"{BASE}/outputs/atlas/comparative"; G = f"{BASE}/outputs/atlas/genesets"
 CACHE = f"{C}/.cofire_cache.pkl"
 ORDER = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "scGPT", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]

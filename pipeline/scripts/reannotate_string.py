@@ -5,12 +5,15 @@ GO_BP/Reactome/KEGG + TRRUST + STRING). Rebuilds matrix_ts3 (mid layer) + depth_
     python scripts/reannotate_string.py
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, glob, os
 import numpy as np
 from collections import defaultdict, Counter
 from scipy.stats import fisher_exact
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 G = f"{BASE}/outputs/atlas/genesets"; TS = f"{BASE}/outputs/atlas/ts3_out"; C = f"{BASE}/outputs/atlas/comparative"
 MIN, MAX, ALPHA, TOP = 5, 500, 0.05, 5
 AXIS = {"AIDO": "expression (all genes)", "UCE": "ESM protein-token", "tGPT": "autoregressive rank",

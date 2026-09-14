@@ -7,11 +7,14 @@ reannotate_string.py (8-model matrix) + the all-layers downstream (with Tahoe ad
     python scripts/atlas_assemble.py
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, os
 import numpy as np
 from collections import defaultdict, Counter
 
-C = "/Users/annaantipova/Desktop/biomech/outputs/atlas/comparative"
+C = f"{_B}/outputs/atlas/comparative"
 PARAMS = {"AIDO": "10M", "UCE": "650M", "tGPT": "~50M", "Geneformer": "316M", "scGPT": "~50M",
           "C2S": "2B", "MaxToki": "217M", "Tahoe": "3B", "scFoundation": "100M", "GeneCompass": "104M"}
 PARAMS_M = {"AIDO": 10, "tGPT": 50, "scGPT": 50, "MaxToki": 217, "Geneformer": 316, "UCE": 650, "C2S": 2000, "Tahoe": 3000, "scFoundation": 100, "GeneCompass": 104}
@@ -30,7 +33,7 @@ def clean(t):
 
 
 import re
-TS_OUT = "/Users/annaantipova/Desktop/biomech/outputs/atlas/ts3_out"
+TS_OUT = f"{_B}/outputs/atlas/ts3_out"
 # inductive-axis taxonomy: tokenization (must match the atlas TCOL keys) / objective / prior
 TAX = {
     "AIDO": ("expression", "MLM", "none"), "scGPT": ("expression", "MLM", "none"),
@@ -265,7 +268,7 @@ def main():
         pts.append({"model": m, "tissue_deep": td, "core_share": cshare})
     tv = [(p["tissue_deep"], p["core_share"]) for p in pts if p["tissue_deep"] is not None]
     tcorr = round(float(np.corrcoef([x[0] for x in tv], [x[1] for x in tv])[0, 1]), 3) if len(tv) > 2 else None
-    extra["tissue_tradeoff"] = {"points": pts, "corr": tcorr}
+    extra["tissue_tradeof"] = {"points": pts, "corr": tcorr}
     # (5) adjacent-layer circuits (weight-based) + (6) hard-cell agreement — cluster outputs, pass through
     circ = load("circuits_adjacent.json")
     if circ:
@@ -302,7 +305,7 @@ def main():
     import glob
     svd = dict(old.get("svd", {}))
     for m in models:
-        fs = glob.glob(f"{C}/svd/{m}_L*_svd.json") or glob.glob(f"/Users/annaantipova/Desktop/biomech/outputs/atlas/svd/{m}_L*_svd.json")
+        fs = glob.glob(f"{C}/svd/{m}_L*_svd.json") or glob.glob(f"{_B}/outputs/atlas/svd/{m}_L*_svd.json")
         if fs:
             j = json.load(open(sorted(fs)[len(fs) // 2]))
             svd[m] = {"novel": round(100 * j.get("pct_novel", 1), 1), "svd_var": j.get("svd_var_at_k", 0), "sae_var": j.get("sae_var", 0)}

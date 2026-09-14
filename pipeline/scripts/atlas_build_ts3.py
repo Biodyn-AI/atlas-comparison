@@ -8,11 +8,14 @@ straight from the cluster's precomputed top-5 annotations. Also emits a per-laye
 -> outputs/atlas/comparative/matrix_ts3.json  + depth_ts3.json
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, os, glob
 import numpy as np
 from collections import Counter
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 TS = f"{BASE}/outputs/atlas/ts3_out"
 OUT = f"{BASE}/outputs/atlas/comparative"
 

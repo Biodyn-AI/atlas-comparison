@@ -4,12 +4,15 @@ with the same 5-DB Fisher+BH annotator, and record annotation rate + distinct co
     python scripts/topn_sweep.py   -> outputs/atlas/comparative/topn_sweep.json
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, glob
 import numpy as np
 from collections import defaultdict, Counter
 from scipy.stats import fisher_exact
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 G = f"{BASE}/outputs/atlas/genesets"; TS = f"{BASE}/outputs/atlas/ts3_out"; C = f"{BASE}/outputs/atlas/comparative"
 MIN, MAX, ALPHA = 5, 500, 0.05
 CUTOFFS = [5, 10, 15, 20]

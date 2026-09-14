@@ -13,13 +13,16 @@ refuses to continue if they differ. Only then are the nulls recomputed.
     python scripts/depth_backbone_fast.py [NPERM] -> outputs/atlas/comparative/depth_backbone.json
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, glob, re, sys
 import numpy as np
 import scipy.sparse as sp
 from scipy.stats import hypergeom
 from collections import Counter
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 C = f"{BASE}/outputs/atlas/comparative"; G = f"{BASE}/outputs/atlas/genesets"
 ALLCAT = f"{BASE}/outputs/atlas/alllayer_cat"; TS = f"{BASE}/outputs/atlas/ts3_out"
 ALPHA, TOP, AMIN, MX = 0.05, 10, 3, 200

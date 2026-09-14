@@ -3,13 +3,16 @@
 null, across depth fractions, with fold-over-null annotated; (B) Jaccard of ≥8 concept membership vs the mid-depth set,
 showing the phenomenon is depth-invariant while exact membership drifts. Colorblind-safe, PNG 300dpi + PDF."""
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json
 import numpy as np
 import matplotlib as mpl
 mpl.use("Agg")
 import matplotlib.pyplot as plt
 
-C = "/Users/annaantipova/Desktop/biomech/outputs/atlas/comparative"
+C = f"{_B}/outputs/atlas/comparative"
 FIG = f"{C}/figures"
 d = json.load(open(f"{C}/depth_backbone.json"))
 BLUE, GREY_D, GREEN, VERM, INK = "#0072B2", "#7A7A7A", "#009E73", "#D55E00", "#222222"

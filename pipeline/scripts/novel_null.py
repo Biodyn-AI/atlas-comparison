@@ -9,13 +9,16 @@ Null:  per model, draw the SAME NUMBER of features uniformly from ALL features a
     python scripts/novel_null.py [NPERM]  -> outputs/atlas/comparative/novel_null.json
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, glob, sys
 import numpy as np
 import scipy.sparse as sp
 from scipy.stats import hypergeom
 from collections import defaultdict, Counter
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 C = f"{BASE}/outputs/atlas/comparative"; G = f"{BASE}/outputs/atlas/genesets"
 ALLCAT = f"{BASE}/outputs/atlas/alllayer_cat"; TS = f"{BASE}/outputs/atlas/ts3_out"
 MIN, MAX, ALPHA, TOP = 5, 500, 0.05, 5          # permissive annotator (as on the site)

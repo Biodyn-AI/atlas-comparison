@@ -10,12 +10,15 @@ present (atlas_assemble prefers matrix_alllayer.json over the mid matrix). Same 
     python scripts/alllayer_matrix.py   -> outputs/atlas/comparative/matrix_alllayer.json
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, glob, os
 import numpy as np
 from collections import defaultdict, Counter
 from scipy.stats import fisher_exact
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 G = f"{BASE}/outputs/atlas/genesets"; C = f"{BASE}/outputs/atlas/comparative"
 ALLCAT = f"{BASE}/outputs/atlas/alllayer_cat"; TS = f"{BASE}/outputs/atlas/ts3_out"
 MIN, MAX, ALPHA, TOP = 5, 500, 0.05, 5

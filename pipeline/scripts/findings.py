@@ -6,11 +6,14 @@
     python scripts/findings.py [emergence|rosetta|curriculum|all]
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import sys, json, glob
 import numpy as np
 from collections import defaultdict, Counter
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 TS = f"{BASE}/outputs/atlas/ts3_out"; C = f"{BASE}/outputs/atlas/comparative"
 PAR = {"AIDO": 10, "tGPT": 50, "scGPT": 50, "MaxToki": 217, "Geneformer": 316, "UCE": 650, "C2S": 2000, "Tahoe": 3000, "scFoundation": 100, "GeneCompass": 104}
 ORDER = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "scGPT", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]

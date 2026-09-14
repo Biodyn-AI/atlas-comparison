@@ -5,12 +5,15 @@ Complements the mid-layer n_concepts in coverage. Writes alllayer_concepts.json.
     python scripts/alllayer_concepts.py
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, glob
 import numpy as np
 from collections import defaultdict, Counter
 from scipy.stats import fisher_exact
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 G = f"{BASE}/outputs/atlas/genesets"; TS = f"{BASE}/outputs/atlas/ts3_out"; C = f"{BASE}/outputs/atlas/comparative"
 MIN, MAX, ALPHA, TOP = 5, 500, 0.05, 5
 import sys

@@ -14,11 +14,14 @@ Analyses:
     python scripts/atlas_analyze_v2.py  -> outputs/atlas/comparative/atlas_data.json
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, os
 import numpy as np
 from collections import Counter, defaultdict
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 M = json.load(open(f"{BASE}/outputs/atlas/comparative/matrix_v2.json"))
 OUT = f"{BASE}/outputs/atlas/comparative/atlas_data.json"
 MODELS = list(M)

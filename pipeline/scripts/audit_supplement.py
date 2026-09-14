@@ -15,9 +15,12 @@ This checks those, so every number in the supplement is either generated or veri
     python scripts/audit_supplement.py
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json, re, sys
 
-BASE = "/Users/annaantipova/Desktop/biomech"
+BASE = _B
 C = f"{BASE}/outputs/atlas/comparative"
 SUP = open(f"{C}/SUPPLEMENTARY.md", encoding="utf-8").read()
 SCRIPTS = f"{BASE}/scripts"

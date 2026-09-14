@@ -5,13 +5,16 @@
    python scripts/make_fig5.py -> outputs/atlas/comparative/figures/Fig5_hypothesis.png
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import json
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 
-C = "/Users/annaantipova/Desktop/biomech/outputs/atlas/comparative"
+C = f"{_B}/outputs/atlas/comparative"
 OUT = f"{C}/figures/Fig5_hypothesis.png"
 DISP = {"AIDO": "AIDO.Cell", "C2S": "C2S-Scale", "Geneformer": "Geneformer-V2",
         "Tahoe": "Tahoe-x1", "scFoundation": "scFoundation", "GeneCompass": "GeneCompass",

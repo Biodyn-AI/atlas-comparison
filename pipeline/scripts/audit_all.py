@@ -10,9 +10,12 @@ Three separate things can drift apart, and each has bitten this project:
     python scripts/audit_all.py
 """
 from __future__ import annotations
+
+import os as _os
+_B = _os.environ.get("ATLAS_BASE", "/Users/annaantipova/Desktop/biomech")   # set ATLAS_BASE to run this anywhere
 import subprocess, sys
 
-HERE = "/Users/annaantipova/Desktop/biomech/scripts"
+HERE = f"{_B}/scripts"
 CHECKS = [
     ("Results 3.4-3.5, Discussion, Limitations", "audit_manuscript.py"),
     ("Results 3.1-3.3 and Methods", "audit_manuscript_core.py"),
