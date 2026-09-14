@@ -37,7 +37,8 @@ a.set_xlabel("read-out depth (fraction)"); a.set_ylabel("≥8/10 shared concepts
 a.set_ylim(0, max(real) * 1.22)
 a.set_title("A  Backbone is significant at every depth", loc="left", fontweight="bold", fontsize=9.5)
 a.legend(frameon=False, fontsize=7.5, loc="upper right")
-a.text(0.30, 0.92, "×N = real ÷ random-gene null (N=20 perms)", transform=a.transAxes, fontsize=7, color="#666")
+a.text(0.02, 0.97, f"×N = real ÷ random-gene null ({d['n_perm']} permutations)", transform=a.transAxes,
+       fontsize=7, color="#666", va="top")
 
 b.plot(f, jac, "-o", color=GREEN, lw=1.6, ms=5)
 b.axhline(1.0, color="#bbb", lw=0.8, ls="--")

@@ -39,10 +39,11 @@ bars = a.bar([0, 1], [rn["real_core"], rn["rand_core_mean"]], color=[BLUE, GREY_
 a.set_xticks([0, 1]); a.set_xticklabels(["real\nfeatures", "random-gene\nnull"])
 a.set_ylabel("shared concepts (all 10 models)")
 a.set_title("A  Naive annotation: an artefact", loc="left", fontweight="bold", fontsize=10)
-for x, v in zip([0, 1], [rn["real_core"], rn["rand_core_mean"]]):
-    a.text(x, v + 20, f"{v:.0f}", ha="center", fontsize=9, color=INK)
-a.set_ylim(0, 720)
-a.annotate("real BELOW null\n(z = %.1f)" % rn["core_z"], xy=(0, rn["real_core"]), xytext=(0.35, 500),
+# clear the error-bar cap and the annotation arrow, which both used to strike through these labels
+for x, v, sd in zip([0, 1], [rn["real_core"], rn["rand_core_mean"]], [0, rn["rand_core_sd"]]):
+    a.text(x, v + sd + 26, f"{v:.0f}", ha="center", fontsize=9, color=INK)
+a.set_ylim(0, 760)
+a.annotate("real BELOW null\n(z = %.1f)" % rn["core_z"], xy=(0.14, rn["real_core"] + 12), xytext=(0.52, 500),
            fontsize=8.5, color=VERM, ha="center",
            arrowprops=dict(arrowstyle="->", color=VERM, lw=1))
 
@@ -65,7 +66,8 @@ for i, k in enumerate(KS):
     b.text(i - w, real[i] * 1.25, f"{real[i]}", ha="center", fontsize=8, color=INK)
     b.text(i - w, real[i] * 1.9, f"{fold:.0f}×", ha="center", fontsize=8, color=VERM, fontweight="bold")
 b.legend(frameon=False, fontsize=7.5, loc="upper right")
-b.text(0.02, 0.02, "empirical p < 0.004 (250 perms); ×N = real ÷ degree-matched null", transform=b.transAxes, fontsize=7, color="#666")
+b.text(0.0, -0.17, "empirical p < 0.004 (250 permutations);  ×N = real ÷ degree-matched null",
+       transform=b.transAxes, fontsize=7, color="#666")   # below the axes: the bars ran through it inside
 
 # 2C: held-out replication
 c = ax[2]
