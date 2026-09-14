@@ -141,6 +141,20 @@ check("Limit lncRNA K562 fold", rf"stratum \({N}×, z = ", dig(k, "unmapped*", "
 check("Limit lncRNA K562 z", rf"stratum \([\d.]+×, z = {N}", dig(k, "unmapped*", "z"), "hypothesis_studybias:K562")
 check("Limit lncRNA RPE1", rf"replicate in RPE1 \({N}×", dig(r, "unmapped*", "fold"), "hypothesis_studybias:RPE1")
 
+
+# ---- Discussion: the blind-spot paragraph, previously computed ad hoc --------
+SBC = load("study_bias_coverage.json")
+R, SB = dig(SBC, "retention", default={}), dig(SBC, "screen_bias", default={})
+check("Disc featured understudied", rf"place {N} genes with fewer than five", dig(SBC, "understudied_featured"), "study_bias_coverage")
+check("Disc protein-coding of them", rf"genes — {N} of them protein-coding", dig(SBC, "understudied_protein_coding"), "study_bias_coverage")
+check("Disc filter ratio", rf"confidence filter is {N}\s*\n?times harsher", R.get("ratio"), "study_bias_coverage:retention")
+check("Disc understudied kept %", rf"\({N} % of understudied genes survive", R.get("understudied_pct"), "study_bias_coverage:retention")
+check("Disc well-studied kept %", rf"against {N} % of genes with ≥50 papers", R.get("well_studied_pct"), "study_bias_coverage:retention")
+check("Disc absent from screen", rf"evidence runs out: {N} of the 793", dig(SBC, "protein_coding_understudied_absent_from_screen"), "study_bias_coverage")
+check("Disc screen % understudied", rf"perturbed set contains {N} %", SB.get("screen_pct_understudied"), "study_bias_coverage:screen_bias")
+check("Disc all-PC % understudied", rf"understudied genes against {N} % of all protein-coding", SB.get("all_protein_coding_pct_understudied"), "study_bias_coverage:screen_bias")
+check("Limit non-coding share", rf"{N} of the 4,003\s*\n?understudied featured genes are non-coding", dig(SBC, "understudied_noncoding_or_pseudo"), "study_bias_coverage")
+
 # ---- report ----------------------------------------------------------------
 bad = [x for x in rows if not x[4]]
 w = max(len(x[0]) for x in rows)

@@ -1,0 +1,40 @@
+{
+ "definitions": {
+  "understudied": "< 5 publications in gene2pubmed",
+  "well_studied": ">= 50",
+  "top_genes_per_feature": 10,
+  "mapping": "NCBI current symbols plus synonyms"
+ },
+ "featured_genes": 23367,
+ "understudied_featured": 4003,
+ "understudied_by_biotype": {
+  "ncRNA": 1678,
+  "pseudo": 1419,
+  "protein-coding": 793,
+  "other": 46,
+  "unmapped": 42,
+  "snRNA": 12,
+  "snoRNA": 11,
+  "unknown": 1,
+  "scRNA": 1
+ },
+ "understudied_noncoding_or_pseudo": 3097,
+ "understudied_small_rna": 24,
+ "understudied_protein_coding": 793,
+ "protein_coding_understudied_absent_from_screen": 752,
+ "retention": {
+  "understudied_kept": 141,
+  "understudied_total": 4003,
+  "understudied_pct": 3.5,
+  "well_studied_kept": 1698,
+  "well_studied_total": 10110,
+  "well_studied_pct": 16.8,
+  "ratio": 4.8
+ },
+ "screen_bias": {
+  "all_protein_coding": 20596,
+  "all_protein_coding_pct_understudied": 9.9,
+  "screen_protein_coding": 9578,
+  "screen_pct_understudied": 0.4
+ }
+}
