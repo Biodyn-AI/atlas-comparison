@@ -22,14 +22,16 @@ CHECKS = [
     ("Numbers derived rather than read off a result", "audit_manuscript_derived.py"),
     ("Supplementary tables against data and code", "audit_supplement.py"),
     ("Figures against the data they were drawn from", "audit_figures.py"),
+    ("The public site against the same results", "atlas_hypothesis_block.py --check"),
 ]
 
 results, width = [], max(len(n) for n, _ in CHECKS)
 for name, script in CHECKS:
-    r = subprocess.run([sys.executable, f"{HERE}/{script}"], capture_output=True, text=True)
+    cmd, *flags = script.split()
+    r = subprocess.run([sys.executable, f"{HERE}/{cmd}", *flags], capture_output=True, text=True)
     tail = [l for l in r.stdout.strip().split("\n") if l.strip()]
     summary = tail[-1] if tail else "(no output)"
-    results.append((name, script, r.returncode, summary, r.stdout))
+    results.append((name, script.split()[0], r.returncode, summary, r.stdout))
     print(f"{'PASS' if r.returncode == 0 else 'FAIL'}  {name:<{width}}  {summary}")
 
 bad = [x for x in results if x[2] != 0]

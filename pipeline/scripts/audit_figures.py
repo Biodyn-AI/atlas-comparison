@@ -71,6 +71,26 @@ now = current()
 old = json.load(open(MANIFEST)) if os.path.exists(MANIFEST) else {}
 
 if "--update" in sys.argv:
+    # Stamping says "these figures were rendered from these sources". It has to be earned: a figure
+    # older than a source it is drawn from was not re-rendered, whatever the person stamping believes.
+    # make_fig14.py once died on a typo *after* writing Fig4 and before Fig1, and a --update run
+    # immediately after certified the un-rendered Fig1 as current.
+    stale = []
+    for script, v in now.items():
+        newest_src = max((os.path.getmtime(f"{C}/{n}") for n in v["sources"]
+                          if os.path.exists(f"{C}/{n}")), default=0)
+        for f in v["figures"]:
+            p = f"{FIG}/{f}.png"
+            if not os.path.exists(p):
+                stale.append((f, script, "не отрисована"))
+            elif os.path.getmtime(p) < newest_src:
+                stale.append((f, script, "старше своих данных — скрипт не перерисовал её"))
+    if stale:
+        print("НЕ ШТАМПУЮ — эти фигуры не были перерисованы:")
+        for f, script, why in stale:
+            print(f"   {f:<26} {script:<20} {why}")
+        print("\nЗапусти генератор, убедись, что он завершился без ошибки, и повтори --update.")
+        sys.exit(1)
     json.dump(now, open(MANIFEST, "w"), indent=1)
     n = sum(len(v["sources"]) for v in now.values())
     print(f"stamped {len(now)} scripts / {sum(len(v['figures']) for v in now.values())} figures "

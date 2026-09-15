@@ -84,7 +84,7 @@ c.text(0.02, 0.9, "each line = one model;\nMLP−linear gap ≈ 0 at every depth
 save(fig, "Fig4_annotation_free")
 
 # ================= FIG 1 (schematic) =================
-fig, ax = plt.subplots(figsize=(12, 4.4)); ax.set_xlim(0, 100); ax.set_ylim(0, 100); ax.axis("of")
+fig, ax = plt.subplots(figsize=(12, 4.4)); ax.set_xlim(0, 100); ax.set_ylim(0, 100); ax.axis("off")
 
 
 def box(x, y, w, h, text, fc="#F4F6F9", ec="#8aa0c0", tc=INK, fs=8.5, bold=False):
