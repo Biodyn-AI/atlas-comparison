@@ -864,11 +864,29 @@ document.getElementById('stats').innerHTML=[
    +`<div class="pnote" style="margin-top:10px">Past two models the counts are too small to read (${ks.filter(k=>k>2).map(k=>cu[k].hits+' link'+(cu[k].hits===1?'':'s')).join(', ')||'no links'}), so we do not claim a trend.</div>`;
 
  const ex=document.getElementById('pred-ex');
- if(ex) ex.innerHTML=H.examples.slice(0,14).map(e=>
+ if(ex){const ALL=H.pairs_all||[];
+  ex.innerHTML=H.examples.slice(0,14).map(e=>
   `<div style="display:flex;align-items:baseline;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--line)">`
   +`<span class="mono" style="font-size:12.5px;color:var(--ink)">${e.pair[0]} — ${e.pair[1]}</span>`
   +`<span class="mono" style="font-size:11px;color:var(--faint)">${e.n_models} models</span></div>`).join('')
-  +`<div class="pnote" style="margin-top:10px">${H.n_hypotheses.toLocaleString()} such pairs in total. These are predictions to test, not results.</div>`;
+  +`<div class="pnote" style="margin-top:10px">${H.n_hypotheses.toLocaleString()} such pairs in total. These are predictions to test, not results.</div>`
+  +(ALL.length?`<details class="more" id="pairs-all" style="margin-top:10px"><summary>All ${ALL.length.toLocaleString()} pairs — browse, filter, download</summary>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:10px 0"><input id="pairs-q" type="text" placeholder="filter by gene…" autocomplete="off" style="flex:1;min-width:160px;background:var(--surface2);border:1px solid var(--line2);border-radius:8px;padding:7px 10px;color:var(--ink);font-family:var(--mono);font-size:12px">
+    <button id="pairs-csv" class="modebtn" style="margin-left:0">Download CSV</button>
+    <a class="modebtn" style="margin-left:0;text-decoration:none" href="https://github.com/Biodyn-AI/atlas-comparison/blob/main/data/hypothesis_pairs_full.json" target="_blank" rel="noopener">JSON on GitHub ↗</a></div>
+    <div id="pairs-count" class="pnote"></div><div id="pairs-table" style="max-height:420px;overflow:auto;margin-top:6px"></div></details>`:'');
+  const tbl=document.getElementById('pairs-table'),q=document.getElementById('pairs-q'),cnt=document.getElementById('pairs-count');
+  function drawPairs(){if(!tbl)return;const f=(q.value||'').trim().toUpperCase();const rows=f?ALL.filter(r=>r[0].includes(f)||r[1].includes(f)):ALL;
+    cnt.textContent=`${rows.length.toLocaleString()} pair${rows.length===1?'':'s'}${f?` matching “${f}”`:''} · columns: gene A, gene B, models agreeing, evidence weight, papers that mention both genes`;
+    tbl.innerHTML=`<table class="choose" style="width:100%"><tr><th>gene A</th><th>gene B</th><th>models</th><th>weight</th><th>co-mentions</th></tr>`
+      +rows.slice(0,600).map(r=>`<tr><td class="mono" style="text-align:left">${r[0]}</td><td class="mono" style="text-align:left">${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]==null?'—':r[4]}</td></tr>`).join('')+`</table>`
+      +(rows.length>600?`<div class="pnote">showing the first 600 of ${rows.length.toLocaleString()} — narrow the filter, or download the CSV for all of them</div>`:'');}
+  const det=document.getElementById('pairs-all');if(det)det.addEventListener('toggle',()=>{if(det.open&&tbl&&!tbl.innerHTML)drawPairs();});
+  if(q)q.addEventListener('input',drawPairs);
+  const csv=document.getElementById('pairs-csv');if(csv)csv.onclick=()=>{const head=(H.pairs_all_columns||['gene_a','gene_b','n_models','weight','co_mentions']).join(',');
+    const body=ALL.map(r=>r.map(v=>v==null?'':v).join(',')).join('\n');const blob=new Blob([head+'\n'+body],{type:'text/csv'});
+    const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='atlas_predicted_pairs.csv';document.body.appendChild(a);a.click();a.remove();};
+ }
 
  const k1=cu[1],k2=cu[2],val=H.validated.map(nm),SM=H.sizematched||{};
  const rd=document.getElementById('pred-read');
@@ -976,8 +994,13 @@ function bindG(){document.querySelectorAll('[data-g]').forEach(c=>c.onclick=()=>
 function renderGene(q){q=(q||'').trim().toUpperCase();if(!q){gR.innerHTML='';return;}const rows=GENES.index[q];
  if(!rows){const near=Object.keys(GENES.index).filter(g=>g.startsWith(q)).slice(0,12);gR.innerHTML=`<div style="color:var(--faint);font-size:13.5px">No feature indexes <b class="mono" style="color:var(--mut)">${q}</b>.`+(near.length?` Did you mean: `+near.map(g=>`<span class="chip" data-g="${g}" style="cursor:pointer;display:inline-block;margin:2px">${g}</span>`).join(''):'')+`</div>`;bindG();return;}
  const bars=rows.map(r=>{const m=gModels[r[0]],n=r[1],concept=gC[r[2]],ex=r[3],ours=new Set(['scPRINT','AIDO','UCE','tGPT']).has(m),frac=n/Math.max(...rows.map(x=>x[1]));
-  return `<div class="rowbar" style="grid-template-columns:92px 1fr auto;gap:14px;margin:7px 0"><div class="name" style="color:${ours?'#f6a6c6':'var(--mut)'}">${m}${ours?' ●':''}</div><div style="font-size:13px;color:var(--mut);display:flex;align-items:center;gap:10px"><span style="height:8px;width:${18+frac*70}px;border-radius:4px;background:${ours?'var(--acc2)':'var(--acc)'};flex:none;opacity:.75"></span><span><span class="mono" style="color:var(--ink)">${n}</span> feature${n>1?'s':''} · <span style="color:var(--ink)">${concept}</span></span></div><div class="mono" style="font-size:11px;color:var(--faint)">#${ex}</div></div>`;}).join('');
- gR.innerHTML=`<div style="display:flex;align-items:baseline;gap:12px;margin-bottom:14px"><span class="mono" style="font-size:22px;color:var(--acc2)">${q}</span><span style="color:var(--mut);font-size:13.5px">encoded by <b style="color:var(--ink)">${rows.length}/${gModels.length}</b> models</span></div>${bars}`;}
+  return `<div class="rowbar" style="grid-template-columns:92px 1fr auto;gap:14px;margin:7px 0"><div class="name" style="color:${ours?'#f6a6c6':'var(--mut)'}">${m}${ours?' ●':''}</div><div style="font-size:13px;color:var(--mut);display:flex;align-items:center;gap:10px"><span style="height:8px;width:${18+frac*70}px;border-radius:4px;background:${ours?'var(--acc2)':'var(--acc)'};flex:none;opacity:.75"></span><span><span class="mono" style="color:var(--ink)">${n}</span> feature${n>1?'s':''} · <span style="color:var(--ink)">${concept}</span></span></div><a href="#explorer" class="mono" data-exopen="${m}" data-exgene="${q}" style="font-size:11px;color:var(--acc);text-decoration:none;white-space:nowrap">open in explorer →</a></div>`;}).join('');
+ const HP=(typeof D!=='undefined'&&D.hypothesis&&D.hypothesis.pairs_all)||[];const partners=HP.filter(r=>r[0]===q||r[1]===q).map(r=>({g:r[0]===q?r[1]:r[0],n:r[2],w:r[3]}));
+ const pp=partners.length
+  ?`<div style="margin-top:18px"><div class="ptitle" style="font-size:13px">Predicted partners <span style="color:var(--faint);font-weight:400;font-family:var(--sans);font-size:12px">— genes that repeatedly share a feature with ${q} and are in no database we checked (see “Can the features predict?”)</span></div><div class="chips" style="margin-top:8px">${partners.slice(0,30).map(p=>`<span class="chip" data-g="${p.g}" style="cursor:pointer" title="${p.n} models agree · weight ${p.w}">${p.g} <span style="color:var(--faint)">·${p.n}</span></span>`).join('')}${partners.length>30?`<span class="pnote" style="display:inline-block;margin-left:6px">+${partners.length-30} more in the full list</span>`:''}</div></div>`
+  :`<div class="pnote" style="margin-top:14px">No released prediction involves ${q}.</div>`;
+ gR.innerHTML=`<div style="display:flex;align-items:baseline;gap:12px;margin-bottom:14px"><span class="mono" style="font-size:22px;color:var(--acc2)">${q}</span><span style="color:var(--mut);font-size:13.5px">encoded by <b style="color:var(--ink)">${rows.length}/${gModels.length}</b> models</span></div><div class="pnote" style="margin:-6px 0 12px">A row counts the features, across all of a model's layers, whose top-10 genes include ${q}, with the concept its features most often carry. “Open in explorer” shows the features where ${q} is the single top gene, layer by layer.</div>${bars}${pp}`;
+ gR.querySelectorAll('[data-exopen]').forEach(a=>a.onclick=e=>{e.preventDefault();if(typeof exOpen==='function')exOpen(a.dataset.exopen,a.dataset.exgene);});bindG();}
 gI.addEventListener('input',()=>renderGene(gI.value));bindG();
 
 /* ===== cross-layer flow ===== */
@@ -1011,6 +1034,14 @@ function exBuildLayers(){const md=EX[exM];const Ls=Object.keys(md.layers).map(Nu
  document.getElementById('ex-layers').innerHTML=Ls.map(L=>`<button data-l="${L}" style="font-family:var(--mono);font-size:12px;background:${String(L)===exL?'var(--acc)':'var(--surface2)'};color:${String(L)===exL?'var(--onacc)':'var(--mut)'};border:1px solid var(--line);cursor:pointer;padding:5px 11px;border-radius:7px;font-weight:${String(L)===exL?600:400}">L${L}</button>`).join('');
  document.getElementById('ex-layers').querySelectorAll('button').forEach(b=>b.onclick=()=>{exL=b.dataset.l;_exAnimNext=true;exBuildLayers();});
  exRender();}
+// Gene search hands off here: switch to the model, filter by the gene, land on the layer that holds
+// the most matching features. The map shows each feature's top gene, so matches are features this gene tops.
+function exOpen(m,gene){const tb=document.querySelector('#ex-tabs button[data-m="'+m+'"]');if(!tb)return;
+ exFilter=gene||'';const gi=document.getElementById('ex-gene');if(gi)gi.value=exFilter;
+ const md=EX[m],f=exFilter.trim().toUpperCase();let best=null,bn=-1;
+ if(md&&f)Object.keys(md.layers).forEach(L=>{const n=md.layers[L].pts.filter(p=>md.genes[p[4]].startsWith(f)).length;if(n>bn){bn=n;best=L;}});
+ tb.click();if(best!=null&&bn>0){exL=String(best);exBuildLayers();}
+ const sec=document.getElementById('explorer');if(sec)sec.scrollIntoView({behavior:'smooth',block:'start'});}
 function exColorOf(p,md,ld){if(exColor==='SVD')return p[3]?'#2fc6b6':'#3a4c6e';if(exColor==='freq'){const f=Math.min(1,p[5]/50);return `rgba(91,140,255,${0.25+0.75*f})`;}return p[2]>=ld.n_mod?'#3a4c6e':EMOD[p[2]%EMOD.length];}
 let _exAnimNext=false;
 function exPaint(prog){const W=exc.clientWidth,H=exc.clientHeight,dpr=Math.min(devicePixelRatio||1,2);exg.setTransform(dpr,0,0,dpr,0,0);exg.clearRect(0,0,W,H);const cx=W/2,cy=H/2,filt=exFilter.trim().toUpperCase();exPts.forEach(o=>{const hit=!filt||o.gene.startsWith(filt);const sx=cx+(o.sx-cx)*prog,sy=cy+(o.sy-cy)*prog;exg.beginPath();exg.arc(sx,sy,hit?2.6:1.4,0,7);exg.fillStyle=hit?o.col:'rgba(90,108,142,.18)';exg.globalAlpha=(hit?.85:.5)*Math.min(1,prog*1.4);exg.fill();exg.globalAlpha=1;});}
@@ -1023,7 +1054,7 @@ function exRender(){const md=EX[exM],ld=md.layers[exL];const dpr=Math.min(device
  exPts=ld.pts.map(p=>({p,sx:X(px(p)),sy:Y(py(p)),gene:md.genes[p[4]],col:exColorOf(p,md,ld)}));
  if(_exAnimNext&&!matchMedia('(prefers-reduced-motion:reduce)').matches){_exAnimNext=false;exSettle();}else{_exAnimNext=false;exPaint(1);}
  document.getElementById('ex-title').textContent=`${exM} · layer ${exL} — feature map (${exProj==='tsne'?'t-SNE':'UMAP'})`;
- document.getElementById('ex-note').innerHTML=`${ld.n_shown&&ld.n_shown<ld.alive?`${ld.n_shown} of ${ld.alive} (most active)`:`${ld.alive} alive`} features · coloured by ${exColor}${filt?` · filter "${filt}"`:''}`;
+ document.getElementById('ex-note').innerHTML=`${ld.n_shown&&ld.n_shown<ld.alive?`${ld.n_shown} of ${ld.alive} (most active)`:`${ld.alive} alive`} features · coloured by ${exColor}${filt?` · filter "${filt}" — matches by layer: ${Object.keys(md.layers).map(Number).sort((a,b)=>a-b).map(L=>{const n=md.layers[L].pts.filter(p=>md.genes[p[4]].startsWith(filt)).length;return n?`L${L}:${n}`:null;}).filter(Boolean).join(' ')||'none in the shown features'}`:''}`;
  // stats
  document.getElementById('ex-stats').innerHTML=[['Alive',ld.alive],['Dead',ld.dead],['Annotated',`${ld.rate}%`],['Modules',ld.n_mod],['SVD-aligned',ld.svd_aligned]].map(([k,v])=>`<div style="display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid var(--line);font-size:13px"><span style="color:var(--faint);font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.5px">${k}</span><span class="mono" style="color:var(--ink)">${v}</span></div>`).join('');
  // list top by freq
@@ -1407,6 +1438,8 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
   #subnav{position:static}
   #subnav .wrap{flex-wrap:wrap;height:auto;padding-top:6px;padding-bottom:6px}
   #readfirst-list>div{grid-template-columns:1fr!important;gap:4px!important}
+  #gene-results .rowbar{grid-template-columns:92px 1fr!important}
+  #gene-results .rowbar>a{grid-column:2}
   #subnav .secs{flex-basis:100%}
   .modebtn{margin-left:0}
  }

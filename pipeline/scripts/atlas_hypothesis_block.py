@@ -59,7 +59,12 @@ perturb = {ln: {"pairs": PT[ln]["n_ordered_pairs"], "rate": PT[ln]["top5pct_rate
                 "null": PT[ln]["null_top5pct_rate"], "fold": PT[ln]["top5pct_fold"],
                 "z": PT[ln]["z_top5"], "p": PT[ln]["p_top5"]} for ln in ("K562", "RPE1")}
 
-PAIRS_N = json.load(open(f"{C}/hypothesis_pairs_full.json"))["n"]
+PAIRS = json.load(open(f"{C}/hypothesis_pairs_full.json"))
+PAIRS_N = PAIRS["n"]
+# every released pair, compactly, so the page can list, filter and export them rather than show
+# fourteen examples and a total: [gene A, gene B, models agreeing, weight, literature co-mentions]
+PAIRS_ALL = sorted(([c["pair"][0], c["pair"][1], c["n_models"], c["weight"], c.get("co_mentions")]
+                    for c in PAIRS["pairs"]), key=lambda r: (-r[2], -r[3]))
 
 block = {
     # the curve and the per-model table are the unselected all-ten result; the shortlist and the
@@ -75,6 +80,8 @@ block = {
     "curve": curve,
     "validated": FIN["models_validated"],
     "examples": FIN["hypotheses"][:N_EXAMPLES],
+    "pairs_all": PAIRS_ALL,
+    "pairs_all_columns": ["gene_a", "gene_b", "n_models", "weight", "co_mentions"],
     # the page never reads this sub-block, but its key naming is part of the published file
     "robust": {name: {f"k{k}": v for k, v in var.items()} for name, var in ROB["variants"].items()},
     "curve_selected5": {k: {"fold": v["fold"], "hits": v["hits"]}
