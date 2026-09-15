@@ -316,7 +316,7 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
 </div></section>
 <section id="lineage"><div class="wrap">
  <div class="sec-head"><div class="sec-q">scale &amp; lineage</div>
-  <h2>Does interpretability scale with size — and which models are kin</h2>
+  <h2>Does interpretability scale with size?</h2>
   <p class="sec-sub">How interpretable capacity tracks model size.</p></div>
  <div class="grid2" style="grid-template-columns:1fr 1fr;align-items:start;gap:18px">
   <div class="panel"><div class="ptitle">Interpretability vs scale</div>
@@ -634,7 +634,7 @@ document.getElementById('stats').innerHTML=[
  const MC={AIDO:'#5b8cff',C2S:'#e879c9',Geneformer:'#2fc6b6',MaxToki:'#f0a35e',UCE:'#8b7bf0',scGPT:'#5ad1a0',tGPT:'#e7d24b'};
  /* --- scaling scatter --- */
  const SC=L.scaling,plot=document.getElementById('scaleplot'),tabs=document.getElementById('scale-tabs');
- const metrics=[['n_concepts_all','distinct concepts (all 5 layers)',L.corr.params_concepts_all],['annot_rate','annotated features % (50% layer)',L.corr.params_annot]];
+ const metrics=[['n_concepts_all','distinct concepts over the five depth-matched layers',L.corr.params_concepts_all]];
  let cur=0;
  const W=520,H=360,padL=64,padR=18,padT=20,padB=52;
  const xs=SC.map(s=>Math.log10(s.params_M)),xmin=Math.min(...xs)-0.15,xmax=Math.max(...xs)+0.15;
@@ -658,16 +658,21 @@ document.getElementById('stats').innerHTML=[
   let sxy=0,sxx=0;xs.forEach((x,i)=>{sxy+=(x-mx)*(ys[i]-my);sxx+=(x-mx)**2;});const b1=sxy/sxx,b0=my-b1*mx;
   plot.appendChild(mk('line',{x1:X(Math.pow(10,xmin)),y1:Y(b0+b1*xmin),x2:X(Math.pow(10,xmax)),y2:Y(b0+b1*xmax),stroke:'var(--faint)','stroke-dasharray':'5 4','stroke-width':1.4}));
   // points
-  SC.forEach(s=>{const x=X(s.params_M),y=Y(s[key]);plot.appendChild(mk('circle',{cx:x,cy:y,r:6,fill:MC[s.model]||'var(--acc)',stroke:'var(--onacc)','stroke-width':1}));
-   const lab=mk('text',{x:x+(s.model==='C2S'?-10:9),y:y-9,'text-anchor':s.model==='C2S'?'end':'start',fill:'var(--ink)','font-size':11,'font-weight':600,'font-family':'var(--mono)'});lab.textContent=s.model;plot.appendChild(lab);});
+  const NAME={AIDO:'AIDO.Cell',C2S:'C2S-Scale',Geneformer:'Geneformer-V2',Tahoe:'Tahoe-x1'};
+  const pts=SC.map(s=>({s,x:X(s.params_M),y:Y(s[key])}));
+  pts.forEach(o=>plot.appendChild(mk('circle',{cx:o.x,cy:o.y,r:6,fill:MC[o.s.model]||'var(--acc)',stroke:'var(--onacc)','stroke-width':1})));
+  // labels: place above the point, push any that would sit within 13px of an earlier label further up
+  const placed=[];pts.slice().sort((a,b)=>a.y-b.y).forEach(o=>{let ly=o.y-9;const left=o.s.model==='C2S'||o.x>W-padR-70;
+    placed.forEach(q=>{if(Math.abs(q.x-o.x)<80&&Math.abs(q.y-ly)<13)ly=q.y-13;});placed.push({x:o.x,y:ly});
+    const lab=mk('text',{x:o.x+(left?-10:9),y:ly,'text-anchor':left?'end':'start',fill:'var(--ink)','font-size':11,'font-weight':600,'font-family':'var(--mono)'});lab.textContent=NAME[o.s.model]||o.s.model;plot.appendChild(lab);});
   const r=metrics[cur][2];
-  document.getElementById('scale-note').innerHTML=`y = ${metrics[cur][1]} · Pearson r(log-params) = <b style="color:${Math.abs(r)>.5?'var(--teal)':'var(--amber)'}">${r>0?'+':''}${r.toFixed(2)}</b>`;
+  document.getElementById('scale-note').innerHTML=`y = ${metrics[cur][1]} · Pearson r(log-params) = <b style="color:${Math.abs(r)>.5?'var(--teal)':'var(--amber)'}">${r>0?'+':''}${r.toFixed(2)}</b><br><span style="color:var(--faint)">Five layers (0/25/50/75/100 % of depth) give every model the same layer budget. Models have 8–33 layers, and an all-layer count rises with layer count (r = ${(D.controls&&D.controls.capacity&&D.controls.capacity.corr_nconcepts_nlayers!=null)?D.controls.capacity.corr_nconcepts_nlayers.toFixed(2):'0.87'}), so it would reward depth rather than size. Permissive annotator; n = 10, so the correlation is indicative only.</span>`;
  }
  metrics.forEach((m,i)=>{const b=document.createElement('button');b.textContent=m[0]==='n_concepts_all'?'concepts':'annot. rate';
   b.style.cssText='font-family:var(--mono);font-size:12px;border:none;cursor:pointer;padding:6px 12px;border-radius:6px';
   const on=i===cur;b.style.background=on?'var(--acc)':'none';b.style.color=on?'var(--onacc)':'var(--mut)';b.style.fontWeight=on?600:400;
   b.onclick=()=>{cur=i;[...tabs.children].forEach((x,k)=>{const o=k===i;x.style.background=o?'var(--acc)':'none';x.style.color=o?'var(--onacc)':'var(--mut)';x.style.fontWeight=o?600:400;});drawScale();};tabs.appendChild(b);});
- drawScale();
+ drawScale();if(metrics.length<2)tabs.style.display='none';
  /* --- (dendrogram removed) --- */
  const M=L.models,n=M.length;
  /* --- signature cards --- */
