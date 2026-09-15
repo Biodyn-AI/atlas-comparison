@@ -5,6 +5,7 @@
  "top_genes_per_feature": 10,
  "min_features_per_pair": 5,
  "n_perm": 500,
+ "n_perm_curve": 100,
  "per_model": {
   "AIDO": {
    "n_pairs": 2,

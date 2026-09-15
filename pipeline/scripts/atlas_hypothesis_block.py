@@ -66,7 +66,10 @@ block = {
     # robustness variants are the five models that passed, which is what the page's captions say
     "scope": "all ten models (unselected)",
     "truth": FIN["truth"],
-    "n_perm": FIN["n_perm"],
+    # the per-model bars the page draws come from trrust2, so the rewiring count printed beside
+    # them must be trrust2's (500), not hypothesis_final's (200) -- the page said 200 for a while
+    "n_perm": T2["n_perm"],
+    "n_perm_curve": T2["n_perm_curve"],
     "n_hypotheses": PAIRS_N,
     "per_model": per_model,
     "curve": curve,

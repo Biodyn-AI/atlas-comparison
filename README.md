@@ -111,7 +111,7 @@ overlapping databases, so random genes annotate at nearly the real rate.
   at all, and the calibrated annotator uses curated pathway sets only, so TRRUST is held out from both. (It does appear
   in the *permissive* annotator, which is retracted as illustrative and plays no part here.)
   Against a configuration-model null that preserves every gene's co-firing degree exactly (so abundance and study bias
-  cannot produce it), **5 of 10 models pass** at p ≤ 0.005 over 200 rewirings: Tahoe-x1 13.3× (59 edges recovered),
+  cannot produce it), **5 of 10 models pass** at p ≤ 0.005 over 500 rewirings: Tahoe-x1 13.3× (59 edges recovered),
   scGPT 11.9× (10), UCE 10.5× (43), C2S-Scale 4.1× (83), Geneformer-V2 3.9× (12). MaxToki reaches 3.5× but p = 0.11;
   tGPT 1.3×; AIDO.Cell, scFoundation and GeneCompass recover nothing. **Cross-model agreement sharpens it**: over all ten models, pairs
   predicted by one are enriched 4.8×, by two independently **20.8×** — the comparative design paying off directly,
@@ -119,8 +119,9 @@ overlapping databases, so random genes annotate at nearly the real rate.
   the five models that passed gives 5.3× and 28.4×, but those were selected on TRRUST and re-scored against it, so
   the all-ten figure is the one we report.) Stable across every robustness variant (4.8–8.9× at one model, p ≤ 0.005 in all five),
   including dropping same-family paralogues, raising the evidence bar, and keeping only features that actually fire —
-  the last *raises* enrichment (5.3× → 7.9×), ruling out a near-silent-gene artefact. It also holds within a single
-  layer (6.1×, p = 0.005). 4,349 corroborated pairs absent from TRRUST, STRING and every curated pathway are released
+  the last *raises* enrichment (5.3× → 7.9×), ruling out a near-silent-gene artefact. It also holds when the graph is
+  built from one (mid) layer only (6.1×, p = 0.005, 20 recovered edges) — at a lowered recurrence threshold of ≥2
+  features, since one layer cannot support the pooled ≥5 (`hypothesis_singlelayer.py`). 4,349 corroborated pairs absent from TRRUST, STRING and every curated pathway are released
   as **prioritised predictions, not findings** (`data/hypothesis_final.json`). Caveat: TRRUST records regulation
   someone has already published, so this scores recovery of *known* links; recovered counts are 10–83 per model, so we
   rank models rather than read small gaps.

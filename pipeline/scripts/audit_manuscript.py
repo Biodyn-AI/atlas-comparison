@@ -51,14 +51,19 @@ def check(claim, pattern, expected, source):
     m = re.search(pattern, FLAT)
     if not m:
         rows.append((claim, source, str(expected), "no such sentence", False)); return
-    got = float(m.group(1).replace(",", "").replace("−", "-"))
-    dec = len(m.group(1).split(".")[1]) if "." in m.group(1) else 0
+    txt = m.group(1).replace(",", "").replace("−", "-")
+    got = float(WORDS[txt.lower()]) if txt.lower() in WORDS else float(txt)
+    if txt.lower() in WORDS:
+        txt = str(int(got))
+    dec = len(txt.split(".")[1]) if "." in txt else 0
     tol = 0.5 * 10 ** (-dec) + 1e-9                      # the text's own rounding precision
     ok = abs(got - float(expected)) <= tol
     rows.append((claim, source, f"{expected} vs {got}", "ok" if ok else "MISMATCH", ok))
 
 
 N = r"([-−\d][\d,]*\.?\d*)"
+W = r"([A-Za-z]+)"             # a count the text spells out ("two of the five models")
+WORDS = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5, "six": 6, "seven": 7, "eight": 8, "nine": 9, "ten": 10}
 
 # ---- 3.4 per-model TRRUST --------------------------------------------------
 pm = dig(TR2, "per_model", default={})
@@ -154,6 +159,45 @@ check("Disc absent from screen", rf"evidence runs out: {N} of the 793", dig(SBC,
 check("Disc screen % understudied", rf"perturbed set contains {N} %", SB.get("screen_pct_understudied"), "study_bias_coverage:screen_bias")
 check("Disc all-PC % understudied", rf"understudied genes against {N} % of all protein-coding", SB.get("all_protein_coding_pct_understudied"), "study_bias_coverage:screen_bias")
 check("Limit non-coding share", rf"{N} of the 4,003\s*\n?understudied featured genes are non-coding", dig(SBC, "understudied_noncoding_or_pseudo"), "study_bias_coverage")
+
+# ---- permutation counts: the text said 200 for tests that ran 500 and 100 -----------------
+# Each test's N is read from its own result file, so a script default that changes shows up
+# here rather than in a reviewer's recomputation of the p-value floor.
+check("Meth N per-model TRRUST", rf"N = {N} for the per-model held-out regulatory recovery", TR2.get("n_perm"), "trrust2:n_perm")
+check("Meth N corroboration curve", rf"N = {N} for the cross-model corroboration curve", TR2.get("n_perm_curve"), "trrust2:n_perm_curve")
+check("Meth N equal budget", rf"N = {N} for the cross-model corroboration curve \(each draw rewires all ten graphs\) and for the equal-budget",
+      load("hypothesis_sizematched.json").get("n_perm"), "sizematched:n_perm")
+check("Meth N robustness", rf"N = {N} for the robustness variants", ROB.get("n_perm"), "robust:n_perm")
+check("Meth N literature", rf"N = {N} for the robustness variants and for the literature", PUB.get("n_perm"), "pubmed:n_perm")
+check("Meth N perturbation", rf"N = {N} for the robustness variants and for the literature, perturbation", PRT.get("n_perm"), "perturb:n_perm")
+check("Meth N strata", rf"N = {N} for the robustness variants and for the literature, perturbation and\s*publication-stratum", SBI.get("n_perm"), "studybias:n_perm")
+check("Meth N held-out rewirings", rf"empirical p over N = {N} rewirings per model", TR2.get("n_perm"), "trrust2:n_perm")
+check("Meth N curve rewirings", rf"over N = {N} rewirings for precision as a function", TR2.get("n_perm_curve"), "trrust2:n_perm_curve")
+check("3.4 rewirings per model", rf"significant at p ≤ 0\.005 \({N} rewirings\)", TR2.get("n_perm"), "trrust2:n_perm")
+check("3.4 curve no-edge rewirings", rf"no edge at all in {N}/[\d]+\s*rewirings", TR2.get("n_perm_curve"), "trrust2:n_perm_curve")
+check("Fig5A rewirings", rf"p ≤ 0\.05 over {N} rewirings", TR2.get("n_perm"), "trrust2:n_perm")
+check("Fig5B rewirings", rf"no edge in any of the {N} rewirings", TR2.get("n_perm_curve"), "trrust2:n_perm_curve")
+
+# ---- Discussion: the single-layer check, previously a /tmp script with no saved output --------
+SL = load("hypothesis_singlelayer.json")
+W2, W5 = dig(SL, "variants", "W2", default={}), dig(SL, "variants", "W5", default={})
+check("Disc single-layer fold", rf"the pooled enrichment is {N}× \(p = ", dig(W2, "cross_model_curve", "1", "fold"), "singlelayer:W2.curve.1")
+check("Disc single-layer p", rf"the pooled enrichment is [\d.]+× \(p = {N};", dig(W2, "cross_model_curve", "1", "p_emp"), "singlelayer:W2.curve.1")
+check("Disc single-layer hits", rf"\(p = [\d.]+; {N} recovered edges\)", dig(W2, "cross_model_curve", "1", "hits"), "singlelayer:W2.curve.1")
+check("Disc pooled five-model fold", rf"against {N}× when layers are\s*pooled on the same five", dig(FIN, "cross_model_curve", "1", "fold"), "hypothesis_final:curve.1")
+check("Disc single-layer W5 hits", rf"threshold of ≥5 features only {N} edges are recovered in total", dig(W5, "cross_model_curve", "1", "hits"), "singlelayer:W5.curve.1")
+check("Disc single-layer hits min", rf"one layer yields only {N}–", W2.get("hits_min"), "singlelayer:W2")
+check("Disc single-layer hits max", rf"one layer yields only \d+–{N} recovered edges", W2.get("hits_max"), "singlelayer:W2")
+check("Disc single-layer n significant", rf"only {W} of the five models are individually significant", W2.get("n_models_significant"), "singlelayer:W2")
+
+# ---- Limitations: the non-coding stratum that does not replicate ----------------------------
+UK, UR = dig(SBI, "K562", "by_papers", "unmapped*", default={}), dig(SBI, "RPE1", "by_papers", "unmapped*", default={})
+check("Lim K562 unmapped fold", rf"strongest causal enrichment of any stratum \({N}×, z = ", UK.get("fold"), "studybias:K562.unmapped*")
+check("Lim K562 unmapped z", rf"strongest causal enrichment of any stratum \([\d.]+×, z = {N}\)", UK.get("z"), "studybias:K562.unmapped*")
+check("Lim RPE1 unmapped fold", rf"replicate in RPE1 \({N}×, not significant\)", UR.get("fold"), "studybias:RPE1.unmapped*")
+_ratio = (max(UK.get("null", 0), UR.get("null", 0)) / min(UK.get("null", 1), UR.get("null", 1))) if UK and UR else None
+_ok = bool(_ratio and _ratio > 2 and re.search(r"null rate for that stratum differs more than twofold", FLAT))
+rows.append(("Lim unmapped null ratio >2", "studybias:null rates", f"{_ratio:.2f}" if _ratio else "-", "ok" if _ok else "MISMATCH", _ok))
 
 # ---- report ----------------------------------------------------------------
 bad = [x for x in rows if not x[4]]

@@ -97,6 +97,11 @@ check("CKA median", rf"\(median {N}\) against a shuffle floor", None if real is 
 check("CKA floor min", rf"shuffle floor of {N}[-–—]", None if shuf is None else shuf.min(), "cka_svd_null (recomputed)")
 check("CKA floor max", rf"shuffle floor of [\d.]+[-–—]{N}", None if shuf is None else shuf.max(), "cka_svd_null (recomputed)")
 check("CKA min ratio", rf"\(minimum ratio {N};", None if ratio is None else ratio.min(), "cka_svd_null (recomputed)")
+# The Fig 4 caption states a bound, not a value; it read ">10-fold" for weeks while the text said fortyfold.
+_m = re.search(r"every pair exceeds its floor >(\d+)-fold", FLAT)
+_ok = bool(_m and ratio is not None and int(_m.group(1)) <= ratio.min() < int(_m.group(1)) + 10)
+rows.append(("Fig4 caption floor bound", "cka_svd_null (bound)", f"min {ratio.min():.1f} vs >{_m.group(1) if _m else '?'}",
+             "ok" if _ok else "MISMATCH", _ok))
 
 # ---- 3.2 how much of the backbone is ordinary housekeeping ------------------
 TRV = RR.get("triviality", {})

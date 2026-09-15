@@ -1,0 +1,155 @@
+{
+ "design": "held-out TRRUST recovery from the MID layer only, five models that pass at full size",
+ "models": [
+  "Tahoe",
+  "scGPT",
+  "UCE",
+  "C2S",
+  "Geneformer"
+ ],
+ "layer": "mid (index n//2 of each model's catalogues)",
+ "top_genes_per_feature": 10,
+ "n_perm": 200,
+ "null": "configuration model, exact co-firing degree preserved, seed 0",
+ "features_per_model": {
+  "Tahoe": 10238,
+  "scGPT": 2048,
+  "UCE": 5120,
+  "C2S": 9208,
+  "Geneformer": 4607
+ },
+ "variants": {
+  "W2": {
+   "min_features_per_pair": 2,
+   "per_model": {
+    "Tahoe": {
+     "n_pairs": 4039,
+     "hits": 2,
+     "null_mean": 0.29,
+     "null_sd": 0.6,
+     "fold": 6.78,
+     "p_emp": 0.0597
+    },
+    "scGPT": {
+     "n_pairs": 3639,
+     "hits": 5,
+     "null_mean": 0.48,
+     "null_sd": 0.72,
+     "fold": 10.42,
+     "p_emp": 0.00498
+    },
+    "UCE": {
+     "n_pairs": 5126,
+     "hits": 1,
+     "null_mean": 0.23,
+     "null_sd": 0.49,
+     "fold": 4.26,
+     "p_emp": 0.20896
+    },
+    "C2S": {
+     "n_pairs": 12014,
+     "hits": 12,
+     "null_mean": 2.27,
+     "null_sd": 1.49,
+     "fold": 5.27,
+     "p_emp": 0.00498
+    },
+    "Geneformer": {
+     "n_pairs": 2439,
+     "hits": 0,
+     "null_mean": 0.29,
+     "null_sd": 0.56,
+     "fold": 0.0,
+     "p_emp": 1.0
+    }
+   },
+   "cross_model_curve": {
+    "1": {
+     "n_pairs": 26628,
+     "hits": 20,
+     "precision": 0.000751,
+     "null_precision": 0.0001225,
+     "fold": 6.13,
+     "p_emp": 0.00498
+    },
+    "2": {
+     "n_pairs": 455,
+     "hits": 0,
+     "precision": 0.0,
+     "null_precision": 0.0,
+     "fold": null,
+     "p_emp": 1.0
+    }
+   },
+   "hits_min": 0,
+   "hits_max": 12,
+   "n_models_significant": 2
+  },
+  "W5": {
+   "min_features_per_pair": 5,
+   "per_model": {
+    "Tahoe": {
+     "n_pairs": 173,
+     "hits": 0,
+     "null_mean": 0.01,
+     "null_sd": 0.12,
+     "fold": 0.0,
+     "p_emp": 1.0
+    },
+    "scGPT": {
+     "n_pairs": 481,
+     "hits": 3,
+     "null_mean": 0.43,
+     "null_sd": 0.64,
+     "fold": 6.98,
+     "p_emp": 0.01493
+    },
+    "UCE": {
+     "n_pairs": 138,
+     "hits": 0,
+     "null_mean": 0.0,
+     "null_sd": 0.0,
+     "fold": null,
+     "p_emp": 1.0
+    },
+    "C2S": {
+     "n_pairs": 355,
+     "hits": 0,
+     "null_mean": 0.0,
+     "null_sd": 0.0,
+     "fold": null,
+     "p_emp": 1.0
+    },
+    "Geneformer": {
+     "n_pairs": 2,
+     "hits": 0,
+     "null_mean": 0.0,
+     "null_sd": 0.0,
+     "fold": null,
+     "p_emp": 1.0
+    }
+   },
+   "cross_model_curve": {
+    "1": {
+     "n_pairs": 1091,
+     "hits": 3,
+     "precision": 0.00275,
+     "null_precision": 0.0003397,
+     "fold": 8.1,
+     "p_emp": 0.00498
+    },
+    "2": {
+     "n_pairs": 45,
+     "hits": 0,
+     "precision": 0.0,
+     "null_precision": 0.0,
+     "fold": null,
+     "p_emp": 1.0
+    }
+   },
+   "hits_min": 0,
+   "hits_max": 3,
+   "n_models_significant": 1
+  }
+ }
+}

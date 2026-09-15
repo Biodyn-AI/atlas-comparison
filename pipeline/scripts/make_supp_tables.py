@@ -104,7 +104,7 @@ drift from them (`make_supp_tables.py`).
 | CKA reality | real vs cell-shuffle, **all {len(ck)} pairs** | 20 per pair | real {min(x['real_cka'] for x in ck)}–{max(x['real_cka'] for x in ck)} vs floor {min(x['shuffled_cka'] for x in ck)}–{max(x['shuffled_cka'] for x in ck)}; **worst pair {cka_min:.1f}× its own floor** |
 | SAE vs PCA | var-explained at k=32, **all ten models** | — | SAE 0.61–0.98 vs PCA 0.23–0.96; ahead in all ten, gap +0.02 (tGPT) to +0.53 (Tahoe-x1); random dict < 0 |
 | **Held-out regulatory recovery** (§3.4) | co-firing pairs vs TRRUST, configuration-model null | {TR2['n_perm']} | 5 of 10 models pass at p ≤ 0.005: {', '.join(f"{nm(m)} {TR2['per_model'][m]['fold']}×" for m in sorted(TR2['per_model'], key=lambda x: -(TR2['per_model'][x]['fold'] or 0))[:5])} |
-| **Cross-model corroboration** (§3.4) | precision by number of models predicting a pair | {TR2['n_perm']} | 1 model {CV['1']['fold']}× → 2 models {CV['2']['fold']}× (all ten pooled); absolute precision {100*CV['2']['precision']:.2f} % |
+| **Cross-model corroboration** (§3.4) | precision by number of models predicting a pair | {TR2.get('n_perm_curve', '?')} | 1 model {CV['1']['fold']}× → 2 models {CV['2']['fold']}× (all ten pooled); absolute precision {100*CV['2']['precision']:.2f} % |
 | **Equal-budget re-scoring** (§3.4) | same {SM['budget']:,}-pair budget per model | {SM['n_perm']} | ranking not preserved (rank corr {SM['spearman_full_vs_matched']}); UCE loses significance, MaxToki gains it |
 | **Robustness of the recovery** (§3.4) | five variants of the pair definition | {ROB['n_perm']} | {min(f1)}–{max(f1)}× at one model, p ≤ 0.005 in all five |
 | **Literature co-mention** (§3.5) | gene–paper graph, publication counts preserved | {PUB['n_perm']} | {PUB['observed_pairs_comentioned']:,} of {PUB['n_pairs_testable']:,} vs {PUB['null_pairs_comentioned_mean']} ± {PUB['null_sd']} — {PUB['fold']}×, z = {PUB['z']} |
@@ -159,8 +159,8 @@ s9 = [f"""## Table S9 — Released predictions: corroborated gene pairs absent f
 The {len(pairs):,} pairs of Section 3.4: predicted by ≥2 of the models, and present in neither TRRUST nor STRING nor any
 curated GO/Reactome/KEGG set of ≤200 genes. **These are prioritised hypotheses, not results.** The calibration that
 gives them their expected value is the enrichment in Fig 5B: at ≥2 models the precision against held-out TRRUST is
-{100*FIN['cross_model_curve']['2']['precision']:.2f} %, i.e. roughly one correct regulatory edge per
-{round(1/FIN['cross_model_curve']['2']['precision'])} pairs proposed — {TR2['cross_model_curve']['2']['fold']}× chance, but
+{100*TR2['cross_model_curve']['2']['precision']:.2f} %, i.e. roughly one correct regulatory edge per
+{round(1/TR2['cross_model_curve']['2']['precision'])} pairs proposed — {TR2['cross_model_curve']['2']['fold']}× chance, but
 sparse in absolute terms. The full list is `data/hypothesis_pairs_full.json`; the twenty highest-weight pairs follow.
 Weight is the number of features in which the pair co-occurs, summed over the models that predict it.
 

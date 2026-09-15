@@ -165,6 +165,9 @@ json.dump({"design": "co-firing in SAE features predicts held-out TRRUST TF->tar
            "truth": "TRRUST, excluded from the calibrated annotator (no PPI, no regulatory DBs)",
            "null": "configuration model, each gene's co-firing degree preserved exactly",
            "top_genes_per_feature": TOPG, "min_features_per_pair": W0, "n_perm": NPERM,
+           # the curve rewires all ten graphs per draw and runs a fifth as many; the manuscript
+           # and Table S5 quoted the per-model count for it until this was stored explicitly
+           "n_perm_curve": NPERM // 5,
            "per_model": A, "cross_model_curve": B, "best_k": best_k,
            "n_hypotheses": len(cands), "hypotheses": cands[:60]},
           open(f"{C}/hypothesis_trrust2.json", "w"), indent=1)
