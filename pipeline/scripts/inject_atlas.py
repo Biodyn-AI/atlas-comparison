@@ -19,6 +19,9 @@ DATA = {
     "modules-data": f"{C}/modules_alllayers.json",
     "genes-data": f"{C}/genes_ts3.json",
     "atlas-data": f"{C}/atlas_full_notf.json",
+    # dead-feature fractions per model-layer; the chooser reads it so a model whose lead rests on
+    # the roster's weakest dictionaries (tGPT) carries that caveat next to its recommendation
+    "health-data": f"{C}/sae_health.json",
 }
 N_MODELS = len(json.load(open(DATA["atlas-data"]))["models"])
 NEW_THEME_READ = (
