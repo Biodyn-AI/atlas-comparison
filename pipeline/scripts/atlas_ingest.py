@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Ingest Igor's published per-layer feature files (layer_XX_features.json, schema:
+"""Ingest the prior atlases' per-layer feature files (layer_XX_features.json, schema:
 list of {i,d,f,ma,fc,tg:[{n,a}...]}) into our feature_catalog schema, so his models
 join the comparative matrix. Top genes come from `tg` (name field).
 

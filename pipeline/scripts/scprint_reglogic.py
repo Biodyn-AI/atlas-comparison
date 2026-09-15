@@ -1,10 +1,10 @@
 #!/usr/bin/env python
 """HEADLINE test — does scPRINT (GRN-designed) encode directed TF->target CAUSAL logic,
-or only co-expression (Igor's 6.2% null)? Systematic activation-patching across TRRUST
+or only co-expression (the 6.2% null)? Systematic activation-patching across TRRUST
 TFs: for each TF, find its regulon-detecting SAE feature (correlational), ablate it, and
 measure whether the TF's TARGET genes shift more than non-targets on scPRINT's NB decoder
 (causal). Report the fraction of TFs with a regulon-SPECIFIC causal effect — our in-model
-analog of Igor's perturbation-specificity rate (Geneformer/scGPT: 6.2%, 3/48 TFs).
+analog of the prior perturbation-specificity rate (Geneformer/scGPT: 6.2%, 3/48 TFs).
 
     conda activate scprint
     python scripts/scprint_reglogic.py --layer 4 --n-cells 48 --n-genes 1500
@@ -148,7 +148,7 @@ def main():
     print(f"\n==> scPRINT regulatory-logic test ({len(df)} TFs):")
     print(f"    correlational: {100*frac_detect:.0f}% of TFs have a feature that DETECTS their regulon (AUROC>0.6)")
     print(f"    CAUSAL       : {100*frac_causal:.0f}% of TFs are regulon-SPECIFIC causal (AUROC>{thr})  "
-          f"[Igor's Geneformer/scGPT: ~6.2% (3/48)]")
+          f"[the prior Geneformer/scGPT atlases: ~6.2% (3/48)]")
     print(f"    median detect {df.detect_auroc.median():.3f} vs median causal {df.causal_auroc.median():.3f} "
           f"-> the correlational->causal GAP is the regulatory-logic deficit")
     print("==> saved outputs/scprint/reglogic.csv")

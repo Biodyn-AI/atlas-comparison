@@ -1,11 +1,11 @@
-"""VALID regulatory-logic test (Igor's Phase 8, NON-circular), model-agnostic.
+"""VALID regulatory-logic test (the prior work's Phase 8, NON-circular), model-agnostic.
 External CRISPRi perturbation: run knockdown + control cells through a model, find SAE
 features that DIFFERENTIALLY RESPOND to each TF knockdown (Wilcoxon KD vs control,
 BH<0.05), then SEPARATELY test whether responders detect that TF's TRRUST targets
 (Fisher). No feature is selected on the target set -> no circularity.
 
 Ported + validated from scripts/scprint_pert_response.py (first run: scPRINT 6 TFs,
-detect 67%, TF-specific 17% = 1/6 MAX). Igor's Geneformer/scGPT: 92% detect, 6.2% specific.
+detect 67%, TF-specific 17% = 1/6 MAX). the prior Geneformer/scGPT atlases: 92% detect, 6.2% specific.
 """
 from __future__ import annotations
 import json, os
@@ -109,6 +109,6 @@ def run_perturbation(adapter, adata, trrust_path, layer, out_dir,
     summary = {"model": adapter.name, "n_tfs": len(df), "detection_rate": detect,
                "tf_specific_rate": spec, "igor_detect": 0.92, "igor_specific": 0.062}
     json.dump(summary, open(os.path.join(out_dir, f"{adapter.name}_pert_summary.json"), "w"))
-    log(f"\n  ==> {adapter.name}: detection {100*detect:.0f}% [Igor 92%] | "
-        f"TF-specific {100*spec:.0f}% [Igor 6.2%]  ({len(df)} TFs)")
+    log(f"\n  ==> {adapter.name}: detection {100*detect:.0f}% [prior 92%] | "
+        f"TF-specific {100*spec:.0f}% [prior 6.2%]  ({len(df)} TFs)")
     return df, summary

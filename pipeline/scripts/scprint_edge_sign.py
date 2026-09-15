@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""L4 edge SIGN — do we reproduce Igor's inhibitory dominance (65-89% of causal
+"""L4 edge SIGN — do we reproduce the prior work's inhibitory dominance (65-89% of causal
 edges inhibitory)? Ablate each of the top source SAE features at layer L, read the
 continuous pre-activation of a target SAE at a deeper layer L', and record the sign
 of the downstream shift: ablate source -> target DOWN = excitatory edge; target UP =
@@ -105,7 +105,7 @@ def main():
     # edges = |z|>tau on live targets; sign(z<0)=excitatory (ablate src -> target down),
     #         sign(z>0)=inhibitory (ablate src -> target up)
     Zl = Z[:, live]
-    print("\n==> edge sign (Igor: 65-89% inhibitory):")
+    print("\n==> edge sign (prior: 65-89% inhibitory):")
     for tau in (2, 3, 4, 5):
         mask = np.abs(Zl) > tau
         n = int(mask.sum())

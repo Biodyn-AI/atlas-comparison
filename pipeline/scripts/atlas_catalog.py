@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """Comparative SAE atlas — step 1: produce a model-agnostic feature_catalog.json
 (top-20 genes per SAE feature) from a captured residual + TopK SAE, matching the
-bio-sae schema so every model (ours, Igor's ingested, new H100 ones) joins on the
+bio-sae schema so every model (ours, the ingested prior, new H100 ones) joins on the
 SAME annotation vocabulary downstream.
 
     conda activate bae

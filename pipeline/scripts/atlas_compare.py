@@ -19,7 +19,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--catalogs", default=f"{BASE}/outputs/atlas/*/feature_catalog_L*.json")
     ap.add_argument("--genesets", default=f"{BASE}/outputs/atlas/genesets")
-    ap.add_argument("--topn", type=int, default=5, help="top genes/feature (fair common depth = Igor's 5)")
+    ap.add_argument("--topn", type=int, default=5, help="top genes/feature (fair common depth = the prior atlases' 5)")
     ap.add_argument("--out", default=f"{BASE}/outputs/atlas/comparative")
     args = ap.parse_args()
     import numpy as np
@@ -103,7 +103,7 @@ def main():
         print(f"    {n:<12} misses {len(miss)}: e.g. {sorted(miss)[:6]}")
 
     # ---- (3) regulatory-logic proxy: TRRUST regulon coverage per model --
-    print(f"\n[3] TRRUST regulon coverage (proxy for Igor's TF-logic test; his headline 6.2% TF-specific):")
+    print(f"\n[3] TRRUST regulon coverage (proxy for the prior TF-logic test; its headline 6.2% TF-specific):")
     for n in names:
         tfs = {t.split(":")[1] for t in models[n]["term_count"] if t.startswith("TRRUST:")}
         print(f"    {n:<12} detects {len(tfs)} TF regulons ({100*len(tfs)/len(tr):.0f}% of {len(tr)})")

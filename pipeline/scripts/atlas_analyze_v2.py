@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """Analyses on the uniform v2 comparative matrix (top-5, 9 models). Produces the data
-JSON that the interactive atlas artifact renders. Cross-MODEL analogues of Igor's
+JSON that the interactive atlas artifact renders. Cross-MODEL analogues of the prior
 cross-LAYER atlas sections.
 
 Analyses:

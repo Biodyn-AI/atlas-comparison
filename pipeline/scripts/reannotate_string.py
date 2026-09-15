@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Re-annotate the TS-3-tissue catalogs at top-5 with STRING added (5 databases, matching Igor:
+"""Re-annotate the TS-3-tissue catalogs at top-5 with STRING added (5 databases, matching the prior atlases:
 GO_BP/Reactome/KEGG + TRRUST + STRING). Rebuilds matrix_ts3 (mid layer) + depth_ts3 (all layers)
 + atlas_data_ts3 from the STRING-augmented annotations. Inverted gene->term index for speed.
     python scripts/reannotate_string.py

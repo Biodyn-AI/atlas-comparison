@@ -126,9 +126,9 @@ overlapping databases, so random genes annotate at nearly the real rate.
   rank models rather than read small gaps.
 - **The predictions hold against literature and against perturbation.** Two further, independent bodies of
   evidence on the same 4,349 pairs. *Literature* (NCBI gene2pubmed, a dated bulk file, not live queries):
-  1,289 of 4,111 mappable pairs are co-mentioned versus **593 ± 17** under a null preserving each gene's
-  publication count — **2.2×, z = 40.5, p = 0.005**. Papers annotating >60 genes are excluded; without that
-  cap 96% of pairs are nominally co-mentioned and the measure is vacuous. *Perturbation* (Replogle et al.
+  1,289 of 4,111 mappable pairs are co-mentioned versus **591 ± 20** under a null preserving each gene's
+  publication count — **2.2×, z = 34.7, p = 0.005**. Papers annotating >60 genes are excluded; without that
+  cap 95.8% of pairs are nominally co-mentioned and the measure is vacuous. *Perturbation* (Replogle et al.
   2022 genome-wide CRISPRi — no annotation, no literature): knocking down one gene moves its predicted
   partner into the top 5% of responders for **10.6% vs 8.8%** of pairs in K562 (**1.20×**, z = 3.8,
   p = 0.005) and **23.8% vs 18.7%** in the independent RPE1 line (**1.28×**, z = 5.4, p = 0.005), against a

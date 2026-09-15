@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Build the updated comparative matrix from the TS-3-tissue re-run (Igor's feedback applied:
+"""Build the updated comparative matrix from the TS-3-tissue re-run (review feedback applied:
 3 Tabula Sapiens tissues, depth-matched layers 0/25/50/75/100%, top-5 annotation, no perturbation,
 no Novae). Uses the MID (50%-depth) layer of each model for a depth-matched cross-model comparison,
 straight from the cluster's precomputed top-5 annotations. Also emits a per-layer depth profile.

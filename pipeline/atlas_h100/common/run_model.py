@@ -15,7 +15,7 @@ ADAPTERS = {
     "scPRINT":     ("adapters.scprint", "ScPrintAdapter"),
     "tGPT":        ("adapters.tgpt", "TGPTAdapter"),         # written from repo (VERIFY on H100)
     "UCE":         ("adapters.uce", "UCEAdapter"),           # written from repo (VERIFY on H100)
-    "scGPT":       ("adapters.scgpt", "ScGPTAdapter"),       # Igor's model — for reproducing his 6.2% with our pipe
+    "scGPT":       ("adapters.scgpt", "ScGPTAdapter"),       # prior atlas model — for reproducing its 6.2% with our pipe
     "Geneformer":  ("adapters.geneformer", "GeneformerAdapter"),  # V2-316M; rank-value BertForMaskedLM (tested on V1)
     "MaxToki":     ("adapters.maxtoki", "MaxTokiAdapter"),   # theodoris-lab, gene-token (Apache)
     "Tahoe":       ("adapters.tahoe", "TahoeAdapter"),       # Tahoe-x1, transformer MLM

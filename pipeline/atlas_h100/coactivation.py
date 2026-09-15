@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""TRUE feature co-activation graph (Igor-style) from the SAVED SAE + activations.
+"""TRUE feature co-activation graph (bio-sae-style) from the SAVED SAE + activations.
 No re-run of the model: loads out/<MODEL>/sae_L<LL>.pt (exact same SAE as the catalog,
 so feature ids map 1:1 to feature_catalog_L<LL>.json) and out/<MODEL>/layer_<LL>_activations.npy,
 streams SAE encoding, accumulates feature-feature Pearson correlation over all positions,

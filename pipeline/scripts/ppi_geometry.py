@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""L2 extension beyond TF — PPI geometry vs STRING (Igor's SV2-4 tier).
+"""L2 extension beyond TF — PPI geometry vs STRING (the SV2-4 tier).
 Tests whether physical protein-interaction confidence (STRING) is encoded in the
 geometric proximity of gene embeddings, for scPRINT (ESM-2-augmented) and AIDO.Cell
 (from-scratch). Hypothesis: the ESM protein prior should make PPI geometry STRONGER

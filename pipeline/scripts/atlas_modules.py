@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Igor-style views for OUR models from TRUE co-activation graphs (coactivation.py on the
+"""bio-sae-style views for OUR models from TRUE co-activation graphs (coactivation.py on the
 cluster): (1) feature-module network — force-directed layout of the real SAE feature
 co-activation graph (Pearson corr across gene-token positions) + modularity communities,
 colored by module, sized by co-activation degree; nodes carry their top concept / genes from

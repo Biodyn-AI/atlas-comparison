@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""SVD-vs-SAE superposition test (matches Igor's 'X% of features invisible to SVD'). For a model
+"""SVD-vs-SAE superposition test (matches the prior work's 'X% of features invisible to SVD'). For a model
 layer, computes the SVD/PCA of the residual, then measures how many SAE decoder directions are
 NOT aligned with the top SVD axes (max |cos| < thresh = 'novel', i.e. in superposition). Also the
 matched-sparsity variance comparison (top-k SVD reconstruction vs the SAE's k-active reconstruction).
@@ -18,7 +18,7 @@ def main():
     ap.add_argument("--model", required=True)
     ap.add_argument("--layer", type=int, required=True)
     ap.add_argument("--out", default="out_ts3")
-    ap.add_argument("--cos-thresh", type=float, default=0.7)   # Igor's alignment cutoff
+    ap.add_argument("--cos-thresh", type=float, default=0.7)   # the prior alignment cutoff
     ap.add_argument("--n-svd", type=int, default=0, help="top SVD components to compare against (0 = all d_model)")
     ap.add_argument("--sample", type=int, default=150000)
     args = ap.parse_args()

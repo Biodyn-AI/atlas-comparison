@@ -3,7 +3,7 @@
 
 9 models, ONE representative layer each, top-5 genes, ONE annotator (Fisher 'greater'
 + BH<0.05 vs GO_BP/KEGG/Reactome and TRRUST regulons, fixed background). Cluster-extracted
-AIDO/UCE/tGPT (H100, 2000-cell corpus) + our scPRINT + Igor's ingested Geneformer/scGPT/
+AIDO/UCE/tGPT (H100, 2000-cell corpus) + our scPRINT + the ingested prior Geneformer/scGPT/
 C2S/MaxToki/Novae. Fast via inverted gene->term index (only real-overlap terms tested).
 
     python scripts/atlas_build_v2.py

@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Cross-model gene index (Igor's per-model Gene Search -> comparative). For every gene,
+"""Cross-model gene index (the prior work's per-model Gene Search -> comparative). For every gene,
 which of the 9 models encode a feature with that gene among its top decoder genes, which
 feature, and under what dominant concept. Answers "is gene X represented everywhere or only
 in some architectures?" — a view no single-model atlas can give.

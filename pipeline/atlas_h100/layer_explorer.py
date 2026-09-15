@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Layer-Explorer data (Igor's per-layer feature map) for ALL depth-matched layers of a model.
+"""Layer-Explorer data (the prior per-layer feature map) for ALL depth-matched layers of a model.
 For each layer, from the SAVED SAE + activations: (1) a 2D UMAP of the alive features by decoder
 direction (cosine) — the scatter; (2) co-activation edges (Pearson corr of feature activations) for
 module colouring; (3) SVD-alignment flag per feature (max |cos| to top SVD axes > 0.5); (4) firing

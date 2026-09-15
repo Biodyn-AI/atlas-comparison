@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Cross-layer feature flow (Igor's persistence view). For each consecutive pair of the 5 depth-matched
+"""Cross-layer feature flow (the persistence view). For each consecutive pair of the 5 depth-matched
 layers, persistence = % of features in the earlier layer that have a match in the next layer with top-5
 gene-set Jaccard > 0.3. Reconstructs the atlas 'flow' block for all models (adds Tahoe). Reproduces the
 prior 7-model values (AIDO exact) from the current ts3_out catalogs.

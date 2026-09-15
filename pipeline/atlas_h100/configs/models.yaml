@@ -15,7 +15,7 @@ models:
   tGPT:        {status: scaffold, d_model: 768,  layers: [0,3,6,9,12],         axis: "autoregressive"}
   CellPLM:     {status: scaffold, d_model: 512,  layers: [0,1,2,3,4],          axis: "cell-token"}
 
-# Ingested from Igor's published atlases (not re-extracted; re-annotated uniformly):
+# Ingested from the prior published atlases (not re-extracted; re-annotated uniformly):
 ingest:
   Geneformer: {repo: Biodyn-AI/geneformer-atlas, data: public/data/layer_XX_features.json}
   scGPT:      {repo: Biodyn-AI/scgpt-atlas,       data: public/data/layer_XX_features.json}

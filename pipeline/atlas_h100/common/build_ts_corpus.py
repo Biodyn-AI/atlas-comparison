@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""Build the shared 3-tissue Tabula Sapiens corpus for the atlas re-run (Igor's spec:
+"""Build the shared 3-tissue Tabula Sapiens corpus for the atlas re-run (agreed spec:
 immune + kidney + lung, ~1000 cells each). Pulls ONLY the needed cells from CZ CELLxGENE
 Census (no giant figshare downloads), restricted to Tabula Sapiens datasets, with raw counts
 and both gene symbols (var_names) and Ensembl ids (var['ensembl_id']) so every adapter works
@@ -11,7 +11,7 @@ Run on the cluster (census needs Linux/tiledbsoma):
     python build_ts_corpus.py --out external/perturb/tabula_3tissue_3k.h5ad --per-tissue 1000
 
 VERIFY: census obs field names ('tissue_general', 'cell_type'); the immune filter (below) samples
-immune-lineage cell types across TS tissues — adjust the IMMUNE list if Igor's "immune" subset differs.
+immune-lineage cell types across TS tissues — adjust the IMMUNE list if the reference "immune" subset differs.
 """
 from __future__ import annotations
 import argparse

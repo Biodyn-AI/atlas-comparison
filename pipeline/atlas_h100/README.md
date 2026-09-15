@@ -5,7 +5,7 @@ atlases — a shared frame where features from every model are comparable, to ex
 cross-model knowledge (universality, blind spots, the regulatory-logic gap, architecture →
 feature-repertoire, feature-orthologs, depth grammar).
 
-Join-compatible with Igor's atlases (`Biodyn-AI/bio-sae`, arXiv 2603.02952): same TopK SAE
+Join-compatible with the prior atlases (`Biodyn-AI/bio-sae`, arXiv 2603.02952): same TopK SAE
 config, same annotation vocabulary. Every model → `feature_catalog.json` (top-20 genes /
 feature) → **one unified annotator** (Fisher + BH vs GO_BP / KEGG / Reactome / TRRUST) →
 concept × model matrix.
@@ -40,12 +40,12 @@ python data/build_genesets.py --trrust /path/to/trrust_human.tsv --out data/gene
    replication) and **GeneCompass** (knowledge prior → the headline TF-logic test).
 
 ## The headline test — regulatory logic (valid, non-circular)
-`run_perturbation.py` runs Igor's Phase-8 test on any model: run Replogle K562 CRISPRi
+`run_perturbation.py` runs the prior Phase-8 test on any model: run Replogle K562 CRISPRi
 knockdown + control cells through the model, find SAE features that DIFFERENTIALLY respond
 to each TF knockdown (Wilcoxon KD-vs-control, BH<0.05), then SEPARATELY Fisher-test whether
 responders detect that TF's TRRUST targets. No feature is selected on the targets → no
 circularity (an in-model ablation test IS circular — see the memo). Reports detection rate
-+ TF-specific rate vs Igor's 92% / 6.2%.
++ TF-specific rate vs the prior 92% / 6.2%.
 ```bash
 # get the data once (1.55 GB): Zenodo record 7041849, ReplogleWeissman2022_K562_essential.h5ad
 python run_perturbation.py --model scPRINT --perturb data/replogle_k562_essential.h5ad \
@@ -53,7 +53,7 @@ python run_perturbation.py --model scPRINT --perturb data/replogle_k562_essentia
 ```
 The cross-model question — is the null universal, or does UCE (ESM) / GeneCompass (knowledge)
 / scPRINT (GRN) break it? — is answered by running this on each model. First local scPRINT
-pass (6 TFs, underpowered): detect 67%, TF-specific 17% (1/6) — low, consistent with Igor.
+pass (6 TFs, underpowered): detect 67%, TF-specific 17% (1/6) — low, consistent with the prior atlases.
 
 ## Adapter contract (adapters/base.py)
 Implement `iter_activations(adata, batch_size)` → yields, per batch:
@@ -63,11 +63,11 @@ positions (drop CLS/pad/special), symbols UPPER-cased HGNC. Everything else is m
 ## Outputs → comparative analysis (run locally, CPU)
 `out/<model>/feature_catalog_L*.json` + `out/annotations/<model>_L*_annotations.json` feed the
 concept × model matrix and the 8 analyses (see `project-biomech-comparative-atlas` memo).
-Ingest Igor's models from `public/data/layer_XX_features.json` in his atlas repos, re-annotate
+Ingest the prior models from `public/data/layer_XX_features.json` in those atlas repos, re-annotate
 them with the SAME `data/build_genesets.py` vocabulary, and they drop into the same matrix.
 
 ## Fairness notes
 - **Same corpus, same SAE config, same annotation vocabulary** across all newly-extracted models.
-- Igor's ingested models were trained/extracted on his corpora (Geneformer=K562, scGPT=Tabula
+- The ingested prior models were trained/extracted on their own corpora (Geneformer=K562, scGPT=Tabula
   Sapiens) — re-annotated uniformly, but flag the data difference in cross-model claims.
 - Different `d_model`/#layers handled by comparing in **annotation space** and by **relative depth**.

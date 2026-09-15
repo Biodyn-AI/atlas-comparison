@@ -1,10 +1,10 @@
 #!/usr/bin/env python
-"""VALID regulatory-logic test (Igor's Phase 8, non-circular). External perturbation:
+"""VALID regulatory-logic test (the prior work's Phase 8, non-circular). External perturbation:
 run CRISPRi-knockdown cells + controls through scPRINT, find SAE features that
 DIFFERENTIALLY RESPOND to each TF knockdown (Wilcoxon KD vs control, BH<0.05), then
 SEPARATELY test whether those responders detect that TF's TRRUST targets (Fisher).
 No feature is selected on the target set -> no circularity. Reports detection rate and
-TF-specific rate (Igor's Geneformer/scGPT: 92% detect, 6.2% TF-specific).
+TF-specific rate (the prior Geneformer/scGPT atlases: 92% detect, 6.2% TF-specific).
 
     conda activate scprint
     python scripts/scprint_pert_response.py --inspect          # check h5ad structure first
@@ -158,8 +158,8 @@ def main():
     df.to_csv(os.path.join(args.out, "pert_response.csv"), index=False)
     detect = (df.n_responders > 0).mean(); spec = df.specific.mean()
     print(f"\n==> scPRINT perturbation-response ({len(df)} TFs, non-circular):")
-    print(f"    detection rate : {100*detect:.0f}% of TFs have >=1 responding feature   [Igor: 92%]")
-    print(f"    TF-SPECIFIC    : {100*spec:.0f}% of TFs have a responder enriched for their regulon   [Igor: 6.2%]")
+    print(f"    detection rate : {100*detect:.0f}% of TFs have >=1 responding feature   [prior: 92%]")
+    print(f"    TF-SPECIFIC    : {100*spec:.0f}% of TFs have a responder enriched for their regulon   [prior: 6.2%]")
     print("==> saved outputs/scprint/pert_response.csv")
 
 

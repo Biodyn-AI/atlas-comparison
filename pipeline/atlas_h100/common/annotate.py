@@ -1,5 +1,5 @@
 """Unified annotator — the JOIN KEY of the comparative atlas. Runs the SAME test on
-every model's feature_catalog (ours, Igor's ingested, new H100 models), so features
+every model's feature_catalog (ours, the ingested prior, new H100 models), so features
 are comparable in a shared concept vocabulary regardless of model.
 
 Method (matches bio-sae src/04_annotate_features.py): for each feature's top-20 genes,

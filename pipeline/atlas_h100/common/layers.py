@@ -1,4 +1,4 @@
-"""Depth-matched layer selection — Igor's spec: first (0), 25%, 50%, 75%, last.
+"""Depth-matched layer selection — agreed spec: first (0), 25%, 50%, 75%, last.
 Makes layer choice comparable across models of different depths (a 6-layer model and a
 26-layer model are read at the same relative depths), removing the layer confound.
 

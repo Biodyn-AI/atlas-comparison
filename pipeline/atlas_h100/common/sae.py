@@ -1,5 +1,5 @@
 """TopK Sparse Autoencoder — bio-sae config (Gao et al. 2024 variant) for join-
-compatibility with Igor's Geneformer/scGPT atlases.
+compatibility with the prior Geneformer/scGPT atlases.
 
 Contract matched to Biodyn-AI/bio-sae src/sae_model.py:
   encode:  h = TopK_k( W_enc (x - mu) + b_enc ),  ReLU on the top-k values

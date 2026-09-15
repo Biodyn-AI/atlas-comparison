@@ -85,11 +85,14 @@ print(f"observed: {int((obs > 0).sum())} pairs co-mentioned ({100*(obs>0).mean()
 # ---- degree-preserving null on the gene-paper bipartite graph ---------------
 gid_list = sorted(IDS); gpos = {g: i for i, g in enumerate(gid_list)}
 rows, cols = [], []
-paper_ix = {}
-for g, ps in g2p.items():
-    for p_ in ps:
-        j = paper_ix.setdefault(p_, len(paper_ix))
-        rows.append(gpos[g]); cols.append(j)
+# Papers are numbered in sorted PMID order, not in set-iteration order. Iterating the sets directly
+# numbers them differently in every process (Python randomises string hashing), which permutes the
+# null differently under the same seed: the same data gave z = 40.5 on one run and 36.6 on the next.
+# The conclusion never moved, but a number nobody can reproduce is not a number we can report.
+paper_ix = {p_: i for i, p_ in enumerate(sorted({p_ for ps in g2p.values() for p_ in ps}))}
+for g in gid_list:
+    for p_ in sorted(g2p.get(g, ())):
+        rows.append(gpos[g]); cols.append(paper_ix[p_])
 rows = np.array(rows, np.int32); cols = np.array(cols, np.int32)
 print(f"bipartite graph: {len(gid_list)} genes x {len(paper_ix)} papers, {len(rows)} links", flush=True)
 
@@ -125,6 +128,11 @@ res = {
  "null": "degree-preserving shuffle of the gene-paper bipartite graph (each gene keeps its paper count)",
  "n_perm": NPERM, "n_pairs_testable": len(testable), "mega_paper_cap": 60,
  "observed_pairs_comentioned": o_nz, "observed_total_comentions": o_tot,
+ # Without the cap almost every pair is nominally co-mentioned, because a handful of proteomic and
+ # GWAS papers annotate thousands of genes at once. That is the reason the cap exists, so the
+ # uncapped figure is part of the result rather than a diagnostic to print and discard.
+ "observed_pairs_comentioned_uncapped": int((obs > 0).sum()),
+ "observed_pct_comentioned_uncapped": round(100 * float((obs > 0).mean()), 1),
  "null_pairs_comentioned_mean": round(float(nz.mean()), 1), "null_sd": round(float(nz.std()), 1),
  "fold": round(o_nz / max(float(nz.mean()), 1e-9), 2),
  "z": round(float((o_nz - nz.mean()) / (nz.std() or 1)), 2),

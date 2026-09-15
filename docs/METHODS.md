@@ -8,7 +8,7 @@ single-model atlases suffer from. Cross-species models (UCE, GeneCompass, C2S) r
 ## SAE
 TopK SAE per layer: k=32, dictionary width d_sae = 4×d_model, MSE loss (no L1), decoder columns unit-normed
 each step with per-column mean subtraction, 4 epochs, ~500k token positions/layer. Matches the bio-sae
-config so results are comparable to Igor's single-model atlases.
+config so results are comparable to the prior single-model atlases.
 
 ## Depth matching
 Models range 8–33 layers. For cross-model comparisons we sample 5 relative depths (0/25/50/75/100%); the
@@ -18,7 +18,7 @@ per-layer analyses (depth, tissue, linearity, modules, flow, layer-explorer) use
 Every feature's top-5 decoder genes → Fisher exact ('greater') + Benjamini-Hochberg < 0.05 against a shared
 5-database vocabulary: GO_BP, Reactome, KEGG (gene sets) + STRING (PPI edges ≥700) + TRRUST (kept for the
 annotator but **no TF-regulon analysis is surfaced** — the atlas is structural). Term size 5–500. The same
-annotator is applied to *all* models (including re-annotating Igor's) to control DB-version confounds.
+annotator is applied to *all* models (including re-annotating the ingested ones) to control DB-version confounds.
 
 ## Analyses
 - **Universality** — concept × model membership; the core = concepts in all models.
@@ -52,7 +52,7 @@ core, smooth adjacent-layer drift, and the scaling of the concept vocabulary —
 + sparse coding, not from any one architecture.
 
 ## Caveats
-- Top-5 genes/feature (ceiling of Igor's published atlases) underpowers vs top-20; used for cross-model
+- Top-5 genes/feature (ceiling of the prior published atlases) underpowers vs top-20; used for cross-model
   fairness.
 - Depth profiles are SAE-training-sensitive; the robust findings (universality, superposition, linearity)
   are not.

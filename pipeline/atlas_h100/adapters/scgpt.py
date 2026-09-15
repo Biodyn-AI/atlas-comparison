@@ -1,7 +1,7 @@
-"""scGPT adapter (Cui et al. 2023, whole-human) — for REPRODUCING Igor's result with OUR
+"""scGPT adapter (Cui et al. 2023, whole-human) — for REPRODUCING the prior work's result with OUR
 pipeline on HIS exact model. scGPT is a gene-token expression MLM (perturbation-responsive),
 so the CRISPRi perturbation test is valid here (unlike UCE). Wraps scgpt.model.TransformerModel
-(do NOT reimplement) + Igor's tokenisation (src/data/scgpt_dataset.py) and captures per-gene
+(do NOT reimplement) + scGPT's own tokenisation (src/data/scgpt_dataset.py) and captures per-gene
 residual by hooking transformer_encoder.layers[L].
 
 KEY: load flash-trained whole-human weights into a STANDARD nn.TransformerEncoder by setting
@@ -17,7 +17,7 @@ REQUIRES on the cluster:
 VERIFY on H100 (expect 1-2 tweaks, like the uce/tgpt adapters):
   * GeneVocab API: vocab[token] / vocab.get_stoi() / get_itos() — adjust if the installed scgpt
     version differs. * binning: replicates scgpt.preprocess (per-cell quantile bins 1..n_bins-1);
-    if Igor's preprocess log-normalises first, mirror that. * confirm forward returns and that the
+    if the reference preprocess log-normalises first, mirror that. * confirm forward returns and that the
     hook fires on transformer_encoder.layers (standard encoder).
 """
 from __future__ import annotations

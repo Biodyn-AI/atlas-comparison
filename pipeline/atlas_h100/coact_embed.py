@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """Co-activation layout for the Layer Explorer (so its clusters match the co-activation MODULES, the way
-Igor's per-layer explorer looks). Instead of embedding features by decoder direction, embed them by how
+the prior per-layer explorer looks). Instead of embedding features by decoder direction, embed them by how
 they FIRE TOGETHER: stream the Pearson correlation of SAE feature activations across gene-token positions,
 then reduce the distance D = 1 - corr with BOTH UMAP and t-SNE (same structure, two reductions → the
 UMAP↔t-SNE toggle becomes a robustness check on the module clusters).

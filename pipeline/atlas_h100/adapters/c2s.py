@@ -2,7 +2,7 @@
 only LM where each cell is a "cell sentence" = space-separated gene SYMBOLS ranked by expression
 high->low (top ~512). Gene names are BPE-split by the Gemma tokenizer, so per-gene residual is
 read at each gene's LAST subword position (in a causal LM that token has attended to the whole
-gene) via offset-mapping. Same idea as Igor's c2s-mechinterp sub-word->gene attribution.
+gene) via offset-mapping. Same idea as the c2s-mechinterp work sub-word->gene attribution.
 
 Weights: HF vandijklab/C2S-Scale-Gemma-2-2B (CC-BY-4.0, no gate), transformers AutoModelForCausalLM.
 d_model 2304, 26 layers (d_sae 9216 = 4x2304). 2B params -> keep batch small on H100.

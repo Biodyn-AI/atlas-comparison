@@ -19,6 +19,7 @@ HERE = f"{_B}/scripts"
 CHECKS = [
     ("Results 3.4-3.5, Discussion, Limitations", "audit_manuscript.py"),
     ("Results 3.1-3.3 and Methods", "audit_manuscript_core.py"),
+    ("Numbers derived rather than read off a result", "audit_manuscript_derived.py"),
     ("Supplementary tables against data and code", "audit_supplement.py"),
     ("Figures against the data they were drawn from", "audit_figures.py"),
 ]

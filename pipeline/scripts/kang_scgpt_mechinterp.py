@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """Mechinterp on scGPT + Kang (IFN host response) — the differentiator. Capture scGPT's
-per-gene residual (layer 6) via Igor's ScGPTAdapter (CPU, use_fast_transformer=False),
+per-gene residual (layer 6) via the prior work's ScGPTAdapter (CPU, use_fast_transformer=False),
 train a TopK SAE, and look for a RESPONSE feature at two levels:
   (state)  a feature whose per-CELL activation separates IFN-stimulated from control
   (gene)   a feature that fires on interferon-stimulated genes (ISG set)
