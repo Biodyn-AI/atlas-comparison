@@ -91,6 +91,11 @@ block = {
 atlas = json.load(open(ATLAS))
 old = atlas.get("hypothesis")
 
+# The site's copy of the CKA / SVD nulls was a four-model subset from an early run; the paper's
+# Tables S1 and S7 read the full ten-model cka_svd_null.json. The site reads the same file now.
+SN = load("cka_svd_null.json")
+old_sn = atlas.get("controls", {}).get("survivor_nulls")
+
 
 def diffs(a, b, path=""):
     """Every leaf that changed, so a rebuild says what it moved rather than only that it ran."""
@@ -102,6 +107,9 @@ def diffs(a, b, path=""):
 
 
 changed = list(diffs(old, block)) if old else [("(no previous block)", None, None)]
+if old_sn != SN:
+    n_old = {k: len(v) for k, v in (old_sn or {}).items()}
+    changed.append(("/controls/survivor_nulls", f"{n_old}", f"{ {k: len(v) for k, v in SN.items()} } (cka_svd_null.json)"))
 if not changed:
     print("hypothesis block already matches the result files")
 elif CHECK:
@@ -110,6 +118,7 @@ elif CHECK:
         print(f"  {p:<52} {json.dumps(a)[:28]:>28}  ->  {json.dumps(b)[:28]}")
 else:
     atlas["hypothesis"] = block
+    atlas.setdefault("controls", {})["survivor_nulls"] = SN
     json.dump(atlas, open(ATLAS, "w"))
     print(f"переписано {len(changed)} полей в atlas_full_notf.json:")
     for p, a, b in changed[:40]:

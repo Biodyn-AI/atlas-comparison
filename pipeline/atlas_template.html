@@ -127,7 +127,7 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
 <section id="intro"><div class="wrap">
  <div class="sec-head"><div class="sec-q">Start here</div>
   <h2>What this atlas is, in one picture</h2>
-  <p class="sec-sub">Ten AI “foundation models” were each shown the same cells. We open every model up, split its internal state into small interpretable <b>features</b>, and match each feature to known biology — then compare all ten. The pipeline:</p></div>
+  <p class="sec-sub">Ten models were shown the same 6,000 cells. We split each model's internal state into interpretable <b>features</b>, match every feature to known biology, and compare all ten. The pipeline:</p></div>
  <style>
   #intro .pipe{display:flex;align-items:stretch;gap:6px;flex-wrap:wrap;justify-content:center;margin:6px 0 4px}
   #intro .stage{flex:1 1 150px;max-width:210px;min-width:132px;background:var(--surface2);border:1px solid var(--line);border-radius:12px;padding:14px 12px 12px;text-align:center;position:relative;animation:pipeGlow 5s ease-in-out var(--d,0s) infinite}
@@ -186,7 +186,7 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
 <section id="universality"><div class="wrap">
  <div class="sec-head"><div class="sec-q">the shared backbone</div>
   <h2>How much of the shared biology is real?</h2>
-  <p class="sec-sub">For every concept we count how many of the ten models encode a feature for it. The raw overlap (below) looks huge — thousands of concepts in all ten — but most of it is an <b>artefact of large, overlapping gene-set databases</b>: it doesn't beat a random-gene null. What <b>survives a calibrated annotator + null</b> is a modest but real <b>shared backbone</b> — about <b>78 concepts in ≥8 of 10 models</b>, ~20× over the null.</p></div>
+  <p class="sec-sub">How many of the ten models encode each concept. The raw overlap is inflated by large, overlapping gene-set databases; what survives a calibrated annotator and a random-gene null is a backbone of ~78 concepts shared by ≥8 of 10 models.</p></div>
  <div class="grid2">
   <div class="panel"><div class="ptitle">How widely is each concept shared?</div><div class="pnote">Each bar = how many biological concepts are encoded by exactly that many of the 10 models. Taller bar = more concepts.</div><div class="uspec" id="uspec"></div><div style="display:flex;justify-content:space-between;font-size:11px;color:var(--faint);margin-top:7px"><span>← niche (1 model)</span><span>number of models that share the concept</span><span>universal (all 10) →</span></div></div>
   <div class="panel"><div class="ptitle">The calibrated backbone (≥8/10)</div><div class="pnote" id="core-note"></div><div class="chips" id="core-chips"></div></div>
@@ -197,7 +197,7 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
 <section id="coverage"><div class="wrap">
  <div class="sec-head"><div class="sec-q">coverage & fingerprints</div>
   <h2>How much resolves, and what each model uniquely holds</h2>
-  <p class="sec-sub">Annotation rate averaged across every layer, top-5 genes; concepts counted as each model's full repertoire across all its layers. <span style="color:var(--faint)">(Concept counts scale with SAE width, r ≈ 0.79 — read as repertoire <i>at a given capacity</i>, not a clean ranking; see <a href="#controls" style="color:var(--acc)">Controls</a>.)</span> Fingerprints are the concepts only one model encodes.</p></div>
+  <p class="sec-sub">How much of each model's feature set is pathway-shaped under the calibrated annotator, and which databases its concepts come from. Concept counts grow with SAE width (r ≈ 0.79), so read them as repertoire at a given capacity, not as a ranking.</p></div>
  <div class="grid2"><div class="panel"><div class="ptitle">How pathway-shaped are the features?</div><div class="pnote">share of a model's live SAE features that pass the <b>calibrated</b> annotator (top-10 genes, ≥3 in a curated GO/Reactome/KEGG set ≤200 genes, BH&lt;0.05, no PPI), mid layer. This is the strict test used throughout this atlas — under it random genes annotate only ~3% (vs ~9% real). Rank models (tGPT, Geneformer) sit highest, knowledge/LLM (GeneCompass) lowest. <span style="color:var(--faint)">Absolute rates are low by design (specific, calibrated); the permissive ~40% version is in Controls.</span></div><div id="annbars"></div></div>
   <div class="panel"><div class="ptitle">Concept composition</div><div class="pnote">source mix of each model's concepts</div><div id="compbars"></div>
    <div class="legend"><span><i style="background:var(--go)"></i>GO_BP</span><span><i style="background:var(--react)"></i>Reactome</span><span><i style="background:var(--kegg)"></i>KEGG</span><span><i style="background:var(--amber)"></i>STRING</span></div></div></div>
@@ -206,20 +206,20 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
 <section id="readfirst"><div class="wrap">
  <div class="sec-head"><div class="sec-q">read this first</div>
   <h2>What survived, and what is here for the record</h2>
-  <p class="sec-sub">This tab holds every analysis we ran — including the ones our own controls overturned, kept so the retraction is checkable. The results below are the ones the paper stands on; each is tested against a null designed to produce the same result by chance. Panels marked ⚠ use the permissive annotator and are illustration, not evidence.</p></div>
+  <p class="sec-sub">The results the paper stands on, each tested against a null designed to produce the same result by chance — and the claims our own controls retracted.</p></div>
  <div class="panel" id="readfirst-list"></div>
 </div></section>
 <section id="depth"><div class="wrap">
  <div class="sec-head"><div class="sec-q">depth signatures</div>
   <h2>Every architecture has its own way of using depth</h2>
-  <p class="sec-sub">Annotation rate at every layer, with layers read at matched relative depths. The shape of this curve differs a lot between models, and the differences line up with the training objective. <span style="color:var(--faint)">Now on the <b>calibrated</b> annotator (top-10, ≥3 in a curated ≤200-gene set, no PPI) — the same strict test used everywhere else in this atlas.</span></p></div>
+  <p class="sec-sub">Calibrated annotation rate at every layer, depth normalised per model. The shape differs by architecture.</p></div>
  <div class="panel"><div class="ptitle">Annotation rate across depth — every layer</div><div class="pnote">one line per model, one point per real layer (8–33 layers), curves normalised to each model's own depth</div><div id="depthchart" style="margin-top:14px"></div></div>
  <div class="callout"><span class="k">Reading</span><div id="depth-read"></div></div>
 </div></section>
 <section id="tissue"><div class="wrap">
  <div class="sec-head"><div class="sec-q">where tissue identity is built</div>
   <h2>Tissue specialisation is built in the deep layers — for some models</h2>
-  <p class="sec-sub">Each feature's activation split across immune / kidney / lung cells. A feature is tissue-specific if one tissue holds ≥50% of its activation. This comparison needs all ten models on the same cells; the models split clearly into two groups.</p></div>
+  <p class="sec-sub">Share of features bound to one tissue (≥50 % of activation in immune, kidney or lung) at every layer. The models split into two groups.</p></div>
  <div class="grid2" style="grid-template-columns:1.4fr 1fr;align-items:start">
   <div class="panel"><div class="ptitle">Tissue-specific features across every layer</div><div class="pnote">% of alive features bound to one tissue, one point per real layer (curves normalised to each model's depth)</div><div id="tissuechart" style="margin-top:14px"></div></div>
   <div class="panel"><div class="ptitle">Dominant tissue per model</div><div class="pnote">share of tissue-specific features (all layers)</div><div id="tissuemix" style="margin-top:8px"></div>
@@ -229,7 +229,7 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
 <section id="svd"><div class="wrap">
  <div class="sec-head"><div class="sec-q">Why a feature dictionary, and what that claim is worth</div>
   <h2>The SAE beats a linear (PCA) summary at matched sparsity — but “100 % invisible to PCA” is an artefact</h2>
-  <p class="sec-sub">The usual way to compress a model’s internal state is PCA/SVD — keep a few dominant “principal directions”. The bars below show the share of SAE features that do not line up with any of them: ~100 % in every model, which reproduces the single-model result. <b>That number needs a caveat</b>: in these dimensions a <i>random</i> direction clears the same bar just as often (see Controls), so it says more about dimensionality than about the models. The comparison that carries weight is in the Reading: at the same sparsity budget the trained SAE explains more variance than the best rank-32 PCA subspace in all ten models, by a margin that runs from +0.02 (tGPT) to +0.53 (Tahoe-x1).</p></div>
+  <p class="sec-sub">SAE features almost never align with the top PCA directions (~100 % in every model) — but a random direction clears that bar too, so the number says little. The test that counts: at the same sparsity, the SAE explains more variance than the best rank-32 PCA subspace in all ten models, by +0.02 to +0.53.</p></div>
  <div class="panel"><div class="ptitle">Share of features invisible to PCA/SVD</div><div class="pnote">a feature counts as “hidden” if it doesn’t line up with any dominant principal direction — bars show % of a model’s features that hide</div><div id="svdbars" style="margin-top:12px"></div></div>
  <div class="callout"><span class="k">Reading</span><div id="svd-read"></div></div>
 </div></section>
@@ -258,7 +258,7 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
 <section id="modules"><div class="wrap">
  <div class="sec-head"><div class="sec-q">feature co-activation modules</div>
   <h2>How features wire into modules on the shared corpus</h2>
-  <p class="sec-sub"><b>Each dot is one feature; a line joins two features that <b>fire together</b> (correlate across the cells); a blob is a <b>module</b> — a community of features that co-fire. <b>Colour = the module's biological theme, the same on every layer</b> (see the key). Dot size = how connected it is; ◇ = a transcription-factor feature. <b>Position is from a force layout — only the grouping means anything, not where a blob sits</b>; small stray arcs off to the side are tiny modules with no links to the core. Pick a model, step through the layers to watch modules form and dissolve with depth, and <b>click a dot</b> to read its genes.</p></div>
+  <p class="sec-sub">Each dot is a feature; a line joins features that fire together; a blob is a module, coloured by its biological theme. Pick a model, step through the layers, click a dot to read its genes.</p></div>
  <div class="toggle" id="mod-tabs" style="display:inline-flex;background:var(--surface2);border:1px solid var(--line);border-radius:9px;padding:3px;gap:2px;margin-bottom:10px"></div>
  <div id="mod-layers" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px"></div>
  <div class="grid2" style="grid-template-columns:1.9fr 1fr;align-items:start">
@@ -272,7 +272,7 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
 <section id="explorer"><div class="wrap">
  <div class="sec-head"><div class="sec-q">explore it yourself</div>
   <h2>Browse every feature — search it, hover it, inspect it</h2>
-  <p class="sec-sub"><b>Pick a model and a layer, then hover any dot</b> to see its genes and biology, or <b>filter by a gene</b> (right) to find where it's encoded. Each dot is one feature; colour = its module. The cloud looks uniform on purpose — read it by <b>searching and hovering</b>, not by looking for clusters. <span style="color:var(--faint);font-size:12.5px"><i>(Position is a UMAP / t-SNE of feature directions; the colour legend is under the map.)</i></span></p></div>
+  <p class="sec-sub">Pick a model and a layer, hover a dot to see its genes and biology, or filter by gene. Position is a UMAP of feature directions and carries no meaning — read the map by searching and hovering.</p></div>
  <div style="font-family:var(--mono);font-size:11.5px;color:var(--faint);margin-bottom:6px">1 · choose a model</div>
  <div class="toggle" id="ex-tabs" style="display:inline-flex;background:var(--surface2);border:1px solid var(--line);border-radius:9px;padding:3px;gap:2px;margin-bottom:12px;flex-wrap:wrap"></div>
  <div style="font-family:var(--mono);font-size:11.5px;color:var(--faint);margin-bottom:6px">2 · choose a layer (depth in the network)</div>
@@ -298,7 +298,7 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
 <section id="cka"><div class="wrap">
  <div class="sec-head"><div class="sec-q">how alike are the models?</div>
   <h2>How alike are the models — in biology, and in geometry?</h2>
-  <p class="sec-sub">Two ways to compare every pair of models on the <b>same 6,000 cells</b>. <b>Shared concepts (biology)</b> — do they detect the same biological programs? <b>Representation geometry</b> — is their internal state shaped the same way (CKA, invariant to model size &amp; rotation)? Switch with the toggle. The two measures rarely agree: models that share biology often differ in geometry. 1.00 = identical, 0 = unrelated.</p></div>
+  <p class="sec-sub">Two ways to compare every pair of models on the same cells: <b>shared concepts</b> (do they detect the same biology?) and <b>representation geometry</b> (CKA: is their internal state shaped the same way?). The two rarely agree. 1.00 = identical, 0 = unrelated.</p></div>
  <div style="display:flex;gap:22px;flex-wrap:wrap;align-items:center;margin-bottom:14px">
   <div style="display:flex;align-items:center;gap:8px"><span class="pnote" style="margin:0">Compare by</span><div class="toggle" id="cka-space" style="display:inline-flex;background:var(--surface2);border:1px solid var(--line);border-radius:9px;padding:3px;gap:2px"></div></div>
   <div style="display:flex;align-items:center;gap:8px"><span class="pnote" style="margin:0">Relative depth</span><div class="toggle" id="cka-depth" style="display:inline-flex;background:var(--surface2);border:1px solid var(--line);border-radius:9px;padding:3px;gap:2px"></div></div>
@@ -317,7 +317,7 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
 <section id="lineage"><div class="wrap">
  <div class="sec-head"><div class="sec-q">scale &amp; lineage</div>
   <h2>Does interpretability scale with size — and which models are kin</h2>
-  <p class="sec-sub">Two questions, asked on the same cells for every model. <b>Left:</b> how the models' interpretable capacity tracks parameter count. <b>Right:</b> a lineage built by clustering the models on the biology they encode (1 − concept-Jaccard, average linkage) — grouping them by what they learned, not by how they were built.</p></div>
+  <p class="sec-sub">How interpretable capacity tracks model size.</p></div>
  <div class="grid2" style="grid-template-columns:1fr 1fr;align-items:start;gap:18px">
   <div class="panel"><div class="ptitle">Interpretability vs scale</div>
    <div class="pnote" id="scale-note"></div>
@@ -388,7 +388,7 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
 <section id="predict"><div class="wrap">
  <div class="sec-head"><div class="sec-q">can the features predict?</div>
   <h2>Testing the features on data the atlas never saw</h2>
-  <p class="sec-sub">Everything else here describes what the models encode. This asks whether that is <b>useful</b>. Genes that repeatedly light up the same feature should be functionally linked — so we checked those pairs against <b>TRRUST</b>, a hand-curated database of transcription-factor→target regulation that no step of this atlas uses. The comparison is against a null that keeps every gene's number of partners exactly as it is, so a gene cannot score simply by being abundant or well studied.</p></div>
+  <p class="sec-sub">Do the features predict anything? Genes that repeatedly share a feature should be linked, so we test those pairs against TRRUST — curated regulatory edges no step of the atlas used — against a null that keeps every gene's number of partners.</p></div>
  <div class="panel"><div class="ptitle">Which models produce testable predictions</div><div class="pnote">how much better than the degree-matched null each model recovers held-out regulatory links — at full size, which favours models with larger feature dictionaries</div>
   <div id="pred-bars" style="margin-top:14px"></div></div>
  <div class="grid2" style="margin-top:14px">
@@ -419,7 +419,7 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
 <section id="controls"><div class="wrap">
  <div class="sec-head"><div class="sec-q">what the nulls say</div>
   <h2>Controls &amp; robustness</h2>
-  <p class="sec-sub">We tested our own headline claims against null models. Some hold up; others turn out to be confounded. Both are reported below.</p></div>
+  <p class="sec-sub">Our headline claims against null models. The calibrated backbone test and the summary are below; the earlier, permissive-era checks are folded under “Earlier controls”.</p></div>
  <div class="grid2">
   <div class="panel"><div class="ptitle">Is the shared core real, or just ubiquitous sets?</div><div class="pnote">The universal core vs a <b>size-weighted permutation null</b> (each model keeps its concept count, but draws random sets weighted by gene-set size — so big, ubiquitous sets are expected to be hit). If the core were an artefact of "everything hits the ribosome", it would sit at the null.</div><div id="ctrl-null" style="margin-top:12px"></div></div>
   <div class="panel"><div class="ptitle">Is it just "more layers = more chances"?</div><div class="pnote">The core counted three ways: one <b>mid layer</b>, an <b>equal number of layers</b> for every model (8, evenly spaced — removes the UCE-33 vs AIDO-8 advantage), and <b>all layers</b>. If the all-layer core were a layer-count artefact, equal-layer would collapse back toward mid.</div><div id="ctrl-equal" style="margin-top:12px"></div></div>
@@ -445,7 +445,7 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
 <section id="roster"><div class="wrap">
  <div class="sec-head"><div class="sec-q">The atlas · methods</div>
   <h2>Seven models, one corpus, one depth rule, two annotators</h2>
-  <p class="sec-sub">Every model re-extracted on the same 6,000-cell Tabula Sapiens corpus (immune + kidney + lung, raw counts); TopK SAE (k=32, d=4×) on the residual at every layer, read at five matched relative depths. Two annotators: the <b>permissive</b> default (top-5 genes, Fisher 'greater' + BH&lt;0.05 vs GO_BP/Reactome/KEGG, STRING and TRRUST) — illustrative only, because random genes pass it almost as often as real features — and the <b>calibrated</b> one (top-10 genes, ≥3 in a curated ≤200-gene GO/Reactome/KEGG set, no PPI) that every cross-model claim on this site uses. The comparison at the matched 50%-depth layer.</p></div>
+  <p class="sec-sub">Ten models, one 6,000-cell Tabula Sapiens corpus (immune, kidney, lung), a TopK SAE (k = 32, 4× width) on every layer. Two annotators: the permissive default (illustrative — random genes pass it almost as often as real features) and the calibrated one every cross-model claim uses (top-10 genes, ≥3 in a curated ≤200-gene set, no PPI).</p></div>
  <div class="panel hmwrap"><table class="roster" id="roster-table"></table></div>
  <div class="callout"><span class="k">Design decisions</span><div>All three Tabula Sapiens tissues ✓ · depth-matched 0/25/50/75/100% ✓ · <b>top-5</b> genes (empirically sharper than top-20: median odds-ratio ~1.5× higher, no saturation) ✓ · <b>5 databases</b> incl STRING PPI edges ✓ · UCE at 650M ✓ · all ten models re-extracted on <b>one shared pipeline</b> ✓. Every model shown — including <b>Tahoe-x1 3B</b> — is fully extracted; <b>scPRINT</b> (ESM-augmented) is the one intended addition still pending a cluster-side fix, and slots in without changing the pipeline.</div></div>
  <div class="callout" style="margin-top:12px"><span class="k">Considered but out of scope</span><div>The atlas needs <b>per-cell, gene-token</b> foundation models with an accessible <b>residual stream</b>, so the same TopK-SAE can be trained on the same representation across every model. Two prominent recent models fall outside that frame — both are <b>perturbation-response predictors that operate on cell <i>sets</i></b>, not per-cell representations, so there is no directly comparable residual to decompose:<br>· <b><a href="https://github.com/ArcInstitute/state" target="_blank" rel="noopener" style="color:var(--acc)">State</a></b> (Arc Institute) — State-Transition predicts post-perturbation expression, State-Embedding embeds cells at the <b>set</b> level; it models how cell sets <i>respond</i> to perturbations.<br>· <b><a href="https://huggingface.co/Xaira-Therapeutics/X-Cell" target="_blank" rel="noopener" style="color:var(--acc)">X-Cell</a></b> (Xaira Therapeutics) — a set-level <b>diffusion</b> transformer for genome-scale perturbation responses; additionally, its weights are <b>not yet public</b> ("coming soon") and it is non-commercially licensed.<br>Both belong in a <i>perturbation</i> atlas, not this representation atlas.</div></div>
@@ -460,6 +460,11 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
 <script id="health-data" type="application/json">__DATA__</script>
 <script>
 const D=JSON.parse(document.getElementById('atlas-data').textContent);
+// The per-model SVD block came from an earlier extraction; the paper's SAE-vs-PCA numbers (Tables
+// S1/S7) come from the dedicated null run stored under controls.survivor_nulls. Use that here too,
+// so the site and the paper print the same gap (Geneformer 0.71, not 0.78).
+(function(){const sn=D.controls&&D.controls.survivor_nulls&&D.controls.survivor_nulls.svd_null;if(!sn||!D.svd)return;
+  sn.forEach(x=>{if(D.svd[x.model]){D.svd[x.model].svd_var=x.svd_var_at_k;D.svd[x.model].sae_var=x.sae_var_explained;}});})();
 const M=D.models, OURS=new Set(['scPRINT','AIDO','UCE','tGPT']);
 const SRC={GO_BP:'var(--go)',Reactome:'var(--react)',KEGG:'var(--kegg)',STRING:'var(--amber)'};
 const TCOL={immune:'var(--immune)',kidney:'var(--kidney)',lung:'var(--lung)'};
@@ -790,13 +795,13 @@ document.getElementById('stats').innerHTML=[
    row('Shared backbone',SF?`<b>${SF.backbone_null['>=8'].real}</b> calibrated concepts shared by ≥8 of ${D.n_models} models — <b>${SF.backbone_null['>=8'].fold}×</b> a uniform random-gene null${DN?` and <b>${DN.tiers['>=8'].degree_fold}×</b> a degree-matched one`:''}, p &lt; 0.004 (250 permutations); about two-thirds is specific programme biology`:'see Controls','Controls','#controls')+
    row('It replicates',SF?`on an independent draw of 6,000 cells the calibrated backbone comes back at Jaccard <b>${SF.heldout_null.observed_jaccard}</b> against a two-draw baseline of ${SF.heldout_null.null_mean} (p &lt; 0.007); the permissive core does <i>not</i> pass this test`:'','Controls','#controls')+
    row('Geometry agrees','linear CKA is above its own cell-shuffle floor in all 45 model pairs (worst pair 43×); this uses no annotation at all','Compare','#cka')+
-   row('SAE beats PCA',`at matched sparsity the SAE explains more variance than the best rank-32 subspace in all ten models — by +${Math.min(...g).toFixed(2)} to +${Math.max(...g).toFixed(2)}; the “100 % invisible to PCA” figure below is a dimensional artefact and not evidence`,'SAE vs PCA','#svd')+
+   row('SAE beats PCA',`at matched sparsity the SAE explains more variance than the best rank-32 subspace in all ten models — by +${(Math.min(...g)+1e-9).toFixed(2)} to +${(Math.max(...g)+1e-9).toFixed(2)}; the “100 % invisible to PCA” figure below is a dimensional artefact and not evidence`,'SAE vs PCA','#svd')+
    row('Features predict',pass.length?`co-firing gene pairs recover held-out regulatory edges in <b>${pass.length} of ${D.n_models}</b> models (${pass.map(m=>`${nm(m)} ${PM[m].fold}×`).join(', ')}); agreement between models raises precision ${H.curve['1'].fold}× → ${H.curve['2'].fold}×, and the pairs hold against the literature and in two Perturb-seq lines`:'','Genes & biology','#predict')+
    row('Retracted','⚠ the permissive “universal core” of thousands of concepts in all ten models (random genes give a larger one); ⚠ per-feature annotation rate as an interpretability score (random genes annotate almost as often); ⚠ “~100 % of features invisible to PCA” (random directions clear the same bar)','Controls','#controls');
  })();
  // invariants
  document.getElementById('axis-inv').innerHTML=[
-  ['SAE beats PCA',(()=>{const g=D.models.map(m=>D.svd[m]?D.svd[m].sae_var-D.svd[m].svd_var:null).filter(x=>x!=null);return `the SAE explains more variance than top-k PCA at matched sparsity in every model — but by +${Math.min(...g).toFixed(2)} to +${Math.max(...g).toFixed(2)}, near zero where a model's residual is already close to rank-32`;})()],
+  ['SAE beats PCA',(()=>{const g=D.models.map(m=>D.svd[m]?D.svd[m].sae_var-D.svd[m].svd_var:null).filter(x=>x!=null);return `the SAE explains more variance than top-k PCA at matched sparsity in every model — but by +${(Math.min(...g)+1e-9).toFixed(2)} to +${(Math.max(...g)+1e-9).toFixed(2)}, near zero where a model's residual is already close to rank-32`;})()],
   ['Linearity','concepts read out linearly at every depth (MLP gains ≈ 0) in every model'],
   ['Shared backbone','~78 calibrated concepts (translation, antigen presentation, cytokine signalling, defence) shared by ≥8/10, ~20× over a random-gene null'],
   ['Scaling',`distinct concepts track parameter count (r ≈ ${D.lineage.corr.params_concepts_all.toFixed(2)} over the five depth-matched layers; n = 10, so the interval is wide) — capacity, not axis`],
@@ -1374,6 +1379,12 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
 <!-- ===== Use-case-first tab shell + Choose-a-model app (client-side) ===== -->
 <style>
  .tabnav{display:flex;gap:3px;flex-wrap:nowrap;overflow-x:auto;max-width:100%}
+ details.more{margin-top:6px}details.more>summary{cursor:pointer;color:var(--acc);font-family:var(--mono);font-size:11.5px;list-style:none;display:inline-block}
+ details.more>summary::-webkit-details-marker{display:none}details.more>summary::before{content:'+ '}details.more[open]>summary::before{content:'− '}details.more>div{margin-top:8px}
+ details.earlier{margin:14px 0;border:1px dashed var(--line2);border-radius:var(--r);padding:12px 18px}
+ details.earlier>summary{cursor:pointer;color:var(--mut);font-family:var(--mono);font-size:12px;list-style:none}
+ details.earlier>summary::-webkit-details-marker{display:none}details.earlier>summary::before{content:'+ '}details.earlier[open]>summary::before{content:'− '}
+ details.earlier>.body{margin-top:14px;display:grid;gap:14px}
  /* secondary navigation: the sections of the open tab, with a you-are-here highlight */
  #subnav{position:sticky;top:56px;z-index:40;background:var(--navbg);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
  #subnav .wrap{display:flex;gap:8px;height:38px;align-items:center}
@@ -1447,6 +1458,8 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
 <script>
 (function(){
  const D=JSON.parse(document.getElementById('atlas-data').textContent);
+(function(){const sn=D.controls&&D.controls.survivor_nulls&&D.controls.survivor_nulls.svd_null;if(!sn||!D.svd)return;
+  sn.forEach(x=>{if(D.svd[x.model]){D.svd[x.model].svd_var=x.svd_var_at_k;D.svd[x.model].sae_var=x.sae_var_explained;}});})();
  const MODELS=D.models.slice();
  const MCOL={AIDO:'#5b8cff',UCE:'#f0629b',tGPT:'#2fc6b6',Geneformer:'#a884ff',scGPT:'#ffb14d',C2S:'#ff6079',MaxToki:'#5ad1e6',Tahoe:'#4dd07a',scFoundation:'#e8c34a',GeneCompass:'#cf6dd6'};
  const NAME={C2S:'C2S-Scale',Tahoe:'Tahoe-x1',Geneformer:'Geneformer',AIDO:'AIDO.Cell'};
@@ -1531,9 +1544,9 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
  // ---- home use-case cards ----
  const cards=document.createElement('div');cards.id='uc-cards';
  cards.innerHTML=[
-  ['choose','①','Choose a model for your task','Scientists: tell the atlas what you need — interpretable features, broad coverage, tissue-invariance, scale — and get a ranked recommendation with the numbers behind it.','Open the chooser →'],
-  ['compare','②','Compare models (for developers)','Benchmark a new model against the ten: cross-model similarity (CKA), concept coverage, and how much of the calibrated shared backbone it recovers.','Open the comparison →'],
-  ['genes','③','Explore genes & test predictions','Search any gene to see where it is encoded and what it links to, and see how well the models predict regulatory links they were never shown — and what that does and does not say about undocumented biology.','Open gene search →'],
+  ['choose','①','Choose a model for your task','Say what you need — interpretable features, coverage, tissue-invariance, scale, prediction — and get a ranked recommendation.','Open the chooser →'],
+  ['compare','②','Compare models (for developers)','Similarity (CKA), concept coverage and the shared backbone, model by model.','Open the comparison →'],
+  ['genes','③','Explore genes & test predictions','Find where a gene is encoded, and see how well the models predict regulatory links they were never shown.','Open gene search →'],
  ].map(c=>`<button class="uc-card" data-go="${c[0]}"><div class="n">${c[1]}</div><h3>${c[2]}</h3><p>${c[3]}</p><div class="go">${c[4]}</div></button>`).join('');
  const hdr=document.querySelector('header#overview .wrap');if(hdr)hdr.appendChild(cards);
 
@@ -1556,7 +1569,7 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
    document.querySelectorAll('.tabbtn').forEach(b=>b.classList.toggle('on',b.dataset.t===tab));
    const _act=links&&links.querySelector('.tabbtn.on');if(_act)_act.scrollIntoView({inline:'center',block:'nearest'});
    window.scrollTo({top:0,behavior:'instant'});
-   applyMode();buildSubnav(tab);
+   buildSubnav(tab);
    requestAnimationFrame(()=>{window.dispatchEvent(new Event('resize'));try{if(tab==='genes'&&typeof exRender==='function')exRender();}catch(e){}});
  }
  document.querySelectorAll('.tabbtn').forEach(b=>b.onclick=()=>show(b.dataset.t));
@@ -1569,23 +1582,6 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
    const owner=t.closest('[data-atab]')||t;const tab=owner.dataset?owner.dataset.atab:null;
    if(tab&&tab!==cur){e.preventDefault();show(tab);setTimeout(()=>t.scrollIntoView({behavior:'smooth',block:'start'}),40);}
  });
- // ---- essentials / everything (progressive disclosure) ----
- // The illustrative analyses (permissive annotator) and niche controls carry class "expert" and are
- // hidden by default. A reader who wants the full record flips the switch in the nav; the choice
- // persists in this browser. Controls is never hidden: it is the evidence, not an extra.
- let mode='simple';try{mode=localStorage.getItem('atlas-mode')||'simple';}catch(e){}
- const modeBtn=document.createElement('button');modeBtn.className='modebtn';modeBtn.title='Show or hide the expert-level analyses';
- function applyMode(){document.body.dataset.mode=mode;
-   modeBtn.innerHTML=mode==='simple'?`Essentials <span style="color:var(--faint)">· show everything</span>`:`Everything <span style="color:var(--faint)">· essentials only</span>`;
-   document.querySelectorAll('.modenote').forEach(n=>n.remove());
-   const hidden=document.querySelectorAll('section.expert[data-atab="'+cur+'"]').length;
-   if(mode==='simple'&&hidden){const vis=[...document.querySelectorAll('section[data-atab="'+cur+'"]')].filter(s=>!s.classList.contains('expert'));const last=vis[vis.length-1];
-     if(last){const n=document.createElement('div');n.className='modenote';
-       n.innerHTML=`<button>${hidden} more ${hidden>1?'analyses are':'analysis is'} hidden on this tab — they use the permissive annotator or are niche controls, and are kept for the record. Show everything →</button>`;
-       n.querySelector('button').onclick=()=>{mode='all';applyMode();buildSubnav(cur);};last.after(n);}}
-   try{localStorage.setItem('atlas-mode',mode);}catch(e){}
- }
- modeBtn.onclick=()=>{mode=mode==='simple'?'all':'simple';applyMode();buildSubnav(cur);};
 
  // ---- secondary navigation: the sections of the open tab ----
  const subnav=document.createElement('div');subnav.id='subnav';subnav.innerHTML='<div class="wrap"><div class="secs"></div></div>';
@@ -1596,11 +1592,10 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
  function paintTheme(){const t=document.documentElement.dataset.theme==='light'?'light':'dark';themeBtn.innerHTML=t==='light'?'☾ <span style="color:var(--faint)">dark</span>':'☀ <span style="color:var(--faint)">light</span>';themeBtn.setAttribute('aria-label',t==='light'?'Switch to dark theme':'Switch to light theme');}
  themeBtn.onclick=()=>{const t=document.documentElement.dataset.theme==='light'?'dark':'light';document.documentElement.dataset.theme=t;try{localStorage.setItem('atlas-theme',t);}catch(e){}paintTheme();requestAnimationFrame(()=>window.dispatchEvent(new Event('resize')));};
  paintTheme();
- subnav.querySelector('.wrap').appendChild(modeBtn);
  subnav.querySelector('.wrap').appendChild(themeBtn);
  function secLabel(s){const q=s.querySelector('.sec-q');const t=q?q.textContent:((s.querySelector('h2')||{}).textContent||s.id);return t.replace(/\s+/g,' ').trim();}
  function buildSubnav(tab){const w=subnav.querySelector('.secs');
-   const all=[...document.querySelectorAll('section[data-atab="'+tab+'"]')],secs=all.filter(s=>!(mode==='simple'&&s.classList.contains('expert')));
+   const all=[...document.querySelectorAll('section[data-atab="'+tab+'"]')],secs=all;
    
    w.innerHTML=secs.map(s=>`<a href="#${s.id}" class="${s.classList.contains('expert')?'ex':''}" data-s="${s.id}" title="${s.classList.contains('expert')?'expert-level analysis':''}">${secLabel(s)}</a>`).join('');
    w.querySelectorAll('a').forEach(a=>a.onclick=e=>{e.preventDefault();const t=document.getElementById(a.dataset.s);if(t)t.scrollIntoView({behavior:'smooth',block:'start'});});
@@ -1618,9 +1613,39 @@ exBuildLayers();let ert;addEventListener('resize',()=>{clearTimeout(ert);ert=set
  function applyNames(root){const tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,{acceptNode:n=>{const p=n.parentElement;if(!p||p.closest('#askpanel,script,style,[data-keepname]'))return NodeFilter.FILTER_REJECT;return DISPLAY[n.nodeValue.trim()]?NodeFilter.FILTER_ACCEPT:NodeFilter.FILTER_SKIP;}});
    const hits=[];let n;while((n=tw.nextNode()))hits.push(n);hits.forEach(n=>{const k=n.nodeValue.trim();n.nodeValue=n.nodeValue.replace(k,DISPLAY[k]);});}
  let namesTimer=null;
- new MutationObserver(()=>{if(namesTimer)return;namesTimer=setTimeout(()=>{namesTimer=null;applyNames(document.body);},120);}).observe(document.body,{childList:true,subtree:true,characterData:true});
+ new MutationObserver(()=>{if(namesTimer)return;namesTimer=setTimeout(()=>{namesTimer=null;applyNames(document.body);condenseAll();},120);}).observe(document.body,{childList:true,subtree:true,characterData:true});
+
+ // ---- keep the page to what matters ----
+ // The retracted and niche analyses stay in the repository and the paper; on the site they only
+ // added weight. Long readings keep their first two sentences and fold the rest under "More".
+ // hide rather than remove: resize handlers still re-render into these elements, and a missing
+ // target would throw inside the handler
+ const hide=e=>{if(!e)return;e.style.display='none';e.removeAttribute('data-atab');e.setAttribute('aria-hidden','true');};
+ document.querySelectorAll('.expert').forEach(hide);
+ (function(){hide(document.getElementById('fgrid'));                       // per-model "exclusive concepts": mostly STRING hubs
+   ['sigcards','firebars'].forEach(id=>{const e=document.getElementById(id);if(e)hide(e.closest('.panel')||e);});
+   const fr=document.getElementById('fire-read');if(fr)hide(fr.closest('.callout')||fr);
+   document.querySelectorAll('#intro .pnote, #intro p').forEach(e=>{if(/^How far to trust/.test(e.textContent.trim()))hide(e);});
+   document.querySelectorAll('#roster .ptitle').forEach(t=>{if(/^Design decisions/i.test(t.textContent.trim()))hide(t.closest('.panel'));});
+   // Controls: the permissive-era checks fold into one collapsed block ahead of the calibrated test
+   const early=['ctrl-null','ctrl-equal','ctrl-cap','ctrl-conc','ctrl-seed','ctrl-r2','ctrl-heldout','ctrl-pcal','ctrl-limits'].map(id=>document.getElementById(id)).filter(Boolean).map(e=>e.closest('.panel')||e);
+   const uniq=[...new Set(early)];if(uniq.length){const d=document.createElement('details');d.className='earlier';
+     d.innerHTML=`<summary>Earlier controls — the permissive annotator and its confounds (${uniq.length} panels)</summary><div class="body"></div>`;
+     uniq[0].before(d);const body=d.querySelector('.body');uniq.forEach(e=>body.appendChild(e));}
+ })();
+ function condense(el,keep,min){keep=keep||2;min=min||380;if(el.classList.contains('condensed'))return;el.classList.add('condensed');
+   if(el.textContent.trim().length<min)return;const h=el.innerHTML;let depth=0,parts=[],cur='';
+   for(let i=0;i<h.length;i++){const c=h[i];cur+=c;
+     if(c==='<'){depth++;continue;}if(c==='>'){depth--;continue;}
+     if(depth===0&&/[.!?]/.test(c)&&!/\d\.$/.test(cur.slice(-2))&&!/\b(e\.g|i\.e|vs|cf|approx)\.$/.test(cur)){
+       let j=i+1,tail='';const closer=/^<\/[a-z]+>/;while(closer.test(h.slice(j,j+12))){const t=h.slice(j).match(closer)[0];tail+=t;j+=t.length;}
+       if(/^\s+[A-Z<(]/.test(h.slice(j,j+3))){cur+=tail;i=j-1;parts.push(cur);cur='';}}}
+   if(cur.trim())parts.push(cur);if(parts.length<=keep+1)return;
+   el.innerHTML=parts.slice(0,keep).join('')+`<details class="more"><summary>More</summary><div>${parts.slice(keep).join('').trim()}</div></details>`;}
+ function condenseAll(){document.querySelectorAll('.callout > div:not(.condensed), .panel > .pnote:not(.condensed)').forEach(e=>condense(e));}
+ condenseAll();
  show('home');
- applyNames(document.body);
+ applyNames(document.body);condenseAll();
 })();
 </script>
 
