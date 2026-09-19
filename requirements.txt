@@ -1,0 +1,17 @@
+# Analysis environment for the comparative SAE atlas.
+# These are the versions every null, figure and audit in the paper was computed under
+# (Supplementary Table S6). Extraction and SAE training ran separately on a GPU host under
+# Python 3.12 / torch 2.13 / NumPy 1.26.4 -- see the same table.
+#
+#   python -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements.txt
+#   export ATLAS_BASE=/path/to/the/data/root
+#   python pipeline/scripts/audit_all.py
+#
+# Tested on Python 3.13.0.
+
+numpy==2.3.4
+scipy==1.17.1
+h5py==3.16.0          # Perturb-seq (.h5ad) reading, Section 3.5
+anndata==0.13.2         # same
+matplotlib==3.10.7     # figures

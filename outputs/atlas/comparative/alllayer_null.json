@@ -1,0 +1,47 @@
+{
+ "n_perm": 20,
+ "scope": "all-layer union, permissive annotator (top-5, 5 DBs)",
+ "models": [
+  "AIDO",
+  "C2S",
+  "Geneformer",
+  "MaxToki",
+  "UCE",
+  "scGPT",
+  "tGPT",
+  "scFoundation",
+  "GeneCompass",
+  "Tahoe"
+ ],
+ "layers_per_model": {
+  "AIDO": 8,
+  "C2S": 26,
+  "Geneformer": 18,
+  "MaxToki": 11,
+  "UCE": 33,
+  "scGPT": 12,
+  "tGPT": 8,
+  "scFoundation": 12,
+  "GeneCompass": 12,
+  "Tahoe": 32
+ },
+ "real_core": 2267,
+ "null_core_mean": 3563.2,
+ "null_core_sd": 70.3,
+ "null_core_min": 3461,
+ "null_core_max": 3700,
+ "core_z": -18.4,
+ "core_fold_over_null": 0.64,
+ "per_model_real_concepts": {
+  "AIDO": 5791,
+  "C2S": 17223,
+  "Geneformer": 13744,
+  "MaxToki": 10344,
+  "UCE": 17428,
+  "scGPT": 9681,
+  "tGPT": 9918,
+  "scFoundation": 10692,
+  "GeneCompass": 4446,
+  "Tahoe": 16405
+ }
+}

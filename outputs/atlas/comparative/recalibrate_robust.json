@@ -1,0 +1,174 @@
+{
+ "grid": [
+  {
+   "config": "top10 a3 max200",
+   ">=7": {
+    "real": 142,
+    "null": 13.8,
+    "fold": 10.3
+   },
+   ">=8": {
+    "real": 78,
+    "null": 4.4,
+    "fold": 17.7
+   },
+   ">=9": {
+    "real": 10,
+    "null": 0.6,
+    "fold": 18.2
+   },
+   ">=10": {
+    "real": 2,
+    "null": 0.0,
+    "fold": 6.7
+   }
+  },
+  {
+   "config": "top10 a3 max150",
+   ">=7": {
+    "real": 95,
+    "null": 0.6,
+    "fold": 158.3
+   },
+   ">=8": {
+    "real": 50,
+    "null": 0.1,
+    "fold": 166.7
+   },
+   ">=9": {
+    "real": 5,
+    "null": 0.0,
+    "fold": 16.7
+   },
+   ">=10": {
+    "real": 1,
+    "null": 0.0,
+    "fold": 3.3
+   }
+  },
+  {
+   "config": "top12 a3 max200",
+   ">=7": {
+    "real": 212,
+    "null": 62.1,
+    "fold": 3.4
+   },
+   ">=8": {
+    "real": 115,
+    "null": 27.3,
+    "fold": 4.2
+   },
+   ">=9": {
+    "real": 22,
+    "null": 7.6,
+    "fold": 2.9
+   },
+   ">=10": {
+    "real": 3,
+    "null": 0.9,
+    "fold": 3.3
+   }
+  },
+  {
+   "config": "top10 a3 max300",
+   ">=7": {
+    "real": 218,
+    "null": 91.2,
+    "fold": 2.4
+   },
+   ">=8": {
+    "real": 126,
+    "null": 55.8,
+    "fold": 2.3
+   },
+   ">=9": {
+    "real": 32,
+    "null": 26.1,
+    "fold": 1.2
+   },
+   ">=10": {
+    "real": 6,
+    "null": 6.2,
+    "fold": 1.0
+   }
+  },
+  {
+   "config": "top10 a3 max200 OR5",
+   ">=7": {
+    "real": 142,
+    "null": 12.7,
+    "fold": 11.2
+   },
+   ">=8": {
+    "real": 78,
+    "null": 3.0,
+    "fold": 26.4
+   },
+   ">=9": {
+    "real": 10,
+    "null": 0.2,
+    "fold": 33.3
+   },
+   ">=10": {
+    "real": 2,
+    "null": 0.1,
+    "fold": 6.7
+   }
+  }
+ ],
+ "thresholds": [
+  7,
+  8,
+  9,
+  10
+ ],
+ "n_perm": 20,
+ "triviality": {
+  "n_ge8": 78,
+  "housekeeping": 29,
+  "specific": 49,
+  "pct_housekeeping": 37.2,
+  "specific_terms": [
+   "antigen processing and presentation of exogenous peptide antigen (GO:0002478)",
+   "antigen processing and presentation of exogenous peptide antigen via MHC class II (GO:0019886)",
+   "antigen processing and presentation of peptide antigen via MHC class II (GO:0002495)",
+   "cellular response to metal ion (GO:0071248)",
+   "defense response to bacterium (GO:0042742)",
+   "muscle contraction (GO:0006936)",
+   "negative regulation of cytokine production (GO:0001818)",
+   "negative regulation of growth (GO:0045926)",
+   "regulated exocytosis (GO:0045055)",
+   "regulation of cellular response to stress (GO:0080135)",
+   "response to cytokine (GO:0034097)",
+   "Adrenergic signaling in cardiomyocytes",
+   "Alcoholism",
+   "Antigen processing and presentation",
+   "Apoptosis",
+   "Cardiac muscle contraction",
+   "Cell adhesion molecules",
+   "Estrogen signaling pathway",
+   "Hematopoietic cell lineage",
+   "IL-17 signaling pathway",
+   "Influenza A",
+   "Kaposi sarcoma-associated herpesvirus infection",
+   "Leishmaniasis",
+   "Neutrophil extracellular trap formation",
+   "Phagosome",
+   "Protein processing in endoplasmic reticulum",
+   "Rheumatoid arthritis",
+   "Staphylococcus aureus infection",
+   "Systemic lupus erythematosus",
+   "Th1 and Th2 cell differentiation",
+   "Toxoplasmosis",
+   "Tuberculosis",
+   "Cellular Response To Starvation R-HSA-9711097",
+   "Formation Of A Pool Of Free 40S Subunits R-HSA-72689",
+   "Formation Of Ternary Complex, And Subsequently, 43S Complex R-HSA-72695",
+   "Influenza Infection R-HSA-168255",
+   "Influenza Viral RNA Transcription And Replication R-HSA-168273",
+   "Interferon Signaling R-HSA-913531",
+   "Muscle Contraction R-HSA-397014",
+   "Nonsense Mediated Decay (NMD) Enhanced By Exon Junction Complex (EJC) R-HSA-975957"
+  ]
+ }
+}

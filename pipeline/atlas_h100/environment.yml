@@ -1,0 +1,36 @@
+# The GPU environment the published extraction ran under (Supplementary Table S6):
+# Python 3.12, PyTorch 2.13.0 + CUDA 13, NumPy 1.26.4, SciPy 1.16.3, cellxgene-census 1.18.0,
+# on an NVIDIA H100. Tahoe-x1 needed its own venv: torch 2.6.0 with flash-attn 2.7.4.post1.
+#
+# The local analysis (everything in ../scripts/) runs under ../../requirements.txt instead,
+# with NumPy 2.x; do not mix the two.
+name: atlas
+channels: [conda-forge, pytorch, nvidia]
+dependencies:
+  - python=3.12
+  - pytorch=2.13
+  - pytorch-cuda=13
+  - numpy=1.26.4
+  - scipy=1.16.3
+  - pandas
+  - scanpy
+  - anndata
+  - scikit-learn
+  - h5py
+  - tqdm
+  - pyyaml
+  - pip
+  - pip:
+      - cellxgene-census==1.18.0   # build_ts_corpus.py
+      - gseapy                     # data/build_genesets.py (Enrichr gene sets)
+      # per-adapter model dependencies; install only what you run
+      #   AIDO.Cell     genbio-ai ModelGenerator (gb_cell)
+      #   scGPT         bowang-lab/scGPT
+      #   tGPT          transformers (HF lixiangchun/transcriptome-gpt-1024-8-16-64)
+      #   scFoundation  biomap-research/scFoundation
+      #   GeneCompass   xCompass-AI/GeneCompass
+      #   MaxToki       transformers (HF theodoris-lab/MaxToki)
+      #   Geneformer    transformers (HF ctheodoris/Geneformer, Geneformer-V2-316M)
+      #   UCE           snap-stanford/UCE and its ESM2 token embeddings
+      #   C2S-Scale     transformers (HF vandijklab/C2S-Scale-Gemma-2-2B)
+      #   Tahoe-x1      tahoebio/tahoe-x1 (own venv: torch 2.6.0, flash-attn 2.7.4.post1)

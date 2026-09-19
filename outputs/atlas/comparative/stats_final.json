@@ -1,0 +1,49 @@
+{
+ "annotator": "top10 a>=3 GO/Re/KEGG<= 200 no-PPI, mid",
+ "n_perm_backbone": 250,
+ "n_perm_heldout": 150,
+ "backbone_null": {
+  ">=7": {
+   "real": 142,
+   "null_mean": 13.16,
+   "null_sd": 3.53,
+   "z": 36.5,
+   "p_emp": 0.00398406374501992,
+   "fold": 10.8
+  },
+  ">=8": {
+   "real": 78,
+   "null_mean": 3.46,
+   "null_sd": 2.04,
+   "z": 36.6,
+   "p_emp": 0.00398406374501992,
+   "fold": 22.5
+  },
+  ">=9": {
+   "real": 10,
+   "null_mean": 0.58,
+   "null_sd": 0.78,
+   "z": 12.1,
+   "p_emp": 0.00398406374501992,
+   "fold": 17.1
+  },
+  ">=10": {
+   "real": 2,
+   "null_mean": 0.03,
+   "null_sd": 0.18,
+   "z": 11.2,
+   "p_emp": 0.00398406374501992,
+   "fold": 20.0
+  }
+ },
+ "heldout_null": {
+  "observed_jaccard": 0.5,
+  "backbone_orig": 81,
+  "backbone_heldout": 81,
+  "null_mean": 0.0476,
+  "null_sd": 0.0612,
+  "null_max": 0.333,
+  "p_emp": 0.006622516556291391,
+  "fold": 10.5
+ }
+}

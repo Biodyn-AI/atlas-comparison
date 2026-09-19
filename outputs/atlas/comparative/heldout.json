@@ -1,0 +1,142 @@
+{
+ "models": [
+  "AIDO",
+  "C2S",
+  "Geneformer",
+  "MaxToki",
+  "UCE",
+  "tGPT",
+  "scFoundation",
+  "GeneCompass",
+  "Tahoe"
+ ],
+ "n_models": 9,
+ "excluded": [
+  "scGPT (torchtext ABI crash)"
+ ],
+ "layers": "5 depth-matched (0/25/50/75/100%)",
+ "held_out_core": 1477,
+ "orig_core_same_models_layers": 1528,
+ "core_jaccard": 0.518,
+ "pct_orig_core_reproduced": 67.1,
+ "mean_per_model_jaccard": 0.655,
+ "per_model": {
+  "AIDO": {
+   "held_out_concepts": 4639,
+   "orig_concepts": 4745,
+   "jaccard": 0.507,
+   "layers": [
+    0,
+    2,
+    4,
+    5,
+    7
+   ],
+   "orig_layers_found": 5
+  },
+  "C2S": {
+   "held_out_concepts": 14549,
+   "orig_concepts": 14630,
+   "jaccard": 0.835,
+   "layers": [
+    0,
+    6,
+    12,
+    19,
+    25
+   ],
+   "orig_layers_found": 5
+  },
+  "Geneformer": {
+   "held_out_concepts": 10712,
+   "orig_concepts": 10648,
+   "jaccard": 0.71,
+   "layers": [
+    0,
+    4,
+    8,
+    13,
+    17
+   ],
+   "orig_layers_found": 5
+  },
+  "MaxToki": {
+   "held_out_concepts": 8571,
+   "orig_concepts": 8419,
+   "jaccard": 0.629,
+   "layers": [
+    0,
+    2,
+    5,
+    8,
+    10
+   ],
+   "orig_layers_found": 5
+  },
+  "UCE": {
+   "held_out_concepts": 13923,
+   "orig_concepts": 13997,
+   "jaccard": 0.802,
+   "layers": [
+    0,
+    8,
+    16,
+    24,
+    32
+   ],
+   "orig_layers_found": 5
+  },
+  "tGPT": {
+   "held_out_concepts": 8569,
+   "orig_concepts": 8447,
+   "jaccard": 0.638,
+   "layers": [
+    0,
+    2,
+    4,
+    5,
+    7
+   ],
+   "orig_layers_found": 5
+  },
+  "scFoundation": {
+   "held_out_concepts": 8215,
+   "orig_concepts": 8257,
+   "jaccard": 0.609,
+   "layers": [
+    0,
+    3,
+    6,
+    8,
+    11
+   ],
+   "orig_layers_found": 5
+  },
+  "GeneCompass": {
+   "held_out_concepts": 3137,
+   "orig_concepts": 3182,
+   "jaccard": 0.419,
+   "layers": [
+    0,
+    3,
+    6,
+    8,
+    11
+   ],
+   "orig_layers_found": 5
+  },
+  "Tahoe": {
+   "held_out_concepts": 12198,
+   "orig_concepts": 12105,
+   "jaccard": 0.75,
+   "layers": [
+    0,
+    8,
+    16,
+    23,
+    31
+   ],
+   "orig_layers_found": 5
+  }
+ }
+}

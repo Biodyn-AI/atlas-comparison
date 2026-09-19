@@ -1,0 +1,64 @@
+{
+ "configs": [
+  {
+   "config": "top5 max200 a>=2 OR>=10",
+   "real_rate": 24.4,
+   "rand_rate": 23.8,
+   "real_core": 53,
+   "rand_core_mean": 130.6,
+   "rand_core_sd": 13.8,
+   "core_z": -5.6,
+   "beats_null": false
+  },
+  {
+   "config": "top5 max200 a>=2 OR>=20",
+   "real_rate": 24.4,
+   "rand_rate": 23.9,
+   "real_core": 53,
+   "rand_core_mean": 126.6,
+   "rand_core_sd": 12.0,
+   "core_z": -6.2,
+   "beats_null": false
+  },
+  {
+   "config": "top5 max100 a>=2 OR>=20",
+   "real_rate": 16.1,
+   "rand_rate": 12.9,
+   "real_core": 6,
+   "rand_core_mean": 6.2,
+   "rand_core_sd": 3.4,
+   "core_z": -0.0,
+   "beats_null": false
+  },
+  {
+   "config": "top10 max200 a>=3",
+   "real_rate": 8.9,
+   "rand_rate": 3.0,
+   "real_core": 2,
+   "rand_core_mean": 0.0,
+   "rand_core_sd": 0.0,
+   "core_z": 2.0,
+   "beats_null": false
+  },
+  {
+   "config": "top10 max200 a>=3 OR>=10",
+   "real_rate": 8.9,
+   "rand_rate": 3.0,
+   "real_core": 2,
+   "rand_core_mean": 0.0,
+   "rand_core_sd": 0.0,
+   "core_z": 2.0,
+   "beats_null": false
+  },
+  {
+   "config": "top20 max300 a>=4",
+   "real_rate": 12.2,
+   "rand_rate": 2.8,
+   "real_core": 2,
+   "rand_core_mean": 1.0,
+   "rand_core_sd": 0.7,
+   "core_z": 1.4,
+   "beats_null": false
+  }
+ ]
+}

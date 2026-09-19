@@ -1,0 +1,24 @@
+# The ten models of the atlas, as extracted. Every model runs on the same corpus
+# (build_ts_corpus.py, seed 0; the held-out draw is seed 1) with the same SAE
+# (common/sae.py: TopK, k = 32, dictionary 4 x d_model, MSE, Adam 3e-4, 4 epochs, seed 0).
+# `layers` is the count actually extracted with --all-layers; the five depth-matched
+# read-outs are 0 / 25 / 50 / 75 / 100 % of that count.
+#
+# How a model reads a cell, and what prior it carries, were verified against the model
+# papers and configs (docs/DECISIONS.md, item 11); Table S1 of the supplement carries the
+# same facts.
+
+corpus: outputs/atlas/ts3.h5ad          # 6,000 Tabula Sapiens cells: immune, kidney, lung
+sae: {k: 32, expansion: 4, epochs: 4, lr: 3.0e-4, max_positions: 500000, seed: 0}
+
+models:
+  AIDO:         {adapter: adapters.aido,         params: 10M,   d_model: 256,  layers: 8,  input: expression (all 19,264 genes), objective: MLM,            prior: none,          species: human,        checkpoint: genbio-ai/AIDO.Cell-10M}
+  scGPT:        {adapter: adapters.scgpt,        params: ~50M,  d_model: 512,  layers: 12, input: binned expression,            objective: MLM,            prior: none,          species: human,        checkpoint: bowang-lab/scGPT whole-human}
+  tGPT:         {adapter: adapters.tgpt,         params: ~120M, d_model: 1024, layers: 8,  input: rank order,                   objective: autoregressive, prior: none,          species: human,        checkpoint: lixiangchun/transcriptome-gpt-1024-8-16-64}
+  scFoundation: {adapter: adapters.scfoundation, params: 100M,  d_model: 768,  layers: 12, input: expression (read-depth aware), objective: MAE,            prior: none,          species: human,        checkpoint: biomap-research/scFoundation}
+  GeneCompass:  {adapter: adapters.genecompass,  params: 104M,  d_model: 768,  layers: 12, input: rank order + value,           objective: MLM (ID and value), prior: knowledge (GRN, family, promoter, co-expression), species: human+mouse, checkpoint: xCompass-AI/GeneCompass base}
+  MaxToki:      {adapter: adapters.maxtoki,      params: 217M,  d_model: 1232, layers: 11, input: rank order (corpus-scaled),   objective: autoregressive, prior: none,          species: human,        checkpoint: theodoris-lab/MaxToki 217M}
+  Geneformer:   {adapter: adapters.geneformer,   params: 316M,  d_model: 1152, layers: 18, input: rank order,                   objective: MLM,            prior: none,          species: human,        checkpoint: ctheodoris/Geneformer Geneformer-V2-316M}
+  UCE:          {adapter: adapters.uce,          params: 650M,  d_model: 1280, layers: 33, input: ESM2 protein tokens sampled by expression, objective: masked, prior: ESM,     species: multi,        checkpoint: snap-stanford/UCE 33-layer}
+  C2S:          {adapter: adapters.c2s,          params: 2B,    d_model: 2304, layers: 26, input: rank-ordered gene names as text, objective: autoregressive, prior: text (Gemma-2-2B), species: human+mouse, checkpoint: vandijklab/C2S-Scale-Gemma-2-2B}
+  Tahoe:        {adapter: adapters.tahoe,        params: 3B,    d_model: 2560, layers: 32, input: binned expression,            objective: MLM,            prior: none,          species: human,        checkpoint: tahoebio/Tahoe-x1 3B}

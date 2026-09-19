@@ -1,0 +1,27 @@
+{
+ "annotator": "calibrated: top-10, >=3 genes in GO_BP/KEGG/Reactome 5-200, no PPI, BH<=0.05",
+ "null": "per-model permutation of the annotated/unannotated label (gene degree held exactly fixed)",
+ "threshold_models": 5,
+ "n_models": 10,
+ "n_perm": 2000,
+ "layers": {
+  "AIDO": 4,
+  "C2S": 13,
+  "Geneformer": 9,
+  "MaxToki": 5,
+  "UCE": 16,
+  "scGPT": 6,
+  "tGPT": 4,
+  "scFoundation": 6,
+  "GeneCompass": 6,
+  "Tahoe": 16
+ },
+ "n_candidates_before_null": 207,
+ "global_null_mean": 248.8,
+ "global_null_sd": 6.2,
+ "global_z": -6.78,
+ "global_fold": 0.83,
+ "n_survivors": 0,
+ "alpha": 0.05,
+ "candidates": []
+}

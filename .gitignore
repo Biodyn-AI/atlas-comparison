@@ -1,0 +1,20 @@
+__pycache__/
+*.pyc
+.DS_Store
+# the manuscript is not published here; drop MANUSCRIPT.md and SUPPLEMENTARY.md into
+# outputs/atlas/comparative/ to run the audit
+outputs/atlas/comparative/MANUSCRIPT*
+outputs/atlas/comparative/SUPPLEMENTARY*
+outputs/atlas/comparative/REPORT.md
+outputs/atlas/comparative/REVIEWER_PREEMPT.md
+outputs/atlas/comparative/*.docx
+outputs/atlas/comparative/atlas_ts3*.html
+# per-run outputs and external inputs come from the release archive (docs/REPRODUCE.md)
+outputs/atlas/ts3_out/
+outputs/atlas/alllayer_cat/
+outputs/atlas/heldout_cat/
+outputs/atlas/cluster/
+outputs/atlas/genesets/
+outputs/atlas/pubmed/
+outputs/atlas/perturb/
+data/explorer_stub.json

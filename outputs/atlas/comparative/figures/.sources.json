@@ -1,0 +1,52 @@
+{
+ "make_fig14.py": {
+  "figures": [
+   "Fig1_overview",
+   "Fig4_annotation_free"
+  ],
+  "sources": {
+   "atlas_full_notf.json": "288fcedf94ee80ba",
+   "controls.json": "448e186184b2aa91",
+   "nonlinearity_alllayers.json": "536b70aa60afad5b"
+  }
+ },
+ "make_fig5.py": {
+  "figures": [
+   "Fig5_hypothesis"
+  ],
+  "sources": {
+   "hypothesis_final.json": "3b72c13fa26cf66b",
+   "hypothesis_perturb.json": "11589166f97da1cb",
+   "hypothesis_pubmed.json": "688191e260ecf4f0",
+   "hypothesis_sizematched.json": "a5f2ebc06429a6bb",
+   "hypothesis_trrust2.json": "6509ce0b7826ab52"
+  }
+ },
+ "make_figS1.py": {
+  "figures": [
+   "FigS1_svd_projection"
+  ],
+  "sources": {
+   "svd_projection_k.json": "bcddeaf917287228"
+  }
+ },
+ "make_figS2.py": {
+  "figures": [
+   "FigS2_depth_backbone"
+  ],
+  "sources": {
+   "depth_backbone.json": "41f9325a65b0c9a9"
+  }
+ },
+ "make_figures.py": {
+  "figures": [
+   "Fig2_artefact_and_fix",
+   "Fig3_backbone"
+  ],
+  "sources": {
+   "alllayer_null.json": "622e239bb282ce31",
+   "backbone_terms.json": "40c1ddae053078e6",
+   "controls.json": "448e186184b2aa91"
+  }
+ }
+}

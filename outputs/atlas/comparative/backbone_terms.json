@@ -1,0 +1,1174 @@
+{
+ "annotator": "top10 genes, >=3 in a curated GO/Reactome/KEGG set <= 200 genes, no PPI, BH<0.05, mid layer",
+ "n_models": 10,
+ "tiers": {
+  ">=7": [
+   {
+    "term": "Staphylococcus aureus infection",
+    "source": "KEGG",
+    "n_models": 10
+   },
+   {
+    "term": "Muscle Contraction R-HSA-397014",
+    "source": "Reactome",
+    "n_models": 10
+   },
+   {
+    "term": "defense response to bacterium (GO:0042742)",
+    "source": "GO_BP",
+    "n_models": 9
+   },
+   {
+    "term": "muscle contraction (GO:0006936)",
+    "source": "GO_BP",
+    "n_models": 9
+   },
+   {
+    "term": "negative regulation of cytokine production (GO:0001818)",
+    "source": "GO_BP",
+    "n_models": 9
+   },
+   {
+    "term": "Cell adhesion molecules",
+    "source": "KEGG",
+    "n_models": 9
+   },
+   {
+    "term": "Neutrophil extracellular trap formation",
+    "source": "KEGG",
+    "n_models": 9
+   },
+   {
+    "term": "Phagosome",
+    "source": "KEGG",
+    "n_models": 9
+   },
+   {
+    "term": "Rheumatoid arthritis",
+    "source": "KEGG",
+    "n_models": 9
+   },
+   {
+    "term": "Systemic lupus erythematosus",
+    "source": "KEGG",
+    "n_models": 9
+   },
+   {
+    "term": "SRP-dependent cotranslational protein targeting to membrane (GO:0006614)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "antigen processing and presentation of exogenous peptide antigen (GO:0002478)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "antigen processing and presentation of exogenous peptide antigen via MHC class II (GO:0019886)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "antigen processing and presentation of peptide antigen via MHC class II (GO:0002495)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "cellular response to metal ion (GO:0071248)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "cotranslational protein targeting to membrane (GO:0006613)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "cytoplasmic translation (GO:0002181)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "negative regulation of growth (GO:0045926)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "nuclear-transcribed mRNA catabolic process (GO:0000956)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "nuclear-transcribed mRNA catabolic process, nonsense-mediated decay (GO:0000184)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "peptide biosynthetic process (GO:0043043)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "protein targeting to ER (GO:0045047)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "rRNA metabolic process (GO:0016072)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "rRNA processing (GO:0006364)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "regulated exocytosis (GO:0045055)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "regulation of cellular response to stress (GO:0080135)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "regulation of mitotic cell cycle (GO:0007346)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "response to cytokine (GO:0034097)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "ribosome biogenesis (GO:0042254)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "Adrenergic signaling in cardiomyocytes",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Alcoholism",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Antigen processing and presentation",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Apoptosis",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Cardiac muscle contraction",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Estrogen signaling pathway",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Hematopoietic cell lineage",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "IL-17 signaling pathway",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Influenza A",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Kaposi sarcoma-associated herpesvirus infection",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Leishmaniasis",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Protein processing in endoplasmic reticulum",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Ribosome",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Th1 and Th2 cell differentiation",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Toxoplasmosis",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Tuberculosis",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Cap-dependent Translation Initiation R-HSA-72737",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Cellular Response To Starvation R-HSA-9711097",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Citric Acid (TCA) Cycle And Respiratory Electron Transport R-HSA-1428517",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Eukaryotic Translation Elongation R-HSA-156842",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Eukaryotic Translation Termination R-HSA-72764",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Formation Of A Pool Of Free 40S Subunits R-HSA-72689",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Formation Of Ternary Complex, And Subsequently, 43S Complex R-HSA-72695",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "GTP Hydrolysis And Joining Of 60S Ribosomal Subunit R-HSA-72706",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Influenza Infection R-HSA-168255",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Influenza Viral RNA Transcription And Replication R-HSA-168273",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Interferon Signaling R-HSA-913531",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "L13a-mediated Translational Silencing Of Ceruloplasmin Expression R-HSA-156827",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Major Pathway Of rRNA Processing In Nucleolus And Cytosol R-HSA-6791226",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Mitotic G1 Phase And G1/S Transition R-HSA-453279",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Nonsense Mediated Decay (NMD) Enhanced By Exon Junction Complex (EJC) R-HSA-975957",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Nonsense Mediated Decay (NMD) Independent Of Exon Junction Complex (EJC) R-HSA-975956",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Peptide Chain Elongation R-HSA-156902",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Peptide Ligand-Binding Receptors R-HSA-375276",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Regulation Of Expression Of SLITs And ROBOs R-HSA-9010553",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Respiratory Electron Transport R-HSA-611105",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Respiratory Electron Transport, ATP Synthesis By Chemiosmotic Coupling, Heat Production By Uncoupling Proteins R-HSA-163200",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Response Of EIF2AK4 (GCN2) To Amino Acid Deficiency R-HSA-9633012",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Ribosomal Scanning And Start Codon Recognition R-HSA-72702",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "SARS-CoV-2 Modulates Host Translation Machinery R-HSA-9754678",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "SARS-CoV-2-host Interactions R-HSA-9705683",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "SRP-dependent Cotranslational Protein Targeting To Membrane R-HSA-1799339",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Selenoamino Acid Metabolism R-HSA-2408522",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Selenocysteine Synthesis R-HSA-2408557",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Translation Initiation Complex Formation R-HSA-72649",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Viral mRNA Translation R-HSA-192823",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "mRNA Activation Upon Binding Of Cap-Binding Complex And eIFs, Subsequent Binding To 43S R-HSA-72662",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "rRNA Processing In Nucleus And Cytosol R-HSA-8868773",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "rRNA Processing R-HSA-72312",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "'de novo' posttranslational protein folding (GO:0051084)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "aerobic electron transport chain (GO:0019646)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "cation transport (GO:0006812)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "cellular divalent inorganic cation homeostasis (GO:0072503)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "cellular response to interferon-gamma (GO:0071346)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "cellular response to interleukin-1 (GO:0071347)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "cellular response to tumor necrosis factor (GO:0071356)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "cellular transition metal ion homeostasis (GO:0046916)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "chaperone cofactor-dependent protein refolding (GO:0051085)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "defense response to symbiont (GO:0140546)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "defense response to virus (GO:0051607)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "mitochondrial ATP synthesis coupled electron transport (GO:0042775)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "negative regulation of intracellular signal transduction (GO:1902532)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "positive regulation of ERK1 and ERK2 cascade (GO:0070374)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "positive regulation of I-kappaB kinase/NF-kappaB signaling (GO:0043123)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "positive regulation of NF-kappaB transcription factor activity (GO:0051092)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "protein autophosphorylation (GO:0046777)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "protein stabilization (GO:0050821)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "regulation of cellular response to heat (GO:1900034)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "regulation of heart contraction (GO:0008016)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "regulation of immune response (GO:0050776)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "response to lipopolysaccharide (GO:0032496)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "response to unfolded protein (GO:0006986)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "ribonucleoprotein complex assembly (GO:0022618)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "ribosomal large subunit biogenesis (GO:0042273)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "ribosome assembly (GO:0042255)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "synapse organization (GO:0050808)",
+    "source": "GO_BP",
+    "n_models": 7
+   },
+   {
+    "term": "Allograft rejection",
+    "source": "KEGG",
+    "n_models": 7
+   },
+   {
+    "term": "Asthma",
+    "source": "KEGG",
+    "n_models": 7
+   },
+   {
+    "term": "Autoimmune thyroid disease",
+    "source": "KEGG",
+    "n_models": 7
+   },
+   {
+    "term": "Chemokine signaling pathway",
+    "source": "KEGG",
+    "n_models": 7
+   },
+   {
+    "term": "Fluid shear stress and atherosclerosis",
+    "source": "KEGG",
+    "n_models": 7
+   },
+   {
+    "term": "Graft-versus-host disease",
+    "source": "KEGG",
+    "n_models": 7
+   },
+   {
+    "term": "Inflammatory bowel disease",
+    "source": "KEGG",
+    "n_models": 7
+   },
+   {
+    "term": "Intestinal immune network for IgA production",
+    "source": "KEGG",
+    "n_models": 7
+   },
+   {
+    "term": "Mineral absorption",
+    "source": "KEGG",
+    "n_models": 7
+   },
+   {
+    "term": "NF-kappa B signaling pathway",
+    "source": "KEGG",
+    "n_models": 7
+   },
+   {
+    "term": "Natural killer cell mediated cytotoxicity",
+    "source": "KEGG",
+    "n_models": 7
+   },
+   {
+    "term": "Non-alcoholic fatty liver disease",
+    "source": "KEGG",
+    "n_models": 7
+   },
+   {
+    "term": "Oxidative phosphorylation",
+    "source": "KEGG",
+    "n_models": 7
+   },
+   {
+    "term": "Oxytocin signaling pathway",
+    "source": "KEGG",
+    "n_models": 7
+   },
+   {
+    "term": "Protein digestion and absorption",
+    "source": "KEGG",
+    "n_models": 7
+   },
+   {
+    "term": "Salivary secretion",
+    "source": "KEGG",
+    "n_models": 7
+   },
+   {
+    "term": "TNF signaling pathway",
+    "source": "KEGG",
+    "n_models": 7
+   },
+   {
+    "term": "Th17 cell differentiation",
+    "source": "KEGG",
+    "n_models": 7
+   },
+   {
+    "term": "Type I diabetes mellitus",
+    "source": "KEGG",
+    "n_models": 7
+   },
+   {
+    "term": "Viral myocarditis",
+    "source": "KEGG",
+    "n_models": 7
+   },
+   {
+    "term": "Antigen processing-Cross Presentation R-HSA-1236975",
+    "source": "Reactome",
+    "n_models": 7
+   },
+   {
+    "term": "Antimicrobial Peptides R-HSA-6803157",
+    "source": "Reactome",
+    "n_models": 7
+   },
+   {
+    "term": "DNA Replication R-HSA-69306",
+    "source": "Reactome",
+    "n_models": 7
+   },
+   {
+    "term": "Disorders Of Transmembrane Transporters R-HSA-5619115",
+    "source": "Reactome",
+    "n_models": 7
+   },
+   {
+    "term": "ER-Phagosome Pathway R-HSA-1236974",
+    "source": "Reactome",
+    "n_models": 7
+   },
+   {
+    "term": "ESR-mediated Signaling R-HSA-8939211",
+    "source": "Reactome",
+    "n_models": 7
+   },
+   {
+    "term": "Epigenetic Regulation Of Gene Expression R-HSA-212165",
+    "source": "Reactome",
+    "n_models": 7
+   },
+   {
+    "term": "Fc Epsilon Receptor (FCERI) Signaling R-HSA-2454202",
+    "source": "Reactome",
+    "n_models": 7
+   },
+   {
+    "term": "G1/S Transition R-HSA-69206",
+    "source": "Reactome",
+    "n_models": 7
+   },
+   {
+    "term": "Immunoregulatory Interactions Between A Lymphoid And A non-Lymphoid Cell R-HSA-198933",
+    "source": "Reactome",
+    "n_models": 7
+   },
+   {
+    "term": "MHC Class II Antigen Presentation R-HSA-2132295",
+    "source": "Reactome",
+    "n_models": 7
+   },
+   {
+    "term": "PTEN Regulation R-HSA-6807070",
+    "source": "Reactome",
+    "n_models": 7
+   },
+   {
+    "term": "Platelet Degranulation R-HSA-114608",
+    "source": "Reactome",
+    "n_models": 7
+   },
+   {
+    "term": "Protein Localization R-HSA-9609507",
+    "source": "Reactome",
+    "n_models": 7
+   },
+   {
+    "term": "Response To Elevated Platelet Cytosolic Ca2+ R-HSA-76005",
+    "source": "Reactome",
+    "n_models": 7
+   },
+   {
+    "term": "S Phase R-HSA-69242",
+    "source": "Reactome",
+    "n_models": 7
+   },
+   {
+    "term": "Synthesis Of DNA R-HSA-69239",
+    "source": "Reactome",
+    "n_models": 7
+   }
+  ],
+  ">=8": [
+   {
+    "term": "Staphylococcus aureus infection",
+    "source": "KEGG",
+    "n_models": 10
+   },
+   {
+    "term": "Muscle Contraction R-HSA-397014",
+    "source": "Reactome",
+    "n_models": 10
+   },
+   {
+    "term": "defense response to bacterium (GO:0042742)",
+    "source": "GO_BP",
+    "n_models": 9
+   },
+   {
+    "term": "muscle contraction (GO:0006936)",
+    "source": "GO_BP",
+    "n_models": 9
+   },
+   {
+    "term": "negative regulation of cytokine production (GO:0001818)",
+    "source": "GO_BP",
+    "n_models": 9
+   },
+   {
+    "term": "Cell adhesion molecules",
+    "source": "KEGG",
+    "n_models": 9
+   },
+   {
+    "term": "Neutrophil extracellular trap formation",
+    "source": "KEGG",
+    "n_models": 9
+   },
+   {
+    "term": "Phagosome",
+    "source": "KEGG",
+    "n_models": 9
+   },
+   {
+    "term": "Rheumatoid arthritis",
+    "source": "KEGG",
+    "n_models": 9
+   },
+   {
+    "term": "Systemic lupus erythematosus",
+    "source": "KEGG",
+    "n_models": 9
+   },
+   {
+    "term": "SRP-dependent cotranslational protein targeting to membrane (GO:0006614)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "antigen processing and presentation of exogenous peptide antigen (GO:0002478)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "antigen processing and presentation of exogenous peptide antigen via MHC class II (GO:0019886)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "antigen processing and presentation of peptide antigen via MHC class II (GO:0002495)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "cellular response to metal ion (GO:0071248)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "cotranslational protein targeting to membrane (GO:0006613)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "cytoplasmic translation (GO:0002181)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "negative regulation of growth (GO:0045926)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "nuclear-transcribed mRNA catabolic process (GO:0000956)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "nuclear-transcribed mRNA catabolic process, nonsense-mediated decay (GO:0000184)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "peptide biosynthetic process (GO:0043043)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "protein targeting to ER (GO:0045047)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "rRNA metabolic process (GO:0016072)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "rRNA processing (GO:0006364)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "regulated exocytosis (GO:0045055)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "regulation of cellular response to stress (GO:0080135)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "regulation of mitotic cell cycle (GO:0007346)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "response to cytokine (GO:0034097)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "ribosome biogenesis (GO:0042254)",
+    "source": "GO_BP",
+    "n_models": 8
+   },
+   {
+    "term": "Adrenergic signaling in cardiomyocytes",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Alcoholism",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Antigen processing and presentation",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Apoptosis",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Cardiac muscle contraction",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Estrogen signaling pathway",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Hematopoietic cell lineage",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "IL-17 signaling pathway",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Influenza A",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Kaposi sarcoma-associated herpesvirus infection",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Leishmaniasis",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Protein processing in endoplasmic reticulum",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Ribosome",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Th1 and Th2 cell differentiation",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Toxoplasmosis",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Tuberculosis",
+    "source": "KEGG",
+    "n_models": 8
+   },
+   {
+    "term": "Cap-dependent Translation Initiation R-HSA-72737",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Cellular Response To Starvation R-HSA-9711097",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Citric Acid (TCA) Cycle And Respiratory Electron Transport R-HSA-1428517",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Eukaryotic Translation Elongation R-HSA-156842",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Eukaryotic Translation Termination R-HSA-72764",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Formation Of A Pool Of Free 40S Subunits R-HSA-72689",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Formation Of Ternary Complex, And Subsequently, 43S Complex R-HSA-72695",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "GTP Hydrolysis And Joining Of 60S Ribosomal Subunit R-HSA-72706",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Influenza Infection R-HSA-168255",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Influenza Viral RNA Transcription And Replication R-HSA-168273",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Interferon Signaling R-HSA-913531",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "L13a-mediated Translational Silencing Of Ceruloplasmin Expression R-HSA-156827",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Major Pathway Of rRNA Processing In Nucleolus And Cytosol R-HSA-6791226",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Mitotic G1 Phase And G1/S Transition R-HSA-453279",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Nonsense Mediated Decay (NMD) Enhanced By Exon Junction Complex (EJC) R-HSA-975957",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Nonsense Mediated Decay (NMD) Independent Of Exon Junction Complex (EJC) R-HSA-975956",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Peptide Chain Elongation R-HSA-156902",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Peptide Ligand-Binding Receptors R-HSA-375276",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Regulation Of Expression Of SLITs And ROBOs R-HSA-9010553",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Respiratory Electron Transport R-HSA-611105",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Respiratory Electron Transport, ATP Synthesis By Chemiosmotic Coupling, Heat Production By Uncoupling Proteins R-HSA-163200",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Response Of EIF2AK4 (GCN2) To Amino Acid Deficiency R-HSA-9633012",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Ribosomal Scanning And Start Codon Recognition R-HSA-72702",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "SARS-CoV-2 Modulates Host Translation Machinery R-HSA-9754678",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "SARS-CoV-2-host Interactions R-HSA-9705683",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "SRP-dependent Cotranslational Protein Targeting To Membrane R-HSA-1799339",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Selenoamino Acid Metabolism R-HSA-2408522",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Selenocysteine Synthesis R-HSA-2408557",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Translation Initiation Complex Formation R-HSA-72649",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "Viral mRNA Translation R-HSA-192823",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "mRNA Activation Upon Binding Of Cap-Binding Complex And eIFs, Subsequent Binding To 43S R-HSA-72662",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "rRNA Processing In Nucleus And Cytosol R-HSA-8868773",
+    "source": "Reactome",
+    "n_models": 8
+   },
+   {
+    "term": "rRNA Processing R-HSA-72312",
+    "source": "Reactome",
+    "n_models": 8
+   }
+  ],
+  ">=9": [
+   {
+    "term": "Staphylococcus aureus infection",
+    "source": "KEGG",
+    "n_models": 10
+   },
+   {
+    "term": "Muscle Contraction R-HSA-397014",
+    "source": "Reactome",
+    "n_models": 10
+   },
+   {
+    "term": "defense response to bacterium (GO:0042742)",
+    "source": "GO_BP",
+    "n_models": 9
+   },
+   {
+    "term": "muscle contraction (GO:0006936)",
+    "source": "GO_BP",
+    "n_models": 9
+   },
+   {
+    "term": "negative regulation of cytokine production (GO:0001818)",
+    "source": "GO_BP",
+    "n_models": 9
+   },
+   {
+    "term": "Cell adhesion molecules",
+    "source": "KEGG",
+    "n_models": 9
+   },
+   {
+    "term": "Neutrophil extracellular trap formation",
+    "source": "KEGG",
+    "n_models": 9
+   },
+   {
+    "term": "Phagosome",
+    "source": "KEGG",
+    "n_models": 9
+   },
+   {
+    "term": "Rheumatoid arthritis",
+    "source": "KEGG",
+    "n_models": 9
+   },
+   {
+    "term": "Systemic lupus erythematosus",
+    "source": "KEGG",
+    "n_models": 9
+   }
+  ],
+  ">=10": [
+   {
+    "term": "Staphylococcus aureus infection",
+    "source": "KEGG",
+    "n_models": 10
+   },
+   {
+    "term": "Muscle Contraction R-HSA-397014",
+    "source": "Reactome",
+    "n_models": 10
+   }
+  ]
+ }
+}

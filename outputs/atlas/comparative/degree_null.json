@@ -1,0 +1,43 @@
+{
+ "annotator": "top10 a>=3 GO/Re/KEGG<= 200 no-PPI, mid",
+ "n_perm": 250,
+ "n_bins": 41,
+ "tiers": {
+  ">=7": {
+   "real": 142,
+   "degree_null_mean": 8.3,
+   "degree_null_sd": 3.73,
+   "degree_z": 35.9,
+   "degree_p": 0.00398406374501992,
+   "degree_fold": 17.1,
+   "uniform_null_mean": 13.4
+  },
+  ">=8": {
+   "real": 78,
+   "degree_null_mean": 1.32,
+   "degree_null_sd": 1.25,
+   "degree_z": 61.6,
+   "degree_p": 0.00398406374501992,
+   "degree_fold": 59.3,
+   "uniform_null_mean": 3.5
+  },
+  ">=9": {
+   "real": 10,
+   "degree_null_mean": 0.12,
+   "degree_null_sd": 0.35,
+   "degree_z": 28.3,
+   "degree_p": 0.00398406374501992,
+   "degree_fold": 83.3,
+   "uniform_null_mean": 0.59
+  },
+  ">=10": {
+   "real": 2,
+   "degree_null_mean": 0.01,
+   "degree_null_sd": 0.09,
+   "degree_z": 22.4,
+   "degree_p": 0.00398406374501992,
+   "degree_fold": 20.0,
+   "uniform_null_mean": 0.02
+  }
+ }
+}

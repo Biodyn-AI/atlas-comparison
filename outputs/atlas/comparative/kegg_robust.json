@@ -1,0 +1,75 @@
+{
+ "config": "top10 a3 max200",
+ "n_perm": 20,
+ "full_GO_KEGG_Reactome": {
+  ">=7": {
+   "real": 142,
+   "null": 13.8,
+   "fold": 10.3
+  },
+  ">=8": {
+   "real": 78,
+   "null": 4.4,
+   "fold": 17.7
+  },
+  ">=9": {
+   "real": 10,
+   "null": 0.6,
+   "fold": 18.2
+  },
+  ">=10": {
+   "real": 2,
+   "null": 0.0,
+   "fold": 6.7
+  }
+ },
+ "dropKEGG_GO_Reactome": {
+  ">=7": {
+   "real": 100,
+   "null": 11.1,
+   "fold": 9.0
+  },
+  ">=8": {
+   "real": 56,
+   "null": 3.0,
+   "fold": 19.0
+  },
+  ">=9": {
+   "real": 4,
+   "null": 0.7,
+   "fold": 5.7
+  },
+  ">=10": {
+   "real": 1,
+   "null": 0.0,
+   "fold": 3.3
+  }
+ },
+ "ge8_full": 78,
+ "ge8_dropKEGG": 56,
+ "kegg_sourced_in_ge8": 22,
+ "kegg_terms_in_ge8": [
+  "Adrenergic signaling in cardiomyocytes",
+  "Alcoholism",
+  "Antigen processing and presentation",
+  "Apoptosis",
+  "Cardiac muscle contraction",
+  "Cell adhesion molecules",
+  "Estrogen signaling pathway",
+  "Hematopoietic cell lineage",
+  "IL-17 signaling pathway",
+  "Influenza A",
+  "Kaposi sarcoma-associated herpesvirus infection",
+  "Leishmaniasis",
+  "Neutrophil extracellular trap formation",
+  "Phagosome",
+  "Protein processing in endoplasmic reticulum",
+  "Rheumatoid arthritis",
+  "Ribosome",
+  "Staphylococcus aureus infection",
+  "Systemic lupus erythematosus",
+  "Th1 and Th2 cell differentiation",
+  "Toxoplasmosis",
+  "Tuberculosis"
+ ]
+}

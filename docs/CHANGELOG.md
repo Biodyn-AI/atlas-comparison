@@ -1,0 +1,129 @@
+# Changelog
+
+Subjects of the commits that led to the published state, oldest first. The repository history was collapsed to a single commit on 2026-09-19 because a 61 MB page had been committed 96 times and a clone pulled 2 GB for 220 MB of content.
+
+- 2026-09-02  Comparative SAE feature atlas: interactive page + reproducible pipeline
+- 2026-09-02  10-model atlas: add scFoundation (100M) + GeneCompass (104M)
+- 2026-09-02  Fix model-count prose (ten), refresh index.html to corrected 10-model build
+- 2026-09-02  Hero: frame universal core as depth (391 in all 10 + 1,420 in >=8), dynamic by N
+- 2026-09-02  Fix panels: populate Analysis 13 (inductive axis) + 14 (new biology), clarify annotation chart, add linearity legend, drop dendrogram
+- 2026-09-02  Add Analysis 16 — feature economy & frontier (resolution, polysemanticity, geometry vs biology, tissue-vs-universality tradeoff, gene universality, rare-concept frontier)
+- 2026-09-02  Add Analysis 17 — cross-layer circuits (null) + hard-cell agreement (err-corr 0.54)
+- 2026-09-02  Redesign phase: add animated pipeline intro (cell to model to features to biology) + Start-here nav
+- 2026-09-02  Redesign phase 2: Researcher/Simple mode toggle (Researcher default) + 5 chapter dividers + clean section titles
+- 2026-09-02  Phase 2b (axes): readable axis labels on universality, depth, tissue, scaling, acquisition curve; plain-language X
+- 2026-09-03  Phase 2b: plain-language SVD + Explorer sections (de-jargon, lead with what to do)
+- 2026-09-03  Phase 2b: plainer section/panel titles (architecture-vs-biology, features-per-idea, tissue identity); coherent Simple-mode story
+- 2026-09-03  Phase 3: Explorer as a playground — numbered steps, rich default (Geneformer), model-compare chips, Gene-Search pointer, plain intro
+- 2026-09-03  Merge Similarity + CKA into one 'How alike are the models?' with biology<->geometry toggle (default biology, simple-visible); remove duplicate section
+- 2026-09-03  Modules: colour nodes by consistent biological theme (not per-layer module index), theme key + gene-family mapping, plain 'what am I looking at' + explain layout/stray arcs
+- 2026-09-03  Explorer: animated layer/model transitions (points settle from centre); reframe purpose (searchable feature browser vs Modules structure; diffuse cloud = superposition)
+- 2026-09-03  Modules: animated layer/model transitions (force-graph nodes settle + edges fade in on layer change)
+- 2026-09-03  Modules: click a theme in the key to highlight its nodes (others dimmed); selection persists across layers so you can follow one theme through depth
+- 2026-09-03  Redesign polish: reorder into 6 balanced chapters (findings before use-cases), lead the playground with Modules; layer-by-layer CKA -> expert; add glossary (feature/concept/module/annotation) + colour guide; de-jargon Explorer title
+- 2026-09-03  Add top-N gene cutoff experiment: interactive 5/10/15/20 sweep panel showing annotation rate rises while median odds-ratio collapses (wider net, not more real biology) — top-5 is the cross-model-fair choice
+- 2026-09-03  Annotation panel: add GSEA as a second method (toggle Fisher·counts / GSEA·ranks)
+- 2026-09-03  GSEA second method: load real cluster results (rank-based enrichment over full ~19k-gene ranking, all 10 models)
+- 2026-09-03  Add 'concentration vs breadth' readout: diverging bars of Fisher(top5)-GSEA per model + cross-check vs inductive axes
+- 2026-09-03  All-layer concepts: count each model's full concept repertoire across every layer (not just mid)
+- 2026-09-03  Universality narrative: rewrite for the all-layer spectrum shape (rises toward shared)
+- 2026-09-03  Coherence polish: signpost that the method panels (top-N/GSEA/concentration) are mid-layer while coverage bars are all-layer; fix stale view counts (Three/Four -> Several, panels grew to 5)
+- 2026-09-03  Integrate reviewer controls + land the claims honestly
+- 2026-09-04  Fold in SAE-seed CI (control #3): mid-layer core 494±14 across 3 seeds (CV 2.8%), rates ±0.66pp
+- 2026-09-04  Round-2 controls: dedup core (R1), superposition null (R6), vocab-fair blind spots (R5), scaling CI (R7)
+- 2026-09-05  All-layer SAE-seed CI: universal core 2083±42 across 3 seeds (CV 2.0%), full depth
+- 2026-09-05  Held-out replication (R4): universal core reproduces on an independent 6000-cell sample
+- 2026-09-05  Round-3 residual controls: p-calibration null + capacity + honest limits (all critique items closed)
+- 2026-09-06  Land the hero on the random-gene null: the universal-core count does NOT survive it (retracted)
+- 2026-09-06  Recalibration rescues a modest, real backbone: ~78 concepts at >=8/10 models, ~20x over the random-gene null
+- 2026-09-06  Glossary reflects the honest core: Annotation card notes permissive-vs-calibrated, Concept card notes PPI weaker, + 'how far to trust the shared core' (~78 at >=8, not ~2000 at all 10)
+- 2026-09-06  Backbone survives its own scrutiny: robust across calibrated configs + ~2/3 specific biology
+- 2026-09-06  Close the double standard + add n=10 CIs
+- 2026-09-06  Round-5 controls: calibrated backbone replicates on held-out (8x over null); survivors (CKA, SVD-var) pass their own nulls
+- 2026-09-06  Publication-grade stats + demote concentration (Bioinformatics-ready)
+- 2026-09-07  Put the main text on ONE strict annotator: depth + coverage recomputed calibrated; GSEA panel -> supplementary
+- 2026-09-07  Degree-matched null (gene-popularity control) + honest null framing
+- 2026-09-07  Atlas: honest calibrated framing + use-cases, colour legend, offline Ask helper
+- 2026-09-08  Atlas: add 'considered but out of scope' box (State, X-Cell) + name them in the chat
+- 2026-09-08  Atlas redesign: use-case-first tab shell (Overview / Choose a model / Compare / Genes & biology / Findings)
+- 2026-09-08  Atlas cleanup: plain copy, drop Researcher/Simple switch, remove all personal-name references
+- 2026-09-09  Atlas: reframe the universal-core section as the calibrated backbone
+- 2026-09-09  Atlas UX fixes from a first-time-user pass
+- 2026-09-09  Atlas: fix mobile horizontal overflow + add Code & data link
+- 2026-09-09  Atlas UX polish: mobile tab-scroll hint, shorter verdict, controls link
+- 2026-09-10  Atlas copy: fix the three/four words count, strip pompous phrasing
+- 2026-09-10  Atlas: hoverable ? glossary on jargon (CKA, PCA, SAE, null, Jaccard, ...)
+- 2026-09-10  Atlas: glossary placement + plainer table headers, from a fresh user pass
+- 2026-09-10  Atlas: fix black chart labels, trim redundant panels, tune glossary
+- 2026-09-10  Remove the untested 'new biology' panel; fix stale 7-of-10 model numbers
+- 2026-09-10  README: align every claim with the manuscript; ship the control scripts
+- 2026-09-10  Add a held-out prediction test: SAE features as a hypothesis generator
+- 2026-09-10  README: state precisely how TRRUST is held out (permissive annotator does use it)
+- 2026-09-11  Validate the predictions against literature and against perturbation
+- 2026-09-11  Quantify why no new biology was found: the evidence, not the models
+- 2026-09-11  Add genelib: one place for gene symbols and feature catalogues
+- 2026-09-11  Audit every number in the manuscript against the file that produced it
+- 2026-09-12  Recompute the depth sweep at 250 permutations; disclose the held-out scope
+- 2026-09-12  Reviewer pass: unselected headline, size-matched model comparison, absolute precision
+- 2026-09-12  Atlas: carry the reviewer corrections onto the site
+- 2026-09-12  Atlas: add the independent evidence and answer the new-biology question
+- 2026-09-12  Atlas: Use cases belong to Overview; stop claiming SAE >> PCA on the front page
+- 2026-09-13  Second reviewer pass: SAE health, a stale cross-reference, and the missing scripts
+- 2026-09-14  Third reviewer pass: the supplement did not match the paper it supplements
+- 2026-09-14  Fourth reviewer pass: a figure still showed the numbers we replaced
+- 2026-09-14  Add a figure-freshness check, and one command that runs every audit
+- 2026-09-14  README: the CKA floor margin is 42.8x, not 'more than tenfold'
+- 2026-09-14  Fifth reviewer pass: the supplement's hand-written tables had drifted too
+- 2026-09-14  Audit the supplement too, and split the environment table in two
+- 2026-09-14  Sixth reviewer pass: the same superseded number, in a fourth place
+- 2026-09-14  Make the published code runnable after a clone
+- 2026-09-14  Seventh pass: the audit passed checks that never ran
+- 2026-09-14  Eighth pass: a Discussion paragraph rested on numbers with no source file
+- 2026-09-15  Ninth pass: a reported z-score was not reproducible, and 31 derived numbers had no check
+- 2026-09-15  Remove personal-name references from the public code and docs
+- 2026-09-15  Bring the two public repos to identical content
+- 2026-09-15  The site's prediction panel was hand-assembled, and still showed the old z
+- 2026-09-15  Figure stamping had to be earned, not asserted
+- 2026-09-15  Reviewer pass: permutation counts, an unsourced control, a false biotype, a mixed-source table
+- 2026-09-15  Atlas read as a first-time user: the chooser recommended the wrong model, and Findings contradicted itself
+- 2026-09-15  UX pass: progressive disclosure, secondary navigation, one name per model, mobile nav
+- 2026-09-15  Dark and light themes, with a toggle and the system preference as default
+- 2026-09-15  Plain language: remove the flourishes and filler from the site copy
+- 2026-09-16  Less: the site keeps the essentials and folds the rest
+- 2026-09-16  Glossary tooltip readable in the light theme; last two 19.5x -> 22.5x
+- 2026-09-16  Gene search leads somewhere, and the predicted pairs can be browsed and downloaded
+- 2026-09-16  Scale panel: say why five layers, drop the permissive toggle, separate the labels
+- 2026-09-16  Design pass from user feedback: nine points
+- 2026-09-16  Explorer: the UMAP is gone; the panel now says what a layer encodes
+- 2026-09-16  A worked example on the Overview; the explorer keeps its map and explains itself in words
+- 2026-09-16  Explorer groups: say how many features actually share the label
+- 2026-09-16  Explorer explains why co-firing groups scatter in one model and bunch in another
+- 2026-09-16  Near-duplicate features: measured, and shown not to carry the prediction result
+- 2026-09-17  Why some models carry a block of near-duplicate features and others do not
+- 2026-09-17  Overview rebuilt: what it is, then how to use it; findings numbers move to Findings
+- 2026-09-17  The "how to use it" section was hidden by a stale rule
+- 2026-09-17  "Not in a database" is not "new": the site says so, and the same-family rule now works
+- 2026-09-17  Sweep of the site copy for typed-in facts; one more found and made data-driven
+- 2026-09-17  Folded readings read against the data: five typed-in facts replaced by computed ones
+- 2026-09-17  Paper sweep closed: 10 more audit checks; module labels measured on the page; unsourced 99.4 % dropped
+- 2026-09-17  Overview opens with what a single-cell foundation model does: input, model, output, and four measured reasons the choice matters
+- 2026-09-17  Audit: the Introduction's 8-33 layer range is checked against the per-model layer counts
+- 2026-09-17  Restyle as a plain scientific resource: light default, serif headings, one accent, no gradients, glow or animation; headings as statements; tabs without numerals; quieter model palette; build date in the footer
+- 2026-09-17  Warm editorial look: cream paper, one brick-red accent for links and key numbers, Fraunces display type, model cast list in the hero, coloured rules on cards
+- 2026-09-17  Neutral, conventional design: white background, Inter, dark text, underlined blue links, grey hairlines, filled selected buttons, visible keyboard focus
+- 2026-09-17  Palette 230: Grenadine Pink and two Turquoise Greens on off-white paper; coral for accents and fills, mint for secondary panels and the second data series
+- 2026-09-17  Palette 341 with a dark cover: Grenadine Pink accents, Cossack Green labels and second series, pale blue surfaces, Space Grotesk display type, proportional model strip in the header
+- 2026-09-18  UX checklist pass: page drops from 61 MB to 12 MB (feature maps fetched on demand), html lang/main/skip link/description/favicon, 4.5:1 text contrast, 12 px minimum, 32 px targets, URL follows the open tab and deep links work, reduced-motion honoured, one-row mobile header, 404 page
+- 2026-09-18  Predictions panel no longer implies novelty: absent from the regulatory databases is not absent from the literature; paper counts are the corroboration, the 171 never-co-mentioned pairs are pointed to under Candidate new links
+- 2026-09-18  Panel-by-panel consistency pass: backbone is >=8 of 10 not all ten, one fold figure (22.5x) everywhere, feature/programme overclaim softened, roster columns labelled permissive and uninformative, stale scPRINT and annotator notes removed, depth reading no longer contradicts itself, module-vocabulary claim matched to its table; the injector's eight->ten word rewrite removed
+- 2026-09-18  Input cards corrected against the model papers: GeneCompass ranks genes and embeds the value, C2S-Scale reads rank-ordered names, UCE samples genes by expression; three models carry priors, so 'nobody tells it' is gone; the block mechanism no longer rests on magnitude input
+- 2026-09-18  Architecture claims verified against the model papers and corrected
+- 2026-09-18  Remove dead code for three panels deleted in the lighten pass: hardest cell types, top-N cutoff sweep, concentration vs breadth (54 lines), plus the orphaned theme-key clear handler; every getElementById in the page now resolves
+- 2026-09-18  Figures and the held-out baseline checked by eye, not just by the audit
+- 2026-09-19  Figure 2 answers the reviewer questions on its face
+- 2026-09-19  Figure 2B becomes a dot plot: on a log axis a bar's length is not proportional to its value, so the bars overstated the near-zero nulls; null points now carry +-1 SD whiskers, clipped at the axis floor and declared in both the panel and the caption
+- 2026-09-19  Fig 4C panel title says tissue identity, matching the corrected caption
+- 2026-09-19  The remaining figures answer the same questions Fig 2 now does
+- 2026-09-19  Third pass: the schematic branched the annotation-free track off the SAE, and Fig 2A never said which layer it tested
+- 2026-09-19  Repository restructured for handover
+- 2026-09-19  Audit anchors follow the manuscript's plainer phrasing

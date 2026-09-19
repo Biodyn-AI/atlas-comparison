@@ -1,0 +1,28 @@
+{
+ "n_perm": 100,
+ "layer": "mid",
+ "models": [
+  "AIDO",
+  "C2S",
+  "Geneformer",
+  "MaxToki",
+  "UCE",
+  "scGPT",
+  "tGPT",
+  "scFoundation",
+  "GeneCompass",
+  "Tahoe"
+ ],
+ "real_core": 353,
+ "real_mean_jaccard": 0.334,
+ "real_dedup_core_j0.5": 241,
+ "rand_core_mean": 588.7,
+ "rand_core_sd": 38.8,
+ "rand_core_max": 697,
+ "core_z": -6.1,
+ "core_fold_over_null": 0.6,
+ "rand_jaccard_mean": 0.367,
+ "rand_dedup_core_mean": 325.6,
+ "two_random_draw_core_jaccard": 0.499,
+ "heldout_observed_core_jaccard": 0.518
+}

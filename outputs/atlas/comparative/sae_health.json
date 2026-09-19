@@ -1,0 +1,87 @@
+{
+ "threshold": 0.1,
+ "note": "dead_frac per layer, read from each layer's feature catalogue",
+ "models": {
+  "AIDO": {
+   "n_layers": 8,
+   "mid": 0.0,
+   "mean": 0.0,
+   "max": 0.0,
+   "layers_over_threshold": 0
+  },
+  "C2S": {
+   "n_layers": 26,
+   "mid": 0.1,
+   "mean": 4.5,
+   "max": 29.9,
+   "layers_over_threshold": 3
+  },
+  "Geneformer": {
+   "n_layers": 18,
+   "mid": 0.0,
+   "mean": 0.0,
+   "max": 0.0,
+   "layers_over_threshold": 0
+  },
+  "MaxToki": {
+   "n_layers": 11,
+   "mid": 0.0,
+   "mean": 0.0,
+   "max": 0.0,
+   "layers_over_threshold": 0
+  },
+  "UCE": {
+   "n_layers": 33,
+   "mid": 0.0,
+   "mean": 3.0,
+   "max": 25.1,
+   "layers_over_threshold": 5
+  },
+  "scGPT": {
+   "n_layers": 12,
+   "mid": 0.0,
+   "mean": 0.0,
+   "max": 0.0,
+   "layers_over_threshold": 0
+  },
+  "tGPT": {
+   "n_layers": 8,
+   "mid": 12.2,
+   "mean": 22.5,
+   "max": 58.3,
+   "layers_over_threshold": 4
+  },
+  "scFoundation": {
+   "n_layers": 12,
+   "mid": 0.0,
+   "mean": 0.0,
+   "max": 0.0,
+   "layers_over_threshold": 0
+  },
+  "GeneCompass": {
+   "n_layers": 12,
+   "mid": 0.0,
+   "mean": 0.0,
+   "max": 0.0,
+   "layers_over_threshold": 0
+  },
+  "Tahoe": {
+   "n_layers": 32,
+   "mid": 1.7,
+   "mean": 2.7,
+   "max": 13.3,
+   "layers_over_threshold": 2
+  }
+ },
+ "total_layers": 172,
+ "layers_over_threshold": 14,
+ "pct_layers_over_threshold": 8.1,
+ "clean_models": [
+  "AIDO",
+  "Geneformer",
+  "MaxToki",
+  "scGPT",
+  "scFoundation",
+  "GeneCompass"
+ ]
+}

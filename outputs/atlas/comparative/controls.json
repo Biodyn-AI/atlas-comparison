@@ -1,0 +1,1521 @@
+{
+ "null": {
+  "core_observed": 2267,
+  "jaccard_observed": 0.534,
+  "universe": 19293,
+  "core_vs_uniform": {
+   "observed": 2267.0,
+   "null_mean": 50.1,
+   "null_sd": 7.1,
+   "z": 310.2,
+   "p_emp": 0.001
+  },
+  "core_vs_sizeweighted": {
+   "observed": 2267.0,
+   "null_mean": 1471.1,
+   "null_sd": 24.8,
+   "z": 32.1,
+   "p_emp": 0.001
+  },
+  "jaccard_vs_uniform": {
+   "observed": 0.5343021155260302,
+   "null_mean": 0.4,
+   "null_sd": 0.0,
+   "z": 391.8,
+   "p_emp": 0.001
+  },
+  "jaccard_vs_sizeweighted": {
+   "observed": 0.5343021155260302,
+   "null_mean": 0.5,
+   "null_sd": 0.0,
+   "z": 90.0,
+   "p_emp": 0.001
+  }
+ },
+ "equal_layer": {
+  "min_layers": 8,
+  "core_mid": 353,
+  "spectrum_mid": {
+   "1": 3665,
+   "2": 2292,
+   "3": 1601,
+   "4": 1326,
+   "5": 1077,
+   "6": 866,
+   "7": 932,
+   "8": 827,
+   "9": 516,
+   "10": 353
+  },
+  "core_equal_layer": 2005,
+  "spectrum_equal": {
+   "1": 1978,
+   "2": 1951,
+   "3": 1728,
+   "4": 1557,
+   "5": 1472,
+   "6": 1474,
+   "7": 1564,
+   "8": 1907,
+   "9": 2638,
+   "10": 2005
+  },
+  "core_all_layer": 2267,
+  "spectrum_all": {
+   "1": 1281,
+   "2": 1596,
+   "3": 1892,
+   "4": 1858,
+   "5": 1760,
+   "6": 1788,
+   "7": 1814,
+   "8": 2138,
+   "9": 2899,
+   "10": 2267
+  },
+  "n_layers": {
+   "AIDO": 8,
+   "C2S": 26,
+   "Geneformer": 18,
+   "MaxToki": 11,
+   "UCE": 33,
+   "scGPT": 12,
+   "tGPT": 8,
+   "scFoundation": 12,
+   "GeneCompass": 12,
+   "Tahoe": 32
+  }
+ },
+ "capacity": {
+  "n_concepts": {
+   "AIDO": 5791,
+   "C2S": 17223,
+   "Geneformer": 13744,
+   "MaxToki": 10344,
+   "UCE": 17428,
+   "scGPT": 9681,
+   "tGPT": 9918,
+   "scFoundation": 10692,
+   "GeneCompass": 4446,
+   "Tahoe": 16405
+  },
+  "d_sae": {
+   "AIDO": 1024,
+   "C2S": 9216,
+   "Geneformer": 4608,
+   "MaxToki": 4928,
+   "UCE": 5120,
+   "scGPT": 2048,
+   "tGPT": 4096,
+   "scFoundation": 3072,
+   "GeneCompass": 3072,
+   "Tahoe": 10240
+  },
+  "vocab_surfaced": {
+   "AIDO": 19147,
+   "C2S": 15749,
+   "Geneformer": 15803,
+   "MaxToki": 15803,
+   "UCE": 14488,
+   "scGPT": 15646,
+   "tGPT": 6623,
+   "scFoundation": 15324,
+   "GeneCompass": 10357,
+   "Tahoe": 20842
+  },
+  "corr_nconcepts_dsae": 0.785,
+  "corr_nconcepts_vocab": 0.313,
+  "corr_nconcepts_nlayers": 0.867,
+  "concepts_per_1k_feat": {
+   "AIDO": 5655.3,
+   "C2S": 1868.8,
+   "Geneformer": 2982.6,
+   "MaxToki": 2099.0,
+   "UCE": 3403.9,
+   "scGPT": 4727.1,
+   "tGPT": 2421.4,
+   "scFoundation": 3480.5,
+   "GeneCompass": 1447.3,
+   "Tahoe": 1602.1
+  }
+ },
+ "concentration": {
+  "conc": {
+   "AIDO": 10.4,
+   "C2S": 22.3,
+   "Geneformer": 49.9,
+   "MaxToki": -6.0,
+   "UCE": 27.6,
+   "scGPT": -51.2,
+   "tGPT": 47.9,
+   "scFoundation": 30.8,
+   "GeneCompass": -72.5,
+   "Tahoe": 32.8
+  },
+  "corr_fisher5_gsea_full": -0.456,
+  "corr_fisher5_gsea_LOO_range": [
+   -0.678,
+   -0.22
+  ],
+  "corr_fisher5_gsea_LOO_dropGeneCompass": -0.22,
+  "corr_conc_rank": -0.091,
+  "corr_conc_dsae": 0.381,
+  "corr_conc_vocab": 0.049,
+  "partial_corr_conc_rank_given_dsae": -0.122,
+  "partial_corr_conc_rank_given_vocab": -0.078
+ },
+ "string": {
+  "concept_sources_total": {
+   "GO_BP": 5634,
+   "STRING": 11301,
+   "Reactome": 1744,
+   "KEGG": 316,
+   "TRRUST": 298
+  },
+  "core_all": 2267,
+  "core_no_string": 960,
+  "pct_core_string": 57.7,
+  "n_concepts_with_string": {
+   "AIDO": 5791,
+   "C2S": 17223,
+   "Geneformer": 13744,
+   "MaxToki": 10344,
+   "UCE": 17428,
+   "scGPT": 9681,
+   "tGPT": 9918,
+   "scFoundation": 10692,
+   "GeneCompass": 4446,
+   "Tahoe": 16405
+  },
+  "n_concepts_no_string": {
+   "AIDO": 2067,
+   "C2S": 6935,
+   "Geneformer": 5345,
+   "MaxToki": 3729,
+   "UCE": 6974,
+   "scGPT": 3684,
+   "tGPT": 3895,
+   "scFoundation": 4031,
+   "GeneCompass": 1773,
+   "Tahoe": 6573
+  }
+ },
+ "n_perm": 1000,
+ "models": [
+  "AIDO",
+  "C2S",
+  "Geneformer",
+  "MaxToki",
+  "UCE",
+  "scGPT",
+  "tGPT",
+  "scFoundation",
+  "GeneCompass",
+  "Tahoe"
+ ],
+ "seeds": {
+  "n_seeds": 3,
+  "layer": "mid",
+  "core_by_seed": [
+   475,
+   499,
+   508
+  ],
+  "core_mean": 494.0,
+  "core_sd": 13.9,
+  "core_cv_pct": 2.8,
+  "rate_sd_pp": {
+   "AIDO": 1.23,
+   "C2S": 0.58,
+   "Geneformer": 0.33,
+   "MaxToki": 0.56,
+   "UCE": 0.85,
+   "scGPT": 0.33,
+   "tGPT": 1.11,
+   "scFoundation": 0.63,
+   "GeneCompass": 0.28,
+   "Tahoe": 0.66
+  },
+  "rate_sd_max": 1.23,
+  "rate_sd_mean": 0.66,
+  "nconc_cv_max": 4.6,
+  "nconc_cv_mean": 2.8
+ },
+ "dedup": {
+  "core_raw": 2267,
+  "core_dedup_j0.5": 1516,
+  "core_dedup_j0.7": 1902
+ },
+ "vocab_fair": {
+  "reachable_universe": {
+   "AIDO": 20312,
+   "C2S": 20006,
+   "Geneformer": 20176,
+   "MaxToki": 20176,
+   "UCE": 20082,
+   "scGPT": 20096,
+   "tGPT": 19150,
+   "scFoundation": 20160,
+   "GeneCompass": 19411,
+   "Tahoe": 20128
+  },
+  "fair_universe_all": 18450,
+  "fair_core": 2267,
+  "blind_raw": {
+   "AIDO": 13502,
+   "C2S": 2070,
+   "Geneformer": 5549,
+   "MaxToki": 8949,
+   "UCE": 1865,
+   "scGPT": 9612,
+   "tGPT": 9375,
+   "scFoundation": 8601,
+   "GeneCompass": 14847,
+   "Tahoe": 2888
+  },
+  "blind_real_reachable": {
+   "AIDO": 13500,
+   "C2S": 1986,
+   "Geneformer": 5541,
+   "MaxToki": 8941,
+   "UCE": 1814,
+   "scGPT": 9574,
+   "tGPT": 8657,
+   "scFoundation": 8587,
+   "GeneCompass": 14195,
+   "Tahoe": 2862
+  },
+  "pct_blind_that_is_vocab": {
+   "AIDO": 0.0,
+   "C2S": 4.1,
+   "Geneformer": 0.1,
+   "MaxToki": 0.1,
+   "UCE": 2.7,
+   "scGPT": 0.4,
+   "tGPT": 7.7,
+   "scFoundation": 0.2,
+   "GeneCompass": 4.4,
+   "Tahoe": 0.9
+  }
+ },
+ "superposition_null": {
+  "observed_pct_novel": {
+   "AIDO": 99.7,
+   "C2S": 100.0,
+   "Geneformer": 100.0,
+   "MaxToki": 100.0,
+   "UCE": 100.0,
+   "scGPT": 100.0,
+   "tGPT": 100.0,
+   "scFoundation": 100.0,
+   "GeneCompass": 100.0,
+   "Tahoe": 100.0
+  },
+  "null": {
+   "AIDO": {
+    "d_model": 256,
+    "null_novel_k50": 100.0,
+    "null_novel_k256": 0.0
+   },
+   "C2S": {
+    "d_model": 2304,
+    "null_novel_k50": 100.0,
+    "null_novel_k256": 100.0
+   },
+   "Geneformer": {
+    "d_model": 1152,
+    "null_novel_k50": 100.0,
+    "null_novel_k256": 100.0
+   },
+   "MaxToki": {
+    "d_model": 1232,
+    "null_novel_k50": 100.0,
+    "null_novel_k256": 100.0
+   },
+   "UCE": {
+    "d_model": 1280,
+    "null_novel_k50": 100.0,
+    "null_novel_k256": 100.0
+   },
+   "scGPT": {
+    "d_model": 512,
+    "null_novel_k50": 100.0,
+    "null_novel_k256": 38.3
+   },
+   "tGPT": {
+    "d_model": 1024,
+    "null_novel_k50": 100.0,
+    "null_novel_k256": 100.0
+   },
+   "scFoundation": {
+    "d_model": 768,
+    "null_novel_k50": 100.0,
+    "null_novel_k256": 100.0
+   },
+   "GeneCompass": {
+    "d_model": 768,
+    "null_novel_k50": 100.0,
+    "null_novel_k256": 100.0
+   },
+   "Tahoe": {
+    "d_model": 2560,
+    "null_novel_k50": 100.0,
+    "null_novel_k256": 100.0
+   }
+  }
+ },
+ "scaling_ci": {
+  "scaling_r_params_concepts": 0.855,
+  "ci95": [
+   0.68,
+   0.984
+  ],
+  "n": 10
+ },
+ "seeds_alllayer": {
+  "n_seeds": 3,
+  "scope": "all layers, full 500k positions, canonical-aligned annotator",
+  "core_by_seed": [
+   2141,
+   2044,
+   2063
+  ],
+  "core_mean": 2082.7,
+  "core_sd": 42.0,
+  "core_cv_pct": 2.0,
+  "canonical_core": 2267.0,
+  "nconc_cv_mean": 1.1
+ },
+ "heldout": {
+  "models": [
+   "AIDO",
+   "C2S",
+   "Geneformer",
+   "MaxToki",
+   "UCE",
+   "tGPT",
+   "scFoundation",
+   "GeneCompass",
+   "Tahoe"
+  ],
+  "n_models": 9,
+  "excluded": [
+   "scGPT (torchtext ABI crash)"
+  ],
+  "layers": "5 depth-matched (0/25/50/75/100%)",
+  "held_out_core": 1477,
+  "orig_core_same_models_layers": 1528,
+  "core_jaccard": 0.518,
+  "pct_orig_core_reproduced": 67.1,
+  "mean_per_model_jaccard": 0.655,
+  "per_model": {
+   "AIDO": {
+    "held_out_concepts": 4639,
+    "orig_concepts": 4745,
+    "jaccard": 0.507,
+    "layers": [
+     0,
+     2,
+     4,
+     5,
+     7
+    ],
+    "orig_layers_found": 5
+   },
+   "C2S": {
+    "held_out_concepts": 14549,
+    "orig_concepts": 14630,
+    "jaccard": 0.835,
+    "layers": [
+     0,
+     6,
+     12,
+     19,
+     25
+    ],
+    "orig_layers_found": 5
+   },
+   "Geneformer": {
+    "held_out_concepts": 10712,
+    "orig_concepts": 10648,
+    "jaccard": 0.71,
+    "layers": [
+     0,
+     4,
+     8,
+     13,
+     17
+    ],
+    "orig_layers_found": 5
+   },
+   "MaxToki": {
+    "held_out_concepts": 8571,
+    "orig_concepts": 8419,
+    "jaccard": 0.629,
+    "layers": [
+     0,
+     2,
+     5,
+     8,
+     10
+    ],
+    "orig_layers_found": 5
+   },
+   "UCE": {
+    "held_out_concepts": 13923,
+    "orig_concepts": 13997,
+    "jaccard": 0.802,
+    "layers": [
+     0,
+     8,
+     16,
+     24,
+     32
+    ],
+    "orig_layers_found": 5
+   },
+   "tGPT": {
+    "held_out_concepts": 8569,
+    "orig_concepts": 8447,
+    "jaccard": 0.638,
+    "layers": [
+     0,
+     2,
+     4,
+     5,
+     7
+    ],
+    "orig_layers_found": 5
+   },
+   "scFoundation": {
+    "held_out_concepts": 8215,
+    "orig_concepts": 8257,
+    "jaccard": 0.609,
+    "layers": [
+     0,
+     3,
+     6,
+     8,
+     11
+    ],
+    "orig_layers_found": 5
+   },
+   "GeneCompass": {
+    "held_out_concepts": 3137,
+    "orig_concepts": 3182,
+    "jaccard": 0.419,
+    "layers": [
+     0,
+     3,
+     6,
+     8,
+     11
+    ],
+    "orig_layers_found": 5
+   },
+   "Tahoe": {
+    "held_out_concepts": 12198,
+    "orig_concepts": 12105,
+    "jaccard": 0.75,
+    "layers": [
+     0,
+     8,
+     16,
+     23,
+     31
+    ],
+    "orig_layers_found": 5
+   }
+  }
+ },
+ "pcalib": {
+  "AIDO": {
+   "real_annot_rate": 44.3,
+   "random_gene_annot_rate": 42.4,
+   "raw_p_lt05_under_null": 1.0
+  },
+  "Geneformer": {
+   "real_annot_rate": 63.9,
+   "random_gene_annot_rate": 45.9,
+   "raw_p_lt05_under_null": 1.0
+  },
+  "C2S": {
+   "real_annot_rate": 50.7,
+   "random_gene_annot_rate": 45.6,
+   "raw_p_lt05_under_null": 1.0
+  },
+  "UCE": {
+   "real_annot_rate": 42.2,
+   "random_gene_annot_rate": 47.3,
+   "raw_p_lt05_under_null": 1.0
+  },
+  "Tahoe": {
+   "real_annot_rate": 38.5,
+   "random_gene_annot_rate": 45.7,
+   "raw_p_lt05_under_null": 1.0
+  }
+ },
+ "capacity_norm": {
+  "concepts_per_1k_feat": {
+   "AIDO": 5655.3,
+   "C2S": 1868.8,
+   "Geneformer": 2982.6,
+   "MaxToki": 2099.0,
+   "UCE": 3403.9,
+   "scGPT": 4727.1,
+   "tGPT": 2421.4,
+   "scFoundation": 3480.5,
+   "GeneCompass": 1447.3,
+   "Tahoe": 1602.1
+  },
+  "var_explained": {
+   "AIDO": 0.677,
+   "C2S": 0.897,
+   "Geneformer": 0.78,
+   "MaxToki": 0.791,
+   "UCE": 0.896,
+   "scGPT": 0.881,
+   "tGPT": 0.977,
+   "scFoundation": 0.921,
+   "GeneCompass": 0.751,
+   "Tahoe": 0.931
+  },
+  "corr_nconcepts_varexplained": 0.57,
+  "var_explained_range": [
+   0.677,
+   0.977
+  ]
+ },
+ "random_null": {
+  "n_perm": 100,
+  "layer": "mid",
+  "models": [
+   "AIDO",
+   "C2S",
+   "Geneformer",
+   "MaxToki",
+   "UCE",
+   "scGPT",
+   "tGPT",
+   "scFoundation",
+   "GeneCompass",
+   "Tahoe"
+  ],
+  "real_core": 353,
+  "real_mean_jaccard": 0.334,
+  "real_dedup_core_j0.5": 241,
+  "rand_core_mean": 588.7,
+  "rand_core_sd": 38.8,
+  "rand_core_max": 697,
+  "core_z": -6.1,
+  "core_fold_over_null": 0.6,
+  "rand_jaccard_mean": 0.367,
+  "rand_dedup_core_mean": 325.6,
+  "two_random_draw_core_jaccard": 0.499,
+  "heldout_observed_core_jaccard": 0.518
+ },
+ "recalibration": {
+  "grid": [
+   {
+    "config": "no-PPI max100 a>=3 OR>=10",
+    "real_rate": 1.9,
+    "rand_rate": 0.1,
+    "real_core": 0,
+    "rand_core_mean": 0.0,
+    "rand_core_sd": 0.0,
+    "core_z": 0.0,
+    "beats_null": false
+   },
+   {
+    "config": "no-PPI max100 a>=3",
+    "real_rate": 1.9,
+    "rand_rate": 0.1,
+    "real_core": 0,
+    "rand_core_mean": 0.0,
+    "rand_core_sd": 0.0,
+    "core_z": 0.0,
+    "beats_null": false
+   },
+   {
+    "config": "no-PPI max200 a>=3 OR>=5",
+    "real_rate": 2.5,
+    "rand_rate": 0.3,
+    "real_core": 0,
+    "rand_core_mean": 0.0,
+    "rand_core_sd": 0.0,
+    "core_z": 0.0,
+    "beats_null": false
+   },
+   {
+    "config": "no-PPI max200 a>=3",
+    "real_rate": 2.5,
+    "rand_rate": 0.3,
+    "real_core": 0,
+    "rand_core_mean": 0.0,
+    "rand_core_sd": 0.0,
+    "core_z": 0.0,
+    "beats_null": false
+   },
+   {
+    "config": "no-PPI max200 a>=2",
+    "real_rate": 24.4,
+    "rand_rate": 23.8,
+    "real_core": 53,
+    "rand_core_mean": 126.6,
+    "rand_core_sd": 14.5,
+    "core_z": -5.1,
+    "beats_null": false
+   },
+   {
+    "config": "top5 max200 a>=2 OR>=10",
+    "real_rate": 24.4,
+    "rand_rate": 23.8,
+    "real_core": 53,
+    "rand_core_mean": 130.6,
+    "rand_core_sd": 13.8,
+    "core_z": -5.6,
+    "beats_null": false
+   },
+   {
+    "config": "top5 max200 a>=2 OR>=20",
+    "real_rate": 24.4,
+    "rand_rate": 23.9,
+    "real_core": 53,
+    "rand_core_mean": 126.6,
+    "rand_core_sd": 12.0,
+    "core_z": -6.2,
+    "beats_null": false
+   },
+   {
+    "config": "top5 max100 a>=2 OR>=20",
+    "real_rate": 16.1,
+    "rand_rate": 12.9,
+    "real_core": 6,
+    "rand_core_mean": 6.2,
+    "rand_core_sd": 3.4,
+    "core_z": -0.0,
+    "beats_null": false
+   },
+   {
+    "config": "top10 max200 a>=3",
+    "real_rate": 8.9,
+    "rand_rate": 3.0,
+    "real_core": 2,
+    "rand_core_mean": 0.0,
+    "rand_core_sd": 0.0,
+    "core_z": 2.0,
+    "beats_null": false
+   },
+   {
+    "config": "top10 max200 a>=3 OR>=10",
+    "real_rate": 8.9,
+    "rand_rate": 3.0,
+    "real_core": 2,
+    "rand_core_mean": 0.0,
+    "rand_core_sd": 0.0,
+    "core_z": 2.0,
+    "beats_null": false
+   },
+   {
+    "config": "top20 max300 a>=4",
+    "real_rate": 12.2,
+    "rand_rate": 2.8,
+    "real_core": 2,
+    "rand_core_mean": 1.0,
+    "rand_core_sd": 0.7,
+    "core_z": 1.4,
+    "beats_null": false
+   }
+  ],
+  "final": {
+   "annotator": "top10 genes, a>=3, GO/Reactome/KEGG size<= 200, no PPI",
+   "real_spectrum": {
+    "1": 1308,
+    "2": 427,
+    "3": 256,
+    "4": 279,
+    "5": 155,
+    "6": 108,
+    "7": 64,
+    "8": 68,
+    "9": 8,
+    "10": 2
+   },
+   "real_core": 2,
+   "core_terms": [
+    "KEGG:Staphylococcus aureus infection",
+    "Reactome:Muscle Contraction R-HSA-397014"
+   ],
+   "shared_ge8": 78,
+   "shared_ge8_terms": [
+    "GO_BP:SRP-dependent cotranslational protein targeting to membrane (GO:0006614)",
+    "GO_BP:antigen processing and presentation of exogenous peptide antigen (GO:0002478)",
+    "GO_BP:antigen processing and presentation of exogenous peptide antigen via MHC class II (GO:0019886)",
+    "GO_BP:antigen processing and presentation of peptide antigen via MHC class II (GO:0002495)",
+    "GO_BP:cellular response to metal ion (GO:0071248)",
+    "GO_BP:cotranslational protein targeting to membrane (GO:0006613)",
+    "GO_BP:cytoplasmic translation (GO:0002181)",
+    "GO_BP:defense response to bacterium (GO:0042742)",
+    "GO_BP:muscle contraction (GO:0006936)",
+    "GO_BP:negative regulation of cytokine production (GO:0001818)",
+    "GO_BP:negative regulation of growth (GO:0045926)",
+    "GO_BP:nuclear-transcribed mRNA catabolic process (GO:0000956)",
+    "GO_BP:nuclear-transcribed mRNA catabolic process, nonsense-mediated decay (GO:0000184)",
+    "GO_BP:peptide biosynthetic process (GO:0043043)",
+    "GO_BP:protein targeting to ER (GO:0045047)",
+    "GO_BP:rRNA metabolic process (GO:0016072)",
+    "GO_BP:rRNA processing (GO:0006364)",
+    "GO_BP:regulated exocytosis (GO:0045055)",
+    "GO_BP:regulation of cellular response to stress (GO:0080135)",
+    "GO_BP:regulation of mitotic cell cycle (GO:0007346)",
+    "GO_BP:response to cytokine (GO:0034097)",
+    "GO_BP:ribosome biogenesis (GO:0042254)",
+    "KEGG:Adrenergic signaling in cardiomyocytes",
+    "KEGG:Alcoholism",
+    "KEGG:Antigen processing and presentation",
+    "KEGG:Apoptosis",
+    "KEGG:Cardiac muscle contraction",
+    "KEGG:Cell adhesion molecules",
+    "KEGG:Estrogen signaling pathway",
+    "KEGG:Hematopoietic cell lineage",
+    "KEGG:IL-17 signaling pathway",
+    "KEGG:Influenza A",
+    "KEGG:Kaposi sarcoma-associated herpesvirus infection",
+    "KEGG:Leishmaniasis",
+    "KEGG:Neutrophil extracellular trap formation",
+    "KEGG:Phagosome",
+    "KEGG:Protein processing in endoplasmic reticulum",
+    "KEGG:Rheumatoid arthritis",
+    "KEGG:Ribosome",
+    "KEGG:Staphylococcus aureus infection"
+   ],
+   "null_core_mean": 0.0,
+   "null_core_sd": 0.0,
+   "null_spectrum_mean": {
+    "1": 457.4,
+    "2": 176.8,
+    "3": 96.0,
+    "4": 64.3,
+    "5": 41.4,
+    "6": 22.6,
+    "7": 9.8,
+    "8": 3.2,
+    "9": 0.8,
+    "10": 0.0
+   },
+   "shared_ge8_real": 78,
+   "shared_ge8_null": 4.0,
+   "ge8_fold": 19.5
+  },
+  "robust": {
+   "grid": [
+    {
+     "config": "top10 a3 max200",
+     ">=7": {
+      "real": 142,
+      "null": 13.8,
+      "fold": 10.3
+     },
+     ">=8": {
+      "real": 78,
+      "null": 4.4,
+      "fold": 17.7
+     },
+     ">=9": {
+      "real": 10,
+      "null": 0.6,
+      "fold": 18.2
+     },
+     ">=10": {
+      "real": 2,
+      "null": 0.0,
+      "fold": 6.7
+     }
+    },
+    {
+     "config": "top10 a3 max150",
+     ">=7": {
+      "real": 95,
+      "null": 0.6,
+      "fold": 158.3
+     },
+     ">=8": {
+      "real": 50,
+      "null": 0.1,
+      "fold": 166.7
+     },
+     ">=9": {
+      "real": 5,
+      "null": 0.0,
+      "fold": 16.7
+     },
+     ">=10": {
+      "real": 1,
+      "null": 0.0,
+      "fold": 3.3
+     }
+    },
+    {
+     "config": "top12 a3 max200",
+     ">=7": {
+      "real": 212,
+      "null": 62.1,
+      "fold": 3.4
+     },
+     ">=8": {
+      "real": 115,
+      "null": 27.3,
+      "fold": 4.2
+     },
+     ">=9": {
+      "real": 22,
+      "null": 7.6,
+      "fold": 2.9
+     },
+     ">=10": {
+      "real": 3,
+      "null": 0.9,
+      "fold": 3.3
+     }
+    },
+    {
+     "config": "top10 a3 max300",
+     ">=7": {
+      "real": 218,
+      "null": 91.2,
+      "fold": 2.4
+     },
+     ">=8": {
+      "real": 126,
+      "null": 55.8,
+      "fold": 2.3
+     },
+     ">=9": {
+      "real": 32,
+      "null": 26.1,
+      "fold": 1.2
+     },
+     ">=10": {
+      "real": 6,
+      "null": 6.2,
+      "fold": 1.0
+     }
+    },
+    {
+     "config": "top10 a3 max200 OR5",
+     ">=7": {
+      "real": 142,
+      "null": 12.7,
+      "fold": 11.2
+     },
+     ">=8": {
+      "real": 78,
+      "null": 3.0,
+      "fold": 26.4
+     },
+     ">=9": {
+      "real": 10,
+      "null": 0.2,
+      "fold": 33.3
+     },
+     ">=10": {
+      "real": 2,
+      "null": 0.1,
+      "fold": 6.7
+     }
+    }
+   ],
+   "thresholds": [
+    7,
+    8,
+    9,
+    10
+   ],
+   "n_perm": 20,
+   "triviality": {
+    "n_ge8": 78,
+    "housekeeping": 29,
+    "specific": 49,
+    "pct_housekeeping": 37.2,
+    "specific_terms": [
+     "antigen processing and presentation of exogenous peptide antigen (GO:0002478)",
+     "antigen processing and presentation of exogenous peptide antigen via MHC class II (GO:0019886)",
+     "antigen processing and presentation of peptide antigen via MHC class II (GO:0002495)",
+     "cellular response to metal ion (GO:0071248)",
+     "defense response to bacterium (GO:0042742)",
+     "muscle contraction (GO:0006936)",
+     "negative regulation of cytokine production (GO:0001818)",
+     "negative regulation of growth (GO:0045926)",
+     "regulated exocytosis (GO:0045055)",
+     "regulation of cellular response to stress (GO:0080135)",
+     "response to cytokine (GO:0034097)",
+     "Adrenergic signaling in cardiomyocytes",
+     "Alcoholism",
+     "Antigen processing and presentation",
+     "Apoptosis",
+     "Cardiac muscle contraction",
+     "Cell adhesion molecules",
+     "Estrogen signaling pathway",
+     "Hematopoietic cell lineage",
+     "IL-17 signaling pathway",
+     "Influenza A",
+     "Kaposi sarcoma-associated herpesvirus infection",
+     "Leishmaniasis",
+     "Neutrophil extracellular trap formation",
+     "Phagosome",
+     "Protein processing in endoplasmic reticulum",
+     "Rheumatoid arthritis",
+     "Staphylococcus aureus infection",
+     "Systemic lupus erythematosus",
+     "Th1 and Th2 cell differentiation",
+     "Toxoplasmosis",
+     "Tuberculosis",
+     "Cellular Response To Starvation R-HSA-9711097",
+     "Formation Of A Pool Of Free 40S Subunits R-HSA-72689",
+     "Formation Of Ternary Complex, And Subsequently, 43S Complex R-HSA-72695",
+     "Influenza Infection R-HSA-168255",
+     "Influenza Viral RNA Transcription And Replication R-HSA-168273",
+     "Interferon Signaling R-HSA-913531",
+     "Muscle Contraction R-HSA-397014",
+     "Nonsense Mediated Decay (NMD) Enhanced By Exon Junction Complex (EJC) R-HSA-975957"
+    ]
+   }
+  },
+  "ge8_fold_range": [
+   2.3,
+   166.7
+  ],
+  "ge8_real_range": [
+   50,
+   126
+  ],
+  "heldout_calibrated": {
+   "annotator": "top10 a>=3 GO/Re/KEGG<= 200 no-PPI, mid, 9 models, >=7/9 backbone",
+   "backbone_orig": 81,
+   "backbone_heldout": 81,
+   "backbone_jaccard": 0.5,
+   "pct_reproduced": 66.7,
+   "mean_per_model_jaccard": 0.397,
+   "per_model": {
+    "AIDO": 0.32,
+    "C2S": 0.739,
+    "Geneformer": 0.34,
+    "MaxToki": 0.219,
+    "UCE": 0.418,
+    "tGPT": 0.38,
+    "scFoundation": 0.428,
+    "GeneCompass": 0.151,
+    "Tahoe": 0.58
+   },
+   "null_two_draw_backbone_jaccard": 0.065,
+   "reproduced_terms": [
+    "GO_BP:SRP-dependent cotranslational protein targeting to membrane (GO:0006614)",
+    "GO_BP:cotranslational protein targeting to membrane (GO:0006613)",
+    "GO_BP:cytoplasmic translation (GO:0002181)",
+    "GO_BP:defense response to bacterium (GO:0042742)",
+    "GO_BP:muscle contraction (GO:0006936)",
+    "GO_BP:nuclear-transcribed mRNA catabolic process (GO:0000956)",
+    "GO_BP:nuclear-transcribed mRNA catabolic process, nonsense-mediated decay (GO:0000184)",
+    "GO_BP:peptide biosynthetic process (GO:0043043)",
+    "GO_BP:protein targeting to ER (GO:0045047)",
+    "GO_BP:rRNA metabolic process (GO:0016072)",
+    "GO_BP:rRNA processing (GO:0006364)",
+    "GO_BP:regulated exocytosis (GO:0045055)",
+    "GO_BP:ribosome biogenesis (GO:0042254)",
+    "KEGG:Antigen processing and presentation",
+    "KEGG:Hematopoietic cell lineage",
+    "KEGG:Influenza A",
+    "KEGG:Neutrophil extracellular trap formation",
+    "KEGG:Phagosome",
+    "KEGG:Rheumatoid arthritis",
+    "KEGG:Ribosome",
+    "KEGG:Staphylococcus aureus infection",
+    "KEGG:Systemic lupus erythematosus",
+    "KEGG:Toxoplasmosis",
+    "KEGG:Tuberculosis",
+    "Reactome:Cap-dependent Translation Initiation R-HSA-72737",
+    "Reactome:Cellular Response To Starvation R-HSA-9711097",
+    "Reactome:Citric Acid (TCA) Cycle And Respiratory Electron Transport R-HSA-1428517",
+    "Reactome:Eukaryotic Translation Elongation R-HSA-156842",
+    "Reactome:Eukaryotic Translation Termination R-HSA-72764",
+    "Reactome:Formation Of A Pool Of Free 40S Subunits R-HSA-72689",
+    "Reactome:Formation Of Ternary Complex, And Subsequently, 43S Complex R-HSA-72695",
+    "Reactome:GTP Hydrolysis And Joining Of 60S Ribosomal Subunit R-HSA-72706",
+    "Reactome:Influenza Infection R-HSA-168255",
+    "Reactome:Influenza Viral RNA Transcription And Replication R-HSA-168273",
+    "Reactome:L13a-mediated Translational Silencing Of Ceruloplasmin Expression R-HSA-156827",
+    "Reactome:Major Pathway Of rRNA Processing In Nucleolus And Cytosol R-HSA-6791226",
+    "Reactome:Muscle Contraction R-HSA-397014",
+    "Reactome:Nonsense Mediated Decay (NMD) Enhanced By Exon Junction Complex (EJC) R-HSA-975957",
+    "Reactome:Nonsense Mediated Decay (NMD) Independent Of Exon Junction Complex (EJC) R-HSA-975956",
+    "Reactome:Peptide Chain Elongation R-HSA-156902"
+   ]
+  }
+ },
+ "calibrated_panels": {
+  "annotator": "top10 a>=3 GO/Re/KEGG<= 200 no-PPI, mid layer",
+  "rate": {
+   "AIDO": 5.1,
+   "C2S": 15.9,
+   "Geneformer": 8.4,
+   "MaxToki": 3.0,
+   "UCE": 5.4,
+   "scGPT": 7.7,
+   "tGPT": 32.2,
+   "scFoundation": 3.8,
+   "GeneCompass": 1.3,
+   "Tahoe": 6.2
+  },
+  "n_concepts": {
+   "AIDO": 197,
+   "C2S": 2384,
+   "Geneformer": 706,
+   "MaxToki": 165,
+   "UCE": 670,
+   "scGPT": 535,
+   "tGPT": 460,
+   "scFoundation": 299,
+   "GeneCompass": 48,
+   "Tahoe": 1089
+  },
+  "blind_exclusive": {
+   "AIDO": 7,
+   "C2S": 1076,
+   "Geneformer": 14,
+   "MaxToki": 9,
+   "UCE": 35,
+   "scGPT": 21,
+   "tGPT": 41,
+   "scFoundation": 10,
+   "GeneCompass": 4,
+   "Tahoe": 91
+  }
+ },
+ "corr_ci": {
+  "nconcepts_vs_log_dsae": {
+   "r": 0.789,
+   "ci95": [
+    0.56,
+    0.96
+   ],
+   "n": 10
+  },
+  "nconcepts_vs_nlayers": {
+   "r": 0.867,
+   "ci95": [
+    0.68,
+    0.97
+   ],
+   "n": 10
+  },
+  "concentration_vs_log_dsae": {
+   "r": 0.381,
+   "ci95": [
+    0.01,
+    0.77
+   ],
+   "n": 10
+  },
+  "concentration_vs_rank_tok": {
+   "r": -0.091,
+   "ci95": [
+    -0.8,
+    0.83
+   ],
+   "n": 10
+  }
+ },
+ "survivor_nulls": {
+  "cka_null": [
+   {
+    "pair": "AIDO-C2S",
+    "real_cka": 0.281,
+    "shuffled_cka": 0.0017
+   },
+   {
+    "pair": "AIDO-Geneformer",
+    "real_cka": 0.251,
+    "shuffled_cka": 0.0018
+   },
+   {
+    "pair": "AIDO-MaxToki",
+    "real_cka": 0.225,
+    "shuffled_cka": 0.0028
+   },
+   {
+    "pair": "AIDO-UCE",
+    "real_cka": 0.203,
+    "shuffled_cka": 0.0028
+   },
+   {
+    "pair": "AIDO-scGPT",
+    "real_cka": 0.302,
+    "shuffled_cka": 0.002
+   },
+   {
+    "pair": "AIDO-tGPT",
+    "real_cka": 0.136,
+    "shuffled_cka": 0.0021
+   },
+   {
+    "pair": "AIDO-scFoundation",
+    "real_cka": 0.2,
+    "shuffled_cka": 0.0019
+   },
+   {
+    "pair": "AIDO-GeneCompass",
+    "real_cka": 0.089,
+    "shuffled_cka": 0.0011
+   },
+   {
+    "pair": "AIDO-Tahoe",
+    "real_cka": 0.19,
+    "shuffled_cka": 0.0011
+   },
+   {
+    "pair": "C2S-Geneformer",
+    "real_cka": 0.482,
+    "shuffled_cka": 0.0038
+   },
+   {
+    "pair": "C2S-MaxToki",
+    "real_cka": 0.809,
+    "shuffled_cka": 0.0061
+   },
+   {
+    "pair": "C2S-UCE",
+    "real_cka": 0.796,
+    "shuffled_cka": 0.006
+   },
+   {
+    "pair": "C2S-scGPT",
+    "real_cka": 0.782,
+    "shuffled_cka": 0.0042
+   },
+   {
+    "pair": "C2S-tGPT",
+    "real_cka": 0.523,
+    "shuffled_cka": 0.0053
+   },
+   {
+    "pair": "C2S-scFoundation",
+    "real_cka": 0.725,
+    "shuffled_cka": 0.0037
+   },
+   {
+    "pair": "C2S-GeneCompass",
+    "real_cka": 0.204,
+    "shuffled_cka": 0.0026
+   },
+   {
+    "pair": "C2S-Tahoe",
+    "real_cka": 0.336,
+    "shuffled_cka": 0.0027
+   },
+   {
+    "pair": "Geneformer-MaxToki",
+    "real_cka": 0.497,
+    "shuffled_cka": 0.0059
+   },
+   {
+    "pair": "Geneformer-UCE",
+    "real_cka": 0.426,
+    "shuffled_cka": 0.0059
+   },
+   {
+    "pair": "Geneformer-scGPT",
+    "real_cka": 0.643,
+    "shuffled_cka": 0.0043
+   },
+   {
+    "pair": "Geneformer-tGPT",
+    "real_cka": 0.282,
+    "shuffled_cka": 0.005
+   },
+   {
+    "pair": "Geneformer-scFoundation",
+    "real_cka": 0.677,
+    "shuffled_cka": 0.0036
+   },
+   {
+    "pair": "Geneformer-GeneCompass",
+    "real_cka": 0.749,
+    "shuffled_cka": 0.0026
+   },
+   {
+    "pair": "Geneformer-Tahoe",
+    "real_cka": 0.726,
+    "shuffled_cka": 0.0025
+   },
+   {
+    "pair": "MaxToki-UCE",
+    "real_cka": 0.837,
+    "shuffled_cka": 0.0092
+   },
+   {
+    "pair": "MaxToki-scGPT",
+    "real_cka": 0.749,
+    "shuffled_cka": 0.0064
+   },
+   {
+    "pair": "MaxToki-tGPT",
+    "real_cka": 0.499,
+    "shuffled_cka": 0.0078
+   },
+   {
+    "pair": "MaxToki-scFoundation",
+    "real_cka": 0.708,
+    "shuffled_cka": 0.0055
+   },
+   {
+    "pair": "MaxToki-GeneCompass",
+    "real_cka": 0.26,
+    "shuffled_cka": 0.0042
+   },
+   {
+    "pair": "MaxToki-Tahoe",
+    "real_cka": 0.384,
+    "shuffled_cka": 0.0043
+   },
+   {
+    "pair": "UCE-scGPT",
+    "real_cka": 0.707,
+    "shuffled_cka": 0.0066
+   },
+   {
+    "pair": "UCE-tGPT",
+    "real_cka": 0.485,
+    "shuffled_cka": 0.0082
+   },
+   {
+    "pair": "UCE-scFoundation",
+    "real_cka": 0.709,
+    "shuffled_cka": 0.0056
+   },
+   {
+    "pair": "UCE-GeneCompass",
+    "real_cka": 0.184,
+    "shuffled_cka": 0.0043
+   },
+   {
+    "pair": "UCE-Tahoe",
+    "real_cka": 0.314,
+    "shuffled_cka": 0.004
+   },
+   {
+    "pair": "scGPT-tGPT",
+    "real_cka": 0.452,
+    "shuffled_cka": 0.0058
+   },
+   {
+    "pair": "scGPT-scFoundation",
+    "real_cka": 0.704,
+    "shuffled_cka": 0.0041
+   },
+   {
+    "pair": "scGPT-GeneCompass",
+    "real_cka": 0.305,
+    "shuffled_cka": 0.0027
+   },
+   {
+    "pair": "scGPT-Tahoe",
+    "real_cka": 0.518,
+    "shuffled_cka": 0.0027
+   },
+   {
+    "pair": "tGPT-scFoundation",
+    "real_cka": 0.501,
+    "shuffled_cka": 0.0048
+   },
+   {
+    "pair": "tGPT-GeneCompass",
+    "real_cka": 0.146,
+    "shuffled_cka": 0.0034
+   },
+   {
+    "pair": "tGPT-Tahoe",
+    "real_cka": 0.196,
+    "shuffled_cka": 0.0033
+   },
+   {
+    "pair": "scFoundation-GeneCompass",
+    "real_cka": 0.501,
+    "shuffled_cka": 0.0025
+   },
+   {
+    "pair": "scFoundation-Tahoe",
+    "real_cka": 0.513,
+    "shuffled_cka": 0.0024
+   },
+   {
+    "pair": "GeneCompass-Tahoe",
+    "real_cka": 0.601,
+    "shuffled_cka": 0.0018
+   }
+  ],
+  "svd_null": [
+   {
+    "model": "AIDO",
+    "k": 32,
+    "svd_var_at_k": 0.412,
+    "sae_var_explained": 0.608,
+    "random_dict_var_explained": -1.293
+   },
+   {
+    "model": "C2S",
+    "k": 32,
+    "svd_var_at_k": 0.441,
+    "sae_var_explained": 0.869,
+    "random_dict_var_explained": -0.254
+   },
+   {
+    "model": "Geneformer",
+    "k": 32,
+    "svd_var_at_k": 0.232,
+    "sae_var_explained": 0.706,
+    "random_dict_var_explained": -0.434
+   },
+   {
+    "model": "MaxToki",
+    "k": 32,
+    "svd_var_at_k": 0.414,
+    "sae_var_explained": 0.788,
+    "random_dict_var_explained": -0.443
+   },
+   {
+    "model": "UCE",
+    "k": 32,
+    "svd_var_at_k": 0.59,
+    "sae_var_explained": 0.909,
+    "random_dict_var_explained": -0.428
+   },
+   {
+    "model": "scGPT",
+    "k": 32,
+    "svd_var_at_k": 0.651,
+    "sae_var_explained": 0.84,
+    "random_dict_var_explained": -0.796
+   },
+   {
+    "model": "tGPT",
+    "k": 32,
+    "svd_var_at_k": 0.959,
+    "sae_var_explained": 0.977,
+    "random_dict_var_explained": -0.46
+   },
+   {
+    "model": "scFoundation",
+    "k": 32,
+    "svd_var_at_k": 0.78,
+    "sae_var_explained": 0.921,
+    "random_dict_var_explained": -0.588
+   },
+   {
+    "model": "GeneCompass",
+    "k": 32,
+    "svd_var_at_k": 0.363,
+    "sae_var_explained": 0.751,
+    "random_dict_var_explained": -0.599
+   },
+   {
+    "model": "Tahoe",
+    "k": 32,
+    "svd_var_at_k": 0.406,
+    "sae_var_explained": 0.931,
+    "random_dict_var_explained": -0.236
+   }
+  ]
+ },
+ "stats_final": {
+  "annotator": "top10 a>=3 GO/Re/KEGG<= 200 no-PPI, mid",
+  "n_perm_backbone": 250,
+  "n_perm_heldout": 150,
+  "backbone_null": {
+   ">=7": {
+    "real": 142,
+    "null_mean": 13.16,
+    "null_sd": 3.53,
+    "z": 36.5,
+    "p_emp": 0.00398406374501992,
+    "fold": 10.8
+   },
+   ">=8": {
+    "real": 78,
+    "null_mean": 3.46,
+    "null_sd": 2.04,
+    "z": 36.6,
+    "p_emp": 0.00398406374501992,
+    "fold": 22.5
+   },
+   ">=9": {
+    "real": 10,
+    "null_mean": 0.58,
+    "null_sd": 0.78,
+    "z": 12.1,
+    "p_emp": 0.00398406374501992,
+    "fold": 17.1
+   },
+   ">=10": {
+    "real": 2,
+    "null_mean": 0.03,
+    "null_sd": 0.18,
+    "z": 11.2,
+    "p_emp": 0.00398406374501992,
+    "fold": 20.0
+   }
+  },
+  "heldout_null": {
+   "observed_jaccard": 0.5,
+   "backbone_orig": 81,
+   "backbone_heldout": 81,
+   "null_mean": 0.0476,
+   "null_sd": 0.0612,
+   "null_max": 0.333,
+   "p_emp": 0.006622516556291391,
+   "fold": 10.5
+  }
+ },
+ "degree_null": {
+  "annotator": "top10 a>=3 GO/Re/KEGG<= 200 no-PPI, mid",
+  "n_perm": 250,
+  "n_bins": 41,
+  "tiers": {
+   ">=7": {
+    "real": 142,
+    "degree_null_mean": 8.3,
+    "degree_null_sd": 3.73,
+    "degree_z": 35.9,
+    "degree_p": 0.00398406374501992,
+    "degree_fold": 17.1,
+    "uniform_null_mean": 13.4
+   },
+   ">=8": {
+    "real": 78,
+    "degree_null_mean": 1.32,
+    "degree_null_sd": 1.25,
+    "degree_z": 61.6,
+    "degree_p": 0.00398406374501992,
+    "degree_fold": 59.3,
+    "uniform_null_mean": 3.5
+   },
+   ">=9": {
+    "real": 10,
+    "degree_null_mean": 0.12,
+    "degree_null_sd": 0.35,
+    "degree_z": 28.3,
+    "degree_p": 0.00398406374501992,
+    "degree_fold": 83.3,
+    "uniform_null_mean": 0.59
+   },
+   ">=10": {
+    "real": 2,
+    "degree_null_mean": 0.01,
+    "degree_null_sd": 0.09,
+    "degree_z": 22.4,
+    "degree_p": 0.00398406374501992,
+    "degree_fold": 20.0,
+    "uniform_null_mean": 0.02
+   }
+  }
+ }
+}

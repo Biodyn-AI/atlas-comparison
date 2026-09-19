@@ -1,0 +1,129 @@
+{
+ "threshold_features": 2,
+ "min_models": 2,
+ "n_perm": 200,
+ "n_pairs": 153372,
+ "n_genes": 12875,
+ "n_understudied_genes": 703,
+ "note": "understudied genes cannot be tested directly: 752 of the 793 protein-coding ones are absent from the Replogle screen. This measures whether predictive power depends on how studied the responding gene is, among the genes the screen does cover.",
+ "K562": {
+  "overall": {
+   "n": 174662,
+   "rate": 0.0941,
+   "null": 0.0807,
+   "fold": 1.17,
+   "z": 20.42,
+   "p": 0.00498
+  },
+  "by_papers": {
+   "unmapped*": {
+    "n": 1130,
+    "rate": 0.3717,
+    "null": 0.175,
+    "fold": 2.12,
+    "z": 19.04,
+    "p": 0.00498
+   },
+   "<25": {
+    "n": 4595,
+    "rate": 0.0733,
+    "null": 0.0629,
+    "fold": 1.17,
+    "z": 2.93,
+    "p": 0.01493
+   },
+   "25-49": {
+    "n": 16718,
+    "rate": 0.0657,
+    "null": 0.0642,
+    "fold": 1.02,
+    "z": 0.79,
+    "p": 0.21393
+   },
+   "50-99": {
+    "n": 34267,
+    "rate": 0.072,
+    "null": 0.0675,
+    "fold": 1.07,
+    "z": 3.36,
+    "p": 0.00498
+   },
+   "100-399": {
+    "n": 84627,
+    "rate": 0.1033,
+    "null": 0.0854,
+    "fold": 1.21,
+    "z": 19.93,
+    "p": 0.00498
+   },
+   ">=400": {
+    "n": 33325,
+    "rate": 0.1013,
+    "null": 0.0894,
+    "fold": 1.13,
+    "z": 7.43,
+    "p": 0.00498
+   }
+  }
+ },
+ "RPE1": {
+  "overall": {
+   "n": 59494,
+   "rate": 0.16,
+   "null": 0.1497,
+   "fold": 1.07,
+   "z": 8.07,
+   "p": 0.00498
+  },
+  "by_papers": {
+   "unmapped*": {
+    "n": 577,
+    "rate": 0.3536,
+    "null": 0.3793,
+    "fold": 0.93,
+    "z": -1.33,
+    "p": 0.91045
+   },
+   "<25": {
+    "n": 1310,
+    "rate": 0.0992,
+    "null": 0.0955,
+    "fold": 1.04,
+    "z": 0.53,
+    "p": 0.31343
+   },
+   "25-49": {
+    "n": 5021,
+    "rate": 0.1004,
+    "null": 0.0879,
+    "fold": 1.14,
+    "z": 3.2,
+    "p": 0.00995
+   },
+   "50-99": {
+    "n": 10361,
+    "rate": 0.0978,
+    "null": 0.0832,
+    "fold": 1.18,
+    "z": 5.59,
+    "p": 0.00498
+   },
+   "100-399": {
+    "n": 30948,
+    "rate": 0.166,
+    "null": 0.1676,
+    "fold": 0.99,
+    "z": -0.85,
+    "p": 0.82587
+   },
+   ">=400": {
+    "n": 11277,
+    "rate": 0.2244,
+    "null": 0.183,
+    "fold": 1.23,
+    "z": 11.83,
+    "p": 0.00498
+   }
+  }
+ }
+}

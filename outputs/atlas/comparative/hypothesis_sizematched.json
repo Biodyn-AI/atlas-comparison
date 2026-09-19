@@ -1,0 +1,180 @@
+{
+ "budget": 8631,
+ "n_draws": 20,
+ "n_perm": 100,
+ "null": "configuration model on the budgeted edge set; TRRUST held out",
+ "graph_sizes": {
+  "AIDO": 2,
+  "C2S": 147728,
+  "Geneformer": 20142,
+  "MaxToki": 18307,
+  "UCE": 71264,
+  "scGPT": 8631,
+  "tGPT": 14412,
+  "scFoundation": 4149,
+  "GeneCompass": 22537,
+  "Tahoe": 41952
+ },
+ "models": {
+  "AIDO": {
+   "graph": 2,
+   "testable": false,
+   "reason": "graph smaller than the 8631-pair budget"
+  },
+  "C2S": {
+   "graph": 147728,
+   "testable": true,
+   "topN": {
+    "hits": 7,
+    "null_mean": 0.99,
+    "fold": 7.07,
+    "p_emp": 0.0099
+   },
+   "randN": {
+    "fold_mean": 3.36,
+    "fold_sd": 1.72,
+    "n_draws": 20
+   },
+   "full_fold": 4.12
+  },
+  "Geneformer": {
+   "graph": 20142,
+   "testable": true,
+   "topN": {
+    "hits": 6,
+    "null_mean": 1.2,
+    "fold": 5.0,
+    "p_emp": 0.0099
+   },
+   "randN": {
+    "fold_mean": 4.25,
+    "fold_sd": 1.03,
+    "n_draws": 20
+   },
+   "full_fold": 3.87
+  },
+  "MaxToki": {
+   "graph": 18307,
+   "testable": true,
+   "topN": {
+    "hits": 2,
+    "null_mean": 0.23,
+    "fold": 8.7,
+    "p_emp": 0.0396
+   },
+   "randN": {
+    "fold_mean": 3.59,
+    "fold_sd": 2.56,
+    "n_draws": 20
+   },
+   "full_fold": 3.45
+  },
+  "UCE": {
+   "graph": 71264,
+   "testable": true,
+   "topN": {
+    "hits": 2,
+    "null_mean": 0.51,
+    "fold": 3.92,
+    "p_emp": 0.1188
+   },
+   "randN": {
+    "fold_mean": 11.16,
+    "fold_sd": 5.2,
+    "n_draws": 20
+   },
+   "full_fold": 10.54
+  },
+  "scGPT": {
+   "graph": 8631,
+   "testable": true,
+   "topN": {
+    "hits": 10,
+    "null_mean": 0.91,
+    "fold": 10.99,
+    "p_emp": 0.0099
+   },
+   "randN": {
+    "fold_mean": 11.68,
+    "fold_sd": 1.31,
+    "n_draws": 20
+   },
+   "full_fold": 11.9
+  },
+  "tGPT": {
+   "graph": 14412,
+   "testable": true,
+   "topN": {
+    "hits": 2,
+    "null_mean": 1.14,
+    "fold": 1.75,
+    "p_emp": 0.3366
+   },
+   "randN": {
+    "fold_mean": 1.22,
+    "fold_sd": 0.63,
+    "n_draws": 20
+   },
+   "full_fold": 1.31
+  },
+  "scFoundation": {
+   "graph": 4149,
+   "testable": false,
+   "reason": "graph smaller than the 8631-pair budget"
+  },
+  "GeneCompass": {
+   "graph": 22537,
+   "testable": true,
+   "topN": {
+    "hits": 0,
+    "null_mean": 0.14,
+    "fold": null,
+    "p_emp": 1.0
+   },
+   "randN": {
+    "fold_mean": null,
+    "fold_sd": null,
+    "n_draws": 20
+   },
+   "full_fold": 0.0
+  },
+  "Tahoe": {
+   "graph": 41952,
+   "testable": true,
+   "topN": {
+    "hits": 19,
+    "null_mean": 1.0,
+    "fold": 19.0,
+    "p_emp": 0.0099
+   },
+   "randN": {
+    "fold_mean": 12.89,
+    "fold_sd": 2.9,
+    "n_draws": 20
+   },
+   "full_fold": 13.29
+  }
+ },
+ "ranking_full_size": [
+  "Tahoe",
+  "scGPT",
+  "UCE",
+  "C2S",
+  "Geneformer",
+  "MaxToki",
+  "tGPT",
+  "GeneCompass"
+ ],
+ "ranking_size_matched": [
+  "Tahoe",
+  "scGPT",
+  "MaxToki",
+  "C2S",
+  "Geneformer",
+  "UCE",
+  "tGPT",
+  "GeneCompass"
+ ],
+ "ranking_preserved": false,
+ "spearman_full_vs_matched": 0.786
+}
