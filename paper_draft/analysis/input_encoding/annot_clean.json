@@ -1,0 +1,244 @@
+{
+ "annotator": "stats_final.py (top10, >=3 genes, GO/KEGG/Reactome 5..200, BH q<=0.05), mid layer",
+ "per_model": {
+  "AIDO": {
+   "mid_layer": 4,
+   "n_features": 1024,
+   "features_tail_into_top10": 0,
+   "annotated_features_raw": 52,
+   "annotated_features_clean": 52,
+   "terms_raw": 197,
+   "terms_clean": 197,
+   "terms_lost": [],
+   "n_terms_lost": 0,
+   "n_terms_gained": 0
+  },
+  "C2S": {
+   "mid_layer": 13,
+   "n_features": 9216,
+   "features_tail_into_top10": 109,
+   "annotated_features_raw": 1467,
+   "annotated_features_clean": 1389,
+   "terms_raw": 2384,
+   "terms_clean": 2263,
+   "terms_lost": [
+    "GO_BP:ERBB signaling pathway (GO:0038127)",
+    "GO_BP:JNK cascade (GO:0007254)",
+    "GO_BP:alternative mRNA splicing, via spliceosome (GO:0000380)",
+    "GO_BP:amyloid precursor protein catabolic process (GO:0042987)",
+    "GO_BP:amyloid precursor protein metabolic process (GO:0042982)",
+    "GO_BP:cell cycle G1/S phase transition (GO:0044843)",
+    "GO_BP:chromatin remodeling (GO:0006338)",
+    "GO_BP:cytoskeleton-dependent cytokinesis (GO:0061640)",
+    "GO_BP:early endosome to Golgi transport (GO:0034498)",
+    "GO_BP:establishment of protein localization to membrane (GO:0090150)",
+    "GO_BP:establishment of protein localization to organelle (GO:0072594)",
+    "GO_BP:fat cell differentiation (GO:0045444)",
+    "GO_BP:fatty acid biosynthetic process (GO:0006633)",
+    "GO_BP:fatty acid elongation (GO:0030497)",
+    "GO_BP:fatty acid elongation, monounsaturated fatty acid (GO:0034625)",
+    "GO_BP:fatty acid elongation, polyunsaturated fatty acid (GO:0034626)",
+    "GO_BP:fatty acid elongation, saturated fatty acid (GO:0019367)",
+    "GO_BP:fatty acid elongation, unsaturated fatty acid (GO:0019368)",
+    "GO_BP:histone H3-K36 demethylation (GO:0070544)",
+    "GO_BP:histone H3-K4 dimethylation (GO:0044648)",
+    "GO_BP:histone H3-K4 monomethylation (GO:0097692)",
+    "GO_BP:histone H3-K9 demethylation (GO:0033169)",
+    "GO_BP:histone lysine demethylation (GO:0070076)",
+    "GO_BP:histone mRNA metabolic process (GO:0008334)",
+    "GO_BP:leukotriene metabolic process (GO:0006691)"
+   ],
+   "n_terms_lost": 121,
+   "n_terms_gained": 0
+  },
+  "Geneformer": {
+   "mid_layer": 9,
+   "n_features": 4608,
+   "features_tail_into_top10": 1,
+   "annotated_features_raw": 386,
+   "annotated_features_clean": 385,
+   "terms_raw": 706,
+   "terms_clean": 699,
+   "terms_lost": [
+    "Reactome:E3 Ubiquitin Ligases Ubiquitinate Target Proteins R-HSA-8866654",
+    "Reactome:HATs Acetylate Histones R-HSA-3214847",
+    "Reactome:HCMV Early Events R-HSA-9609690",
+    "Reactome:HCMV Infection R-HSA-9609646",
+    "Reactome:HCMV Late Events R-HSA-9610379",
+    "Reactome:HDACs Deacetylate Histones R-HSA-3214815",
+    "Reactome:Protein Ubiquitination R-HSA-8852135"
+   ],
+   "n_terms_lost": 7,
+   "n_terms_gained": 0
+  },
+  "MaxToki": {
+   "mid_layer": 5,
+   "n_features": 4928,
+   "features_tail_into_top10": 0,
+   "annotated_features_raw": 146,
+   "annotated_features_clean": 146,
+   "terms_raw": 165,
+   "terms_clean": 165,
+   "terms_lost": [],
+   "n_terms_lost": 0,
+   "n_terms_gained": 0
+  },
+  "UCE": {
+   "mid_layer": 16,
+   "n_features": 5120,
+   "features_tail_into_top10": 1,
+   "annotated_features_raw": 275,
+   "annotated_features_clean": 275,
+   "terms_raw": 670,
+   "terms_clean": 670,
+   "terms_lost": [],
+   "n_terms_lost": 0,
+   "n_terms_gained": 0
+  },
+  "scGPT": {
+   "mid_layer": 6,
+   "n_features": 2048,
+   "features_tail_into_top10": 3,
+   "annotated_features_raw": 157,
+   "annotated_features_clean": 157,
+   "terms_raw": 535,
+   "terms_clean": 535,
+   "terms_lost": [],
+   "n_terms_lost": 0,
+   "n_terms_gained": 0
+  },
+  "tGPT": {
+   "mid_layer": 4,
+   "n_features": 3986,
+   "features_tail_into_top10": 1376,
+   "annotated_features_raw": 1283,
+   "annotated_features_clean": 1112,
+   "terms_raw": 460,
+   "terms_clean": 433,
+   "terms_lost": [
+    "GO_BP:activation of protein kinase activity (GO:0032147)",
+    "GO_BP:apoptotic cell clearance (GO:0043277)",
+    "GO_BP:calcium ion transmembrane transport (GO:0070588)",
+    "GO_BP:negative regulation of DNA-binding transcription factor activity (GO:0043433)",
+    "GO_BP:negative regulation of cell differentiation (GO:0045596)",
+    "GO_BP:negative regulation of cytokine-mediated signaling pathway (GO:0001960)",
+    "GO_BP:negative regulation of endothelial cell apoptotic process (GO:2000352)",
+    "GO_BP:negative regulation of epithelial cell apoptotic process (GO:1904036)",
+    "GO_BP:neuron projection morphogenesis (GO:0048812)",
+    "GO_BP:positive regulation of blood vessel endothelial cell migration (GO:0043536)",
+    "GO_BP:positive regulation of cytokine-mediated signaling pathway (GO:0001961)",
+    "GO_BP:positive regulation of endothelial cell proliferation (GO:0001938)",
+    "GO_BP:positive regulation of phagocytosis (GO:0050766)",
+    "GO_BP:positive regulation of transport (GO:0051050)",
+    "GO_BP:protein localization to organelle (GO:0033365)",
+    "GO_BP:regulation of blood vessel endothelial cell migration (GO:0043535)",
+    "GO_BP:regulation of cytokine-mediated signaling pathway (GO:0001959)",
+    "GO_BP:regulation of endothelial cell apoptotic process (GO:2000351)",
+    "GO_BP:regulation of interleukin-6 production (GO:0032675)",
+    "GO_BP:regulation of mitotic cell cycle (GO:0007346)",
+    "GO_BP:regulation of phagocytosis (GO:0050764)",
+    "Reactome:Epigenetic Regulation Of Gene Expression R-HSA-212165",
+    "Reactome:RNA Polymerase I Promoter Clearance R-HSA-73854",
+    "Reactome:RNA Polymerase I Transcription Initiation R-HSA-73762",
+    "Reactome:RNA Polymerase I Transcription R-HSA-73864"
+   ],
+   "n_terms_lost": 27,
+   "n_terms_gained": 0
+  },
+  "scFoundation": {
+   "mid_layer": 6,
+   "n_features": 3072,
+   "features_tail_into_top10": 1,
+   "annotated_features_raw": 118,
+   "annotated_features_clean": 118,
+   "terms_raw": 299,
+   "terms_clean": 299,
+   "terms_lost": [],
+   "n_terms_lost": 0,
+   "n_terms_gained": 0
+  },
+  "GeneCompass": {
+   "mid_layer": 6,
+   "n_features": 3072,
+   "features_tail_into_top10": 0,
+   "annotated_features_raw": 41,
+   "annotated_features_clean": 41,
+   "terms_raw": 48,
+   "terms_clean": 48,
+   "terms_lost": [],
+   "n_terms_lost": 0,
+   "n_terms_gained": 0
+  },
+  "Tahoe": {
+   "mid_layer": 16,
+   "n_features": 10240,
+   "features_tail_into_top10": 555,
+   "annotated_features_raw": 640,
+   "annotated_features_clean": 639,
+   "terms_raw": 1089,
+   "terms_clean": 1069,
+   "terms_lost": [
+    "GO_BP:antigen processing and presentation of endogenous peptide antigen (GO:0002483)",
+    "GO_BP:antigen processing and presentation of endogenous peptide antigen via MHC class I via ER pathway (GO:0002484)",
+    "GO_BP:antigen processing and presentation of endogenous peptide antigen via MHC class I via ER pathway, TAP-independent (GO:0002486)",
+    "GO_BP:antigen processing and presentation of exogenous peptide antigen via MHC class I, TAP-independent (GO:0002480)",
+    "GO_BP:antigen processing and presentation of peptide antigen via MHC class I (GO:0002474)",
+    "GO_BP:negative regulation of natural killer cell mediated cytotoxicity (GO:0045953)",
+    "GO_BP:positive regulation of T cell mediated cytotoxicity (GO:0001916)",
+    "GO_BP:positive regulation of T cell mediated immunity (GO:0002711)",
+    "GO_BP:positive regulation of cytokine production involved in immune response (GO:0002720)",
+    "GO_BP:positive regulation of interferon-gamma production (GO:0032729)",
+    "GO_BP:positive regulation of leukocyte mediated cytotoxicity (GO:0001912)",
+    "GO_BP:protection from natural killer cell mediated cytotoxicity (GO:0042270)",
+    "GO_BP:regulation of T cell cytokine production (GO:0002724)",
+    "GO_BP:regulation of T cell mediated cytotoxicity (GO:0001914)",
+    "KEGG:Cellular senescence",
+    "Reactome:Antigen Presentation: Folding, Assembly, Peptide Loading Of Class I MHC R-HSA-983170",
+    "Reactome:DAP12 Interactions R-HSA-2172127",
+    "Reactome:Endosomal/Vacuolar Pathway R-HSA-1236977",
+    "Reactome:Immunoregulatory Interactions Between A Lymphoid And A non-Lymphoid Cell R-HSA-198933",
+    "Reactome:SARS-CoV-2 Activates/Modulates Innate And Adaptive Immune Responses R-HSA-9705671"
+   ],
+   "n_terms_lost": 20,
+   "n_terms_gained": 0
+  }
+ },
+ "backbone_raw": {
+  ">=7": 142,
+  ">=8": 78,
+  ">=9": 10,
+  ">=10": 2
+ },
+ "backbone_clean": {
+  ">=7": 140,
+  ">=8": 77,
+  ">=9": 10,
+  ">=10": 2
+ },
+ "backbone_ge8_lost": [
+  "GO_BP:regulation of mitotic cell cycle (GO:0007346)"
+ ],
+ "backbone_ge8_gained": [],
+ "stored_null": {
+  ">=7": {
+   "null_mean": 13.16,
+   "null_sd": 3.53,
+   "real_published": 142
+  },
+  ">=8": {
+   "null_mean": 3.46,
+   "null_sd": 2.04,
+   "real_published": 78
+  },
+  ">=9": {
+   "null_mean": 0.58,
+   "null_sd": 0.78,
+   "real_published": 10
+  },
+  ">=10": {
+   "null_mean": 0.03,
+   "null_sd": 0.18,
+   "real_published": 2
+  }
+ }
+}

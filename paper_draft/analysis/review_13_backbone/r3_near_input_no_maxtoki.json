@@ -1,0 +1,120 @@
+{
+ "models": [
+  "C2S",
+  "Geneformer",
+  "UCE",
+  "scGPT",
+  "scFoundation",
+  "Tahoe"
+ ],
+ "slices": {
+  "d0": {
+   ">=5_of_6": {
+    "n": 445,
+    "class_weighted": {
+     "other_housekeeping": 175,
+     "specific": 226,
+     "protein_synthesis": 44
+    }
+   },
+   ">=6_of_6": {
+    "n": 169,
+    "class_weighted": {
+     "other_housekeeping": 77,
+     "specific": 57,
+     "protein_synthesis": 35
+    }
+   }
+  },
+  "d25": {
+   ">=5_of_6": {
+    "n": 490,
+    "class_weighted": {
+     "other_housekeeping": 198,
+     "specific": 247,
+     "protein_synthesis": 45
+    }
+   },
+   ">=6_of_6": {
+    "n": 182,
+    "class_weighted": {
+     "other_housekeeping": 67,
+     "protein_synthesis": 43,
+     "specific": 72
+    }
+   }
+  },
+  "d50": {
+   ">=5_of_6": {
+    "n": 244,
+    "class_weighted": {
+     "other_housekeeping": 60,
+     "protein_synthesis": 44,
+     "specific": 140
+    }
+   },
+   ">=6_of_6": {
+    "n": 143,
+    "class_weighted": {
+     "other_housekeeping": 22,
+     "protein_synthesis": 42,
+     "specific": 79
+    }
+   }
+  },
+  "mid": {
+   ">=5_of_6": {
+    "n": 269,
+    "class_weighted": {
+     "other_housekeeping": 73,
+     "specific": 152,
+     "protein_synthesis": 44
+    }
+   },
+   ">=6_of_6": {
+    "n": 146,
+    "class_weighted": {
+     "other_housekeeping": 21,
+     "protein_synthesis": 41,
+     "specific": 84
+    }
+   }
+  },
+  "d75": {
+   ">=5_of_6": {
+    "n": 144,
+    "class_weighted": {
+     "other_housekeeping": 22,
+     "specific": 79,
+     "protein_synthesis": 43
+    }
+   },
+   ">=6_of_6": {
+    "n": 60,
+    "class_weighted": {
+     "protein_synthesis": 40,
+     "specific": 19,
+     "other_housekeeping": 1
+    }
+   }
+  },
+  "d100": {
+   ">=5_of_6": {
+    "n": 107,
+    "class_weighted": {
+     "protein_synthesis": 42,
+     "specific": 51,
+     "other_housekeeping": 14
+    }
+   },
+   ">=6_of_6": {
+    "n": 42,
+    "class_weighted": {
+     "protein_synthesis": 33,
+     "specific": 8,
+     "other_housekeeping": 1
+    }
+   }
+  }
+ }
+}

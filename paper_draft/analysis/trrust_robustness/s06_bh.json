@@ -1,0 +1,3132 @@
+{
+ "alpha": 0.05,
+ "families": {
+  "F1_ten_per_model_published": {
+   "n_tests": 10,
+   "n_p_lt_05": 5,
+   "n_survive_bh": 5,
+   "note": "hypothesis_trrust2.json:per_model.<m>.p_emp (500 rewirings, floor 1/501)",
+   "rows": [
+    {
+     "test": "per-model AIDO",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "per-model C2S",
+     "p": 0.002,
+     "q_bh": 0.004,
+     "survives_q05": true,
+     "bonferroni": 0.02
+    },
+    {
+     "test": "per-model Geneformer",
+     "p": 0.002,
+     "q_bh": 0.004,
+     "survives_q05": true,
+     "bonferroni": 0.02
+    },
+    {
+     "test": "per-model MaxToki",
+     "p": 0.11178,
+     "q_bh": 0.1863,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "per-model UCE",
+     "p": 0.002,
+     "q_bh": 0.004,
+     "survives_q05": true,
+     "bonferroni": 0.02
+    },
+    {
+     "test": "per-model scGPT",
+     "p": 0.002,
+     "q_bh": 0.004,
+     "survives_q05": true,
+     "bonferroni": 0.02
+    },
+    {
+     "test": "per-model tGPT",
+     "p": 0.42116,
+     "q_bh": 0.60166,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "per-model scFoundation",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "per-model GeneCompass",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "per-model Tahoe",
+     "p": 0.002,
+     "q_bh": 0.004,
+     "survives_q05": true,
+     "bonferroni": 0.02
+    }
+   ]
+  },
+  "F2_robust_variants_published": {
+   "n_tests": 10,
+   "n_p_lt_05": 9,
+   "n_survive_bh": 9,
+   "note": "hypothesis_robust.json:variants.<v>.<k>.p_emp (200 rewirings, floor 1/201)",
+   "rows": [
+    {
+     "test": "robust R0 baseline (W>=5) k>=1",
+     "p": 0.00498,
+     "q_bh": 0.0083,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "robust R0 baseline (W>=5) k>=2",
+     "p": 0.00498,
+     "q_bh": 0.0083,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "robust R1 no same-family pairs k>=1",
+     "p": 0.00498,
+     "q_bh": 0.0083,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "robust R1 no same-family pairs k>=2",
+     "p": 0.00995,
+     "q_bh": 0.01106,
+     "survives_q05": true,
+     "bonferroni": 0.0995
+    },
+    {
+     "test": "robust R2 firing features only k>=1",
+     "p": 0.00498,
+     "q_bh": 0.0083,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "robust R2 firing features only k>=2",
+     "p": 0.05473,
+     "q_bh": 0.05473,
+     "survives_q05": false,
+     "bonferroni": 0.5473
+    },
+    {
+     "test": "robust R3 stricter evidence (W>=10) k>=1",
+     "p": 0.00498,
+     "q_bh": 0.0083,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "robust R3 stricter evidence (W>=10) k>=2",
+     "p": 0.00995,
+     "q_bh": 0.01106,
+     "survives_q05": true,
+     "bonferroni": 0.0995
+    },
+    {
+     "test": "robust R2+R1 firing, no families k>=1",
+     "p": 0.00498,
+     "q_bh": 0.0083,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "robust R2+R1 firing, no families k>=2",
+     "p": 0.00995,
+     "q_bh": 0.01106,
+     "survives_q05": true,
+     "bonferroni": 0.0995
+    }
+   ]
+  },
+  "F1_plus_F2_published": {
+   "n_tests": 20,
+   "n_p_lt_05": 14,
+   "n_survive_bh": 14,
+   "note": "union of F1 and F2",
+   "rows": [
+    {
+     "test": "per-model AIDO",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "per-model C2S",
+     "p": 0.002,
+     "q_bh": 0.008,
+     "survives_q05": true,
+     "bonferroni": 0.04
+    },
+    {
+     "test": "per-model Geneformer",
+     "p": 0.002,
+     "q_bh": 0.008,
+     "survives_q05": true,
+     "bonferroni": 0.04
+    },
+    {
+     "test": "per-model MaxToki",
+     "p": 0.11178,
+     "q_bh": 0.13973,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "per-model UCE",
+     "p": 0.002,
+     "q_bh": 0.008,
+     "survives_q05": true,
+     "bonferroni": 0.04
+    },
+    {
+     "test": "per-model scGPT",
+     "p": 0.002,
+     "q_bh": 0.008,
+     "survives_q05": true,
+     "bonferroni": 0.04
+    },
+    {
+     "test": "per-model tGPT",
+     "p": 0.42116,
+     "q_bh": 0.49548,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "per-model scFoundation",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "per-model GeneCompass",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "per-model Tahoe",
+     "p": 0.002,
+     "q_bh": 0.008,
+     "survives_q05": true,
+     "bonferroni": 0.04
+    },
+    {
+     "test": "robust R0 baseline (W>=5) k>=1",
+     "p": 0.00498,
+     "q_bh": 0.00905,
+     "survives_q05": true,
+     "bonferroni": 0.0996
+    },
+    {
+     "test": "robust R0 baseline (W>=5) k>=2",
+     "p": 0.00498,
+     "q_bh": 0.00905,
+     "survives_q05": true,
+     "bonferroni": 0.0996
+    },
+    {
+     "test": "robust R1 no same-family pairs k>=1",
+     "p": 0.00498,
+     "q_bh": 0.00905,
+     "survives_q05": true,
+     "bonferroni": 0.0996
+    },
+    {
+     "test": "robust R1 no same-family pairs k>=2",
+     "p": 0.00995,
+     "q_bh": 0.01421,
+     "survives_q05": true,
+     "bonferroni": 0.199
+    },
+    {
+     "test": "robust R2 firing features only k>=1",
+     "p": 0.00498,
+     "q_bh": 0.00905,
+     "survives_q05": true,
+     "bonferroni": 0.0996
+    },
+    {
+     "test": "robust R2 firing features only k>=2",
+     "p": 0.05473,
+     "q_bh": 0.07297,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "robust R3 stricter evidence (W>=10) k>=1",
+     "p": 0.00498,
+     "q_bh": 0.00905,
+     "survives_q05": true,
+     "bonferroni": 0.0996
+    },
+    {
+     "test": "robust R3 stricter evidence (W>=10) k>=2",
+     "p": 0.00995,
+     "q_bh": 0.01421,
+     "survives_q05": true,
+     "bonferroni": 0.199
+    },
+    {
+     "test": "robust R2+R1 firing, no families k>=1",
+     "p": 0.00498,
+     "q_bh": 0.00905,
+     "survives_q05": true,
+     "bonferroni": 0.0996
+    },
+    {
+     "test": "robust R2+R1 firing, no families k>=2",
+     "p": 0.00995,
+     "q_bh": 0.01421,
+     "survives_q05": true,
+     "bonferroni": 0.199
+    }
+   ]
+  },
+  "F3_equal_budget_published": {
+   "n_tests": 8,
+   "n_p_lt_05": 5,
+   "n_survive_bh": 4,
+   "note": "hypothesis_sizematched.json:models.<m>.topN.p_emp (100 rewirings, floor 1/101); untestable models omitted",
+   "rows": [
+    {
+     "test": "equal-budget C2S",
+     "p": 0.0099,
+     "q_bh": 0.0198,
+     "survives_q05": true,
+     "bonferroni": 0.0792
+    },
+    {
+     "test": "equal-budget Geneformer",
+     "p": 0.0099,
+     "q_bh": 0.0198,
+     "survives_q05": true,
+     "bonferroni": 0.0792
+    },
+    {
+     "test": "equal-budget MaxToki",
+     "p": 0.0396,
+     "q_bh": 0.06336,
+     "survives_q05": false,
+     "bonferroni": 0.3168
+    },
+    {
+     "test": "equal-budget UCE",
+     "p": 0.1188,
+     "q_bh": 0.1584,
+     "survives_q05": false,
+     "bonferroni": 0.9504
+    },
+    {
+     "test": "equal-budget scGPT",
+     "p": 0.0099,
+     "q_bh": 0.0198,
+     "survives_q05": true,
+     "bonferroni": 0.0792
+    },
+    {
+     "test": "equal-budget tGPT",
+     "p": 0.3366,
+     "q_bh": 0.38469,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "equal-budget GeneCompass",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "equal-budget Tahoe",
+     "p": 0.0099,
+     "q_bh": 0.0198,
+     "survives_q05": true,
+     "bonferroni": 0.0792
+    }
+   ]
+  },
+  "F4_pooling_variants_this_work": {
+   "n_tests": 160,
+   "n_p_lt_05": 71,
+   "n_survive_bh": 69,
+   "note": "s05_pooling.json:per_model.<m>.<layerset>.W<W>.p_emp (200 rewirings)",
+   "rows": [
+    {
+     "test": "AIDO all W2",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "AIDO all W3",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "AIDO all W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "AIDO all W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "AIDO noL0 W2",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "AIDO noL0 W3",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "AIDO noL0 W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "AIDO noL0 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "AIDO even8 W2",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "AIDO even8 W3",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "AIDO even8 W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "AIDO even8 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "AIDO even8noL0 W2",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "AIDO even8noL0 W3",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "AIDO even8noL0 W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "AIDO even8noL0 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "C2S all W2",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "C2S all W3",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "C2S all W5",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "C2S all W10",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "C2S noL0 W2",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "C2S noL0 W3",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "C2S noL0 W5",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "C2S noL0 W10",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "C2S even8 W2",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "C2S even8 W3",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "C2S even8 W5",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "C2S even8 W10",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "C2S even8noL0 W2",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "C2S even8noL0 W3",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "C2S even8noL0 W5",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "C2S even8noL0 W10",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Geneformer all W2",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Geneformer all W3",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Geneformer all W5",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Geneformer all W10",
+     "p": 0.40796,
+     "q_bh": 0.62763,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Geneformer noL0 W2",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Geneformer noL0 W3",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Geneformer noL0 W5",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Geneformer noL0 W10",
+     "p": 0.25373,
+     "q_bh": 0.42674,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Geneformer even8 W2",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Geneformer even8 W3",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Geneformer even8 W5",
+     "p": 0.12935,
+     "q_bh": 0.23789,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Geneformer even8 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Geneformer even8noL0 W2",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Geneformer even8noL0 W3",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Geneformer even8noL0 W5",
+     "p": 0.1194,
+     "q_bh": 0.23298,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Geneformer even8noL0 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki all W2",
+     "p": 0.59701,
+     "q_bh": 0.85287,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki all W3",
+     "p": 0.12935,
+     "q_bh": 0.23789,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki all W5",
+     "p": 0.12935,
+     "q_bh": 0.23789,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki all W10",
+     "p": 0.21393,
+     "q_bh": 0.36414,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki noL0 W2",
+     "p": 0.47761,
+     "q_bh": 0.69471,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki noL0 W3",
+     "p": 0.1194,
+     "q_bh": 0.23298,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki noL0 W5",
+     "p": 0.09453,
+     "q_bh": 0.19643,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki noL0 W10",
+     "p": 0.18408,
+     "q_bh": 0.32725,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki even8 W2",
+     "p": 0.32338,
+     "q_bh": 0.52797,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki even8 W3",
+     "p": 0.20896,
+     "q_bh": 0.3595,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki even8 W5",
+     "p": 0.0796,
+     "q_bh": 0.16981,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki even8 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki even8noL0 W2",
+     "p": 0.39801,
+     "q_bh": 0.61827,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki even8noL0 W3",
+     "p": 0.20896,
+     "q_bh": 0.3595,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki even8noL0 W5",
+     "p": 0.09453,
+     "q_bh": 0.19643,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki even8noL0 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "UCE all W2",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "UCE all W3",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "UCE all W5",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "UCE all W10",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "UCE noL0 W2",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "UCE noL0 W3",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "UCE noL0 W5",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "UCE noL0 W10",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "UCE even8 W2",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "UCE even8 W3",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "UCE even8 W5",
+     "p": 0.05473,
+     "q_bh": 0.12162,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "UCE even8 W10",
+     "p": 0.20398,
+     "q_bh": 0.35865,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "UCE even8noL0 W2",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "UCE even8noL0 W3",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "UCE even8noL0 W5",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "UCE even8noL0 W10",
+     "p": 0.11443,
+     "q_bh": 0.22886,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scGPT all W2",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "scGPT all W3",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "scGPT all W5",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "scGPT all W10",
+     "p": 0.00995,
+     "q_bh": 0.02376,
+     "survives_q05": true,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scGPT noL0 W2",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "scGPT noL0 W3",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "scGPT noL0 W5",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "scGPT noL0 W10",
+     "p": 0.02488,
+     "q_bh": 0.05607,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scGPT even8 W2",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "scGPT even8 W3",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "scGPT even8 W5",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "scGPT even8 W10",
+     "p": 0.00995,
+     "q_bh": 0.02376,
+     "survives_q05": true,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scGPT even8noL0 W2",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "scGPT even8noL0 W3",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "scGPT even8noL0 W5",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "scGPT even8noL0 W10",
+     "p": 0.01493,
+     "q_bh": 0.03513,
+     "survives_q05": true,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "tGPT all W2",
+     "p": 0.10448,
+     "q_bh": 0.21161,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "tGPT all W3",
+     "p": 0.25871,
+     "q_bh": 0.42674,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "tGPT all W5",
+     "p": 0.46766,
+     "q_bh": 0.69283,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "tGPT all W10",
+     "p": 0.38308,
+     "q_bh": 0.60091,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "tGPT noL0 W2",
+     "p": 0.06468,
+     "q_bh": 0.13985,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "tGPT noL0 W3",
+     "p": 0.1592,
+     "q_bh": 0.2862,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "tGPT noL0 W5",
+     "p": 0.44776,
+     "q_bh": 0.67586,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "tGPT noL0 W10",
+     "p": 0.33831,
+     "q_bh": 0.5413,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "tGPT even8 W2",
+     "p": 0.10448,
+     "q_bh": 0.21161,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "tGPT even8 W3",
+     "p": 0.25871,
+     "q_bh": 0.42674,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "tGPT even8 W5",
+     "p": 0.46766,
+     "q_bh": 0.69283,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "tGPT even8 W10",
+     "p": 0.38308,
+     "q_bh": 0.60091,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "tGPT even8noL0 W2",
+     "p": 0.06468,
+     "q_bh": 0.13985,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "tGPT even8noL0 W3",
+     "p": 0.1592,
+     "q_bh": 0.2862,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "tGPT even8noL0 W5",
+     "p": 0.44776,
+     "q_bh": 0.67586,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "tGPT even8noL0 W10",
+     "p": 0.33831,
+     "q_bh": 0.5413,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation all W2",
+     "p": 0.0199,
+     "q_bh": 0.04614,
+     "survives_q05": true,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation all W3",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation all W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation all W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation noL0 W2",
+     "p": 0.02488,
+     "q_bh": 0.05607,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation noL0 W3",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation noL0 W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation noL0 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation even8 W2",
+     "p": 0.12935,
+     "q_bh": 0.23789,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation even8 W3",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation even8 W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation even8 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation even8noL0 W2",
+     "p": 0.12935,
+     "q_bh": 0.23789,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation even8noL0 W3",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation even8noL0 W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation even8noL0 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass all W2",
+     "p": 0.8806,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass all W3",
+     "p": 0.55721,
+     "q_bh": 0.80319,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass all W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass all W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass noL0 W2",
+     "p": 0.91045,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass noL0 W3",
+     "p": 0.47264,
+     "q_bh": 0.69378,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass noL0 W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass noL0 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass even8 W2",
+     "p": 0.71144,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass even8 W3",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass even8 W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass even8 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass even8noL0 W2",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass even8noL0 W3",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass even8noL0 W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass even8noL0 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Tahoe all W2",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Tahoe all W3",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Tahoe all W5",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Tahoe all W10",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Tahoe noL0 W2",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Tahoe noL0 W3",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Tahoe noL0 W5",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Tahoe noL0 W10",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Tahoe even8 W2",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Tahoe even8 W3",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Tahoe even8 W5",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Tahoe even8 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Tahoe even8noL0 W2",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Tahoe even8noL0 W3",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Tahoe even8noL0 W5",
+     "p": 0.00498,
+     "q_bh": 0.01226,
+     "survives_q05": true,
+     "bonferroni": 0.7968
+    },
+    {
+     "test": "Tahoe even8noL0 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    }
+   ]
+  },
+  "F4_all_W2_ten_models": {
+   "n_tests": 10,
+   "n_p_lt_05": 6,
+   "n_survive_bh": 6,
+   "note": "one pooling variant, BH across the ten models",
+   "rows": [
+    {
+     "test": "AIDO all W2",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "C2S all W2",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "Geneformer all W2",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "MaxToki all W2",
+     "p": 0.59701,
+     "q_bh": 0.74626,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "UCE all W2",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "scGPT all W2",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "tGPT all W2",
+     "p": 0.10448,
+     "q_bh": 0.14926,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation all W2",
+     "p": 0.0199,
+     "q_bh": 0.03317,
+     "survives_q05": true,
+     "bonferroni": 0.199
+    },
+    {
+     "test": "GeneCompass all W2",
+     "p": 0.8806,
+     "q_bh": 0.97844,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Tahoe all W2",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    }
+   ]
+  },
+  "F4_all_W3_ten_models": {
+   "n_tests": 10,
+   "n_p_lt_05": 5,
+   "n_survive_bh": 5,
+   "note": "one pooling variant, BH across the ten models",
+   "rows": [
+    {
+     "test": "AIDO all W3",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "C2S all W3",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "Geneformer all W3",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "MaxToki all W3",
+     "p": 0.12935,
+     "q_bh": 0.21558,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "UCE all W3",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "scGPT all W3",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "tGPT all W3",
+     "p": 0.25871,
+     "q_bh": 0.36959,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation all W3",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass all W3",
+     "p": 0.55721,
+     "q_bh": 0.69651,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Tahoe all W3",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    }
+   ]
+  },
+  "F4_all_W5_ten_models": {
+   "n_tests": 10,
+   "n_p_lt_05": 5,
+   "n_survive_bh": 5,
+   "note": "one pooling variant, BH across the ten models",
+   "rows": [
+    {
+     "test": "AIDO all W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "C2S all W5",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "Geneformer all W5",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "MaxToki all W5",
+     "p": 0.12935,
+     "q_bh": 0.21558,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "UCE all W5",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "scGPT all W5",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "tGPT all W5",
+     "p": 0.46766,
+     "q_bh": 0.66809,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation all W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass all W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Tahoe all W5",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    }
+   ]
+  },
+  "F4_all_W10_ten_models": {
+   "n_tests": 10,
+   "n_p_lt_05": 4,
+   "n_survive_bh": 4,
+   "note": "one pooling variant, BH across the ten models",
+   "rows": [
+    {
+     "test": "AIDO all W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "C2S all W10",
+     "p": 0.00498,
+     "q_bh": 0.0166,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "Geneformer all W10",
+     "p": 0.40796,
+     "q_bh": 0.5828,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki all W10",
+     "p": 0.21393,
+     "q_bh": 0.42786,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "UCE all W10",
+     "p": 0.00498,
+     "q_bh": 0.0166,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "scGPT all W10",
+     "p": 0.00995,
+     "q_bh": 0.02488,
+     "survives_q05": true,
+     "bonferroni": 0.0995
+    },
+    {
+     "test": "tGPT all W10",
+     "p": 0.38308,
+     "q_bh": 0.5828,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation all W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass all W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Tahoe all W10",
+     "p": 0.00498,
+     "q_bh": 0.0166,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    }
+   ]
+  },
+  "F4_noL0_W2_ten_models": {
+   "n_tests": 10,
+   "n_p_lt_05": 6,
+   "n_survive_bh": 6,
+   "note": "one pooling variant, BH across the ten models",
+   "rows": [
+    {
+     "test": "AIDO noL0 W2",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "C2S noL0 W2",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "Geneformer noL0 W2",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "MaxToki noL0 W2",
+     "p": 0.47761,
+     "q_bh": 0.59701,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "UCE noL0 W2",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "scGPT noL0 W2",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "tGPT noL0 W2",
+     "p": 0.06468,
+     "q_bh": 0.0924,
+     "survives_q05": false,
+     "bonferroni": 0.6468
+    },
+    {
+     "test": "scFoundation noL0 W2",
+     "p": 0.02488,
+     "q_bh": 0.04147,
+     "survives_q05": true,
+     "bonferroni": 0.2488
+    },
+    {
+     "test": "GeneCompass noL0 W2",
+     "p": 0.91045,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Tahoe noL0 W2",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    }
+   ]
+  },
+  "F4_noL0_W3_ten_models": {
+   "n_tests": 10,
+   "n_p_lt_05": 5,
+   "n_survive_bh": 5,
+   "note": "one pooling variant, BH across the ten models",
+   "rows": [
+    {
+     "test": "AIDO noL0 W3",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "C2S noL0 W3",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "Geneformer noL0 W3",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "MaxToki noL0 W3",
+     "p": 0.1194,
+     "q_bh": 0.199,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "UCE noL0 W3",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "scGPT noL0 W3",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "tGPT noL0 W3",
+     "p": 0.1592,
+     "q_bh": 0.22743,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation noL0 W3",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass noL0 W3",
+     "p": 0.47264,
+     "q_bh": 0.5908,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Tahoe noL0 W3",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    }
+   ]
+  },
+  "F4_noL0_W5_ten_models": {
+   "n_tests": 10,
+   "n_p_lt_05": 5,
+   "n_survive_bh": 5,
+   "note": "one pooling variant, BH across the ten models",
+   "rows": [
+    {
+     "test": "AIDO noL0 W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "C2S noL0 W5",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "Geneformer noL0 W5",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "MaxToki noL0 W5",
+     "p": 0.09453,
+     "q_bh": 0.15755,
+     "survives_q05": false,
+     "bonferroni": 0.9453
+    },
+    {
+     "test": "UCE noL0 W5",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "scGPT noL0 W5",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "tGPT noL0 W5",
+     "p": 0.44776,
+     "q_bh": 0.63966,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation noL0 W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass noL0 W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Tahoe noL0 W5",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    }
+   ]
+  },
+  "F4_noL0_W10_ten_models": {
+   "n_tests": 10,
+   "n_p_lt_05": 4,
+   "n_survive_bh": 3,
+   "note": "one pooling variant, BH across the ten models",
+   "rows": [
+    {
+     "test": "AIDO noL0 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "C2S noL0 W10",
+     "p": 0.00498,
+     "q_bh": 0.0166,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "Geneformer noL0 W10",
+     "p": 0.25373,
+     "q_bh": 0.42288,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki noL0 W10",
+     "p": 0.18408,
+     "q_bh": 0.36816,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "UCE noL0 W10",
+     "p": 0.00498,
+     "q_bh": 0.0166,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "scGPT noL0 W10",
+     "p": 0.02488,
+     "q_bh": 0.0622,
+     "survives_q05": false,
+     "bonferroni": 0.2488
+    },
+    {
+     "test": "tGPT noL0 W10",
+     "p": 0.33831,
+     "q_bh": 0.4833,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation noL0 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass noL0 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Tahoe noL0 W10",
+     "p": 0.00498,
+     "q_bh": 0.0166,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    }
+   ]
+  },
+  "F4_even8_W2_ten_models": {
+   "n_tests": 10,
+   "n_p_lt_05": 5,
+   "n_survive_bh": 5,
+   "note": "one pooling variant, BH across the ten models",
+   "rows": [
+    {
+     "test": "AIDO even8 W2",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "C2S even8 W2",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "Geneformer even8 W2",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "MaxToki even8 W2",
+     "p": 0.32338,
+     "q_bh": 0.40423,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "UCE even8 W2",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "scGPT even8 W2",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "tGPT even8 W2",
+     "p": 0.10448,
+     "q_bh": 0.17413,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation even8 W2",
+     "p": 0.12935,
+     "q_bh": 0.18479,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass even8 W2",
+     "p": 0.71144,
+     "q_bh": 0.79049,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Tahoe even8 W2",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    }
+   ]
+  },
+  "F4_even8_W3_ten_models": {
+   "n_tests": 10,
+   "n_p_lt_05": 5,
+   "n_survive_bh": 5,
+   "note": "one pooling variant, BH across the ten models",
+   "rows": [
+    {
+     "test": "AIDO even8 W3",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "C2S even8 W3",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "Geneformer even8 W3",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "MaxToki even8 W3",
+     "p": 0.20896,
+     "q_bh": 0.34827,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "UCE even8 W3",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "scGPT even8 W3",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "tGPT even8 W3",
+     "p": 0.25871,
+     "q_bh": 0.36959,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation even8 W3",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass even8 W3",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Tahoe even8 W3",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    }
+   ]
+  },
+  "F4_even8_W5_ten_models": {
+   "n_tests": 10,
+   "n_p_lt_05": 3,
+   "n_survive_bh": 3,
+   "note": "one pooling variant, BH across the ten models",
+   "rows": [
+    {
+     "test": "AIDO even8 W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "C2S even8 W5",
+     "p": 0.00498,
+     "q_bh": 0.0166,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "Geneformer even8 W5",
+     "p": 0.12935,
+     "q_bh": 0.21558,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki even8 W5",
+     "p": 0.0796,
+     "q_bh": 0.1592,
+     "survives_q05": false,
+     "bonferroni": 0.796
+    },
+    {
+     "test": "UCE even8 W5",
+     "p": 0.05473,
+     "q_bh": 0.13683,
+     "survives_q05": false,
+     "bonferroni": 0.5473
+    },
+    {
+     "test": "scGPT even8 W5",
+     "p": 0.00498,
+     "q_bh": 0.0166,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "tGPT even8 W5",
+     "p": 0.46766,
+     "q_bh": 0.66809,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation even8 W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass even8 W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Tahoe even8 W5",
+     "p": 0.00498,
+     "q_bh": 0.0166,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    }
+   ]
+  },
+  "F4_even8_W10_ten_models": {
+   "n_tests": 10,
+   "n_p_lt_05": 2,
+   "n_survive_bh": 2,
+   "note": "one pooling variant, BH across the ten models",
+   "rows": [
+    {
+     "test": "AIDO even8 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "C2S even8 W10",
+     "p": 0.00498,
+     "q_bh": 0.04975,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "Geneformer even8 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki even8 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "UCE even8 W10",
+     "p": 0.20398,
+     "q_bh": 0.67993,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scGPT even8 W10",
+     "p": 0.00995,
+     "q_bh": 0.04975,
+     "survives_q05": true,
+     "bonferroni": 0.0995
+    },
+    {
+     "test": "tGPT even8 W10",
+     "p": 0.38308,
+     "q_bh": 0.9577,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation even8 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass even8 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Tahoe even8 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    }
+   ]
+  },
+  "F4_even8noL0_W2_ten_models": {
+   "n_tests": 10,
+   "n_p_lt_05": 5,
+   "n_survive_bh": 5,
+   "note": "one pooling variant, BH across the ten models",
+   "rows": [
+    {
+     "test": "AIDO even8noL0 W2",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "C2S even8noL0 W2",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "Geneformer even8noL0 W2",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "MaxToki even8noL0 W2",
+     "p": 0.39801,
+     "q_bh": 0.49751,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "UCE even8noL0 W2",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "scGPT even8noL0 W2",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "tGPT even8noL0 W2",
+     "p": 0.06468,
+     "q_bh": 0.1078,
+     "survives_q05": false,
+     "bonferroni": 0.6468
+    },
+    {
+     "test": "scFoundation even8noL0 W2",
+     "p": 0.12935,
+     "q_bh": 0.18479,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass even8noL0 W2",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Tahoe even8noL0 W2",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    }
+   ]
+  },
+  "F4_even8noL0_W3_ten_models": {
+   "n_tests": 10,
+   "n_p_lt_05": 5,
+   "n_survive_bh": 5,
+   "note": "one pooling variant, BH across the ten models",
+   "rows": [
+    {
+     "test": "AIDO even8noL0 W3",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "C2S even8noL0 W3",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "Geneformer even8noL0 W3",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "MaxToki even8noL0 W3",
+     "p": 0.20896,
+     "q_bh": 0.29851,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "UCE even8noL0 W3",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "scGPT even8noL0 W3",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "tGPT even8noL0 W3",
+     "p": 0.1592,
+     "q_bh": 0.26533,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation even8noL0 W3",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass even8noL0 W3",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Tahoe even8noL0 W3",
+     "p": 0.00498,
+     "q_bh": 0.00996,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    }
+   ]
+  },
+  "F4_even8noL0_W5_ten_models": {
+   "n_tests": 10,
+   "n_p_lt_05": 4,
+   "n_survive_bh": 4,
+   "note": "one pooling variant, BH across the ten models",
+   "rows": [
+    {
+     "test": "AIDO even8noL0 W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "C2S even8noL0 W5",
+     "p": 0.00498,
+     "q_bh": 0.01245,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "Geneformer even8noL0 W5",
+     "p": 0.1194,
+     "q_bh": 0.199,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki even8noL0 W5",
+     "p": 0.09453,
+     "q_bh": 0.18906,
+     "survives_q05": false,
+     "bonferroni": 0.9453
+    },
+    {
+     "test": "UCE even8noL0 W5",
+     "p": 0.00498,
+     "q_bh": 0.01245,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "scGPT even8noL0 W5",
+     "p": 0.00498,
+     "q_bh": 0.01245,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "tGPT even8noL0 W5",
+     "p": 0.44776,
+     "q_bh": 0.63966,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation even8noL0 W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass even8noL0 W5",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Tahoe even8noL0 W5",
+     "p": 0.00498,
+     "q_bh": 0.01245,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    }
+   ]
+  },
+  "F4_even8noL0_W10_ten_models": {
+   "n_tests": 10,
+   "n_p_lt_05": 2,
+   "n_survive_bh": 1,
+   "note": "one pooling variant, BH across the ten models",
+   "rows": [
+    {
+     "test": "AIDO even8noL0 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "C2S even8noL0 W10",
+     "p": 0.00498,
+     "q_bh": 0.0498,
+     "survives_q05": true,
+     "bonferroni": 0.0498
+    },
+    {
+     "test": "Geneformer even8noL0 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki even8noL0 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "UCE even8noL0 W10",
+     "p": 0.11443,
+     "q_bh": 0.38143,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scGPT even8noL0 W10",
+     "p": 0.01493,
+     "q_bh": 0.07465,
+     "survives_q05": false,
+     "bonferroni": 0.1493
+    },
+    {
+     "test": "tGPT even8noL0 W10",
+     "p": 0.33831,
+     "q_bh": 0.84577,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "scFoundation even8noL0 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "GeneCompass even8noL0 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "Tahoe even8noL0 W10",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    }
+   ]
+  },
+  "F5_maslov_sneppen_seven_models": {
+   "n_tests": 7,
+   "n_p_lt_05": 5,
+   "n_survive_bh": 5,
+   "note": "s04_null_choice.json:per_model.<m>.maslov_sneppen.p_emp (200 draws, floor 1/201)",
+   "rows": [
+    {
+     "test": "MS Tahoe",
+     "p": 0.00498,
+     "q_bh": 0.00697,
+     "survives_q05": true,
+     "bonferroni": 0.03486
+    },
+    {
+     "test": "MS scGPT",
+     "p": 0.00498,
+     "q_bh": 0.00697,
+     "survives_q05": true,
+     "bonferroni": 0.03486
+    },
+    {
+     "test": "MS UCE",
+     "p": 0.00498,
+     "q_bh": 0.00697,
+     "survives_q05": true,
+     "bonferroni": 0.03486
+    },
+    {
+     "test": "MS C2S",
+     "p": 0.00498,
+     "q_bh": 0.00697,
+     "survives_q05": true,
+     "bonferroni": 0.03486
+    },
+    {
+     "test": "MS Geneformer",
+     "p": 0.00498,
+     "q_bh": 0.00697,
+     "survives_q05": true,
+     "bonferroni": 0.03486
+    },
+    {
+     "test": "MS MaxToki",
+     "p": 0.10448,
+     "q_bh": 0.12189,
+     "survives_q05": false,
+     "bonferroni": 0.73136
+    },
+    {
+     "test": "MS tGPT",
+     "p": 0.62189,
+     "q_bh": 0.62189,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    }
+   ]
+  },
+  "F6_tf_to_nontf_hits_seven_models": {
+   "n_tests": 7,
+   "n_p_lt_05": 4,
+   "n_survive_bh": 4,
+   "note": "s03_hub_direction.json:models.<m>.direction.hits_tf_nontf_vs_null.p_emp (200 draws)",
+   "rows": [
+    {
+     "test": "TF-nonTF Tahoe",
+     "p": 0.00498,
+     "q_bh": 0.01162,
+     "survives_q05": true,
+     "bonferroni": 0.03486
+    },
+    {
+     "test": "TF-nonTF scGPT",
+     "p": 0.00498,
+     "q_bh": 0.01162,
+     "survives_q05": true,
+     "bonferroni": 0.03486
+    },
+    {
+     "test": "TF-nonTF UCE",
+     "p": 0.06965,
+     "q_bh": 0.08707,
+     "survives_q05": false,
+     "bonferroni": 0.48755
+    },
+    {
+     "test": "TF-nonTF C2S",
+     "p": 0.00498,
+     "q_bh": 0.01162,
+     "survives_q05": true,
+     "bonferroni": 0.03486
+    },
+    {
+     "test": "TF-nonTF Geneformer",
+     "p": 0.02488,
+     "q_bh": 0.04354,
+     "survives_q05": true,
+     "bonferroni": 0.17416
+    },
+    {
+     "test": "TF-nonTF MaxToki",
+     "p": 0.07463,
+     "q_bh": 0.08707,
+     "survives_q05": false,
+     "bonferroni": 0.52241
+    },
+    {
+     "test": "TF-nonTF tGPT",
+     "p": 0.54229,
+     "q_bh": 0.54229,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    }
+   ]
+  },
+  "F7_leave_one_tf_out_worst_case_seven_models": {
+   "n_tests": 7,
+   "n_p_lt_05": 5,
+   "n_survive_bh": 5,
+   "note": "s03_hub_direction.json:models.<m>.leave_one_tf_out.max_p (worst TF per model; 200 draws)",
+   "rows": [
+    {
+     "test": "LOTO worst Tahoe",
+     "p": 0.00498,
+     "q_bh": 0.00872,
+     "survives_q05": true,
+     "bonferroni": 0.03486
+    },
+    {
+     "test": "LOTO worst scGPT",
+     "p": 0.00498,
+     "q_bh": 0.00872,
+     "survives_q05": true,
+     "bonferroni": 0.03486
+    },
+    {
+     "test": "LOTO worst UCE",
+     "p": 0.00498,
+     "q_bh": 0.00872,
+     "survives_q05": true,
+     "bonferroni": 0.03486
+    },
+    {
+     "test": "LOTO worst C2S",
+     "p": 0.00498,
+     "q_bh": 0.00872,
+     "survives_q05": true,
+     "bonferroni": 0.03486
+    },
+    {
+     "test": "LOTO worst Geneformer",
+     "p": 0.00995,
+     "q_bh": 0.01393,
+     "survives_q05": true,
+     "bonferroni": 0.06965
+    },
+    {
+     "test": "LOTO worst MaxToki",
+     "p": 0.46766,
+     "q_bh": 0.5456,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "LOTO worst tGPT",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    }
+   ]
+  },
+  "F7b_drop_top3_tfs_seven_models": {
+   "n_tests": 7,
+   "n_p_lt_05": 4,
+   "n_survive_bh": 4,
+   "note": "s03_hub_direction.json:models.<m>.leave_one_tf_out.drop_top3_together.p_emp",
+   "rows": [
+    {
+     "test": "drop top3 Tahoe",
+     "p": 0.00498,
+     "q_bh": 0.00872,
+     "survives_q05": true,
+     "bonferroni": 0.03486
+    },
+    {
+     "test": "drop top3 scGPT",
+     "p": 0.29353,
+     "q_bh": 0.41094,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "drop top3 UCE",
+     "p": 0.00498,
+     "q_bh": 0.00872,
+     "survives_q05": true,
+     "bonferroni": 0.03486
+    },
+    {
+     "test": "drop top3 C2S",
+     "p": 0.00498,
+     "q_bh": 0.00872,
+     "survives_q05": true,
+     "bonferroni": 0.03486
+    },
+    {
+     "test": "drop top3 Geneformer",
+     "p": 0.00498,
+     "q_bh": 0.00872,
+     "survives_q05": true,
+     "bonferroni": 0.03486
+    },
+    {
+     "test": "drop top3 MaxToki",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "drop top3 tGPT",
+     "p": 1.0,
+     "q_bh": 1.0,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    }
+   ]
+  },
+  "F8_family_masked_seven_models_x3": {
+   "n_tests": 21,
+   "n_p_lt_05": 15,
+   "n_survive_bh": 15,
+   "note": "s03b_family_masked.json:models.<m>.<mask>.p_emp (200 draws)",
+   "rows": [
+    {
+     "test": "Tahoe M1_prefix2",
+     "p": 0.00498,
+     "q_bh": 0.00747,
+     "survives_q05": true,
+     "bonferroni": 0.10458
+    },
+    {
+     "test": "Tahoe M2_struct_family",
+     "p": 0.00498,
+     "q_bh": 0.00747,
+     "survives_q05": true,
+     "bonferroni": 0.10458
+    },
+    {
+     "test": "Tahoe M1_plus_M2",
+     "p": 0.00498,
+     "q_bh": 0.00747,
+     "survives_q05": true,
+     "bonferroni": 0.10458
+    },
+    {
+     "test": "scGPT M1_prefix2",
+     "p": 0.00498,
+     "q_bh": 0.00747,
+     "survives_q05": true,
+     "bonferroni": 0.10458
+    },
+    {
+     "test": "scGPT M2_struct_family",
+     "p": 0.00498,
+     "q_bh": 0.00747,
+     "survives_q05": true,
+     "bonferroni": 0.10458
+    },
+    {
+     "test": "scGPT M1_plus_M2",
+     "p": 0.00498,
+     "q_bh": 0.00747,
+     "survives_q05": true,
+     "bonferroni": 0.10458
+    },
+    {
+     "test": "UCE M1_prefix2",
+     "p": 0.00498,
+     "q_bh": 0.00747,
+     "survives_q05": true,
+     "bonferroni": 0.10458
+    },
+    {
+     "test": "UCE M2_struct_family",
+     "p": 0.00498,
+     "q_bh": 0.00747,
+     "survives_q05": true,
+     "bonferroni": 0.10458
+    },
+    {
+     "test": "UCE M1_plus_M2",
+     "p": 0.00498,
+     "q_bh": 0.00747,
+     "survives_q05": true,
+     "bonferroni": 0.10458
+    },
+    {
+     "test": "C2S M1_prefix2",
+     "p": 0.00498,
+     "q_bh": 0.00747,
+     "survives_q05": true,
+     "bonferroni": 0.10458
+    },
+    {
+     "test": "C2S M2_struct_family",
+     "p": 0.00498,
+     "q_bh": 0.00747,
+     "survives_q05": true,
+     "bonferroni": 0.10458
+    },
+    {
+     "test": "C2S M1_plus_M2",
+     "p": 0.00498,
+     "q_bh": 0.00747,
+     "survives_q05": true,
+     "bonferroni": 0.10458
+    },
+    {
+     "test": "Geneformer M1_prefix2",
+     "p": 0.00995,
+     "q_bh": 0.01393,
+     "survives_q05": true,
+     "bonferroni": 0.20895
+    },
+    {
+     "test": "Geneformer M2_struct_family",
+     "p": 0.00498,
+     "q_bh": 0.00747,
+     "survives_q05": true,
+     "bonferroni": 0.10458
+    },
+    {
+     "test": "Geneformer M1_plus_M2",
+     "p": 0.00498,
+     "q_bh": 0.00747,
+     "survives_q05": true,
+     "bonferroni": 0.10458
+    },
+    {
+     "test": "MaxToki M1_prefix2",
+     "p": 0.51244,
+     "q_bh": 0.52736,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki M2_struct_family",
+     "p": 0.43284,
+     "q_bh": 0.52736,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "MaxToki M1_plus_M2",
+     "p": 0.51244,
+     "q_bh": 0.52736,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "tGPT M1_prefix2",
+     "p": 0.52736,
+     "q_bh": 0.52736,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "tGPT M2_struct_family",
+     "p": 0.46766,
+     "q_bh": 0.52736,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    },
+    {
+     "test": "tGPT M1_plus_M2",
+     "p": 0.52736,
+     "q_bh": 0.52736,
+     "survives_q05": false,
+     "bonferroni": 1.0
+    }
+   ]
+  }
+ }
+}

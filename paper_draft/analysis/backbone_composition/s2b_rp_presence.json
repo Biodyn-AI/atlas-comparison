@@ -1,0 +1,495 @@
+{
+ "d0": {
+  "AIDO": {
+   "layer": 0,
+   "n_feat": 1024,
+   "feats_with_any_RP_in_top10": 42,
+   "feats_with_ge3_RP_in_top10": 1,
+   "distinct_RP_genes_in_any_top20": 63,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "C2S": {
+   "layer": 0,
+   "n_feat": 8114,
+   "feats_with_any_RP_in_top10": 1549,
+   "feats_with_ge3_RP_in_top10": 90,
+   "distinct_RP_genes_in_any_top20": 66,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "Geneformer": {
+   "layer": 0,
+   "n_feat": 4608,
+   "feats_with_any_RP_in_top10": 741,
+   "feats_with_ge3_RP_in_top10": 73,
+   "distinct_RP_genes_in_any_top20": 86,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "MaxToki": {
+   "layer": 0,
+   "n_feat": 4928,
+   "feats_with_any_RP_in_top10": 318,
+   "feats_with_ge3_RP_in_top10": 30,
+   "distinct_RP_genes_in_any_top20": 86,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "UCE": {
+   "layer": 0,
+   "n_feat": 4959,
+   "feats_with_any_RP_in_top10": 1278,
+   "feats_with_ge3_RP_in_top10": 181,
+   "distinct_RP_genes_in_any_top20": 86,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "scGPT": {
+   "layer": 0,
+   "n_feat": 2048,
+   "feats_with_any_RP_in_top10": 460,
+   "feats_with_ge3_RP_in_top10": 72,
+   "distinct_RP_genes_in_any_top20": 85,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "tGPT": {
+   "layer": 0,
+   "n_feat": 4094,
+   "feats_with_any_RP_in_top10": 363,
+   "feats_with_ge3_RP_in_top10": 25,
+   "distinct_RP_genes_in_any_top20": 79,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "scFoundation": {
+   "layer": 0,
+   "n_feat": 3072,
+   "feats_with_any_RP_in_top10": 355,
+   "feats_with_ge3_RP_in_top10": 6,
+   "distinct_RP_genes_in_any_top20": 86,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "GeneCompass": {
+   "layer": 0,
+   "n_feat": 3072,
+   "feats_with_any_RP_in_top10": 2,
+   "feats_with_ge3_RP_in_top10": 0,
+   "distinct_RP_genes_in_any_top20": 1,
+   "has_Ribosome_or_cyto_translation": 0
+  },
+  "Tahoe": {
+   "layer": 0,
+   "n_feat": 10203,
+   "feats_with_any_RP_in_top10": 744,
+   "feats_with_ge3_RP_in_top10": 57,
+   "distinct_RP_genes_in_any_top20": 86,
+   "has_Ribosome_or_cyto_translation": 2
+  }
+ },
+ "d25": {
+  "AIDO": {
+   "layer": 2,
+   "n_feat": 1024,
+   "feats_with_any_RP_in_top10": 45,
+   "feats_with_ge3_RP_in_top10": 2,
+   "distinct_RP_genes_in_any_top20": 60,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "C2S": {
+   "layer": 6,
+   "n_feat": 9216,
+   "feats_with_any_RP_in_top10": 945,
+   "feats_with_ge3_RP_in_top10": 118,
+   "distinct_RP_genes_in_any_top20": 85,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "Geneformer": {
+   "layer": 4,
+   "n_feat": 4608,
+   "feats_with_any_RP_in_top10": 378,
+   "feats_with_ge3_RP_in_top10": 43,
+   "distinct_RP_genes_in_any_top20": 86,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "MaxToki": {
+   "layer": 2,
+   "n_feat": 4928,
+   "feats_with_any_RP_in_top10": 181,
+   "feats_with_ge3_RP_in_top10": 7,
+   "distinct_RP_genes_in_any_top20": 85,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "UCE": {
+   "layer": 8,
+   "n_feat": 5120,
+   "feats_with_any_RP_in_top10": 39,
+   "feats_with_ge3_RP_in_top10": 26,
+   "distinct_RP_genes_in_any_top20": 86,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "scGPT": {
+   "layer": 3,
+   "n_feat": 2048,
+   "feats_with_any_RP_in_top10": 307,
+   "feats_with_ge3_RP_in_top10": 51,
+   "distinct_RP_genes_in_any_top20": 85,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "tGPT": {
+   "layer": 2,
+   "n_feat": 4096,
+   "feats_with_any_RP_in_top10": 724,
+   "feats_with_ge3_RP_in_top10": 255,
+   "distinct_RP_genes_in_any_top20": 79,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "scFoundation": {
+   "layer": 3,
+   "n_feat": 3072,
+   "feats_with_any_RP_in_top10": 209,
+   "feats_with_ge3_RP_in_top10": 7,
+   "distinct_RP_genes_in_any_top20": 86,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "GeneCompass": {
+   "layer": 3,
+   "n_feat": 3072,
+   "feats_with_any_RP_in_top10": 2,
+   "feats_with_ge3_RP_in_top10": 0,
+   "distinct_RP_genes_in_any_top20": 6,
+   "has_Ribosome_or_cyto_translation": 0
+  },
+  "Tahoe": {
+   "layer": 8,
+   "n_feat": 10240,
+   "feats_with_any_RP_in_top10": 659,
+   "feats_with_ge3_RP_in_top10": 54,
+   "distinct_RP_genes_in_any_top20": 86,
+   "has_Ribosome_or_cyto_translation": 2
+  }
+ },
+ "d50": {
+  "AIDO": {
+   "layer": 4,
+   "n_feat": 1024,
+   "feats_with_any_RP_in_top10": 26,
+   "feats_with_ge3_RP_in_top10": 3,
+   "distinct_RP_genes_in_any_top20": 52,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "C2S": {
+   "layer": 12,
+   "n_feat": 9216,
+   "feats_with_any_RP_in_top10": 599,
+   "feats_with_ge3_RP_in_top10": 116,
+   "distinct_RP_genes_in_any_top20": 85,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "Geneformer": {
+   "layer": 8,
+   "n_feat": 4608,
+   "feats_with_any_RP_in_top10": 287,
+   "feats_with_ge3_RP_in_top10": 24,
+   "distinct_RP_genes_in_any_top20": 86,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "MaxToki": {
+   "layer": 5,
+   "n_feat": 4928,
+   "feats_with_any_RP_in_top10": 9,
+   "feats_with_ge3_RP_in_top10": 0,
+   "distinct_RP_genes_in_any_top20": 10,
+   "has_Ribosome_or_cyto_translation": 0
+  },
+  "UCE": {
+   "layer": 16,
+   "n_feat": 5120,
+   "feats_with_any_RP_in_top10": 30,
+   "feats_with_ge3_RP_in_top10": 16,
+   "distinct_RP_genes_in_any_top20": 85,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "scGPT": {
+   "layer": 6,
+   "n_feat": 2048,
+   "feats_with_any_RP_in_top10": 26,
+   "feats_with_ge3_RP_in_top10": 16,
+   "distinct_RP_genes_in_any_top20": 81,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "tGPT": {
+   "layer": 4,
+   "n_feat": 3986,
+   "feats_with_any_RP_in_top10": 1741,
+   "feats_with_ge3_RP_in_top10": 716,
+   "distinct_RP_genes_in_any_top20": 79,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "scFoundation": {
+   "layer": 6,
+   "n_feat": 3072,
+   "feats_with_any_RP_in_top10": 51,
+   "feats_with_ge3_RP_in_top10": 7,
+   "distinct_RP_genes_in_any_top20": 74,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "GeneCompass": {
+   "layer": 6,
+   "n_feat": 3072,
+   "feats_with_any_RP_in_top10": 3,
+   "feats_with_ge3_RP_in_top10": 0,
+   "distinct_RP_genes_in_any_top20": 8,
+   "has_Ribosome_or_cyto_translation": 0
+  },
+  "Tahoe": {
+   "layer": 16,
+   "n_feat": 10240,
+   "feats_with_any_RP_in_top10": 435,
+   "feats_with_ge3_RP_in_top10": 38,
+   "distinct_RP_genes_in_any_top20": 86,
+   "has_Ribosome_or_cyto_translation": 2
+  }
+ },
+ "mid": {
+  "AIDO": {
+   "layer": 4,
+   "n_feat": 1024,
+   "feats_with_any_RP_in_top10": 26,
+   "feats_with_ge3_RP_in_top10": 3,
+   "distinct_RP_genes_in_any_top20": 52,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "C2S": {
+   "layer": 13,
+   "n_feat": 9216,
+   "feats_with_any_RP_in_top10": 708,
+   "feats_with_ge3_RP_in_top10": 109,
+   "distinct_RP_genes_in_any_top20": 85,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "Geneformer": {
+   "layer": 9,
+   "n_feat": 4608,
+   "feats_with_any_RP_in_top10": 321,
+   "feats_with_ge3_RP_in_top10": 32,
+   "distinct_RP_genes_in_any_top20": 86,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "MaxToki": {
+   "layer": 5,
+   "n_feat": 4928,
+   "feats_with_any_RP_in_top10": 9,
+   "feats_with_ge3_RP_in_top10": 0,
+   "distinct_RP_genes_in_any_top20": 10,
+   "has_Ribosome_or_cyto_translation": 0
+  },
+  "UCE": {
+   "layer": 16,
+   "n_feat": 5120,
+   "feats_with_any_RP_in_top10": 30,
+   "feats_with_ge3_RP_in_top10": 16,
+   "distinct_RP_genes_in_any_top20": 85,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "scGPT": {
+   "layer": 6,
+   "n_feat": 2048,
+   "feats_with_any_RP_in_top10": 26,
+   "feats_with_ge3_RP_in_top10": 16,
+   "distinct_RP_genes_in_any_top20": 81,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "tGPT": {
+   "layer": 4,
+   "n_feat": 3986,
+   "feats_with_any_RP_in_top10": 1741,
+   "feats_with_ge3_RP_in_top10": 716,
+   "distinct_RP_genes_in_any_top20": 79,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "scFoundation": {
+   "layer": 6,
+   "n_feat": 3072,
+   "feats_with_any_RP_in_top10": 51,
+   "feats_with_ge3_RP_in_top10": 7,
+   "distinct_RP_genes_in_any_top20": 74,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "GeneCompass": {
+   "layer": 6,
+   "n_feat": 3072,
+   "feats_with_any_RP_in_top10": 3,
+   "feats_with_ge3_RP_in_top10": 0,
+   "distinct_RP_genes_in_any_top20": 8,
+   "has_Ribosome_or_cyto_translation": 0
+  },
+  "Tahoe": {
+   "layer": 16,
+   "n_feat": 10240,
+   "feats_with_any_RP_in_top10": 435,
+   "feats_with_ge3_RP_in_top10": 38,
+   "distinct_RP_genes_in_any_top20": 86,
+   "has_Ribosome_or_cyto_translation": 2
+  }
+ },
+ "d75": {
+  "AIDO": {
+   "layer": 5,
+   "n_feat": 1024,
+   "feats_with_any_RP_in_top10": 19,
+   "feats_with_ge3_RP_in_top10": 2,
+   "distinct_RP_genes_in_any_top20": 33,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "C2S": {
+   "layer": 19,
+   "n_feat": 9203,
+   "feats_with_any_RP_in_top10": 2117,
+   "feats_with_ge3_RP_in_top10": 418,
+   "distinct_RP_genes_in_any_top20": 85,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "Geneformer": {
+   "layer": 13,
+   "n_feat": 4608,
+   "feats_with_any_RP_in_top10": 339,
+   "feats_with_ge3_RP_in_top10": 51,
+   "distinct_RP_genes_in_any_top20": 86,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "MaxToki": {
+   "layer": 8,
+   "n_feat": 4928,
+   "feats_with_any_RP_in_top10": 7,
+   "feats_with_ge3_RP_in_top10": 0,
+   "distinct_RP_genes_in_any_top20": 2,
+   "has_Ribosome_or_cyto_translation": 0
+  },
+  "UCE": {
+   "layer": 24,
+   "n_feat": 5120,
+   "feats_with_any_RP_in_top10": 41,
+   "feats_with_ge3_RP_in_top10": 13,
+   "distinct_RP_genes_in_any_top20": 84,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "scGPT": {
+   "layer": 8,
+   "n_feat": 2048,
+   "feats_with_any_RP_in_top10": 16,
+   "feats_with_ge3_RP_in_top10": 13,
+   "distinct_RP_genes_in_any_top20": 81,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "tGPT": {
+   "layer": 5,
+   "n_feat": 2616,
+   "feats_with_any_RP_in_top10": 463,
+   "feats_with_ge3_RP_in_top10": 161,
+   "distinct_RP_genes_in_any_top20": 78,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "scFoundation": {
+   "layer": 8,
+   "n_feat": 3072,
+   "feats_with_any_RP_in_top10": 31,
+   "feats_with_ge3_RP_in_top10": 4,
+   "distinct_RP_genes_in_any_top20": 70,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "GeneCompass": {
+   "layer": 8,
+   "n_feat": 3072,
+   "feats_with_any_RP_in_top10": 1,
+   "feats_with_ge3_RP_in_top10": 0,
+   "distinct_RP_genes_in_any_top20": 7,
+   "has_Ribosome_or_cyto_translation": 0
+  },
+  "Tahoe": {
+   "layer": 23,
+   "n_feat": 10240,
+   "feats_with_any_RP_in_top10": 315,
+   "feats_with_ge3_RP_in_top10": 19,
+   "distinct_RP_genes_in_any_top20": 86,
+   "has_Ribosome_or_cyto_translation": 2
+  }
+ },
+ "d100": {
+  "AIDO": {
+   "layer": 7,
+   "n_feat": 1024,
+   "feats_with_any_RP_in_top10": 18,
+   "feats_with_ge3_RP_in_top10": 2,
+   "distinct_RP_genes_in_any_top20": 42,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "C2S": {
+   "layer": 25,
+   "n_feat": 9179,
+   "feats_with_any_RP_in_top10": 1706,
+   "feats_with_ge3_RP_in_top10": 375,
+   "distinct_RP_genes_in_any_top20": 85,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "Geneformer": {
+   "layer": 17,
+   "n_feat": 4608,
+   "feats_with_any_RP_in_top10": 590,
+   "feats_with_ge3_RP_in_top10": 99,
+   "distinct_RP_genes_in_any_top20": 86,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "MaxToki": {
+   "layer": 10,
+   "n_feat": 4928,
+   "feats_with_any_RP_in_top10": 4,
+   "feats_with_ge3_RP_in_top10": 0,
+   "distinct_RP_genes_in_any_top20": 4,
+   "has_Ribosome_or_cyto_translation": 0
+  },
+  "UCE": {
+   "layer": 32,
+   "n_feat": 5092,
+   "feats_with_any_RP_in_top10": 386,
+   "feats_with_ge3_RP_in_top10": 67,
+   "distinct_RP_genes_in_any_top20": 86,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "scGPT": {
+   "layer": 11,
+   "n_feat": 2048,
+   "feats_with_any_RP_in_top10": 16,
+   "feats_with_ge3_RP_in_top10": 6,
+   "distinct_RP_genes_in_any_top20": 58,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "tGPT": {
+   "layer": 7,
+   "n_feat": 2035,
+   "feats_with_any_RP_in_top10": 248,
+   "feats_with_ge3_RP_in_top10": 99,
+   "distinct_RP_genes_in_any_top20": 79,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "scFoundation": {
+   "layer": 11,
+   "n_feat": 3072,
+   "feats_with_any_RP_in_top10": 15,
+   "feats_with_ge3_RP_in_top10": 2,
+   "distinct_RP_genes_in_any_top20": 59,
+   "has_Ribosome_or_cyto_translation": 2
+  },
+  "GeneCompass": {
+   "layer": 11,
+   "n_feat": 3072,
+   "feats_with_any_RP_in_top10": 3,
+   "feats_with_ge3_RP_in_top10": 0,
+   "distinct_RP_genes_in_any_top20": 8,
+   "has_Ribosome_or_cyto_translation": 0
+  },
+  "Tahoe": {
+   "layer": 31,
+   "n_feat": 10240,
+   "feats_with_any_RP_in_top10": 565,
+   "feats_with_ge3_RP_in_top10": 53,
+   "distinct_RP_genes_in_any_top20": 86,
+   "has_Ribosome_or_cyto_translation": 2
+  }
+ },
+ "n_RP_genes_in_background": 89
+}

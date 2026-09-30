@@ -1,0 +1,321 @@
+{
+ "n_perm": 200,
+ "seed": 0,
+ "models": {
+  "Tahoe": {
+   "full": {
+    "n_pairs": 41952,
+    "hits": 59,
+    "null_mean": 4.275,
+    "null_sd": 2.005,
+    "fold": 13.801,
+    "z": 27.3,
+    "p_emp": 0.00498,
+    "n_perm": 200
+   },
+   "M1_prefix2": {
+    "n_pairs": 37430,
+    "hits": 57,
+    "null_mean": 4.045,
+    "null_sd": 1.919,
+    "fold": 14.091,
+    "z": 27.59,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "pairs_removed": 4522
+   },
+   "M2_struct_family": {
+    "n_pairs": 41923,
+    "hits": 54,
+    "null_mean": 3.99,
+    "null_sd": 1.987,
+    "fold": 13.534,
+    "z": 25.16,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "pairs_removed": 29
+   },
+   "M1_plus_M2": {
+    "n_pairs": 37424,
+    "hits": 53,
+    "null_mean": 4.03,
+    "null_sd": 2.027,
+    "fold": 13.151,
+    "z": 24.16,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "pairs_removed": 4528
+   }
+  },
+  "scGPT": {
+   "full": {
+    "n_pairs": 8631,
+    "hits": 10,
+    "null_mean": 0.84,
+    "null_sd": 0.874,
+    "fold": 11.905,
+    "z": 10.48,
+    "p_emp": 0.00498,
+    "n_perm": 200
+   },
+   "M1_prefix2": {
+    "n_pairs": 7276,
+    "hits": 10,
+    "null_mean": 0.805,
+    "null_sd": 0.915,
+    "fold": 12.422,
+    "z": 10.05,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "pairs_removed": 1355
+   },
+   "M2_struct_family": {
+    "n_pairs": 8613,
+    "hits": 9,
+    "null_mean": 0.795,
+    "null_sd": 0.873,
+    "fold": 11.321,
+    "z": 9.39,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "pairs_removed": 18
+   },
+   "M1_plus_M2": {
+    "n_pairs": 7275,
+    "hits": 9,
+    "null_mean": 0.895,
+    "null_sd": 0.924,
+    "fold": 10.056,
+    "z": 8.77,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "pairs_removed": 1356
+   }
+  },
+  "UCE": {
+   "full": {
+    "n_pairs": 71264,
+    "hits": 43,
+    "null_mean": 4.105,
+    "null_sd": 2.028,
+    "fold": 10.475,
+    "z": 19.18,
+    "p_emp": 0.00498,
+    "n_perm": 200
+   },
+   "M1_prefix2": {
+    "n_pairs": 62256,
+    "hits": 32,
+    "null_mean": 3.43,
+    "null_sd": 1.771,
+    "fold": 9.329,
+    "z": 16.14,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "pairs_removed": 9008
+   },
+   "M2_struct_family": {
+    "n_pairs": 71171,
+    "hits": 17,
+    "null_mean": 3.71,
+    "null_sd": 1.799,
+    "fold": 4.582,
+    "z": 7.39,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "pairs_removed": 93
+   },
+   "M1_plus_M2": {
+    "n_pairs": 62216,
+    "hits": 17,
+    "null_mean": 3.27,
+    "null_sd": 1.943,
+    "fold": 5.199,
+    "z": 7.06,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "pairs_removed": 9048
+   }
+  },
+  "C2S": {
+   "full": {
+    "n_pairs": 147728,
+    "hits": 83,
+    "null_mean": 20.06,
+    "null_sd": 4.183,
+    "fold": 4.138,
+    "z": 15.05,
+    "p_emp": 0.00498,
+    "n_perm": 200
+   },
+   "M1_prefix2": {
+    "n_pairs": 120512,
+    "hits": 56,
+    "null_mean": 18.64,
+    "null_sd": 4.329,
+    "fold": 3.004,
+    "z": 8.63,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "pairs_removed": 27216
+   },
+   "M2_struct_family": {
+    "n_pairs": 147663,
+    "hits": 64,
+    "null_mean": 19.985,
+    "null_sd": 4.251,
+    "fold": 3.202,
+    "z": 10.35,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "pairs_removed": 65
+   },
+   "M1_plus_M2": {
+    "n_pairs": 120507,
+    "hits": 55,
+    "null_mean": 18.18,
+    "null_sd": 4.409,
+    "fold": 3.025,
+    "z": 8.35,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "pairs_removed": 27221
+   }
+  },
+  "Geneformer": {
+   "full": {
+    "n_pairs": 20142,
+    "hits": 12,
+    "null_mean": 2.83,
+    "null_sd": 1.504,
+    "fold": 4.24,
+    "z": 6.1,
+    "p_emp": 0.00498,
+    "n_perm": 200
+   },
+   "M1_prefix2": {
+    "n_pairs": 18857,
+    "hits": 11,
+    "null_mean": 2.895,
+    "null_sd": 1.809,
+    "fold": 3.8,
+    "z": 4.48,
+    "p_emp": 0.00995,
+    "n_perm": 200,
+    "pairs_removed": 1285
+   },
+   "M2_struct_family": {
+    "n_pairs": 20119,
+    "hits": 11,
+    "null_mean": 2.94,
+    "null_sd": 1.714,
+    "fold": 3.741,
+    "z": 4.7,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "pairs_removed": 23
+   },
+   "M1_plus_M2": {
+    "n_pairs": 18853,
+    "hits": 10,
+    "null_mean": 2.915,
+    "null_sd": 1.693,
+    "fold": 3.431,
+    "z": 4.18,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "pairs_removed": 1289
+   }
+  },
+  "MaxToki": {
+   "full": {
+    "n_pairs": 18307,
+    "hits": 2,
+    "null_mean": 0.62,
+    "null_sd": 0.759,
+    "fold": 3.226,
+    "z": 1.82,
+    "p_emp": 0.12935,
+    "n_perm": 200
+   },
+   "M1_prefix2": {
+    "n_pairs": 18092,
+    "hits": 1,
+    "null_mean": 0.655,
+    "null_sd": 0.759,
+    "fold": 1.527,
+    "z": 0.45,
+    "p_emp": 0.51244,
+    "n_perm": 200,
+    "pairs_removed": 215
+   },
+   "M2_struct_family": {
+    "n_pairs": 18306,
+    "hits": 1,
+    "null_mean": 0.54,
+    "null_sd": 0.692,
+    "fold": 1.852,
+    "z": 0.67,
+    "p_emp": 0.43284,
+    "n_perm": 200,
+    "pairs_removed": 1
+   },
+   "M1_plus_M2": {
+    "n_pairs": 18092,
+    "hits": 1,
+    "null_mean": 0.655,
+    "null_sd": 0.759,
+    "fold": 1.527,
+    "z": 0.45,
+    "p_emp": 0.51244,
+    "n_perm": 200,
+    "pairs_removed": 215
+   }
+  },
+  "tGPT": {
+   "full": {
+    "n_pairs": 14412,
+    "hits": 3,
+    "null_mean": 2.475,
+    "null_sd": 1.418,
+    "fold": 1.212,
+    "z": 0.37,
+    "p_emp": 0.46766,
+    "n_perm": 200
+   },
+   "M1_prefix2": {
+    "n_pairs": 12517,
+    "hits": 3,
+    "null_mean": 2.705,
+    "null_sd": 1.486,
+    "fold": 1.109,
+    "z": 0.2,
+    "p_emp": 0.52736,
+    "n_perm": 200,
+    "pairs_removed": 1895
+   },
+   "M2_struct_family": {
+    "n_pairs": 14412,
+    "hits": 3,
+    "null_mean": 2.475,
+    "null_sd": 1.418,
+    "fold": 1.212,
+    "z": 0.37,
+    "p_emp": 0.46766,
+    "n_perm": 200,
+    "pairs_removed": 0
+   },
+   "M1_plus_M2": {
+    "n_pairs": 12517,
+    "hits": 3,
+    "null_mean": 2.7,
+    "null_sd": 1.483,
+    "fold": 1.111,
+    "z": 0.2,
+    "p_emp": 0.52736,
+    "n_perm": 200,
+    "pairs_removed": 1895
+   }
+  }
+ }
+}

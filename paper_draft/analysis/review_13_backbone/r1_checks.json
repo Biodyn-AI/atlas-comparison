@@ -1,0 +1,459 @@
+{
+ "a_primary_clusters": [
+  {
+   "id": 1,
+   "n": 32,
+   "class": "protein_synthesis",
+   "representative": "GO_BP:peptide biosynthetic process (GO:0043043)",
+   "members": [
+    "GO_BP:SRP-dependent cotranslational protein targeting to membrane (GO:0006614)",
+    "GO_BP:cotranslational protein targeting to membrane (GO:0006613)",
+    "GO_BP:cytoplasmic translation (GO:0002181)",
+    "GO_BP:nuclear-transcribed mRNA catabolic process (GO:0000956)",
+    "GO_BP:nuclear-transcribed mRNA catabolic process, nonsense-mediated decay (GO:0000184)",
+    "GO_BP:peptide biosynthetic process (GO:0043043)",
+    "GO_BP:protein targeting to ER (GO:0045047)",
+    "GO_BP:rRNA metabolic process (GO:0016072)",
+    "GO_BP:rRNA processing (GO:0006364)",
+    "GO_BP:ribosome biogenesis (GO:0042254)",
+    "KEGG:Ribosome",
+    "Reactome:Cap-dependent Translation Initiation R-HSA-72737",
+    "Reactome:Cellular Response To Starvation R-HSA-9711097",
+    "Reactome:Eukaryotic Translation Elongation R-HSA-156842",
+    "Reactome:Eukaryotic Translation Termination R-HSA-72764",
+    "Reactome:Formation Of A Pool Of Free 40S Subunits R-HSA-72689",
+    "Reactome:GTP Hydrolysis And Joining Of 60S Ribosomal Subunit R-HSA-72706",
+    "Reactome:Influenza Infection R-HSA-168255",
+    "Reactome:Influenza Viral RNA Transcription And Replication R-HSA-168273",
+    "Reactome:L13a-mediated Translational Silencing Of Ceruloplasmin Expression R-HSA-156827",
+    "Reactome:Major Pathway Of rRNA Processing In Nucleolus And Cytosol R-HSA-6791226",
+    "Reactome:Nonsense Mediated Decay (NMD) Enhanced By Exon Junction Complex (EJC) R-HSA-975957",
+    "Reactome:Nonsense Mediated Decay (NMD) Independent Of Exon Junction Complex (EJC) R-HSA-975956",
+    "Reactome:Peptide Chain Elongation R-HSA-156902",
+    "Reactome:Regulation Of Expression Of SLITs And ROBOs R-HSA-9010553",
+    "Reactome:Response Of EIF2AK4 (GCN2) To Amino Acid Deficiency R-HSA-9633012",
+    "Reactome:SRP-dependent Cotranslational Protein Targeting To Membrane R-HSA-1799339",
+    "Reactome:Selenoamino Acid Metabolism R-HSA-2408522",
+    "Reactome:Selenocysteine Synthesis R-HSA-2408557",
+    "Reactome:Viral mRNA Translation R-HSA-192823",
+    "Reactome:rRNA Processing In Nucleus And Cytosol R-HSA-8868773",
+    "Reactome:rRNA Processing R-HSA-72312"
+   ]
+  },
+  {
+   "id": 2,
+   "n": 9,
+   "class": "specific",
+   "representative": "KEGG:Rheumatoid arthritis",
+   "members": [
+    "KEGG:Rheumatoid arthritis",
+    "GO_BP:antigen processing and presentation of exogenous peptide antigen (GO:0002478)",
+    "GO_BP:antigen processing and presentation of exogenous peptide antigen via MHC class II (GO:0019886)",
+    "GO_BP:antigen processing and presentation of peptide antigen via MHC class II (GO:0002495)",
+    "KEGG:Influenza A",
+    "KEGG:Leishmaniasis",
+    "KEGG:Th1 and Th2 cell differentiation",
+    "KEGG:Toxoplasmosis",
+    "KEGG:Tuberculosis"
+   ]
+  },
+  {
+   "id": 3,
+   "n": 6,
+   "class": "protein_synthesis",
+   "representative": "Reactome:SARS-CoV-2-host Interactions R-HSA-9705683",
+   "members": [
+    "Reactome:Formation Of Ternary Complex, And Subsequently, 43S Complex R-HSA-72695",
+    "Reactome:Ribosomal Scanning And Start Codon Recognition R-HSA-72702",
+    "Reactome:SARS-CoV-2 Modulates Host Translation Machinery R-HSA-9754678",
+    "Reactome:SARS-CoV-2-host Interactions R-HSA-9705683",
+    "Reactome:Translation Initiation Complex Formation R-HSA-72649",
+    "Reactome:mRNA Activation Upon Binding Of Cap-Binding Complex And eIFs, Subsequent Binding To 43S R-HSA-72662"
+   ]
+  },
+  {
+   "id": 4,
+   "n": 3,
+   "class": "specific",
+   "representative": "KEGG:Phagosome",
+   "members": [
+    "KEGG:Cell adhesion molecules",
+    "KEGG:Phagosome",
+    "KEGG:Antigen processing and presentation"
+   ]
+  },
+  {
+   "id": 5,
+   "n": 3,
+   "class": "other_housekeeping",
+   "representative": "Reactome:Citric Acid (TCA) Cycle And Respiratory Electron Transport R-HSA-1428517",
+   "members": [
+    "Reactome:Citric Acid (TCA) Cycle And Respiratory Electron Transport R-HSA-1428517",
+    "Reactome:Respiratory Electron Transport R-HSA-611105",
+    "Reactome:Respiratory Electron Transport, ATP Synthesis By Chemiosmotic Coupling, Heat Production By Uncoupling Proteins R-HSA-163200"
+   ]
+  },
+  {
+   "id": 6,
+   "n": 2,
+   "class": "specific",
+   "representative": "GO_BP:cellular response to metal ion (GO:0071248)",
+   "members": [
+    "GO_BP:cellular response to metal ion (GO:0071248)",
+    "GO_BP:negative regulation of growth (GO:0045926)"
+   ]
+  },
+  {
+   "id": 7,
+   "n": 2,
+   "class": "specific",
+   "representative": "Reactome:Muscle Contraction R-HSA-397014",
+   "members": [
+    "Reactome:Muscle Contraction R-HSA-397014",
+    "GO_BP:muscle contraction (GO:0006936)"
+   ]
+  },
+  {
+   "id": 8,
+   "n": 2,
+   "class": "other_housekeeping",
+   "representative": "Reactome:Mitotic G1 Phase And G1/S Transition R-HSA-453279",
+   "members": [
+    "GO_BP:regulation of mitotic cell cycle (GO:0007346)",
+    "Reactome:Mitotic G1 Phase And G1/S Transition R-HSA-453279"
+   ]
+  },
+  {
+   "id": 9,
+   "n": 2,
+   "class": "other_housekeeping",
+   "representative": "KEGG:Neutrophil extracellular trap formation",
+   "members": [
+    "KEGG:Neutrophil extracellular trap formation",
+    "KEGG:Alcoholism"
+   ]
+  },
+  {
+   "id": 10,
+   "n": 2,
+   "class": "specific",
+   "representative": "KEGG:Staphylococcus aureus infection",
+   "members": [
+    "KEGG:Staphylococcus aureus infection",
+    "KEGG:Systemic lupus erythematosus"
+   ]
+  },
+  {
+   "id": 11,
+   "n": 1,
+   "class": "specific",
+   "representative": "GO_BP:defense response to bacterium (GO:0042742)",
+   "members": [
+    "GO_BP:defense response to bacterium (GO:0042742)"
+   ]
+  },
+  {
+   "id": 12,
+   "n": 1,
+   "class": "specific",
+   "representative": "GO_BP:negative regulation of cytokine production (GO:0001818)",
+   "members": [
+    "GO_BP:negative regulation of cytokine production (GO:0001818)"
+   ]
+  },
+  {
+   "id": 13,
+   "n": 1,
+   "class": "specific",
+   "representative": "GO_BP:regulated exocytosis (GO:0045055)",
+   "members": [
+    "GO_BP:regulated exocytosis (GO:0045055)"
+   ]
+  },
+  {
+   "id": 14,
+   "n": 1,
+   "class": "other_housekeeping",
+   "representative": "GO_BP:regulation of cellular response to stress (GO:0080135)",
+   "members": [
+    "GO_BP:regulation of cellular response to stress (GO:0080135)"
+   ]
+  },
+  {
+   "id": 15,
+   "n": 1,
+   "class": "specific",
+   "representative": "GO_BP:response to cytokine (GO:0034097)",
+   "members": [
+    "GO_BP:response to cytokine (GO:0034097)"
+   ]
+  },
+  {
+   "id": 16,
+   "n": 1,
+   "class": "specific",
+   "representative": "KEGG:Adrenergic signaling in cardiomyocytes",
+   "members": [
+    "KEGG:Adrenergic signaling in cardiomyocytes"
+   ]
+  },
+  {
+   "id": 17,
+   "n": 1,
+   "class": "specific",
+   "representative": "KEGG:Apoptosis",
+   "members": [
+    "KEGG:Apoptosis"
+   ]
+  },
+  {
+   "id": 18,
+   "n": 1,
+   "class": "other_housekeeping",
+   "representative": "KEGG:Cardiac muscle contraction",
+   "members": [
+    "KEGG:Cardiac muscle contraction"
+   ]
+  },
+  {
+   "id": 19,
+   "n": 1,
+   "class": "specific",
+   "representative": "KEGG:Estrogen signaling pathway",
+   "members": [
+    "KEGG:Estrogen signaling pathway"
+   ]
+  },
+  {
+   "id": 20,
+   "n": 1,
+   "class": "specific",
+   "representative": "KEGG:Hematopoietic cell lineage",
+   "members": [
+    "KEGG:Hematopoietic cell lineage"
+   ]
+  },
+  {
+   "id": 21,
+   "n": 1,
+   "class": "specific",
+   "representative": "KEGG:IL-17 signaling pathway",
+   "members": [
+    "KEGG:IL-17 signaling pathway"
+   ]
+  },
+  {
+   "id": 22,
+   "n": 1,
+   "class": "specific",
+   "representative": "KEGG:Kaposi sarcoma-associated herpesvirus infection",
+   "members": [
+    "KEGG:Kaposi sarcoma-associated herpesvirus infection"
+   ]
+  },
+  {
+   "id": 23,
+   "n": 1,
+   "class": "other_housekeeping",
+   "representative": "KEGG:Protein processing in endoplasmic reticulum",
+   "members": [
+    "KEGG:Protein processing in endoplasmic reticulum"
+   ]
+  },
+  {
+   "id": 24,
+   "n": 1,
+   "class": "specific",
+   "representative": "Reactome:Interferon Signaling R-HSA-913531",
+   "members": [
+    "Reactome:Interferon Signaling R-HSA-913531"
+   ]
+  },
+  {
+   "id": 25,
+   "n": 1,
+   "class": "specific",
+   "representative": "Reactome:Peptide Ligand-Binding Receptors R-HSA-375276",
+   "members": [
+    "Reactome:Peptide Ligand-Binding Receptors R-HSA-375276"
+   ]
+  }
+ ],
+ "a_singletons_by_class": {
+  "specific": 12,
+  "other_housekeeping": 3
+ },
+ "a_multi_by_class": {
+  "protein_synthesis": 2,
+  "specific": 5,
+  "other_housekeeping": 3
+ },
+ "b_rule_counts": {
+  "full_sets|complete|J>=0.3": 38,
+  "full_sets|complete|J>=0.5": 46,
+  "full_sets|average|J>=0.3": 36,
+  "full_sets|average|J>=0.5": 46,
+  "full_sets|single|J>=0.3": 35,
+  "full_sets|single|J>=0.5": 39,
+  "hit_genes|complete|J>=0.3": 33,
+  "hit_genes|complete|J>=0.5": 42,
+  "hit_genes|average|J>=0.3": 33,
+  "hit_genes|average|J>=0.5": 40,
+  "hit_genes|single|J>=0.3": 30,
+  "hit_genes|single|J>=0.5": 38,
+  "hit_weighted|complete|J>=0.3": 25,
+  "hit_weighted|complete|J>=0.5": 36,
+  "hit_weighted|average|J>=0.3": 23,
+  "hit_weighted|average|J>=0.5": 36,
+  "hit_weighted|single|J>=0.3": 22,
+  "hit_weighted|single|J>=0.5": 34,
+  "top20_hits|complete|J>=0.3": 24,
+  "top20_hits|complete|J>=0.5": 36,
+  "top20_hits|average|J>=0.3": 24,
+  "top20_hits|average|J>=0.5": 35,
+  "top20_hits|single|J>=0.3": 23,
+  "top20_hits|single|J>=0.5": 35,
+  "features|complete|J>=0.3": 30,
+  "features|complete|J>=0.5": 37,
+  "features|average|J>=0.3": 29,
+  "features|average|J>=0.5": 37,
+  "features|single|J>=0.3": 23,
+  "features|single|J>=0.5": 37
+ },
+ "b_summary": {
+  "n_rules": 30,
+  "min": 22,
+  "max": 46,
+  "median": 35.0,
+  "mean": 33.4,
+  "rank_of_primary_25_(1=lowest)": 7,
+  "complete_J>=0.3_by_basis": {
+   "full_sets": 38,
+   "hit_genes": 33,
+   "hit_weighted": 25,
+   "top20_hits": 24,
+   "features": 30
+  }
+ },
+ "c_class_counts_model_balanced": {
+  "protein_synthesis": 38,
+  "specific": 31,
+  "other_housekeeping": 9
+ },
+ "c_changed_vs_primary": {
+  "Reactome:Mitotic G1 Phase And G1/S Transition R-HSA-453279": {
+   "class_weighted_pooled": "other_housekeeping",
+   "class_model_balanced": "specific",
+   "class_union": "other_housekeeping",
+   "frac_T_model_balanced": 0.007,
+   "frac_TO_model_balanced": 0.495,
+   "largest_model_share_of_pooled_hits": 0.495
+  }
+ },
+ "c_largest_model_share_summary": {
+  "median": 0.5965,
+  "min": 0.286,
+  "max": 0.762,
+  "n_concepts_where_one_model_gives_>=50pct_of_hits": 49
+ },
+ "c_model_giving_most_hits_count": {
+  "tGPT": 41,
+  "C2S": 37
+ },
+ "c_SARS_per_model": {
+  "AIDO": {
+   "frac_T": 1.0,
+   "frac_TO": 1.0,
+   "n_hits": 6,
+   "n_features": 1
+  },
+  "C2S": {
+   "frac_T": 0.608,
+   "frac_TO": 0.626,
+   "n_hits": 278,
+   "n_features": 57
+  },
+  "Geneformer": {
+   "frac_T": 0.625,
+   "frac_TO": 0.625,
+   "n_hits": 32,
+   "n_features": 8
+  },
+  "UCE": {
+   "frac_T": 1.0,
+   "frac_TO": 1.0,
+   "n_hits": 46,
+   "n_features": 12
+  },
+  "scGPT": {
+   "frac_T": 0.672,
+   "frac_TO": 0.721,
+   "n_hits": 61,
+   "n_features": 16
+  },
+  "tGPT": {
+   "frac_T": 0.962,
+   "frac_TO": 0.972,
+   "n_hits": 684,
+   "n_features": 196
+  },
+  "scFoundation": {
+   "frac_T": 0.556,
+   "frac_TO": 0.556,
+   "n_hits": 18,
+   "n_features": 5
+  },
+  "Tahoe": {
+   "frac_T": 0.811,
+   "frac_TO": 0.863,
+   "n_hits": 95,
+   "n_features": 24
+  }
+ },
+ "d_all7_contrast": {
+  "d0": {
+   "all7_n": 127,
+   "all7_class_weighted": {
+    "other_housekeeping": 53,
+    "specific": 39,
+    "protein_synthesis": 35
+   },
+   "all7_minus_protein_synthesis": 92,
+   "all6_without_MaxToki_n": 169,
+   "all6_without_MaxToki_class_weighted": {
+    "other_housekeeping": 77,
+    "specific": 57,
+    "protein_synthesis": 35
+   }
+  },
+  "mid": {
+   "all7_n": 15,
+   "all7_class_weighted": {
+    "specific": 13,
+    "other_housekeeping": 2
+   },
+   "all7_minus_protein_synthesis": 15,
+   "all6_without_MaxToki_n": 146,
+   "all6_without_MaxToki_class_weighted": {
+    "other_housekeeping": 21,
+    "protein_synthesis": 41,
+    "specific": 84
+   }
+  },
+  "d100": {
+   "all7_n": 5,
+   "all7_class_weighted": {
+    "specific": 4,
+    "protein_synthesis": 1
+   },
+   "all7_minus_protein_synthesis": 4,
+   "all6_without_MaxToki_n": 42,
+   "all6_without_MaxToki_class_weighted": {
+    "protein_synthesis": 33,
+    "specific": 8,
+    "other_housekeeping": 1
+   }
+  }
+ },
+ "e_arithmetic_floor": "10 models, 3 of them embedding-layer models (AIDO, tGPT, GeneCompass): a concept in >=8 of 10 must include at least 8-7 = 1 of the three. 'Every >=8 concept has one or two of the three' is therefore half forced; only 'none has all three' and the 1-vs-2 split are informative."
+}

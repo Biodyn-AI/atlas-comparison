@@ -1,0 +1,260 @@
+{
+ "method": "greedy b-matching on Pearson r (counts/10k, log1p), capacities = co-firing degrees within U",
+ "n_perm": 200,
+ "cand_mult": 40,
+ "models": {
+  "Tahoe": {
+   "n_genes": 8335,
+   "N_cofire_in_U": 40718,
+   "candidates_first_round": 8729339,
+   "candidate_r_threshold_first_round": 0.1502,
+   "greedy_rounds": 2,
+   "N_coexpr_accepted": 40685,
+   "fill_share": 0.9992,
+   "degree_L1_unfilled_share": 0.0008,
+   "min_r_accepted": -0.0194,
+   "median_r_accepted": 0.2422,
+   "cofire_in_U": {
+    "n_pairs": 40718,
+    "hits": 59,
+    "precision": 0.001449,
+    "null_mean": 4.475,
+    "null_sd": 2.071,
+    "fold": 13.184,
+    "z": 26.327,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "seed": 5002
+   },
+   "coexpr_degmatched": {
+    "n_pairs": 40685,
+    "hits": 41,
+    "precision": 0.001008,
+    "null_mean": 4.625,
+    "null_sd": 1.989,
+    "fold": 8.865,
+    "z": 18.292,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "seed": 5001
+   },
+   "shared_pairs": 6921,
+   "hits_shared": 18,
+   "fisher_cofire_vs_coexpr": {
+    "odds_ratio": 1.438,
+    "p_two_sided": 0.088433
+   }
+  },
+  "scGPT": {
+   "n_genes": 2386,
+   "N_cofire_in_U": 7877,
+   "candidates_first_round": 336086,
+   "candidate_r_threshold_first_round": 0.0455,
+   "greedy_rounds": 2,
+   "N_coexpr_accepted": 7872,
+   "fill_share": 0.9994,
+   "degree_L1_unfilled_share": 0.0006,
+   "min_r_accepted": -0.0087,
+   "median_r_accepted": 0.199,
+   "cofire_in_U": {
+    "n_pairs": 7877,
+    "hits": 10,
+    "precision": 0.00127,
+    "null_mean": 0.86,
+    "null_sd": 0.872,
+    "fold": 11.628,
+    "z": 10.482,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "seed": 5004
+   },
+   "coexpr_degmatched": {
+    "n_pairs": 7872,
+    "hits": 8,
+    "precision": 0.001016,
+    "null_mean": 0.8,
+    "null_sd": 0.883,
+    "fold": 10.0,
+    "z": 8.152,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "seed": 5003
+   },
+   "shared_pairs": 2463,
+   "hits_shared": 6,
+   "fisher_cofire_vs_coexpr": {
+    "odds_ratio": 1.25,
+    "p_two_sided": 0.814424
+   }
+  },
+  "UCE": {
+   "n_genes": 11418,
+   "N_cofire_in_U": 71264,
+   "candidates_first_round": 10879944,
+   "candidate_r_threshold_first_round": 0.1243,
+   "greedy_rounds": 3,
+   "N_coexpr_accepted": 67115,
+   "fill_share": 0.9418,
+   "degree_L1_unfilled_share": 0.0582,
+   "min_r_accepted": -0.0645,
+   "median_r_accepted": 0.136,
+   "cofire_in_U": {
+    "n_pairs": 71264,
+    "hits": 43,
+    "precision": 0.000603,
+    "null_mean": 3.9,
+    "null_sd": 2.052,
+    "fold": 11.026,
+    "z": 19.056,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "seed": 5006
+   },
+   "coexpr_degmatched": {
+    "n_pairs": 67115,
+    "hits": 48,
+    "precision": 0.000715,
+    "null_mean": 4.145,
+    "null_sd": 2.065,
+    "fold": 11.58,
+    "z": 21.238,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "seed": 5005
+   },
+   "shared_pairs": 5736,
+   "hits_shared": 5,
+   "fisher_cofire_vs_coexpr": {
+    "odds_ratio": 0.844,
+    "p_two_sided": 0.463065
+   }
+  },
+  "C2S": {
+   "n_genes": 12002,
+   "N_cofire_in_U": 145914,
+   "candidates_first_round": 12309045,
+   "candidate_r_threshold_first_round": 0.0861,
+   "greedy_rounds": 2,
+   "N_coexpr_accepted": 133273,
+   "fill_share": 0.9134,
+   "degree_L1_unfilled_share": 0.0866,
+   "min_r_accepted": -0.1264,
+   "median_r_accepted": 0.2356,
+   "cofire_in_U": {
+    "n_pairs": 145914,
+    "hits": 83,
+    "precision": 0.000569,
+    "null_mean": 20.53,
+    "null_sd": 4.214,
+    "fold": 4.043,
+    "z": 14.824,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "seed": 5008
+   },
+   "coexpr_degmatched": {
+    "n_pairs": 133273,
+    "hits": 69,
+    "precision": 0.000518,
+    "null_mean": 20.62,
+    "null_sd": 4.526,
+    "fold": 3.346,
+    "z": 10.689,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "seed": 5007
+   },
+   "shared_pairs": 12844,
+   "hits_shared": 17,
+   "fisher_cofire_vs_coexpr": {
+    "odds_ratio": 1.099,
+    "p_two_sided": 0.570909
+   }
+  },
+  "Geneformer": {
+   "n_genes": 7409,
+   "N_cofire_in_U": 20089,
+   "candidates_first_round": 8807908,
+   "candidate_r_threshold_first_round": 0.2059,
+   "greedy_rounds": 2,
+   "N_coexpr_accepted": 20086,
+   "fill_share": 0.9999,
+   "degree_L1_unfilled_share": 0.0001,
+   "min_r_accepted": -0.0141,
+   "median_r_accepted": 0.2601,
+   "cofire_in_U": {
+    "n_pairs": 20089,
+    "hits": 12,
+    "precision": 0.000597,
+    "null_mean": 2.8,
+    "null_sd": 1.594,
+    "fold": 4.286,
+    "z": 5.773,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "seed": 5010
+   },
+   "coexpr_degmatched": {
+    "n_pairs": 20086,
+    "hits": 21,
+    "precision": 0.001046,
+    "null_mean": 2.995,
+    "null_sd": 1.845,
+    "fold": 7.012,
+    "z": 9.757,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "seed": 5009
+   },
+   "shared_pairs": 1368,
+   "hits_shared": 5,
+   "fisher_cofire_vs_coexpr": {
+    "odds_ratio": 0.571,
+    "p_two_sided": 0.121274
+   }
+  },
+  "MaxToki": {
+   "n_genes": 4639,
+   "N_cofire_in_U": 16752,
+   "candidates_first_round": 931802,
+   "candidate_r_threshold_first_round": 0.0582,
+   "greedy_rounds": 2,
+   "N_coexpr_accepted": 16748,
+   "fill_share": 0.9998,
+   "degree_L1_unfilled_share": 0.0002,
+   "min_r_accepted": -0.0064,
+   "median_r_accepted": 0.1166,
+   "cofire_in_U": {
+    "n_pairs": 16752,
+    "hits": 2,
+    "precision": 0.000119,
+    "null_mean": 0.405,
+    "null_sd": 0.625,
+    "fold": 4.938,
+    "z": 2.551,
+    "p_emp": 0.04478,
+    "n_perm": 200,
+    "seed": 5012
+   },
+   "coexpr_degmatched": {
+    "n_pairs": 16748,
+    "hits": 7,
+    "precision": 0.000418,
+    "null_mean": 0.595,
+    "null_sd": 0.715,
+    "fold": 11.765,
+    "z": 8.96,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "seed": 5011
+   },
+   "shared_pairs": 1299,
+   "hits_shared": 1,
+   "fisher_cofire_vs_coexpr": {
+    "odds_ratio": 0.286,
+    "p_two_sided": 0.109291
+   }
+  }
+ },
+ "wall_s": 52.8
+}

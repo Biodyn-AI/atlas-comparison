@@ -1,0 +1,18 @@
+{
+ "source": "~/.cache/huggingface/hub/models--minwoosun--uce-misc/snapshots/bffb91084e4476698984e7e01f6170ce291f4074/protein_embeddings/Homo_sapiens.GRCh38.gene_symbol_to_embedding_ESM2.pt",
+ "n_genes": 19790,
+ "dim": 5120,
+ "first_keys": [
+  "A1BG",
+  "A1CF",
+  "A2M",
+  "A2ML1",
+  "A3GALT2",
+  "A4GALT",
+  "A4GNT",
+  "AAAS",
+  "AACS",
+  "AADAC"
+ ],
+ "keys_sorted_alphabetically": true
+}

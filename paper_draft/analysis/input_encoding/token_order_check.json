@@ -1,0 +1,51 @@
+{
+ "tGPT": {
+  "source": "tokenizer.json of lixiangchun/transcriptome-gpt-1024-8-16-64 (WordLevel; ids in corpus-frequency order)",
+  "n_symbols": 6623,
+  "with_token": 6623,
+  "coverage": 1.0,
+  "spearman_alpha_vs_token": 0.0503
+ },
+ "Geneformer": {
+  "source": "token_dictionary_gc104M.pkl (ids in Ensembl-id order) via gene_name_id_dict_gc104M.pkl",
+  "n_symbols": 15558,
+  "with_token": 15533,
+  "coverage": 0.9984,
+  "spearman_alpha_vs_token": 0.0376
+ },
+ "MaxToki": {
+  "source": "same gc104M dictionaries as Geneformer (adapters/maxtoki.py: shared 20,275 vocab)",
+  "n_symbols": 15558,
+  "with_token": 15533,
+  "coverage": 0.9984,
+  "spearman_alpha_vs_token": 0.0376
+ },
+ "scGPT": {
+  "source": "projects/biotensor/data/scgpt_human/vocab.json (60,697 tokens; assumed = whole-human vocab)",
+  "n_symbols": 15646,
+  "with_token": 15646,
+  "coverage": 1.0,
+  "spearman_alpha_vs_token": 0.8853
+ },
+ "scFoundation": {
+  "source": "OS_scRNA_gene_index.19264.tsv gene position index",
+  "n_symbols": 15324,
+  "with_token": 15324,
+  "coverage": 1.0,
+  "spearman_alpha_vs_token": 1.0
+ },
+ "AIDO": {
+  "source": "OS_scRNA_gene_index.19264.tsv gene position index (same list as scFoundation)",
+  "n_symbols": 19147,
+  "with_token": 19147,
+  "coverage": 1.0,
+  "spearman_alpha_vs_token": 1.0
+ },
+ "UCE": {
+  "source": "key order of Homo_sapiens.GRCh38.gene_symbol_to_embedding_ESM2.pt (UCE per-species token order)",
+  "n_symbols": 14488,
+  "with_token": 14488,
+  "coverage": 1.0,
+  "spearman_alpha_vs_token": 1.0
+ }
+}

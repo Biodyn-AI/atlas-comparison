@@ -18,3 +18,5 @@ outputs/atlas/genesets/
 outputs/atlas/pubmed/
 outputs/atlas/perturb/
 data/explorer_stub.json
+# intermediate files of the paper analyses (paper_draft/analysis/README.md)
+paper_draft/analysis/.cache/
