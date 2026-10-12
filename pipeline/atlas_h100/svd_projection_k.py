@@ -13,7 +13,7 @@ import json, glob, os, sys
 import numpy as np
 import torch
 
-R = "out_alllayers"
+R = os.environ.get("ATLAS_OUT", "out_alllayers")   # run root; ATLAS_OUT=out_fixed for the corrected run
 MODELS = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "scGPT", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]
 KS = [1, 2, 4, 8, 16, 32, 64, 128, 256]
 NSUB = 100000  # rows for the covariance estimate
@@ -63,5 +63,5 @@ for m in MODELS:
     msg = " ".join(f"k{k}:{c[str(k)]['sae_proj']}(rnd{c[str(k)]['random_baseline']})" for k in KS if str(k) in c)
     print(f"{m:12} d={d:5} d_sae={d_sae:6} | {msg}", flush=True)
 
-json.dump(out, open("svd_projection_k.json", "w"), indent=1)
+json.dump(out, open(os.path.join(R, "svd_projection_k.json"), "w"), indent=1)
 print("==> svd_projection_k.json", flush=True)

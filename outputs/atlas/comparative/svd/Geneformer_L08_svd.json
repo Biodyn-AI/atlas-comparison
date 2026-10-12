@@ -1,0 +1,1 @@
+{"model": "Geneformer", "layer": 8, "d_model": 1152, "d_sae": 4608, "k": 32, "cos_thresh": 0.7, "n_svd_components": 1152, "pct_novel": 1.0, "n_novel": 4608, "mean_maxcos": 0.1617, "median_maxcos": 0.1528, "svd_var_at_k": 0.2337, "sae_var": 0.7828, "var_top10": [0.0159, 0.0118, 0.0108, 0.0096, 0.0095, 0.0089, 0.0089, 0.0085, 0.0082, 0.0079]}

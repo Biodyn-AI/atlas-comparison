@@ -36,13 +36,16 @@ Code: `run_model.py --all-layers`, `common/layers.py`.
 ## 3. The SAE
 
 TopK, k = 32 active features per position, dictionary 4 x d_model, MSE loss, Adam 3e-4,
-4 epochs, at most 500,000 gene-token positions per layer, per-column mean subtraction, unit-norm
-decoder, seed 0. A feature's genes are ranked by its mean activation per gene; the catalogue
-keeps the top 20.
+4 epochs, per-column mean subtraction, unit-norm decoder, seed 0 for NumPy and torch. Training
+data: at most 168 gene-token positions from every one of the 6,000 cells, about 1M per layer
+(decision 16 explains why it is not a position cap). A feature's genes are ranked by its mean
+activation per gene, ties broken stably, zero-activation genes never listed; the catalogue keeps
+the top 20.
 
 Why: this is the configuration of the earlier atlases (bio-sae), so features are comparable
-with them. It was not swept. Seed variance was measured (three seeds; the mid-layer core moves
-by 3 %) and hyperparameters were not.
+with them. It was not swept. Seed variance was measured (three seeds; the permissive mid-layer
+core varies by 12 %, 435 to 580 concepts, and the all-layer core by 4 %) and hyperparameters were
+not.
 
 What it costs: with more features than a layer has distinct signals, the surplus fills with
 near-copies of the strongest signal. Every model except Geneformer-V2 and GeneCompass shows a
@@ -50,7 +53,7 @@ block of such features. Section 2 of the paper measures it and Table S12 shows t
 result does not rest on it. The account of why some models have the block and others do not
 is in Limitations and is explicitly untested.
 
-Health: tGPT's dictionaries have the most dead features (22.5 % on average, 58.3 % at worst),
+Health: tGPT's dictionaries have the most dead features (21.3 % on average, 58.6 % at worst),
 which is a confound for every tGPT-specific result. Said in Methods; not corrected for.
 
 Code: `pipeline/atlas_h100/common/sae.py`, `pipeline/scripts/sae_health.py`.
@@ -65,8 +68,8 @@ Calibrated: top-10 genes, at least 3 of them in one curated GO_BP, Reactome or K
 
 Why two: the permissive annotator fails a random-gene null. Replace every feature's top genes
 with random genes and it still annotates almost as often, because the databases are large and
-overlapping. Under it the ten models appear to share 2,267 concepts; random genes share 3,563
-(z = -18.4). The calibrated annotator was built by grid search over database, set size, minimum
+overlapping. Under it the ten models appear to share 1,977 concepts; random genes share 3,570
+(z = -24.2). The calibrated annotator was built by grid search over database, set size, minimum
 overlap and odds ratio until random genes annotate about 3 % of features against about 9 % for
 real ones. Its configuration was fixed on the discovery corpus before the held-out corpus was
 touched.
@@ -106,14 +109,14 @@ Code: `degree_null.py`, `stats_final.py`, `depth_backbone_fast.py`, `heldout_cal
 ## 6. What was retracted, and kept as a negative result
 
 - The universal core of about 2,000 concepts shared by all ten models. Fails the random-gene null
-  at the mid layer (353 real against 589 random) and on the all-layer union (2,267 against
-  3,563). Its held-out "replication" (Jaccard 0.52) equals two random draws (0.50).
+  at the mid layer (365 real against 582 random) and on the all-layer union (1,977 against
+  3,570). Its held-out "replication" (Jaccard 0.50) is no better than two random draws (0.51).
 - Annotation rate as an interpretability score. Random genes annotate almost as often under the
-  permissive annotator. The calibrated rate (1.3 to 32.2 % at the mid layer) is the usable one.
+  permissive annotator. The calibrated rate (1.0 to 29.3 % at the mid layer) is the usable one.
 - "About 100 % of SAE features are invisible to the top SVD axes." True of random directions at
   this dimensionality too, so it is a property of the dimension, not of the features. The test
   that carries weight is variance explained at matched sparsity: the SAE beats top-32 PCA in all
-  ten models, by +0.02 (tGPT) to +0.53 (Tahoe-x1).
+  ten models, by +0.02 (tGPT) to +0.55 (Geneformer-V2).
 - A "new biology" shortlist: genes topping unannotated features in at least five models. Against
   a random feature subset (`novel_null.py`) and a degree-matched label permutation
   (`novel_calibrated.py`) the shortlist is a deficit, not an excess: 0 of 207 candidates survive.
@@ -123,15 +126,21 @@ The scripts and result files for all four are kept so the negatives are reproduc
 
 ## 7. What survived
 
-- A backbone of 78 concepts encoded by at least 8 of the 10 models under the calibrated
-  annotator: 22.5x the uniform null and 59.3x the degree-matched null, p < 0.004; 63 % specific
-  programme biology, 37 % housekeeping by the keyword rule of Table S11; present at every depth
-  (41 to 102 concepts, 17.6 to 30.4x); reproduced on the held-out draw (Jaccard 0.50 against 0.048,
-  p < 0.007) on nine models, because scGPT could not be re-extracted there (decision 13).
-  Only two concepts are in all ten models; the all-ten intersection is brittle by construction.
+- A backbone of 96 concepts encoded by at least 8 of the 10 models under the calibrated
+  annotator: 27.5x the uniform null and 49.2x the degree-matched null, p < 0.004; 66 % specific
+  programme biology, 34 % housekeeping by the keyword rule of Table S11; present at every depth
+  (55 to 133 concepts, 21.3 to 38.7x); reproduced on the held-out draw, which shares no cell with
+  the corpus, on all ten models (Jaccard 0.52 against 0.035, p = 0.02). No concept is in all ten
+  models; the all-ten intersection is brittle by construction.
+- Most of the backbone is co-expression. A dictionary of seed genes plus their nine most
+  correlated genes in the same cells, with no model, recovers 73 to 95 of the 96 concepts with
+  random seeds (`coexpr_core_baseline.py`). The backbone is what the data's co-expression
+  structure makes recoverable, not something the models add.
 - Annotation-free geometry: linear CKA between every pair of models is above its cell-shuffle
   floor (worst pair 43x); the SAE beats top-32 PCA everywhere; tissue is linearly decodable at
-  every depth with no gain from an MLP probe.
+  every depth with no gain from an MLP probe. PCA of the raw expression does as well on tissue
+  (0.94) and cell type (0.83 to 0.85) as the models' middle layers, and agrees with them in CKA
+  (0.18 to 0.63), so this is geometry the data already has (`raw_expression_baseline.py`).
 - Features predict held-out regulatory edges (decision 8).
 
 ## 8. The held-out prediction test
@@ -143,22 +152,25 @@ uses no annotation, and the calibrated annotator uses pathway sets only. The nul
 graph while preserving every gene's degree, so neither abundance nor study bias can produce the
 effect.
 
-Result: five of ten models pass (Tahoe-x1 13.3x, scGPT 11.9x, UCE 10.5x, C2S-Scale 4.1x,
-Geneformer-V2 3.9x). Pairs predicted by two models independently are 20.8x over the null against
-4.8x for one model, a precision of 0.21 %.
+Result: four of ten models pass (UCE 10.2x, Tahoe-x1 9.4x, C2S-Scale 5.5x, Geneformer-V2
+2.5x). scGPT passed on the superseded catalogues (11.9x, trained on about 420 cells) and does not
+on the corrected ones (1.7x, p = 0.27). Pairs predicted by two models independently are 11.5x
+over the null against 4.8x for one model, a precision of 0.23 %.
 
 Two design points that took iteration:
 
 - How many pairs a model can offer is set by its dictionary size, not by quality. The
-  equal-budget re-scoring (8,631 pairs, the smallest passing graph) changes the order: UCE loses
-  significance, MaxToki gains it, AIDO.Cell and scFoundation cannot be scored at all. Both
-  versions are reported; only the equal-budget one licenses a claim about quality.
-- The corroboration curve is reported over all ten models, not over the five that passed,
-  because the five were selected on TRRUST and would then be re-scored against it. The
-  selected-five numbers (5.3x, 28.4x) are shown only to confirm the direction.
+  equal-budget re-scoring (50,707 pairs, the smallest passing graph) keeps all four passing
+  models significant (Tahoe-x1 11.0x, UCE 11.8x, C2S-Scale 8.4x, Geneformer-V2 2.4x); the six
+  smaller graphs cannot be scored at that budget. Both versions are reported; only the
+  equal-budget one licenses a claim about quality.
+- The corroboration curve is reported over all ten models, not over the four that passed,
+  because the four were selected on TRRUST and would then be re-scored against it. The
+  selected-four numbers (5.4x, 15.4x) are shown only to confirm the direction. The selected
+  set is read from `hypothesis_trrust2.json` (p < 0.05), not typed in.
 
-The Poisson whiskers on Fig 5A are there because 59 and 10 recovered edges do not support a
-ranking between 13.3x and 11.9x.
+The Poisson whiskers on Fig 5A are there because 60 and 79 recovered edges do not support a
+ranking between 10.2x and 9.4x.
 
 Code: `hypothesis_trrust.py`, `hypothesis_trrust2.py`, `hypothesis_trrust3.py`,
 `hypothesis_robust.py`, `hypothesis_sizematched.py`, `hypothesis_singlelayer.py`,
@@ -169,12 +181,12 @@ Code: `hypothesis_trrust.py`, `hypothesis_trrust2.py`, `hypothesis_trrust3.py`,
 Literature: NCBI gene2pubmed as a dated bulk file (2026-09-11), not live queries. Papers
 annotating more than 60 genes are dropped, because without that cap 96 % of all pairs are
 "co-mentioned" and the measure says nothing. The null shuffles the gene-paper graph keeping each
-gene's paper count. 1,289 of 4,111 pairs co-mentioned against 591 +- 20 (2.2x).
+gene's paper count. 1,281 of 4,621 pairs co-mentioned against 471 +- 19 (2.7x).
 
 Perturbation: genome-wide CRISPRi Perturb-seq (Replogle 2022), K562 and RPE1. For a pair (A, B)
 read the percentile of B's response within perturbation A, so a perturbation that moves
 everything cannot score, and compare with a gene matched on its own responsiveness, so a gene
-that reacts to everything cannot either. 1.20x in K562, 1.28x in RPE1, both at p = 0.005. The
+that reacts to everything cannot either. 1.25x in K562, 1.33x in RPE1, both at p = 0.005. The
 effect is small on purpose: the screens are cancer and epithelial lines, the corpus is primary
 immune, kidney and lung tissue.
 
@@ -182,11 +194,11 @@ Code: `hypothesis_pubmed.py`, `hypothesis_perturb.py`.
 
 ## 10. Why no new biology, and why that is about the evidence
 
-Only 171 of 4,111 pairs were never co-mentioned, and only four of those join two well-studied
-genes; all four involve a long non-coding RNA. The analysis of study bias
-(`hypothesis_studybias.py`, `study_bias_coverage.py`) shows the models do feature 4,003 genes
-with fewer than five papers, that the recurrence filter is 4.8x harsher on them, and that 752 of
-the 793 protein-coding ones are absent from the Perturb-seq screen. Predictive power does not
+Only 140 of 4,621 pairs were never co-mentioned, and only six of those join two well-studied
+genes; five of the six involve a long non-coding RNA (GAS5, SNHG6, NEAT1, FENDRR). The analysis
+of study bias (`hypothesis_studybias.py`, `study_bias_coverage.py`) shows the models do feature
+5,953 genes with fewer than five papers, that the recurrence filter is 7.0x harsher on them, and
+that 732 of the 774 protein-coding ones are absent from the Perturb-seq screen. Predictive power does not
 decline with how studied a gene is. So the atlas ranks testable links; it cannot confirm or
 refute a link about an unstudied gene with these resources, and neither could anything else.
 
@@ -218,11 +230,7 @@ Code: `pipeline/atlas_template.html`, `inject_atlas.py`, `atlas_hypothesis_block
 
 ## 13. Things that did not go to plan
 
-- scGPT could not be re-extracted on the held-out draw (a torchtext ABI failure in its
-  dependency stack). The replication therefore runs on nine models and reproduces the
-  >= 7-of-9 backbone (81 concepts), which is the same proportion but not literally the
-  >= 8-of-10 set of 78. Stated in Section 3.2.
-- The depth sweep's own mid slice gives 75 concepts, not 78, because for models with an even
+- The depth sweep's own mid slice gives 97 concepts, not 96, because for models with an even
   number of layers its index lands one layer from the mid layer used elsewhere. Stated in
   Section 3.2.
 - A stray display floor of 0.05 on the log-axis figures drew nulls that never occurred as if
@@ -230,13 +238,14 @@ Code: `pipeline/atlas_template.html`, `inject_atlas.py`, `atlas_hypothesis_block
   the null. Both are now disclosed on the figures.
 - `controls.py` used to overwrite the shared `controls.json` and once wiped fourteen blocks
   that other scripts had merged in. It merges now.
-- The SAE weight files were not copied back from the GPU host and are not archived (see
+- The SAE weight files and activations stay on the GPU host and are not archived (see
   `pipeline/atlas_h100/README.md`).
+- The extraction itself was wrong in four ways, found after the first release; decision 16.
 
 ## 14. KEGG
 
-KEGG contributes 22 of the 78 backbone concepts. Without KEGG (GO_BP and Reactome only) the
-backbone is 56 concepts at 19x over the null, so nothing rests on it. KEGG sets are used only as
+KEGG contributes 24 of the 96 backbone concepts. Without KEGG (GO_BP and Reactome only) the
+backbone is 72 concepts at 25.7x over the null, so nothing rests on it. KEGG sets are used only as
 membership lists via Enrichr; the copyright form is to be cleared before publication.
 
 Code: `kegg_robust.py`.
@@ -248,3 +257,39 @@ result file that produced it by `audit_all.py` (312 checks). Figures are stamped
 hashes of their inputs, so a figure older than its data fails. The audit does not check prose
 claims, architecture facts (decision 11 was found by reading the model papers) or whether a
 figure is legible. Those were checked by hand, three passes, and the fixes are in the git log.
+
+## 16. The extraction was wrong, and everything was re-run (2026-10)
+
+An external read of the code found three faults in the first release; re-running exposed more.
+
+- The position cap. `extract()` stopped after 500,000 gene-token positions taken in corpus order,
+  so a model that reads every gene saw very few cells: AIDO.Cell 32, scFoundation about 160,
+  Geneformer-V2 and MaxToki about 270, UCE 492, while tGPT (64 tokens per cell) saw all 6,000.
+  Feature catalogues, and everything built on them, compared models trained on different cells.
+  Now every model reads all 6,000 cells and keeps at most 168 positions from each (seed 0).
+- Filler in the top-gene lists. A non-stable descending sort padded features that fire on few
+  genes with arbitrary zero-activation genes. Now stable, and zero-activation genes are dropped.
+- The SAE seeded NumPy but not torch, so weight initialisation and shuffling were unseeded. The
+  published seed control was not affected (its scripts seeded torch themselves).
+- UCE's preprocessing cache. UCE skips preprocessing when its output files exist, and the work
+  directory had a fixed name, so every UCE run after the first silently reused 2,000 corpus cells;
+  the held-out UCE catalogue was built on corpus cells. The cache is now keyed on the cells.
+- The held-out draw shared 419 of its 6,000 cells with the corpus. They are removed.
+- The site's CKA heatmap labelled blocks 0 to 4 as 0 to 100 % depth. It now reads each model's
+  depth-matched blocks. The CKA numbers in the paper came from another file and were right.
+- Five blocks of `controls.json` had been pasted in by hand from other result files, so the
+  audit compared old text with old copies. `controls_import.py` now builds them.
+- Three local steps were missing from the documented order (the `--merge` run of
+  `alllayer_concepts.py`, the slow `depth_backbone.py`, `depth_calibrated.py`), the list of
+  models carried into the cross-model test was typed in, and the full pair list was written by a
+  one-off command. All are now in the scripts and in `REPRODUCE.md`.
+
+Everything downstream of the catalogues was re-run from scratch in the documented order, and the
+GPU-side analyses were re-run on the corrected SAEs. What changed: the backbone grew from 78 to
+96 concepts and stayed far above its nulls; it still replicates on held-out cells, now on all ten
+models; TRRUST prediction holds in four models instead of five (scGPT drops out); literature and
+perturbation support got slightly stronger. Release `runs-v2` holds the corrected catalogues;
+`runs-v1` keeps the superseded ones.
+
+Code: `pipeline/atlas_h100/common/pipeline.py`, `common/sae.py`, `adapters/uce.py`,
+`make_heldout_disjoint.py`, `run_*_fixed.sh`; `pipeline/scripts/controls_import.py`.

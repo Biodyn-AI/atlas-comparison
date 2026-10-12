@@ -3,73 +3,75 @@
  "n_perm": 20,
  "full_GO_KEGG_Reactome": {
   ">=7": {
-   "real": 142,
-   "null": 13.8,
-   "fold": 10.3
+   "real": 216,
+   "null": 13.7,
+   "fold": 15.8
   },
   ">=8": {
-   "real": 78,
-   "null": 4.4,
-   "fold": 17.7
+   "real": 96,
+   "null": 4.2,
+   "fold": 22.6
   },
   ">=9": {
-   "real": 10,
-   "null": 0.6,
-   "fold": 18.2
+   "real": 29,
+   "null": 0.4,
+   "fold": 72.5
   },
   ">=10": {
-   "real": 2,
+   "real": 0,
    "null": 0.0,
-   "fold": 6.7
+   "fold": 0.0
   }
  },
  "dropKEGG_GO_Reactome": {
   ">=7": {
-   "real": 100,
-   "null": 11.1,
-   "fold": 9.0
+   "real": 155,
+   "null": 10.2,
+   "fold": 15.2
   },
   ">=8": {
-   "real": 56,
-   "null": 3.0,
-   "fold": 19.0
+   "real": 72,
+   "null": 2.8,
+   "fold": 25.7
   },
   ">=9": {
-   "real": 4,
-   "null": 0.7,
-   "fold": 5.7
+   "real": 24,
+   "null": 0.8,
+   "fold": 32.0
   },
   ">=10": {
-   "real": 1,
+   "real": 0,
    "null": 0.0,
-   "fold": 3.3
+   "fold": 0.0
   }
  },
- "ge8_full": 78,
- "ge8_dropKEGG": 56,
- "kegg_sourced_in_ge8": 22,
+ "ge8_full": 96,
+ "ge8_dropKEGG": 72,
+ "kegg_sourced_in_ge8": 24,
  "kegg_terms_in_ge8": [
-  "Adrenergic signaling in cardiomyocytes",
   "Alcoholism",
   "Antigen processing and presentation",
-  "Apoptosis",
-  "Cardiac muscle contraction",
   "Cell adhesion molecules",
+  "Chemokine signaling pathway",
   "Estrogen signaling pathway",
   "Hematopoietic cell lineage",
-  "IL-17 signaling pathway",
   "Influenza A",
   "Kaposi sarcoma-associated herpesvirus infection",
   "Leishmaniasis",
+  "Necroptosis",
   "Neutrophil extracellular trap formation",
+  "Osteoclast differentiation",
+  "Oxidative phosphorylation",
+  "Pathogenic Escherichia coli infection",
   "Phagosome",
-  "Protein processing in endoplasmic reticulum",
+  "Retrograde endocannabinoid signaling",
   "Rheumatoid arthritis",
   "Ribosome",
+  "Salivary secretion",
   "Staphylococcus aureus infection",
-  "Systemic lupus erythematosus",
   "Th1 and Th2 cell differentiation",
-  "Toxoplasmosis",
-  "Tuberculosis"
+  "Th17 cell differentiation",
+  "Tuberculosis",
+  "cGMP-PKG signaling pathway"
  ]
 }

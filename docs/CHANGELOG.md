@@ -127,3 +127,9 @@ Subjects of the commits that led to the published state, oldest first. The repos
 - 2026-09-19  Third pass: the schematic branched the annotation-free track off the SAE, and Fig 2A never said which layer it tested
 - 2026-09-19  Repository restructured for handover
 - 2026-09-19  Audit anchors follow the manuscript's plainer phrasing
+- 2026-10-05  Extraction reads every cell: at most 168 positions per cell instead of a 500,000-position cap in corpus order (AIDO.Cell had read 32 cells); stable top-gene order without zero-activation filler; SAE seeds torch
+- 2026-10-05  UCE preprocessing cache keyed on the input cells (every UCE run after the first had reused 2,000 corpus cells); scGPT loads under torch 2.13 through a vocabulary-only torchtext stand-in
+- 2026-10-05  Held-out draw without the 419 cells it shared with the corpus; all ten models, threshold >=8 of 10
+- 2026-10-07  GPU-side analyses re-run on the corrected SAEs; CKA matrix reads each model's depth-matched blocks from all-layer embeddings
+- 2026-10-11  Local stage re-run from scratch in the documented order; hand-pasted controls.json blocks now built by controls_import.py; validated models and the full pair list derived in hypothesis_trrust3.py
+- 2026-10-11  Co-expression (#7) and raw-expression (#8) baselines; release runs-v2 with the corrected catalogues; README, DECISIONS (16), METHODS, RESULTS, REPRODUCE updated

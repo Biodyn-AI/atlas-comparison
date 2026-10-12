@@ -5,7 +5,6 @@ canonical annotator, build the held-out universal core, and compare to the ORIGI
 models at the SAME 5 layers (apples-to-apples). Reports: core sizes, Jaccard, % of the original core reproduced,
 and per-model concept-set Jaccard (does each model detect the same biology on new cells?).
     python scripts/heldout_compare.py   -> outputs/atlas/comparative/heldout.json
-scGPT is excluded — its held-out extraction crashed on a torchtext ABI mismatch in the shared venv.
 """
 from __future__ import annotations
 
@@ -21,7 +20,7 @@ C = f"{BASE}/outputs/atlas/comparative"; G = f"{BASE}/outputs/atlas/genesets"
 HO = f"{BASE}/outputs/atlas/heldout_cat/out_heldout"
 ALLCAT = f"{BASE}/outputs/atlas/alllayer_cat"; TS = f"{BASE}/outputs/atlas/ts3_out"
 MIN, MAX, ALPHA, TOP = 5, 500, 0.05, 5
-MODELS = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]  # scGPT excluded (torchtext crash)
+MODELS = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "scGPT", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]
 
 # ---- canonical gene sets / background (== alllayer_matrix) ----
 gs = {}
@@ -105,7 +104,7 @@ core_overlap = round(len(ho_core & or_core) / max(len(ho_core | or_core), 1), 3)
 pct_repro = round(100 * len(ho_core & or_core) / max(len(or_core), 1), 1)
 mean_jac = round(float(np.mean([per_model[m]["jaccard"] for m in per_model])), 3)
 
-out = {"models": MODELS, "n_models": len(MODELS), "excluded": ["scGPT (torchtext ABI crash)"],
+out = {"models": MODELS, "n_models": len(MODELS), "excluded": [],
        "layers": "5 depth-matched (0/25/50/75/100%)",
        "held_out_core": len(ho_core), "orig_core_same_models_layers": len(or_core),
        "core_jaccard": core_overlap, "pct_orig_core_reproduced": pct_repro,

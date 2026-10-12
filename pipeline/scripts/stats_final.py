@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """Publication-grade nulls for the two headline claims (calibrated annotator, mid layer):
   (1) the shared backbone (>=7/8/9 of 10 models) vs a random-gene null, N=1000 perms -> mean, sd, z, empirical p;
-  (2) held-out replication of the backbone (>=7/9 of the 9 held-out models) vs a random-gene two-draw null,
+  (2) held-out replication of the backbone (>=8 of the 10 held-out models) vs a random-gene two-draw null,
       N=500 pairs -> empirical p that the observed Jaccard exceeds the null.
 Calibrated annotator = top-10 genes, >=3 in a curated GO/Reactome/KEGG set of <=200 genes, no PPI.
     python scripts/stats_final.py -> outputs/atlas/comparative/stats_final.json
@@ -20,7 +20,7 @@ C = f"{BASE}/outputs/atlas/comparative"; G = f"{BASE}/outputs/atlas/genesets"
 ALLCAT = f"{BASE}/outputs/atlas/alllayer_cat"; TS = f"{BASE}/outputs/atlas/ts3_out"; HO = f"{BASE}/outputs/atlas/heldout_cat/out_heldout"
 ALPHA, TOP, AMIN, MX = 0.05, 10, 3, 200
 ALL = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "scGPT", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]
-HOM = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]  # held-out (no scGPT)
+HOM = ALL  # held-out: all ten (the corrected held-out run includes scGPT)
 NB, NHO = 250, 150
 rng = np.random.default_rng(0)
 
@@ -103,7 +103,7 @@ for k in KS:
     print(f"backbone >={k}: real {real_ge[k]} vs null {b1[f'>={k}']['null_mean']}±{b1[f'>={k}']['null_sd']} z={b1[f'>={k}']['z']} p={p:.2e} fold {b1[f'>={k}']['fold']}", flush=True)
 
 # ---------- (2) held-out replication null, N=500 ----------
-KHO = 7
+KHO = 8   # >= 8 of 10, the backbone tier
 orig_h = {}; held_h = {}; nfh = {}
 for m in HOM:
     fh, L = feats_mid(m, HO); nfh[m] = len(fh); held_h[m] = annotate(fh)

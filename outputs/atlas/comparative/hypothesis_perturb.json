@@ -4,67 +4,67 @@
  "n_perm": 200,
  "top_quantile": 0.05,
  "K562": {
-  "n_ordered_pairs": 3489,
-  "mean_percentile": 0.5527,
-  "null_mean_percentile": 0.5377,
+  "n_ordered_pairs": 3711,
+  "mean_percentile": 0.5511,
+  "null_mean_percentile": 0.534,
   "p_mean": 0.00995,
-  "top5pct_rate": 0.1055,
-  "null_top5pct_rate": 0.0881,
-  "top5pct_fold": 1.2,
-  "z_top5": 3.82,
+  "top5pct_rate": 0.1054,
+  "null_top5pct_rate": 0.0845,
+  "top5pct_fold": 1.25,
+  "z_top5": 5.22,
   "p_top5": 0.00498,
   "by_n_models": {
    "2": {
-    "n": 3489,
-    "top5pct_rate": 0.1055,
-    "null_rate": 0.0883,
-    "fold": 1.19,
-    "z": 3.65,
+    "n": 3711,
+    "top5pct_rate": 0.1054,
+    "null_rate": 0.0848,
+    "fold": 1.24,
+    "z": 4.89,
     "p_emp": 0.00498
    },
    "3": {
-    "n": 398,
-    "top5pct_rate": 0.1156,
-    "null_rate": 0.0973,
-    "fold": 1.19,
-    "z": 1.25,
-    "p_emp": 0.1393
+    "n": 347,
+    "top5pct_rate": 0.1239,
+    "null_rate": 0.0968,
+    "fold": 1.28,
+    "z": 1.76,
+    "p_emp": 0.06468
    },
    "4": {
-    "n": 76,
-    "top5pct_rate": 0.1579,
-    "null_rate": 0.1116,
-    "fold": 1.42,
-    "z": 1.31,
-    "p_emp": 0.12935
+    "n": 40,
+    "top5pct_rate": 0.2,
+    "null_rate": 0.0951,
+    "fold": 2.1,
+    "z": 2.33,
+    "p_emp": 0.02985
    }
   }
  },
  "RPE1": {
-  "n_ordered_pairs": 1213,
-  "mean_percentile": 0.6596,
-  "null_mean_percentile": 0.6351,
+  "n_ordered_pairs": 1272,
+  "mean_percentile": 0.6489,
+  "null_mean_percentile": 0.6223,
   "p_mean": 0.00498,
-  "top5pct_rate": 0.2383,
-  "null_top5pct_rate": 0.1868,
-  "top5pct_fold": 1.28,
-  "z_top5": 5.38,
+  "top5pct_rate": 0.2209,
+  "null_top5pct_rate": 0.1656,
+  "top5pct_fold": 1.33,
+  "z_top5": 6.25,
   "p_top5": 0.00498,
   "by_n_models": {
    "2": {
-    "n": 1213,
-    "top5pct_rate": 0.2383,
-    "null_rate": 0.1865,
-    "fold": 1.28,
-    "z": 5.19,
+    "n": 1272,
+    "top5pct_rate": 0.2209,
+    "null_rate": 0.1665,
+    "fold": 1.33,
+    "z": 5.77,
     "p_emp": 0.00498
    },
    "3": {
-    "n": 131,
-    "top5pct_rate": 0.3435,
-    "null_rate": 0.2242,
-    "fold": 1.53,
-    "z": 3.3,
+    "n": 108,
+    "top5pct_rate": 0.3426,
+    "null_rate": 0.1956,
+    "fold": 1.75,
+    "z": 3.85,
     "p_emp": 0.00498
    }
   }

@@ -139,7 +139,7 @@ out = {
     "rand_jaccard_mean": round(float(np.mean(rand_jacs)), 3),
     "rand_dedup_core_mean": round(float(np.mean(rand_dedups)), 1) if rand_dedups else None,
     "two_random_draw_core_jaccard": round(float(np.mean(two_draw_overlap)), 3) if two_draw_overlap else None,
-    "heldout_observed_core_jaccard": 0.518,
+    "heldout_observed_core_jaccard": json.load(open(f"{C}/heldout.json"))["core_jaccard"],   # from heldout_compare.py
 }
 json.dump(out, open(f"{C}/random_null.json", "w"), indent=1)
 print("\n=== RANDOM-GENE NULL (mid layer, 10 models) ===")

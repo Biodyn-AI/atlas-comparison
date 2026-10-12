@@ -8,139 +8,139 @@
  "n_perm_curve": 100,
  "per_model": {
   "AIDO": {
-   "n_pairs": 2,
+   "n_pairs": 500,
    "hits": 0,
-   "null_mean": 0.0,
-   "null_sd": 0.0,
+   "null_mean": 0.01,
+   "null_sd": 0.11,
    "fold": 0.0,
-   "z": 0.0,
+   "z": -0.11,
    "p_emp": 1.0
   },
   "C2S": {
-   "n_pairs": 147728,
-   "hits": 83,
-   "null_mean": 20.14,
-   "null_sd": 4.28,
-   "fold": 4.12,
-   "z": 14.67,
+   "n_pairs": 117131,
+   "hits": 93,
+   "null_mean": 16.98,
+   "null_sd": 4.23,
+   "fold": 5.48,
+   "z": 17.96,
    "p_emp": 0.002
   },
   "Geneformer": {
-   "n_pairs": 20142,
-   "hits": 12,
-   "null_mean": 3.1,
-   "null_sd": 1.72,
-   "fold": 3.87,
-   "z": 5.16,
+   "n_pairs": 50707,
+   "hits": 17,
+   "null_mean": 6.9,
+   "null_sd": 2.59,
+   "fold": 2.46,
+   "z": 3.9,
    "p_emp": 0.002
   },
   "MaxToki": {
-   "n_pairs": 18307,
+   "n_pairs": 18944,
    "hits": 2,
-   "null_mean": 0.58,
-   "null_sd": 0.76,
-   "fold": 3.45,
-   "z": 1.88,
-   "p_emp": 0.11178
+   "null_mean": 0.79,
+   "null_sd": 0.96,
+   "fold": 2.54,
+   "z": 1.26,
+   "p_emp": 0.17964
   },
   "UCE": {
-   "n_pairs": 71264,
-   "hits": 43,
-   "null_mean": 4.08,
-   "null_sd": 1.98,
-   "fold": 10.54,
-   "z": 19.61,
+   "n_pairs": 91724,
+   "hits": 60,
+   "null_mean": 5.91,
+   "null_sd": 2.43,
+   "fold": 10.15,
+   "z": 22.22,
    "p_emp": 0.002
   },
   "scGPT": {
-   "n_pairs": 8631,
-   "hits": 10,
-   "null_mean": 0.84,
-   "null_sd": 0.9,
-   "fold": 11.9,
-   "z": 10.23,
-   "p_emp": 0.002
+   "n_pairs": 11516,
+   "hits": 3,
+   "null_mean": 1.81,
+   "null_sd": 1.33,
+   "fold": 1.66,
+   "z": 0.9,
+   "p_emp": 0.26946
   },
   "tGPT": {
-   "n_pairs": 14412,
-   "hits": 3,
-   "null_mean": 2.29,
-   "null_sd": 1.49,
-   "fold": 1.31,
-   "z": 0.47,
-   "p_emp": 0.42116
+   "n_pairs": 10498,
+   "hits": 1,
+   "null_mean": 1.03,
+   "null_sd": 0.99,
+   "fold": 0.97,
+   "z": -0.03,
+   "p_emp": 0.65269
   },
   "scFoundation": {
-   "n_pairs": 4149,
-   "hits": 0,
-   "null_mean": 0.51,
-   "null_sd": 0.7,
-   "fold": 0.0,
-   "z": -0.72,
-   "p_emp": 1.0
+   "n_pairs": 8270,
+   "hits": 1,
+   "null_mean": 1.03,
+   "null_sd": 1.01,
+   "fold": 0.97,
+   "z": -0.03,
+   "p_emp": 0.64471
   },
   "GeneCompass": {
-   "n_pairs": 22537,
+   "n_pairs": 33938,
    "hits": 0,
-   "null_mean": 0.28,
-   "null_sd": 0.5,
+   "null_mean": 0.41,
+   "null_sd": 0.65,
    "fold": 0.0,
-   "z": -0.55,
+   "z": -0.63,
    "p_emp": 1.0
   },
   "Tahoe": {
-   "n_pairs": 41952,
-   "hits": 59,
-   "null_mean": 4.44,
-   "null_sd": 2.12,
-   "fold": 13.29,
-   "z": 25.73,
+   "n_pairs": 78159,
+   "hits": 79,
+   "null_mean": 8.37,
+   "null_sd": 2.99,
+   "fold": 9.44,
+   "z": 23.61,
    "p_emp": 0.002
   }
  },
  "cross_model_curve": {
   "1": {
-   "n_pairs": 327456,
-   "hits": 173,
-   "precision": 0.00053,
-   "null_precision": 0.00011,
-   "null_sd": 1.9e-05,
-   "fold": 4.8,
-   "z": 22.6,
+   "n_pairs": 395708,
+   "hits": 202,
+   "precision": 0.00051,
+   "null_precision": 0.000106,
+   "null_sd": 1.6e-05,
+   "fold": 4.81,
+   "z": 24.92,
    "p_emp": 0.0099
   },
   "2": {
-   "n_pairs": 14929,
-   "hits": 31,
-   "precision": 0.00208,
-   "null_precision": 0.0001,
-   "null_sd": 0.000259,
-   "fold": 20.8,
-   "z": 7.65,
+   "n_pairs": 17567,
+   "hits": 40,
+   "precision": 0.00228,
+   "null_precision": 0.000199,
+   "null_sd": 0.000372,
+   "fold": 11.47,
+   "z": 5.6,
    "p_emp": 0.0099
   },
   "3": {
-   "n_pairs": 3952,
-   "hits": 6,
-   "precision": 0.00152,
+   "n_pairs": 4673,
+   "hits": 11,
+   "precision": 0.00235,
    "null_precision": 0.0,
    "null_sd": 0.0,
-   "fold": 1520000000.0,
+   "fold": 2350000000.0,
    "z": 0.0,
    "p_emp": 0.0099
   },
   "4": {
-   "n_pairs": 1670,
-   "hits": 2,
-   "precision": 0.0012,
+   "n_pairs": 2068,
+   "hits": 3,
+   "precision": 0.00145,
    "null_precision": 0.0,
    "null_sd": 0.0,
-   "fold": 1200000000.0,
+   "fold": 1450000000.0,
    "z": 0.0,
    "p_emp": 0.0099
   },
   "5": {
-   "n_pairs": 788,
+   "n_pairs": 918,
    "hits": 0,
    "precision": 0.0,
    "null_precision": 0.0,
@@ -150,7 +150,7 @@
    "p_emp": 1.0
   },
   "6": {
-   "n_pairs": 292,
+   "n_pairs": 358,
    "hits": 0,
    "precision": 0.0,
    "null_precision": 0.0,
@@ -160,7 +160,7 @@
    "p_emp": 1.0
   },
   "7": {
-   "n_pairs": 29,
+   "n_pairs": 77,
    "hits": 0,
    "precision": 0.0,
    "null_precision": 0.0,
@@ -170,7 +170,7 @@
    "p_emp": 1.0
   },
   "8": {
-   "n_pairs": 7,
+   "n_pairs": 16,
    "hits": 0,
    "precision": 0.0,
    "null_precision": 0.0,
@@ -180,7 +180,7 @@
    "p_emp": 1.0
   },
   "9": {
-   "n_pairs": 1,
+   "n_pairs": 2,
    "hits": 0,
    "precision": 0.0,
    "null_precision": 0.0,
@@ -191,17 +191,17 @@
   }
  },
  "best_k": 3,
- "n_hypotheses": 1019,
+ "n_hypotheses": 1258,
  "hypotheses": [
   {
    "pair": [
-    "HTN1",
-    "PRB4"
+    "SCGB3A2",
+    "SFTPA2"
    ],
    "n_models": 8,
    "models": [
     "C2S",
-    "GeneCompass",
+    "Geneformer",
     "MaxToki",
     "Tahoe",
     "UCE",
@@ -209,130 +209,95 @@
     "scGPT",
     "tGPT"
    ],
-   "weight": 243
+   "weight": 112
+  },
+  {
+   "pair": [
+    "PRB3",
+    "STATH"
+   ],
+   "n_models": 7,
+   "models": [
+    "C2S",
+    "GeneCompass",
+    "MaxToki",
+    "Tahoe",
+    "UCE",
+    "scGPT",
+    "tGPT"
+   ],
+   "weight": 220
+  },
+  {
+   "pair": [
+    "PRB4",
+    "STATH"
+   ],
+   "n_models": 7,
+   "models": [
+    "C2S",
+    "GeneCompass",
+    "MaxToki",
+    "Tahoe",
+    "UCE",
+    "scGPT",
+    "tGPT"
+   ],
+   "weight": 133
+  },
+  {
+   "pair": [
+    "HTN1",
+    "PRB4"
+   ],
+   "n_models": 7,
+   "models": [
+    "C2S",
+    "GeneCompass",
+    "MaxToki",
+    "Tahoe",
+    "UCE",
+    "scGPT",
+    "tGPT"
+   ],
+   "weight": 133
   },
   {
    "pair": [
     "PRB3",
     "PRH2"
    ],
-   "n_models": 7,
+   "n_models": 6,
    "models": [
     "C2S",
     "GeneCompass",
     "MaxToki",
     "Tahoe",
     "UCE",
-    "scFoundation",
     "scGPT"
    ],
-   "weight": 323
-  },
-  {
-   "pair": [
-    "PRB3",
-    "STATH"
-   ],
-   "n_models": 7,
-   "models": [
-    "C2S",
-    "GeneCompass",
-    "MaxToki",
-    "Tahoe",
-    "UCE",
-    "scGPT",
-    "tGPT"
-   ],
-   "weight": 258
-  },
-  {
-   "pair": [
-    "HTN3",
-    "PRB4"
-   ],
-   "n_models": 7,
-   "models": [
-    "C2S",
-    "GeneCompass",
-    "MaxToki",
-    "Tahoe",
-    "UCE",
-    "scFoundation",
-    "scGPT"
-   ],
-   "weight": 195
-  },
-  {
-   "pair": [
-    "PRB4",
-    "SMR3B"
-   ],
-   "n_models": 7,
-   "models": [
-    "C2S",
-    "GeneCompass",
-    "MaxToki",
-    "Tahoe",
-    "UCE",
-    "scGPT",
-    "tGPT"
-   ],
-   "weight": 172
+   "weight": 220
   },
   {
    "pair": [
     "PRH2",
     "SMR3B"
    ],
-   "n_models": 7,
+   "n_models": 6,
    "models": [
     "C2S",
     "GeneCompass",
-    "MaxToki",
     "Tahoe",
     "UCE",
     "scGPT",
     "tGPT"
    ],
-   "weight": 169
+   "weight": 197
   },
   {
    "pair": [
     "HTN1",
     "SMR3B"
-   ],
-   "n_models": 7,
-   "models": [
-    "C2S",
-    "GeneCompass",
-    "MaxToki",
-    "Tahoe",
-    "UCE",
-    "scGPT",
-    "tGPT"
-   ],
-   "weight": 142
-  },
-  {
-   "pair": [
-    "PRB2",
-    "PRB4"
-   ],
-   "n_models": 6,
-   "models": [
-    "C2S",
-    "MaxToki",
-    "Tahoe",
-    "UCE",
-    "scGPT",
-    "tGPT"
-   ],
-   "weight": 284
-  },
-  {
-   "pair": [
-    "PRB4",
-    "STATH"
    ],
    "n_models": 6,
    "models": [
@@ -343,7 +308,7 @@
     "UCE",
     "scGPT"
    ],
-   "weight": 245
+   "weight": 195
   },
   {
    "pair": [
@@ -356,42 +321,122 @@
     "Geneformer",
     "Tahoe",
     "UCE",
-    "scGPT",
+    "scFoundation",
     "tGPT"
    ],
-   "weight": 164
+   "weight": 181
   },
   {
    "pair": [
-    "MMP3",
-    "PRB4"
+    "ADGRG3",
+    "CMTM2"
    ],
    "n_models": 6,
    "models": [
     "C2S",
-    "GeneCompass",
-    "MaxToki",
+    "Geneformer",
+    "Tahoe",
     "UCE",
     "scFoundation",
-    "tGPT"
+    "scGPT"
    ],
-   "weight": 155
+   "weight": 154
   },
   {
    "pair": [
-    "PRB3",
+    "PRB4",
     "SMR3B"
    ],
    "n_models": 6,
    "models": [
     "C2S",
     "GeneCompass",
+    "Tahoe",
+    "UCE",
+    "scGPT",
+    "tGPT"
+   ],
+   "weight": 130
+  },
+  {
+   "pair": [
+    "CEACAM8",
+    "CRISP3"
+   ],
+   "n_models": 6,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scFoundation",
+    "scGPT",
+    "tGPT"
+   ],
+   "weight": 111
+  },
+  {
+   "pair": [
+    "CRISP3",
+    "MMP8"
+   ],
+   "n_models": 6,
+   "models": [
+    "C2S",
+    "MaxToki",
+    "Tahoe",
+    "UCE",
+    "scFoundation",
+    "scGPT"
+   ],
+   "weight": 104
+  },
+  {
+   "pair": [
+    "SCGB3A1",
+    "SCGB3A2"
+   ],
+   "n_models": 6,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scFoundation",
+    "tGPT"
+   ],
+   "weight": 103
+  },
+  {
+   "pair": [
+    "ALDOB",
+    "FABP1"
+   ],
+   "n_models": 6,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT",
+    "tGPT"
+   ],
+   "weight": 102
+  },
+  {
+   "pair": [
+    "ATP5MK",
+    "COX7B"
+   ],
+   "n_models": 6,
+   "models": [
+    "C2S",
+    "Geneformer",
     "MaxToki",
     "Tahoe",
     "UCE",
     "scGPT"
    ],
-   "weight": 154
+   "weight": 100
   },
   {
    "pair": [
@@ -407,70 +452,84 @@
     "scGPT",
     "tGPT"
    ],
-   "weight": 128
+   "weight": 99
   },
   {
    "pair": [
-    "HTN3",
+    "CRYAB",
+    "S100A1"
+   ],
+   "n_models": 6,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scFoundation",
+    "scGPT"
+   ],
+   "weight": 94
+  },
+  {
+   "pair": [
+    "GADD45B",
+    "IER2"
+   ],
+   "n_models": 6,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scFoundation",
+    "scGPT"
+   ],
+   "weight": 65
+  },
+  {
+   "pair": [
+    "MT-RNR1",
+    "MT-RNR2"
+   ],
+   "n_models": 5,
+   "models": [
+    "AIDO",
+    "C2S",
+    "Tahoe",
+    "scFoundation",
+    "scGPT"
+   ],
+   "weight": 414
+  },
+  {
+   "pair": [
+    "PRB3",
     "SMR3B"
    ],
-   "n_models": 6,
+   "n_models": 5,
    "models": [
     "C2S",
-    "MaxToki",
+    "GeneCompass",
     "Tahoe",
     "UCE",
-    "scFoundation",
     "scGPT"
    ],
-   "weight": 110
+   "weight": 194
   },
   {
    "pair": [
-    "IER2",
-    "JUN"
-   ],
-   "n_models": 6,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE",
-    "scFoundation",
-    "scGPT"
-   ],
-   "weight": 101
-  },
-  {
-   "pair": [
-    "RPL41",
-    "TPT1"
-   ],
-   "n_models": 6,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE",
-    "scGPT",
-    "tGPT"
-   ],
-   "weight": 89
-  },
-  {
-   "pair": [
-    "HBQ1",
-    "TMCC2"
+    "MS4A2",
+    "TPSD1"
    ],
    "n_models": 5,
    "models": [
     "C2S",
     "MaxToki",
     "Tahoe",
-    "scFoundation",
+    "UCE",
     "scGPT"
    ],
-   "weight": 185
+   "weight": 190
   },
   {
    "pair": [
@@ -485,27 +544,12 @@
     "UCE",
     "scGPT"
    ],
-   "weight": 182
+   "weight": 189
   },
   {
    "pair": [
-    "CLEC9A",
-    "IDO1"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "MaxToki",
-    "Tahoe",
-    "scGPT"
-   ],
-   "weight": 180
-  },
-  {
-   "pair": [
-    "ADGRG3",
-    "CMTM2"
+    "CMTM2",
+    "FCGR3B"
    ],
    "n_models": 5,
    "models": [
@@ -513,194 +557,29 @@
     "Geneformer",
     "Tahoe",
     "UCE",
-    "scGPT"
+    "scFoundation"
    ],
-   "weight": 156
+   "weight": 173
   },
   {
    "pair": [
-    "KRT13",
-    "S100A7"
+    "FTL",
+    "HTN3"
    ],
    "n_models": 5,
    "models": [
     "C2S",
     "GeneCompass",
-    "MaxToki",
     "Tahoe",
-    "scGPT"
-   ],
-   "weight": 154
-  },
-  {
-   "pair": [
-    "FTH1",
-    "TPT1"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE",
+    "scFoundation",
     "tGPT"
    ],
-   "weight": 142
-  },
-  {
-   "pair": [
-    "ATP5ME",
-    "ATP5MK"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE",
-    "scGPT"
-   ],
-   "weight": 142
+   "weight": 163
   },
   {
    "pair": [
     "ALDOB",
-    "CRYAB"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "MaxToki",
-    "Tahoe",
-    "scFoundation",
-    "tGPT"
-   ],
-   "weight": 134
-  },
-  {
-   "pair": [
-    "PRB1",
-    "SMR3B"
-   ],
-   "n_models": 5,
-   "models": [
-    "MaxToki",
-    "Tahoe",
-    "UCE",
-    "scGPT",
-    "tGPT"
-   ],
-   "weight": 131
-  },
-  {
-   "pair": [
-    "HBQ1",
-    "KLF1"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "MaxToki",
-    "Tahoe",
-    "scGPT"
-   ],
-   "weight": 127
-  },
-  {
-   "pair": [
-    "CLC",
-    "MMP8"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "MaxToki",
-    "Tahoe",
-    "scFoundation",
-    "scGPT"
-   ],
-   "weight": 125
-  },
-  {
-   "pair": [
-    "LAMP3",
-    "SFTPD"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "MaxToki",
-    "Tahoe",
-    "UCE",
-    "scGPT"
-   ],
-   "weight": 117
-  },
-  {
-   "pair": [
-    "PRB2",
-    "SMR3B"
-   ],
-   "n_models": 5,
-   "models": [
-    "MaxToki",
-    "Tahoe",
-    "UCE",
-    "scGPT",
-    "tGPT"
-   ],
-   "weight": 115
-  },
-  {
-   "pair": [
-    "CYP2S1",
-    "IDO1"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "MaxToki",
-    "Tahoe",
-    "UCE",
-    "scGPT"
-   ],
-   "weight": 114
-  },
-  {
-   "pair": [
-    "HTN3",
-    "MMP3"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "GeneCompass",
-    "MaxToki",
-    "UCE",
-    "scFoundation"
-   ],
-   "weight": 110
-  },
-  {
-   "pair": [
-    "HTN1",
-    "MMP3"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "GeneCompass",
-    "MaxToki",
-    "UCE",
-    "scFoundation"
-   ],
-   "weight": 107
-  },
-  {
-   "pair": [
-    "APOC1",
-    "C1QA"
+    "GPX3"
    ],
    "n_models": 5,
    "models": [
@@ -710,22 +589,22 @@
     "scGPT",
     "tGPT"
    ],
-   "weight": 106
+   "weight": 152
   },
   {
    "pair": [
-    "ALDOB",
-    "PDZK1IP1"
+    "BPIFA2",
+    "PRH2"
    ],
    "n_models": 5,
    "models": [
     "C2S",
-    "MaxToki",
     "Tahoe",
-    "scFoundation",
+    "UCE",
+    "scGPT",
     "tGPT"
    ],
-   "weight": 100
+   "weight": 152
   },
   {
    "pair": [
@@ -740,12 +619,27 @@
     "UCE",
     "scGPT"
    ],
-   "weight": 99
+   "weight": 143
   },
   {
    "pair": [
-    "ACTB",
-    "ACTG2"
+    "BPIFA2",
+    "PRB1"
+   ],
+   "n_models": 5,
+   "models": [
+    "MaxToki",
+    "Tahoe",
+    "UCE",
+    "scGPT",
+    "tGPT"
+   ],
+   "weight": 138
+  },
+  {
+   "pair": [
+    "ATP5ME",
+    "ATP5MK"
    ],
    "n_models": 5,
    "models": [
@@ -755,12 +649,12 @@
     "UCE",
     "scGPT"
    ],
-   "weight": 98
+   "weight": 128
   },
   {
    "pair": [
-    "ACTB",
-    "TMSB10"
+    "ADGRG3",
+    "FCGR3B"
    ],
    "n_models": 5,
    "models": [
@@ -768,9 +662,129 @@
     "Geneformer",
     "Tahoe",
     "UCE",
+    "scFoundation"
+   ],
+   "weight": 127
+  },
+  {
+   "pair": [
+    "HTN3",
+    "PRB4"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "MaxToki",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 126
+  },
+  {
+   "pair": [
+    "ALDOB",
+    "PDZK1IP1"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "scFoundation",
     "tGPT"
    ],
-   "weight": 97
+   "weight": 117
+  },
+  {
+   "pair": [
+    "BEX2",
+    "BEX4"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 113
+  },
+  {
+   "pair": [
+    "ALDOB",
+    "MIOX"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 113
+  },
+  {
+   "pair": [
+    "RPL41",
+    "TPT1"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "GeneCompass",
+    "Geneformer",
+    "Tahoe",
+    "tGPT"
+   ],
+   "weight": 108
+  },
+  {
+   "pair": [
+    "KRT18",
+    "KRT7"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 107
+  },
+  {
+   "pair": [
+    "IER2",
+    "JUN"
+   ],
+   "n_models": 5,
+   "models": [
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scFoundation",
+    "scGPT"
+   ],
+   "weight": 107
+  },
+  {
+   "pair": [
+    "CRYAB",
+    "GPX3"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "MaxToki",
+    "Tahoe",
+    "scGPT",
+    "tGPT"
+   ],
+   "weight": 100
   },
   {
    "pair": [
@@ -785,117 +799,42 @@
     "UCE",
     "scGPT"
    ],
-   "weight": 96
+   "weight": 97
   },
   {
    "pair": [
-    "ATP5MK",
-    "COX7B"
+    "ADGRG3",
+    "CXCR1"
    ],
    "n_models": 5,
    "models": [
-    "C2S",
     "Geneformer",
     "Tahoe",
     "UCE",
+    "scFoundation",
     "scGPT"
    ],
    "weight": 96
   },
   {
    "pair": [
-    "MMP3",
-    "PRH2"
+    "BPIFA2",
+    "PRB4"
    ],
    "n_models": 5,
    "models": [
-    "C2S",
-    "GeneCompass",
-    "MaxToki",
-    "UCE",
-    "scFoundation"
-   ],
-   "weight": 95
-  },
-  {
-   "pair": [
-    "INHBA",
-    "STAC"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "Geneformer",
     "MaxToki",
     "Tahoe",
-    "UCE"
-   ],
-   "weight": 94
-  },
-  {
-   "pair": [
-    "MMP3",
-    "PRB3"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "GeneCompass",
-    "MaxToki",
     "UCE",
-    "scFoundation"
-   ],
-   "weight": 92
-  },
-  {
-   "pair": [
-    "TMSB4X",
-    "TPT1"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE",
+    "scGPT",
     "tGPT"
    ],
-   "weight": 85
+   "weight": 96
   },
   {
    "pair": [
-    "FTH1",
-    "TMSB4X"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE",
-    "tGPT"
-   ],
-   "weight": 83
-  },
-  {
-   "pair": [
-    "GPX3",
-    "PDZK1IP1"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "MaxToki",
-    "Tahoe",
-    "scGPT"
-   ],
-   "weight": 83
-  },
-  {
-   "pair": [
-    "FXYD2",
-    "PDZK1IP1"
+    "B2M",
+    "TMSB10"
    ],
    "n_models": 5,
    "models": [
@@ -905,27 +844,27 @@
     "scFoundation",
     "tGPT"
    ],
-   "weight": 80
+   "weight": 93
   },
   {
    "pair": [
-    "PTMA",
-    "TMSB4X"
+    "APOC1",
+    "C1QB"
    ],
    "n_models": 5,
    "models": [
     "C2S",
-    "Geneformer",
+    "GeneCompass",
     "Tahoe",
     "UCE",
     "tGPT"
    ],
-   "weight": 74
+   "weight": 89
   },
   {
    "pair": [
-    "FTL",
-    "TMSB4X"
+    "CRISP3",
+    "PGLYRP1"
    ],
    "n_models": 5,
    "models": [
@@ -935,7 +874,37 @@
     "scGPT",
     "tGPT"
    ],
-   "weight": 72
+   "weight": 89
+  },
+  {
+   "pair": [
+    "FGFBP2",
+    "GZMB"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scFoundation",
+    "scGPT"
+   ],
+   "weight": 88
+  },
+  {
+   "pair": [
+    "APOC1",
+    "C1QA"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "GeneCompass",
+    "Tahoe",
+    "UCE",
+    "tGPT"
+   ],
+   "weight": 85
   },
   {
    "pair": [
@@ -950,27 +919,12 @@
     "UCE",
     "scGPT"
    ],
-   "weight": 70
+   "weight": 84
   },
   {
    "pair": [
-    "B2M",
-    "TMSB10"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "Tahoe",
-    "UCE",
-    "scGPT",
-    "tGPT"
-   ],
-   "weight": 68
-  },
-  {
-   "pair": [
-    "PTMA",
-    "TMSB10"
+    "CD177",
+    "CMTM2"
    ],
    "n_models": 5,
    "models": [
@@ -978,9 +932,9 @@
     "Geneformer",
     "Tahoe",
     "UCE",
-    "tGPT"
+    "scFoundation"
    ],
-   "weight": 67
+   "weight": 82
   },
   {
    "pair": [
@@ -995,12 +949,12 @@
     "UCE",
     "tGPT"
    ],
-   "weight": 61
+   "weight": 81
   },
   {
    "pair": [
-    "ATP5F1E",
-    "SERF2"
+    "FCGR3B",
+    "PROK2"
    ],
    "n_models": 5,
    "models": [
@@ -1008,114 +962,159 @@
     "Geneformer",
     "Tahoe",
     "UCE",
-    "scGPT"
+    "scFoundation"
    ],
-   "weight": 58
+   "weight": 79
   },
   {
    "pair": [
-    "ATP5MK",
-    "NDUFA1"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE",
-    "scGPT"
-   ],
-   "weight": 54
-  },
-  {
-   "pair": [
-    "FTL",
-    "TMSB10"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE",
-    "tGPT"
-   ],
-   "weight": 51
-  },
-  {
-   "pair": [
-    "FTH1",
-    "TMSB10"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE",
-    "tGPT"
-   ],
-   "weight": 50
-  },
-  {
-   "pair": [
-    "CRISP3",
-    "PGLYRP1"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "Tahoe",
-    "scFoundation",
-    "scGPT",
-    "tGPT"
-   ],
-   "weight": 50
-  },
-  {
-   "pair": [
-    "HTN1",
-    "ZG16B"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "MaxToki",
-    "UCE",
-    "scGPT",
-    "tGPT"
-   ],
-   "weight": 49
-  },
-  {
-   "pair": [
-    "B2M",
-    "PTMA"
-   ],
-   "n_models": 5,
-   "models": [
-    "C2S",
-    "Tahoe",
-    "UCE",
-    "scGPT",
-    "tGPT"
-   ],
-   "weight": 48
-  },
-  {
-   "pair": [
-    "GADD45B",
+    "BTG2",
     "IER2"
    ],
    "n_models": 5,
    "models": [
     "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 74
+  },
+  {
+   "pair": [
+    "ADGRG3",
+    "CD177"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scFoundation"
+   ],
+   "weight": 74
+  },
+  {
+   "pair": [
+    "CRYAB",
+    "SPP1"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "scFoundation",
+    "scGPT",
+    "tGPT"
+   ],
+   "weight": 73
+  },
+  {
+   "pair": [
+    "PDZK1IP1",
+    "SPP1"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE",
+    "scFoundation",
+    "tGPT"
+   ],
+   "weight": 71
+  },
+  {
+   "pair": [
+    "CD177",
+    "FCGR3B"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scFoundation"
+   ],
+   "weight": 71
+  },
+  {
+   "pair": [
+    "GPATCH4",
+    "NOP16"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "scGPT"
+   ],
+   "weight": 71
+  },
+  {
+   "pair": [
+    "ACTB",
+    "TMSB10"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe",
+    "UCE",
+    "tGPT"
+   ],
+   "weight": 70
+  },
+  {
+   "pair": [
+    "EIF1",
+    "TMSB10"
+   ],
+   "n_models": 5,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "MaxToki",
+    "Tahoe",
+    "scGPT"
+   ],
+   "weight": 69
+  },
+  {
+   "pair": [
+    "SCGB1A1",
+    "SFTPA2"
+   ],
+   "n_models": 5,
+   "models": [
+    "Geneformer",
     "Tahoe",
     "UCE",
     "scFoundation",
     "scGPT"
    ],
-   "weight": 48
+   "weight": 69
+  },
+  {
+   "pair": [
+    "PGC",
+    "SFTPC"
+   ],
+   "n_models": 5,
+   "models": [
+    "Geneformer",
+    "MaxToki",
+    "UCE",
+    "scFoundation",
+    "tGPT"
+   ],
+   "weight": 65
   }
  ]
 }

@@ -26,6 +26,14 @@ import numpy as np
 from .base import Adapter
 
 
+def _stub_attr(name):
+    """Attribute lookup on a stubbed optional dependency: dummy class for public names, but dunders stay
+    missing, so inspect/torch walking sys.modules (e.g. looking for __file__) does not trip over the stub."""
+    if name.startswith("__") and name.endswith("__"):
+        raise AttributeError(name)
+    return type(name, (), {})
+
+
 def _bin_row(values: np.ndarray, n_bins: int) -> np.ndarray:
     """scGPT per-cell binning of nonzero expression into 1..n_bins-1 (quantile digitize)."""
     if values.size == 0:
@@ -60,7 +68,7 @@ class ScGPTAdapter(Adapter):
                 m = types.ModuleType(name)
                 m.__path__ = []
                 m.__spec__ = importlib.machinery.ModuleSpec(name, loader=None)  # else find_spec() raises
-                m.__getattr__ = lambda n: type(n, (), {})   # any `from mod import X` -> dummy class
+                m.__getattr__ = _stub_attr                  # any `from mod import X` -> dummy class
                 sys.modules[name] = m
 
     def load(self, device="cuda"):
@@ -68,6 +76,13 @@ class ScGPTAdapter(Adapter):
         if self.scgpt_repo:
             sys.path.insert(0, self.scgpt_repo)
         self._stub_optional_deps()
+        try:                                      # torchtext 0.17's C++ extension needs torch 2.2
+            import torchtext.vocab  # noqa: F401
+        except Exception:
+            for k in [k for k in sys.modules if k == "torchtext" or k.startswith("torchtext.")]:
+                del sys.modules[k]
+            sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "_shims"))
+            print("scGPT: torchtext unavailable, using adapters/_shims/torchtext (vocabulary only)", flush=True)
         from scgpt.model import TransformerModel
         from scgpt.tokenizer import GeneVocab
         from scgpt.utils import load_pretrained

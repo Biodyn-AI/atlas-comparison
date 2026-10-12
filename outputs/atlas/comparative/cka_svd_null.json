@@ -17,7 +17,7 @@
   },
   {
    "pair": "AIDO-UCE",
-   "real_cka": 0.203,
+   "real_cka": 0.202,
    "shuffled_cka": 0.0028
   },
   {
@@ -57,7 +57,7 @@
   },
   {
    "pair": "C2S-UCE",
-   "real_cka": 0.796,
+   "real_cka": 0.795,
    "shuffled_cka": 0.006
   },
   {
@@ -92,8 +92,8 @@
   },
   {
    "pair": "Geneformer-UCE",
-   "real_cka": 0.426,
-   "shuffled_cka": 0.0059
+   "real_cka": 0.427,
+   "shuffled_cka": 0.006
   },
   {
    "pair": "Geneformer-scGPT",
@@ -123,7 +123,7 @@
   {
    "pair": "MaxToki-UCE",
    "real_cka": 0.837,
-   "shuffled_cka": 0.0092
+   "shuffled_cka": 0.0093
   },
   {
    "pair": "MaxToki-scGPT",
@@ -152,27 +152,27 @@
   },
   {
    "pair": "UCE-scGPT",
-   "real_cka": 0.707,
+   "real_cka": 0.708,
    "shuffled_cka": 0.0066
   },
   {
    "pair": "UCE-tGPT",
-   "real_cka": 0.485,
+   "real_cka": 0.483,
    "shuffled_cka": 0.0082
   },
   {
    "pair": "UCE-scFoundation",
-   "real_cka": 0.709,
+   "real_cka": 0.708,
    "shuffled_cka": 0.0056
   },
   {
    "pair": "UCE-GeneCompass",
-   "real_cka": 0.184,
+   "real_cka": 0.185,
    "shuffled_cka": 0.0043
   },
   {
    "pair": "UCE-Tahoe",
-   "real_cka": 0.314,
+   "real_cka": 0.313,
    "shuffled_cka": 0.004
   },
   {
@@ -230,44 +230,44 @@
   {
    "model": "AIDO",
    "k": 32,
-   "svd_var_at_k": 0.412,
-   "sae_var_explained": 0.608,
-   "random_dict_var_explained": -1.293
+   "svd_var_at_k": 0.413,
+   "sae_var_explained": 0.679,
+   "random_dict_var_explained": -1.28
   },
   {
    "model": "C2S",
    "k": 32,
-   "svd_var_at_k": 0.441,
-   "sae_var_explained": 0.869,
-   "random_dict_var_explained": -0.254
+   "svd_var_at_k": 0.439,
+   "sae_var_explained": 0.888,
+   "random_dict_var_explained": -0.253
   },
   {
    "model": "Geneformer",
    "k": 32,
-   "svd_var_at_k": 0.232,
-   "sae_var_explained": 0.706,
+   "svd_var_at_k": 0.233,
+   "sae_var_explained": 0.784,
    "random_dict_var_explained": -0.434
   },
   {
    "model": "MaxToki",
    "k": 32,
-   "svd_var_at_k": 0.414,
-   "sae_var_explained": 0.788,
-   "random_dict_var_explained": -0.443
+   "svd_var_at_k": 0.377,
+   "sae_var_explained": 0.778,
+   "random_dict_var_explained": -0.414
   },
   {
    "model": "UCE",
    "k": 32,
-   "svd_var_at_k": 0.59,
-   "sae_var_explained": 0.909,
-   "random_dict_var_explained": -0.428
+   "svd_var_at_k": 0.562,
+   "sae_var_explained": 0.893,
+   "random_dict_var_explained": -0.403
   },
   {
    "model": "scGPT",
    "k": 32,
-   "svd_var_at_k": 0.651,
-   "sae_var_explained": 0.84,
-   "random_dict_var_explained": -0.796
+   "svd_var_at_k": 0.645,
+   "sae_var_explained": 0.882,
+   "random_dict_var_explained": -0.788
   },
   {
    "model": "tGPT",
@@ -279,23 +279,23 @@
   {
    "model": "scFoundation",
    "k": 32,
-   "svd_var_at_k": 0.78,
-   "sae_var_explained": 0.921,
-   "random_dict_var_explained": -0.588
+   "svd_var_at_k": 0.758,
+   "sae_var_explained": 0.936,
+   "random_dict_var_explained": -0.577
   },
   {
    "model": "GeneCompass",
    "k": 32,
-   "svd_var_at_k": 0.363,
-   "sae_var_explained": 0.751,
-   "random_dict_var_explained": -0.599
+   "svd_var_at_k": 0.352,
+   "sae_var_explained": 0.815,
+   "random_dict_var_explained": -0.593
   },
   {
    "model": "Tahoe",
    "k": 32,
-   "svd_var_at_k": 0.406,
-   "sae_var_explained": 0.931,
-   "random_dict_var_explained": -0.236
+   "svd_var_at_k": 0.402,
+   "sae_var_explained": 0.948,
+   "random_dict_var_explained": -0.231
   }
  ]
 }

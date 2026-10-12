@@ -80,7 +80,13 @@ class UCEAdapter(Adapter):
         from evaluate import AnndataProcessor
         from eval_data import MultiDatasetSentences, MultiDatasetSentenceCollator
         bs = batch_size or self.batch_size
-        work = "uce_work"; os.makedirs(work, exist_ok=True)
+        # UCE's AnndataProcessor skips preprocessing when its output files already exist, so a fixed
+        # work dir silently reuses whatever corpus was processed first. Key the dir on the cells and
+        # genes actually passed in, so a different corpus or subsample always gets its own cache.
+        import hashlib
+        fp = hashlib.sha1("\n".join(map(str, adata.obs_names)).encode()
+                          + "\n".join(map(str, adata.var_names)).encode()).hexdigest()[:12]
+        work = os.path.join("uce_work", fp); os.makedirs(work, exist_ok=True)
         name = "atlas"; adata.write_h5ad(f"{work}/{name}.h5ad")
         a = self._args(work); a.adata_path = f"{work}/{name}.h5ad"
         from accelerate import Accelerator

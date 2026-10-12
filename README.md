@@ -27,7 +27,12 @@ requirements.txt             the local analysis environment (Python 3.13, NumPy 
 Not here: the manuscript and supplement (shared separately; the audit needs them dropped into
 `outputs/atlas/comparative/`), the per-run feature catalogues and external inputs (1.2 GB,
 published as release assets and fetched by `pipeline/scripts/fetch_runs.sh`), and the SAE
-weight files, which were not copied back from the GPU host (`pipeline/atlas_h100/README.md`).
+weights and activations, which stay on the GPU host (`pipeline/atlas_h100/README.md`).
+
+The catalogues were re-extracted in October 2026 after three faults in the first release were
+found: a position cap that let some models see 32 cells and others 6,000, filler genes in the
+top-gene lists, and an unseeded SAE. Every number below is from the corrected run; what changed
+and why is in `docs/DECISIONS.md` (decision 16).
 
 ## Check it
 
@@ -62,33 +67,40 @@ Every number below is audited against the result file that produced it. The cont
 failed are reported alongside the ones that passed.
 
 - **The naive "universal core" is a database artefact.** The permissive annotator (top-5 genes
-  against five large databases) reports 2,267 concepts shared by all ten models. Random genes
-  share 3,563 under the same construction (z = −18.4); at the mid layer 353 real against 589
-  random (z = −6.1). Retracted.
+  against five large databases) reports 1,977 concepts shared by all ten models. Random genes
+  share 3,570 under the same construction (z = −24.2); at the mid layer 365 real against 582
+  random (z = −4.9). Retracted.
 - **A calibrated backbone is real and modest.** Requiring three of a feature's top-10 genes in
-  one curated pathway of at most 200 genes, 78 concepts are shared by at least 8 of the 10
-  models: 22.5× the uniform random-gene null and 59.3× a degree-matched one (p < 0.004, 250
-  permutations); 41 to 102 concepts at every depth; reproduced on an independent draw of cells
-  (Jaccard 0.50 against 0.048, p < 0.007, nine models). About 63 % is specific programme biology
-  (antigen presentation, cytokine signalling, defence, muscle), 37 % housekeeping. Only two
-  concepts are in all ten models.
+  one curated pathway of at most 200 genes, 96 concepts are shared by at least 8 of the 10
+  models: 27.5× the uniform random-gene null and 49.2× a degree-matched one (p < 0.004, 250
+  permutations); 55 to 133 concepts at every depth; reproduced on an independent draw of cells
+  that shares none with the corpus (Jaccard 0.52 against 0.035, p = 0.02, ten models). About
+  66 % is specific programme biology (antigen presentation, cytokine signalling, defence,
+  muscle), 34 % housekeeping. No concept is in all ten models.
+- **Co-expression alone recovers most of it.** A dictionary built from gene-gene correlation in
+  the same cells, with no model (a seed gene plus its nine most correlated genes), recovers 73
+  to 95 of the 96 backbone concepts per dictionary with random seeds; the models' own middle
+  layers recover 23 to 96. The backbone is mostly the co-expression structure of the data, not
+  something the models add to it.
 - **Geometry agrees without the annotator.** Linear CKA between every pair of models is above
   its cell-shuffle floor (worst pair 43×). The SAE explains more variance than the best rank-32
-  PCA subspace in all ten models, by +0.02 (tGPT) to +0.53 (Tahoe-x1). Tissue identity is
-  linearly decodable at every depth.
-- **Features predict held-out regulation, in half the models.** Gene pairs that co-fire in
-  the same features recover TRRUST edges, which no step of the pipeline used, above a null that
-  preserves every gene's degree: Tahoe-x1 13.3×, scGPT 11.9×, UCE 10.5×, C2S-Scale 4.1×,
-  Geneformer-V2 3.9× (p ≤ 0.005); the other five do not. On an equal budget of 8,631 pairs UCE
-  loses significance and MaxToki gains it. Pairs predicted by two models independently are 20.8×
-  over the null against 4.8× for one, a precision of 0.21 %.
+  PCA subspace in all ten models, by +0.02 (tGPT) to +0.55 (Geneformer-V2). Tissue identity is
+  linearly decodable at every depth, with no gain from a non-linear probe. PCA of the raw
+  expression decodes tissue as well (0.94 balanced accuracy against 0.85 to 0.96 for the models'
+  middle layers).
+- **Features predict held-out regulation, in four of the ten models.** Gene pairs that co-fire
+  in the same features recover TRRUST edges, which no step of the pipeline used, above a null
+  that preserves every gene's degree: UCE 10.2×, Tahoe-x1 9.4×, C2S-Scale 5.5×, Geneformer-V2
+  2.5× (p ≤ 0.005); the other six do not. All four hold on an equal budget of 50,707 pairs.
+  Pairs predicted by two models independently are 11.5× over the null against 4.8× for one, a
+  precision of 0.23 %.
 - **The same pairs hold against literature and perturbation.** Co-mention in NCBI gene2pubmed
-  2.2× a publication-count-preserving null; in genome-wide CRISPRi Perturb-seq, knocking down
-  one gene moves the other into the top 5 % of responders 1.20× more often than a
-  responsiveness-matched null in K562 and 1.28× in RPE1.
-- **No new biology, and the reason is the evidence.** Only 171 of 4,111 pairs were never
-  co-mentioned, and four of those join two well-studied genes. The models feature 4,003 genes
-  with fewer than five papers; the recurrence filter is 4.8× harsher on them, and 752 of the 793
+  2.7× a publication-count-preserving null; in genome-wide CRISPRi Perturb-seq, knocking down
+  one gene moves the other into the top 5 % of responders 1.25× more often than a
+  responsiveness-matched null in K562 and 1.33× in RPE1.
+- **No new biology, and the reason is the evidence.** Only 140 of 4,621 pairs were never
+  co-mentioned, and six of those join two well-studied genes. The models feature 5,953 genes
+  with fewer than five papers; the recurrence filter is 7.0× harsher on them, and 732 of the 774
   protein-coding ones are absent from the Perturb-seq screen. Predictive power does not decline
   with how studied a gene is. The atlas ranks testable links; it cannot confirm a link about an
   unstudied gene with these resources.

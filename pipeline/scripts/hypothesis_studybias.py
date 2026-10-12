@@ -30,7 +30,8 @@ from collections import defaultdict
 BASE = _B
 C = f"{BASE}/outputs/atlas/comparative"; PD = f"{BASE}/outputs/atlas/perturb"; PB = f"{BASE}/outputs/atlas/pubmed"
 ALLCAT = f"{BASE}/outputs/atlas/alllayer_cat"; TS = f"{BASE}/outputs/atlas/ts3_out"
-PASSED = ["Tahoe", "scGPT", "UCE", "C2S", "Geneformer"]
+PASSED = [m for m, v in sorted(json.load(open(f"{C}/hypothesis_trrust2.json"))["per_model"].items(),
+                               key=lambda kv: -kv[1]["fold"]) if v["p_emp"] < 0.05]   # significant in stage 2(A), strongest first
 TOPG, WLOW, KMOD = 10, 2, 2
 NPERM = int(sys.argv[1]) if len(sys.argv) > 1 else 200
 TOPQ, NBIN = 0.05, 20

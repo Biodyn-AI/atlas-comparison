@@ -15,7 +15,8 @@ BASE = _B
 C = f"{BASE}/outputs/atlas/comparative"; G = f"{BASE}/outputs/atlas/genesets"
 ALLCAT = f"{BASE}/outputs/atlas/alllayer_cat"; TS = f"{BASE}/outputs/atlas/ts3_out"
 ORDER = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "scGPT", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]
-PASSED = ["Tahoe", "scGPT", "UCE", "C2S", "Geneformer"]          # significant in stage 2(A)
+PASSED = [m for m, v in sorted(json.load(open(f"{C}/hypothesis_trrust2.json"))["per_model"].items(),
+                               key=lambda kv: -kv[1]["fold"]) if v["p_emp"] < 0.05]   # significant in stage 2(A), strongest first
 TOPG, W0 = 10, 5
 NPERM = int(sys.argv[1]) if len(sys.argv) > 1 else 200
 CACHE = f"{C}/.cofire_cache.pkl"
@@ -153,4 +154,7 @@ json.dump({"design": "gene pairs co-firing in >=%d SAE features predict held-out
            "n_hypotheses": len(novel), "hypotheses": novel[:80],
            "n_same_family_dropped": len(cands) - len(novel)},
           open(f"{C}/hypothesis_final.json", "w"), indent=1)
-print("\n==> hypothesis_final.json", flush=True)
+# the full released list; hypothesis_pubmed.py adds literature co-mentions to it in place
+json.dump({"n": len(novel), "pairs": [{k: c[k] for k in ("pair", "n_models", "models", "weight")} for c in novel]},
+          open(f"{C}/hypothesis_pairs_full.json", "w"))
+print("\n==> hypothesis_final.json + hypothesis_pairs_full.json", flush=True)

@@ -1,180 +1,128 @@
 {
- "budget": 8631,
+ "budget": 50707,
  "n_draws": 20,
  "n_perm": 100,
  "null": "configuration model on the budgeted edge set; TRRUST held out",
  "graph_sizes": {
-  "AIDO": 2,
-  "C2S": 147728,
-  "Geneformer": 20142,
-  "MaxToki": 18307,
-  "UCE": 71264,
-  "scGPT": 8631,
-  "tGPT": 14412,
-  "scFoundation": 4149,
-  "GeneCompass": 22537,
-  "Tahoe": 41952
+  "AIDO": 500,
+  "C2S": 117131,
+  "Geneformer": 50707,
+  "MaxToki": 18944,
+  "UCE": 91724,
+  "scGPT": 11516,
+  "tGPT": 10498,
+  "scFoundation": 8270,
+  "GeneCompass": 33938,
+  "Tahoe": 78159
  },
  "models": {
   "AIDO": {
-   "graph": 2,
+   "graph": 500,
    "testable": false,
-   "reason": "graph smaller than the 8631-pair budget"
+   "reason": "graph smaller than the 50707-pair budget"
   },
   "C2S": {
-   "graph": 147728,
+   "graph": 117131,
    "testable": true,
    "topN": {
-    "hits": 7,
-    "null_mean": 0.99,
-    "fold": 7.07,
+    "hits": 55,
+    "null_mean": 6.57,
+    "fold": 8.37,
     "p_emp": 0.0099
    },
    "randN": {
-    "fold_mean": 3.36,
-    "fold_sd": 1.72,
+    "fold_mean": 5.59,
+    "fold_sd": 0.67,
     "n_draws": 20
    },
-   "full_fold": 4.12
+   "full_fold": 5.48
   },
   "Geneformer": {
-   "graph": 20142,
+   "graph": 50707,
    "testable": true,
    "topN": {
-    "hits": 6,
-    "null_mean": 1.2,
-    "fold": 5.0,
+    "hits": 17,
+    "null_mean": 6.97,
+    "fold": 2.44,
     "p_emp": 0.0099
    },
    "randN": {
-    "fold_mean": 4.25,
-    "fold_sd": 1.03,
+    "fold_mean": 2.46,
+    "fold_sd": 0.14,
     "n_draws": 20
    },
-   "full_fold": 3.87
+   "full_fold": 2.46
   },
   "MaxToki": {
-   "graph": 18307,
-   "testable": true,
-   "topN": {
-    "hits": 2,
-    "null_mean": 0.23,
-    "fold": 8.7,
-    "p_emp": 0.0396
-   },
-   "randN": {
-    "fold_mean": 3.59,
-    "fold_sd": 2.56,
-    "n_draws": 20
-   },
-   "full_fold": 3.45
+   "graph": 18944,
+   "testable": false,
+   "reason": "graph smaller than the 50707-pair budget"
   },
   "UCE": {
-   "graph": 71264,
+   "graph": 91724,
    "testable": true,
    "topN": {
-    "hits": 2,
-    "null_mean": 0.51,
-    "fold": 3.92,
-    "p_emp": 0.1188
+    "hits": 49,
+    "null_mean": 4.15,
+    "fold": 11.81,
+    "p_emp": 0.0099
    },
    "randN": {
-    "fold_mean": 11.16,
-    "fold_sd": 5.2,
+    "fold_mean": 10.15,
+    "fold_sd": 1.42,
     "n_draws": 20
    },
-   "full_fold": 10.54
+   "full_fold": 10.15
   },
   "scGPT": {
-   "graph": 8631,
-   "testable": true,
-   "topN": {
-    "hits": 10,
-    "null_mean": 0.91,
-    "fold": 10.99,
-    "p_emp": 0.0099
-   },
-   "randN": {
-    "fold_mean": 11.68,
-    "fold_sd": 1.31,
-    "n_draws": 20
-   },
-   "full_fold": 11.9
+   "graph": 11516,
+   "testable": false,
+   "reason": "graph smaller than the 50707-pair budget"
   },
   "tGPT": {
-   "graph": 14412,
-   "testable": true,
-   "topN": {
-    "hits": 2,
-    "null_mean": 1.14,
-    "fold": 1.75,
-    "p_emp": 0.3366
-   },
-   "randN": {
-    "fold_mean": 1.22,
-    "fold_sd": 0.63,
-    "n_draws": 20
-   },
-   "full_fold": 1.31
+   "graph": 10498,
+   "testable": false,
+   "reason": "graph smaller than the 50707-pair budget"
   },
   "scFoundation": {
-   "graph": 4149,
+   "graph": 8270,
    "testable": false,
-   "reason": "graph smaller than the 8631-pair budget"
+   "reason": "graph smaller than the 50707-pair budget"
   },
   "GeneCompass": {
-   "graph": 22537,
-   "testable": true,
-   "topN": {
-    "hits": 0,
-    "null_mean": 0.14,
-    "fold": null,
-    "p_emp": 1.0
-   },
-   "randN": {
-    "fold_mean": null,
-    "fold_sd": null,
-    "n_draws": 20
-   },
-   "full_fold": 0.0
+   "graph": 33938,
+   "testable": false,
+   "reason": "graph smaller than the 50707-pair budget"
   },
   "Tahoe": {
-   "graph": 41952,
+   "graph": 78159,
    "testable": true,
    "topN": {
-    "hits": 19,
-    "null_mean": 1.0,
-    "fold": 19.0,
+    "hits": 62,
+    "null_mean": 5.62,
+    "fold": 11.03,
     "p_emp": 0.0099
    },
    "randN": {
-    "fold_mean": 12.89,
-    "fold_sd": 2.9,
+    "fold_mean": 9.41,
+    "fold_sd": 0.92,
     "n_draws": 20
    },
-   "full_fold": 13.29
+   "full_fold": 9.44
   }
  },
  "ranking_full_size": [
-  "Tahoe",
-  "scGPT",
   "UCE",
+  "Tahoe",
   "C2S",
-  "Geneformer",
-  "MaxToki",
-  "tGPT",
-  "GeneCompass"
+  "Geneformer"
  ],
  "ranking_size_matched": [
-  "Tahoe",
-  "scGPT",
-  "MaxToki",
-  "C2S",
-  "Geneformer",
   "UCE",
-  "tGPT",
-  "GeneCompass"
+  "Tahoe",
+  "C2S",
+  "Geneformer"
  ],
- "ranking_preserved": false,
- "spearman_full_vs_matched": 0.786
+ "ranking_preserved": true,
+ "spearman_full_vs_matched": 1.0
 }

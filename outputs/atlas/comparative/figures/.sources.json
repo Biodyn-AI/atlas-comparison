@@ -5,9 +5,9 @@
    "Fig4_annotation_free"
   ],
   "sources": {
-   "atlas_full_notf.json": "288fcedf94ee80ba",
-   "controls.json": "448e186184b2aa91",
-   "nonlinearity_alllayers.json": "536b70aa60afad5b"
+   "atlas_full_notf.json": "cd79653539af98e4",
+   "controls.json": "a36047228afbf17d",
+   "nonlinearity_alllayers.json": "91d4abccd6ed4ac5"
   }
  },
  "make_fig5.py": {
@@ -15,11 +15,11 @@
    "Fig5_hypothesis"
   ],
   "sources": {
-   "hypothesis_final.json": "3b72c13fa26cf66b",
-   "hypothesis_perturb.json": "11589166f97da1cb",
-   "hypothesis_pubmed.json": "688191e260ecf4f0",
-   "hypothesis_sizematched.json": "a5f2ebc06429a6bb",
-   "hypothesis_trrust2.json": "6509ce0b7826ab52"
+   "hypothesis_final.json": "1e8261790c9c840f",
+   "hypothesis_perturb.json": "18464cace3d1d9a8",
+   "hypothesis_pubmed.json": "d098cc9abcbf4f3e",
+   "hypothesis_sizematched.json": "2701d29941c7e3d2",
+   "hypothesis_trrust2.json": "6b81fd512b46ff37"
   }
  },
  "make_figS1.py": {
@@ -27,7 +27,7 @@
    "FigS1_svd_projection"
   ],
   "sources": {
-   "svd_projection_k.json": "bcddeaf917287228"
+   "svd_projection_k.json": "a66f4384833f4d13"
   }
  },
  "make_figS2.py": {
@@ -35,7 +35,7 @@
    "FigS2_depth_backbone"
   ],
   "sources": {
-   "depth_backbone.json": "41f9325a65b0c9a9"
+   "depth_backbone.json": "1f03267e791d86e3"
   }
  },
  "make_figures.py": {
@@ -44,9 +44,9 @@
    "Fig3_backbone"
   ],
   "sources": {
-   "alllayer_null.json": "622e239bb282ce31",
-   "backbone_terms.json": "40c1ddae053078e6",
-   "controls.json": "448e186184b2aa91"
+   "alllayer_null.json": "53143e72794920ce",
+   "backbone_terms.json": "11e57e32568a88a2",
+   "controls.json": "a36047228afbf17d"
   }
  }
 }

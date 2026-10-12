@@ -20,5 +20,6 @@ site panel is produced by anything here, and nothing in `../scripts/` imports it
 | `_stubs.py`, `scbert.py`, `scprint.py` | adapter scaffolds for models that were tried or planned and are not in the atlas |
 | `run_perturbation.py`, `perturbation.py` | an in-model perturbation-response test on CRISPRi data, replaced by the pseudobulk test in `scripts/hypothesis_perturb.py` |
 | `prepare_corpus.py` | the first corpus builder, replaced by `build_ts_corpus.py` |
+| `gsea_annot.py` | a local rank-based check on the stored top-20 genes only; too few ranks to reach significance (it returns no annotations). Superseded by `../atlas_h100/gsea_prerank.py`, which ranks all ~19,000 genes and writes the published `gsea_annot.json`. Running this would overwrite that file with zeros |
 
 The outputs of the first cluster run are in the `legacy-cluster-run.tar.gz` release asset.

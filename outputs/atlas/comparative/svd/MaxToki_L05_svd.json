@@ -1,0 +1,1 @@
+{"model": "MaxToki", "layer": 5, "d_model": 1232, "d_sae": 4928, "k": 32, "cos_thresh": 0.7, "n_svd_components": 1232, "pct_novel": 0.9998, "n_novel": 4927, "mean_maxcos": 0.1348, "median_maxcos": 0.1219, "svd_var_at_k": 0.3699, "sae_var": 0.7778, "var_top10": [0.0692, 0.0459, 0.0331, 0.0166, 0.0146, 0.013, 0.0114, 0.0109, 0.0098, 0.0091]}

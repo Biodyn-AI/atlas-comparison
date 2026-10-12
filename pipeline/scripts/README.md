@@ -32,7 +32,7 @@ it reads and writes in its docstring. `docs/RESULTS.md` has the same map from th
 | `heldout_compare.py`, `heldout_calibrated.py` | replication on the held-out draw, permissive (fails) and calibrated (passes) |
 | `kegg_robust.py` | the backbone without KEGG |
 | `sae_health.py` | dead features and decoder cosine for all 172 model-layers |
-| `topn_sweep.py`, `gsea_annot.py` | annotation at other gene cutoffs; a rank-based annotation as a cross-check |
+| `topn_sweep.py` | annotation at other gene cutoffs (the rank-based cross-check is `../atlas_h100/gsea_prerank.py`) |
 | `controls.py`, `controls2.py`, `controls3.py`, `controls4.py` | the reviewer-round controls, merged into `controls.json` (size-weighted null, equal-layer core, capacity confounds, ontology redundancy, vocabulary fairness, seed CIs, bootstrap CIs on the n = 10 correlations) |
 | `backbone_terms.py` | the backbone concept names by sharing tier |
 | `pair_redundancy.py` | near-duplicate feature blocks and whether the prediction result rests on them |
@@ -47,7 +47,7 @@ it reads and writes in its docstring. `docs/RESULTS.md` has the same map from th
 | `hypothesis_trrust2.py` | stage 2: 500 rewirings per model; the corroboration curve over all ten models |
 | `hypothesis_trrust3.py` | stage 3: the validated models and the released prediction list |
 | `hypothesis_robust.py` | paralogues dropped, threshold 10, firing features only, both |
-| `hypothesis_sizematched.py` | every model on an equal budget of 8,631 pairs |
+| `hypothesis_sizematched.py` | every model on an equal budget of 50,707 pairs (the smallest passing graph) |
 | `hypothesis_singlelayer.py` | the test with a single-layer graph |
 | `hypothesis_pubmed.py` | literature co-mention against a publication-count-preserving null |
 | `hypothesis_perturb.py` | Perturb-seq in K562 and RPE1 against a responsiveness-matched null |

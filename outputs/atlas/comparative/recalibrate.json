@@ -2,7 +2,7 @@
  "configs": [
   {
    "config": "no-PPI max100 a>=3 OR>=10",
-   "real_rate": 1.9,
+   "real_rate": 2.4,
    "rand_rate": 0.1,
    "real_core": 0,
    "rand_core_mean": 0.0,
@@ -12,7 +12,7 @@
   },
   {
    "config": "no-PPI max100 a>=3",
-   "real_rate": 1.9,
+   "real_rate": 2.4,
    "rand_rate": 0.1,
    "real_core": 0,
    "rand_core_mean": 0.0,
@@ -22,7 +22,7 @@
   },
   {
    "config": "no-PPI max200 a>=3 OR>=5",
-   "real_rate": 2.5,
+   "real_rate": 3.0,
    "rand_rate": 0.3,
    "real_core": 0,
    "rand_core_mean": 0.0,
@@ -32,7 +32,7 @@
   },
   {
    "config": "no-PPI max200 a>=3",
-   "real_rate": 2.5,
+   "real_rate": 3.0,
    "rand_rate": 0.3,
    "real_core": 0,
    "rand_core_mean": 0.0,
@@ -44,10 +44,10 @@
    "config": "no-PPI max200 a>=2",
    "real_rate": 24.4,
    "rand_rate": 23.8,
-   "real_core": 53,
-   "rand_core_mean": 126.6,
-   "rand_core_sd": 14.5,
-   "core_z": -5.1,
+   "real_core": 58,
+   "rand_core_mean": 123.7,
+   "rand_core_sd": 15.6,
+   "core_z": -4.2,
    "beats_null": false
   }
  ]

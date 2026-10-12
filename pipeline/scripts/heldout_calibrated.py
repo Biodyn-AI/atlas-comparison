@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """#1 — does the CALIBRATED backbone replicate on held-out cells? Re-annotate original + held-out catalogs with
-the calibrated annotator (top-10, >=3 in curated GO/Reactome/KEGG <=200, no PPI), mid layer, the 9 models that
-have held-out (scGPT excluded). Build the shared backbone (concepts in >=7 of 9, ~ the >=8/10 tier) on each and
+the calibrated annotator (top-10, >=3 in curated GO/Reactome/KEGG <=200, no PPI), mid layer, all ten
+models. Build the shared backbone (concepts in >=8 of 10) on each and
 compare: Jaccard, % reproduced, per-model concept Jaccard. Baseline = calibrated random-gene two-draw overlap.
     python scripts/heldout_calibrated.py -> outputs/atlas/comparative/heldout_calibrated.json
 """
@@ -18,8 +18,8 @@ BASE = _B
 C = f"{BASE}/outputs/atlas/comparative"; G = f"{BASE}/outputs/atlas/genesets"
 HO = f"{BASE}/outputs/atlas/heldout_cat/out_heldout"; ALLCAT = f"{BASE}/outputs/atlas/alllayer_cat"; TS = f"{BASE}/outputs/atlas/ts3_out"
 ALPHA, TOP, AMIN, MX = 0.05, 10, 3, 200
-MODELS = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]  # 9 (scGPT no held-out)
-KSHARE = 7   # >=7 of 9 ~ the >=8/10 backbone tier
+MODELS = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "scGPT", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]
+KSHARE = 8   # >=8 of 10, the backbone tier
 rng = np.random.default_rng(0)
 
 gs = {}
@@ -104,14 +104,14 @@ for _ in range(20):
     b1, b2 = backbone(r1), backbone(r2)
     null_j.append(len(b1 & b2) / max(len(b1 | b2), 1))
 
-out = {"annotator": f"top{TOP} a>={AMIN} GO/Re/KEGG<= {MX} no-PPI, mid, {len(MODELS)} models, >={KSHARE}/9 backbone",
+out = {"annotator": f"top{TOP} a>={AMIN} GO/Re/KEGG<= {MX} no-PPI, mid, {len(MODELS)} models, >={KSHARE}/{len(MODELS)} backbone",
        "backbone_orig": len(bb_o), "backbone_heldout": len(bb_h),
        "backbone_jaccard": round(jac, 3), "pct_reproduced": round(pct, 1),
        "mean_per_model_jaccard": round(float(np.mean(list(permodel.values()))), 3), "per_model": permodel,
        "null_two_draw_backbone_jaccard": round(float(np.mean(null_j)), 3),
        "reproduced_terms": sorted(bb_o & bb_h)[:40]}
 json.dump(out, open(f"{C}/heldout_calibrated.json", "w"), indent=1)
-print(f"CALIBRATED backbone (>={KSHARE}/9): orig {len(bb_o)} | held-out {len(bb_h)}")
+print(f"CALIBRATED backbone (>={KSHARE}/{len(MODELS)}): orig {len(bb_o)} | held-out {len(bb_h)}")
 print(f"  Jaccard {out['backbone_jaccard']} | % reproduced {out['pct_reproduced']}% | per-model mean Jaccard {out['mean_per_model_jaccard']}")
 print(f"  vs random-gene two-draw baseline {out['null_two_draw_backbone_jaccard']}")
 print("  reproduced e.g.:", [t.split(':',1)[1][:32] for t in out['reproduced_terms'][:10]])

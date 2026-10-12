@@ -1,0 +1,1 @@
+{"model": "AIDO", "layer": 4, "d_model": 256, "d_sae": 1024, "k": 32, "cos_thresh": 0.7, "n_svd_components": 256, "pct_novel": 0.998, "n_novel": 1022, "mean_maxcos": 0.2314, "median_maxcos": 0.2219, "svd_var_at_k": 0.4132, "sae_var": 0.6786, "var_top10": [0.1097, 0.0312, 0.0229, 0.017, 0.0154, 0.0136, 0.013, 0.012, 0.0113, 0.0107]}
