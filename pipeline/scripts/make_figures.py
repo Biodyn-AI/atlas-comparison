@@ -74,7 +74,7 @@ dsd = [d["degree_null"]["tiers"][k]["degree_null_sd"] for k in KS]
 YLO = 0.004
 x = np.arange(4); off = 0.17
 def _err(vals, sds):
-    lo = [v - max(v - s, YLO) for v, s in zip(vals, sds)]   # clipped lower arm
+    lo = [max(v - max(v - s, YLO), 0) for v, s in zip(vals, sds)]   # clipped lower arm (0 for a zero null)
     return [lo, sds]
 b.errorbar(x, uni, yerr=_err(uni, usd), fmt="s", ms=5, color=GREY_D, mfc=GREY_L, mew=1.1,
            capsize=3, lw=1, label="uniform null")

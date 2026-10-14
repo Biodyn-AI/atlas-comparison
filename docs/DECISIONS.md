@@ -127,8 +127,9 @@ The scripts and result files for all four are kept so the negatives are reproduc
 ## 7. What survived
 
 - A backbone of 96 concepts encoded by at least 8 of the 10 models under the calibrated
-  annotator: 27.5x the uniform null and 49.2x the degree-matched null, p < 0.004; 66 % specific
-  programme biology, 34 % housekeeping by the keyword rule of Table S11; present at every depth
+  annotator: 27.5x the uniform null and 51.2x the degree-matched null, p < 0.004; by the genes
+  behind each match 42 concepts are one protein-synthesis block, 12 other housekeeping and 42
+  specific programmes, 37 distinct programmes in all (backbone_composition.json); present at every depth
   (55 to 133 concepts, 21.3 to 38.7x); reproduced on the held-out draw, which shares no cell with
   the corpus, on all ten models (Jaccard 0.52 against 0.035, p = 0.02). No concept is in all ten
   models; the all-ten intersection is brittle by construction.
@@ -154,8 +155,10 @@ effect.
 
 Result: four of ten models pass (UCE 10.2x, Tahoe-x1 9.4x, C2S-Scale 5.5x, Geneformer-V2
 2.5x). scGPT passed on the superseded catalogues (11.9x, trained on about 420 cells) and does not
-on the corrected ones (1.7x, p = 0.27). Pairs predicted by two models independently are 11.5x
-over the null against 4.8x for one model, a precision of 0.23 %.
+on the corrected ones (1.7x, p = 0.27). Pairs predicted by two models independently are 15.3x
+over the null against 5.0x for one model (2,000 rewirings, agreement_curve.py; the 100-rewiring
+curve of hypothesis_trrust2.py gives 11.5x, a noisy estimate because its null holds well under one
+known pair per rewiring), a precision of 0.23 %. Agreement beyond two models adds nothing.
 
 Two design points that took iteration:
 
@@ -181,12 +184,12 @@ Code: `hypothesis_trrust.py`, `hypothesis_trrust2.py`, `hypothesis_trrust3.py`,
 Literature: NCBI gene2pubmed as a dated bulk file (2026-09-11), not live queries. Papers
 annotating more than 60 genes are dropped, because without that cap 96 % of all pairs are
 "co-mentioned" and the measure says nothing. The null shuffles the gene-paper graph keeping each
-gene's paper count. 1,281 of 4,621 pairs co-mentioned against 471 +- 19 (2.7x).
+gene's paper count. 1,055 of 4,272 pairs co-mentioned against 459 +- 18 (2.3x).
 
 Perturbation: genome-wide CRISPRi Perturb-seq (Replogle 2022), K562 and RPE1. For a pair (A, B)
 read the percentile of B's response within perturbation A, so a perturbation that moves
 everything cannot score, and compare with a gene matched on its own responsiveness, so a gene
-that reacts to everything cannot either. 1.25x in K562, 1.33x in RPE1, both at p = 0.005. The
+that reacts to everything cannot either. 1.24x in K562, 1.33x in RPE1, both at p = 0.005. The
 effect is small on purpose: the screens are cancer and epithelial lines, the corpus is primary
 immune, kidney and lung tissue.
 
@@ -194,7 +197,7 @@ Code: `hypothesis_pubmed.py`, `hypothesis_perturb.py`.
 
 ## 10. Why no new biology, and why that is about the evidence
 
-Only 140 of 4,621 pairs were never co-mentioned, and only six of those join two well-studied
+Only 98 of 4,272 pairs were never co-mentioned, and only six of those join two well-studied
 genes; five of the six involve a long non-coding RNA (GAS5, SNHG6, NEAT1, FENDRR). The analysis
 of study bias (`hypothesis_studybias.py`, `study_bias_coverage.py`) shows the models do feature
 5,953 genes with fewer than five papers, that the recurrence filter is 7.0x harsher on them, and

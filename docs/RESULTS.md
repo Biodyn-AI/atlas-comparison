@@ -4,9 +4,11 @@ Every file in `outputs/atlas/comparative/`, the script that writes it and the sc
 
 | file | KB | written by | read by | holds |
 |---|---|---|---|---|
+| `agreement_curve.json` | 2 | `agreement_curve.py` | `atlas_hypothesis_block.py` | precision of pairs predicted by >= 1 and >= 2 models against the configuration null, 2,000 rewirings, for all ten models and for the passing ones |
 | `alllayer_concepts.json` | 1 | `alllayer_concepts.py` | `atlas_assemble.py` | distinct concepts per model across the depth-matched layers |
 | `alllayer_null.json` | 0 | `alllayer_null.py` | `audit_manuscript_core.py`, `make_supp_tables.py`, `make_figures.py` | the same null on the all-layer union, 20 permutations |
 | `atlas_full_notf.json` | 356 | `atlas_assemble.py` | `controls4.py`, `atlas_hypothesis_block.py`, `controls.py`, `make_fig14.py`, `inject_atlas.py` … | everything the site embeds: coverage, universality, similarity, depth, tissue, CKA, SVD, controls, hypothesis block |
+| `backbone_composition.json` | 26 | backbone-composition analysis of the paper (`s2_mid_composition`) | `atlas_hypothesis_block.py` | the 96 backbone concepts classed by the genes behind each match (protein synthesis, other housekeeping, specific) and grouped into programmes |
 | `backbone_terms.json` | 25 | `backbone_terms.py` | `atlas_hypothesis_block.py`, `make_figures.py` | the calibrated backbone concepts by sharing tier (>=7, >=8, >=9, >=10 of 10 models) |
 | `celltype_difficulty.json` | 5 | `celltype_difficulty.py` | `atlas_assemble.py` | Per-cell-type decodability across models: which cell types are HARDEST to read out linearly, averaged |
 | `circuits_adjacent.json` | 3 | `circuits_adjacent.py` | `atlas_assemble.py` | Adjacent-layer feature circuits — the methodologically-correct version (coupling between CONSECUTIVE |
@@ -33,7 +35,7 @@ Every file in `outputs/atlas/comparative/`, the script that writes it and the sc
 | `heldout.json` | 1 | `heldout_compare.py` |  | held-out replication of the permissive core (fails) |
 | `heldout_calibrated.json` | 2 | `heldout_calibrated.py` |  | held-out replication of the calibrated backbone (passes), ten models, no cell shared with the corpus |
 | `hypothesis_final.json` | 16 | `hypothesis_trrust3.py` | `atlas_hypothesis_block.py`, `make_supp_tables.py`, `audit_manuscript_derived.py`, `hypothesis_singlelayer.py`, `make_fig5.py` … | the validated models and the released prediction list |
-| `hypothesis_pairs_full.json` | 619 | `hypothesis_trrust3.py`, then `hypothesis_pubmed.py` | `atlas_hypothesis_block.py`, `make_supp_tables.py`, `study_bias_coverage.py`, `hypothesis_perturb.py` | all 4,882 released pairs with models, weight, co-mentions, same-family flag |
+| `hypothesis_pairs_full.json` | 569 | `hypothesis_trrust3.py`, then `hypothesis_pubmed.py` | `atlas_hypothesis_block.py`, `make_supp_tables.py`, `study_bias_coverage.py`, `hypothesis_perturb.py` | all 4,485 released pairs with models, weight, co-mentions, same-family flag |
 | `hypothesis_perturb.json` | 1 | `hypothesis_perturb.py` | `atlas_hypothesis_block.py`, `make_supp_tables.py`, `audit_manuscript_derived.py`, `make_fig5.py`, `audit_manuscript.py` | the Perturb-seq test in K562 and RPE1 |
 | `hypothesis_pubmed.json` | 29 | `hypothesis_pubmed.py` | `atlas_hypothesis_block.py`, `make_supp_tables.py`, `audit_manuscript_derived.py`, `make_fig5.py`, `audit_manuscript.py` | literature co-mention against a publication-count-preserving null; novelty counts |
 | `hypothesis_robust.json` | 1 | `hypothesis_robust.py` | `atlas_hypothesis_block.py`, `make_supp_tables.py`, `audit_manuscript.py` | the five robustness variants of the held-out test |

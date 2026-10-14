@@ -101,7 +101,8 @@ controls:    alllayer_null, recalibrate, recalibrate2, recalibrate_final,
              novel_null, novel_calibrated, coexpr_core_baseline, controls_import
 predictions: hypothesis_trrust, hypothesis_trrust2, hypothesis_trrust3, hypothesis_robust,
              hypothesis_sizematched, hypothesis_pubmed, hypothesis_perturb,
-             hypothesis_studybias, hypothesis_singlelayer, study_bias_coverage, pair_redundancy
+             hypothesis_studybias, hypothesis_singlelayer, study_bias_coverage, pair_redundancy,
+             agreement_curve
 assembly:    (atlas_assemble -> controls, controls2, controls3, controls4, controls_import) until controls.json
              stops changing -> atlas_assemble -> atlas_hypothesis_block -> inject_atlas
 figures:     make_figures, make_fig14, make_fig5, make_figS1, make_figS2, audit_figures --update

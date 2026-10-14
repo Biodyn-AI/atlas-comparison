@@ -2,18 +2,18 @@
  "source": "NCBI gene2pubmed + Homo_sapiens.gene_info, downloaded 2026-09-11",
  "null": "degree-preserving shuffle of the gene-paper bipartite graph (each gene keeps its paper count)",
  "n_perm": 200,
- "n_pairs_testable": 4621,
+ "n_pairs_testable": 4272,
  "mega_paper_cap": 60,
- "observed_pairs_comentioned": 1281,
- "observed_total_comentions": 3502,
- "observed_pairs_comentioned_uncapped": 4481,
- "observed_pct_comentioned_uncapped": 97.0,
- "null_pairs_comentioned_mean": 471.3,
- "null_sd": 18.6,
- "fold": 2.72,
- "z": 43.53,
+ "observed_pairs_comentioned": 1055,
+ "observed_total_comentions": 2595,
+ "observed_pairs_comentioned_uncapped": 4174,
+ "observed_pct_comentioned_uncapped": 97.7,
+ "null_pairs_comentioned_mean": 459.0,
+ "null_sd": 18.0,
+ "fold": 2.3,
+ "z": 33.08,
  "p_emp": 0.00498,
- "n_never_comentioned": 140,
+ "n_never_comentioned": 98,
  "n_never_but_both_studied": 6,
  "never_comentioned": [
   {
@@ -67,23 +67,6 @@
    "papers": [
     12,
     2
-   ]
-  },
-  {
-   "pair": [
-    "MTCO1P12",
-    "MTCO1P40"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 95,
-   "co_mentions": 0,
-   "papers": [
-    0,
-    0
    ]
   },
   {
@@ -224,23 +207,6 @@
   },
   {
    "pair": [
-    "GPX1",
-    "GPX1P1"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 61,
-   "co_mentions": 0,
-   "papers": [
-    656,
-    1
-   ]
-  },
-  {
-   "pair": [
     "MTCO1P12",
     "MTCO2P12"
    ],
@@ -254,40 +220,6 @@
    "papers": [
     0,
     21
-   ]
-  },
-  {
-   "pair": [
-    "HLA-DMA",
-    "HLA-DRB6"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 56,
-   "co_mentions": 0,
-   "papers": [
-    119,
-    9
-   ]
-  },
-  {
-   "pair": [
-    "STARD13",
-    "STARD13-AS"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 53,
-   "co_mentions": 0,
-   "papers": [
-    85,
-    2
    ]
   },
   {
@@ -377,23 +309,6 @@
   },
   {
    "pair": [
-    "TMSB4X",
-    "TMSB4XP4"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 45,
-   "co_mentions": 0,
-   "papers": [
-    158,
-    1
-   ]
-  },
-  {
-   "pair": [
     "MTATP6P1",
     "MTCO1P12"
    ],
@@ -445,23 +360,6 @@
   },
   {
    "pair": [
-    "MTCO1P40",
-    "MTCO1P53"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 42,
-   "co_mentions": 0,
-   "papers": [
-    0,
-    0
-   ]
-  },
-  {
-   "pair": [
     "MTCO1P53",
     "MTND4P12"
    ],
@@ -471,40 +369,6 @@
     "Tahoe"
    ],
    "weight": 42,
-   "co_mentions": 0,
-   "papers": [
-    0,
-    0
-   ]
-  },
-  {
-   "pair": [
-    "RPS27A",
-    "RPS27AP5"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "UCE"
-   ],
-   "weight": 41,
-   "co_mentions": 0,
-   "papers": [
-    327,
-    1
-   ]
-  },
-  {
-   "pair": [
-    "MTCO1P12",
-    "MTCO1P53"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 41,
    "co_mentions": 0,
    "papers": [
     0,
@@ -598,23 +462,6 @@
   },
   {
    "pair": [
-    "HMGB1",
-    "HMGB1P5"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 36,
-   "co_mentions": 0,
-   "papers": [
-    2283,
-    3
-   ]
-  },
-  {
-   "pair": [
     "INHBA",
     "LINC03051"
    ],
@@ -627,23 +474,6 @@
    "co_mentions": 0,
    "papers": [
     320,
-    1
-   ]
-  },
-  {
-   "pair": [
-    "IGHG1",
-    "IGHGP"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 34,
-   "co_mentions": 0,
-   "papers": [
-    150,
     1
    ]
   },
@@ -662,23 +492,6 @@
    "papers": [
     0,
     21
-   ]
-  },
-  {
-   "pair": [
-    "IGHG3",
-    "IGHGP"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 33,
-   "co_mentions": 0,
-   "papers": [
-    44,
-    1
    ]
   },
   {
@@ -717,23 +530,6 @@
   },
   {
    "pair": [
-    "SUCLG2",
-    "SUCLG2-DT"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 32,
-   "co_mentions": 0,
-   "papers": [
-    94,
-    0
-   ]
-  },
-  {
-   "pair": [
     "MTATP6P1",
     "MTND2P28"
    ],
@@ -747,40 +543,6 @@
    "papers": [
     1,
     1
-   ]
-  },
-  {
-   "pair": [
-    "RPS3A",
-    "RPS3AP6"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 30,
-   "co_mentions": 0,
-   "papers": [
-    367,
-    1
-   ]
-  },
-  {
-   "pair": [
-    "HLA-DQB2",
-    "HLA-DRB6"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 30,
-   "co_mentions": 0,
-   "papers": [
-    72,
-    9
    ]
   },
   {
@@ -802,57 +564,6 @@
   },
   {
    "pair": [
-    "IGKV3-11",
-    "IGKV3-20"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "UCE"
-   ],
-   "weight": 29,
-   "co_mentions": 0,
-   "papers": [
-    3,
-    29
-   ]
-  },
-  {
-   "pair": [
-    "TMSB4XP1",
-    "TMSB4XP4"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 29,
-   "co_mentions": 0,
-   "papers": [
-    3,
-    1
-   ]
-  },
-  {
-   "pair": [
-    "PCCA",
-    "PCCA-DT"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 29,
-   "co_mentions": 0,
-   "papers": [
-    148,
-    1
-   ]
-  },
-  {
-   "pair": [
     "IGHGP",
     "IGLC2"
    ],
@@ -870,23 +581,6 @@
   },
   {
    "pair": [
-    "FTH1",
-    "FTH1P2"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 29,
-   "co_mentions": 0,
-   "papers": [
-    373,
-    2
-   ]
-  },
-  {
-   "pair": [
     "MUC13",
     "PHGR1"
    ],
@@ -899,40 +593,6 @@
    "co_mentions": 0,
    "papers": [
     76,
-    3
-   ]
-  },
-  {
-   "pair": [
-    "TMSB4XP1",
-    "TMSB4XP8"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 28,
-   "co_mentions": 0,
-   "papers": [
-    3,
-    3
-   ]
-  },
-  {
-   "pair": [
-    "TMSB4XP4",
-    "TMSB4XP8"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 28,
-   "co_mentions": 0,
-   "papers": [
-    1,
     3
    ]
   },
@@ -1023,23 +683,6 @@
   },
   {
    "pair": [
-    "RPS3A",
-    "RPS3AP5"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 26,
-   "co_mentions": 0,
-   "papers": [
-    367,
-    2
-   ]
-  },
-  {
-   "pair": [
     "LINC00926",
     "PAX5"
    ],
@@ -1125,23 +768,6 @@
   },
   {
    "pair": [
-    "IGHG2",
-    "IGHGP"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 24,
-   "co_mentions": 0,
-   "papers": [
-    69,
-    1
-   ]
-  },
-  {
-   "pair": [
     "JPX",
     "XIST"
    ],
@@ -1159,8 +785,8 @@
   },
   {
    "pair": [
-    "FTH1",
-    "FTH1P11"
+    "LINC01320",
+    "LINC02532"
    ],
    "n_models": 2,
    "models": [
@@ -1170,59 +796,8 @@
    "weight": 23,
    "co_mentions": 0,
    "papers": [
-    373,
-    1
-   ]
-  },
-  {
-   "pair": [
-    "FTH1",
-    "FTH1P8"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 23,
-   "co_mentions": 0,
-   "papers": [
-    373,
-    1
-   ]
-  },
-  {
-   "pair": [
-    "OSMR",
-    "OSMR-DT"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 23,
-   "co_mentions": 0,
-   "papers": [
-    139,
-    1
-   ]
-  },
-  {
-   "pair": [
-    "TPT1",
-    "TPT1P4"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 23,
-   "co_mentions": 0,
-   "papers": [
-    422,
-    0
+    4,
+    3
    ]
   },
   {
@@ -1257,40 +832,6 @@
    "papers": [
     21,
     1
-   ]
-  },
-  {
-   "pair": [
-    "PCNX4",
-    "PCNX4-DT"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 22,
-   "co_mentions": 0,
-   "papers": [
-    16,
-    0
-   ]
-  },
-  {
-   "pair": [
-    "FTH1",
-    "FTH1P10"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 22,
-   "co_mentions": 0,
-   "papers": [
-    373,
-    3
    ]
   },
   {
@@ -1346,23 +887,6 @@
   },
   {
    "pair": [
-    "HLA-DMB",
-    "HLA-DRB6"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 21,
-   "co_mentions": 0,
-   "papers": [
-    127,
-    9
-   ]
-  },
-  {
-   "pair": [
     "MIR3667HG",
     "MIR646HG"
    ],
@@ -1380,23 +904,6 @@
   },
   {
    "pair": [
-    "IGHG4",
-    "IGHGP"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 21,
-   "co_mentions": 0,
-   "papers": [
-    29,
-    1
-   ]
-  },
-  {
-   "pair": [
     "TRAV8-2",
     "TRBV6-2"
    ],
@@ -1410,40 +917,6 @@
    "papers": [
     2,
     3
-   ]
-  },
-  {
-   "pair": [
-    "HIVEP2",
-    "HIVEP2-DT"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 20,
-   "co_mentions": 0,
-   "papers": [
-    87,
-    1
-   ]
-  },
-  {
-   "pair": [
-    "IGHA1",
-    "IGHGP"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 20,
-   "co_mentions": 0,
-   "papers": [
-    110,
-    1
    ]
   },
   {
@@ -1495,40 +968,6 @@
    "papers": [
     691,
     77
-   ]
-  },
-  {
-   "pair": [
-    "RPS15",
-    "RPS15P4"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 19,
-   "co_mentions": 0,
-   "papers": [
-    219,
-    2
-   ]
-  },
-  {
-   "pair": [
-    "IGHA2",
-    "IGHGP"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 19,
-   "co_mentions": 0,
-   "papers": [
-    43,
-    1
    ]
   },
   {
@@ -1601,23 +1040,6 @@
   },
   {
    "pair": [
-    "RPLP0P6",
-    "RPLP0P9"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 18,
-   "co_mentions": 0,
-   "papers": [
-    33,
-    1
-   ]
-  },
-  {
-   "pair": [
     "NEAT1",
     "SAT1"
    ],
@@ -1631,23 +1053,6 @@
    "papers": [
     691,
     103
-   ]
-  },
-  {
-   "pair": [
-    "FTH1P10",
-    "FTH1P20"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 18,
-   "co_mentions": 0,
-   "papers": [
-    3,
-    0
    ]
   },
   {
@@ -1737,40 +1142,6 @@
   },
   {
    "pair": [
-    "FTH1",
-    "FTH1P20"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 17,
-   "co_mentions": 0,
-   "papers": [
-    373,
-    0
-   ]
-  },
-  {
-   "pair": [
-    "FTH1P11",
-    "FTH1P20"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 17,
-   "co_mentions": 0,
-   "papers": [
-    1,
-    0
-   ]
-  },
-  {
-   "pair": [
     "BLK",
     "LINC01781"
    ],
@@ -1805,23 +1176,6 @@
   },
   {
    "pair": [
-    "SAP30",
-    "SAP30-DT"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 16,
-   "co_mentions": 0,
-   "papers": [
-    102,
-    2
-   ]
-  },
-  {
-   "pair": [
     "RPL10P9",
     "RPS26"
    ],
@@ -1852,6 +1206,23 @@
    "papers": [
     1,
     192
+   ]
+  },
+  {
+   "pair": [
+    "LINC01484",
+    "LINC03034"
+   ],
+   "n_models": 2,
+   "models": [
+    "C2S",
+    "Tahoe"
+   ],
+   "weight": 15,
+   "co_mentions": 0,
+   "papers": [
+    1,
+    1
    ]
   },
   {
@@ -1903,23 +1274,6 @@
    "papers": [
     3,
     3
-   ]
-  },
-  {
-   "pair": [
-    "HSPE1",
-    "HSPE1P2"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 14,
-   "co_mentions": 0,
-   "papers": [
-    188,
-    0
    ]
   },
   {
@@ -2043,23 +1397,6 @@
   },
   {
    "pair": [
-    "FTH1P2",
-    "FTH1P20"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 13,
-   "co_mentions": 0,
-   "papers": [
-    2,
-    0
-   ]
-  },
-  {
-   "pair": [
     "COCH",
     "LINC01781"
    ],
@@ -2073,23 +1410,6 @@
    "papers": [
     175,
     1
-   ]
-  },
-  {
-   "pair": [
-    "IGHV1-18",
-    "IGHV1-46"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "UCE"
-   ],
-   "weight": 12,
-   "co_mentions": 0,
-   "papers": [
-    8,
-    4
    ]
   },
   {
@@ -2247,23 +1567,6 @@
   },
   {
    "pair": [
-    "SMG1P3",
-    "SMG1P4"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "Tahoe"
-   ],
-   "weight": 11,
-   "co_mentions": 0,
-   "papers": [
-    4,
-    0
-   ]
-  },
-  {
-   "pair": [
     "KLRC1",
     "LINC01871"
    ],
@@ -2311,23 +1614,6 @@
    "papers": [
     1,
     150
-   ]
-  },
-  {
-   "pair": [
-    "IGHV1-24",
-    "IGHV1-46"
-   ],
-   "n_models": 2,
-   "models": [
-    "C2S",
-    "UCE"
-   ],
-   "weight": 10,
-   "co_mentions": 0,
-   "papers": [
-    8,
-    4
    ]
   },
   {

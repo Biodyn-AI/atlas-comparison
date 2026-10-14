@@ -86,7 +86,7 @@ h2{font-family:var(--cond);font-weight:700;font-size:clamp(25px,3.4vw,34px);lett
 table.roster{width:100%;border-collapse:collapse;font-size:13.5px}
 table.roster th{font-family:var(--mono);font-size:10.5px;letter-spacing:1px;text-transform:uppercase;color:var(--faint);text-align:left;padding:9px 12px;border-bottom:1px solid var(--line2)}
 table.roster td{padding:10px 12px;border-bottom:1px solid var(--line);color:var(--mut)}table.roster td.m{font-family:var(--cond);font-weight:600;color:var(--ink);font-size:15px}table.roster tr:hover td{background:var(--surface)}
-.tag{font-family:var(--mono);font-size:10.5px;padding:2px 8px;border-radius:20px;border:1px solid var(--line2);color:var(--mut)}.tag.ours{color:#7ea4ff;border-color:#2f4a8a;background:rgba(91,140,255,.08)}.tag.igor{color:#9db0d0}
+.tag{font-family:var(--mono);font-size:10.5px;padding:2px 8px;border-radius:20px;border:1px solid var(--line2);color:var(--mut)}.tag.ours{color:#7ea4ff;border-color:#2f4a8a;background:rgba(91,140,255,.08)}.tag.ref{color:#9db0d0}
 .legend{display:flex;gap:16px;flex-wrap:wrap;font-family:var(--mono);font-size:11.5px;color:var(--mut);margin-top:12px}.legend span{display:flex;align-items:center;gap:6px}.legend i{width:11px;height:11px;border-radius:3px;display:inline-block}
 .hmwrap{overflow-x:auto;padding-bottom:6px}
 .hm{border-collapse:separate;border-spacing:2px;font-family:var(--mono)}.hm td{padding:0}
@@ -257,7 +257,7 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
   <b style="color:var(--ink)">For interpretability work</b>, backbone features are the ones that survive a change of architecture — the safe set to build on; everything else is one model's own vocabulary.</div></div>
  <div class="grid2">
   <div class="panel"><div class="ptitle">How widely is each concept shared?</div><div class="pnote">Each bar = how many biological concepts are encoded by exactly that many of the 10 models. Taller bar = more concepts.</div><div class="uspec" id="uspec"></div><div style="display:flex;justify-content:space-between;font-size:11px;color:var(--faint);margin-top:7px"><span>← niche (1 model)</span><span>number of models that share the concept</span><span>universal (all 10) →</span></div><div class="pnote" id="core-note" style="margin-top:10px"></div></div>
-  <div class="panel"><div class="ptitle" id="core-title">The shared concepts</div><div class="pnote">Biology that at least 8 of the 10 models encode under the strict annotator — the backbone. Grouped by the paper's keyword rule: general cell machinery, or a specific programme.</div><div id="core-chips"></div></div>
+  <div class="panel"><div class="ptitle" id="core-title">The shared concepts</div><div class="pnote">Biology that at least 8 of the 10 models encode under the strict annotator — the backbone. Grouped by the genes that drove each match: protein-synthesis machinery, other housekeeping, or a specific programme.</div><div id="core-chips"></div></div>
  </div>
  <div class="callout"><span class="k">Reading</span><div id="univ-read"></div></div>
 </div></section>
@@ -459,7 +459,7 @@ footer{padding:44px 0 70px;border-top:1px solid var(--line);color:var(--faint);f
  <div class="panel"><div class="ptitle">Which models produce testable predictions</div><div class="pnote">how much better than the degree-matched null each model recovers held-out regulatory links — at full size, which favours models with larger feature dictionaries</div>
   <div id="pred-bars" style="margin-top:14px"></div></div>
  <div class="grid2" style="margin-top:14px">
-  <div class="panel"><div class="ptitle">Agreement between models raises precision</div><div class="pnote">precision on held-out links, by how many of the ten models independently predict the same pair</div>
+  <div class="panel"><div class="ptitle">Precision by how many models agree</div><div class="pnote">precision on held-out links, by how many of the ten models independently predict the same pair</div>
    <div id="pred-curve" style="margin-top:12px"></div></div>
   <div class="panel"><div class="ptitle">Strongest predictions, and what the literature already says</div><div class="pnote">the pairs most validated models agree on, with the number of papers that already mention the two genes together</div>
    <div id="pred-ex" style="margin-top:12px"></div></div>
@@ -566,9 +566,13 @@ document.getElementById('stats').innerHTML=[
  const _bb=(D.controls&&D.controls.recalibration&&D.controls.recalibration.final&&D.controls.recalibration.final.shared_ge8_terms)||D.universal_core_terms;
  (function(){const HK=['translat','ribosom','rrna','trna','srp','cotranslational','targeting to membrane','targeting to er','protein targeting','nonsense-mediated','mrna catabolic','mrna processing','mrna splic','spliceosom','rna processing','proteasom','oxidative phosphoryl','respiratory','electron transport','mitochond','dna replication','dna repair','cell cycle','mitotic','chromatin','histone','ubiquitin','chaperone','peptide biosynth','amide biosynth','gene expression','ribonucleoprotein'];
    const nm=t=>clean(t).replace(/\s*R-HSA-\d+/,'');const isHK=t=>{const x=nm(t).toLowerCase();return HK.some(h=>x.includes(h));};
-   const spec=_bb.filter(t=>!isHK(t)),hk=_bb.filter(isHK);
    const grp=(lab,arr)=>`<div style="margin-top:12px"><div style="font-size:12px;color:var(--faint);margin-bottom:6px">${lab} · ${arr.length}</div><div class="chips" style="gap:5px">${arr.map(t=>`<span class="chip" style="font-size:11px;padding:3px 8px">${nm(t)}</span>`).join('')}</div></div>`;
-   document.getElementById('core-chips').innerHTML=grp('specific programmes',spec)+grp('general cell machinery',hk);
+   const BC=D.controls&&D.controls.backbone_composition;
+   if(BC){const by=c=>BC.concepts.filter(x=>x.class===c).map(x=>x.concept);
+     document.getElementById('core-chips').innerHTML=grp('protein-synthesis machinery',by('protein_synthesis'))+grp('other housekeeping',by('other_housekeeping'))+grp('specific programmes',by('specific'))
+       +`<div class="pnote" style="margin-top:10px">By the genes behind each match, the ${BC.n_concepts} concepts form <b>${BC.n_programmes}</b> distinct programmes; many concept names describe the same protein-synthesis block.</div>`;}
+   else{const spec=_bb.filter(t=>!isHK(t)),hk=_bb.filter(isHK);
+     document.getElementById('core-chips').innerHTML=grp('specific programmes',spec)+grp('general cell machinery',hk);}
    const ct=document.getElementById('core-title');if(ct)ct.textContent=`The ${_bb.length} shared concepts`;})();
  document.getElementById('univ-read').innerHTML=`The permissive annotator (top-5 genes vs huge overlapping databases incl. PPI) reports a big "shared core" — but it <b>fails a random-gene null</b>: random genes give an even larger cross-model core (see <a href="#controls" style="color:var(--acc)">Controls</a>), because they all hit the same ubiquitous sets. So that count was an artefact. <b>A calibrated annotator</b> (top-10 genes, ≥3 in a curated GO/Reactome/KEGG pathway of ≤200 genes, no PPI) fixes it — random genes then annotate only ~3% of features vs ~9% for real ones. Under it: the strict all-10 core is essentially empty (${(D.controls&&D.controls.recalibration&&D.controls.recalibration.final)?(D.controls&&D.controls.recalibration&&D.controls.recalibration.final).real_core:2} vs null ~0 — a 10-way intersection is too brittle), but a genuine <b>backbone of ${(D.controls&&D.controls.recalibration&&D.controls.recalibration.final)?(D.controls&&D.controls.recalibration&&D.controls.recalibration.final).shared_ge8_real:96} concepts is shared by ≥8 of the 10 models — about ${(D.controls&&D.controls.stats_final)?D.controls.stats_final.backbone_null['>=8'].fold:((D.controls&&D.controls.recalibration&&D.controls.recalibration.final)?D.controls.recalibration.final.ge8_fold:20)}× over the random-gene null</b>. Those are real machinery: cytoplasmic translation, ER/SRP protein targeting, nonsense-mediated decay, antigen processing / MHC-II, defense response. <b>In short:</b> the headline "~2,000 universal concepts" is retracted; the defensible shared backbone is <b>~${(D.controls&&D.controls.recalibration&&D.controls.recalibration.final)?(D.controls&&D.controls.recalibration&&D.controls.recalibration.final).shared_ge8_real:96} concepts across ≥8 models</b> — robust across calibrated annotators (${(D.controls&&D.controls.recalibration&&D.controls.recalibration.ge8_fold_range)?`${D.controls.recalibration.ge8_fold_range[0]}–${Math.round(D.controls.recalibration.ge8_fold_range[1])}×`:'2–167×'} over the null across five configurations, and at thresholds ≥7/8/9) and <b>~⅔ specific programs</b> (antigen presentation/MHC-II, cytokine signalling, defense, muscle/cardiac), not just housekeeping — plus each model's own biology.`;})();
 
@@ -874,12 +878,12 @@ document.getElementById('stats').innerHTML=[
   // the third column is a link: cross-tab anchors switch tab and scroll (see the tab shell)
   const row=(k,v,where,href)=>`<div style="display:grid;grid-template-columns:170px 1fr auto;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);align-items:baseline"><div style="color:var(--teal);font-family:var(--mono);font-size:12px">${k}</div><div style="color:var(--mut);font-size:12.5px;line-height:1.5">${v}</div><a href="${href}" class="mono" style="font-size:10.5px;color:var(--acc);white-space:nowrap;text-decoration:none">${where} →</a></div>`;
   el.innerHTML=
-   row('Shared backbone',SF?`<b>${SF.backbone_null['>=8'].real}</b> calibrated concepts shared by ≥8 of ${D.n_models} models — <b>${SF.backbone_null['>=8'].fold}×</b> a uniform random-gene null${DN?` and <b>${DN.tiers['>=8'].degree_fold}×</b> a degree-matched one`:''}, p &lt; 0.004 (250 permutations); about two-thirds is specific programme biology`:'see Controls','Controls','#controls')+
+   row('Shared backbone',SF?`<b>${SF.backbone_null['>=8'].real}</b> calibrated concepts shared by ≥8 of ${D.n_models} models — <b>${SF.backbone_null['>=8'].fold}×</b> a uniform random-gene null${DN?` and <b>${DN.tiers['>=8'].degree_fold}×</b> a degree-matched one`:''}, p &lt; 0.004 (250 permutations)${C.backbone_composition?`; by gene content ${C.backbone_composition.class_counts.protein_synthesis} are one protein-synthesis block and ${C.backbone_composition.class_counts.other_housekeeping} other housekeeping, and the ${C.backbone_composition.n_concepts} form ${C.backbone_composition.n_programmes} distinct programmes`:''}`:'see Controls','Controls','#controls')+
    row('It replicates',SF?`on an independent draw of 5,581 cells, none shared with the corpus, the calibrated backbone comes back at Jaccard <b>${SF.heldout_null.observed_jaccard}</b> against a random-gene null of ${SF.heldout_null.null_mean} over ${SF.n_perm_heldout} permutations, ${SF.heldout_null.fold.toFixed(1)}× (p = ${SF.heldout_null.p_emp.toFixed(2)}); the permissive core does <i>not</i> pass this test`:'','Controls','#controls')+
    row('Geometry agrees','linear CKA is above its own cell-shuffle floor in all 45 model pairs (worst pair 43×); this uses no annotation at all','Compare','#cka')+
    row('SAE beats PCA',`at matched sparsity the SAE explains more variance than the best rank-32 subspace in all ten models — by +${(Math.min(...g)+1e-9).toFixed(2)} to +${(Math.max(...g)+1e-9).toFixed(2)}; the “100 % invisible to PCA” figure below is a dimensional artefact and not evidence`,'SAE vs PCA','#svd')+
-   row('Features predict',pass.length?`co-firing gene pairs recover held-out regulatory edges in <b>${pass.length} of ${D.n_models}</b> models (${pass.map(m=>`${nm(m)} ${(+PM[m].fold).toFixed(1)}×`).join(', ')}); agreement between models raises precision ${H.curve['1'].fold}× → ${H.curve['2'].fold}×, and the pairs hold against the literature and in two Perturb-seq lines`:'','Genes & biology','#predict')+
-   row('Retracted','⚠ the permissive “universal core” of thousands of concepts in all ten models (random genes give a larger one); ⚠ the permissive annotation rate as an interpretability score (random genes annotate almost as often; the calibrated rate in Choose a model is the usable one); ⚠ “~100 % of features invisible to PCA” (random directions clear the same bar)','Controls','#controls');
+   row('Features predict',pass.length?`co-firing gene pairs recover held-out regulatory edges in <b>${pass.length} of ${D.n_models}</b> models (${pass.map(m=>`${nm(m)} ${(+PM[m].fold).toFixed(1)}×`).join(', ')}); ${H.agreement?`pairs that two models agree on are known links ${H.agreement.sets.all_ten['2'].fold.toFixed(0)}× more often than chance (${H.agreement.n_draws.toLocaleString()} rewirings), and agreement beyond two models adds nothing`:''}; the literature and two Perturb-seq lines give small further support (${H.independent.literature.fold.toFixed(2)}×, ${H.independent.perturb.K562.fold.toFixed(2)}×, ${H.independent.perturb.RPE1.fold.toFixed(2)}×)`:'','Genes & biology','#predict')+
+   row('Does not hold','⚠ the permissive “universal core” of thousands of concepts in all ten models (random genes give a larger one); ⚠ the permissive annotation rate as an interpretability score (random genes annotate almost as often; the calibrated rate in Choose a model is the usable one); ⚠ “~100 % of features invisible to PCA” (random directions clear the same bar)','Controls','#controls');
  })();
  // invariants
  document.getElementById('axis-inv').innerHTML=[
@@ -923,13 +927,14 @@ document.getElementById('stats').innerHTML=[
 
  const cu=H.curve, ks=Object.keys(cu).map(Number).filter(k=>cu[k].hits>0).sort((a,b)=>a-b);
  const cbox=document.getElementById('pred-curve');
- if(cbox) cbox.innerHTML=ks.map(k=>{const c=cu[k],f=c.fold;
+ const AGc=H.agreement&&H.agreement.sets.all_ten;
+ if(cbox) cbox.innerHTML=ks.map(k=>{const c=cu[k],f=(AGc&&AGc[String(k)])?AGc[String(k)].fold:c.fold;
   return `<div class="rowbar r4"><div class="name">${k} model${k>1?'s':''}</div>`
    +`<div class="track">`+(f?`<div class="fill" style="width:${Math.min(f/30*100,100)}%;background:linear-gradient(90deg,#5b8cff,#cf6dd6)"></div>`
      :`<div style="height:100%;width:100%;background:repeating-linear-gradient(45deg,var(--surface2),var(--surface2) 5px,var(--line) 5px,var(--line) 10px)"></div>`)+`</div>`
    +`<div class="val" style="color:${f?'var(--ink)':'var(--faint)'}">${f?f.toFixed(1)+'×':'n/a'}</div>`
    +`<div class="mono cnt" style="font-size:11px;color:var(--faint);text-align:right">${c.hits} of ${c.n_pairs.toLocaleString()}</div></div>`;}).join('')
-   +`<div class="pnote" style="margin-top:10px">Past two models the counts are too small to read (${ks.filter(k=>k>2).map(k=>cu[k].hits+' link'+(cu[k].hits===1?'':'s')).join(', ')||'no links'}), so we do not claim a trend.</div>`;
+   +`<div class="pnote" style="margin-top:10px">${AGc?`Ratios at one and two models from ${H.agreement.n_draws.toLocaleString()} rewirings, because at two models chance gives well under one known link per rewiring. `:''}Past two models the counts are too small to read (${ks.filter(k=>k>2).map(k=>cu[k].hits+' link'+(cu[k].hits===1?'':'s')).join(', ')||'no links'}), and none of the ${(cu[5]||{n_pairs:0}).n_pairs.toLocaleString()} pairs that five or more models share is a known link, so agreement beyond two models does not help.</div>`;
 
  const ex=document.getElementById('pred-ex');
  if(ex){const ALL=H.pairs_all||[];
@@ -959,14 +964,15 @@ document.getElementById('stats').innerHTML=[
     const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='atlas_predicted_pairs.csv';document.body.appendChild(a);a.click();a.remove();};
  }
 
- const k1=cu[1],k2=cu[2],val=H.validated.map(nm),SM=H.sizematched||{};
+ const AG=H.agreement&&H.agreement.sets.all_ten,k1=AG?AG['1']:cu[1],k2=AG?AG['2']:cu[2],val=H.validated.map(nm),SM=H.sizematched||{};
  const rd=document.getElementById('pred-read');
  const prec=(100*k2.precision).toFixed(2), one=Math.round(1/k2.precision);
  const sm=SM.models||{}, lost=Object.keys(sm).filter(m=>sm[m].testable&&sm[m].full_fold>5&&sm[m].p>0.05);
  if(rd) rd.innerHTML=`Gene pairs that share a feature really do recover known regulation the atlas never used. `
   +`<b style="color:var(--teal)">${H.validated.length} of the ${Object.keys(P).length} models</b> beat the null (${val.slice(0,-1).join(', ')} and ${val.slice(-1)}); others recover little or nothing, `
   +`which is a real difference between models that no single-model atlas can show. `
-  +`Requiring <b>two</b> models to agree on the same pair raises accuracy from <b>${k1.fold.toFixed(1)}×</b> to <b style="color:var(--teal)">${k2.fold.toFixed(1)}×</b> over chance — comparing models makes the predictions better. `
+  +`Requiring <b>two</b> models to agree on the same pair raises accuracy from <b>${k1.fold.toFixed(1)}×</b> to <b style="color:var(--teal)">${k2.fold.toFixed(1)}×</b> over chance${AG?` (${H.agreement.n_draws.toLocaleString()} rewirings)`:''}; requiring more models does not help further. `
+  +`Plain co-expression from the same cells also recovers known links, so much of this signal is co-expression the models share. `
   +`<br><br><b>Two things to keep in view.</b> First, ${k2.fold.toFixed(1)}× over chance is an accuracy of <b>${prec}%</b> — about one real link per ${one} pairs suggested. The filter concentrates a very sparse signal; the list is not one to act on unchecked. `
   +`Second, how many predictions a model can offer is set by the size of its feature dictionary, not by how good it is. Giving every model the same budget of ${SM.budget?SM.budget.toLocaleString():''} predictions changes the order`
   +(lost.length?`: <b>${lost.map(nm).join(', ')}</b> ${lost.length>1?'lose':'loses'} significance, so ${lost.length>1?'their':'its'} place here rests on volume rather than quality`:'')+`. `

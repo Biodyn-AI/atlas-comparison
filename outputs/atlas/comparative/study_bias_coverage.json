@@ -23,13 +23,13 @@
  "understudied_protein_coding": 774,
  "protein_coding_understudied_absent_from_screen": 732,
  "retention": {
-  "understudied_kept": 90,
+  "understudied_kept": 60,
   "understudied_total": 5953,
-  "understudied_pct": 1.5,
-  "well_studied_kept": 2251,
+  "understudied_pct": 1.0,
+  "well_studied_kept": 2173,
   "well_studied_total": 10130,
-  "well_studied_pct": 22.2,
-  "ratio": 14.8
+  "well_studied_pct": 21.5,
+  "ratio": 21.5
  },
  "screen_bias": {
   "all_protein_coding": 20596,

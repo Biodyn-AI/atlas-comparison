@@ -133,3 +133,6 @@ Subjects of the commits that led to the published state, oldest first. The repos
 - 2026-10-07  GPU-side analyses re-run on the corrected SAEs; CKA matrix reads each model's depth-matched blocks from all-layer embeddings
 - 2026-10-11  Local stage re-run from scratch in the documented order; hand-pasted controls.json blocks now built by controls_import.py; validated models and the full pair list derived in hypothesis_trrust3.py
 - 2026-10-11  Co-expression (#7) and raw-expression (#8) baselines; release runs-v2 with the corrected catalogues; README, DECISIONS (16), METHODS, RESULTS, REPRODUCE updated
+- 2026-10-14  Released pair list built with the pairwise family rule of hypothesis_robust.py (a shared stem of >= 3 characters and short suffixes); the per-symbol pattern let 399 same-family pairs through. 4,485 pairs; literature, Perturb-seq and study-bias coverage re-run on it
+- 2026-10-14  degree_null.py sorts genes of equal degree stably (alphabetical), so the degree-matched null no longer depends on the platform's tie order (>=8: 51.2x)
+- 2026-10-14  agreement_curve.py: the >= 2-model ratio from 2,000 rewirings (15.3x, all ten models); backbone_composition.json: the backbone classed by gene content and grouped into programmes; the site reads both

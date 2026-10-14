@@ -69,14 +69,15 @@ failed are reported alongside the ones that passed.
 - **The naive "universal core" is a database artefact.** The permissive annotator (top-5 genes
   against five large databases) reports 1,977 concepts shared by all ten models. Random genes
   share 3,570 under the same construction (z = −24.2); at the mid layer 365 real against 582
-  random (z = −4.9). Retracted.
+  random (z = −4.9). It does not hold.
 - **A calibrated backbone is real and modest.** Requiring three of a feature's top-10 genes in
   one curated pathway of at most 200 genes, 96 concepts are shared by at least 8 of the 10
-  models: 27.5× the uniform random-gene null and 49.2× a degree-matched one (p < 0.004, 250
+  models: 27.5× the uniform random-gene null and 51.2× a degree-matched one (p < 0.004, 250
   permutations); 55 to 133 concepts at every depth; reproduced on an independent draw of cells
-  that shares none with the corpus (Jaccard 0.52 against 0.035, p = 0.02, ten models). About
-  66 % is specific programme biology (antigen presentation, cytokine signalling, defence,
-  muscle), 34 % housekeeping. No concept is in all ten models.
+  that shares none with the corpus (Jaccard 0.52 against 0.035, p = 0.02, ten models). By the
+  genes behind each match, 42 concepts are one protein-synthesis block, 12 other housekeeping
+  and 42 specific programmes (antigen presentation, cytokine signalling, defence, muscle); the
+  96 form 37 distinct programmes (`backbone_composition.json`). No concept is in all ten models.
 - **Co-expression alone recovers most of it.** A dictionary built from gene-gene correlation in
   the same cells, with no model (a seed gene plus its nine most correlated genes), recovers 73
   to 95 of the 96 backbone concepts per dictionary with random seeds; the models' own middle
@@ -92,20 +93,21 @@ failed are reported alongside the ones that passed.
   in the same features recover TRRUST edges, which no step of the pipeline used, above a null
   that preserves every gene's degree: UCE 10.2×, Tahoe-x1 9.4×, C2S-Scale 5.5×, Geneformer-V2
   2.5× (p ≤ 0.005); the other six do not. All four hold on an equal budget of 50,707 pairs.
-  Pairs predicted by two models independently are 11.5× over the null against 4.8× for one, a
-  precision of 0.23 %.
-- **The same pairs hold against literature and perturbation.** Co-mention in NCBI gene2pubmed
-  2.7× a publication-count-preserving null; in genome-wide CRISPRi Perturb-seq, knocking down
-  one gene moves the other into the top 5 % of responders 1.25× more often than a
+  Pairs predicted by two models independently are 15.3× over the null against 5.0× for one
+  (2,000 rewirings, `agreement_curve.py`), a precision of 0.23 %; agreement beyond two models adds
+  nothing (none of the 918 pairs shared by five or more models is a known edge).
+- **Literature and perturbation give small support.** Co-mention in NCBI gene2pubmed
+  2.3× a publication-count-preserving null; in genome-wide CRISPRi Perturb-seq, knocking down
+  one gene moves the other into the top 5 % of responders 1.24× more often than a
   responsiveness-matched null in K562 and 1.33× in RPE1.
-- **No new biology, and the reason is the evidence.** Only 140 of 4,621 pairs were never
+- **No new biology, and the reason is the evidence.** Only 98 of 4,272 pairs were never
   co-mentioned, and six of those join two well-studied genes. The models feature 5,953 genes
   with fewer than five papers; the recurrence filter is 7.0× harsher on them, and 732 of the 774
   protein-coding ones are absent from the Perturb-seq screen. Predictive power does not decline
   with how studied a gene is. The atlas ranks testable links; it cannot confirm a link about an
   unstudied gene with these resources.
 
-Also retracted: annotation rate as an interpretability score, "about 100 % of features invisible
+Also not supported: annotation rate as an interpretability score, "about 100 % of features invisible
 to SVD" (true of random directions at this dimensionality), and a "new biology" shortlist that
 two nulls showed to be a deficit. Architecture-to-feature associations rest on n = 10 models,
 have bootstrap CIs of about ±1, and are reported as descriptive only.

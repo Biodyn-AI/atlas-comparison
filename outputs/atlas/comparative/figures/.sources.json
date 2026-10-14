@@ -5,8 +5,8 @@
    "Fig4_annotation_free"
   ],
   "sources": {
-   "atlas_full_notf.json": "cd79653539af98e4",
-   "controls.json": "a36047228afbf17d",
+   "atlas_full_notf.json": "36aa20a0c59a3e8b",
+   "controls.json": "ff705b9a7dfd2b6d",
    "nonlinearity_alllayers.json": "91d4abccd6ed4ac5"
   }
  },
@@ -15,9 +15,9 @@
    "Fig5_hypothesis"
   ],
   "sources": {
-   "hypothesis_final.json": "1e8261790c9c840f",
-   "hypothesis_perturb.json": "18464cace3d1d9a8",
-   "hypothesis_pubmed.json": "d098cc9abcbf4f3e",
+   "hypothesis_final.json": "97367bee23aa2385",
+   "hypothesis_perturb.json": "34c5b763c5843a37",
+   "hypothesis_pubmed.json": "04ed92839b25b4b8",
    "hypothesis_sizematched.json": "2701d29941c7e3d2",
    "hypothesis_trrust2.json": "6b81fd512b46ff37"
   }
@@ -46,7 +46,7 @@
   "sources": {
    "alllayer_null.json": "53143e72794920ce",
    "backbone_terms.json": "11e57e32568a88a2",
-   "controls.json": "a36047228afbf17d"
+   "controls.json": "ff705b9a7dfd2b6d"
   }
  }
 }

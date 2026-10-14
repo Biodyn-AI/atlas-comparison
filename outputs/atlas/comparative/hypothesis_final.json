@@ -62,7 +62,7 @@
   }
  },
  "k_used": 2,
- "n_hypotheses": 4882,
+ "n_hypotheses": 4485,
  "hypotheses": [
   {
    "pair": [
@@ -141,21 +141,6 @@
   },
   {
    "pair": [
-    "ATP5ME",
-    "ATP5MK"
-   ],
-   "n_models": 4,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE"
-   ],
-   "weight": 120,
-   "same_family": false
-  },
-  {
-   "pair": [
     "ADGRG3",
     "CXCR2"
    ],
@@ -186,36 +171,6 @@
   },
   {
    "pair": [
-    "ATP5MK",
-    "ATP5PF"
-   ],
-   "n_models": 4,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE"
-   ],
-   "weight": 106,
-   "same_family": false
-  },
-  {
-   "pair": [
-    "S100A13",
-    "S100A16"
-   ],
-   "n_models": 4,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE"
-   ],
-   "weight": 105,
-   "same_family": false
-  },
-  {
-   "pair": [
     "ALDOB",
     "MIOX"
    ],
@@ -231,36 +186,6 @@
   },
   {
    "pair": [
-    "NFIC",
-    "NFIX"
-   ],
-   "n_models": 4,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE"
-   ],
-   "weight": 102,
-   "same_family": false
-  },
-  {
-   "pair": [
-    "ATP5MJ",
-    "ATP5MK"
-   ],
-   "n_models": 4,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE"
-   ],
-   "weight": 99,
-   "same_family": false
-  },
-  {
-   "pair": [
     "ATP5MK",
     "COX7B"
    ],
@@ -272,51 +197,6 @@
     "UCE"
    ],
    "weight": 90,
-   "same_family": false
-  },
-  {
-   "pair": [
-    "ATP5ME",
-    "ATP5MJ"
-   ],
-   "n_models": 4,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE"
-   ],
-   "weight": 88,
-   "same_family": false
-  },
-  {
-   "pair": [
-    "S100A11",
-    "S100A4"
-   ],
-   "n_models": 4,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE"
-   ],
-   "weight": 86,
-   "same_family": false
-  },
-  {
-   "pair": [
-    "SCGB3A1",
-    "SCGB3A2"
-   ],
-   "n_models": 4,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE"
-   ],
-   "weight": 85,
    "same_family": false
   },
   {
@@ -347,21 +227,6 @@
     "UCE"
    ],
    "weight": 83,
-   "same_family": false
-  },
-  {
-   "pair": [
-    "NR2F1",
-    "NR2F2"
-   ],
-   "n_models": 4,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE"
-   ],
-   "weight": 77,
    "same_family": false
   },
   {
@@ -407,21 +272,6 @@
     "UCE"
    ],
    "weight": 74,
-   "same_family": false
-  },
-  {
-   "pair": [
-    "S100A6",
-    "S100A9"
-   ],
-   "n_models": 4,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE"
-   ],
-   "weight": 73,
    "same_family": false
   },
   {
@@ -527,21 +377,6 @@
     "UCE"
    ],
    "weight": 63,
-   "same_family": false
-  },
-  {
-   "pair": [
-    "AKR1B10",
-    "AKR1C2"
-   ],
-   "n_models": 4,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE"
-   ],
-   "weight": 62,
    "same_family": false
   },
   {
@@ -861,21 +696,6 @@
   },
   {
    "pair": [
-    "SFTA2",
-    "SFTPB"
-   ],
-   "n_models": 4,
-   "models": [
-    "C2S",
-    "Geneformer",
-    "Tahoe",
-    "UCE"
-   ],
-   "weight": 38,
-   "same_family": false
-  },
-  {
-   "pair": [
     "FOSB",
     "KLF4"
    ],
@@ -1136,20 +956,6 @@
   },
   {
    "pair": [
-    "S100A1",
-    "S100A13"
-   ],
-   "n_models": 3,
-   "models": [
-    "C2S",
-    "Tahoe",
-    "UCE"
-   ],
-   "weight": 100,
-   "same_family": false
-  },
-  {
-   "pair": [
     "FCN3",
     "SLC6A4"
    ],
@@ -1188,20 +994,6 @@
     "UCE"
    ],
    "weight": 97,
-   "same_family": false
-  },
-  {
-   "pair": [
-    "S100A4",
-    "S100A8"
-   ],
-   "n_models": 3,
-   "models": [
-    "C2S",
-    "Tahoe",
-    "UCE"
-   ],
-   "weight": 94,
    "same_family": false
   },
   {
@@ -1245,7 +1037,203 @@
    ],
    "weight": 93,
    "same_family": false
+  },
+  {
+   "pair": [
+    "CXCR2",
+    "MMP25"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 92,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "LAMP3",
+    "SFTPD"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 90,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "MT-CO3",
+    "TPT1"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe"
+   ],
+   "weight": 88,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "CMTM2",
+    "PROK2"
+   ],
+   "n_models": 3,
+   "models": [
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 87,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "CMTM2",
+    "MMP25"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 87,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "HTN3",
+    "PRB4"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 86,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "FCN3",
+    "TMEM100"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 85,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "CHORDC1",
+    "STIP1"
+   ],
+   "n_models": 3,
+   "models": [
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 85,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "CALR",
+    "MANF"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe"
+   ],
+   "weight": 84,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "ADGRG3",
+    "CXCR1"
+   ],
+   "n_models": 3,
+   "models": [
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 81,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "IGKC",
+    "IGLC2"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 78,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "ADGRG3",
+    "PROK2"
+   ],
+   "n_models": 3,
+   "models": [
+    "Geneformer",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 78,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "BPIFA2",
+    "PRB3"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 78,
+   "same_family": false
+  },
+  {
+   "pair": [
+    "FOXP3",
+    "RTKN2"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 77,
+   "same_family": false
   }
  ],
- "n_same_family_dropped": 562
+ "n_same_family_dropped": 959
 }

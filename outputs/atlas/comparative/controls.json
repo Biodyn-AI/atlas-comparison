@@ -1492,36 +1492,36 @@
   "tiers": {
    ">=7": {
     "real": 216,
-    "degree_null_mean": 10.84,
-    "degree_null_sd": 4.14,
-    "degree_z": 49.6,
+    "degree_null_mean": 10.25,
+    "degree_null_sd": 3.96,
+    "degree_z": 52.0,
     "degree_p": 0.00398406374501992,
-    "degree_fold": 19.9,
+    "degree_fold": 21.1,
     "uniform_null_mean": 13.12
    },
    ">=8": {
     "real": 96,
-    "degree_null_mean": 1.95,
-    "degree_null_sd": 1.57,
-    "degree_z": 59.7,
+    "degree_null_mean": 1.88,
+    "degree_null_sd": 1.6,
+    "degree_z": 58.8,
     "degree_p": 0.00398406374501992,
-    "degree_fold": 49.2,
+    "degree_fold": 51.2,
     "uniform_null_mean": 3.52
    },
    ">=9": {
     "real": 29,
-    "degree_null_mean": 0.2,
-    "degree_null_sd": 0.49,
-    "degree_z": 58.8,
+    "degree_null_mean": 0.22,
+    "degree_null_sd": 0.53,
+    "degree_z": 54.6,
     "degree_p": 0.00398406374501992,
-    "degree_fold": 145.0,
+    "degree_fold": 129.5,
     "uniform_null_mean": 0.64
    },
    ">=10": {
     "real": 0,
-    "degree_null_mean": 0.01,
-    "degree_null_sd": 0.09,
-    "degree_z": -0.1,
+    "degree_null_mean": 0.0,
+    "degree_null_sd": 0.0,
+    "degree_z": 0.0,
     "degree_p": 1.0,
     "degree_fold": 0.0,
     "uniform_null_mean": 0.04

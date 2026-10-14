@@ -122,19 +122,28 @@ for k in range(1, len(PASSED) + 1):
     print(f"{k:>3} {n:>8} {h:>5} {prec:>10.5f} {npr.mean():>11.7f} {fs} {p:>8.4f}"
           + (f"   (* null gave 0 hits in {zero}/{NPERM} perms)" if not fold else ""))
 
-FAM = re.compile(r"^([A-Z]{2,}[0-9]*?)[0-9]*[A-Z]?$")
-def family(g):
-    m = FAM.match(g); return m.group(1) if m else g
+def same_family(a, b):
+    """Two symbols that differ only in a short suffix after a shared stem of >= 3 characters:
+    ACTB/ACTG2, S100A11/S100A4, ATP5ME/ATP5MK, HLA-A/HLA-B (the rule of hypothesis_robust.py).
+    A naming rule, not HGNC families; it errs on the side of dropping (CDC42/CDC37 count as one
+    family), the safe direction for a list of candidate new links."""
+    a, b = a.upper(), b.upper()
+    if a == b:
+        return True
+    n = 0
+    while n < min(len(a), len(b)) and a[n] == b[n]:
+        n += 1
+    stem = a[:n].rstrip("-")
+    return len(stem) >= 3 and len(a) - n <= 3 and len(b) - n <= 3
 
 K = 2                                     # corroborated by >=2 validated models
 cands = []
 for e, n in allp.items():
     if n < K or e in TRUTH or e in STRING or e in SEEN: continue
-    fa, fb = family(e[0]), family(e[1])
     cands.append({"pair": list(e), "n_models": n,
                   "models": sorted(m for m in PASSED if e in PRED[m]),
                   "weight": int(sum(PRED[m][e] for m in PASSED if e in PRED[m])),
-                  "same_family": bool(fa == fb and len(fa) >= 3)})
+                  "same_family": same_family(e[0], e[1])})
 cands.sort(key=lambda c: (c["same_family"], -c["n_models"], -c["weight"]))
 novel = [c for c in cands if not c["same_family"]]
 print(f"\nHypothesis list at k>={K}: {len(cands)} pairs in NO database "
