@@ -26,6 +26,9 @@ DATA = {
     # dead-feature fractions per model-layer; the chooser reads it so a model whose lead rests on
     # the roster's weakest dictionaries (tGPT) carries that caveat next to its recommendation
     "health-data": f"{C}/sae_health.json",
+    # programmes x models with baselines (untrained SAE, co-expression of the same genes, random genes);
+    # built by programme_table.py from the paper's untrained-controls catalogues
+    "programme-data": f"{C}/programme_table.json",
 }
 N_MODELS = len(json.load(open(DATA["atlas-data"]))["models"])
 SUBS = [
