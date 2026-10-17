@@ -1,0 +1,495 @@
+{
+ "top5pct_r": 0.0867,
+ "n_trrust_tfs": 795,
+ "models": {
+  "AIDO": {
+   "hits_total": 0,
+   "hits_not_top5": 0,
+   "hits_not_top5_same_prefix": 0,
+   "hits_not_top5_other": 0,
+   "hits_not_top5_tf_tf": 0,
+   "hits_top5_tf_tf": 0,
+   "hits_top5": 0,
+   "not_top5_hits": []
+  },
+  "C2S": {
+   "hits_total": 83,
+   "hits_not_top5": 45,
+   "hits_not_top5_same_prefix": 15,
+   "hits_not_top5_other": 30,
+   "hits_not_top5_tf_tf": 17,
+   "hits_top5_tf_tf": 12,
+   "hits_top5": 38,
+   "not_top5_hits": [
+    [
+     "ERO1A",
+     "PPARG",
+     0.0759
+    ],
+    [
+     "IRF3",
+     "IRF4",
+     0.0658
+    ],
+    [
+     "HIF1A",
+     "LDHA",
+     0.0641
+    ],
+    [
+     "SP1",
+     "SP3",
+     0.0625
+    ],
+    [
+     "CXCL10",
+     "STAT1",
+     0.0625
+    ],
+    [
+     "HIF1A",
+     "MITF",
+     0.0575
+    ],
+    [
+     "STAT1",
+     "STAT3",
+     0.0546
+    ],
+    [
+     "FGFR1",
+     "RB1",
+     0.0532
+    ],
+    [
+     "IRF3",
+     "IRF7",
+     0.0509
+    ],
+    [
+     "BCL2",
+     "TP53",
+     0.0486
+    ],
+    [
+     "DDIT3",
+     "TRIB3",
+     0.0469
+    ],
+    [
+     "CEBPG",
+     "SFTPD",
+     0.0461
+    ],
+    [
+     "BRD3",
+     "BRD7",
+     0.0439
+    ],
+    [
+     "MYC",
+     "TP53",
+     0.0431
+    ],
+    [
+     "CSF1",
+     "NFKB1",
+     0.0413
+    ],
+    [
+     "SOCS3",
+     "SP3",
+     0.0315
+    ],
+    [
+     "SP1",
+     "USP7",
+     0.0311
+    ],
+    [
+     "RB1",
+     "TP53",
+     0.0283
+    ],
+    [
+     "JUN",
+     "MMP3",
+     0.0265
+    ],
+    [
+     "PSMB9",
+     "STAT1",
+     0.0264
+    ],
+    [
+     "ABCB1",
+     "HDAC1",
+     0.0235
+    ],
+    [
+     "HIF1A",
+     "MIF",
+     0.0223
+    ],
+    [
+     "STAT1",
+     "STAT2",
+     0.0208
+    ],
+    [
+     "SMAD4",
+     "SMAD7",
+     0.0201
+    ],
+    [
+     "ARID1A",
+     "CDKN1A",
+     0.0192
+    ],
+    [
+     "HDAC3",
+     "HDAC4",
+     0.016
+    ],
+    [
+     "IRF3",
+     "IRF5",
+     0.0157
+    ],
+    [
+     "BRD2",
+     "BRD7",
+     0.0124
+    ],
+    [
+     "SMAD3",
+     "SMAD7",
+     0.0123
+    ],
+    [
+     "MYC",
+     "UBE2C",
+     0.0073
+    ],
+    [
+     "LDLR",
+     "YY1",
+     0.0038
+    ],
+    [
+     "SP1",
+     "SPN",
+     -0.0052
+    ],
+    [
+     "MYC",
+     "RB1",
+     -0.0058
+    ],
+    [
+     "IL10",
+     "PGR",
+     -0.008
+    ],
+    [
+     "STAT1",
+     "STAT6",
+     -0.0081
+    ],
+    [
+     "SP1",
+     "SPP1",
+     -0.0085
+    ],
+    [
+     "ATF2",
+     "ATF3",
+     -0.0093
+    ],
+    [
+     "MITF",
+     "PMEL",
+     -0.0131
+    ],
+    [
+     "WT1",
+     "WTAP",
+     -0.0197
+    ],
+    [
+     "PTTG1",
+     "PTTG1IP",
+     -0.0214
+    ],
+    [
+     "BCL2L1",
+     "BCL6",
+     -0.0478
+    ],
+    [
+     "HLA-C",
+     "MYC",
+     -0.0613
+    ],
+    [
+     "IL2RA",
+     "RXRA",
+     -0.0668
+    ],
+    [
+     "CFLAR",
+     "PPARG",
+     -0.0671
+    ],
+    [
+     "HIF1A",
+     "HIF3A",
+     -0.0771
+    ]
+   ]
+  },
+  "Geneformer": {
+   "hits_total": 12,
+   "hits_not_top5": 2,
+   "hits_not_top5_same_prefix": 0,
+   "hits_not_top5_other": 2,
+   "hits_not_top5_tf_tf": 0,
+   "hits_top5_tf_tf": 5,
+   "hits_top5": 10,
+   "not_top5_hits": [
+    [
+     "SLC2A3",
+     "ZBTB7A",
+     0.0482
+    ],
+    [
+     "ATF4",
+     "MAP1LC3B",
+     0.0389
+    ]
+   ]
+  },
+  "MaxToki": {
+   "hits_total": 2,
+   "hits_not_top5": 1,
+   "hits_not_top5_same_prefix": 1,
+   "hits_not_top5_other": 0,
+   "hits_not_top5_tf_tf": 0,
+   "hits_top5_tf_tf": 0,
+   "hits_top5": 1,
+   "not_top5_hits": [
+    [
+     "HOXB8",
+     "HOXC9",
+     0.0265
+    ]
+   ]
+  },
+  "UCE": {
+   "hits_total": 43,
+   "hits_not_top5": 19,
+   "hits_not_top5_same_prefix": 6,
+   "hits_not_top5_other": 13,
+   "hits_not_top5_tf_tf": 19,
+   "hits_top5_tf_tf": 17,
+   "hits_top5": 24,
+   "not_top5_hits": [
+    [
+     "NR1D1",
+     "RORA",
+     0.0714
+    ],
+    [
+     "IRF3",
+     "IRF4",
+     0.0658
+    ],
+    [
+     "IRF4",
+     "NFKB1",
+     0.0598
+    ],
+    [
+     "STAT1",
+     "STAT3",
+     0.0546
+    ],
+    [
+     "NFYA",
+     "SP3",
+     0.0472
+    ],
+    [
+     "RELA",
+     "STAT3",
+     0.0328
+    ],
+    [
+     "STAT1",
+     "STAT2",
+     0.0208
+    ],
+    [
+     "FOXC1",
+     "FOXO1",
+     0.0203
+    ],
+    [
+     "ETS2",
+     "ETV7",
+     0.0182
+    ],
+    [
+     "ERG",
+     "GATA3",
+     0.0142
+    ],
+    [
+     "NFKB1",
+     "RELA",
+     0.0127
+    ],
+    [
+     "AR",
+     "ESR1",
+     0.0035
+    ],
+    [
+     "MEN1",
+     "RAD51",
+     -0.0008
+    ],
+    [
+     "STAT1",
+     "STAT6",
+     -0.0081
+    ],
+    [
+     "ETV6",
+     "ETV7",
+     -0.0104
+    ],
+    [
+     "MEIS1",
+     "PBX2",
+     -0.0144
+    ],
+    [
+     "ESR1",
+     "NR5A2",
+     -0.0242
+    ],
+    [
+     "ESR1",
+     "GATA3",
+     -0.0409
+    ],
+    [
+     "HIF1A",
+     "HSF2",
+     -0.0485
+    ]
+   ]
+  },
+  "scGPT": {
+   "hits_total": 10,
+   "hits_not_top5": 2,
+   "hits_not_top5_same_prefix": 0,
+   "hits_not_top5_other": 2,
+   "hits_not_top5_tf_tf": 0,
+   "hits_top5_tf_tf": 4,
+   "hits_top5": 8,
+   "not_top5_hits": [
+    [
+     "LEFTY1",
+     "POU5F1",
+     0.0747
+    ],
+    [
+     "EGR1",
+     "IFNG",
+     -0.034
+    ]
+   ]
+  },
+  "tGPT": {
+   "hits_total": 3,
+   "hits_not_top5": 1,
+   "hits_not_top5_same_prefix": 0,
+   "hits_not_top5_other": 1,
+   "hits_not_top5_tf_tf": 1,
+   "hits_top5_tf_tf": 0,
+   "hits_top5": 2,
+   "not_top5_hits": [
+    [
+     "GATA2",
+     "PPARG",
+     -0.0461
+    ]
+   ]
+  },
+  "scFoundation": {
+   "hits_total": 0,
+   "hits_not_top5": 0,
+   "hits_not_top5_same_prefix": 0,
+   "hits_not_top5_other": 0,
+   "hits_not_top5_tf_tf": 0,
+   "hits_top5_tf_tf": 0,
+   "hits_top5": 0,
+   "not_top5_hits": []
+  },
+  "GeneCompass": {
+   "hits_total": 0,
+   "hits_not_top5": 0,
+   "hits_not_top5_same_prefix": 0,
+   "hits_not_top5_other": 0,
+   "hits_not_top5_tf_tf": 0,
+   "hits_top5_tf_tf": 0,
+   "hits_top5": 0,
+   "not_top5_hits": []
+  },
+  "Tahoe": {
+   "hits_total": 59,
+   "hits_not_top5": 6,
+   "hits_not_top5_same_prefix": 1,
+   "hits_not_top5_other": 5,
+   "hits_not_top5_tf_tf": 3,
+   "hits_top5_tf_tf": 11,
+   "hits_top5": 53,
+   "not_top5_hits": [
+    [
+     "IRF1",
+     "STAT1",
+     0.0786
+    ],
+    [
+     "FDPS",
+     "SREBF2",
+     0.066
+    ],
+    [
+     "IRF1",
+     "STAT2",
+     0.0604
+    ],
+    [
+     "IRF1",
+     "PSMB10",
+     0.0598
+    ],
+    [
+     "STAT1",
+     "XAF1",
+     0.0526
+    ],
+    [
+     "STAT1",
+     "STAT2",
+     0.0208
+    ]
+   ]
+  }
+ },
+ "trrust_edges_in_cofire_union": 6892,
+ "trrust_share_tf_tf": 0.2256
+}

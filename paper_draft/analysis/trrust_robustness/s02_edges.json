@@ -1,0 +1,6786 @@
+{
+ "per_model": {
+  "Tahoe": {
+   "n_hits": 59,
+   "class_counts": {
+    "TF-TF same family/prefix": 2,
+    "TF-TF different family": 12,
+    "TF -> non-TF target": 45
+   },
+   "n_bidirectional": 5,
+   "n_in_STRING": 40,
+   "n_in_curated_set": 44,
+   "n_with_shared_regulator": 34,
+   "median_pmids": 1.0,
+   "tf_hit_counts": {
+    "NFKB1": 12,
+    "CIITA": 7,
+    "NFKBIA": 5,
+    "SREBF2": 4,
+    "STAT1": 4,
+    "REL": 3,
+    "IRF1": 3,
+    "PAX5": 3,
+    "STAT3": 2,
+    "JUN": 2,
+    "STAT2": 2,
+    "TNFAIP3": 1,
+    "SPI1": 1,
+    "SKIL": 1,
+    "E2F1": 1,
+    "KLF2": 1,
+    "ELF3": 1,
+    "CREBBP": 1,
+    "EP300": 1,
+    "KLF6": 1,
+    "ETS1": 1,
+    "HOXA10": 1,
+    "XBP1": 1,
+    "KLF10": 1,
+    "BCL6": 1,
+    "EGR1": 1,
+    "FOXO1": 1,
+    "HNF1B": 1
+   },
+   "hits": [
+    {
+     "pair": [
+      "NFKB1",
+      "NFKBIA"
+     ],
+     "directions": [
+      "NFKB1->NFKBIA",
+      "NFKBIA->NFKB1"
+     ],
+     "bidirectional": true,
+     "tf": [
+      "NFKB1",
+      "NFKBIA"
+     ],
+     "modes": [
+      "Activation",
+      "Repression",
+      "Unknown"
+     ],
+     "n_pmids": 11,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 28
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "TNFAIP3"
+     ],
+     "directions": [
+      "NFKB1->TNFAIP3",
+      "TNFAIP3->NFKB1"
+     ],
+     "bidirectional": true,
+     "tf": [
+      "NFKB1",
+      "TNFAIP3"
+     ],
+     "modes": [
+      "Activation",
+      "Repression",
+      "Unknown"
+     ],
+     "n_pmids": 5,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 28
+    },
+    {
+     "pair": [
+      "FDPS",
+      "SREBF2"
+     ],
+     "directions": [
+      "SREBF2->FDPS"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "SREBF2"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 24
+    },
+    {
+     "pair": [
+      "ICAM1",
+      "NFKBIA"
+     ],
+     "directions": [
+      "NFKBIA->ICAM1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKBIA"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 3,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 22
+    },
+    {
+     "pair": [
+      "SOCS3",
+      "STAT3"
+     ],
+     "directions": [
+      "STAT3->SOCS3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "STAT3"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 6,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 3,
+     "weight": 22
+    },
+    {
+     "pair": [
+      "FDFT1",
+      "SREBF2"
+     ],
+     "directions": [
+      "SREBF2->FDFT1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "SREBF2"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 21
+    },
+    {
+     "pair": [
+      "ICAM1",
+      "NFKB1"
+     ],
+     "directions": [
+      "NFKB1->ICAM1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKB1"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 29,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 4,
+     "weight": 19
+    },
+    {
+     "pair": [
+      "STAT1",
+      "XAF1"
+     ],
+     "directions": [
+      "STAT1->XAF1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "STAT1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 18
+    },
+    {
+     "pair": [
+      "ATF3",
+      "JUN"
+     ],
+     "directions": [
+      "JUN->ATF3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "JUN"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 17
+    },
+    {
+     "pair": [
+      "HMGCR",
+      "SREBF2"
+     ],
+     "directions": [
+      "SREBF2->HMGCR"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "SREBF2"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 16
+    },
+    {
+     "pair": [
+      "HCK",
+      "SPI1"
+     ],
+     "directions": [
+      "SPI1->HCK"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "SPI1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 14
+    },
+    {
+     "pair": [
+      "REL",
+      "TNFAIP3"
+     ],
+     "directions": [
+      "REL->TNFAIP3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "REL"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 14
+    },
+    {
+     "pair": [
+      "BIRC3",
+      "NFKB1"
+     ],
+     "directions": [
+      "NFKB1->BIRC3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKB1"
+     ],
+     "modes": [
+      "Activation",
+      "Repression",
+      "Unknown"
+     ],
+     "n_pmids": 12,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 13
+    },
+    {
+     "pair": [
+      "SKIL",
+      "SMAD7"
+     ],
+     "directions": [
+      "SKIL->SMAD7"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "SKIL"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 13
+    },
+    {
+     "pair": [
+      "CIITA",
+      "HLA-DMA"
+     ],
+     "directions": [
+      "CIITA->HLA-DMA"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "CIITA"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 13
+    },
+    {
+     "pair": [
+      "IRF1",
+      "PSMB9"
+     ],
+     "directions": [
+      "IRF1->PSMB9"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "IRF1"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 5,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 3,
+     "weight": 13
+    },
+    {
+     "pair": [
+      "BLK",
+      "PAX5"
+     ],
+     "directions": [
+      "PAX5->BLK"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "PAX5"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 13
+    },
+    {
+     "pair": [
+      "CDC6",
+      "E2F1"
+     ],
+     "directions": [
+      "E2F1->CDC6"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "E2F1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 13
+    },
+    {
+     "pair": [
+      "CIITA",
+      "HLA-DMB"
+     ],
+     "directions": [
+      "CIITA->HLA-DMB"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "CIITA"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 5,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 12
+    },
+    {
+     "pair": [
+      "JUN",
+      "RHOB"
+     ],
+     "directions": [
+      "JUN->RHOB"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "JUN"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 11
+    },
+    {
+     "pair": [
+      "FCER2",
+      "PAX5"
+     ],
+     "directions": [
+      "PAX5->FCER2"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "PAX5"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 11
+    },
+    {
+     "pair": [
+      "CIITA",
+      "HLA-DOA"
+     ],
+     "directions": [
+      "CIITA->HLA-DOA"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "CIITA"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 11
+    },
+    {
+     "pair": [
+      "LDLR",
+      "SREBF2"
+     ],
+     "directions": [
+      "SREBF2->LDLR"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "SREBF2"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 4,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 10
+    },
+    {
+     "pair": [
+      "CD83",
+      "NFKB1"
+     ],
+     "directions": [
+      "NFKB1->CD83"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKB1"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 3,
+     "weight": 10
+    },
+    {
+     "pair": [
+      "CCL20",
+      "NFKB1"
+     ],
+     "directions": [
+      "NFKB1->CCL20"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKB1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 10
+    },
+    {
+     "pair": [
+      "CXCL8",
+      "NFKBIA"
+     ],
+     "directions": [
+      "NFKBIA->CXCL8"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKBIA"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 10
+    },
+    {
+     "pair": [
+      "CXCR4",
+      "KLF2"
+     ],
+     "directions": [
+      "KLF2->CXCR4"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "KLF2"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 1,
+     "weight": 10
+    },
+    {
+     "pair": [
+      "CLDN7",
+      "ELF3"
+     ],
+     "directions": [
+      "ELF3->CLDN7"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "ELF3"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 9
+    },
+    {
+     "pair": [
+      "IRF1",
+      "TAP1"
+     ],
+     "directions": [
+      "IRF1->TAP1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "IRF1"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 3,
+     "weight": 9
+    },
+    {
+     "pair": [
+      "IRF1",
+      "STAT1"
+     ],
+     "directions": [
+      "STAT1->IRF1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "STAT1"
+     ],
+     "modes": [
+      "Activation",
+      "Repression",
+      "Unknown"
+     ],
+     "n_pmids": 9,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 4,
+     "weight": 9
+    },
+    {
+     "pair": [
+      "CD79A",
+      "PAX5"
+     ],
+     "directions": [
+      "PAX5->CD79A"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "PAX5"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 9
+    },
+    {
+     "pair": [
+      "CREBBP",
+      "EP300"
+     ],
+     "directions": [
+      "CREBBP->EP300",
+      "EP300->CREBBP"
+     ],
+     "bidirectional": true,
+     "tf": [
+      "CREBBP",
+      "EP300"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 9
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "SOD2"
+     ],
+     "directions": [
+      "NFKB1->SOD2"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKB1"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 5,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 8
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "TRAF1"
+     ],
+     "directions": [
+      "NFKB1->TRAF1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKB1"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 7,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 8
+    },
+    {
+     "pair": [
+      "ATF3",
+      "KLF6"
+     ],
+     "directions": [
+      "KLF6->ATF3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "KLF6"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 8
+    },
+    {
+     "pair": [
+      "ICAM1",
+      "REL"
+     ],
+     "directions": [
+      "REL->ICAM1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "REL"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 3,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 8
+    },
+    {
+     "pair": [
+      "IL1B",
+      "NFKBIA"
+     ],
+     "directions": [
+      "NFKBIA->IL1B"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKBIA"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 8
+    },
+    {
+     "pair": [
+      "GLS",
+      "STAT1"
+     ],
+     "directions": [
+      "STAT1->GLS"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "STAT1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 8
+    },
+    {
+     "pair": [
+      "ETS1",
+      "FLI1"
+     ],
+     "directions": [
+      "ETS1->FLI1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "ETS1"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 8
+    },
+    {
+     "pair": [
+      "CXCL8",
+      "NFKB1"
+     ],
+     "directions": [
+      "NFKB1->CXCL8"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKB1"
+     ],
+     "modes": [
+      "Activation",
+      "Repression",
+      "Unknown"
+     ],
+     "n_pmids": 45,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 6,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "BIRC3",
+      "REL"
+     ],
+     "directions": [
+      "REL->BIRC3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "REL"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "IRF1",
+      "PSMB10"
+     ],
+     "directions": [
+      "IRF1->PSMB10"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "IRF1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 2,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "NFKBIA",
+      "TRAF1"
+     ],
+     "directions": [
+      "NFKBIA->TRAF1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKBIA"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "STAT1",
+      "STAT2"
+     ],
+     "directions": [
+      "STAT1->STAT2",
+      "STAT2->STAT1"
+     ],
+     "bidirectional": true,
+     "tf": [
+      "STAT1",
+      "STAT2"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "CIITA",
+      "HLA-DQB1"
+     ],
+     "directions": [
+      "CIITA->HLA-DQB1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "CIITA"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "EMX2",
+      "HOXA10"
+     ],
+     "directions": [
+      "HOXA10->EMX2"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "HOXA10"
+     ],
+     "modes": [
+      "Activation",
+      "Repression"
+     ],
+     "n_pmids": 4,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "IL1B",
+      "NFKB1"
+     ],
+     "directions": [
+      "NFKB1->IL1B"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKB1"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 12,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 3,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "HSPA5",
+      "XBP1"
+     ],
+     "directions": [
+      "XBP1->HSPA5"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "XBP1"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 3,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "CIITA",
+      "HLA-DRA"
+     ],
+     "directions": [
+      "CIITA->HLA-DRA"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "CIITA"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 5,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "IRF1",
+      "STAT2"
+     ],
+     "directions": [
+      "STAT2->IRF1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "STAT2"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "CXCL2",
+      "NFKB1"
+     ],
+     "directions": [
+      "NFKB1->CXCL2"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKB1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "STAT4"
+     ],
+     "directions": [
+      "NFKB1->STAT4"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKB1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "CIITA",
+      "HLA-DRB1"
+     ],
+     "directions": [
+      "CIITA->HLA-DRB1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "CIITA"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "CDKN1A",
+      "KLF10"
+     ],
+     "directions": [
+      "KLF10->CDKN1A"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "KLF10"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "BCL6",
+      "STAT3"
+     ],
+     "directions": [
+      "BCL6->STAT3",
+      "STAT3->BCL6"
+     ],
+     "bidirectional": true,
+     "tf": [
+      "BCL6",
+      "STAT3"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 3,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "CIITA",
+      "HLA-DPB1"
+     ],
+     "directions": [
+      "CIITA->HLA-DPB1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "CIITA"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "ATF3",
+      "EGR1"
+     ],
+     "directions": [
+      "EGR1->ATF3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "EGR1"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 2,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "FOXO1",
+      "IRS2"
+     ],
+     "directions": [
+      "FOXO1->IRS2"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "FOXO1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "FXYD2",
+      "HNF1B"
+     ],
+     "directions": [
+      "HNF1B->FXYD2"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "HNF1B"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 5
+    }
+   ]
+  },
+  "scGPT": {
+   "n_hits": 10,
+   "class_counts": {
+    "TF-TF different family": 4,
+    "TF -> non-TF target": 6
+   },
+   "n_bidirectional": 0,
+   "n_in_STRING": 5,
+   "n_in_curated_set": 7,
+   "n_with_shared_regulator": 6,
+   "median_pmids": 1.0,
+   "tf_hit_counts": {
+    "E2F1": 5,
+    "JUN": 2,
+    "EGR1": 2,
+    "POU5F1": 1
+   },
+   "hits": [
+    {
+     "pair": [
+      "E2F1",
+      "MCM5"
+     ],
+     "directions": [
+      "E2F1->MCM5"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "E2F1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 46
+    },
+    {
+     "pair": [
+      "LEFTY1",
+      "POU5F1"
+     ],
+     "directions": [
+      "POU5F1->LEFTY1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "POU5F1"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 45
+    },
+    {
+     "pair": [
+      "E2F1",
+      "UHRF1"
+     ],
+     "directions": [
+      "E2F1->UHRF1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "E2F1"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 3,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 1,
+     "weight": 28
+    },
+    {
+     "pair": [
+      "BIRC5",
+      "E2F1"
+     ],
+     "directions": [
+      "E2F1->BIRC5"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "E2F1"
+     ],
+     "modes": [
+      "Activation",
+      "Repression",
+      "Unknown"
+     ],
+     "n_pmids": 3,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 7,
+     "weight": 9
+    },
+    {
+     "pair": [
+      "E2F1",
+      "RRM2"
+     ],
+     "directions": [
+      "E2F1->RRM2"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "E2F1"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 9
+    },
+    {
+     "pair": [
+      "E2F1",
+      "KIF2C"
+     ],
+     "directions": [
+      "E2F1->KIF2C"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "E2F1"
+     ],
+     "modes": [
+      "Activation",
+      "Repression"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 1,
+     "weight": 8
+    },
+    {
+     "pair": [
+      "ATF3",
+      "JUN"
+     ],
+     "directions": [
+      "JUN->ATF3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "JUN"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "ATF3",
+      "EGR1"
+     ],
+     "directions": [
+      "EGR1->ATF3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "EGR1"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 2,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "JUN",
+      "RHOB"
+     ],
+     "directions": [
+      "JUN->RHOB"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "JUN"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "EGR1",
+      "IFNG"
+     ],
+     "directions": [
+      "EGR1->IFNG"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "EGR1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 5
+    }
+   ]
+  },
+  "UCE": {
+   "n_hits": 43,
+   "class_counts": {
+    "TF -> non-TF target": 7,
+    "TF-TF different family": 26,
+    "TF-TF same family/prefix": 10
+   },
+   "n_bidirectional": 3,
+   "n_in_STRING": 24,
+   "n_in_curated_set": 28,
+   "n_with_shared_regulator": 16,
+   "median_pmids": 1.0,
+   "tf_hit_counts": {
+    "E2F1": 2,
+    "ETV7": 2,
+    "STAT1": 2,
+    "ETS1": 2,
+    "GATA3": 2,
+    "ETS2": 2,
+    "RELA": 2,
+    "ESR1": 2,
+    "PAX5": 2,
+    "FLI1": 1,
+    "RUNX3": 1,
+    "STAT3": 1,
+    "JDP2": 1,
+    "STAT2": 1,
+    "FOXA2": 1,
+    "RORA": 1,
+    "JUN": 1,
+    "CREBBP": 1,
+    "EP300": 1,
+    "NFKBIA": 1,
+    "EGR1": 1,
+    "CREM": 1,
+    "NFYA": 1,
+    "HIF3A": 1,
+    "IRF1": 1,
+    "STAT6": 1,
+    "ESRRA": 1,
+    "FOXC1": 1,
+    "NFKB1": 1,
+    "MEN1": 1,
+    "FOSL2": 1,
+    "PBX2": 1,
+    "IRF4": 1,
+    "YY1": 1,
+    "HSF2": 1,
+    "LEF1": 1,
+    "POU2AF1": 1
+   },
+   "hits": [
+    {
+     "pair": [
+      "CDC6",
+      "E2F1"
+     ],
+     "directions": [
+      "E2F1->CDC6"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "E2F1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 56
+    },
+    {
+     "pair": [
+      "ERG",
+      "FLI1"
+     ],
+     "directions": [
+      "FLI1->ERG"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "FLI1"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 29
+    },
+    {
+     "pair": [
+      "RUNX1",
+      "RUNX3"
+     ],
+     "directions": [
+      "RUNX3->RUNX1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "RUNX3"
+     ],
+     "modes": [
+      "Repression",
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 22
+    },
+    {
+     "pair": [
+      "ETV6",
+      "ETV7"
+     ],
+     "directions": [
+      "ETV7->ETV6"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "ETV7"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 18
+    },
+    {
+     "pair": [
+      "STAT1",
+      "STAT3"
+     ],
+     "directions": [
+      "STAT1->STAT3",
+      "STAT3->STAT1"
+     ],
+     "bidirectional": true,
+     "tf": [
+      "STAT1",
+      "STAT3"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 3,
+     "weight": 18
+    },
+    {
+     "pair": [
+      "ATF3",
+      "JDP2"
+     ],
+     "directions": [
+      "JDP2->ATF3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "JDP2"
+     ],
+     "modes": [
+      "Repression",
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 15
+    },
+    {
+     "pair": [
+      "STAT1",
+      "STAT2"
+     ],
+     "directions": [
+      "STAT1->STAT2",
+      "STAT2->STAT1"
+     ],
+     "bidirectional": true,
+     "tf": [
+      "STAT1",
+      "STAT2"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 15
+    },
+    {
+     "pair": [
+      "FOXA2",
+      "NKX2-1"
+     ],
+     "directions": [
+      "FOXA2->NKX2-1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "FOXA2"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 13
+    },
+    {
+     "pair": [
+      "ERG",
+      "ETS1"
+     ],
+     "directions": [
+      "ETS1->ERG"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "ETS1"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 13
+    },
+    {
+     "pair": [
+      "NR1D1",
+      "RORA"
+     ],
+     "directions": [
+      "RORA->NR1D1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "RORA"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 12
+    },
+    {
+     "pair": [
+      "ATF3",
+      "JUN"
+     ],
+     "directions": [
+      "JUN->ATF3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "JUN"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 12
+    },
+    {
+     "pair": [
+      "CREBBP",
+      "EP300"
+     ],
+     "directions": [
+      "CREBBP->EP300",
+      "EP300->CREBBP"
+     ],
+     "bidirectional": true,
+     "tf": [
+      "CREBBP",
+      "EP300"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 12
+    },
+    {
+     "pair": [
+      "IL1B",
+      "NFKBIA"
+     ],
+     "directions": [
+      "NFKBIA->IL1B"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKBIA"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 11
+    },
+    {
+     "pair": [
+      "ATF3",
+      "EGR1"
+     ],
+     "directions": [
+      "EGR1->ATF3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "EGR1"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 2,
+     "weight": 11
+    },
+    {
+     "pair": [
+      "ETS1",
+      "FLI1"
+     ],
+     "directions": [
+      "ETS1->FLI1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "ETS1"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 11
+    },
+    {
+     "pair": [
+      "ERG",
+      "GATA3"
+     ],
+     "directions": [
+      "GATA3->ERG"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "GATA3"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 10
+    },
+    {
+     "pair": [
+      "CREB1",
+      "CREM"
+     ],
+     "directions": [
+      "CREM->CREB1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "CREM"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 9
+    },
+    {
+     "pair": [
+      "E2F1",
+      "MCM8"
+     ],
+     "directions": [
+      "E2F1->MCM8"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "E2F1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 9
+    },
+    {
+     "pair": [
+      "ESR1",
+      "GATA3"
+     ],
+     "directions": [
+      "GATA3->ESR1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "GATA3"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 8
+    },
+    {
+     "pair": [
+      "ERG",
+      "ETS2"
+     ],
+     "directions": [
+      "ETS2->ERG"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "ETS2"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 8
+    },
+    {
+     "pair": [
+      "NFYA",
+      "SP3"
+     ],
+     "directions": [
+      "NFYA->SP3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFYA"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "RELA"
+     ],
+     "directions": [
+      "RELA->NFKB1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "RELA"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 22,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "EPAS1",
+      "HIF3A"
+     ],
+     "directions": [
+      "HIF3A->EPAS1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "HIF3A"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "IRF1",
+      "IRF2"
+     ],
+     "directions": [
+      "IRF1->IRF2"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "IRF1"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "STAT1",
+      "STAT6"
+     ],
+     "directions": [
+      "STAT6->STAT1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "STAT6"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "ESRRA",
+      "NR2F6"
+     ],
+     "directions": [
+      "ESRRA->NR2F6"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "ESRRA"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "FOXC1",
+      "FOXO1"
+     ],
+     "directions": [
+      "FOXC1->FOXO1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "FOXC1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "IRF4",
+      "NFKB1"
+     ],
+     "directions": [
+      "NFKB1->IRF4"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKB1"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "MEN1",
+      "RAD51"
+     ],
+     "directions": [
+      "MEN1->RAD51"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "MEN1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "FOSL1",
+      "FOSL2"
+     ],
+     "directions": [
+      "FOSL2->FOSL1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "FOSL2"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "MEIS1",
+      "PBX2"
+     ],
+     "directions": [
+      "PBX2->MEIS1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "PBX2"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "ESR1",
+      "NR5A2"
+     ],
+     "directions": [
+      "ESR1->NR5A2"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "ESR1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "AR",
+      "ESR1"
+     ],
+     "directions": [
+      "ESR1->AR"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "ESR1"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 7,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "IRF3",
+      "IRF4"
+     ],
+     "directions": [
+      "IRF4->IRF3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "IRF4"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "GNAS",
+      "YY1"
+     ],
+     "directions": [
+      "YY1->GNAS"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "YY1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "HIF1A",
+      "HSF2"
+     ],
+     "directions": [
+      "HSF2->HIF1A"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "HSF2"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "CD19",
+      "PAX5"
+     ],
+     "directions": [
+      "PAX5->CD19"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "PAX5"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 4,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "ETS2",
+      "ETV7"
+     ],
+     "directions": [
+      "ETV7->ETS2"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "ETV7"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "ETS2",
+      "FLI1"
+     ],
+     "directions": [
+      "ETS2->FLI1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "ETS2"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "CTLA4",
+      "LEF1"
+     ],
+     "directions": [
+      "LEF1->CTLA4"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "LEF1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "FCER2",
+      "PAX5"
+     ],
+     "directions": [
+      "PAX5->FCER2"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "PAX5"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "RELA",
+      "STAT3"
+     ],
+     "directions": [
+      "RELA->STAT3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "RELA"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "POU2AF1",
+      "SPIB"
+     ],
+     "directions": [
+      "POU2AF1->SPIB"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "POU2AF1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 5
+    }
+   ]
+  },
+  "C2S": {
+   "n_hits": 83,
+   "class_counts": {
+    "TF-TF same family/prefix": 18,
+    "TF-TF different family": 11,
+    "TF -> non-TF target": 54
+   },
+   "n_bidirectional": 4,
+   "n_in_STRING": 45,
+   "n_in_curated_set": 60,
+   "n_with_shared_regulator": 35,
+   "median_pmids": 1.0,
+   "tf_hit_counts": {
+    "NFKB1": 6,
+    "STAT3": 5,
+    "STAT1": 4,
+    "SP1": 4,
+    "PPARG": 4,
+    "MYC": 4,
+    "CIITA": 3,
+    "TP53": 3,
+    "PAX5": 3,
+    "HIF1A": 3,
+    "IRF3": 2,
+    "BRD7": 2,
+    "RB1": 2,
+    "MITF": 2,
+    "XBP1": 2,
+    "STAT2": 1,
+    "RUNX3": 1,
+    "HIF3A": 1,
+    "STAT6": 1,
+    "IRF1": 1,
+    "FOSL2": 1,
+    "ATF2": 1,
+    "ATF4": 1,
+    "IRF4": 1,
+    "JUN": 1,
+    "HDAC4": 1,
+    "WT1": 1,
+    "PTTG1": 1,
+    "SMAD3": 1,
+    "HOXA10": 1,
+    "RXRA": 1,
+    "JUNB": 1,
+    "SMAD4": 1,
+    "BCL6": 1,
+    "KLF6": 1,
+    "ERG": 1,
+    "GATA2": 1,
+    "CREBBP": 1,
+    "NR3C1": 1,
+    "KLF10": 1,
+    "SF1": 1,
+    "CEBPG": 1,
+    "ZEB2": 1,
+    "HDAC1": 1,
+    "HNF4A": 1,
+    "NFKBIA": 1,
+    "YY1": 1,
+    "SP3": 1,
+    "TNFAIP3": 1,
+    "RBPJ": 1,
+    "PGR": 1,
+    "DDIT3": 1,
+    "ARID1A": 1
+   },
+   "hits": [
+    {
+     "pair": [
+      "STAT1",
+      "STAT2"
+     ],
+     "directions": [
+      "STAT1->STAT2",
+      "STAT2->STAT1"
+     ],
+     "bidirectional": true,
+     "tf": [
+      "STAT1",
+      "STAT2"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 53
+    },
+    {
+     "pair": [
+      "RUNX1",
+      "RUNX3"
+     ],
+     "directions": [
+      "RUNX3->RUNX1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "RUNX3"
+     ],
+     "modes": [
+      "Repression",
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 51
+    },
+    {
+     "pair": [
+      "SP1",
+      "SP3"
+     ],
+     "directions": [
+      "SP1->SP3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "SP1"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 42
+    },
+    {
+     "pair": [
+      "STAT1",
+      "STAT3"
+     ],
+     "directions": [
+      "STAT1->STAT3",
+      "STAT3->STAT1"
+     ],
+     "bidirectional": true,
+     "tf": [
+      "STAT1",
+      "STAT3"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 3,
+     "weight": 42
+    },
+    {
+     "pair": [
+      "FABP4",
+      "PPARG"
+     ],
+     "directions": [
+      "PPARG->FABP4"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "PPARG"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 3,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 39
+    },
+    {
+     "pair": [
+      "HIF1A",
+      "HIF3A"
+     ],
+     "directions": [
+      "HIF3A->HIF1A"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "HIF3A"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 38
+    },
+    {
+     "pair": [
+      "STAT1",
+      "STAT6"
+     ],
+     "directions": [
+      "STAT6->STAT1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "STAT6"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 38
+    },
+    {
+     "pair": [
+      "IRF1",
+      "IRF2"
+     ],
+     "directions": [
+      "IRF1->IRF2"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "IRF1"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 25
+    },
+    {
+     "pair": [
+      "FOSL1",
+      "FOSL2"
+     ],
+     "directions": [
+      "FOSL2->FOSL1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "FOSL2"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 24
+    },
+    {
+     "pair": [
+      "SP1",
+      "SPN"
+     ],
+     "directions": [
+      "SP1->SPN"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "SP1"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 23
+    },
+    {
+     "pair": [
+      "CIITA",
+      "HLA-DRA"
+     ],
+     "directions": [
+      "CIITA->HLA-DRA"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "CIITA"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 5,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 22
+    },
+    {
+     "pair": [
+      "ATF2",
+      "ATF3"
+     ],
+     "directions": [
+      "ATF2->ATF3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "ATF2"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 3,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 21
+    },
+    {
+     "pair": [
+      "ATF3",
+      "ATF4"
+     ],
+     "directions": [
+      "ATF4->ATF3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "ATF4"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 3,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 21
+    },
+    {
+     "pair": [
+      "IRF3",
+      "IRF4"
+     ],
+     "directions": [
+      "IRF4->IRF3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "IRF4"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 20
+    },
+    {
+     "pair": [
+      "HLA-C",
+      "MYC"
+     ],
+     "directions": [
+      "MYC->HLA-C"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "MYC"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 20
+    },
+    {
+     "pair": [
+      "IRF3",
+      "IRF5"
+     ],
+     "directions": [
+      "IRF3->IRF5"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "IRF3"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 18
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "NFKBIZ"
+     ],
+     "directions": [
+      "NFKB1->NFKBIZ"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKB1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 17
+    },
+    {
+     "pair": [
+      "IRF3",
+      "IRF7"
+     ],
+     "directions": [
+      "IRF3->IRF7"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "IRF3"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 17
+    },
+    {
+     "pair": [
+      "JUN",
+      "MMP3"
+     ],
+     "directions": [
+      "JUN->MMP3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "JUN"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 3,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 16
+    },
+    {
+     "pair": [
+      "MYC",
+      "UBE2C"
+     ],
+     "directions": [
+      "MYC->UBE2C"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "MYC"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 16
+    },
+    {
+     "pair": [
+      "HDAC3",
+      "HDAC4"
+     ],
+     "directions": [
+      "HDAC4->HDAC3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "HDAC4"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 15
+    },
+    {
+     "pair": [
+      "RB1",
+      "TP53"
+     ],
+     "directions": [
+      "TP53->RB1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "TP53"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 4,
+     "weight": 14
+    },
+    {
+     "pair": [
+      "SP1",
+      "SPP1"
+     ],
+     "directions": [
+      "SP1->SPP1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "SP1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 1,
+     "weight": 14
+    },
+    {
+     "pair": [
+      "IL6",
+      "MYC"
+     ],
+     "directions": [
+      "MYC->IL6"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "MYC"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 10,
+     "weight": 14
+    },
+    {
+     "pair": [
+      "BRD3",
+      "BRD7"
+     ],
+     "directions": [
+      "BRD7->BRD3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "BRD7"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 13
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "TRAF1"
+     ],
+     "directions": [
+      "NFKB1->TRAF1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKB1"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 7,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 13
+    },
+    {
+     "pair": [
+      "BLK",
+      "PAX5"
+     ],
+     "directions": [
+      "PAX5->BLK"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "PAX5"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 13
+    },
+    {
+     "pair": [
+      "CIITA",
+      "HLA-DMA"
+     ],
+     "directions": [
+      "CIITA->HLA-DMA"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "CIITA"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 12
+    },
+    {
+     "pair": [
+      "WT1",
+      "WTAP"
+     ],
+     "directions": [
+      "WT1->WTAP"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "WT1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 12
+    },
+    {
+     "pair": [
+      "PTTG1",
+      "PTTG1IP"
+     ],
+     "directions": [
+      "PTTG1->PTTG1IP"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "PTTG1"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 12
+    },
+    {
+     "pair": [
+      "SMAD3",
+      "SMAD7"
+     ],
+     "directions": [
+      "SMAD3->SMAD7"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "SMAD3"
+     ],
+     "modes": [
+      "Repression",
+      "Unknown"
+     ],
+     "n_pmids": 3,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 11
+    },
+    {
+     "pair": [
+      "SOCS3",
+      "STAT3"
+     ],
+     "directions": [
+      "STAT3->SOCS3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "STAT3"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 6,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 3,
+     "weight": 11
+    },
+    {
+     "pair": [
+      "BRD2",
+      "BRD7"
+     ],
+     "directions": [
+      "BRD7->BRD2"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "BRD7"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 10
+    },
+    {
+     "pair": [
+      "EMX2",
+      "HOXA10"
+     ],
+     "directions": [
+      "HOXA10->EMX2"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "HOXA10"
+     ],
+     "modes": [
+      "Activation",
+      "Repression"
+     ],
+     "n_pmids": 4,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 10
+    },
+    {
+     "pair": [
+      "HIF1A",
+      "LDHA"
+     ],
+     "directions": [
+      "HIF1A->LDHA"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "HIF1A"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 10
+    },
+    {
+     "pair": [
+      "CD19",
+      "PAX5"
+     ],
+     "directions": [
+      "PAX5->CD19"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "PAX5"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 4,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 10
+    },
+    {
+     "pair": [
+      "IL2RA",
+      "RXRA"
+     ],
+     "directions": [
+      "RXRA->IL2RA"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "RXRA"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 10
+    },
+    {
+     "pair": [
+      "CDKN1A",
+      "JUNB"
+     ],
+     "directions": [
+      "JUNB->CDKN1A"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "JUNB"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 6,
+     "weight": 10
+    },
+    {
+     "pair": [
+      "CIITA",
+      "HLA-DMB"
+     ],
+     "directions": [
+      "CIITA->HLA-DMB"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "CIITA"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 5,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 10
+    },
+    {
+     "pair": [
+      "ERO1A",
+      "PPARG"
+     ],
+     "directions": [
+      "PPARG->ERO1A"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "PPARG"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 9
+    },
+    {
+     "pair": [
+      "SMAD4",
+      "SMAD7"
+     ],
+     "directions": [
+      "SMAD4->SMAD7"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "SMAD4"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 9
+    },
+    {
+     "pair": [
+      "BCL2L1",
+      "BCL6"
+     ],
+     "directions": [
+      "BCL6->BCL2L1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "BCL6"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 3,
+     "weight": 9
+    },
+    {
+     "pair": [
+      "CXCL10",
+      "STAT1"
+     ],
+     "directions": [
+      "STAT1->CXCL10"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "STAT1"
+     ],
+     "modes": [
+      "Repression",
+      "Unknown"
+     ],
+     "n_pmids": 3,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 8
+    },
+    {
+     "pair": [
+      "FGFR1",
+      "RB1"
+     ],
+     "directions": [
+      "RB1->FGFR1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "RB1"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 8
+    },
+    {
+     "pair": [
+      "ATF3",
+      "KLF6"
+     ],
+     "directions": [
+      "KLF6->ATF3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "KLF6"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 8
+    },
+    {
+     "pair": [
+      "ERP44",
+      "PPARG"
+     ],
+     "directions": [
+      "PPARG->ERP44"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "PPARG"
+     ],
+     "modes": [
+      "Activation",
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 8
+    },
+    {
+     "pair": [
+      "ERG",
+      "VWF"
+     ],
+     "directions": [
+      "ERG->VWF"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "ERG"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 3,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 2,
+     "weight": 8
+    },
+    {
+     "pair": [
+      "GATA2",
+      "MS4A2"
+     ],
+     "directions": [
+      "GATA2->MS4A2"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "GATA2"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 8
+    },
+    {
+     "pair": [
+      "CREB1",
+      "CREBBP"
+     ],
+     "directions": [
+      "CREBBP->CREB1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "CREBBP"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 8
+    },
+    {
+     "pair": [
+      "MYC",
+      "TP53"
+     ],
+     "directions": [
+      "MYC->TP53",
+      "TP53->MYC"
+     ],
+     "bidirectional": true,
+     "tf": [
+      "MYC",
+      "TP53"
+     ],
+     "modes": [
+      "Activation",
+      "Repression",
+      "Unknown"
+     ],
+     "n_pmids": 4,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 16,
+     "weight": 8
+    },
+    {
+     "pair": [
+      "HIF1A",
+      "MIF"
+     ],
+     "directions": [
+      "HIF1A->MIF"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "HIF1A"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "HIF1A",
+      "MITF"
+     ],
+     "directions": [
+      "MITF->HIF1A"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "MITF"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "PSMB9",
+      "STAT1"
+     ],
+     "directions": [
+      "STAT1->PSMB9"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "STAT1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 4,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "NR3C1",
+      "PNRC1"
+     ],
+     "directions": [
+      "NR3C1->PNRC1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NR3C1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "CDKN1A",
+      "KLF10"
+     ],
+     "directions": [
+      "KLF10->CDKN1A"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "KLF10"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "SF1",
+      "SF3B1"
+     ],
+     "directions": [
+      "SF1->SF3B1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "SF1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "CEBPG",
+      "SFTPD"
+     ],
+     "directions": [
+      "CEBPG->SFTPD"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "CEBPG"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "MYC",
+      "RB1"
+     ],
+     "directions": [
+      "RB1->MYC"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "RB1"
+     ],
+     "modes": [
+      "Repression",
+      "Unknown"
+     ],
+     "n_pmids": 3,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 4,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "VIM",
+      "ZEB2"
+     ],
+     "directions": [
+      "ZEB2->VIM"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "ZEB2"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "ABCB1",
+      "HDAC1"
+     ],
+     "directions": [
+      "HDAC1->ABCB1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "HDAC1"
+     ],
+     "modes": [
+      "Repression",
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 2,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "HNF1A",
+      "HNF4A"
+     ],
+     "directions": [
+      "HNF4A->HNF1A"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "HNF4A"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "CXCL8",
+      "NFKBIA"
+     ],
+     "directions": [
+      "NFKBIA->CXCL8"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKBIA"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "LDLR",
+      "YY1"
+     ],
+     "directions": [
+      "YY1->LDLR"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "YY1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "SP1",
+      "USP7"
+     ],
+     "directions": [
+      "SP1->USP7"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "SP1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "STAT3",
+      "ZFP36"
+     ],
+     "directions": [
+      "STAT3->ZFP36"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "STAT3"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "FCER2",
+      "PAX5"
+     ],
+     "directions": [
+      "PAX5->FCER2"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "PAX5"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "MITF",
+      "PMEL"
+     ],
+     "directions": [
+      "MITF->PMEL"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "MITF"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "SOCS3",
+      "SP3"
+     ],
+     "directions": [
+      "SP3->SOCS3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "SP3"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "ICAM1",
+      "NFKB1"
+     ],
+     "directions": [
+      "NFKB1->ICAM1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKB1"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 29,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 4,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "CSF1",
+      "NFKB1"
+     ],
+     "directions": [
+      "NFKB1->CSF1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKB1"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "SOCS3"
+     ],
+     "directions": [
+      "NFKB1->SOCS3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKB1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "TNFAIP3"
+     ],
+     "directions": [
+      "NFKB1->TNFAIP3",
+      "TNFAIP3->NFKB1"
+     ],
+     "bidirectional": true,
+     "tf": [
+      "NFKB1",
+      "TNFAIP3"
+     ],
+     "modes": [
+      "Activation",
+      "Repression",
+      "Unknown"
+     ],
+     "n_pmids": 5,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "RBPJ"
+     ],
+     "directions": [
+      "RBPJ->NFKB1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "RBPJ"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "HIF1A",
+      "VIM"
+     ],
+     "directions": [
+      "HIF1A->VIM"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "HIF1A"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "CFLAR",
+      "PPARG"
+     ],
+     "directions": [
+      "PPARG->CFLAR"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "PPARG"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "ERP29",
+      "XBP1"
+     ],
+     "directions": [
+      "XBP1->ERP29"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "XBP1"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "ETV6",
+      "STAT3"
+     ],
+     "directions": [
+      "STAT3->ETV6"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "STAT3"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "CCND3",
+      "STAT3"
+     ],
+     "directions": [
+      "STAT3->CCND3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "STAT3"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "IL10",
+      "PGR"
+     ],
+     "directions": [
+      "PGR->IL10"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "PGR"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 2,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "DDIT3",
+      "TRIB3"
+     ],
+     "directions": [
+      "DDIT3->TRIB3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "DDIT3"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "BCL2",
+      "TP53"
+     ],
+     "directions": [
+      "TP53->BCL2"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "TP53"
+     ],
+     "modes": [
+      "Repression",
+      "Unknown"
+     ],
+     "n_pmids": 6,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 12,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "ARID1A",
+      "CDKN1A"
+     ],
+     "directions": [
+      "ARID1A->CDKN1A"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "ARID1A"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "ERN1",
+      "XBP1"
+     ],
+     "directions": [
+      "XBP1->ERN1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "XBP1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 5
+    }
+   ]
+  },
+  "Geneformer": {
+   "n_hits": 12,
+   "class_counts": {
+    "TF-TF different family": 4,
+    "TF -> non-TF target": 7,
+    "TF-TF same family/prefix": 1
+   },
+   "n_bidirectional": 0,
+   "n_in_STRING": 7,
+   "n_in_curated_set": 7,
+   "n_with_shared_regulator": 6,
+   "median_pmids": 1.0,
+   "tf_hit_counts": {
+    "EGR1": 1,
+    "KLF4": 1,
+    "SREBF2": 1,
+    "KLF6": 1,
+    "SPI1": 1,
+    "NFKB1": 1,
+    "JUN": 1,
+    "FLI1": 1,
+    "ZBTB7A": 1,
+    "NFKBIA": 1,
+    "PAX5": 1,
+    "ATF4": 1
+   },
+   "hits": [
+    {
+     "pair": [
+      "ATF3",
+      "EGR1"
+     ],
+     "directions": [
+      "EGR1->ATF3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "EGR1"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 2,
+     "weight": 13
+    },
+    {
+     "pair": [
+      "ATF3",
+      "KLF4"
+     ],
+     "directions": [
+      "KLF4->ATF3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "KLF4"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 8
+    },
+    {
+     "pair": [
+      "FDFT1",
+      "SREBF2"
+     ],
+     "directions": [
+      "SREBF2->FDFT1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "SREBF2"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "ATF3",
+      "KLF6"
+     ],
+     "directions": [
+      "KLF6->ATF3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "KLF6"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "CYBB",
+      "SPI1"
+     ],
+     "directions": [
+      "SPI1->CYBB"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "SPI1"
+     ],
+     "modes": [
+      "Activation",
+      "Unknown"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 3,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "NFKBIZ"
+     ],
+     "directions": [
+      "NFKB1->NFKBIZ"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKB1"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF-TF same family/prefix",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "ATF3",
+      "JUN"
+     ],
+     "directions": [
+      "JUN->ATF3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "JUN"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "FLI1",
+      "TGFBR2"
+     ],
+     "directions": [
+      "FLI1->TGFBR2"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "FLI1"
+     ],
+     "modes": [
+      "Activation",
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 1,
+     "weight": 6
+    },
+    {
+     "pair": [
+      "SLC2A3",
+      "ZBTB7A"
+     ],
+     "directions": [
+      "ZBTB7A->SLC2A3"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "ZBTB7A"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "ICAM1",
+      "NFKBIA"
+     ],
+     "directions": [
+      "NFKBIA->ICAM1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "NFKBIA"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 3,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 2,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "BLK",
+      "PAX5"
+     ],
+     "directions": [
+      "PAX5->BLK"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "PAX5"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 5
+    },
+    {
+     "pair": [
+      "ATF4",
+      "MAP1LC3B"
+     ],
+     "directions": [
+      "ATF4->MAP1LC3B"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "ATF4"
+     ],
+     "modes": [
+      "Activation"
+     ],
+     "n_pmids": 2,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 5
+    }
+   ]
+  },
+  "MaxToki": {
+   "n_hits": 2,
+   "class_counts": {
+    "TF -> non-TF target": 2
+   },
+   "n_bidirectional": 0,
+   "n_in_STRING": 1,
+   "n_in_curated_set": 0,
+   "n_with_shared_regulator": 0,
+   "median_pmids": 1.0,
+   "tf_hit_counts": {
+    "CEBPE": 1,
+    "HOXC9": 1
+   },
+   "hits": [
+    {
+     "pair": [
+      "CEBPE",
+      "LTF"
+     ],
+     "directions": [
+      "CEBPE->LTF"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "CEBPE"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": true,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 10
+    },
+    {
+     "pair": [
+      "HOXB8",
+      "HOXC9"
+     ],
+     "directions": [
+      "HOXC9->HOXB8"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "HOXC9"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": true,
+     "same_3letter_prefix": true,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 9
+    }
+   ]
+  },
+  "tGPT": {
+   "n_hits": 3,
+   "class_counts": {
+    "TF -> non-TF target": 2,
+    "TF-TF different family": 1
+   },
+   "n_bidirectional": 0,
+   "n_in_STRING": 0,
+   "n_in_curated_set": 1,
+   "n_with_shared_regulator": 0,
+   "median_pmids": 1.0,
+   "tf_hit_counts": {
+    "GATA2": 3
+   },
+   "hits": [
+    {
+     "pair": [
+      "GATA2",
+      "PECAM1"
+     ],
+     "directions": [
+      "GATA2->PECAM1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "GATA2"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 18
+    },
+    {
+     "pair": [
+      "GATA2",
+      "PPARG"
+     ],
+     "directions": [
+      "GATA2->PPARG"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "GATA2"
+     ],
+     "modes": [
+      "Repression"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": true,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF-TF different family",
+     "in_STRING": false,
+     "in_curated_set_le200": true,
+     "n_shared_regulators": 0,
+     "weight": 7
+    },
+    {
+     "pair": [
+      "GATA2",
+      "IL1RL1"
+     ],
+     "directions": [
+      "GATA2->IL1RL1"
+     ],
+     "bidirectional": false,
+     "tf": [
+      "GATA2"
+     ],
+     "modes": [
+      "Unknown"
+     ],
+     "n_pmids": 1,
+     "both_trrust_regulators": false,
+     "same_family_rule": false,
+     "same_3letter_prefix": false,
+     "class": "TF -> non-TF target",
+     "in_STRING": false,
+     "in_curated_set_le200": false,
+     "n_shared_regulators": 0,
+     "weight": 5
+    }
+   ]
+  }
+ },
+ "notes": "pair order is alphabetical; directions from TRRUST",
+ "tier2_all_ten": {
+  "n": 31,
+  "published_hits": 31,
+  "class_counts": {
+   "TF-TF different family": 6,
+   "TF-TF same family/prefix": 8,
+   "TF -> non-TF target": 17
+  },
+  "n_bidirectional": 4,
+  "n_in_STRING": 25,
+  "tf_counts": {
+   "NFKB1": 4,
+   "PAX5": 3,
+   "CIITA": 3,
+   "NFKBIA": 3,
+   "JUN": 2,
+   "STAT1": 2,
+   "STAT3": 2,
+   "EGR1": 1,
+   "STAT2": 1,
+   "KLF6": 1,
+   "RUNX3": 1,
+   "E2F1": 1,
+   "STAT6": 1,
+   "TNFAIP3": 1,
+   "IRF1": 1,
+   "FOSL2": 1,
+   "SREBF2": 1,
+   "IRF4": 1,
+   "CREBBP": 1,
+   "EP300": 1,
+   "ETS1": 1,
+   "HOXA10": 1,
+   "KLF10": 1
+  },
+  "model_participation": {
+   "Geneformer": 7,
+   "Tahoe": 23,
+   "UCE": 15,
+   "scGPT": 3,
+   "C2S": 22
+  },
+  "edges": [
+   {
+    "pair": [
+     "ATF3",
+     "JUN"
+    ],
+    "directions": [
+     "JUN->ATF3"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "JUN"
+    ],
+    "modes": [
+     "Activation"
+    ],
+    "n_pmids": 1,
+    "both_trrust_regulators": true,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF-TF different family",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 2,
+    "n_models": 4,
+    "models": [
+     "Geneformer",
+     "Tahoe",
+     "UCE",
+     "scGPT"
+    ],
+    "weights": {
+     "Geneformer": 6,
+     "Tahoe": 17,
+     "UCE": 12,
+     "scGPT": 6
+    },
+    "total_weight": 41
+   },
+   {
+    "pair": [
+     "ATF3",
+     "EGR1"
+    ],
+    "directions": [
+     "EGR1->ATF3"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "EGR1"
+    ],
+    "modes": [
+     "Activation",
+     "Unknown"
+    ],
+    "n_pmids": 2,
+    "both_trrust_regulators": true,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF-TF different family",
+    "in_STRING": true,
+    "in_curated_set_le200": false,
+    "n_shared_regulators": 2,
+    "n_models": 4,
+    "models": [
+     "Geneformer",
+     "Tahoe",
+     "UCE",
+     "scGPT"
+    ],
+    "weights": {
+     "Geneformer": 13,
+     "Tahoe": 5,
+     "UCE": 11,
+     "scGPT": 6
+    },
+    "total_weight": 35
+   },
+   {
+    "pair": [
+     "STAT1",
+     "STAT2"
+    ],
+    "directions": [
+     "STAT1->STAT2",
+     "STAT2->STAT1"
+    ],
+    "bidirectional": true,
+    "tf": [
+     "STAT1",
+     "STAT2"
+    ],
+    "modes": [
+     "Activation",
+     "Unknown"
+    ],
+    "n_pmids": 2,
+    "both_trrust_regulators": true,
+    "same_family_rule": true,
+    "same_3letter_prefix": true,
+    "class": "TF-TF same family/prefix",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 1,
+    "n_models": 3,
+    "models": [
+     "C2S",
+     "Tahoe",
+     "UCE"
+    ],
+    "weights": {
+     "C2S": 53,
+     "Tahoe": 7,
+     "UCE": 15
+    },
+    "total_weight": 75
+   },
+   {
+    "pair": [
+     "BLK",
+     "PAX5"
+    ],
+    "directions": [
+     "PAX5->BLK"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "PAX5"
+    ],
+    "modes": [
+     "Repression"
+    ],
+    "n_pmids": 1,
+    "both_trrust_regulators": false,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF -> non-TF target",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 0,
+    "n_models": 3,
+    "models": [
+     "C2S",
+     "Geneformer",
+     "Tahoe"
+    ],
+    "weights": {
+     "C2S": 13,
+     "Geneformer": 5,
+     "Tahoe": 13
+    },
+    "total_weight": 31
+   },
+   {
+    "pair": [
+     "ATF3",
+     "KLF6"
+    ],
+    "directions": [
+     "KLF6->ATF3"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "KLF6"
+    ],
+    "modes": [
+     "Activation"
+    ],
+    "n_pmids": 1,
+    "both_trrust_regulators": true,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF-TF different family",
+    "in_STRING": true,
+    "in_curated_set_le200": false,
+    "n_shared_regulators": 0,
+    "n_models": 3,
+    "models": [
+     "C2S",
+     "Geneformer",
+     "Tahoe"
+    ],
+    "weights": {
+     "C2S": 8,
+     "Geneformer": 7,
+     "Tahoe": 8
+    },
+    "total_weight": 23
+   },
+   {
+    "pair": [
+     "FCER2",
+     "PAX5"
+    ],
+    "directions": [
+     "PAX5->FCER2"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "PAX5"
+    ],
+    "modes": [
+     "Unknown"
+    ],
+    "n_pmids": 1,
+    "both_trrust_regulators": false,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF -> non-TF target",
+    "in_STRING": false,
+    "in_curated_set_le200": false,
+    "n_shared_regulators": 0,
+    "n_models": 3,
+    "models": [
+     "C2S",
+     "Tahoe",
+     "UCE"
+    ],
+    "weights": {
+     "C2S": 6,
+     "Tahoe": 11,
+     "UCE": 5
+    },
+    "total_weight": 22
+   },
+   {
+    "pair": [
+     "RUNX1",
+     "RUNX3"
+    ],
+    "directions": [
+     "RUNX3->RUNX1"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "RUNX3"
+    ],
+    "modes": [
+     "Repression",
+     "Unknown"
+    ],
+    "n_pmids": 2,
+    "both_trrust_regulators": true,
+    "same_family_rule": true,
+    "same_3letter_prefix": true,
+    "class": "TF-TF same family/prefix",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 1,
+    "n_models": 2,
+    "models": [
+     "C2S",
+     "UCE"
+    ],
+    "weights": {
+     "C2S": 51,
+     "UCE": 22
+    },
+    "total_weight": 73
+   },
+   {
+    "pair": [
+     "CDC6",
+     "E2F1"
+    ],
+    "directions": [
+     "E2F1->CDC6"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "E2F1"
+    ],
+    "modes": [
+     "Unknown"
+    ],
+    "n_pmids": 1,
+    "both_trrust_regulators": false,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF -> non-TF target",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 1,
+    "n_models": 2,
+    "models": [
+     "Tahoe",
+     "UCE"
+    ],
+    "weights": {
+     "Tahoe": 13,
+     "UCE": 56
+    },
+    "total_weight": 69
+   },
+   {
+    "pair": [
+     "STAT1",
+     "STAT3"
+    ],
+    "directions": [
+     "STAT1->STAT3",
+     "STAT3->STAT1"
+    ],
+    "bidirectional": true,
+    "tf": [
+     "STAT1",
+     "STAT3"
+    ],
+    "modes": [
+     "Activation",
+     "Unknown"
+    ],
+    "n_pmids": 1,
+    "both_trrust_regulators": true,
+    "same_family_rule": true,
+    "same_3letter_prefix": true,
+    "class": "TF-TF same family/prefix",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 3,
+    "n_models": 2,
+    "models": [
+     "C2S",
+     "UCE"
+    ],
+    "weights": {
+     "C2S": 42,
+     "UCE": 18
+    },
+    "total_weight": 60
+   },
+   {
+    "pair": [
+     "STAT1",
+     "STAT6"
+    ],
+    "directions": [
+     "STAT6->STAT1"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "STAT6"
+    ],
+    "modes": [
+     "Repression"
+    ],
+    "n_pmids": 1,
+    "both_trrust_regulators": true,
+    "same_family_rule": true,
+    "same_3letter_prefix": true,
+    "class": "TF-TF same family/prefix",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 0,
+    "n_models": 2,
+    "models": [
+     "C2S",
+     "UCE"
+    ],
+    "weights": {
+     "C2S": 38,
+     "UCE": 7
+    },
+    "total_weight": 45
+   },
+   {
+    "pair": [
+     "NFKB1",
+     "TNFAIP3"
+    ],
+    "directions": [
+     "NFKB1->TNFAIP3",
+     "TNFAIP3->NFKB1"
+    ],
+    "bidirectional": true,
+    "tf": [
+     "NFKB1",
+     "TNFAIP3"
+    ],
+    "modes": [
+     "Activation",
+     "Repression",
+     "Unknown"
+    ],
+    "n_pmids": 5,
+    "both_trrust_regulators": true,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF-TF different family",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 1,
+    "n_models": 2,
+    "models": [
+     "C2S",
+     "Tahoe"
+    ],
+    "weights": {
+     "C2S": 5,
+     "Tahoe": 28
+    },
+    "total_weight": 33
+   },
+   {
+    "pair": [
+     "SOCS3",
+     "STAT3"
+    ],
+    "directions": [
+     "STAT3->SOCS3"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "STAT3"
+    ],
+    "modes": [
+     "Activation",
+     "Unknown"
+    ],
+    "n_pmids": 6,
+    "both_trrust_regulators": false,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF -> non-TF target",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 3,
+    "n_models": 2,
+    "models": [
+     "C2S",
+     "Tahoe"
+    ],
+    "weights": {
+     "C2S": 11,
+     "Tahoe": 22
+    },
+    "total_weight": 33
+   },
+   {
+    "pair": [
+     "IRF1",
+     "IRF2"
+    ],
+    "directions": [
+     "IRF1->IRF2"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "IRF1"
+    ],
+    "modes": [
+     "Activation"
+    ],
+    "n_pmids": 1,
+    "both_trrust_regulators": true,
+    "same_family_rule": true,
+    "same_3letter_prefix": true,
+    "class": "TF-TF same family/prefix",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 1,
+    "n_models": 2,
+    "models": [
+     "C2S",
+     "UCE"
+    ],
+    "weights": {
+     "C2S": 25,
+     "UCE": 7
+    },
+    "total_weight": 32
+   },
+   {
+    "pair": [
+     "FOSL1",
+     "FOSL2"
+    ],
+    "directions": [
+     "FOSL2->FOSL1"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "FOSL2"
+    ],
+    "modes": [
+     "Activation"
+    ],
+    "n_pmids": 1,
+    "both_trrust_regulators": true,
+    "same_family_rule": true,
+    "same_3letter_prefix": true,
+    "class": "TF-TF same family/prefix",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 0,
+    "n_models": 2,
+    "models": [
+     "C2S",
+     "UCE"
+    ],
+    "weights": {
+     "C2S": 24,
+     "UCE": 6
+    },
+    "total_weight": 30
+   },
+   {
+    "pair": [
+     "CIITA",
+     "HLA-DRA"
+    ],
+    "directions": [
+     "CIITA->HLA-DRA"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "CIITA"
+    ],
+    "modes": [
+     "Activation",
+     "Unknown"
+    ],
+    "n_pmids": 5,
+    "both_trrust_regulators": false,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF -> non-TF target",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 1,
+    "n_models": 2,
+    "models": [
+     "C2S",
+     "Tahoe"
+    ],
+    "weights": {
+     "C2S": 22,
+     "Tahoe": 6
+    },
+    "total_weight": 28
+   },
+   {
+    "pair": [
+     "FDFT1",
+     "SREBF2"
+    ],
+    "directions": [
+     "SREBF2->FDFT1"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "SREBF2"
+    ],
+    "modes": [
+     "Unknown"
+    ],
+    "n_pmids": 2,
+    "both_trrust_regulators": false,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF -> non-TF target",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 0,
+    "n_models": 2,
+    "models": [
+     "Geneformer",
+     "Tahoe"
+    ],
+    "weights": {
+     "Geneformer": 7,
+     "Tahoe": 21
+    },
+    "total_weight": 28
+   },
+   {
+    "pair": [
+     "ICAM1",
+     "NFKBIA"
+    ],
+    "directions": [
+     "NFKBIA->ICAM1"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "NFKBIA"
+    ],
+    "modes": [
+     "Repression"
+    ],
+    "n_pmids": 3,
+    "both_trrust_regulators": false,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF -> non-TF target",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 2,
+    "n_models": 2,
+    "models": [
+     "Geneformer",
+     "Tahoe"
+    ],
+    "weights": {
+     "Geneformer": 5,
+     "Tahoe": 22
+    },
+    "total_weight": 27
+   },
+   {
+    "pair": [
+     "IRF3",
+     "IRF4"
+    ],
+    "directions": [
+     "IRF4->IRF3"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "IRF4"
+    ],
+    "modes": [
+     "Repression"
+    ],
+    "n_pmids": 1,
+    "both_trrust_regulators": true,
+    "same_family_rule": true,
+    "same_3letter_prefix": true,
+    "class": "TF-TF same family/prefix",
+    "in_STRING": false,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 0,
+    "n_models": 2,
+    "models": [
+     "C2S",
+     "UCE"
+    ],
+    "weights": {
+     "C2S": 20,
+     "UCE": 6
+    },
+    "total_weight": 26
+   },
+   {
+    "pair": [
+     "CIITA",
+     "HLA-DMA"
+    ],
+    "directions": [
+     "CIITA->HLA-DMA"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "CIITA"
+    ],
+    "modes": [
+     "Activation",
+     "Unknown"
+    ],
+    "n_pmids": 2,
+    "both_trrust_regulators": false,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF -> non-TF target",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 0,
+    "n_models": 2,
+    "models": [
+     "C2S",
+     "Tahoe"
+    ],
+    "weights": {
+     "C2S": 12,
+     "Tahoe": 13
+    },
+    "total_weight": 25
+   },
+   {
+    "pair": [
+     "ICAM1",
+     "NFKB1"
+    ],
+    "directions": [
+     "NFKB1->ICAM1"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "NFKB1"
+    ],
+    "modes": [
+     "Activation",
+     "Unknown"
+    ],
+    "n_pmids": 29,
+    "both_trrust_regulators": false,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF -> non-TF target",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 4,
+    "n_models": 2,
+    "models": [
+     "C2S",
+     "Tahoe"
+    ],
+    "weights": {
+     "C2S": 5,
+     "Tahoe": 19
+    },
+    "total_weight": 24
+   },
+   {
+    "pair": [
+     "NFKB1",
+     "NFKBIZ"
+    ],
+    "directions": [
+     "NFKB1->NFKBIZ"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "NFKB1"
+    ],
+    "modes": [
+     "Unknown"
+    ],
+    "n_pmids": 1,
+    "both_trrust_regulators": true,
+    "same_family_rule": true,
+    "same_3letter_prefix": true,
+    "class": "TF-TF same family/prefix",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 1,
+    "n_models": 2,
+    "models": [
+     "C2S",
+     "Geneformer"
+    ],
+    "weights": {
+     "C2S": 17,
+     "Geneformer": 6
+    },
+    "total_weight": 23
+   },
+   {
+    "pair": [
+     "CIITA",
+     "HLA-DMB"
+    ],
+    "directions": [
+     "CIITA->HLA-DMB"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "CIITA"
+    ],
+    "modes": [
+     "Activation",
+     "Unknown"
+    ],
+    "n_pmids": 5,
+    "both_trrust_regulators": false,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF -> non-TF target",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 1,
+    "n_models": 2,
+    "models": [
+     "C2S",
+     "Tahoe"
+    ],
+    "weights": {
+     "C2S": 10,
+     "Tahoe": 12
+    },
+    "total_weight": 22
+   },
+   {
+    "pair": [
+     "NFKB1",
+     "TRAF1"
+    ],
+    "directions": [
+     "NFKB1->TRAF1"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "NFKB1"
+    ],
+    "modes": [
+     "Activation",
+     "Unknown"
+    ],
+    "n_pmids": 7,
+    "both_trrust_regulators": false,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF -> non-TF target",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 2,
+    "n_models": 2,
+    "models": [
+     "C2S",
+     "Tahoe"
+    ],
+    "weights": {
+     "C2S": 13,
+     "Tahoe": 8
+    },
+    "total_weight": 21
+   },
+   {
+    "pair": [
+     "CREBBP",
+     "EP300"
+    ],
+    "directions": [
+     "CREBBP->EP300",
+     "EP300->CREBBP"
+    ],
+    "bidirectional": true,
+    "tf": [
+     "CREBBP",
+     "EP300"
+    ],
+    "modes": [
+     "Unknown"
+    ],
+    "n_pmids": 2,
+    "both_trrust_regulators": true,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF-TF different family",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 1,
+    "n_models": 2,
+    "models": [
+     "Tahoe",
+     "UCE"
+    ],
+    "weights": {
+     "Tahoe": 9,
+     "UCE": 12
+    },
+    "total_weight": 21
+   },
+   {
+    "pair": [
+     "IL1B",
+     "NFKBIA"
+    ],
+    "directions": [
+     "NFKBIA->IL1B"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "NFKBIA"
+    ],
+    "modes": [
+     "Repression"
+    ],
+    "n_pmids": 1,
+    "both_trrust_regulators": false,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF -> non-TF target",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 2,
+    "n_models": 2,
+    "models": [
+     "Tahoe",
+     "UCE"
+    ],
+    "weights": {
+     "Tahoe": 8,
+     "UCE": 11
+    },
+    "total_weight": 19
+   },
+   {
+    "pair": [
+     "ETS1",
+     "FLI1"
+    ],
+    "directions": [
+     "ETS1->FLI1"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "ETS1"
+    ],
+    "modes": [
+     "Activation"
+    ],
+    "n_pmids": 1,
+    "both_trrust_regulators": true,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF-TF different family",
+    "in_STRING": false,
+    "in_curated_set_le200": false,
+    "n_shared_regulators": 0,
+    "n_models": 2,
+    "models": [
+     "Tahoe",
+     "UCE"
+    ],
+    "weights": {
+     "Tahoe": 8,
+     "UCE": 11
+    },
+    "total_weight": 19
+   },
+   {
+    "pair": [
+     "EMX2",
+     "HOXA10"
+    ],
+    "directions": [
+     "HOXA10->EMX2"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "HOXA10"
+    ],
+    "modes": [
+     "Activation",
+     "Repression"
+    ],
+    "n_pmids": 4,
+    "both_trrust_regulators": false,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF -> non-TF target",
+    "in_STRING": false,
+    "in_curated_set_le200": false,
+    "n_shared_regulators": 0,
+    "n_models": 2,
+    "models": [
+     "C2S",
+     "Tahoe"
+    ],
+    "weights": {
+     "C2S": 10,
+     "Tahoe": 6
+    },
+    "total_weight": 16
+   },
+   {
+    "pair": [
+     "CXCL8",
+     "NFKBIA"
+    ],
+    "directions": [
+     "NFKBIA->CXCL8"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "NFKBIA"
+    ],
+    "modes": [
+     "Unknown"
+    ],
+    "n_pmids": 1,
+    "both_trrust_regulators": false,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF -> non-TF target",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 2,
+    "n_models": 2,
+    "models": [
+     "C2S",
+     "Tahoe"
+    ],
+    "weights": {
+     "C2S": 6,
+     "Tahoe": 10
+    },
+    "total_weight": 16
+   },
+   {
+    "pair": [
+     "JUN",
+     "RHOB"
+    ],
+    "directions": [
+     "JUN->RHOB"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "JUN"
+    ],
+    "modes": [
+     "Activation"
+    ],
+    "n_pmids": 1,
+    "both_trrust_regulators": false,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF -> non-TF target",
+    "in_STRING": false,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 0,
+    "n_models": 2,
+    "models": [
+     "Tahoe",
+     "scGPT"
+    ],
+    "weights": {
+     "Tahoe": 11,
+     "scGPT": 5
+    },
+    "total_weight": 16
+   },
+   {
+    "pair": [
+     "CD19",
+     "PAX5"
+    ],
+    "directions": [
+     "PAX5->CD19"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "PAX5"
+    ],
+    "modes": [
+     "Activation",
+     "Unknown"
+    ],
+    "n_pmids": 4,
+    "both_trrust_regulators": false,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF -> non-TF target",
+    "in_STRING": true,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 0,
+    "n_models": 2,
+    "models": [
+     "C2S",
+     "UCE"
+    ],
+    "weights": {
+     "C2S": 10,
+     "UCE": 5
+    },
+    "total_weight": 15
+   },
+   {
+    "pair": [
+     "CDKN1A",
+     "KLF10"
+    ],
+    "directions": [
+     "KLF10->CDKN1A"
+    ],
+    "bidirectional": false,
+    "tf": [
+     "KLF10"
+    ],
+    "modes": [
+     "Activation"
+    ],
+    "n_pmids": 1,
+    "both_trrust_regulators": false,
+    "same_family_rule": false,
+    "same_3letter_prefix": false,
+    "class": "TF -> non-TF target",
+    "in_STRING": false,
+    "in_curated_set_le200": true,
+    "n_shared_regulators": 0,
+    "n_models": 2,
+    "models": [
+     "C2S",
+     "Tahoe"
+    ],
+    "weights": {
+     "C2S": 7,
+     "Tahoe": 5
+    },
+    "total_weight": 12
+   }
+  ]
+ }
+}

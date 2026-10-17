@@ -1,0 +1,205 @@
+{
+ "note": "observed esm_cos on all pairs vs stored null (lexical.json)",
+ "models": {
+  "AIDO": {
+   "mid": {
+    "n_pairs_embedded": 44894,
+    "obs_allpairs": 0.614047,
+    "obs_subsample_stored": 0.612803,
+    "null_mean_stored": 0.610539,
+    "null_sd_stored": 0.000919,
+    "z_stored": 2.46,
+    "z_allpairs": 3.82
+   },
+   "pooled": {
+    "n_pairs_embedded": 359401,
+    "obs_allpairs": 0.609916,
+    "obs_subsample_stored": 0.607976,
+    "null_mean_stored": 0.607289,
+    "null_sd_stored": 0.000928,
+    "z_stored": 0.74,
+    "z_allpairs": 2.83
+   }
+  },
+  "C2S": {
+   "mid": {
+    "n_pairs_embedded": 314814,
+    "obs_allpairs": 0.631227,
+    "obs_subsample_stored": 0.630342,
+    "null_mean_stored": 0.621997,
+    "null_sd_stored": 0.001153,
+    "z_stored": 7.24,
+    "z_allpairs": 8.0
+   },
+   "pooled": {
+    "n_pairs_embedded": 7768778,
+    "obs_allpairs": 0.628772,
+    "obs_subsample_stored": 0.628913,
+    "null_mean_stored": 0.619582,
+    "null_sd_stored": 0.000969,
+    "z_stored": 9.63,
+    "z_allpairs": 9.48
+   }
+  },
+  "Geneformer": {
+   "mid": {
+    "n_pairs_embedded": 199579,
+    "obs_allpairs": 0.625804,
+    "obs_subsample_stored": 0.627335,
+    "null_mean_stored": 0.621876,
+    "null_sd_stored": 0.000863,
+    "z_stored": 6.32,
+    "z_allpairs": 4.55
+   },
+   "pooled": {
+    "n_pairs_embedded": 3572268,
+    "obs_allpairs": 0.625077,
+    "obs_subsample_stored": 0.623992,
+    "null_mean_stored": 0.620041,
+    "null_sd_stored": 0.000992,
+    "z_stored": 3.98,
+    "z_allpairs": 5.08
+   }
+  },
+  "MaxToki": {
+   "mid": {
+    "n_pairs_embedded": 195754,
+    "obs_allpairs": 0.614213,
+    "obs_subsample_stored": 0.614077,
+    "null_mean_stored": 0.612977,
+    "null_sd_stored": 0.000896,
+    "z_stored": 1.23,
+    "z_allpairs": 1.38
+   },
+   "pooled": {
+    "n_pairs_embedded": 2192403,
+    "obs_allpairs": 0.616452,
+    "obs_subsample_stored": 0.615909,
+    "null_mean_stored": 0.613354,
+    "null_sd_stored": 0.00111,
+    "z_stored": 2.3,
+    "z_allpairs": 2.79
+   }
+  },
+  "UCE": {
+   "mid": {
+    "n_pairs_embedded": 230355,
+    "obs_allpairs": 0.632162,
+    "obs_subsample_stored": 0.63135,
+    "null_mean_stored": 0.622534,
+    "null_sd_stored": 0.000936,
+    "z_stored": 9.42,
+    "z_allpairs": 10.29
+   },
+   "pooled": {
+    "n_pairs_embedded": 7127993,
+    "obs_allpairs": 0.648319,
+    "obs_subsample_stored": 0.64769,
+    "null_mean_stored": 0.618785,
+    "null_sd_stored": 0.000958,
+    "z_stored": 30.19,
+    "z_allpairs": 30.83
+   }
+  },
+  "scGPT": {
+   "mid": {
+    "n_pairs_embedded": 49118,
+    "obs_allpairs": 0.60884,
+    "obs_subsample_stored": 0.608684,
+    "null_mean_stored": 0.594999,
+    "null_sd_stored": 0.00124,
+    "z_stored": 11.04,
+    "z_allpairs": 11.16
+   },
+   "pooled": {
+    "n_pairs_embedded": 708881,
+    "obs_allpairs": 0.610433,
+    "obs_subsample_stored": 0.609101,
+    "null_mean_stored": 0.597721,
+    "null_sd_stored": 0.001194,
+    "z_stored": 9.53,
+    "z_allpairs": 10.65
+   }
+  },
+  "tGPT": {
+   "mid": {
+    "n_pairs_embedded": 133081,
+    "obs_allpairs": 0.616215,
+    "obs_subsample_stored": 0.616231,
+    "null_mean_stored": 0.605609,
+    "null_sd_stored": 0.000985,
+    "z_stored": 10.78,
+    "z_allpairs": 10.77
+   },
+   "pooled": {
+    "n_pairs_embedded": 1035056,
+    "obs_allpairs": 0.62491,
+    "obs_subsample_stored": 0.623916,
+    "null_mean_stored": 0.618939,
+    "null_sd_stored": 0.000986,
+    "z_stored": 5.05,
+    "z_allpairs": 6.06
+   }
+  },
+  "scFoundation": {
+   "mid": {
+    "n_pairs_embedded": 136754,
+    "obs_allpairs": 0.614639,
+    "obs_subsample_stored": 0.615419,
+    "null_mean_stored": 0.612991,
+    "null_sd_stored": 0.000947,
+    "z_stored": 2.56,
+    "z_allpairs": 1.74
+   },
+   "pooled": {
+    "n_pairs_embedded": 1643052,
+    "obs_allpairs": 0.620782,
+    "obs_subsample_stored": 0.617581,
+    "null_mean_stored": 0.616474,
+    "null_sd_stored": 0.001103,
+    "z_stored": 1.0,
+    "z_allpairs": 3.91
+   }
+  },
+  "GeneCompass": {
+   "mid": {
+    "n_pairs_embedded": 88521,
+    "obs_allpairs": 0.610294,
+    "obs_subsample_stored": 0.611317,
+    "null_mean_stored": 0.609783,
+    "null_sd_stored": 0.001028,
+    "z_stored": 1.49,
+    "z_allpairs": 0.5
+   },
+   "pooled": {
+    "n_pairs_embedded": 1064543,
+    "obs_allpairs": 0.610684,
+    "obs_subsample_stored": 0.609418,
+    "null_mean_stored": 0.609859,
+    "null_sd_stored": 0.00125,
+    "z_stored": -0.35,
+    "z_allpairs": 0.66
+   }
+  },
+  "Tahoe": {
+   "mid": {
+    "n_pairs_embedded": 335234,
+    "obs_allpairs": 0.636159,
+    "obs_subsample_stored": 0.634546,
+    "null_mean_stored": 0.631094,
+    "null_sd_stored": 0.001016,
+    "z_stored": 3.4,
+    "z_allpairs": 4.99
+   },
+   "pooled": {
+    "n_pairs_embedded": 10468015,
+    "obs_allpairs": 0.635546,
+    "obs_subsample_stored": 0.636204,
+    "null_mean_stored": 0.630157,
+    "null_sd_stored": 0.001023,
+    "z_stored": 5.91,
+    "z_allpairs": 5.27
+   }
+  }
+ }
+}

@@ -1,0 +1,49 @@
+{
+ "rule": "Estimate how many corpus cells each model's SAE saw (cap 500,000 gene positions, batches of 8,",
+ "per_model": {
+  "tGPT": {
+   "cap": 64,
+   "cells_seen_tokens_all_genes": 6000,
+   "cells_seen_tokens_U_genes": 6000
+  },
+  "C2S": {
+   "cap": 512,
+   "cells_seen_tokens_all_genes": 984,
+   "cells_seen_tokens_U_genes": 984
+  },
+  "UCE": {
+   "cap": null,
+   "cells_seen_tokens_all_genes": 496,
+   "cells_seen_tokens_U_genes": 496
+  },
+  "scGPT": {
+   "cap": 1200,
+   "cells_seen_tokens_all_genes": 424,
+   "cells_seen_tokens_U_genes": 424
+  },
+  "Geneformer": {
+   "cap": 2048,
+   "cells_seen_tokens_all_genes": 264,
+   "cells_seen_tokens_U_genes": 264
+  },
+  "Tahoe": {
+   "cap": 2048,
+   "cells_seen_tokens_all_genes": 264,
+   "cells_seen_tokens_U_genes": 264
+  },
+  "MaxToki": {
+   "cap": 2048,
+   "cells_seen_tokens_all_genes": 264,
+   "cells_seen_tokens_U_genes": 264
+  },
+  "GeneCompass": {
+   "cap": 2048,
+   "cells_seen_tokens_all_genes": 264,
+   "cells_seen_tokens_U_genes": 264
+  }
+ },
+ "named_genes_expr_ge10": 23136,
+ "U_genes": 18250,
+ "median_nnz_all": 2682.0,
+ "median_nnz_U": 2551.0
+}

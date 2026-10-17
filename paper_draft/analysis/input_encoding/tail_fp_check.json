@@ -1,0 +1,405 @@
+{
+ "AIDO": {
+  "flagged_top10": 0,
+  "flagged_and_fired_ge100": 0,
+  "share": 0.0,
+  "genes_in_those_tails": []
+ },
+ "C2S": {
+  "flagged_top10": 32124,
+  "flagged_and_fired_ge100": 2178,
+  "share": 0.0678,
+  "genes_in_those_tails": [
+   [
+    "ERO1A",
+    302
+   ],
+   [
+    "ERO1B",
+    302
+   ],
+   [
+    "ERN1",
+    300
+   ],
+   [
+    "ERMP1",
+    299
+   ],
+   [
+    "ERMN",
+    292
+   ],
+   [
+    "ERP27",
+    289
+   ],
+   [
+    "ERP29",
+    277
+   ],
+   [
+    "ERLIN2",
+    271
+   ],
+   [
+    "ERLIN1",
+    235
+   ],
+   [
+    "ERP44",
+    234
+   ],
+   [
+    "ERRFI1",
+    198
+   ],
+   [
+    "ERLEC1",
+    193
+   ]
+  ]
+ },
+ "Geneformer": {
+  "flagged_top10": 13,
+  "flagged_and_fired_ge100": 13,
+  "share": 1.0,
+  "genes_in_those_tails": [
+   [
+    "H2AC11",
+    12
+   ],
+   [
+    "H2AC4",
+    11
+   ],
+   [
+    "H2BC4",
+    11
+   ],
+   [
+    "H2BC3",
+    11
+   ],
+   [
+    "H2AC15",
+    11
+   ],
+   [
+    "H2BC5",
+    11
+   ],
+   [
+    "H2AC8",
+    11
+   ],
+   [
+    "H4C5",
+    10
+   ],
+   [
+    "H2AC16",
+    10
+   ],
+   [
+    "H2AC12",
+    9
+   ],
+   [
+    "H2BC14",
+    9
+   ],
+   [
+    "H2BC8",
+    9
+   ]
+  ]
+ },
+ "MaxToki": {
+  "flagged_top10": 0,
+  "flagged_and_fired_ge100": 0,
+  "share": 0.0,
+  "genes_in_those_tails": []
+ },
+ "UCE": {
+  "flagged_top10": 12509,
+  "flagged_and_fired_ge100": 360,
+  "share": 0.0288,
+  "genes_in_those_tails": [
+   [
+    "GNAI2",
+    119
+   ],
+   [
+    "GNAI1",
+    119
+   ],
+   [
+    "GNAI3",
+    117
+   ],
+   [
+    "GNAL",
+    116
+   ],
+   [
+    "GNA15",
+    115
+   ],
+   [
+    "GNA14",
+    112
+   ],
+   [
+    "GNAO1",
+    109
+   ],
+   [
+    "GNAQ",
+    107
+   ],
+   [
+    "GNA13",
+    101
+   ],
+   [
+    "GNAS",
+    89
+   ],
+   [
+    "GNA12",
+    78
+   ],
+   [
+    "GNA11",
+    70
+   ]
+  ]
+ },
+ "scGPT": {
+  "flagged_top10": 39,
+  "flagged_and_fired_ge100": 39,
+  "share": 1.0,
+  "genes_in_those_tails": [
+   [
+    "MT-CO2",
+    31
+   ],
+   [
+    "MT-ATP6",
+    31
+   ],
+   [
+    "MT-ND4",
+    31
+   ],
+   [
+    "MT-CYB",
+    31
+   ],
+   [
+    "MT-ND3",
+    31
+   ],
+   [
+    "MT-ND1",
+    31
+   ],
+   [
+    "MT-CO3",
+    31
+   ],
+   [
+    "MT-CO1",
+    31
+   ],
+   [
+    "MT-ND5",
+    31
+   ],
+   [
+    "MT-ND2",
+    31
+   ],
+   [
+    "MT-RNR1",
+    31
+   ],
+   [
+    "MT-RNR2",
+    31
+   ]
+  ]
+ },
+ "tGPT": {
+  "flagged_top10": 4910,
+  "flagged_and_fired_ge100": 53,
+  "share": 0.0108,
+  "genes_in_those_tails": [
+   [
+    "GAS7",
+    53
+   ],
+   [
+    "GATAD2A",
+    53
+   ],
+   [
+    "GATA2",
+    51
+   ],
+   [
+    "GATAD2B",
+    51
+   ],
+   [
+    "GATM",
+    51
+   ],
+   [
+    "GBE1",
+    49
+   ],
+   [
+    "GAS6",
+    48
+   ],
+   [
+    "GBP5",
+    41
+   ],
+   [
+    "GAS5",
+    40
+   ],
+   [
+    "GBF1",
+    38
+   ],
+   [
+    "GBP2",
+    37
+   ],
+   [
+    "GAS2L3",
+    33
+   ]
+  ]
+ },
+ "scFoundation": {
+  "flagged_top10": 2,
+  "flagged_and_fired_ge100": 2,
+  "share": 1.0,
+  "genes_in_those_tails": [
+   [
+    "MT-RNR2",
+    1
+   ],
+   [
+    "MT-RNR1",
+    1
+   ],
+   [
+    "MT-CO3",
+    1
+   ],
+   [
+    "MT-ND1",
+    1
+   ],
+   [
+    "MT-CO1",
+    1
+   ],
+   [
+    "MT-ND3",
+    1
+   ],
+   [
+    "MT-CYB",
+    1
+   ],
+   [
+    "MT-ND4L",
+    1
+   ],
+   [
+    "MT-CO2",
+    1
+   ],
+   [
+    "MT-ND5",
+    1
+   ],
+   [
+    "MT-ATP6",
+    1
+   ],
+   [
+    "MT-ND4",
+    1
+   ]
+  ]
+ },
+ "GeneCompass": {
+  "flagged_top10": 0,
+  "flagged_and_fired_ge100": 0,
+  "share": 0.0,
+  "genes_in_those_tails": []
+ },
+ "Tahoe": {
+  "flagged_top10": 36455,
+  "flagged_and_fired_ge100": 225,
+  "share": 0.0062,
+  "genes_in_those_tails": [
+   [
+    "MT-ND1",
+    148
+   ],
+   [
+    "MT-ND4",
+    148
+   ],
+   [
+    "MT-ND2",
+    148
+   ],
+   [
+    "MT-ND3",
+    148
+   ],
+   [
+    "MT-CYB",
+    148
+   ],
+   [
+    "MT-ATP6",
+    148
+   ],
+   [
+    "MT-ND5",
+    148
+   ],
+   [
+    "MT-CO3",
+    148
+   ],
+   [
+    "MT-CO2",
+    148
+   ],
+   [
+    "MT-ND4L",
+    148
+   ],
+   [
+    "MT-CO1",
+    148
+   ],
+   [
+    "MT-ATP8",
+    148
+   ]
+  ]
+ }
+}
