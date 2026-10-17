@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 """Inject the 8-model data blocks into the atlas HTML template and emit light (published) + full (local)
-builds. Also patches the few hardcoded readouts to be N-model dynamic (svd bar/readout, theme readout,
-gene-search denominator).
+builds. Also patches a few hardcoded readouts to be N-model dynamic (gene-search denominator).
     python scripts/inject_atlas.py
 """
 from __future__ import annotations
@@ -29,29 +28,7 @@ DATA = {
     "health-data": f"{C}/sae_health.json",
 }
 N_MODELS = len(json.load(open(DATA["atlas-data"]))["models"])
-NEW_THEME_READ = (
-    " const Z=T.Z,tm=T.models,th=T.themes,N=tm.length;"
-    "const inAll=th.filter((t,i)=>Z[i].every(v=>v>0));"
-    "const perM=tm.map((m,j)=>Z.reduce((a,r)=>a+(r[j]>0?1:0),0));"
-    "const rich=tm[perM.indexOf(Math.max(...perM))],poor=tm[perM.indexOf(Math.min(...perM))];"
-    "const allTxt=inAll.length?inAll.join(', ')+' appear in all '+N+' models':'programs vary across all '+N+' models';"
-    "document.getElementById('theme-read').innerHTML=`The co-activation modules map to "
-    "canonical biological programs. <b style=\"color:var(--teal)\">${allTxt}</b>; the rest of the vocabulary is only "
-    "partly shared. Coverage varies: <b>${rich}</b> resolves ${Math.max(...perM)} of "
-    "the nine programs, <b>${poor}</b> only ${Math.min(...perM)}, so architecture and scale carve different numbers of "
-    "distinct modules. The UMAP axes are non-linear, but the clusters <b>are</b> these programs — that is what the "
-    "module structure means.`;})();"
-)
-
 SUBS = [
-    # svd panel: iterate only models that actually have an SVD entry (Tahoe may be pending)
-    ("box.innerHTML=M.map(m=>{const v=S[m].novel;",
-     "box.innerHTML=M.filter(m=>S[m]).map(m=>{const v=S[m].novel;"),
-    ("const mn=Math.min(...M.map(m=>S[m].novel));",
-     "const mn=Math.min(...M.filter(m=>S[m]).map(m=>S[m].novel));"),
-    ("+M.map(m=>{const sv=S[m].svd_var*100,se=S[m].sae_var*100;",
-     "+M.filter(m=>S[m]).map(m=>{const sv=S[m].svd_var*100,se=S[m].sae_var*100;"),
-    ("Across all seven models ", "Across all ${Object.keys(S).length} models "),
     # gene search denominator
     ("${rows.length}/7</b> models", "${rows.length}/${gModels.length}</b> models"),
     # caveat now resolved
@@ -81,9 +58,6 @@ def build(explorer_path, out_path, label, lazy=None):
             content = open(blocks[sid], encoding="utf-8").read().strip()
             lines[i] = f'{indent}<script id="{sid}" type="application/json">{content}</script>'
             continue
-        # theme-read: replace the whole physical line
-        if "getElementById('theme-read').innerHTML=" in ln:
-            lines[i] = NEW_THEME_READ
     # model-count words in PROSE -> current N (only on short lines; never touch the multi-MB data blocks,
     # where a concept like "seven-transmembrane" must not be mangled)
     NW = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven",

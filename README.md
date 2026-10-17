@@ -89,15 +89,20 @@ failed are reported alongside the ones that passed.
   linearly decodable at every depth, with no gain from a non-linear probe. PCA of the raw
   expression decodes tissue as well (0.94 balanced accuracy against 0.85 to 0.96 for the models'
   middle layers).
-- **Features predict held-out regulation, in four of the ten models.** Gene pairs that co-fire
-  in the same features recover TRRUST edges, which no step of the pipeline used, above a null
-  that preserves every gene's degree: UCE 10.2×, Tahoe-x1 9.4×, C2S-Scale 5.5×, Geneformer-V2
-  2.5× (p ≤ 0.005); the other six do not. All four hold on an equal budget of 50,707 pairs.
+- **Gene pairs recover known regulation in four of the ten models, but co-expression does about
+  as well.** Gene pairs that co-fire in the same features recover TRRUST edges above a null that
+  preserves every gene's degree: UCE 10.2×, Tahoe-x1 9.4×, C2S-Scale 5.5×, Geneformer-V2 2.5×
+  (p ≤ 0.005); the other six do not. The loose annotation rule uses TRRUST, and the threshold of
+  five shared features was chosen after scoring against it. Co-expression from the same cells
+  passes the same test; matched for genes and partners per gene, only Tahoe-x1 stays ahead once
+  same-family and look-alike pairs are set aside, also within cell types. SAEs that were never
+  trained give weaker pair signal, and a Geneformer-V2 with random weights gives none. All four
+  hold on an equal budget of 50,707 pairs.
   Pairs predicted by two models independently are 15.3× over the null against 5.0× for one
   (2,000 rewirings, `agreement_curve.py`), a precision of 0.23 %; agreement beyond two models adds
   nothing (none of the 918 pairs shared by five or more models is a known edge).
 - **Literature and perturbation give small support.** Co-mention in NCBI gene2pubmed
-  2.3× a publication-count-preserving null; in genome-wide CRISPRi Perturb-seq, knocking down
+  2.3× a publication-count-preserving null; in CRISPRi Perturb-seq (genome-wide K562 screen, RPE1 essential-gene screen), knocking down
   one gene moves the other into the top 5 % of responders 1.24× more often than a
   responsiveness-matched null in K562 and 1.33× in RPE1.
 - **No new biology, and the reason is the evidence.** Only 98 of 4,272 pairs were never
