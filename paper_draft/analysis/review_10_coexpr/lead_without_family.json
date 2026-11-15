@@ -1,0 +1,45 @@
+{
+ "rule": "M1 (>= 2 shared leading characters) or M2 (same class of the hand-made DNA-binding-domain map)",
+ "models": {
+  "UCE": {
+   "cofire_only": 51,
+   "coexpr_only": 40,
+   "binom_p": 0.29447,
+   "masked_cofire_only": 30,
+   "masked_coexpr_only": 1,
+   "cofire_only_unmasked": 21,
+   "coexpr_only_unmasked": 39,
+   "binom_p_unmasked": 0.02734
+  },
+  "Tahoe": {
+   "cofire_only": 62,
+   "coexpr_only": 36,
+   "binom_p": 0.01117,
+   "masked_cofire_only": 9,
+   "masked_coexpr_only": 2,
+   "cofire_only_unmasked": 53,
+   "coexpr_only_unmasked": 34,
+   "binom_p_unmasked": 0.053
+  },
+  "C2S": {
+   "cofire_only": 77,
+   "coexpr_only": 46,
+   "binom_p": 0.00659,
+   "masked_cofire_only": 34,
+   "masked_coexpr_only": 1,
+   "cofire_only_unmasked": 43,
+   "coexpr_only_unmasked": 45,
+   "binom_p_unmasked": 0.91519
+  },
+  "Geneformer": {
+   "cofire_only": 12,
+   "coexpr_only": 38,
+   "binom_p": 0.00031,
+   "masked_cofire_only": 0,
+   "masked_coexpr_only": 3,
+   "cofire_only_unmasked": 12,
+   "coexpr_only_unmasked": 35,
+   "binom_p_unmasked": 0.00109
+  }
+ }
+}

@@ -31,7 +31,7 @@ import numpy as np
 from ie_common import *
 
 NPERM = int(sys.argv[1]) if len(sys.argv) > 1 else 200
-BUDGET = 8631
+from _fixed_params import BUDGET
 t00 = time.time()
 H, _, HVER = hgnc()
 

@@ -17,9 +17,10 @@
     "GO_BP:rRNA processing (GO:0006364)",
     "GO_BP:ribosome biogenesis (GO:0042254)",
     "KEGG:Ribosome",
+    "Reactome:Eukaryotic Translation Elongation R-HSA-156842",
+    "Reactome:Peptide Chain Elongation R-HSA-156902",
     "Reactome:Cap-dependent Translation Initiation R-HSA-72737",
     "Reactome:Cellular Response To Starvation R-HSA-9711097",
-    "Reactome:Eukaryotic Translation Elongation R-HSA-156842",
     "Reactome:Eukaryotic Translation Termination R-HSA-72764",
     "Reactome:Formation Of A Pool Of Free 40S Subunits R-HSA-72689",
     "Reactome:GTP Hydrolysis And Joining Of 60S Ribosomal Subunit R-HSA-72706",
@@ -29,7 +30,6 @@
     "Reactome:Major Pathway Of rRNA Processing In Nucleolus And Cytosol R-HSA-6791226",
     "Reactome:Nonsense Mediated Decay (NMD) Enhanced By Exon Junction Complex (EJC) R-HSA-975957",
     "Reactome:Nonsense Mediated Decay (NMD) Independent Of Exon Junction Complex (EJC) R-HSA-975956",
-    "Reactome:Peptide Chain Elongation R-HSA-156902",
     "Reactome:Regulation Of Expression Of SLITs And ROBOs R-HSA-9010553",
     "Reactome:Response Of EIF2AK4 (GCN2) To Amino Acid Deficiency R-HSA-9633012",
     "Reactome:SRP-dependent Cotranslational Protein Targeting To Membrane R-HSA-1799339",
@@ -42,18 +42,16 @@
   },
   {
    "id": 2,
-   "n": 9,
+   "n": 7,
    "class": "specific",
-   "representative": "KEGG:Rheumatoid arthritis",
+   "representative": "KEGG:Staphylococcus aureus infection",
    "members": [
-    "KEGG:Rheumatoid arthritis",
-    "GO_BP:antigen processing and presentation of exogenous peptide antigen (GO:0002478)",
-    "GO_BP:antigen processing and presentation of exogenous peptide antigen via MHC class II (GO:0019886)",
-    "GO_BP:antigen processing and presentation of peptide antigen via MHC class II (GO:0002495)",
+    "KEGG:Staphylococcus aureus infection",
     "KEGG:Influenza A",
     "KEGG:Leishmaniasis",
+    "KEGG:Rheumatoid arthritis",
     "KEGG:Th1 and Th2 cell differentiation",
-    "KEGG:Toxoplasmosis",
+    "KEGG:Th17 cell differentiation",
     "KEGG:Tuberculosis"
    ]
   },
@@ -73,78 +71,149 @@
   },
   {
    "id": 4,
-   "n": 3,
+   "n": 4,
    "class": "specific",
-   "representative": "KEGG:Phagosome",
+   "representative": "GO_BP:regulated exocytosis (GO:0045055)",
    "members": [
-    "KEGG:Cell adhesion molecules",
-    "KEGG:Phagosome",
-    "KEGG:Antigen processing and presentation"
+    "GO_BP:regulated exocytosis (GO:0045055)",
+    "Reactome:Platelet Degranulation R-HSA-114608",
+    "Reactome:Response To Elevated Platelet Cytosolic Ca2+ R-HSA-76005",
+    "GO_BP:platelet degranulation (GO:0002576)"
    ]
   },
   {
    "id": 5,
    "n": 3,
    "class": "other_housekeeping",
-   "representative": "Reactome:Citric Acid (TCA) Cycle And Respiratory Electron Transport R-HSA-1428517",
+   "representative": "GO_BP:cellular response to tumor necrosis factor (GO:0071356)",
    "members": [
-    "Reactome:Citric Acid (TCA) Cycle And Respiratory Electron Transport R-HSA-1428517",
-    "Reactome:Respiratory Electron Transport R-HSA-611105",
-    "Reactome:Respiratory Electron Transport, ATP Synthesis By Chemiosmotic Coupling, Heat Production By Uncoupling Proteins R-HSA-163200"
+    "GO_BP:cellular response to tumor necrosis factor (GO:0071356)",
+    "GO_BP:regulation of mRNA stability (GO:0043488)",
+    "Reactome:TCF Dependent Signaling In Response To WNT R-HSA-201681"
    ]
   },
   {
    "id": 6,
-   "n": 2,
+   "n": 3,
    "class": "specific",
-   "representative": "GO_BP:cellular response to metal ion (GO:0071248)",
+   "representative": "KEGG:Phagosome",
    "members": [
-    "GO_BP:cellular response to metal ion (GO:0071248)",
-    "GO_BP:negative regulation of growth (GO:0045926)"
+    "KEGG:Phagosome",
+    "KEGG:Antigen processing and presentation",
+    "KEGG:Cell adhesion molecules"
    ]
   },
   {
    "id": 7,
-   "n": 2,
-   "class": "specific",
-   "representative": "Reactome:Muscle Contraction R-HSA-397014",
+   "n": 3,
+   "class": "other_housekeeping",
+   "representative": "Reactome:Citric Acid (TCA) Cycle And Respiratory Electron Transport R-HSA-1428517",
    "members": [
-    "Reactome:Muscle Contraction R-HSA-397014",
-    "GO_BP:muscle contraction (GO:0006936)"
+    "Reactome:Citric Acid (TCA) Cycle And Respiratory Electron Transport R-HSA-1428517",
+    "KEGG:Oxidative phosphorylation",
+    "Reactome:Respiratory Electron Transport, ATP Synthesis By Chemiosmotic Coupling, Heat Production By Uncoupling Proteins R-HSA-163200"
    ]
   },
   {
    "id": 8,
-   "n": 2,
-   "class": "other_housekeeping",
-   "representative": "Reactome:Mitotic G1 Phase And G1/S Transition R-HSA-453279",
+   "n": 3,
+   "class": "specific",
+   "representative": "Reactome:Surfactant Metabolism R-HSA-5683826",
    "members": [
-    "GO_BP:regulation of mitotic cell cycle (GO:0007346)",
-    "Reactome:Mitotic G1 Phase And G1/S Transition R-HSA-453279"
+    "Reactome:Defective CSF2RA Causes SMDP4 R-HSA-5688890",
+    "Reactome:Diseases Associated With Surfactant Metabolism R-HSA-5687613",
+    "Reactome:Surfactant Metabolism R-HSA-5683826"
    ]
   },
   {
    "id": 9,
    "n": 2,
-   "class": "other_housekeeping",
-   "representative": "KEGG:Neutrophil extracellular trap formation",
+   "class": "specific",
+   "representative": "GO_BP:mitotic spindle organization (GO:0007052)",
    "members": [
-    "KEGG:Neutrophil extracellular trap formation",
-    "KEGG:Alcoholism"
+    "GO_BP:microtubule cytoskeleton organization involved in mitosis (GO:1902850)",
+    "GO_BP:mitotic spindle organization (GO:0007052)"
    ]
   },
   {
    "id": 10,
    "n": 2,
    "class": "specific",
-   "representative": "KEGG:Staphylococcus aureus infection",
+   "representative": "Reactome:Muscle Contraction R-HSA-397014",
    "members": [
-    "KEGG:Staphylococcus aureus infection",
-    "KEGG:Systemic lupus erythematosus"
+    "GO_BP:muscle contraction (GO:0006936)",
+    "Reactome:Muscle Contraction R-HSA-397014"
    ]
   },
   {
    "id": 11,
+   "n": 2,
+   "class": "other_housekeeping",
+   "representative": "KEGG:Alcoholism",
+   "members": [
+    "KEGG:Alcoholism",
+    "KEGG:Neutrophil extracellular trap formation"
+   ]
+  },
+  {
+   "id": 12,
+   "n": 2,
+   "class": "specific",
+   "representative": "KEGG:Chemokine signaling pathway",
+   "members": [
+    "KEGG:Chemokine signaling pathway",
+    "Reactome:Peptide Ligand-Binding Receptors R-HSA-375276"
+   ]
+  },
+  {
+   "id": 13,
+   "n": 2,
+   "class": "other_housekeeping",
+   "representative": "Reactome:Cellular Senescence R-HSA-2559583",
+   "members": [
+    "Reactome:Cellular Senescence R-HSA-2559583",
+    "Reactome:Oxidative Stress Induced Senescence R-HSA-2559580"
+   ]
+  },
+  {
+   "id": 14,
+   "n": 2,
+   "class": "specific",
+   "representative": "Reactome:ESR-mediated Signaling R-HSA-8939211",
+   "members": [
+    "Reactome:ESR-mediated Signaling R-HSA-8939211",
+    "Reactome:Estrogen-dependent Gene Expression R-HSA-9018519"
+   ]
+  },
+  {
+   "id": 15,
+   "n": 1,
+   "class": "specific",
+   "representative": "GO_BP:antigen receptor-mediated signaling pathway (GO:0050851)",
+   "members": [
+    "GO_BP:antigen receptor-mediated signaling pathway (GO:0050851)"
+   ]
+  },
+  {
+   "id": 16,
+   "n": 1,
+   "class": "specific",
+   "representative": "GO_BP:cellular divalent inorganic cation homeostasis (GO:0072503)",
+   "members": [
+    "GO_BP:cellular divalent inorganic cation homeostasis (GO:0072503)"
+   ]
+  },
+  {
+   "id": 17,
+   "n": 1,
+   "class": "specific",
+   "representative": "GO_BP:cellular response to lipopolysaccharide (GO:0071222)",
+   "members": [
+    "GO_BP:cellular response to lipopolysaccharide (GO:0071222)"
+   ]
+  },
+  {
+   "id": 18,
    "n": 1,
    "class": "specific",
    "representative": "GO_BP:defense response to bacterium (GO:0042742)",
@@ -153,70 +222,70 @@
    ]
   },
   {
-   "id": 12,
-   "n": 1,
-   "class": "specific",
-   "representative": "GO_BP:negative regulation of cytokine production (GO:0001818)",
-   "members": [
-    "GO_BP:negative regulation of cytokine production (GO:0001818)"
-   ]
-  },
-  {
-   "id": 13,
-   "n": 1,
-   "class": "specific",
-   "representative": "GO_BP:regulated exocytosis (GO:0045055)",
-   "members": [
-    "GO_BP:regulated exocytosis (GO:0045055)"
-   ]
-  },
-  {
-   "id": 14,
-   "n": 1,
-   "class": "other_housekeeping",
-   "representative": "GO_BP:regulation of cellular response to stress (GO:0080135)",
-   "members": [
-    "GO_BP:regulation of cellular response to stress (GO:0080135)"
-   ]
-  },
-  {
-   "id": 15,
-   "n": 1,
-   "class": "specific",
-   "representative": "GO_BP:response to cytokine (GO:0034097)",
-   "members": [
-    "GO_BP:response to cytokine (GO:0034097)"
-   ]
-  },
-  {
-   "id": 16,
-   "n": 1,
-   "class": "specific",
-   "representative": "KEGG:Adrenergic signaling in cardiomyocytes",
-   "members": [
-    "KEGG:Adrenergic signaling in cardiomyocytes"
-   ]
-  },
-  {
-   "id": 17,
-   "n": 1,
-   "class": "specific",
-   "representative": "KEGG:Apoptosis",
-   "members": [
-    "KEGG:Apoptosis"
-   ]
-  },
-  {
-   "id": 18,
-   "n": 1,
-   "class": "other_housekeeping",
-   "representative": "KEGG:Cardiac muscle contraction",
-   "members": [
-    "KEGG:Cardiac muscle contraction"
-   ]
-  },
-  {
    "id": 19,
+   "n": 1,
+   "class": "other_housekeeping",
+   "representative": "GO_BP:protein stabilization (GO:0050821)",
+   "members": [
+    "GO_BP:protein stabilization (GO:0050821)"
+   ]
+  },
+  {
+   "id": 20,
+   "n": 1,
+   "class": "specific",
+   "representative": "GO_BP:regulation of immune response (GO:0050776)",
+   "members": [
+    "GO_BP:regulation of immune response (GO:0050776)"
+   ]
+  },
+  {
+   "id": 21,
+   "n": 1,
+   "class": "specific",
+   "representative": "GO_BP:regulation of programmed cell death (GO:0043067)",
+   "members": [
+    "GO_BP:regulation of programmed cell death (GO:0043067)"
+   ]
+  },
+  {
+   "id": 22,
+   "n": 1,
+   "class": "protein_synthesis",
+   "representative": "GO_BP:regulation of translation (GO:0006417)",
+   "members": [
+    "GO_BP:regulation of translation (GO:0006417)"
+   ]
+  },
+  {
+   "id": 23,
+   "n": 1,
+   "class": "protein_synthesis",
+   "representative": "GO_BP:ribonucleoprotein complex assembly (GO:0022618)",
+   "members": [
+    "GO_BP:ribonucleoprotein complex assembly (GO:0022618)"
+   ]
+  },
+  {
+   "id": 24,
+   "n": 1,
+   "class": "protein_synthesis",
+   "representative": "GO_BP:ribonucleoprotein complex biogenesis (GO:0022613)",
+   "members": [
+    "GO_BP:ribonucleoprotein complex biogenesis (GO:0022613)"
+   ]
+  },
+  {
+   "id": 25,
+   "n": 1,
+   "class": "protein_synthesis",
+   "representative": "GO_BP:ribosomal large subunit biogenesis (GO:0042273)",
+   "members": [
+    "GO_BP:ribosomal large subunit biogenesis (GO:0042273)"
+   ]
+  },
+  {
+   "id": 26,
    "n": 1,
    "class": "specific",
    "representative": "KEGG:Estrogen signaling pathway",
@@ -225,7 +294,7 @@
    ]
   },
   {
-   "id": 20,
+   "id": 27,
    "n": 1,
    "class": "specific",
    "representative": "KEGG:Hematopoietic cell lineage",
@@ -234,16 +303,7 @@
    ]
   },
   {
-   "id": 21,
-   "n": 1,
-   "class": "specific",
-   "representative": "KEGG:IL-17 signaling pathway",
-   "members": [
-    "KEGG:IL-17 signaling pathway"
-   ]
-  },
-  {
-   "id": 22,
+   "id": 28,
    "n": 1,
    "class": "specific",
    "representative": "KEGG:Kaposi sarcoma-associated herpesvirus infection",
@@ -252,205 +312,278 @@
    ]
   },
   {
-   "id": 23,
+   "id": 29,
+   "n": 1,
+   "class": "specific",
+   "representative": "KEGG:Necroptosis",
+   "members": [
+    "KEGG:Necroptosis"
+   ]
+  },
+  {
+   "id": 30,
+   "n": 1,
+   "class": "specific",
+   "representative": "KEGG:Osteoclast differentiation",
+   "members": [
+    "KEGG:Osteoclast differentiation"
+   ]
+  },
+  {
+   "id": 31,
+   "n": 1,
+   "class": "specific",
+   "representative": "KEGG:Pathogenic Escherichia coli infection",
+   "members": [
+    "KEGG:Pathogenic Escherichia coli infection"
+   ]
+  },
+  {
+   "id": 32,
    "n": 1,
    "class": "other_housekeeping",
-   "representative": "KEGG:Protein processing in endoplasmic reticulum",
+   "representative": "KEGG:Retrograde endocannabinoid signaling",
    "members": [
-    "KEGG:Protein processing in endoplasmic reticulum"
+    "KEGG:Retrograde endocannabinoid signaling"
    ]
   },
   {
-   "id": 24,
+   "id": 33,
    "n": 1,
    "class": "specific",
-   "representative": "Reactome:Interferon Signaling R-HSA-913531",
+   "representative": "KEGG:Salivary secretion",
    "members": [
-    "Reactome:Interferon Signaling R-HSA-913531"
+    "KEGG:Salivary secretion"
    ]
   },
   {
-   "id": 25,
+   "id": 34,
    "n": 1,
    "class": "specific",
-   "representative": "Reactome:Peptide Ligand-Binding Receptors R-HSA-375276",
+   "representative": "KEGG:cGMP-PKG signaling pathway",
    "members": [
-    "Reactome:Peptide Ligand-Binding Receptors R-HSA-375276"
+    "KEGG:cGMP-PKG signaling pathway"
+   ]
+  },
+  {
+   "id": 35,
+   "n": 1,
+   "class": "specific",
+   "representative": "Reactome:Antimicrobial Peptides R-HSA-6803157",
+   "members": [
+    "Reactome:Antimicrobial Peptides R-HSA-6803157"
+   ]
+  },
+  {
+   "id": 36,
+   "n": 1,
+   "class": "specific",
+   "representative": "Reactome:Chromosome Maintenance R-HSA-73886",
+   "members": [
+    "Reactome:Chromosome Maintenance R-HSA-73886"
+   ]
+  },
+  {
+   "id": 37,
+   "n": 1,
+   "class": "specific",
+   "representative": "Reactome:RHO GTPases Activate PKNs R-HSA-5625740",
+   "members": [
+    "Reactome:RHO GTPases Activate PKNs R-HSA-5625740"
    ]
   }
  ],
  "a_singletons_by_class": {
-  "specific": 12,
-  "other_housekeeping": 3
+  "specific": 17,
+  "other_housekeeping": 2,
+  "protein_synthesis": 4
  },
  "a_multi_by_class": {
   "protein_synthesis": 2,
-  "specific": 5,
-  "other_housekeeping": 3
+  "specific": 8,
+  "other_housekeeping": 4
  },
  "b_rule_counts": {
-  "full_sets|complete|J>=0.3": 38,
-  "full_sets|complete|J>=0.5": 46,
-  "full_sets|average|J>=0.3": 36,
-  "full_sets|average|J>=0.5": 46,
-  "full_sets|single|J>=0.3": 35,
-  "full_sets|single|J>=0.5": 39,
-  "hit_genes|complete|J>=0.3": 33,
-  "hit_genes|complete|J>=0.5": 42,
-  "hit_genes|average|J>=0.3": 33,
-  "hit_genes|average|J>=0.5": 40,
-  "hit_genes|single|J>=0.3": 30,
-  "hit_genes|single|J>=0.5": 38,
-  "hit_weighted|complete|J>=0.3": 25,
-  "hit_weighted|complete|J>=0.5": 36,
-  "hit_weighted|average|J>=0.3": 23,
-  "hit_weighted|average|J>=0.5": 36,
-  "hit_weighted|single|J>=0.3": 22,
-  "hit_weighted|single|J>=0.5": 34,
-  "top20_hits|complete|J>=0.3": 24,
-  "top20_hits|complete|J>=0.5": 36,
-  "top20_hits|average|J>=0.3": 24,
-  "top20_hits|average|J>=0.5": 35,
-  "top20_hits|single|J>=0.3": 23,
-  "top20_hits|single|J>=0.5": 35,
-  "features|complete|J>=0.3": 30,
-  "features|complete|J>=0.5": 37,
-  "features|average|J>=0.3": 29,
-  "features|average|J>=0.5": 37,
-  "features|single|J>=0.3": 23,
-  "features|single|J>=0.5": 37
+  "full_sets|complete|J>=0.3": 51,
+  "full_sets|complete|J>=0.5": 59,
+  "full_sets|average|J>=0.3": 49,
+  "full_sets|average|J>=0.5": 59,
+  "full_sets|single|J>=0.3": 47,
+  "full_sets|single|J>=0.5": 52,
+  "hit_genes|complete|J>=0.3": 46,
+  "hit_genes|complete|J>=0.5": 53,
+  "hit_genes|average|J>=0.3": 45,
+  "hit_genes|average|J>=0.5": 51,
+  "hit_genes|single|J>=0.3": 41,
+  "hit_genes|single|J>=0.5": 49,
+  "hit_weighted|complete|J>=0.3": 37,
+  "hit_weighted|complete|J>=0.5": 48,
+  "hit_weighted|average|J>=0.3": 35,
+  "hit_weighted|average|J>=0.5": 48,
+  "hit_weighted|single|J>=0.3": 34,
+  "hit_weighted|single|J>=0.5": 47,
+  "top20_hits|complete|J>=0.3": 35,
+  "top20_hits|complete|J>=0.5": 46,
+  "top20_hits|average|J>=0.3": 32,
+  "top20_hits|average|J>=0.5": 46,
+  "top20_hits|single|J>=0.3": 31,
+  "top20_hits|single|J>=0.5": 45,
+  "features|complete|J>=0.3": 41,
+  "features|complete|J>=0.5": 51,
+  "features|average|J>=0.3": 41,
+  "features|average|J>=0.5": 50,
+  "features|single|J>=0.3": 39,
+  "features|single|J>=0.5": 50
  },
  "b_summary": {
   "n_rules": 30,
-  "min": 22,
-  "max": 46,
-  "median": 35.0,
-  "mean": 33.4,
-  "rank_of_primary_25_(1=lowest)": 7,
+  "min": 31,
+  "max": 59,
+  "median": 46.5,
+  "mean": 45.27,
+  "rank_of_primary_(1=lowest)": 6,
   "complete_J>=0.3_by_basis": {
-   "full_sets": 38,
-   "hit_genes": 33,
-   "hit_weighted": 25,
-   "top20_hits": 24,
-   "features": 30
+   "full_sets": 51,
+   "hit_genes": 46,
+   "hit_weighted": 37,
+   "top20_hits": 35,
+   "features": 41
   }
  },
  "c_class_counts_model_balanced": {
-  "protein_synthesis": 38,
-  "specific": 31,
-  "other_housekeeping": 9
+  "protein_synthesis": 42,
+  "specific": 41,
+  "other_housekeeping": 13
  },
  "c_changed_vs_primary": {
-  "Reactome:Mitotic G1 Phase And G1/S Transition R-HSA-453279": {
+  "GO_BP:microtubule cytoskeleton organization involved in mitosis (GO:1902850)": {
    "class_weighted_pooled": "other_housekeeping",
    "class_model_balanced": "specific",
+   "class_union": "specific",
+   "frac_T_model_balanced": 0.0,
+   "frac_TO_model_balanced": 0.489,
+   "largest_model_share_of_pooled_hits": 0.302
+  },
+  "KEGG:Necroptosis": {
+   "class_weighted_pooled": "specific",
+   "class_model_balanced": "other_housekeeping",
+   "class_union": "specific",
+   "frac_T_model_balanced": 0.021,
+   "frac_TO_model_balanced": 0.614,
+   "largest_model_share_of_pooled_hits": 0.349
+  },
+  "Reactome:RHO GTPases Activate PKNs R-HSA-5625740": {
+   "class_weighted_pooled": "specific",
+   "class_model_balanced": "other_housekeeping",
    "class_union": "other_housekeeping",
-   "frac_T_model_balanced": 0.007,
-   "frac_TO_model_balanced": 0.495,
-   "largest_model_share_of_pooled_hits": 0.495
+   "frac_T_model_balanced": 0.0,
+   "frac_TO_model_balanced": 0.607,
+   "largest_model_share_of_pooled_hits": 0.516
   }
  },
  "c_largest_model_share_summary": {
-  "median": 0.5965,
-  "min": 0.286,
-  "max": 0.762,
-  "n_concepts_where_one_model_gives_>=50pct_of_hits": 49
+  "median": 0.512,
+  "min": 0.178,
+  "max": 0.695,
+  "n_concepts_where_one_model_gives_>=50pct_of_hits": 51
  },
  "c_model_giving_most_hits_count": {
-  "tGPT": 41,
-  "C2S": 37
+  "C2S": 48,
+  "tGPT": 46,
+  "scGPT": 1,
+  "UCE": 1
  },
  "c_SARS_per_model": {
   "AIDO": {
    "frac_T": 1.0,
    "frac_TO": 1.0,
-   "n_hits": 6,
+   "n_hits": 3,
    "n_features": 1
   },
   "C2S": {
-   "frac_T": 0.608,
-   "frac_TO": 0.626,
-   "n_hits": 278,
-   "n_features": 57
+   "frac_T": 0.588,
+   "frac_TO": 0.623,
+   "n_hits": 308,
+   "n_features": 66
   },
   "Geneformer": {
-   "frac_T": 0.625,
-   "frac_TO": 0.625,
-   "n_hits": 32,
-   "n_features": 8
+   "frac_T": 0.68,
+   "frac_TO": 0.74,
+   "n_hits": 50,
+   "n_features": 13
   },
   "UCE": {
    "frac_T": 1.0,
    "frac_TO": 1.0,
-   "n_hits": 46,
-   "n_features": 12
+   "n_hits": 34,
+   "n_features": 9
   },
   "scGPT": {
-   "frac_T": 0.672,
-   "frac_TO": 0.721,
-   "n_hits": 61,
-   "n_features": 16
+   "frac_T": 0.762,
+   "frac_TO": 0.762,
+   "n_hits": 84,
+   "n_features": 21
   },
   "tGPT": {
-   "frac_T": 0.962,
-   "frac_TO": 0.972,
-   "n_hits": 684,
-   "n_features": 196
+   "frac_T": 0.943,
+   "frac_TO": 0.951,
+   "n_hits": 654,
+   "n_features": 190
   },
   "scFoundation": {
-   "frac_T": 0.556,
-   "frac_TO": 0.556,
-   "n_hits": 18,
-   "n_features": 5
+   "frac_T": 0.531,
+   "frac_TO": 0.531,
+   "n_hits": 49,
+   "n_features": 13
   },
   "Tahoe": {
-   "frac_T": 0.811,
-   "frac_TO": 0.863,
-   "n_hits": 95,
+   "frac_T": 0.809,
+   "frac_TO": 0.84,
+   "n_hits": 94,
    "n_features": 24
   }
  },
  "d_all7_contrast": {
   "d0": {
-   "all7_n": 127,
+   "all7_n": 135,
    "all7_class_weighted": {
-    "other_housekeeping": 53,
-    "specific": 39,
-    "protein_synthesis": 35
+    "other_housekeeping": 46,
+    "specific": 50,
+    "protein_synthesis": 39
    },
-   "all7_minus_protein_synthesis": 92,
-   "all6_without_MaxToki_n": 169,
+   "all7_minus_protein_synthesis": 96,
+   "all6_without_MaxToki_n": 158,
    "all6_without_MaxToki_class_weighted": {
-    "other_housekeeping": 77,
-    "specific": 57,
-    "protein_synthesis": 35
+    "other_housekeeping": 52,
+    "specific": 66,
+    "protein_synthesis": 40
    }
   },
   "mid": {
-   "all7_n": 15,
+   "all7_n": 25,
    "all7_class_weighted": {
-    "specific": 13,
+    "specific": 23,
     "other_housekeeping": 2
    },
-   "all7_minus_protein_synthesis": 15,
-   "all6_without_MaxToki_n": 146,
+   "all7_minus_protein_synthesis": 25,
+   "all6_without_MaxToki_n": 229,
    "all6_without_MaxToki_class_weighted": {
-    "other_housekeeping": 21,
-    "protein_synthesis": 41,
-    "specific": 84
+    "other_housekeeping": 53,
+    "protein_synthesis": 43,
+    "specific": 133
    }
   },
   "d100": {
-   "all7_n": 5,
+   "all7_n": 7,
    "all7_class_weighted": {
-    "specific": 4,
-    "protein_synthesis": 1
+    "specific": 6,
+    "other_housekeeping": 1
    },
-   "all7_minus_protein_synthesis": 4,
-   "all6_without_MaxToki_n": 42,
+   "all7_minus_protein_synthesis": 7,
+   "all6_without_MaxToki_n": 49,
    "all6_without_MaxToki_class_weighted": {
-    "protein_synthesis": 33,
-    "specific": 8,
+    "protein_synthesis": 39,
+    "specific": 9,
     "other_housekeeping": 1
    }
   }

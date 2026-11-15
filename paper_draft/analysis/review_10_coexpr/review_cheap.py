@@ -30,12 +30,13 @@ D = json.load(open(f"{SRC}/coexpr_degmatched.json"))
 R = json.load(open(f"{SRC}/coexpr_rmatched.json"))
 S = json.load(open(f"{SRC}/salivary_check.json"))
 P = json.load(open(f"{SRC}/residual_hits_prefix.json"))
-PASS = ["Tahoe", "scGPT", "UCE", "C2S", "Geneformer"]
+from _fixed_params import PASSED as PASS, BUDGET
 out = {}
 
 # ------------------------------------------------------------------ (1) re-derive numbers
 pe = T["kinds"]["pearson"]
-checks = [
+PUBLISHED_RUN = "8631" in pe["global"]          # the re-derivation compares with the notes of the published run
+checks = [] if not PUBLISHED_RUN else [
     # (label, notes value, derived value, notes location)
     ("U genes", 18250, T["gene_universe"]["expressed_ge_min_cells"], "10:136"),
     ("TRRUST edges in U", 6805, T["gene_universe"]["trrust_edges_in_U"], "10:137"),
@@ -172,8 +173,9 @@ for m in PASS:
     if pm["hits_not_top5"]:
         tfb[m]["binom_p_residual_tf_tf_vs_node_set_rate"] = round(binomtest(pm["hits_not_top5_tf_tf"], pm["hits_not_top5"], tfb[m]["tf_tf_share_in_node_set"]).pvalue, 5)
 out["tf_tf_base_rate"] = tfb
-out["residual_pooled_4_models"] = {"hits": sum(P["models"][m]["hits_not_top5"] for m in ["Tahoe", "UCE", "C2S", "scGPT"]),
-                                   "tf_tf": sum(P["models"][m]["hits_not_top5_tf_tf"] for m in ["Tahoe", "UCE", "C2S", "scGPT"])}
+RES = [m for m in PASS if m in P["models"]]       # published run: Tahoe, UCE, C2S, scGPT
+out["residual_pooled_4_models"] = {"models": RES, "hits": sum(P["models"][m]["hits_not_top5"] for m in RES),
+                                   "tf_tf": sum(P["models"][m]["hits_not_top5_tf_tf"] for m in RES)}
 
 # ------------------------------------------------------------------ (6) TRRUST edges touching salivary genes
 SAL = set(S["core_genes"]) | set(S["extra_genes_checked"]) - {"LYZ"}

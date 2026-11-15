@@ -1,25 +1,31 @@
 #!/usr/bin/env python
 """Step 7 (job item 7): rebuild the released prediction list with the corrected same-family rule.
 
-Rebuild exactly as hypothesis_trrust3.py:128-138: pairs in the W>=5 graphs of >= 2 of the five
+Rebuild pairs in the runs-v2 W>=5 graphs of >= 2 of the four
 passing models; drop pairs in TRRUST, in STRING (string_edges.json), or co-members of any curated
 GO_BP/KEGG/Reactome set of <= 200 genes. Then drop same-family pairs with
   (old)  the regex rule actually used for the release (hypothesis_trrust3.py:124-126,136)
   (new)  the corrected rule of hypothesis_robust.py:35-49 (copied in common.same_family)
-Check the old-rule list against the released hypothesis_pairs_full.json (4,349 pairs), count the
+Check the old-rule list against the historical hypothesis_pairs_full.json (4,882 pairs), count the
 corrected list, and recompute the literature numbers that CAN be recomputed from the per-pair fields
 stored in hypothesis_pairs_full.json (co_mentions = uncapped paper count with both genes; papers).
 The capped co-mention test (mega-paper cap, bipartite-shuffle null) needs NCBI gene2pubmed +
 gene_info, which are not in the repo or on this machine; it was NOT re-run.
 Curated-set membership is checked with a gene -> set index (no giant pair set), same definition.
+Usage: python s07_released_list.py <directory containing historical hypothesis_pairs_full.json and hypothesis_pubmed.json>
 Output: OUT/s07_released_list.json
 """
+import argparse
 import json, os, re, sys, pickle
+from pathlib import Path
 from collections import defaultdict, Counter
 import numpy as np
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common import *  # noqa
 
+parser = argparse.ArgumentParser(description=__doc__)
+parser.add_argument("historical_results", type=Path)
+historical = parser.parse_args().historical_results
 truth, _, _ = load_truth()
 STRING = load_string()
 g2s = defaultdict(set); sid = 0
@@ -51,7 +57,9 @@ old_list = [c for c in cands if not c["old_rule"]]
 new_list = [c for c in cands if not c["new_rule"]]
 both_list = [c for c in cands if not c["new_rule"] and not c["old_rule"]]
 
-rel = json.load(open(f"{ORIG}/outputs/atlas/comparative/hypothesis_pairs_full.json"))
+rel = json.load(open(historical / "hypothesis_pairs_full.json"))
+if rel["n"] != 4882:
+    parser.error("historical_results must point to the 4,882-pair snapshot before commit 1197acf")
 relset = {tuple(p["pair"]) for p in rel["pairs"]}
 oldset = {tuple(c["pair"]) for c in old_list}
 newset = {tuple(c["pair"]) for c in new_list}
@@ -92,7 +100,7 @@ res = {
     "literature_fields_corrected_list": lit(newset),
     "literature_fields_corrected_list_note": "only pairs present in the released list carry stored co_mentions/papers; "
                                               "pairs dropped only by the old rule and kept by the new rule have no stored literature fields",
-    "published_hypothesis_pubmed": {k: json.load(open(f"{ORIG}/outputs/atlas/comparative/hypothesis_pubmed.json"))[k]
+    "published_hypothesis_pubmed": {k: json.load(open(historical / "hypothesis_pubmed.json"))[k]
                                      for k in ("n_pairs_testable", "observed_pairs_comentioned", "fold", "p_emp",
                                                "n_never_comentioned", "n_never_but_both_studied",
                                                "observed_pairs_comentioned_uncapped")},

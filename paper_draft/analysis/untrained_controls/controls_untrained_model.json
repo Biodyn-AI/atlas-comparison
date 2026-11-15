@@ -1,0 +1,35 @@
+{
+ "set": "untrained_model",
+ "root": "$ATLAS_CACHE/out_untrained",
+ "n_perm": 200,
+ "models": {
+  "Geneformer": {
+   "n_layers": 18,
+   "mid_layer_file": "feature_catalog_L09.json",
+   "mid_features": 4607,
+   "mid_labelled_share": 0.0193,
+   "mid_gene_sets": 107,
+   "trrust": {
+    "n_pairs": 29555,
+    "hits": 1,
+    "null_mean": 1.005,
+    "fold": 1.0,
+    "p_emp": 0.61194
+   }
+  },
+  "UCE": {
+   "n_layers": 33,
+   "mid_layer_file": "feature_catalog_L16.json",
+   "mid_features": 2785,
+   "mid_labelled_share": 0.0215,
+   "mid_gene_sets": 115,
+   "trrust": {
+    "n_pairs": 149636,
+    "hits": 32,
+    "null_mean": 6.305,
+    "fold": 5.08,
+    "p_emp": 0.00498
+   }
+  }
+ }
+}

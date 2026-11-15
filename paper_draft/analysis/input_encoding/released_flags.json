@@ -1,0 +1,53 @@
+{
+ "n": 4485,
+ "hgnc": {
+  "n_rows": 45277,
+  "max_date_modified": "2026-10-12"
+ },
+ "flagged": {
+  "p3": 85,
+  "p2": 233,
+  "hgnc": 203,
+  "alpha20": 92,
+  "any": 287
+ },
+ "share_flagged": {
+  "p3": 0.019,
+  "p2": 0.052,
+  "hgnc": 0.0453,
+  "alpha20": 0.0205,
+  "any": 0.064
+ },
+ "examples_flagged_any": [
+  "CD177-FCGR3B",
+  "CD163-IL1R2",
+  "HTN3-SMR3B",
+  "PRB3-PRH2",
+  "HTN1-SMR3B",
+  "CEACAM8-CEBPE",
+  "SLC22A6-SLC5A12",
+  "C11ORF54-PCK1",
+  "SLC13A3-SLC5A12",
+  "FCER2-FCRL1",
+  "SLC17A3-SLC3A1",
+  "H1-5-H2AC12",
+  "FKBP5-IRAK3",
+  "NDUFA11-ROMO1",
+  "C1RL-C1S",
+  "HPD-MIOX",
+  "IL2RG-IL32",
+  "H1-3-H2AC8",
+  "MT-CO1-MT-RNR2",
+  "MT-CO3-MT-RNR2",
+  "MT-CO2-MT-RNR2",
+  "MT-ATP6-MT-RNR2",
+  "MT-CYB-MT-RNR2",
+  "MT-CO1-MT-RNR1",
+  "MT-CYB-MT-RNR1",
+  "MT-ATP6-MT-RNR1",
+  "MT-CO2-MT-RNR1",
+  "MT-ND4-MT-RNR2",
+  "MT-CO3-MT-RNR1",
+  "MT-ND3-MT-RNR2"
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "model": "scFoundation",
+ "official": "scFoundation get_embedding.py (cell, version ce, pool all, t4)",
+ "n_cells": 2000,
+ "official_dim": 3072,
+ "reference_pca50": {
+  "cka": 0.6633,
+  "knn15": 0.4155
+ },
+ "layers": {
+  "0": {
+   "cka": 0.2023,
+   "knn15": 0.3016
+  },
+  "1": {
+   "cka": 0.3165,
+   "knn15": 0.341
+  },
+  "2": {
+   "cka": 0.4382,
+   "knn15": 0.3481
+  },
+  "3": {
+   "cka": 0.5604,
+   "knn15": 0.3516
+  },
+  "4": {
+   "cka": 0.6714,
+   "knn15": 0.3655
+  },
+  "5": {
+   "cka": 0.7017,
+   "knn15": 0.3816
+  },
+  "6": {
+   "cka": 0.76,
+   "knn15": 0.3935
+  },
+  "7": {
+   "cka": 0.8039,
+   "knn15": 0.4492
+  },
+  "8": {
+   "cka": 0.7807,
+   "knn15": 0.4433
+  },
+  "9": {
+   "cka": 0.8636,
+   "knn15": 0.4949
+  },
+  "10": {
+   "cka": 0.9033,
+   "knn15": 0.5123
+  },
+  "11": {
+   "cka": 0.9028,
+   "knn15": 0.5037
+  }
+ },
+ "best_layer": 10,
+ "last_layer": 11,
+ "probe_balanced_accuracy": {
+  "official": {
+   "cell_type": 0.8621,
+   "compartment": 0.9495
+  },
+  "ours_last_layer": {
+   "cell_type": 0.815,
+   "compartment": 0.9268
+  },
+  "ours_best_cka_layer": {
+   "cell_type": 0.8235,
+   "compartment": 0.9303
+  },
+  "raw_pca50": {
+   "cell_type": 0.8313,
+   "compartment": 0.951
+  }
+ }
+}

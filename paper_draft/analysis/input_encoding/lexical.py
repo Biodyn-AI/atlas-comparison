@@ -139,7 +139,7 @@ RES = {"design": {
     "p": "(#null >= obs + 1)/(R + 1); for lev #null <= obs",
     "esm_cos": "mean cosine of the UCE input tokens (ESM2 protein embeddings, unit-normalised) over the lcp/lev pair subsample, pairs with both genes embedded",
     "R_pool": R_POOL, "R_mid": R_MID, "R_layer": R_LAYER, "n_pairs_for_lcp_lev": NLEV, "seed": 0,
-    "hgnc": {"path": HGNC_PATH, **HVER}, "token_sources": TOKEN_SOURCE}, "models": {}}
+    "hgnc": {"path": "$HGNC_PATH", **HVER}, "token_sources": TOKEN_SOURCE}, "models": {}}
 
 for m in ONLY:
     t0 = time.time()

@@ -50,8 +50,9 @@ ORIG = BASE
 TRRUST_RAW = os.environ.get("TRRUST_RAW", os.path.join(CACHE, "trrust_rawdata.human.tsv"))
 
 ORDER = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "scGPT", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]
-PASSED = ["Tahoe", "scGPT", "UCE", "C2S", "Geneformer"]
-SEVEN = ["Tahoe", "scGPT", "UCE", "C2S", "Geneformer", "MaxToki", "tGPT"]
+from _fixed_params import PASSED  # was the five of the superseded run
+from _fixed_params import WITH_HITS
+SEVEN = WITH_HITS  # models with >= 1 known pair (published run: Tahoe, scGPT, UCE, C2S, Geneformer, MaxToki, tGPT)
 TOPG = 10
 SHIFT = 1 << 21
 

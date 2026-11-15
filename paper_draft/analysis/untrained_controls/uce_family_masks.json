@@ -1,0 +1,23 @@
+{
+ "trained": {
+  "hits": 60,
+  "M1": 15,
+  "M2": 29,
+  "M1_or_M2": 31,
+  "both_genes_in_map": 33
+ },
+ "untrained_model": {
+  "hits": 32,
+  "M1": 10,
+  "M2": 17,
+  "M1_or_M2": 18,
+  "both_genes_in_map": 18
+ },
+ "random_sae": {
+  "hits": 34,
+  "M1": 4,
+  "M2": 4,
+  "M1_or_M2": 6,
+  "both_genes_in_map": 6
+ }
+}

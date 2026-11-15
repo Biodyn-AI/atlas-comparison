@@ -28,7 +28,7 @@ CACHE = os.environ.get("ATLAS_CACHE", os.path.join(_ANALYSIS, ".cache"))
 ALLCAT = f"{BASE}/outputs/atlas/alllayer_cat"; TS = f"{BASE}/outputs/atlas/ts3_out"
 C = f"{BASE}/outputs/atlas/comparative"; G = f"{BASE}/outputs/atlas/genesets"
 ORDER = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "scGPT", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]
-PASSED = ["Tahoe", "scGPT", "UCE", "C2S", "Geneformer"]
+from _fixed_params import PASSED  # was the five of the superseded run
 TOPG, W0 = 10, 5
 OUTDIR = os.path.dirname(os.path.abspath(__file__))
 SCR = os.path.join(CACHE, "input_encoding")

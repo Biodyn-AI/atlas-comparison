@@ -19,7 +19,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(os.path.dirname(HERE), "input_encoding"))
 from ie_common import *   # noqa
 
-BUDGET = 8631
+from _fixed_params import BUDGET
 TRUTH = set()
 for a, bs in json.load(open(f"{G}/trrust_edges.json")).items():
     for b in bs:
@@ -76,6 +76,7 @@ for m in ["C2S", "UCE", "Tahoe", "Geneformer", "MaxToki", "tGPT", "GeneCompass"]
     raw_alpha = graph(m, False); assert raw_alpha == pub
     cln = graph(m, True)
     out["models"][m] = {"published": tie_stats(pub, rng, "cache insertion order"),
-                        "clean": tie_stats(cln, rng, "this script's internal uid order (NOT trrust_lexical.py); hits_alphabetical_ties reproduces trrust_lexical.py")}
+                        "clean": (tie_stats(cln, rng, "this script's internal uid order (NOT trrust_lexical.py); hits_alphabetical_ties reproduces trrust_lexical.py")
+                                  if len(cln) >= BUDGET else {"note": f"clean graph ({len(cln)} pairs) smaller than the budget"})}
     print(m, json.dumps(out["models"][m]), flush=True)
 json.dump(out, open(f"{HERE}/budget_tiebreak.json", "w"), indent=1)

@@ -11,6 +11,7 @@ top-10 lists (same filter as lexical.py), per layer and pooled, report:
 Also: share of the published top-8,631 C2S / UCE / tGPT pairs that touch an F gene.
     ATLAS_BASE=<copy> python residual_filler.py [R] -> residual_filler.json
 """
+from _fixed_params import BUDGET
 import json, os, pickle, sys
 from collections import Counter
 import numpy as np
@@ -68,11 +69,11 @@ for m in ["C2S", "UCE", "tGPT", "Tahoe"]:
     M["strict_clean_p3"] = {}
     for L in test_layers:
         M["strict_clean_p3"][str(L)] = {"clean": p3_scope(Xc[Lc == L], p3, rng, R), "clean_minus_F": p3_scope(Xs[Ls == L], p3, rng, R)}
-    if len(PRED_PUB[m]) >= 8631:
-        top = sorted(PRED_PUB[m], key=lambda e: -PRED_PUB[m][e])[:8631]
+    if len(PRED_PUB[m]) >= BUDGET:
+        top = sorted(PRED_PUB[m], key=lambda e: -PRED_PUB[m][e])[:BUDGET]
         Fset = {un[i] for i in np.where(Fu)[0]}
-        M["published_top8631_pairs_touching_F"] = round(sum(1 for a, b in top if a in Fset or b in Fset) / 8631, 4)
-        M["published_top8631_pairs_both_F"] = round(sum(1 for a, b in top if a in Fset and b in Fset) / 8631, 4)
+        M["published_top8631_pairs_touching_F"] = round(sum(1 for a, b in top if a in Fset or b in Fset) / BUDGET, 4)
+        M["published_top8631_pairs_both_F"] = round(sum(1 for a, b in top if a in Fset and b in Fset) / BUDGET, 4)
     out["models"][m] = M
     print(m, "F", M["n_F_genes"], M["F_examples"][:6], "pooled", M["pooled"], flush=True)
     for L, x in M["strict_clean_p3"].items():

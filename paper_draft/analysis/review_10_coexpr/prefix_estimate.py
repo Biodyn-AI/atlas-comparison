@@ -21,6 +21,7 @@ nnz_all = np.diff(X.indptr)
 nnz_U = np.asarray((X[:, U] > 0).sum(1)).ravel()
 caps = {"tGPT": 64, "C2S": 512, "UCE": None, "scGPT": 1200, "Geneformer": 2048, "Tahoe": 2048, "MaxToki": 2048, "GeneCompass": 2048}
 def cells_seen(tok, cap=500000, bs=8):
+    return len(tok)   # corrected extraction (per-cell sampling) reads every cell; the position cap no longer applies
     tot = 0
     for s in range(0, len(tok), bs):
         tot += int(tok[s:s + bs].sum())

@@ -29,7 +29,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 BASE = os.environ.get("ATLAS_BASE", os.path.abspath(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "..", "..")))  # repository root with the release archives unpacked
 C = f"{BASE}/outputs/atlas/comparative"; G = f"{BASE}/outputs/atlas/genesets"
 ORDER = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "scGPT", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]
-PASS = ["Tahoe", "scGPT", "UCE", "C2S", "Geneformer"]
+from _fixed_params import PASSED as PASS, BUDGET, GRAPH_SIZE
 CORPUS = sys.argv[1]
 NPERM = int(sys.argv[2]) if len(sys.argv) > 2 else 200
 PARTS = (sys.argv[3] if len(sys.argv) > 3 else "P1,P2,P3").split(",")
@@ -194,14 +194,14 @@ def paired(Ec, Ex, R):
 
 
 res = json.load(open(OUT)) if os.path.exists(OUT) else {}
-res.update({"n_perm": NPERM, "corpus": CORPUS, "U": len(UG)})
+res.update({"n_perm": NPERM, "corpus": "$ATLAS_CACHE/" + os.path.basename(CORPUS), "U": len(UG)})
 seed = 7000
 
 # ============================================================== P1
 if "P1" in PARTS:
     Z, _ = make_Z(UG)
     P1 = {}
-    for N in (8631, 41952):
+    for N in (BUDGET, GRAPH_SIZE["Tahoe"]):
         pairs, rmin = top_N_pairs(Z, UG, N)
         P1[f"global_top{N}"] = {"hits": len(R0.hit_pairs(pairs)), "r_cutoff": round(rmin, 4)}
         log("P1 global", N, P1[f"global_top{N}"])

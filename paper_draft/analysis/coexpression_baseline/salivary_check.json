@@ -1,5 +1,5 @@
 {
- "corpus": "$ATLAS_CACHE/corpus_seed0.h5ad",
+ "corpus": "$ATLAS_CACHE/corpus6k.h5ad",
  "n_cells": 6000,
  "core_genes": [
   "HTN1",
@@ -30,7 +30,9 @@
   "BPIFA2",
   "OPRPN",
   "PIP",
-  "LYZ"
+  "LYZ",
+  "SCGB3A2",
+  "SFTPA2"
  ],
  "not_in_corpus": [],
  "salivary_like_tissues_in_corpus": [
@@ -199,10 +201,10 @@
     "parotid gland": 37,
     "lung": 5,
     "submandibular gland": 4,
-    "cortex of kidney": 2,
     "spleen": 2,
-    "lymph node": 1,
+    "cortex of kidney": 2,
     "brown adipose tissue": 1,
+    "lymph node": 1,
     "blood": 1
    },
    "share_umi_from_salivary_tissue_cells": "0.8884"
@@ -475,8 +477,8 @@
     "sublingual gland": 8,
     "submandibular gland": 4,
     "bladder organ": 3,
-    "lymph node": 2,
-    "blood": 2
+    "blood": 2,
+    "lymph node": 2
    },
    "share_umi_from_salivary_tissue_cells": "0.2813"
   },
@@ -587,6 +589,39 @@
     "parotid gland": 27
    },
    "share_umi_from_salivary_tissue_cells": "0.0078"
+  },
+  "SCGB3A2": {
+   "n_cells_expr": 664,
+   "total_umi": 178117.0,
+   "max": 89877.0,
+   "median_among_expr": 2.0,
+   "share_expr_with_count_1": 0.431,
+   "by_compartment_n_expr": {
+    "lung": 648,
+    "immune": 13,
+    "kidney": 3
+   },
+   "by_tissue_n_expr": {
+    "lung": 660,
+    "kidney": 3,
+    "blood": 1
+   },
+   "share_umi_from_salivary_tissue_cells": "0.0"
+  },
+  "SFTPA2": {
+   "n_cells_expr": 1311,
+   "total_umi": 7287655.0,
+   "max": 1010197.0,
+   "median_among_expr": 3.0,
+   "share_expr_with_count_1": 0.327,
+   "by_compartment_n_expr": {
+    "lung": 1276,
+    "immune": 35
+   },
+   "by_tissue_n_expr": {
+    "lung": 1311
+   },
+   "share_umi_from_salivary_tissue_cells": "0.0"
   }
  },
  "cells_with_any_core_read": 565,
@@ -595,12 +630,12 @@
   "q25": 1.0,
   "median": 1.0,
   "q75": 1.0,
-  "q95": 271.6000061035156,
+  "q95": 271.5999755859375,
   "max": 3258.0
  },
  "core_frac_of_library_among_expr": {
   "median": 9.797197708394378e-05,
-  "q95": 0.026153534650802612,
+  "q95": 0.02615351602435112,
   "max": 0.24987822771072388
  },
  "by_compartment": [
@@ -767,14 +802,6 @@
    "share_with_core": 0.25
   },
   {
-   "tissue": "bladder organ",
-   "n_cells": 71,
-   "n_with_core": 4,
-   "core_umi": 4.0,
-   "median_core_among_expr": 1.0,
-   "share_with_core": 0.0563
-  },
-  {
    "tissue": "stomach smooth muscle",
    "n_cells": 39,
    "n_with_core": 4,
@@ -783,12 +810,12 @@
    "share_with_core": 0.1026
   },
   {
-   "tissue": "coronary artery",
-   "n_cells": 22,
-   "n_with_core": 3,
-   "core_umi": 3.0,
+   "tissue": "bladder organ",
+   "n_cells": 71,
+   "n_with_core": 4,
+   "core_umi": 4.0,
    "median_core_among_expr": 1.0,
-   "share_with_core": 0.1364
+   "share_with_core": 0.0563
   },
   {
    "tissue": "ascending colon",
@@ -799,20 +826,12 @@
    "share_with_core": 0.1429
   },
   {
-   "tissue": "liver",
-   "n_cells": 35,
-   "n_with_core": 2,
-   "core_umi": 2.0,
+   "tissue": "coronary artery",
+   "n_cells": 22,
+   "n_with_core": 3,
+   "core_umi": 3.0,
    "median_core_among_expr": 1.0,
-   "share_with_core": 0.0571
-  },
-  {
-   "tissue": "trachea",
-   "n_cells": 39,
-   "n_with_core": 2,
-   "core_umi": 2.0,
-   "median_core_among_expr": 1.0,
-   "share_with_core": 0.0513
+   "share_with_core": 0.1364
   },
   {
    "tissue": "exocrine pancreas",
@@ -829,6 +848,22 @@
    "core_umi": 2.0,
    "median_core_among_expr": 2.0,
    "share_with_core": 0.037
+  },
+  {
+   "tissue": "trachea",
+   "n_cells": 39,
+   "n_with_core": 2,
+   "core_umi": 2.0,
+   "median_core_among_expr": 1.0,
+   "share_with_core": 0.0513
+  },
+  {
+   "tissue": "liver",
+   "n_cells": 35,
+   "n_with_core": 2,
+   "core_umi": 2.0,
+   "median_core_among_expr": 1.0,
+   "share_with_core": 0.0571
   }
  ],
  "by_dataset_id": [
@@ -843,180 +878,12 @@
  ],
  "by_donor_id": [
   {
-   "donor_id": "TSP14",
-   "n_cells": 864,
-   "n_with_core": 103,
-   "core_umi": 12753.0,
+   "donor_id": "not recorded",
+   "n_cells": 6000,
+   "n_with_core": 565,
+   "core_umi": 26427.0,
    "median_core_among_expr": 1.0,
-   "share_with_core": 0.1192
-  },
-  {
-   "donor_id": "TSP7",
-   "n_cells": 147,
-   "n_with_core": 36,
-   "core_umi": 9876.0,
-   "median_core_among_expr": 213.0,
-   "share_with_core": 0.2449
-  },
-  {
-   "donor_id": "TSP2",
-   "n_cells": 2996,
-   "n_with_core": 231,
-   "core_umi": 2210.0,
-   "median_core_among_expr": 1.0,
-   "share_with_core": 0.0771
-  },
-  {
-   "donor_id": "TSP1",
-   "n_cells": 576,
-   "n_with_core": 54,
-   "core_umi": 656.0,
-   "median_core_among_expr": 1.0,
-   "share_with_core": 0.0938
-  },
-  {
-   "donor_id": "TSP25",
-   "n_cells": 693,
-   "n_with_core": 66,
-   "core_umi": 606.0,
-   "median_core_among_expr": 1.0,
-   "share_with_core": 0.0952
-  },
-  {
-   "donor_id": "TSP11",
-   "n_cells": 7,
-   "n_with_core": 1,
-   "core_umi": 215.0,
-   "median_core_among_expr": 215.0,
-   "share_with_core": 0.1429
-  },
-  {
-   "donor_id": "TSP21",
-   "n_cells": 336,
-   "n_with_core": 43,
-   "core_umi": 54.0,
-   "median_core_among_expr": 1.0,
-   "share_with_core": 0.128
-  },
-  {
-   "donor_id": "TSP27",
-   "n_cells": 175,
-   "n_with_core": 19,
-   "core_umi": 30.0,
-   "median_core_among_expr": 1.0,
-   "share_with_core": 0.1086
-  },
-  {
-   "donor_id": "TSP15",
-   "n_cells": 1,
-   "n_with_core": 1,
-   "core_umi": 15.0,
-   "median_core_among_expr": 15.0,
-   "share_with_core": 1.0
-  },
-  {
-   "donor_id": "TSP20",
-   "n_cells": 45,
-   "n_with_core": 4,
-   "core_umi": 4.0,
-   "median_core_among_expr": 1.0,
-   "share_with_core": 0.0889
-  },
-  {
-   "donor_id": "TSP6",
-   "n_cells": 28,
-   "n_with_core": 4,
-   "core_umi": 4.0,
-   "median_core_among_expr": 1.0,
-   "share_with_core": 0.1429
-  },
-  {
-   "donor_id": "TSP26",
-   "n_cells": 12,
-   "n_with_core": 1,
-   "core_umi": 2.0,
-   "median_core_among_expr": 2.0,
-   "share_with_core": 0.0833
-  },
-  {
-   "donor_id": "TSP9",
-   "n_cells": 12,
-   "n_with_core": 2,
-   "core_umi": 2.0,
-   "median_core_among_expr": 1.0,
-   "share_with_core": 0.1667
-  },
-  {
-   "donor_id": "TSP13",
-   "n_cells": 1,
-   "n_with_core": 0,
-   "core_umi": 0.0,
-   "median_core_among_expr": 0.0,
-   "share_with_core": 0.0
-  },
-  {
-   "donor_id": "TSP10",
-   "n_cells": 34,
-   "n_with_core": 0,
-   "core_umi": 0.0,
-   "median_core_among_expr": 0.0,
-   "share_with_core": 0.0
-  },
-  {
-   "donor_id": "TSP17",
-   "n_cells": 3,
-   "n_with_core": 0,
-   "core_umi": 0.0,
-   "median_core_among_expr": 0.0,
-   "share_with_core": 0.0
-  },
-  {
-   "donor_id": "TSP3",
-   "n_cells": 1,
-   "n_with_core": 0,
-   "core_umi": 0.0,
-   "median_core_among_expr": 0.0,
-   "share_with_core": 0.0
-  },
-  {
-   "donor_id": "TSP30",
-   "n_cells": 2,
-   "n_with_core": 0,
-   "core_umi": 0.0,
-   "median_core_among_expr": 0.0,
-   "share_with_core": 0.0
-  },
-  {
-   "donor_id": "TSP4",
-   "n_cells": 17,
-   "n_with_core": 0,
-   "core_umi": 0.0,
-   "median_core_among_expr": 0.0,
-   "share_with_core": 0.0
-  },
-  {
-   "donor_id": "TSP5",
-   "n_cells": 1,
-   "n_with_core": 0,
-   "core_umi": 0.0,
-   "median_core_among_expr": 0.0,
-   "share_with_core": 0.0
-  },
-  {
-   "donor_id": "TSP19",
-   "n_cells": 18,
-   "n_with_core": 0,
-   "core_umi": 0.0,
-   "median_core_among_expr": 0.0,
-   "share_with_core": 0.0
-  },
-  {
-   "donor_id": "TSP8",
-   "n_cells": 31,
-   "n_with_core": 0,
-   "core_umi": 0.0,
-   "median_core_among_expr": 0.0,
-   "share_with_core": 0.0
+   "share_with_core": 0.0942
   }
  ],
  "by_cell_type": [
@@ -1165,20 +1032,20 @@
    "share_with_core": 0.0763
   },
   {
-   "cell_type": "non-classical monocyte",
-   "n_cells": 34,
-   "n_with_core": 6,
-   "core_umi": 8.0,
-   "median_core_among_expr": 1.0,
-   "share_with_core": 0.1765
-  },
-  {
    "cell_type": "intermediate monocyte",
    "n_cells": 97,
    "n_with_core": 6,
    "core_umi": 8.0,
    "median_core_among_expr": 1.0,
    "share_with_core": 0.0619
+  },
+  {
+   "cell_type": "non-classical monocyte",
+   "n_cells": 34,
+   "n_with_core": 6,
+   "core_umi": 8.0,
+   "median_core_among_expr": 1.0,
+   "share_with_core": 0.1765
   },
   {
    "cell_type": "lung multiciliated epithelial cell",
@@ -1189,14 +1056,6 @@
    "share_with_core": 0.129
   },
   {
-   "cell_type": "endothelial cell",
-   "n_cells": 17,
-   "n_with_core": 5,
-   "core_umi": 5.0,
-   "median_core_among_expr": 1.0,
-   "share_with_core": 0.2941
-  },
-  {
    "cell_type": "alveolar adventitial fibroblast",
    "n_cells": 30,
    "n_with_core": 5,
@@ -1205,12 +1064,20 @@
    "share_with_core": 0.1667
   },
   {
-   "cell_type": "pericyte",
-   "n_cells": 22,
-   "n_with_core": 4,
+   "cell_type": "endothelial cell",
+   "n_cells": 17,
+   "n_with_core": 5,
+   "core_umi": 5.0,
+   "median_core_among_expr": 1.0,
+   "share_with_core": 0.2941
+  },
+  {
+   "cell_type": "endothelial cell of lymphatic vessel",
+   "n_cells": 14,
+   "n_with_core": 3,
    "core_umi": 4.0,
    "median_core_among_expr": 1.0,
-   "share_with_core": 0.1818
+   "share_with_core": 0.2143
   },
   {
    "cell_type": "vein endothelial cell",
@@ -1270,12 +1137,12 @@
  },
  "top20_cells": [
   {
-   "cell_id": "156054732-immune",
+   "index": "454957-2",
    "compartment": "immune",
    "tissue": "parotid gland",
    "cell_type": "CD4-positive, alpha-beta T cell",
    "dataset_id": "53d208b0-2cfd-4366-9866-c3c6114081bc",
-   "donor_id": "TSP7",
+   "donor_id": "not recorded",
    "assay": "10x 3' v3",
    "total_counts": 16731.0,
    "sal_core_counts": 3258.0,
@@ -1283,12 +1150,12 @@
    "sal_core_frac": 0.19472834467887878
   },
   {
-   "cell_id": "155283637-immune",
+   "index": "87493-2",
    "compartment": "immune",
    "tissue": "parotid gland",
    "cell_type": "CD8-positive, alpha-beta T cell",
    "dataset_id": "53d208b0-2cfd-4366-9866-c3c6114081bc",
-   "donor_id": "TSP14",
+   "donor_id": "not recorded",
    "assay": "10x 3' v3",
    "total_counts": 10966.0,
    "sal_core_counts": 1417.0,
@@ -1296,12 +1163,12 @@
    "sal_core_frac": 0.12921757996082306
   },
   {
-   "cell_id": "155280011-immune",
+   "index": "86455-2",
    "compartment": "immune",
    "tissue": "parotid gland",
    "cell_type": "CD8-positive, alpha-beta T cell",
    "dataset_id": "53d208b0-2cfd-4366-9866-c3c6114081bc",
-   "donor_id": "TSP14",
+   "donor_id": "not recorded",
    "assay": "10x 3' v3",
    "total_counts": 28258.0,
    "sal_core_counts": 1219.0,
@@ -1309,12 +1176,12 @@
    "sal_core_frac": 0.04313822463154793
   },
   {
-   "cell_id": "155279422-immune",
+   "index": "86270-2",
    "compartment": "immune",
    "tissue": "parotid gland",
    "cell_type": "CD8-positive, alpha-beta T cell",
    "dataset_id": "53d208b0-2cfd-4366-9866-c3c6114081bc",
-   "donor_id": "TSP14",
+   "donor_id": "not recorded",
    "assay": "10x 3' v3",
    "total_counts": 4106.0,
    "sal_core_counts": 1026.0,
@@ -1322,12 +1189,12 @@
    "sal_core_frac": 0.24987822771072388
   },
   {
-   "cell_id": "155280331-immune",
+   "index": "86551-2",
    "compartment": "immune",
    "tissue": "parotid gland",
    "cell_type": "monocyte",
    "dataset_id": "53d208b0-2cfd-4366-9866-c3c6114081bc",
-   "donor_id": "TSP14",
+   "donor_id": "not recorded",
    "assay": "10x 3' v3",
    "total_counts": 10201.0,
    "sal_core_counts": 976.0,
@@ -1335,12 +1202,12 @@
    "sal_core_frac": 0.09567689150571823
   },
   {
-   "cell_id": "155099224-kidney",
+   "index": "158-0",
    "compartment": "kidney",
    "tissue": "kidney",
    "cell_type": "B cell",
    "dataset_id": "53d208b0-2cfd-4366-9866-c3c6114081bc",
-   "donor_id": "TSP2",
+   "donor_id": "not recorded",
    "assay": "Smart-seq2",
    "total_counts": 1074309.0,
    "sal_core_counts": 811.0,
@@ -1348,12 +1215,12 @@
    "sal_core_frac": 0.0007549038273282349
   },
   {
-   "cell_id": "155279156-immune",
+   "index": "86191-2",
    "compartment": "immune",
    "tissue": "parotid gland",
    "cell_type": "T cell",
    "dataset_id": "53d208b0-2cfd-4366-9866-c3c6114081bc",
-   "donor_id": "TSP14",
+   "donor_id": "not recorded",
    "assay": "10x 3' v3",
    "total_counts": 21719.0,
    "sal_core_counts": 796.0,
@@ -1361,12 +1228,12 @@
    "sal_core_frac": 0.03664993867278099
   },
   {
-   "cell_id": "155279622-immune",
+   "index": "86337-2",
    "compartment": "immune",
    "tissue": "parotid gland",
    "cell_type": "CD8-positive, alpha-beta T cell",
    "dataset_id": "53d208b0-2cfd-4366-9866-c3c6114081bc",
-   "donor_id": "TSP14",
+   "donor_id": "not recorded",
    "assay": "10x 3' v3",
    "total_counts": 4170.0,
    "sal_core_counts": 794.0,
@@ -1374,12 +1241,12 @@
    "sal_core_frac": 0.1904076784849167
   },
   {
-   "cell_id": "155276824-immune",
+   "index": "85495-2",
    "compartment": "immune",
    "tissue": "parotid gland",
    "cell_type": "CD8-positive, alpha-beta T cell",
    "dataset_id": "53d208b0-2cfd-4366-9866-c3c6114081bc",
-   "donor_id": "TSP14",
+   "donor_id": "not recorded",
    "assay": "10x 3' v3",
    "total_counts": 4775.0,
    "sal_core_counts": 745.0,
@@ -1387,12 +1254,12 @@
    "sal_core_frac": 0.15602093935012817
   },
   {
-   "cell_id": "155277860-immune",
+   "index": "85793-2",
    "compartment": "immune",
    "tissue": "parotid gland",
    "cell_type": "CD8-positive, alpha-beta T cell",
    "dataset_id": "53d208b0-2cfd-4366-9866-c3c6114081bc",
-   "donor_id": "TSP14",
+   "donor_id": "not recorded",
    "assay": "10x 3' v3",
    "total_counts": 19453.0,
    "sal_core_counts": 692.0,
@@ -1400,12 +1267,12 @@
    "sal_core_frac": 0.03557291999459267
   },
   {
-   "cell_id": "155278928-immune",
+   "index": "86112-2",
    "compartment": "immune",
    "tissue": "parotid gland",
    "cell_type": "CD8-positive, alpha-beta T cell",
    "dataset_id": "53d208b0-2cfd-4366-9866-c3c6114081bc",
-   "donor_id": "TSP14",
+   "donor_id": "not recorded",
    "assay": "10x 3' v3",
    "total_counts": 4147.0,
    "sal_core_counts": 665.0,
@@ -1413,12 +1280,12 @@
    "sal_core_frac": 0.16035687923431396
   },
   {
-   "cell_id": "155279691-immune",
+   "index": "86355-2",
    "compartment": "immune",
    "tissue": "parotid gland",
    "cell_type": "CD8-positive, alpha-beta T cell",
    "dataset_id": "53d208b0-2cfd-4366-9866-c3c6114081bc",
-   "donor_id": "TSP14",
+   "donor_id": "not recorded",
    "assay": "10x 3' v3",
    "total_counts": 3651.0,
    "sal_core_counts": 652.0,
@@ -1426,12 +1293,12 @@
    "sal_core_frac": 0.17858120799064636
   },
   {
-   "cell_id": "155275971-immune",
+   "index": "85229-2",
    "compartment": "immune",
    "tissue": "parotid gland",
    "cell_type": "CD8-positive, alpha-beta T cell",
    "dataset_id": "53d208b0-2cfd-4366-9866-c3c6114081bc",
-   "donor_id": "TSP14",
+   "donor_id": "not recorded",
    "assay": "10x 3' v3",
    "total_counts": 4800.0,
    "sal_core_counts": 646.0,
@@ -1439,12 +1306,12 @@
    "sal_core_frac": 0.13458333909511566
   },
   {
-   "cell_id": "155279852-immune",
+   "index": "86401-2",
    "compartment": "immune",
    "tissue": "parotid gland",
    "cell_type": "CD8-positive, alpha-beta T cell",
    "dataset_id": "53d208b0-2cfd-4366-9866-c3c6114081bc",
-   "donor_id": "TSP14",
+   "donor_id": "not recorded",
    "assay": "10x 3' v3",
    "total_counts": 3717.0,
    "sal_core_counts": 636.0,
@@ -1452,12 +1319,12 @@
    "sal_core_frac": 0.17110572755336761
   },
   {
-   "cell_id": "156053939-immune",
+   "index": "454385-2",
    "compartment": "immune",
    "tissue": "parotid gland",
    "cell_type": "B cell",
    "dataset_id": "53d208b0-2cfd-4366-9866-c3c6114081bc",
-   "donor_id": "TSP7",
+   "donor_id": "not recorded",
    "assay": "10x 3' v3",
    "total_counts": 19260.0,
    "sal_core_counts": 633.0,
@@ -1465,12 +1332,12 @@
    "sal_core_frac": 0.032866042107343674
   },
   {
-   "cell_id": "155282824-immune",
+   "index": "87266-2",
    "compartment": "immune",
    "tissue": "parotid gland",
    "cell_type": "CD8-positive, alpha-beta T cell",
    "dataset_id": "53d208b0-2cfd-4366-9866-c3c6114081bc",
-   "donor_id": "TSP14",
+   "donor_id": "not recorded",
    "assay": "10x 3' v3",
    "total_counts": 3547.0,
    "sal_core_counts": 613.0,
@@ -1478,12 +1345,12 @@
    "sal_core_frac": 0.17282210290431976
   },
   {
-   "cell_id": "155277878-immune",
+   "index": "85800-2",
    "compartment": "immune",
    "tissue": "parotid gland",
    "cell_type": "CD8-positive, alpha-beta T cell",
    "dataset_id": "53d208b0-2cfd-4366-9866-c3c6114081bc",
-   "donor_id": "TSP14",
+   "donor_id": "not recorded",
    "assay": "10x 3' v3",
    "total_counts": 7409.0,
    "sal_core_counts": 609.0,
@@ -1491,12 +1358,12 @@
    "sal_core_frac": 0.08219733089208603
   },
   {
-   "cell_id": "156050208-immune",
+   "index": "451734-2",
    "compartment": "immune",
    "tissue": "parotid gland",
    "cell_type": "B cell",
    "dataset_id": "53d208b0-2cfd-4366-9866-c3c6114081bc",
-   "donor_id": "TSP7",
+   "donor_id": "not recorded",
    "assay": "10x 3' v3",
    "total_counts": 8731.0,
    "sal_core_counts": 604.0,
@@ -1504,12 +1371,12 @@
    "sal_core_frac": 0.06917878985404968
   },
   {
-   "cell_id": "155307959-immune",
+   "index": "100910-2",
    "compartment": "immune",
    "tissue": "parotid gland",
    "cell_type": "macrophage",
    "dataset_id": "53d208b0-2cfd-4366-9866-c3c6114081bc",
-   "donor_id": "TSP7",
+   "donor_id": "not recorded",
    "assay": "10x 3' v3",
    "total_counts": 50013.0,
    "sal_core_counts": 544.0,
@@ -1517,12 +1384,12 @@
    "sal_core_frac": 0.010877171531319618
   },
   {
-   "cell_id": "155280295-immune",
+   "index": "86538-2",
    "compartment": "immune",
    "tissue": "parotid gland",
    "cell_type": "CD8-positive, alpha-beta T cell",
    "dataset_id": "53d208b0-2cfd-4366-9866-c3c6114081bc",
-   "donor_id": "TSP14",
+   "donor_id": "not recorded",
    "assay": "10x 3' v3",
    "total_counts": 11708.0,
    "sal_core_counts": 523.0,
@@ -1537,6 +1404,24 @@
   "n_cells_core_ge_100": 51
  },
  "top_pairs_pearson": {
+  "SCGB3A2-SFTPA2": {
+   "all": 0.4597,
+   "salivary_tissue_cells": null,
+   "other_cells": 0.4592,
+   "n_cells_both_expr": 556
+  },
+  "PRB3-STATH": {
+   "all": 0.9259,
+   "salivary_tissue_cells": 0.8853,
+   "other_cells": -0.0016,
+   "n_cells_both_expr": 37
+  },
+  "PRB4-STATH": {
+   "all": 0.8514,
+   "salivary_tissue_cells": 0.7687,
+   "other_cells": -0.0013,
+   "n_cells_both_expr": 35
+  },
   "HTN1-PRB4": {
    "all": 0.8724,
    "salivary_tissue_cells": 0.8036,
@@ -1549,24 +1434,6 @@
    "other_cells": -0.0014,
    "n_cells_both_expr": 37
   },
-  "PRB3-STATH": {
-   "all": 0.9259,
-   "salivary_tissue_cells": 0.8853,
-   "other_cells": -0.0016,
-   "n_cells_both_expr": 37
-  },
-  "HTN3-PRB4": {
-   "all": 0.8866,
-   "salivary_tissue_cells": 0.814,
-   "other_cells": -0.0007,
-   "n_cells_both_expr": 35
-  },
-  "PRB4-SMR3B": {
-   "all": 0.8295,
-   "salivary_tissue_cells": 0.7045,
-   "other_cells": -0.0006,
-   "n_cells_both_expr": 35
-  },
   "PRH2-SMR3B": {
    "all": 0.954,
    "salivary_tissue_cells": 0.9109,
@@ -1578,6 +1445,195 @@
    "salivary_tissue_cells": 0.9464,
    "other_cells": 0.0635,
    "n_cells_both_expr": 42
+  }
+ },
+ "top_pairs_detail": {
+  "SCGB3A2-SFTPA2": {
+   "n_models": 8,
+   "r_all": 0.4597,
+   "r_without_salivary_tissue_cells": 0.4592,
+   "top_tissue_by_pair_umi": "lung",
+   "top_tissue_umi_share": 1.0,
+   "r_without_top_tissue": null,
+   "both_expr_by_tissue": {
+    "lung": 556
+   },
+   "both_expr_by_cell_type": {
+    "pulmonary alveolar type 2 cell": 248,
+    "macrophage": 76,
+    "club cell": 49,
+    "capillary endothelial cell": 32,
+    "pulmonary alveolar type 1 cell": 28
+   },
+   "both_expr_by_compartment": {
+    "lung": 548,
+    "immune": 8
+   },
+   "umi_by_compartment": {
+    "immune": 100.0,
+    "kidney": 4.0,
+    "lung": 7465668.0
+   }
+  },
+  "PRB3-STATH": {
+   "n_models": 7,
+   "r_all": 0.9259,
+   "r_without_salivary_tissue_cells": -0.0016,
+   "top_tissue_by_pair_umi": "parotid gland",
+   "top_tissue_umi_share": 0.9565,
+   "r_without_top_tissue": -0.0019,
+   "both_expr_by_tissue": {
+    "parotid gland": 37
+   },
+   "both_expr_by_cell_type": {
+    "B cell": 16,
+    "CD8-positive, alpha-beta T cell": 15,
+    "CD4-positive, alpha-beta T cell": 3,
+    "T cell": 1,
+    "monocyte": 1
+   },
+   "both_expr_by_compartment": {
+    "immune": 37
+   },
+   "umi_by_compartment": {
+    "immune": 7176.0,
+    "kidney": 2.0,
+    "lung": 128.0
+   }
+  },
+  "PRB4-STATH": {
+   "n_models": 7,
+   "r_all": 0.8514,
+   "r_without_salivary_tissue_cells": -0.0013,
+   "top_tissue_by_pair_umi": "parotid gland",
+   "top_tissue_umi_share": 0.9446,
+   "r_without_top_tissue": -0.0016,
+   "both_expr_by_tissue": {
+    "parotid gland": 35
+   },
+   "both_expr_by_cell_type": {
+    "CD8-positive, alpha-beta T cell": 15,
+    "B cell": 14,
+    "CD4-positive, alpha-beta T cell": 3,
+    "T cell": 1,
+    "monocyte": 1
+   },
+   "both_expr_by_compartment": {
+    "immune": 35
+   },
+   "umi_by_compartment": {
+    "immune": 5575.0,
+    "kidney": 2.0,
+    "lung": 127.0
+   }
+  },
+  "HTN1-PRB4": {
+   "n_models": 7,
+   "r_all": 0.8724,
+   "r_without_salivary_tissue_cells": -0.0011,
+   "top_tissue_by_pair_umi": "parotid gland",
+   "top_tissue_umi_share": 0.9651,
+   "r_without_top_tissue": -0.0013,
+   "both_expr_by_tissue": {
+    "parotid gland": 35
+   },
+   "both_expr_by_cell_type": {
+    "CD8-positive, alpha-beta T cell": 15,
+    "B cell": 14,
+    "CD4-positive, alpha-beta T cell": 3,
+    "T cell": 1,
+    "monocyte": 1
+   },
+   "both_expr_by_compartment": {
+    "immune": 35
+   },
+   "umi_by_compartment": {
+    "immune": 3576.0,
+    "kidney": 2.0,
+    "lung": 7.0
+   }
+  },
+  "PRB3-PRH2": {
+   "n_models": 6,
+   "r_all": 0.9625,
+   "r_without_salivary_tissue_cells": -0.0014,
+   "top_tissue_by_pair_umi": "parotid gland",
+   "top_tissue_umi_share": 0.957,
+   "r_without_top_tissue": -0.0015,
+   "both_expr_by_tissue": {
+    "parotid gland": 37
+   },
+   "both_expr_by_cell_type": {
+    "B cell": 16,
+    "CD8-positive, alpha-beta T cell": 15,
+    "CD4-positive, alpha-beta T cell": 3,
+    "T cell": 1,
+    "monocyte": 1
+   },
+   "both_expr_by_compartment": {
+    "immune": 37
+   },
+   "umi_by_compartment": {
+    "immune": 3769.0,
+    "kidney": 108.0,
+    "lung": 32.0
+   }
+  },
+  "PRH2-SMR3B": {
+   "n_models": 6,
+   "r_all": 0.954,
+   "r_without_salivary_tissue_cells": 0.0361,
+   "top_tissue_by_pair_umi": "parotid gland",
+   "top_tissue_umi_share": 0.8644,
+   "r_without_top_tissue": 0.8696,
+   "both_expr_by_tissue": {
+    "parotid gland": 37,
+    "submandibular gland": 4,
+    "brown adipose tissue": 1
+   },
+   "both_expr_by_cell_type": {
+    "CD8-positive, alpha-beta T cell": 16,
+    "B cell": 16,
+    "CD4-positive, alpha-beta T cell": 5,
+    "macrophage": 3,
+    "T cell": 1
+   },
+   "both_expr_by_compartment": {
+    "immune": 42
+   },
+   "umi_by_compartment": {
+    "immune": 1941.0,
+    "kidney": 106.0,
+    "lung": 26.0
+   }
+  },
+  "HTN1-SMR3B": {
+   "n_models": 6,
+   "r_all": 0.9623,
+   "r_without_salivary_tissue_cells": 0.0635,
+   "top_tissue_by_pair_umi": "parotid gland",
+   "top_tissue_umi_share": 0.9284,
+   "r_without_top_tissue": 0.8424,
+   "both_expr_by_tissue": {
+    "parotid gland": 37,
+    "submandibular gland": 4,
+    "brown adipose tissue": 1
+   },
+   "both_expr_by_cell_type": {
+    "CD8-positive, alpha-beta T cell": 16,
+    "B cell": 16,
+    "CD4-positive, alpha-beta T cell": 5,
+    "macrophage": 3,
+    "T cell": 1
+   },
+   "both_expr_by_compartment": {
+    "immune": 42
+   },
+   "umi_by_compartment": {
+    "immune": 3349.0,
+    "kidney": 0.0,
+    "lung": 2.0
+   }
   }
  },
  "core_without_PRH1": {
@@ -1604,41 +1660,41 @@
   "n_other_cells_ge_10_umi": 4,
   "other_cells_ge_10_umi": [
    {
-    "cell_id": "155098960-kidney",
+    "index": "22-0",
     "compartment": "kidney",
     "tissue": "cortex of kidney",
     "cell_type": "CD8-positive, alpha-beta T cell",
-    "donor_id": "TSP2",
+    "donor_id": "not recorded",
     "assay": "Smart-seq2",
     "total_counts": 1660467.0,
     "core_umi": 100.0
    },
    {
-    "cell_id": "155743015-lung",
+    "index": "35955-1",
     "compartment": "lung",
     "tissue": "lung",
     "cell_type": "respiratory tract goblet cell",
-    "donor_id": "TSP2",
+    "donor_id": "not recorded",
     "assay": "10x 3' v3",
     "total_counts": 32630.0,
     "core_umi": 107.0
    },
    {
-    "cell_id": "155089768-lung",
+    "index": "770-1",
     "compartment": "lung",
     "tissue": "lung",
     "cell_type": "pulmonary alveolar type 2 cell",
-    "donor_id": "TSP2",
+    "donor_id": "not recorded",
     "assay": "Smart-seq2",
     "total_counts": 5081829.0,
     "core_umi": 21.0
    },
    {
-    "cell_id": "155297907-immune",
+    "index": "96717-2",
     "compartment": "immune",
     "tissue": "sclera",
     "cell_type": "natural killer cell",
-    "donor_id": "TSP15",
+    "donor_id": "not recorded",
     "assay": "10x 3' v3",
     "total_counts": 9917.0,
     "core_umi": 15.0
@@ -1648,112 +1704,62 @@
   "salivary_tissue_cells_with_all_10_genes": 0,
   "salivary_tissue_by_donor_tissue": [
    {
-    "donor_id": "TSP14",
+    "donor_id": "not recorded",
     "tissue": "anterior part of tongue",
     "n": 2
    },
    {
-    "donor_id": "TSP14",
+    "donor_id": "not recorded",
     "tissue": "parotid gland",
-    "n": 16
+    "n": 38
    },
    {
-    "donor_id": "TSP14",
+    "donor_id": "not recorded",
+    "tissue": "posterior part of tongue",
+    "n": 11
+   },
+   {
+    "donor_id": "not recorded",
     "tissue": "sublingual gland",
-    "n": 5
+    "n": 10
    },
    {
-    "donor_id": "TSP21",
+    "donor_id": "not recorded",
     "tissue": "submandibular gland",
-    "n": 2
-   },
-   {
-    "donor_id": "TSP25",
-    "tissue": "posterior part of tongue",
-    "n": 5
-   },
-   {
-    "donor_id": "TSP25",
-    "tissue": "sublingual gland",
-    "n": 5
-   },
-   {
-    "donor_id": "TSP25",
-    "tissue": "submandibular gland",
-    "n": 4
-   },
-   {
-    "donor_id": "TSP27",
-    "tissue": "posterior part of tongue",
-    "n": 4
-   },
-   {
-    "donor_id": "TSP7",
-    "tissue": "parotid gland",
-    "n": 22
-   },
-   {
-    "donor_id": "TSP7",
-    "tissue": "posterior part of tongue",
-    "n": 2
+    "n": 6
    }
   ],
   "salivary_tissue_share_with_read_by_donor_tissue": [
    {
-    "donor_id": "TSP14",
+    "donor_id": "not recorded",
     "tissue": "anterior part of tongue",
     "has": 0.0
    },
    {
-    "donor_id": "TSP14",
+    "donor_id": "not recorded",
     "tissue": "parotid gland",
-    "has": 1.0
+    "has": 0.974
    },
    {
-    "donor_id": "TSP14",
+    "donor_id": "not recorded",
+    "tissue": "posterior part of tongue",
+    "has": 0.091
+   },
+   {
+    "donor_id": "not recorded",
     "tissue": "sublingual gland",
-    "has": 0.8
+    "has": 0.7
    },
    {
-    "donor_id": "TSP21",
+    "donor_id": "not recorded",
     "tissue": "submandibular gland",
-    "has": 0.0
-   },
-   {
-    "donor_id": "TSP25",
-    "tissue": "posterior part of tongue",
-    "has": 0.0
-   },
-   {
-    "donor_id": "TSP25",
-    "tissue": "sublingual gland",
-    "has": 0.6
-   },
-   {
-    "donor_id": "TSP25",
-    "tissue": "submandibular gland",
-    "has": 1.0
-   },
-   {
-    "donor_id": "TSP27",
-    "tissue": "posterior part of tongue",
-    "has": 0.25
-   },
-   {
-    "donor_id": "TSP7",
-    "tissue": "parotid gland",
-    "has": 0.955
-   },
-   {
-    "donor_id": "TSP7",
-    "tissue": "posterior part of tongue",
-    "has": 0.0
+    "has": 0.667
    }
   ]
  },
  "top20_cells_gene_counts": [
   {
-   "cell_id": "156054732-immune",
+   "index": "454957-2",
    "HTN1": 456,
    "HTN3": 1743,
    "PRB1": 12,
@@ -1767,7 +1773,7 @@
    "SMR3B": 33
   },
   {
-   "cell_id": "155283637-immune",
+   "index": "87493-2",
    "HTN1": 181,
    "HTN3": 507,
    "PRB1": 24,
@@ -1781,7 +1787,7 @@
    "SMR3B": 67
   },
   {
-   "cell_id": "155280011-immune",
+   "index": "86455-2",
    "HTN1": 126,
    "HTN3": 443,
    "PRB1": 14,
@@ -1795,7 +1801,7 @@
    "SMR3B": 28
   },
   {
-   "cell_id": "155279422-immune",
+   "index": "86270-2",
    "HTN1": 73,
    "HTN3": 309,
    "PRB1": 12,
@@ -1809,7 +1815,7 @@
    "SMR3B": 40
   },
   {
-   "cell_id": "155280331-immune",
+   "index": "86551-2",
    "HTN1": 95,
    "HTN3": 343,
    "PRB1": 14,
@@ -1823,7 +1829,7 @@
    "SMR3B": 30
   },
   {
-   "cell_id": "155099224-kidney",
+   "index": "158-0",
    "HTN1": 0,
    "HTN3": 0,
    "PRB1": 0,
@@ -1837,7 +1843,7 @@
    "SMR3B": 0
   },
   {
-   "cell_id": "155279156-immune",
+   "index": "86191-2",
    "HTN1": 88,
    "HTN3": 254,
    "PRB1": 12,
@@ -1851,7 +1857,7 @@
    "SMR3B": 8
   },
   {
-   "cell_id": "155279622-immune",
+   "index": "86337-2",
    "HTN1": 83,
    "HTN3": 301,
    "PRB1": 13,
@@ -1865,7 +1871,7 @@
    "SMR3B": 26
   },
   {
-   "cell_id": "155276824-immune",
+   "index": "85495-2",
    "HTN1": 68,
    "HTN3": 276,
    "PRB1": 19,
@@ -1879,7 +1885,7 @@
    "SMR3B": 20
   },
   {
-   "cell_id": "155277860-immune",
+   "index": "85793-2",
    "HTN1": 58,
    "HTN3": 249,
    "PRB1": 21,
@@ -1893,7 +1899,7 @@
    "SMR3B": 11
   },
   {
-   "cell_id": "155278928-immune",
+   "index": "86112-2",
    "HTN1": 59,
    "HTN3": 248,
    "PRB1": 15,
@@ -1907,7 +1913,7 @@
    "SMR3B": 20
   },
   {
-   "cell_id": "155279691-immune",
+   "index": "86355-2",
    "HTN1": 66,
    "HTN3": 224,
    "PRB1": 16,
@@ -1921,7 +1927,7 @@
    "SMR3B": 18
   },
   {
-   "cell_id": "155275971-immune",
+   "index": "85229-2",
    "HTN1": 57,
    "HTN3": 244,
    "PRB1": 9,
@@ -1935,7 +1941,7 @@
    "SMR3B": 22
   },
   {
-   "cell_id": "155279852-immune",
+   "index": "86401-2",
    "HTN1": 74,
    "HTN3": 216,
    "PRB1": 15,
@@ -1949,7 +1955,7 @@
    "SMR3B": 19
   },
   {
-   "cell_id": "156053939-immune",
+   "index": "454385-2",
    "HTN1": 60,
    "HTN3": 227,
    "PRB1": 8,
@@ -1963,7 +1969,7 @@
    "SMR3B": 29
   },
   {
-   "cell_id": "155282824-immune",
+   "index": "87266-2",
    "HTN1": 73,
    "HTN3": 223,
    "PRB1": 6,
@@ -1977,7 +1983,7 @@
    "SMR3B": 15
   },
   {
-   "cell_id": "155277878-immune",
+   "index": "85800-2",
    "HTN1": 64,
    "HTN3": 219,
    "PRB1": 14,
@@ -1991,7 +1997,7 @@
    "SMR3B": 13
   },
   {
-   "cell_id": "156050208-immune",
+   "index": "451734-2",
    "HTN1": 81,
    "HTN3": 222,
    "PRB1": 8,
@@ -2005,7 +2011,7 @@
    "SMR3B": 28
   },
   {
-   "cell_id": "155307959-immune",
+   "index": "100910-2",
    "HTN1": 49,
    "HTN3": 167,
    "PRB1": 8,
@@ -2019,7 +2025,7 @@
    "SMR3B": 21
   },
   {
-   "cell_id": "155280295-immune",
+   "index": "86538-2",
    "HTN1": 64,
    "HTN3": 217,
    "PRB1": 10,

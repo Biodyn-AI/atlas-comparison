@@ -1,0 +1,153 @@
+{
+ "set": "random_sae",
+ "root": "$ATLAS_CACHE/random_sae",
+ "n_perm": 200,
+ "models": {
+  "AIDO": {
+   "n_layers": 8,
+   "mid_layer_file": "feature_catalog_L04.json",
+   "mid_features": 1024,
+   "mid_labelled_share": 0.0596,
+   "mid_gene_sets": 264,
+   "trrust": {
+    "n_pairs": 2106,
+    "hits": 0,
+    "null_mean": 0.14,
+    "fold": 0.0,
+    "p_emp": 1.0
+   }
+  },
+  "C2S": {
+   "n_layers": 26,
+   "mid_layer_file": "feature_catalog_L13.json",
+   "mid_features": 9216,
+   "mid_labelled_share": 0.1117,
+   "mid_gene_sets": 1477,
+   "trrust": {
+    "n_pairs": 166798,
+    "hits": 40,
+    "null_mean": 10.875,
+    "fold": 3.68,
+    "p_emp": 0.00498
+   }
+  },
+  "Geneformer": {
+   "n_layers": 18,
+   "mid_layer_file": "feature_catalog_L09.json",
+   "mid_features": 4608,
+   "mid_labelled_share": 0.0375,
+   "mid_gene_sets": 215,
+   "trrust": {
+    "n_pairs": 98606,
+    "hits": 12,
+    "null_mean": 6.14,
+    "fold": 1.95,
+    "p_emp": 0.02488
+   }
+  },
+  "MaxToki": {
+   "n_layers": 11,
+   "mid_layer_file": "feature_catalog_L05.json",
+   "mid_features": 4928,
+   "mid_labelled_share": 0.0166,
+   "mid_gene_sets": 97,
+   "trrust": {
+    "n_pairs": 45862,
+    "hits": 4,
+    "null_mean": 1.505,
+    "fold": 2.66,
+    "p_emp": 0.05473
+   }
+  },
+  "UCE": {
+   "n_layers": 33,
+   "mid_layer_file": "feature_catalog_L16.json",
+   "mid_features": 5120,
+   "mid_labelled_share": 0.1154,
+   "mid_gene_sets": 978,
+   "trrust": {
+    "n_pairs": 352354,
+    "hits": 34,
+    "null_mean": 8.99,
+    "fold": 3.78,
+    "p_emp": 0.00498
+   }
+  },
+  "scGPT": {
+   "n_layers": 12,
+   "mid_layer_file": "feature_catalog_L06.json",
+   "mid_features": 2048,
+   "mid_labelled_share": 0.0811,
+   "mid_gene_sets": 488,
+   "trrust": {
+    "n_pairs": 19364,
+    "hits": 3,
+    "null_mean": 0.7,
+    "fold": 4.29,
+    "p_emp": 0.02985
+   }
+  },
+  "tGPT": {
+   "n_layers": 8,
+   "mid_layer_file": "feature_catalog_L04.json",
+   "mid_features": 4096,
+   "mid_labelled_share": 0.1267,
+   "mid_gene_sets": 465,
+   "trrust": {
+    "n_pairs": 24133,
+    "hits": 0,
+    "null_mean": 1.585,
+    "fold": 0.0,
+    "p_emp": 1.0
+   }
+  },
+  "scFoundation": {
+   "n_layers": 12,
+   "mid_layer_file": "feature_catalog_L06.json",
+   "mid_features": 3072,
+   "mid_labelled_share": 0.0622,
+   "mid_gene_sets": 252,
+   "trrust": {
+    "n_pairs": 28786,
+    "hits": 0,
+    "null_mean": 0.91,
+    "fold": 0.0,
+    "p_emp": 1.0
+   }
+  },
+  "GeneCompass": {
+   "n_layers": 12,
+   "mid_layer_file": "feature_catalog_L06.json",
+   "mid_features": 3072,
+   "mid_labelled_share": 0.0091,
+   "mid_gene_sets": 42,
+   "trrust": {
+    "n_pairs": 78976,
+    "hits": 2,
+    "null_mean": 0.775,
+    "fold": 2.58,
+    "p_emp": 0.18905
+   }
+  },
+  "Tahoe": {
+   "n_layers": 32,
+   "mid_layer_file": "feature_catalog_L16.json",
+   "mid_features": 10240,
+   "mid_labelled_share": 0.0382,
+   "mid_gene_sets": 527,
+   "trrust": {
+    "n_pairs": 455380,
+    "hits": 41,
+    "null_mean": 19.88,
+    "fold": 2.06,
+    "p_emp": 0.00498
+   }
+  }
+ },
+ "shared_core": {
+  ">=7": 94,
+  ">=8": 36,
+  ">=9": 5,
+  ">=10": 0
+ }
+}

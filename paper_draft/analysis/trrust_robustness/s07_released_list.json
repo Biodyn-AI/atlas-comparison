@@ -1,28 +1,27 @@
 {
- "n_candidates_before_family_filter": 4737,
+ "n_candidates_before_family_filter": 5444,
  "old_rule": {
-  "n_dropped": 388,
-  "n_kept": 4349,
+  "n_dropped": 562,
+  "n_kept": 4882,
   "identical_to_released_list": true,
-  "released_n": 4349
+  "released_n": 4882
  },
  "new_rule": {
-  "n_dropped": 714,
-  "n_kept": 4023
+  "n_dropped": 959,
+  "n_kept": 4485
  },
  "overlap": {
-  "dropped_by_both": 386,
+  "dropped_by_both": 560,
   "dropped_only_old": 2,
-  "dropped_only_new": 328,
-  "kept_by_both": 4021
+  "dropped_only_new": 399,
+  "kept_by_both": 4483
  },
  "released_pairs_flagged_by_new_rule": {
-  "n": 328,
+  "n": 399,
   "by_n_models": {
-   "2": 280,
-   "3": 35,
-   "4": 10,
-   "5": 3
+   "2": 340,
+   "3": 47,
+   "4": 12
   },
   "examples_top": [
    [
@@ -30,96 +29,96 @@
     "ATP5MK"
    ],
    [
-    "S100A11",
-    "S100A4"
-   ],
-   [
-    "ACTB",
-    "ACTG2"
+    "ATP5MK",
+    "ATP5PF"
    ],
    [
     "S100A13",
     "S100A16"
    ],
    [
-    "ATP5MJ",
-    "ATP5MK"
+    "NFIC",
+    "NFIX"
    ],
    [
-    "ATP5MK",
-    "ATP5PF"
+    "ATP5MJ",
+    "ATP5MK"
    ],
    [
     "ATP5ME",
     "ATP5MJ"
    ],
    [
-    "ATP5MF",
-    "ATP5MK"
+    "S100A11",
+    "S100A4"
+   ],
+   [
+    "SCGB3A1",
+    "SCGB3A2"
+   ],
+   [
+    "NR2F1",
+    "NR2F2"
+   ],
+   [
+    "S100A6",
+    "S100A9"
    ],
    [
     "AKR1B10",
     "AKR1C2"
    ],
    [
-    "HNRNPA3",
-    "HNRNPDL"
-   ],
-   [
-    "SFTA2",
-    "SFTPA1"
-   ],
-   [
-    "SFTA2",
-    "SFTPA2"
-   ],
-   [
     "SFTA2",
     "SFTPB"
    ],
    [
-    "MT-RNR1",
-    "MT-RNR2"
-   ],
-   [
-    "HLA-DRB5",
-    "HLA-DRB6"
-   ],
-   [
-    "MTCO1P12",
-    "MTCO1P40"
-   ],
-   [
-    "TRAV8-2",
-    "TRAV8-4"
+    "S100A1",
+    "S100A13"
    ],
    [
     "S100A4",
     "S100A8"
    ],
    [
-    "S100A3",
+    "S100A2",
     "S100A6"
    ],
    [
-    "HLA-DRB1",
-    "HLA-DRB6"
+    "S100A2",
+    "S100A4"
+   ],
+   [
+    "S100A3",
+    "S100A6"
    ],
    [
     "S100A3",
     "S100A4"
    ],
    [
-    "HLA-DQA1",
-    "HLA-DRB6"
+    "SP110",
+    "SP140"
    ],
    [
-    "HLA-DQB1",
-    "HLA-DRB6"
+    "NFIA",
+    "NFIC"
    ],
    [
-    "NFIC",
-    "NFIX"
+    "ATP5MF",
+    "ATP5MJ"
+   ],
+   [
+    "IGHD",
+    "IGHM"
+   ],
+   [
+    "SFTA2",
+    "SFTPD"
+   ],
+   [
+    "S100A4",
+    "S100A9"
    ],
    [
     "S100A13",
@@ -129,8 +128,8 @@
  },
  "pairs_dropped_only_by_old_rule": [
   [
-   "LINC00926",
-   "LINC02397"
+   "LINC01484",
+   "LINC03034"
   ],
   [
    "LINC01320",
@@ -138,20 +137,23 @@
   ]
  ],
  "corrected_list_by_n_models": {
-  "2": 3456,
-  "3": 476,
-  "4": 79,
-  "5": 12
+  "2": 4012,
+  "3": 423,
+  "4": 50
  },
  "literature_fields_released_list": {
-  "n_pairs": 4349,
-  "n_with_stored_fields": 4349,
-  "n_testable": 4111,
-  "n_comentioned_uncapped": 3940,
-  "pct_comentioned_uncapped": 95.84,
-  "n_never_comentioned": 171,
-  "n_never_but_both_ge20_papers": 4,
+  "n_pairs": 4882,
+  "n_with_stored_fields": 4882,
+  "n_testable": 4621,
+  "n_comentioned_uncapped": 4481,
+  "pct_comentioned_uncapped": 96.97,
+  "n_never_comentioned": 140,
+  "n_never_but_both_ge20_papers": 6,
   "never_but_both_studied": [
+   [
+    "FENDRR",
+    "SLCO2A1"
+   ],
    [
     "NEAT1",
     "SAT1"
@@ -161,24 +163,32 @@
     "SNHG6"
    ],
    [
-    "SNHG6",
-    "ZFAS1"
+    "NEAT1",
+    "SRGN"
    ],
    [
-    "N4BP2L2",
+    "PAN3",
+    "ZFAND3"
+   ],
+   [
+    "B2M",
     "NEAT1"
    ]
   ]
  },
  "literature_fields_corrected_list": {
-  "n_pairs": 4023,
-  "n_with_stored_fields": 4021,
-  "n_testable": 3814,
-  "n_comentioned_uncapped": 3670,
-  "pct_comentioned_uncapped": 96.22,
-  "n_never_comentioned": 144,
-  "n_never_but_both_ge20_papers": 4,
+  "n_pairs": 4485,
+  "n_with_stored_fields": 4483,
+  "n_testable": 4270,
+  "n_comentioned_uncapped": 4174,
+  "pct_comentioned_uncapped": 97.75,
+  "n_never_comentioned": 96,
+  "n_never_but_both_ge20_papers": 6,
   "never_but_both_studied": [
+   [
+    "FENDRR",
+    "SLCO2A1"
+   ],
    [
     "NEAT1",
     "SAT1"
@@ -188,38 +198,30 @@
     "SNHG6"
    ],
    [
-    "SNHG6",
-    "ZFAS1"
+    "NEAT1",
+    "SRGN"
    ],
    [
-    "N4BP2L2",
+    "PAN3",
+    "ZFAND3"
+   ],
+   [
+    "B2M",
     "NEAT1"
    ]
   ]
  },
  "literature_fields_corrected_list_note": "only pairs present in the released list carry stored co_mentions/papers; pairs dropped only by the old rule and kept by the new rule have no stored literature fields",
  "published_hypothesis_pubmed": {
-  "n_pairs_testable": 4111,
-  "observed_pairs_comentioned": 1289,
-  "fold": 2.18,
+  "n_pairs_testable": 4621,
+  "observed_pairs_comentioned": 1281,
+  "fold": 2.72,
   "p_emp": 0.00498,
-  "n_never_comentioned": 171,
-  "n_never_but_both_studied": 4,
-  "observed_pairs_comentioned_uncapped": 3940
+  "n_never_comentioned": 140,
+  "n_never_but_both_studied": 6,
+  "observed_pairs_comentioned_uncapped": 4481
  },
  "xist_pairs_in_release": [
-  {
-   "pair": [
-    "NEAT1",
-    "XIST"
-   ],
-   "papers": [
-    691,
-    2
-   ],
-   "co_mentions": 0,
-   "n_models": 3
-  },
   {
    "pair": [
     "TSIX",
@@ -246,6 +248,18 @@
   },
   {
    "pair": [
+    "NEAT1",
+    "XIST"
+   ],
+   "papers": [
+    691,
+    2
+   ],
+   "co_mentions": 0,
+   "n_models": 2
+  },
+  {
+   "pair": [
     "DDX17",
     "XIST"
    ],
@@ -258,11 +272,35 @@
   },
   {
    "pair": [
-    "N4BP2L2",
+    "JPX",
     "XIST"
    ],
    "papers": [
-    32,
+    24,
+    2
+   ],
+   "co_mentions": 0,
+   "n_models": 2
+  },
+  {
+   "pair": [
+    "LRMDA",
+    "XIST"
+   ],
+   "papers": [
+    19,
+    2
+   ],
+   "co_mentions": 0,
+   "n_models": 2
+  },
+  {
+   "pair": [
+    "SFTPC",
+    "XIST"
+   ],
+   "papers": [
+    253,
     2
    ],
    "co_mentions": 0,
@@ -272,17 +310,34 @@
  "sample_unmapped_rows": [
   {
    "pair": [
-    "B2M",
-    "MT-CO1"
+    "MT-CO3",
+    "TPT1"
    ],
-   "n_models": 4,
+   "n_models": 3,
    "models": [
     "C2S",
     "Geneformer",
-    "Tahoe",
-    "scGPT"
+    "Tahoe"
    ],
-   "weight": 43,
+   "weight": 88,
+   "co_mentions": null,
+   "papers": [
+    null,
+    422
+   ]
+  },
+  {
+   "pair": [
+    "B2M",
+    "MT-CO1"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe"
+   ],
+   "weight": 71,
    "co_mentions": null,
    "papers": [
     594,
@@ -291,37 +346,19 @@
   },
   {
    "pair": [
-    "MT-CO1",
-    "MT-RNR2"
+    "FTL",
+    "MT-CO3"
    ],
    "n_models": 3,
    "models": [
     "C2S",
     "Tahoe",
-    "scGPT"
+    "UCE"
    ],
-   "weight": 435,
+   "weight": 67,
    "co_mentions": null,
    "papers": [
-    null,
-    null
-   ]
-  },
-  {
-   "pair": [
-    "MT-CO3",
-    "MT-RNR2"
-   ],
-   "n_models": 3,
-   "models": [
-    "C2S",
-    "Tahoe",
-    "scGPT"
-   ],
-   "weight": 434,
-   "co_mentions": null,
-   "papers": [
-    null,
+    305,
     null
    ]
   }

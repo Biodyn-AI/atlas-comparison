@@ -45,7 +45,7 @@
     24,
     25
    ],
-   "n_features_ge2": 237668,
+   "n_features_ge2": 236139,
    "source_dir": "<ATLAS_BASE>/outputs/atlas/alllayer_cat/C2S"
   },
   "Geneformer": {
@@ -70,7 +70,7 @@
     16,
     17
    ],
-   "n_features_ge2": 82917,
+   "n_features_ge2": 82921,
    "source_dir": "<ATLAS_BASE>/outputs/atlas/alllayer_cat/Geneformer"
   },
   "MaxToki": {
@@ -88,7 +88,7 @@
     9,
     10
    ],
-   "n_features_ge2": 54208,
+   "n_features_ge2": 54207,
    "source_dir": "<ATLAS_BASE>/outputs/atlas/alllayer_cat/MaxToki"
   },
   "UCE": {
@@ -128,7 +128,7 @@
     31,
     32
    ],
-   "n_features_ge2": 167807,
+   "n_features_ge2": 168450,
    "source_dir": "<ATLAS_BASE>/outputs/atlas/alllayer_cat/UCE"
   },
   "scGPT": {
@@ -162,7 +162,7 @@
     6,
     7
    ],
-   "n_features_ge2": 27090,
+   "n_features_ge2": 26396,
    "source_dir": "<ATLAS_BASE>/outputs/atlas/alllayer_cat/tGPT"
   },
   "scFoundation": {
@@ -239,7 +239,7 @@
     30,
     31
    ],
-   "n_features_ge2": 326991,
+   "n_features_ge2": 327582,
    "source_dir": "<ATLAS_BASE>/outputs/atlas/ts3_out/Tahoe"
   }
  },
@@ -247,104 +247,104 @@
   "AIDO": {
    "n_features": 8192,
    "repo_n_features": 8192,
-   "n_pairs": 2,
-   "repo_n_pairs": 2,
+   "n_pairs": 500,
+   "repo_n_pairs": 500,
    "identical_graph_and_weights": true,
    "hits": 0,
    "published_hits": 0,
-   "published_n_pairs": 2
+   "published_n_pairs": 500
   },
   "C2S": {
-   "n_features": 237668,
-   "repo_n_features": 237668,
-   "n_pairs": 147728,
-   "repo_n_pairs": 147728,
+   "n_features": 236139,
+   "repo_n_features": 236139,
+   "n_pairs": 117131,
+   "repo_n_pairs": 117131,
    "identical_graph_and_weights": true,
-   "hits": 83,
-   "published_hits": 83,
-   "published_n_pairs": 147728
+   "hits": 93,
+   "published_hits": 93,
+   "published_n_pairs": 117131
   },
   "Geneformer": {
-   "n_features": 82917,
-   "repo_n_features": 82917,
-   "n_pairs": 20142,
-   "repo_n_pairs": 20142,
+   "n_features": 82921,
+   "repo_n_features": 82921,
+   "n_pairs": 50707,
+   "repo_n_pairs": 50707,
    "identical_graph_and_weights": true,
-   "hits": 12,
-   "published_hits": 12,
-   "published_n_pairs": 20142
+   "hits": 17,
+   "published_hits": 17,
+   "published_n_pairs": 50707
   },
   "MaxToki": {
-   "n_features": 54208,
-   "repo_n_features": 54208,
-   "n_pairs": 18307,
-   "repo_n_pairs": 18307,
+   "n_features": 54207,
+   "repo_n_features": 54207,
+   "n_pairs": 18944,
+   "repo_n_pairs": 18944,
    "identical_graph_and_weights": true,
    "hits": 2,
    "published_hits": 2,
-   "published_n_pairs": 18307
+   "published_n_pairs": 18944
   },
   "UCE": {
-   "n_features": 167807,
-   "repo_n_features": 167807,
-   "n_pairs": 71264,
-   "repo_n_pairs": 71264,
+   "n_features": 168450,
+   "repo_n_features": 168450,
+   "n_pairs": 91724,
+   "repo_n_pairs": 91724,
    "identical_graph_and_weights": true,
-   "hits": 43,
-   "published_hits": 43,
-   "published_n_pairs": 71264
+   "hits": 60,
+   "published_hits": 60,
+   "published_n_pairs": 91724
   },
   "scGPT": {
    "n_features": 24576,
    "repo_n_features": 24576,
-   "n_pairs": 8631,
-   "repo_n_pairs": 8631,
-   "identical_graph_and_weights": true,
-   "hits": 10,
-   "published_hits": 10,
-   "published_n_pairs": 8631
-  },
-  "tGPT": {
-   "n_features": 27090,
-   "repo_n_features": 27090,
-   "n_pairs": 14412,
-   "repo_n_pairs": 14412,
+   "n_pairs": 11516,
+   "repo_n_pairs": 11516,
    "identical_graph_and_weights": true,
    "hits": 3,
    "published_hits": 3,
-   "published_n_pairs": 14412
+   "published_n_pairs": 11516
+  },
+  "tGPT": {
+   "n_features": 26396,
+   "repo_n_features": 26396,
+   "n_pairs": 10498,
+   "repo_n_pairs": 10498,
+   "identical_graph_and_weights": true,
+   "hits": 1,
+   "published_hits": 1,
+   "published_n_pairs": 10498
   },
   "scFoundation": {
    "n_features": 36864,
    "repo_n_features": 36864,
-   "n_pairs": 4149,
-   "repo_n_pairs": 4149,
+   "n_pairs": 8270,
+   "repo_n_pairs": 8270,
    "identical_graph_and_weights": true,
-   "hits": 0,
-   "published_hits": 0,
-   "published_n_pairs": 4149
+   "hits": 1,
+   "published_hits": 1,
+   "published_n_pairs": 8270
   },
   "GeneCompass": {
    "n_features": 36864,
    "repo_n_features": 36864,
-   "n_pairs": 22537,
-   "repo_n_pairs": 22537,
+   "n_pairs": 33938,
+   "repo_n_pairs": 33938,
    "identical_graph_and_weights": true,
    "hits": 0,
    "published_hits": 0,
-   "published_n_pairs": 22537
+   "published_n_pairs": 33938
   },
   "Tahoe": {
-   "n_features": 326991,
-   "repo_n_features": 326991,
-   "n_pairs": 41952,
-   "repo_n_pairs": 41952,
+   "n_features": 327582,
+   "repo_n_features": 327582,
+   "n_pairs": 78159,
+   "repo_n_pairs": 78159,
    "identical_graph_and_weights": true,
-   "hits": 59,
-   "published_hits": 59,
-   "published_n_pairs": 41952
+   "hits": 79,
+   "published_hits": 79,
+   "published_n_pairs": 78159
   }
  },
- "n_genes_indexed": 23452,
+ "n_genes_indexed": 25696,
  "n_trrust_undirected": 8300
 }

@@ -33,12 +33,11 @@ ORIG_C = os.path.join(BASE, "outputs/atlas/comparative")
 C = f"{BASE}/outputs/atlas/comparative"; G = f"{BASE}/outputs/atlas/genesets"
 CACHE = f"{C}/.cofire_cache.pkl"
 ORDER = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "scGPT", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]
-PASSED = ["Tahoe", "scGPT", "UCE", "C2S", "Geneformer"]      # hypothesis_trrust3.py:18
+from _fixed_params import PASSED, BUDGET  # were typed in for the superseded run
 CORPUS = sys.argv[1]
 NPERM = int(sys.argv[2]) if len(sys.argv) > 2 else 200
 KINDS = (sys.argv[3] if len(sys.argv) > 3 else "pearson,spearman,withincomp").split(",")
 MIN_CELLS = 10
-BUDGET = 8631
 NBIN = 20000                                  # histogram bins of width 1e-4 on [-1, 1]
 BLOCK = 512
 OUT = os.path.join(HERE, "coexpr_trrust.json")
@@ -259,7 +258,7 @@ def edge_r(b):
 
 # ---------------------------------------------------------------- main
 res = {"question": "do top co-expressed pairs recover held-out TRRUST as well as SAE co-firing?",
-       "corpus": CORPUS, "n_cells": int(ncell), "min_cells": MIN_CELLS, "n_perm": NPERM,
+       "corpus": "$ATLAS_CACHE/" + os.path.basename(CORPUS), "n_cells": int(ncell), "min_cells": MIN_CELLS, "n_perm": NPERM,
        "null": "configuration model (hypothesis_trrust2.py:config_shuffle, verbatim), fixed seed per graph",
        "truth": "TRRUST undirected, self-pairs dropped",
        "gene_universe": {"cofire_union": len(GENES), "in_corpus": len(in_corpus), "expressed_ge_min_cells": ng,

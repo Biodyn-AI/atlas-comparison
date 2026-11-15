@@ -39,7 +39,7 @@ vals = {k: v["n_programmes"] for k, v in bb["programmes"].items()}
 out["b_rule_counts"] = vals
 out["b_summary"] = {"n_rules": len(vals), "min": min(vals.values()), "max": max(vals.values()),
                     "median": statistics.median(vals.values()), "mean": round(sum(vals.values()) / len(vals), 2),
-                    "rank_of_primary_25_(1=lowest)": sorted(vals.values()).index(25) + 1,
+                    "rank_of_primary_(1=lowest)": sorted(vals.values()).index(vals["hit_weighted|complete|J>=0.3"]) + 1,  # published: rank_of_primary_25
                     "complete_J>=0.3_by_basis": {k.split("|")[0]: v for k, v in vals.items() if k.endswith("complete|J>=0.3")}}
 
 # (c) model-balanced classes at the mid layer

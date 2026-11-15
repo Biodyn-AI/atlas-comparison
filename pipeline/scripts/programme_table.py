@@ -12,7 +12,7 @@ that matches no rule is "other pathway" (named as such, never folded into a biol
 Per model and programme, the share of all middle-layer features in that programme, for
   trained      the model's SAE (the atlas catalogue);
   untrained    an SAE that was never trained, on the same activations (paper Section 2, untrained
-               controls; catalogues in _paper_rerun/untrained/random_sae);
+               controls; catalogues under ATLAS_RANDOM_SAE_OUTPUT);
   coexpr       a co-expression dictionary with the model's gene choice: one feature per live feature,
                the feature's top gene plus its 9 most correlated genes in the same 6,000 cells
                (seed-matched variant of coexpr_core_baseline.py);
@@ -20,7 +20,7 @@ Per model and programme, the share of all middle-layer features in that programm
 Tests: trained vs untrained and trained vs coexpr, two-sided Fisher exact test on features in the
 programme / not, BH over all model x programme cells of each comparison.
 
-    python programme_table.py   (ATLAS_BASE = _fixed_base) -> programme_table.json (this folder)
+    python pipeline/scripts/programme_table.py -> outputs/atlas/comparative/programme_table.json
 """
 from __future__ import annotations
 import glob, json, os, re, sys, time
@@ -30,12 +30,14 @@ import scipy.sparse as sp
 from scipy.stats import hypergeom, fisher_exact
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(os.path.dirname(HERE), "backbone_composition"))
+REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
+sys.path.insert(0, os.path.join(REPO, "paper_draft", "analysis", "backbone_composition"))
 from bb_common import Annotator, BG, BGN, BG_ARR, ORDER, mid_path, bh, ALPHA, TOP, AMIN  # noqa: E402
 
-BASE = os.environ.get("ATLAS_BASE")
-RS_ROOT = "/Users/annaantipova/Desktop/biomech/_paper_rerun/untrained/random_sae"
-CORPUS = f"{BASE}/external/perturb/tabula_3tissue_6k.h5ad"
+BASE = os.environ.get("ATLAS_BASE", REPO)
+CACHE = os.environ.get("ATLAS_CACHE", os.path.join(REPO, "paper_draft", "analysis", ".cache"))
+RS_ROOT = os.environ.get("ATLAS_RANDOM_SAE_OUTPUT", os.path.join(CACHE, "random_sae"))
+CORPUS = os.environ.get("ATLAS_GPU_CORPUS", f"{BASE}/external/perturb/tabula_3tissue_6k.h5ad")
 NRAND = int(os.environ.get("NRAND", 20))
 
 PROGRAMMES = ["translation", "immune", "mito/OXPHOS", "cell cycle/DNA", "RNA processing",
@@ -198,7 +200,7 @@ def main():
     out = {"unit": "features of the middle layer; programme of each feature's best strict-rule gene set",
            "programmes": PROGRAMMES, "rules": [(p, rx) for p, rx in RULES], "n_random_draws": NRAND,
            "models": res}
-    json.dump(out, open(os.path.join(HERE, "programme_table.json"), "w"), indent=1)
+    json.dump(out, open(os.path.join(BASE, "outputs", "atlas", "comparative", "programme_table.json"), "w"), indent=1)
     print(f"==> programme_table.json [{time.time() - t0:.0f}s]")
 
 

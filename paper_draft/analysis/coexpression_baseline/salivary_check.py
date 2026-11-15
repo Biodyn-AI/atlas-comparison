@@ -16,8 +16,12 @@ CORPUS = sys.argv[1]
 CORE = ["HTN1", "HTN3", "PRB1", "PRB2", "PRB3", "PRB4", "PRH1", "PRH2", "STATH", "SMR3A", "SMR3B"]
 EXTRA = ["MUC7", "AMY1A", "AMY1B", "AMY1C", "PRR27", "PRR4", "CST1", "CST2", "CST4", "CST5",
          "ZG16B", "LPO", "BPIFA2", "OPRPN", "PIP", "LYZ"]           # LYZ = non-salivary control (myeloid)
-TOP_PAIRS = [("HTN1", "PRB4"), ("PRB3", "PRH2"), ("PRB3", "STATH"), ("HTN3", "PRB4"), ("PRB4", "SMR3B"),
-             ("PRH2", "SMR3B"), ("HTN1", "SMR3B")]    # hypothesis_trrust2.json:hypotheses[0..6]
+# the seven pairs most models agree on outside the databases (hypothesis_trrust2.json:hypotheses[0..6]);
+# read from the run, so the check follows the catalogues it describes
+_H = json.load(open(os.path.join(os.environ["ATLAS_BASE"], "outputs/atlas/comparative/hypothesis_trrust2.json")))["hypotheses"][:7]
+TOP_PAIRS = [tuple(h["pair"]) for h in _H]
+TOP_NMODELS = {f"{a}-{b}": h["n_models"] for (a, b), h in zip(TOP_PAIRS, _H)}
+EXTRA += [g for p in TOP_PAIRS for g in p if g not in CORE + EXTRA]
 
 import anndata as ad
 from scipy import sparse
@@ -30,6 +34,8 @@ for i, s in enumerate(names): idx.setdefault(s, i)
 obs = A.obs.copy()
 for c in obs.columns:
     if hasattr(obs[c], "cat"): obs[c] = obs[c].astype(str)
+for c in ("donor_id",):                      # not stored in every corpus build
+    if c not in obs: obs[c] = "not recorded"
 tot = np.asarray(X.sum(1)).ravel()
 obs["total_counts"] = tot
 SAL = [g for g in CORE if g in idx]
@@ -44,7 +50,7 @@ obs["sal_core_frac"] = core.values / np.maximum(tot, 1)
 SG_TISSUES = [t for t in obs["tissue"].unique() if any(k in t.lower() for k in ("saliv", "parotid", "submandibular", "sublingual", "tongue"))]
 obs["from_salivary_tissue"] = obs["tissue"].isin(SG_TISSUES)
 
-res = {"corpus": CORPUS, "n_cells": int(A.n_obs), "core_genes": SAL, "extra_genes_checked": SALX[len(SAL):],
+res = {"corpus": "$ATLAS_CACHE/" + os.path.basename(CORPUS), "n_cells": int(A.n_obs), "core_genes": SAL, "extra_genes_checked": SALX[len(SAL):],
        "not_in_corpus": missing, "salivary_like_tissues_in_corpus": SG_TISSUES}
 
 # ---- per-gene summary
@@ -113,6 +119,23 @@ res["top_pairs_pearson"] = {f"{a}-{b}": {"all": r_of(a, b) if a in Ld and b in L
                                         "other_cells": r_of(a, b, (~sg).to_numpy()) if a in Ld and b in Ld else None,
                                         "n_cells_both_expr": int(((D[a] > 0) & (D[b] > 0)).sum()) if a in D and b in D else None}
                             for a, b in TOP_PAIRS}
+# where each pair's co-expression comes from: cells expressing both genes, by tissue / cell type, and
+# r without the cells of the tissue that holds most of the pair's UMIs
+res["top_pairs_detail"] = {}
+for a, b in TOP_PAIRS:
+    if a not in D or b not in D:
+        continue
+    both = ((D[a] > 0) & (D[b] > 0)).to_numpy(); umi = (D[a] + D[b]).to_numpy()
+    bt = obs.assign(_u=umi).groupby("tissue")["_u"].sum().sort_values(ascending=False)
+    top_t = bt.index[0]; mt = (obs["tissue"] != top_t).to_numpy()
+    res["top_pairs_detail"][f"{a}-{b}"] = {
+        "n_models": TOP_NMODELS[f"{a}-{b}"], "r_all": r_of(a, b), "r_without_salivary_tissue_cells": r_of(a, b, (~sg).to_numpy()),
+        "top_tissue_by_pair_umi": top_t, "top_tissue_umi_share": round(float(bt.iloc[0] / max(bt.sum(), 1)), 4),
+        "r_without_top_tissue": r_of(a, b, mt),
+        "both_expr_by_tissue": obs.loc[both, "tissue"].value_counts().head(5).to_dict(),
+        "both_expr_by_cell_type": obs.loc[both, "cell_type"].value_counts().head(5).to_dict(),
+        "both_expr_by_compartment": obs.loc[both, "compartment"].value_counts().to_dict(),
+        "umi_by_compartment": {k: float(v) for k, v in obs.assign(_u=umi).groupby("compartment")["_u"].sum().items()}}
 # ---- same summaries without PRH1 (PRH1 overlaps the PRH1-PRR4 / PRH1-TAS2R14 read-through locus and
 #      shows a different, broad 1-UMI pattern) and per-gene counts of the 20 top cells
 SAL2 = [g for g in SAL if g != "PRH1"]
