@@ -1,0 +1,1 @@
+{"model": "Tahoe", "layer": 16, "d_model": 2560, "d_sae": 10240, "k": 32, "cos_thresh": 0.7, "n_svd_components": 2560, "pct_novel": 0.9992, "n_novel": 10232, "mean_maxcos": 0.1011, "median_maxcos": 0.0813, "svd_var_at_k": 0.4043, "sae_var": 0.9484, "var_top10": [0.1429, 0.0511, 0.0279, 0.0238, 0.0196, 0.0153, 0.0131, 0.0107, 0.0092, 0.0079]}

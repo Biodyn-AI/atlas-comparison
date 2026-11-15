@@ -27,7 +27,7 @@ def main():
                               "activation_frequency": float(f.get("f", 0))}
     os.makedirs(f"{args.out}/{args.model}", exist_ok=True)
     cat = {"model": args.model, "layer": args.layer, "n_alive": len(feats),
-           "n_genes": None, "features": feats, "source": "igor-published-top5"}
+           "n_genes": None, "features": feats, "source": "published-atlas-top5"}
     p = f"{args.out}/{args.model}/feature_catalog_L{args.layer}.json"
     json.dump(cat, open(p, "w"))
     print(f"==> {args.model} L{args.layer}: {len(feats)} features -> {p}")

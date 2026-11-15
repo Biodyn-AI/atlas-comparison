@@ -1,0 +1,877 @@
+{
+ "description": "Composition of the shared backbone (concepts matched by the calibrated annotator in >= 8 of 10 models, mid layer). Class by gene content: the genes that drove each match (top genes falling in the concept, pooled over the features that match it, counting repeats); protein_synthesis if >= 50 % of them are protein-synthesis genes (ribosomal proteins, translation factors, ribosome biogenesis, nonsense-mediated decay; 317 genes), other_housekeeping if >= 50 % are protein-synthesis or other housekeeping families, specific otherwise. Programmes: complete-linkage clustering of the concepts by weighted Jaccard of their matched genes, joined at >= 0.3.",
+ "source": "backbone-composition analysis of the paper (step s2_mid_composition), run on the catalogues of release runs-v2",
+ "n_concepts": 96,
+ "class_counts": {
+  "protein_synthesis": 42,
+  "specific": 42,
+  "other_housekeeping": 12
+ },
+ "n_programmes": 37,
+ "concepts": [
+  {
+   "concept": "Eukaryotic Translation Elongation R-HSA-156842",
+   "source": "Reactome",
+   "n_models": 9,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "Peptide Chain Elongation R-HSA-156902",
+   "source": "Reactome",
+   "n_models": 9,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "Ribosome",
+   "source": "KEGG",
+   "n_models": 9,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "SRP-dependent cotranslational protein targeting to membrane (GO:0006614)",
+   "source": "GO_BP",
+   "n_models": 9,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "cotranslational protein targeting to membrane (GO:0006613)",
+   "source": "GO_BP",
+   "n_models": 9,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "cytoplasmic translation (GO:0002181)",
+   "source": "GO_BP",
+   "n_models": 9,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "nuclear-transcribed mRNA catabolic process (GO:0000956)",
+   "source": "GO_BP",
+   "n_models": 9,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "nuclear-transcribed mRNA catabolic process, nonsense-mediated decay (GO:0000184)",
+   "source": "GO_BP",
+   "n_models": 9,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "peptide biosynthetic process (GO:0043043)",
+   "source": "GO_BP",
+   "n_models": 9,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "protein targeting to ER (GO:0045047)",
+   "source": "GO_BP",
+   "n_models": 9,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "rRNA metabolic process (GO:0016072)",
+   "source": "GO_BP",
+   "n_models": 9,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "rRNA processing (GO:0006364)",
+   "source": "GO_BP",
+   "n_models": 9,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "ribosome biogenesis (GO:0042254)",
+   "source": "GO_BP",
+   "n_models": 9,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "Staphylococcus aureus infection",
+   "source": "KEGG",
+   "n_models": 9,
+   "class": "specific",
+   "family": "MHC_class_II",
+   "programme": 2,
+   "programme_representative": "Staphylococcus aureus infection"
+  },
+  {
+   "concept": "Platelet Degranulation R-HSA-114608",
+   "source": "Reactome",
+   "n_models": 9,
+   "class": "specific",
+   "family": "plasma_protein",
+   "programme": 4,
+   "programme_representative": "regulated exocytosis (GO:0045055)"
+  },
+  {
+   "concept": "Response To Elevated Platelet Cytosolic Ca2+ R-HSA-76005",
+   "source": "Reactome",
+   "n_models": 9,
+   "class": "specific",
+   "family": "mixed",
+   "programme": 4,
+   "programme_representative": "regulated exocytosis (GO:0045055)"
+  },
+  {
+   "concept": "regulated exocytosis (GO:0045055)",
+   "source": "GO_BP",
+   "n_models": 9,
+   "class": "specific",
+   "family": "mixed",
+   "programme": 4,
+   "programme_representative": "regulated exocytosis (GO:0045055)"
+  },
+  {
+   "concept": "cellular response to tumor necrosis factor (GO:0071356)",
+   "source": "GO_BP",
+   "n_models": 9,
+   "class": "specific",
+   "family": "proteasome",
+   "programme": 5,
+   "programme_representative": "cellular response to tumor necrosis factor (GO:0071356)"
+  },
+  {
+   "concept": "Phagosome",
+   "source": "KEGG",
+   "n_models": 9,
+   "class": "specific",
+   "family": "MHC_class_I",
+   "programme": 6,
+   "programme_representative": "Phagosome"
+  },
+  {
+   "concept": "Citric Acid (TCA) Cycle And Respiratory Electron Transport R-HSA-1428517",
+   "source": "Reactome",
+   "n_models": 9,
+   "class": "other_housekeeping",
+   "family": "oxphos_mito",
+   "programme": 7,
+   "programme_representative": "Citric Acid (TCA) Cycle And Respiratory Electron Transport R-HSA-1428517"
+  },
+  {
+   "concept": "Muscle Contraction R-HSA-397014",
+   "source": "Reactome",
+   "n_models": 9,
+   "class": "specific",
+   "family": "muscle_contractile",
+   "programme": 10,
+   "programme_representative": "Muscle Contraction R-HSA-397014"
+  },
+  {
+   "concept": "muscle contraction (GO:0006936)",
+   "source": "GO_BP",
+   "n_models": 9,
+   "class": "specific",
+   "family": "muscle_contractile",
+   "programme": 10,
+   "programme_representative": "Muscle Contraction R-HSA-397014"
+  },
+  {
+   "concept": "Alcoholism",
+   "source": "KEGG",
+   "n_models": 9,
+   "class": "other_housekeeping",
+   "family": "histone",
+   "programme": 11,
+   "programme_representative": "Alcoholism"
+  },
+  {
+   "concept": "Chemokine signaling pathway",
+   "source": "KEGG",
+   "n_models": 9,
+   "class": "specific",
+   "family": "chemokine",
+   "programme": 12,
+   "programme_representative": "Chemokine signaling pathway"
+  },
+  {
+   "concept": "Peptide Ligand-Binding Receptors R-HSA-375276",
+   "source": "Reactome",
+   "n_models": 9,
+   "class": "specific",
+   "family": "chemokine",
+   "programme": 12,
+   "programme_representative": "Chemokine signaling pathway"
+  },
+  {
+   "concept": "Cellular Senescence R-HSA-2559583",
+   "source": "Reactome",
+   "n_models": 9,
+   "class": "other_housekeeping",
+   "family": "histone",
+   "programme": 13,
+   "programme_representative": "Cellular Senescence R-HSA-2559583"
+  },
+  {
+   "concept": "defense response to bacterium (GO:0042742)",
+   "source": "GO_BP",
+   "n_models": 9,
+   "class": "specific",
+   "family": "salivary_antimicrobial",
+   "programme": 18,
+   "programme_representative": "defense response to bacterium (GO:0042742)"
+  },
+  {
+   "concept": "regulation of immune response (GO:0050776)",
+   "source": "GO_BP",
+   "n_models": 9,
+   "class": "specific",
+   "family": "MHC_class_I",
+   "programme": 20,
+   "programme_representative": "regulation of immune response (GO:0050776)"
+  },
+  {
+   "concept": "Antimicrobial Peptides R-HSA-6803157",
+   "source": "Reactome",
+   "n_models": 9,
+   "class": "specific",
+   "family": "S100_alarmin",
+   "programme": 35,
+   "programme_representative": "Antimicrobial Peptides R-HSA-6803157"
+  },
+  {
+   "concept": "Cap-dependent Translation Initiation R-HSA-72737",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "Cellular Response To Starvation R-HSA-9711097",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "Eukaryotic Translation Termination R-HSA-72764",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "Formation Of A Pool Of Free 40S Subunits R-HSA-72689",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "GTP Hydrolysis And Joining Of 60S Ribosomal Subunit R-HSA-72706",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "Influenza Infection R-HSA-168255",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "Influenza Viral RNA Transcription And Replication R-HSA-168273",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "L13a-mediated Translational Silencing Of Ceruloplasmin Expression R-HSA-156827",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "Major Pathway Of rRNA Processing In Nucleolus And Cytosol R-HSA-6791226",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "Nonsense Mediated Decay (NMD) Enhanced By Exon Junction Complex (EJC) R-HSA-975957",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "Nonsense Mediated Decay (NMD) Independent Of Exon Junction Complex (EJC) R-HSA-975956",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "Regulation Of Expression Of SLITs And ROBOs R-HSA-9010553",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "Response Of EIF2AK4 (GCN2) To Amino Acid Deficiency R-HSA-9633012",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "SRP-dependent Cotranslational Protein Targeting To Membrane R-HSA-1799339",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "Selenoamino Acid Metabolism R-HSA-2408522",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "Selenocysteine Synthesis R-HSA-2408557",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "Viral mRNA Translation R-HSA-192823",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "rRNA Processing In Nucleus And Cytosol R-HSA-8868773",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "rRNA Processing R-HSA-72312",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 1,
+   "programme_representative": "peptide biosynthetic process (GO:0043043)"
+  },
+  {
+   "concept": "Influenza A",
+   "source": "KEGG",
+   "n_models": 8,
+   "class": "specific",
+   "family": "MHC_class_II",
+   "programme": 2,
+   "programme_representative": "Staphylococcus aureus infection"
+  },
+  {
+   "concept": "Leishmaniasis",
+   "source": "KEGG",
+   "n_models": 8,
+   "class": "specific",
+   "family": "MHC_class_II",
+   "programme": 2,
+   "programme_representative": "Staphylococcus aureus infection"
+  },
+  {
+   "concept": "Rheumatoid arthritis",
+   "source": "KEGG",
+   "n_models": 8,
+   "class": "specific",
+   "family": "MHC_class_II",
+   "programme": 2,
+   "programme_representative": "Staphylococcus aureus infection"
+  },
+  {
+   "concept": "Th1 and Th2 cell differentiation",
+   "source": "KEGG",
+   "n_models": 8,
+   "class": "specific",
+   "family": "MHC_class_II",
+   "programme": 2,
+   "programme_representative": "Staphylococcus aureus infection"
+  },
+  {
+   "concept": "Th17 cell differentiation",
+   "source": "KEGG",
+   "n_models": 8,
+   "class": "specific",
+   "family": "MHC_class_II",
+   "programme": 2,
+   "programme_representative": "Staphylococcus aureus infection"
+  },
+  {
+   "concept": "Tuberculosis",
+   "source": "KEGG",
+   "n_models": 8,
+   "class": "specific",
+   "family": "MHC_class_II",
+   "programme": 2,
+   "programme_representative": "Staphylococcus aureus infection"
+  },
+  {
+   "concept": "Formation Of Ternary Complex, And Subsequently, 43S Complex R-HSA-72695",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 3,
+   "programme_representative": "SARS-CoV-2-host Interactions R-HSA-9705683"
+  },
+  {
+   "concept": "Ribosomal Scanning And Start Codon Recognition R-HSA-72702",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 3,
+   "programme_representative": "SARS-CoV-2-host Interactions R-HSA-9705683"
+  },
+  {
+   "concept": "SARS-CoV-2 Modulates Host Translation Machinery R-HSA-9754678",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 3,
+   "programme_representative": "SARS-CoV-2-host Interactions R-HSA-9705683"
+  },
+  {
+   "concept": "SARS-CoV-2-host Interactions R-HSA-9705683",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 3,
+   "programme_representative": "SARS-CoV-2-host Interactions R-HSA-9705683"
+  },
+  {
+   "concept": "Translation Initiation Complex Formation R-HSA-72649",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 3,
+   "programme_representative": "SARS-CoV-2-host Interactions R-HSA-9705683"
+  },
+  {
+   "concept": "mRNA Activation Upon Binding Of Cap-Binding Complex And eIFs, Subsequent Binding To 43S R-HSA-72662",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 3,
+   "programme_representative": "SARS-CoV-2-host Interactions R-HSA-9705683"
+  },
+  {
+   "concept": "platelet degranulation (GO:0002576)",
+   "source": "GO_BP",
+   "n_models": 8,
+   "class": "specific",
+   "family": "plasma_protein",
+   "programme": 4,
+   "programme_representative": "regulated exocytosis (GO:0045055)"
+  },
+  {
+   "concept": "TCF Dependent Signaling In Response To WNT R-HSA-201681",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "other_housekeeping",
+   "family": "proteasome",
+   "programme": 5,
+   "programme_representative": "cellular response to tumor necrosis factor (GO:0071356)"
+  },
+  {
+   "concept": "regulation of mRNA stability (GO:0043488)",
+   "source": "GO_BP",
+   "n_models": 8,
+   "class": "other_housekeeping",
+   "family": "proteasome",
+   "programme": 5,
+   "programme_representative": "cellular response to tumor necrosis factor (GO:0071356)"
+  },
+  {
+   "concept": "Antigen processing and presentation",
+   "source": "KEGG",
+   "n_models": 8,
+   "class": "specific",
+   "family": "MHC_class_I",
+   "programme": 6,
+   "programme_representative": "Phagosome"
+  },
+  {
+   "concept": "Cell adhesion molecules",
+   "source": "KEGG",
+   "n_models": 8,
+   "class": "specific",
+   "family": "MHC_class_I",
+   "programme": 6,
+   "programme_representative": "Phagosome"
+  },
+  {
+   "concept": "Oxidative phosphorylation",
+   "source": "KEGG",
+   "n_models": 8,
+   "class": "other_housekeeping",
+   "family": "oxphos_mito",
+   "programme": 7,
+   "programme_representative": "Citric Acid (TCA) Cycle And Respiratory Electron Transport R-HSA-1428517"
+  },
+  {
+   "concept": "Respiratory Electron Transport, ATP Synthesis By Chemiosmotic Coupling, Heat Production By Uncoupling Proteins R-HSA-163200",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "other_housekeeping",
+   "family": "oxphos_mito",
+   "programme": 7,
+   "programme_representative": "Citric Acid (TCA) Cycle And Respiratory Electron Transport R-HSA-1428517"
+  },
+  {
+   "concept": "Defective CSF2RA Causes SMDP4 R-HSA-5688890",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "specific",
+   "family": "other",
+   "programme": 8,
+   "programme_representative": "Surfactant Metabolism R-HSA-5683826"
+  },
+  {
+   "concept": "Diseases Associated With Surfactant Metabolism R-HSA-5687613",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "specific",
+   "family": "other",
+   "programme": 8,
+   "programme_representative": "Surfactant Metabolism R-HSA-5683826"
+  },
+  {
+   "concept": "Surfactant Metabolism R-HSA-5683826",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "specific",
+   "family": "mixed",
+   "programme": 8,
+   "programme_representative": "Surfactant Metabolism R-HSA-5683826"
+  },
+  {
+   "concept": "microtubule cytoskeleton organization involved in mitosis (GO:1902850)",
+   "source": "GO_BP",
+   "n_models": 8,
+   "class": "other_housekeeping",
+   "family": "cell_cycle",
+   "programme": 9,
+   "programme_representative": "mitotic spindle organization (GO:0007052)"
+  },
+  {
+   "concept": "mitotic spindle organization (GO:0007052)",
+   "source": "GO_BP",
+   "n_models": 8,
+   "class": "specific",
+   "family": "cell_cycle",
+   "programme": 9,
+   "programme_representative": "mitotic spindle organization (GO:0007052)"
+  },
+  {
+   "concept": "Neutrophil extracellular trap formation",
+   "source": "KEGG",
+   "n_models": 8,
+   "class": "other_housekeeping",
+   "family": "histone",
+   "programme": 11,
+   "programme_representative": "Alcoholism"
+  },
+  {
+   "concept": "Oxidative Stress Induced Senescence R-HSA-2559580",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "other_housekeeping",
+   "family": "histone",
+   "programme": 13,
+   "programme_representative": "Cellular Senescence R-HSA-2559583"
+  },
+  {
+   "concept": "ESR-mediated Signaling R-HSA-8939211",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "specific",
+   "family": "mixed",
+   "programme": 14,
+   "programme_representative": "ESR-mediated Signaling R-HSA-8939211"
+  },
+  {
+   "concept": "Estrogen-dependent Gene Expression R-HSA-9018519",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "specific",
+   "family": "histone",
+   "programme": 14,
+   "programme_representative": "ESR-mediated Signaling R-HSA-8939211"
+  },
+  {
+   "concept": "antigen receptor-mediated signaling pathway (GO:0050851)",
+   "source": "GO_BP",
+   "n_models": 8,
+   "class": "specific",
+   "family": "proteasome",
+   "programme": 15,
+   "programme_representative": "antigen receptor-mediated signaling pathway (GO:0050851)"
+  },
+  {
+   "concept": "cellular divalent inorganic cation homeostasis (GO:0072503)",
+   "source": "GO_BP",
+   "n_models": 8,
+   "class": "specific",
+   "family": "metallothionein",
+   "programme": 16,
+   "programme_representative": "cellular divalent inorganic cation homeostasis (GO:0072503)"
+  },
+  {
+   "concept": "cellular response to lipopolysaccharide (GO:0071222)",
+   "source": "GO_BP",
+   "n_models": 8,
+   "class": "specific",
+   "family": "chemokine",
+   "programme": 17,
+   "programme_representative": "cellular response to lipopolysaccharide (GO:0071222)"
+  },
+  {
+   "concept": "protein stabilization (GO:0050821)",
+   "source": "GO_BP",
+   "n_models": 8,
+   "class": "other_housekeeping",
+   "family": "heat_shock_chaperone",
+   "programme": 19,
+   "programme_representative": "protein stabilization (GO:0050821)"
+  },
+  {
+   "concept": "regulation of programmed cell death (GO:0043067)",
+   "source": "GO_BP",
+   "n_models": 8,
+   "class": "specific",
+   "family": "mixed",
+   "programme": 21,
+   "programme_representative": "regulation of programmed cell death (GO:0043067)"
+  },
+  {
+   "concept": "regulation of translation (GO:0006417)",
+   "source": "GO_BP",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 22,
+   "programme_representative": "regulation of translation (GO:0006417)"
+  },
+  {
+   "concept": "ribonucleoprotein complex assembly (GO:0022618)",
+   "source": "GO_BP",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 23,
+   "programme_representative": "ribonucleoprotein complex assembly (GO:0022618)"
+  },
+  {
+   "concept": "ribonucleoprotein complex biogenesis (GO:0022613)",
+   "source": "GO_BP",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 24,
+   "programme_representative": "ribonucleoprotein complex biogenesis (GO:0022613)"
+  },
+  {
+   "concept": "ribosomal large subunit biogenesis (GO:0042273)",
+   "source": "GO_BP",
+   "n_models": 8,
+   "class": "protein_synthesis",
+   "family": "translation_machinery",
+   "programme": 25,
+   "programme_representative": "ribosomal large subunit biogenesis (GO:0042273)"
+  },
+  {
+   "concept": "Estrogen signaling pathway",
+   "source": "KEGG",
+   "n_models": 8,
+   "class": "specific",
+   "family": "heat_shock_chaperone",
+   "programme": 26,
+   "programme_representative": "Estrogen signaling pathway"
+  },
+  {
+   "concept": "Hematopoietic cell lineage",
+   "source": "KEGG",
+   "n_models": 8,
+   "class": "specific",
+   "family": "MHC_class_II",
+   "programme": 27,
+   "programme_representative": "Hematopoietic cell lineage"
+  },
+  {
+   "concept": "Kaposi sarcoma-associated herpesvirus infection",
+   "source": "KEGG",
+   "n_models": 8,
+   "class": "specific",
+   "family": "MHC_class_I",
+   "programme": 28,
+   "programme_representative": "Kaposi sarcoma-associated herpesvirus infection"
+  },
+  {
+   "concept": "Necroptosis",
+   "source": "KEGG",
+   "n_models": 8,
+   "class": "specific",
+   "family": "histone",
+   "programme": 29,
+   "programme_representative": "Necroptosis"
+  },
+  {
+   "concept": "Osteoclast differentiation",
+   "source": "KEGG",
+   "n_models": 8,
+   "class": "specific",
+   "family": "immediate_early_AP1",
+   "programme": 30,
+   "programme_representative": "Osteoclast differentiation"
+  },
+  {
+   "concept": "Pathogenic Escherichia coli infection",
+   "source": "KEGG",
+   "n_models": 8,
+   "class": "specific",
+   "family": "mixed",
+   "programme": 31,
+   "programme_representative": "Pathogenic Escherichia coli infection"
+  },
+  {
+   "concept": "Retrograde endocannabinoid signaling",
+   "source": "KEGG",
+   "n_models": 8,
+   "class": "other_housekeeping",
+   "family": "oxphos_mito",
+   "programme": 32,
+   "programme_representative": "Retrograde endocannabinoid signaling"
+  },
+  {
+   "concept": "Salivary secretion",
+   "source": "KEGG",
+   "n_models": 8,
+   "class": "specific",
+   "family": "salivary_antimicrobial",
+   "programme": 33,
+   "programme_representative": "Salivary secretion"
+  },
+  {
+   "concept": "cGMP-PKG signaling pathway",
+   "source": "KEGG",
+   "n_models": 8,
+   "class": "specific",
+   "family": "calmodulin_Ca_pump",
+   "programme": 34,
+   "programme_representative": "cGMP-PKG signaling pathway"
+  },
+  {
+   "concept": "Chromosome Maintenance R-HSA-73886",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "specific",
+   "family": "histone",
+   "programme": 36,
+   "programme_representative": "Chromosome Maintenance R-HSA-73886"
+  },
+  {
+   "concept": "RHO GTPases Activate PKNs R-HSA-5625740",
+   "source": "Reactome",
+   "n_models": 8,
+   "class": "specific",
+   "family": "histone",
+   "programme": 37,
+   "programme_representative": "RHO GTPases Activate PKNs R-HSA-5625740"
+  }
+ ]
+}

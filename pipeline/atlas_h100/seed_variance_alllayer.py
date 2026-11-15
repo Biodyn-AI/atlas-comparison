@@ -44,6 +44,13 @@ def gpu_gene_scores(sae, Anp, sym_idx, n_uniq, device, batch=65536):
     return G.cpu().numpy(), (nz > 0).cpu().numpy()
 
 
+
+def top_positive(col, n):
+    """Indices of the n largest positive entries, stable on ties (zero-mean genes are not filler)."""
+    o = np.argsort(-col, kind="stable")
+    return o[col[o] > 0][:n]
+
+
 def bh(p):
     p = np.asarray(p, float); n = len(p); o = np.argsort(p); r = np.arange(1, n + 1)
     q = np.minimum.accumulate((p[o] * n / r)[::-1])[::-1]; out = np.empty(n); out[o] = np.clip(q, 0, 1); return out
@@ -151,14 +158,14 @@ def main():
             for seed in todo:
                 key = f"{m}#{seed}#L{L:02d}"
                 torch.manual_seed(seed); np.random.seed(seed)
-                cfg = SAECfg(d_model=Anp.shape[1], expansion=4, k=32, epochs=4)
+                cfg = SAECfg(d_model=Anp.shape[1], expansion=4, k=32, epochs=4, seed=seed)   # train_sae seeds torch from cfg.seed
                 try:
                     sae, stats = train_sae(Anp, cfg, device=a.device, log=lambda *x: None)
                     Gm, alive_mask = gpu_gene_scores(sae, Anp, si, len(uniq), a.device)   # G on GPU, not CPU np.add.at
                 except RuntimeError as e:
                     print(f"  {key} FAILED: {e}", flush=True); gc.collect(); (torch.cuda.empty_cache() if a.device == 'cuda' else None); continue
                 alive = np.where(alive_mask)[0]
-                topg = {int(f): [str(uniq[i]) for i in np.argsort(Gm[:, f])[::-1][:20]] for f in alive}  # raw top-20
+                topg = {int(f): [str(uniq[i]) for i in top_positive(Gm[:, f], 20)] for f in alive}  # raw top-20
                 terms = annotate(topg, idx, size, bgn, bg)
                 out["layer_sets"][key] = sorted(terms)
                 del Gm; gc.collect()

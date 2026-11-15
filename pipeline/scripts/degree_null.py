@@ -39,7 +39,7 @@ BG_ARR = np.array(sorted(BG))
 DEG = np.array([len(idx.get(g, ())) for g in BG_ARR])            # gene-set membership degree
 # degree bins: degree-0 in its own bin, rest split into NBIN quantile bins
 nz = np.where(DEG > 0)[0]; z0 = np.where(DEG == 0)[0]
-order = nz[np.argsort(DEG[nz])]
+order = nz[np.argsort(DEG[nz], kind="stable")]   # stable: tied genes keep alphabetical order
 binmembers = [z0] + [b for b in np.array_split(order, NBIN) if len(b)]
 gene_bin = np.zeros(len(BG_ARR), int)
 for bi, mem in enumerate(binmembers):

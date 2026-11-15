@@ -6,32 +6,39 @@
  "per_model": {
   "AIDO": {
    "n_features": 8192,
-   "n_genes": 18304,
-   "n_reachable_truth": 7178,
+   "n_genes": 17040,
+   "n_reachable_truth": 6182,
    "by_W": {
     "1": {
-     "n_pairs": 367362,
-     "hits": 15,
-     "expected_degree_matched": 13.01,
-     "fold": 1.15,
-     "precision": 4.1e-05
+     "n_pairs": 318631,
+     "hits": 21,
+     "expected_degree_matched": 12.32,
+     "fold": 1.7,
+     "precision": 6.6e-05
     },
     "2": {
-     "n_pairs": 1208,
+     "n_pairs": 39312,
+     "hits": 2,
+     "expected_degree_matched": 1.81,
+     "fold": 1.11,
+     "precision": 5.1e-05
+    },
+    "3": {
+     "n_pairs": 8107,
+     "hits": 2,
+     "expected_degree_matched": 0.45,
+     "fold": 4.43,
+     "precision": 0.000247
+    },
+    "5": {
+     "n_pairs": 500,
      "hits": 0,
-     "expected_degree_matched": 0.03,
+     "expected_degree_matched": 0.02,
      "fold": 0.0,
      "precision": 0.0
     },
-    "3": {
-     "n_pairs": 56,
-     "hits": 0,
-     "expected_degree_matched": 0.0,
-     "fold": null,
-     "precision": 0.0
-    },
-    "5": {
-     "n_pairs": 2,
+    "10": {
+     "n_pairs": 3,
      "hits": 0,
      "expected_degree_matched": 0.0,
      "fold": null,
@@ -40,294 +47,294 @@
    }
   },
   "C2S": {
-   "n_features": 237668,
-   "n_genes": 14207,
-   "n_reachable_truth": 5047,
+   "n_features": 236139,
+   "n_genes": 16392,
+   "n_reachable_truth": 5386,
    "by_W": {
     "1": {
-     "n_pairs": 6751465,
+     "n_pairs": 6829436,
      "hits": 948,
-     "expected_degree_matched": 626.83,
-     "fold": 1.51,
-     "precision": 0.00014
+     "expected_degree_matched": 619.0,
+     "fold": 1.53,
+     "precision": 0.000139
     },
     "2": {
-     "n_pairs": 1270265,
-     "hits": 343,
-     "expected_degree_matched": 191.45,
-     "fold": 1.79,
-     "precision": 0.00027
+     "n_pairs": 1207200,
+     "hits": 357,
+     "expected_degree_matched": 191.21,
+     "fold": 1.87,
+     "precision": 0.000296
     },
     "3": {
-     "n_pairs": 458298,
-     "hits": 185,
-     "expected_degree_matched": 76.15,
-     "fold": 2.43,
-     "precision": 0.000404
+     "n_pairs": 400617,
+     "hits": 197,
+     "expected_degree_matched": 72.5,
+     "fold": 2.72,
+     "precision": 0.000492
     },
     "5": {
-     "n_pairs": 147728,
-     "hits": 83,
-     "expected_degree_matched": 20.32,
-     "fold": 4.09,
-     "precision": 0.000562
+     "n_pairs": 117131,
+     "hits": 93,
+     "expected_degree_matched": 17.09,
+     "fold": 5.44,
+     "precision": 0.000794
     },
     "10": {
-     "n_pairs": 47424,
-     "hits": 39,
-     "expected_degree_matched": 5.24,
-     "fold": 7.44,
-     "precision": 0.000822
+     "n_pairs": 34291,
+     "hits": 43,
+     "expected_degree_matched": 4.19,
+     "fold": 10.25,
+     "precision": 0.001254
     }
    }
   },
   "Geneformer": {
-   "n_features": 82917,
-   "n_genes": 15556,
-   "n_reachable_truth": 6452,
+   "n_features": 82921,
+   "n_genes": 16513,
+   "n_reachable_truth": 7047,
    "by_W": {
     "1": {
-     "n_pairs": 3165376,
-     "hits": 415,
-     "expected_degree_matched": 272.41,
-     "fold": 1.52,
-     "precision": 0.000131
+     "n_pairs": 2696336,
+     "hits": 397,
+     "expected_degree_matched": 230.47,
+     "fold": 1.72,
+     "precision": 0.000147
     },
     "2": {
-     "n_pairs": 283213,
-     "hits": 81,
-     "expected_degree_matched": 35.39,
-     "fold": 2.29,
-     "precision": 0.000286
+     "n_pairs": 520492,
+     "hits": 123,
+     "expected_degree_matched": 56.89,
+     "fold": 2.16,
+     "precision": 0.000236
     },
     "3": {
-     "n_pairs": 79361,
-     "hits": 30,
-     "expected_degree_matched": 10.99,
-     "fold": 2.73,
-     "precision": 0.000378
+     "n_pairs": 192845,
+     "hits": 57,
+     "expected_degree_matched": 23.81,
+     "fold": 2.39,
+     "precision": 0.000296
     },
     "5": {
-     "n_pairs": 20142,
-     "hits": 12,
-     "expected_degree_matched": 3.0,
-     "fold": 4.0,
-     "precision": 0.000596
+     "n_pairs": 50707,
+     "hits": 17,
+     "expected_degree_matched": 6.96,
+     "fold": 2.44,
+     "precision": 0.000335
     },
     "10": {
-     "n_pairs": 3003,
-     "hits": 1,
-     "expected_degree_matched": 0.47,
-     "fold": 2.14,
-     "precision": 0.000333
+     "n_pairs": 6752,
+     "hits": 6,
+     "expected_degree_matched": 1.12,
+     "fold": 5.38,
+     "precision": 0.000889
     }
    }
   },
   "MaxToki": {
-   "n_features": 54208,
-   "n_genes": 15516,
-   "n_reachable_truth": 6440,
+   "n_features": 54207,
+   "n_genes": 16502,
+   "n_reachable_truth": 7040,
    "by_W": {
     "1": {
-     "n_pairs": 1916447,
-     "hits": 86,
-     "expected_degree_matched": 67.58,
-     "fold": 1.27,
-     "precision": 4.5e-05
+     "n_pairs": 1871158,
+     "hits": 100,
+     "expected_degree_matched": 72.42,
+     "fold": 1.38,
+     "precision": 5.3e-05
     },
     "2": {
-     "n_pairs": 157785,
-     "hits": 4,
-     "expected_degree_matched": 4.36,
-     "fold": 0.92,
-     "precision": 2.5e-05
+     "n_pairs": 222973,
+     "hits": 12,
+     "expected_degree_matched": 9.07,
+     "fold": 1.32,
+     "precision": 5.4e-05
     },
     "3": {
-     "n_pairs": 45067,
+     "n_pairs": 66487,
      "hits": 3,
-     "expected_degree_matched": 1.33,
-     "fold": 2.26,
-     "precision": 6.7e-05
+     "expected_degree_matched": 2.69,
+     "fold": 1.12,
+     "precision": 4.5e-05
     },
     "5": {
-     "n_pairs": 18307,
+     "n_pairs": 18944,
      "hits": 2,
-     "expected_degree_matched": 0.57,
-     "fold": 3.51,
-     "precision": 0.000109
+     "expected_degree_matched": 0.79,
+     "fold": 2.52,
+     "precision": 0.000106
     },
     "10": {
-     "n_pairs": 6573,
-     "hits": 1,
-     "expected_degree_matched": 0.22,
-     "fold": 4.64,
-     "precision": 0.000152
+     "n_pairs": 4088,
+     "hits": 2,
+     "expected_degree_matched": 0.15,
+     "fold": 13.43,
+     "precision": 0.000489
     }
    }
   },
   "UCE": {
-   "n_features": 167807,
-   "n_genes": 14488,
-   "n_reachable_truth": 6053,
+   "n_features": 168450,
+   "n_genes": 15842,
+   "n_reachable_truth": 6915,
    "by_W": {
     "1": {
-     "n_pairs": 5763777,
-     "hits": 466,
-     "expected_degree_matched": 254.89,
-     "fold": 1.83,
-     "precision": 8.1e-05
+     "n_pairs": 5582269,
+     "hits": 470,
+     "expected_degree_matched": 259.44,
+     "fold": 1.81,
+     "precision": 8.4e-05
     },
     "2": {
-     "n_pairs": 626380,
-     "hits": 144,
-     "expected_degree_matched": 30.9,
-     "fold": 4.66,
-     "precision": 0.00023
+     "n_pairs": 979333,
+     "hits": 174,
+     "expected_degree_matched": 46.83,
+     "fold": 3.72,
+     "precision": 0.000178
     },
     "3": {
-     "n_pairs": 181924,
-     "hits": 86,
-     "expected_degree_matched": 10.59,
-     "fold": 8.12,
-     "precision": 0.000473
+     "n_pairs": 334720,
+     "hits": 115,
+     "expected_degree_matched": 17.75,
+     "fold": 6.48,
+     "precision": 0.000344
     },
     "5": {
-     "n_pairs": 71264,
-     "hits": 43,
-     "expected_degree_matched": 4.08,
-     "fold": 10.54,
-     "precision": 0.000603
+     "n_pairs": 91724,
+     "hits": 60,
+     "expected_degree_matched": 5.98,
+     "fold": 10.04,
+     "precision": 0.000654
     },
     "10": {
-     "n_pairs": 28848,
-     "hits": 16,
-     "expected_degree_matched": 1.37,
-     "fold": 11.65,
-     "precision": 0.000555
+     "n_pairs": 20399,
+     "hits": 29,
+     "expected_degree_matched": 1.54,
+     "fold": 18.79,
+     "precision": 0.001422
     }
    }
   },
   "scGPT": {
    "n_features": 24576,
-   "n_genes": 13976,
-   "n_reachable_truth": 5179,
+   "n_genes": 15109,
+   "n_reachable_truth": 5173,
    "by_W": {
     "1": {
-     "n_pairs": 938767,
-     "hits": 181,
-     "expected_degree_matched": 82.46,
-     "fold": 2.2,
-     "precision": 0.000193
+     "n_pairs": 833804,
+     "hits": 149,
+     "expected_degree_matched": 63.52,
+     "fold": 2.35,
+     "precision": 0.000179
     },
     "2": {
-     "n_pairs": 72898,
-     "hits": 45,
-     "expected_degree_matched": 7.15,
-     "fold": 6.3,
-     "precision": 0.000617
+     "n_pairs": 147199,
+     "hits": 50,
+     "expected_degree_matched": 19.54,
+     "fold": 2.56,
+     "precision": 0.00034
     },
     "3": {
-     "n_pairs": 23341,
-     "hits": 22,
-     "expected_degree_matched": 1.89,
-     "fold": 11.62,
-     "precision": 0.000943
+     "n_pairs": 47934,
+     "hits": 23,
+     "expected_degree_matched": 8.11,
+     "fold": 2.84,
+     "precision": 0.00048
     },
     "5": {
-     "n_pairs": 8631,
-     "hits": 10,
-     "expected_degree_matched": 0.85,
-     "fold": 11.8,
-     "precision": 0.001159
+     "n_pairs": 11516,
+     "hits": 3,
+     "expected_degree_matched": 1.77,
+     "fold": 1.69,
+     "precision": 0.000261
     },
     "10": {
-     "n_pairs": 2732,
-     "hits": 3,
-     "expected_degree_matched": 0.44,
-     "fold": 6.84,
-     "precision": 0.001098
+     "n_pairs": 2585,
+     "hits": 0,
+     "expected_degree_matched": 0.18,
+     "fold": 0.0,
+     "precision": 0.0
     }
    }
   },
   "tGPT": {
-   "n_features": 27090,
-   "n_genes": 6623,
+   "n_features": 26396,
+   "n_genes": 6622,
    "n_reachable_truth": 2763,
    "by_W": {
     "1": {
-     "n_pairs": 861893,
-     "hits": 216,
-     "expected_degree_matched": 151.73,
-     "fold": 1.42,
-     "precision": 0.000251
+     "n_pairs": 848972,
+     "hits": 208,
+     "expected_degree_matched": 148.73,
+     "fold": 1.4,
+     "precision": 0.000245
     },
     "2": {
-     "n_pairs": 99840,
-     "hits": 33,
-     "expected_degree_matched": 26.37,
-     "fold": 1.25,
-     "precision": 0.000331
+     "n_pairs": 101019,
+     "hits": 37,
+     "expected_degree_matched": 25.6,
+     "fold": 1.45,
+     "precision": 0.000366
     },
     "3": {
-     "n_pairs": 36481,
+     "n_pairs": 32039,
      "hits": 11,
-     "expected_degree_matched": 8.61,
-     "fold": 1.28,
-     "precision": 0.000302
+     "expected_degree_matched": 6.89,
+     "fold": 1.6,
+     "precision": 0.000343
     },
     "5": {
-     "n_pairs": 14412,
-     "hits": 3,
-     "expected_degree_matched": 2.37,
-     "fold": 1.27,
-     "precision": 0.000208
+     "n_pairs": 10498,
+     "hits": 1,
+     "expected_degree_matched": 1.03,
+     "fold": 0.97,
+     "precision": 9.5e-05
     },
     "10": {
-     "n_pairs": 5216,
-     "hits": 1,
-     "expected_degree_matched": 0.48,
-     "fold": 2.09,
-     "precision": 0.000192
+     "n_pairs": 3123,
+     "hits": 0,
+     "expected_degree_matched": 0.08,
+     "fold": 0.0,
+     "precision": 0.0
     }
    }
   },
   "scFoundation": {
    "n_features": 36864,
-   "n_genes": 15265,
-   "n_reachable_truth": 6586,
+   "n_genes": 16112,
+   "n_reachable_truth": 6925,
    "by_W": {
     "1": {
-     "n_pairs": 1567529,
-     "hits": 147,
-     "expected_degree_matched": 115.8,
-     "fold": 1.27,
-     "precision": 9.4e-05
+     "n_pairs": 1327643,
+     "hits": 103,
+     "expected_degree_matched": 99.18,
+     "fold": 1.04,
+     "precision": 7.8e-05
     },
     "2": {
-     "n_pairs": 53011,
-     "hits": 12,
-     "expected_degree_matched": 4.99,
-     "fold": 2.41,
-     "precision": 0.000226
+     "n_pairs": 227699,
+     "hits": 22,
+     "expected_degree_matched": 21.77,
+     "fold": 1.01,
+     "precision": 9.7e-05
     },
     "3": {
-     "n_pairs": 10013,
-     "hits": 0,
-     "expected_degree_matched": 1.15,
-     "fold": 0.0,
-     "precision": 0.0
+     "n_pairs": 63138,
+     "hits": 9,
+     "expected_degree_matched": 6.84,
+     "fold": 1.32,
+     "precision": 0.000143
     },
     "5": {
-     "n_pairs": 4149,
-     "hits": 0,
-     "expected_degree_matched": 0.52,
-     "fold": 0.0,
-     "precision": 0.0
+     "n_pairs": 8270,
+     "hits": 1,
+     "expected_degree_matched": 1.03,
+     "fold": 0.97,
+     "precision": 0.000121
     },
     "10": {
-     "n_pairs": 1308,
+     "n_pairs": 699,
      "hits": 0,
-     "expected_degree_matched": 0.12,
+     "expected_degree_matched": 0.1,
      "fold": 0.0,
      "precision": 0.0
     }
@@ -335,85 +342,85 @@
   },
   "GeneCompass": {
    "n_features": 36864,
-   "n_genes": 7679,
-   "n_reachable_truth": 522,
+   "n_genes": 8984,
+   "n_reachable_truth": 777,
    "by_W": {
     "1": {
-     "n_pairs": 1160056,
+     "n_pairs": 1044551,
      "hits": 15,
-     "expected_degree_matched": 13.12,
-     "fold": 1.14,
-     "precision": 1.3e-05
+     "expected_degree_matched": 11.32,
+     "fold": 1.33,
+     "precision": 1.4e-05
     },
     "2": {
-     "n_pairs": 228941,
+     "n_pairs": 264183,
      "hits": 1,
-     "expected_degree_matched": 2.05,
-     "fold": 0.49,
+     "expected_degree_matched": 2.73,
+     "fold": 0.37,
      "precision": 4e-06
     },
     "3": {
-     "n_pairs": 80244,
+     "n_pairs": 109407,
      "hits": 1,
-     "expected_degree_matched": 0.79,
-     "fold": 1.26,
-     "precision": 1.2e-05
+     "expected_degree_matched": 1.16,
+     "fold": 0.86,
+     "precision": 9e-06
     },
     "5": {
-     "n_pairs": 22537,
+     "n_pairs": 33938,
      "hits": 0,
-     "expected_degree_matched": 0.27,
+     "expected_degree_matched": 0.39,
      "fold": 0.0,
      "precision": 0.0
     },
     "10": {
-     "n_pairs": 6485,
+     "n_pairs": 8091,
      "hits": 0,
-     "expected_degree_matched": 0.11,
+     "expected_degree_matched": 0.1,
      "fold": 0.0,
      "precision": 0.0
     }
    }
   },
   "Tahoe": {
-   "n_features": 326991,
-   "n_genes": 17928,
-   "n_reachable_truth": 6303,
+   "n_features": 327582,
+   "n_genes": 20538,
+   "n_reachable_truth": 6857,
    "by_W": {
     "1": {
-     "n_pairs": 10712959,
-     "hits": 915,
-     "expected_degree_matched": 645.07,
-     "fold": 1.42,
-     "precision": 8.5e-05
+     "n_pairs": 10270346,
+     "hits": 827,
+     "expected_degree_matched": 517.4,
+     "fold": 1.6,
+     "precision": 8.1e-05
     },
     "2": {
-     "n_pairs": 1150258,
-     "hits": 229,
-     "expected_degree_matched": 100.89,
-     "fold": 2.27,
+     "n_pairs": 1172847,
+     "hits": 233,
+     "expected_degree_matched": 73.61,
+     "fold": 3.17,
      "precision": 0.000199
     },
     "3": {
-     "n_pairs": 209002,
-     "hits": 98,
-     "expected_degree_matched": 21.9,
-     "fold": 4.48,
-     "precision": 0.000469
+     "n_pairs": 281266,
+     "hits": 137,
+     "expected_degree_matched": 21.99,
+     "fold": 6.23,
+     "precision": 0.000487
     },
     "5": {
-     "n_pairs": 41952,
-     "hits": 59,
-     "expected_degree_matched": 4.32,
-     "fold": 13.64,
-     "precision": 0.001406
+     "n_pairs": 78159,
+     "hits": 79,
+     "expected_degree_matched": 8.17,
+     "fold": 9.67,
+     "precision": 0.001011
     },
     "10": {
-     "n_pairs": 12725,
-     "hits": 27,
-     "expected_degree_matched": 1.4,
-     "fold": 19.23,
-     "precision": 0.002122
+     "n_pairs": 23255,
+     "hits": 34,
+     "expected_degree_matched": 2.87,
+     "fold": 11.85,
+     "precision": 0.001462
     }
    }
   }

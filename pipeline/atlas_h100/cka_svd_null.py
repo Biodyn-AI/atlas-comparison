@@ -13,7 +13,7 @@ import torch
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from common.sae import TopKSAE, SAECfg
 
-R = "out_alllayers"
+R = os.environ.get("ATLAS_OUT", "out_alllayers")   # run root; ATLAS_OUT=out_fixed for the corrected run
 import itertools
 ALL = ["AIDO", "C2S", "Geneformer", "MaxToki", "UCE", "scGPT", "tGPT", "scFoundation", "GeneCompass", "Tahoe"]
 PAIRS = list(itertools.combinations(ALL, 2))   # all 45 pairs, not a hand-picked four
@@ -84,5 +84,5 @@ for m in SVD_MODELS:
                  "random_dict_var_explained": round(rand_ve, 3)})
     print(f"SVD/SAE {m}: SVD@{k} {svd_k:.3f} | SAE {sae_ve} | random-dict {rand_ve:.3f}", flush=True)
 
-json.dump({"cka_null": ckaA, "svd_null": svdB}, open("cka_svd_null.json", "w"), indent=1)
+json.dump({"cka_null": ckaA, "svd_null": svdB}, open(os.path.join(R, "cka_svd_null.json"), "w"), indent=1)
 print("==> cka_svd_null.json", flush=True)

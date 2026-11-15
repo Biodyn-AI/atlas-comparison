@@ -83,6 +83,17 @@ PAIRS_ALL = sorted(([c["pair"][0], c["pair"][1], c["n_models"], c["weight"], c.g
                      _same_family(c["pair"][0], c["pair"][1])]
                     for c in PAIRS["pairs"]), key=lambda r: (-r[2], -r[3]))
 
+# the agreement ratio from many draws (agreement_curve.py): at >= 2 models the 100-draw curve above
+# rests on a null with well under one known pair per draw, so the page quotes this estimate instead
+try:
+    AG = load("agreement_curve.json")
+    agreement = {"n_draws": AG["n_draws"], "sets": {
+        s: {k: {f: v[k][f] for f in ("n_pairs", "hits", "precision", "fold", "fold_approx_95ci_from_se",
+                                       "null_hits_mean", "p_emp")} for k in ("1", "2")}
+        for s, v in AG["sets"].items()}}
+except FileNotFoundError:
+    agreement = None
+
 block = {
     # the curve and the per-model table are the unselected all-ten result; the shortlist and the
     # robustness variants are the five models that passed, which is what the page's captions say
@@ -95,6 +106,7 @@ block = {
     "n_hypotheses": PAIRS_N,
     "per_model": per_model,
     "curve": curve,
+    "agreement": agreement,
     "validated": FIN["models_validated"],
     "examples": FIN["hypotheses"][:N_EXAMPLES],
     "pairs_all": PAIRS_ALL,
@@ -124,6 +136,14 @@ old = atlas.get("hypothesis")
 SN = load("cka_svd_null.json")
 old_sn = atlas.get("controls", {}).get("survivor_nulls")
 
+# The composition of the backbone by gene content (protein synthesis / other housekeeping / specific)
+# and its programmes, which the page uses to group the shared concepts.
+try:
+    BC = load("backbone_composition.json")
+except FileNotFoundError:
+    BC = None
+old_bc = atlas.get("controls", {}).get("backbone_composition")
+
 # The backbone term list the page shows was cut to 40 of 78 when first written. backbone_terms.py
 # recomputes it in full under the same annotator; the page keeps its "SOURCE:term" format.
 try:
@@ -147,6 +167,8 @@ changed = list(diffs(old, block)) if old else [("(no previous block)", None, Non
 if old_sn != SN:
     n_old = {k: len(v) for k, v in (old_sn or {}).items()}
     changed.append(("/controls/survivor_nulls", f"{n_old}", f"{ {k: len(v) for k, v in SN.items()} } (cka_svd_null.json)"))
+if BC is not None and old_bc != BC:
+    changed.append(("/controls/backbone_composition", "", f"{BC['n_concepts']} concepts, {BC['n_programmes']} programmes (backbone_composition.json)"))
 if BT_TERMS is not None and old_bt != BT_TERMS:
     changed.append(("/controls/recalibration/final/shared_ge8_terms", f"{len(old_bt or [])} terms", f"{len(BT_TERMS)} terms (backbone_terms.json)"))
 if not changed:
@@ -158,6 +180,8 @@ elif CHECK:
 else:
     atlas["hypothesis"] = block
     atlas.setdefault("controls", {})["survivor_nulls"] = SN
+    if BC is not None:
+        atlas["controls"]["backbone_composition"] = BC
     if BT_TERMS is not None:
         atlas["controls"].setdefault("recalibration", {}).setdefault("final", {})["shared_ge8_terms"] = BT_TERMS
     json.dump(atlas, open(ATLAS, "w"))

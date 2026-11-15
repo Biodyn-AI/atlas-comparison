@@ -16,11 +16,11 @@
   "GeneCompass": 6,
   "Tahoe": 16
  },
- "n_candidates_before_null": 207,
- "global_null_mean": 248.8,
- "global_null_sd": 6.2,
- "global_z": -6.78,
- "global_fold": 0.83,
+ "n_candidates_before_null": 273,
+ "global_null_mean": 388.3,
+ "global_null_sd": 8.5,
+ "global_z": -13.51,
+ "global_fold": 0.7,
  "n_survivors": 0,
  "alpha": 0.05,
  "candidates": []

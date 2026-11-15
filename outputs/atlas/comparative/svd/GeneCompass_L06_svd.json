@@ -1,0 +1,1 @@
+{"model": "GeneCompass", "layer": 6, "d_model": 768, "d_sae": 3072, "k": 32, "cos_thresh": 0.7, "n_svd_components": 768, "pct_novel": 0.9997, "n_novel": 3071, "mean_maxcos": 0.2077, "median_maxcos": 0.1998, "svd_var_at_k": 0.3544, "sae_var": 0.8152, "var_top10": [0.075, 0.0249, 0.0201, 0.0127, 0.0114, 0.0101, 0.01, 0.0097, 0.0095, 0.009]}

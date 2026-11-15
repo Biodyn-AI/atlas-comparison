@@ -21,7 +21,8 @@ from collections import defaultdict
 BASE = _B
 C = f"{BASE}/outputs/atlas/comparative"; G = f"{BASE}/outputs/atlas/genesets"
 ALLCAT = f"{BASE}/outputs/atlas/alllayer_cat"; TS = f"{BASE}/outputs/atlas/ts3_out"
-PASSED = ["Tahoe", "scGPT", "UCE", "C2S", "Geneformer"]
+PASSED = [m for m, v in sorted(json.load(open(f"{C}/hypothesis_trrust2.json"))["per_model"].items(),
+                               key=lambda kv: -kv[1]["fold"]) if v["p_emp"] < 0.05]   # significant in stage 2(A), strongest first
 TOPG = 10
 NPERM = int(sys.argv[1]) if len(sys.argv) > 1 else 200
 rng = np.random.default_rng(0)

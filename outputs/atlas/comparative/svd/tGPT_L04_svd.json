@@ -1,0 +1,1 @@
+{"model": "tGPT", "layer": 4, "d_model": 1024, "d_sae": 4096, "k": 32, "cos_thresh": 0.7, "n_svd_components": 1024, "pct_novel": 1.0, "n_novel": 4096, "mean_maxcos": 0.1304, "median_maxcos": 0.1103, "svd_var_at_k": 0.9594, "sae_var": 0.9768, "var_top10": [0.8822, 0.0182, 0.0133, 0.0078, 0.0055, 0.0035, 0.0029, 0.0027, 0.0024, 0.0017]}

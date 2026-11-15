@@ -5,26 +5,25 @@
   "Geneformer",
   "MaxToki",
   "UCE",
+  "scGPT",
   "tGPT",
   "scFoundation",
   "GeneCompass",
   "Tahoe"
  ],
- "n_models": 9,
- "excluded": [
-  "scGPT (torchtext ABI crash)"
- ],
+ "n_models": 10,
+ "excluded": [],
  "layers": "5 depth-matched (0/25/50/75/100%)",
- "held_out_core": 1477,
- "orig_core_same_models_layers": 1528,
- "core_jaccard": 0.518,
- "pct_orig_core_reproduced": 67.1,
- "mean_per_model_jaccard": 0.655,
+ "held_out_core": 1232,
+ "orig_core_same_models_layers": 1274,
+ "core_jaccard": 0.495,
+ "pct_orig_core_reproduced": 65.1,
+ "mean_per_model_jaccard": 0.725,
  "per_model": {
   "AIDO": {
-   "held_out_concepts": 4639,
-   "orig_concepts": 4745,
-   "jaccard": 0.507,
+   "held_out_concepts": 4954,
+   "orig_concepts": 4937,
+   "jaccard": 0.791,
    "layers": [
     0,
     2,
@@ -35,9 +34,9 @@
    "orig_layers_found": 5
   },
   "C2S": {
-   "held_out_concepts": 14549,
-   "orig_concepts": 14630,
-   "jaccard": 0.835,
+   "held_out_concepts": 15132,
+   "orig_concepts": 15215,
+   "jaccard": 0.863,
    "layers": [
     0,
     6,
@@ -48,9 +47,9 @@
    "orig_layers_found": 5
   },
   "Geneformer": {
-   "held_out_concepts": 10712,
-   "orig_concepts": 10648,
-   "jaccard": 0.71,
+   "held_out_concepts": 10837,
+   "orig_concepts": 10788,
+   "jaccard": 0.798,
    "layers": [
     0,
     4,
@@ -61,9 +60,9 @@
    "orig_layers_found": 5
   },
   "MaxToki": {
-   "held_out_concepts": 8571,
-   "orig_concepts": 8419,
-   "jaccard": 0.629,
+   "held_out_concepts": 8846,
+   "orig_concepts": 8940,
+   "jaccard": 0.665,
    "layers": [
     0,
     2,
@@ -74,9 +73,9 @@
    "orig_layers_found": 5
   },
   "UCE": {
-   "held_out_concepts": 13923,
-   "orig_concepts": 13997,
-   "jaccard": 0.802,
+   "held_out_concepts": 14663,
+   "orig_concepts": 14743,
+   "jaccard": 0.841,
    "layers": [
     0,
     8,
@@ -86,10 +85,23 @@
    ],
    "orig_layers_found": 5
   },
+  "scGPT": {
+   "held_out_concepts": 8309,
+   "orig_concepts": 8374,
+   "jaccard": 0.767,
+   "layers": [
+    0,
+    3,
+    6,
+    8,
+    11
+   ],
+   "orig_layers_found": 5
+  },
   "tGPT": {
-   "held_out_concepts": 8569,
-   "orig_concepts": 8447,
-   "jaccard": 0.638,
+   "held_out_concepts": 8678,
+   "orig_concepts": 8766,
+   "jaccard": 0.641,
    "layers": [
     0,
     2,
@@ -100,9 +112,9 @@
    "orig_layers_found": 5
   },
   "scFoundation": {
-   "held_out_concepts": 8215,
-   "orig_concepts": 8257,
-   "jaccard": 0.609,
+   "held_out_concepts": 8441,
+   "orig_concepts": 8373,
+   "jaccard": 0.703,
    "layers": [
     0,
     3,
@@ -113,9 +125,9 @@
    "orig_layers_found": 5
   },
   "GeneCompass": {
-   "held_out_concepts": 3137,
-   "orig_concepts": 3182,
-   "jaccard": 0.419,
+   "held_out_concepts": 2651,
+   "orig_concepts": 2492,
+   "jaccard": 0.388,
    "layers": [
     0,
     3,
@@ -126,9 +138,9 @@
    "orig_layers_found": 5
   },
   "Tahoe": {
-   "held_out_concepts": 12198,
-   "orig_concepts": 12105,
-   "jaccard": 0.75,
+   "held_out_concepts": 12672,
+   "orig_concepts": 12667,
+   "jaccard": 0.788,
    "layers": [
     0,
     8,

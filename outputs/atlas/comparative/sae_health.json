@@ -11,10 +11,10 @@
   },
   "C2S": {
    "n_layers": 26,
-   "mid": 0.1,
-   "mean": 4.5,
-   "max": 29.9,
-   "layers_over_threshold": 3
+   "mid": 1.3,
+   "mean": 7.6,
+   "max": 29.3,
+   "layers_over_threshold": 8
   },
   "Geneformer": {
    "n_layers": 18,
@@ -32,10 +32,10 @@
   },
   "UCE": {
    "n_layers": 33,
-   "mid": 0.0,
-   "mean": 3.0,
-   "max": 25.1,
-   "layers_over_threshold": 5
+   "mid": 0.5,
+   "mean": 1.8,
+   "max": 20.2,
+   "layers_over_threshold": 1
   },
   "scGPT": {
    "n_layers": 12,
@@ -46,9 +46,9 @@
   },
   "tGPT": {
    "n_layers": 8,
-   "mid": 12.2,
-   "mean": 22.5,
-   "max": 58.3,
+   "mid": 10.1,
+   "mean": 21.3,
+   "max": 58.6,
    "layers_over_threshold": 4
   },
   "scFoundation": {
@@ -67,15 +67,15 @@
   },
   "Tahoe": {
    "n_layers": 32,
-   "mid": 1.7,
-   "mean": 2.7,
-   "max": 13.3,
-   "layers_over_threshold": 2
+   "mid": 1.6,
+   "mean": 2.6,
+   "max": 6.7,
+   "layers_over_threshold": 0
   }
  },
  "total_layers": 172,
- "layers_over_threshold": 14,
- "pct_layers_over_threshold": 8.1,
+ "layers_over_threshold": 13,
+ "pct_layers_over_threshold": 7.6,
  "clean_models": [
   "AIDO",
   "Geneformer",

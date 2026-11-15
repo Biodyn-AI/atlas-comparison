@@ -68,6 +68,7 @@ class TopKSAE(nn.Module):
 def train_sae(X: np.ndarray, cfg: SAECfg, device: str = "cuda", log=print):
     """Train a TopK SAE on activation rows X [n_positions, d_model]. Returns (sae, stats)."""
     rng = np.random.default_rng(cfg.seed)
+    torch.manual_seed(cfg.seed)                     # weight init and the per-epoch shuffle below
     n = len(X)
     sae = TopKSAE(cfg.d_model, cfg.d_sae, cfg.k).to(device)
     sae.mu.copy_(torch.as_tensor(X.mean(0), dtype=torch.float32, device=device))

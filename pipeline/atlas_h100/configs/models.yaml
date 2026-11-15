@@ -8,8 +8,8 @@
 # papers and configs (docs/DECISIONS.md, item 11); Table S1 of the supplement carries the
 # same facts.
 
-corpus: outputs/atlas/ts3.h5ad          # 6,000 Tabula Sapiens cells: immune, kidney, lung
-sae: {k: 32, expansion: 4, epochs: 4, lr: 3.0e-4, max_positions: 500000, seed: 0}
+corpus: external/perturb/tabula_3tissue_6k.h5ad   # 6,000 Tabula Sapiens cells: immune, kidney, lung
+sae: {k: 32, expansion: 4, epochs: 4, lr: 3.0e-4, per_cell: 168, seed: 0}   # <=168 positions from every cell, ~1M per layer
 
 models:
   AIDO:         {adapter: adapters.aido,         params: 10M,   d_model: 256,  layers: 8,  input: expression (all 19,264 genes), objective: MLM,            prior: none,          species: human,        checkpoint: genbio-ai/AIDO.Cell-10M}

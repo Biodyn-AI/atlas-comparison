@@ -13,16 +13,16 @@
   "GeneCompass",
   "Tahoe"
  ],
- "real_core": 353,
- "real_mean_jaccard": 0.334,
- "real_dedup_core_j0.5": 241,
- "rand_core_mean": 588.7,
- "rand_core_sd": 38.8,
- "rand_core_max": 697,
- "core_z": -6.1,
- "core_fold_over_null": 0.6,
+ "real_core": 365,
+ "real_mean_jaccard": 0.347,
+ "real_dedup_core_j0.5": 225,
+ "rand_core_mean": 582.1,
+ "rand_core_sd": 43.9,
+ "rand_core_max": 685,
+ "core_z": -4.9,
+ "core_fold_over_null": 0.63,
  "rand_jaccard_mean": 0.367,
- "rand_dedup_core_mean": 325.6,
- "two_random_draw_core_jaccard": 0.499,
- "heldout_observed_core_jaccard": 0.518
+ "rand_dedup_core_mean": 326.4,
+ "two_random_draw_core_jaccard": 0.508,
+ "heldout_observed_core_jaccard": 0.495
 }

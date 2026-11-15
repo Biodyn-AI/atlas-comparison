@@ -107,7 +107,7 @@ def run_perturbation(adapter, adata, trrust_path, layer, out_dir,
     df.to_csv(os.path.join(out_dir, f"{adapter.name}_pert_response.csv"), index=False)
     detect = float((df.n_responders > 0).mean()); spec = float(df.specific.mean())
     summary = {"model": adapter.name, "n_tfs": len(df), "detection_rate": detect,
-               "tf_specific_rate": spec, "igor_detect": 0.92, "igor_specific": 0.062}
+               "tf_specific_rate": spec, "reference_detect": 0.92, "reference_specific": 0.062}
     json.dump(summary, open(os.path.join(out_dir, f"{adapter.name}_pert_summary.json"), "w"))
     log(f"\n  ==> {adapter.name}: detection {100*detect:.0f}% [prior 92%] | "
         f"TF-specific {100*spec:.0f}% [prior 6.2%]  ({len(df)} TFs)")

@@ -6,7 +6,8 @@ short version, with pointers into the code.
 ## Corpus
 
 6,000 Tabula Sapiens cells (2,000 each: immune, kidney, lung), raw counts, HGNC symbols, from
-cellxgene-census v1.18.0, seed 0. The held-out corpus is seed 1, same protocol, no overlap.
+cellxgene-census v1.18.0, seed 0. The held-out corpus is seed 1, same protocol, with the 419 cells
+it shares with the corpus removed (5,581 cells; `pipeline/atlas_h100/make_heldout_disjoint.py`).
 Every model sees the same cells. `pipeline/atlas_h100/build_ts_corpus.py`.
 
 ## Models
@@ -19,9 +20,12 @@ objective (masked or autoregressive) and its prior (none, ESM, knowledge graph, 
 
 ## SAE
 
-One TopK SAE per layer: k = 32, dictionary 4 x d_model, MSE, Adam 3e-4, 4 epochs, at most
-500,000 gene-token positions, unit-norm decoder, seed 0. A feature's genes are ranked by mean
-activation per gene; the catalogue keeps the top 20. `pipeline/atlas_h100/common/sae.py`.
+One TopK SAE per layer: k = 32, dictionary 4 x d_model, MSE, Adam 3e-4, 4 epochs, unit-norm
+decoder, seed 0 for both NumPy and torch. Training data: every one of the 6,000 corpus cells
+contributes at most 168 gene-token positions, drawn with seed 0, about 1M positions per layer;
+every model therefore sees the same cells with equal weight. A feature's genes are ranked by mean
+activation per gene (stable order on ties; genes with zero mean activation are not listed); the
+catalogue keeps the top 20. `pipeline/atlas_h100/common/sae.py`, `common/pipeline.py`.
 Dictionary health per layer (dead fraction, decoder cosine): `pipeline/scripts/sae_health.py`,
 Table S3.
 
@@ -68,7 +72,7 @@ Per model: pool features over all layers, top-10 genes per feature, every within
 a pair is predicted when it recurs in at least five features. Score against TRRUST
 (held out from the whole pipeline) with a configuration-model null, 500 rewirings.
 Corroboration across models over all ten graphs, 100 rewirings. Equal-budget re-scoring at
-8,631 pairs. Robustness variants: paralogues dropped, threshold 10, firing features only, both,
+50,707 pairs (the smallest graph among the models that pass). Robustness variants: paralogues dropped, threshold 10, firing features only, both,
 and the near-duplicate check of Table S12. `hypothesis_trrust*.py`, `hypothesis_robust.py`,
 `hypothesis_sizematched.py`, `pair_redundancy.py`.
 

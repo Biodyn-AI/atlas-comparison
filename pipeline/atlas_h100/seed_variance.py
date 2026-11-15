@@ -23,6 +23,13 @@ from common.sae import SAECfg, train_sae, feature_activations
 MIN, MAX, ALPHA, TOP = 5, 500, 0.05, 5
 
 
+
+def top_positive(col, n):
+    """Indices of the n largest positive entries, stable on ties (zero-mean genes are not filler)."""
+    o = np.argsort(-col, kind="stable")
+    return o[col[o] > 0][:n]
+
+
 def bh(p):
     p = np.asarray(p, float); n = len(p); o = np.argsort(p); r = np.arange(1, n + 1)
     q = np.minimum.accumulate((p[o] * n / r)[::-1])[::-1]; out = np.empty(n); out[o] = np.clip(q, 0, 1); return out
@@ -129,13 +136,13 @@ def main():
             if key in out["concept_sets"]:
                 print(f"  {m} seed {seed} cached"); continue
             torch.manual_seed(seed); np.random.seed(seed)
-            cfg = SAECfg(d_model=A.shape[1], expansion=4, k=32, epochs=4)
+            cfg = SAECfg(d_model=A.shape[1], expansion=4, k=32, epochs=4, seed=seed)   # train_sae seeds torch from cfg.seed
             sae, stats = train_sae(np.asarray(A), cfg, device=a.device, log=lambda *x: None)
             F = feature_activations(sae, np.asarray(A), device=a.device)
             Gm = np.zeros((len(uniq), F.shape[1]), np.float64); c = np.zeros(len(uniq))
             np.add.at(Gm, sym_idx, F); np.add.at(c, sym_idx, 1); Gm /= np.maximum(c[:, None], 1)
             alive = np.where((F > 0).mean(0) > 0)[0]
-            topg = {int(f): [str(uniq[i]) for i in np.argsort(Gm[:, f])[::-1][:20] if uniq[i] in bg][:TOP] for f in alive}
+            topg = {int(f): [str(uniq[i]) for i in top_positive(Gm[:, f], 20) if uniq[i] in bg][:TOP] for f in alive}
             terms, nann = annotate(topg, idx, size, bgn)
             rec = {"seed": seed, "n_alive": int(len(alive)), "n_annot": int(nann),
                    "annot_rate": round(100 * nann / max(len(alive), 1), 1), "n_concepts": len(terms),

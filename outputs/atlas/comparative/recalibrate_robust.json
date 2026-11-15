@@ -3,116 +3,116 @@
   {
    "config": "top10 a3 max200",
    ">=7": {
-    "real": 142,
-    "null": 13.8,
-    "fold": 10.3
+    "real": 216,
+    "null": 13.7,
+    "fold": 15.8
    },
    ">=8": {
-    "real": 78,
-    "null": 4.4,
-    "fold": 17.7
+    "real": 96,
+    "null": 4.2,
+    "fold": 22.6
    },
    ">=9": {
-    "real": 10,
-    "null": 0.6,
-    "fold": 18.2
+    "real": 29,
+    "null": 0.4,
+    "fold": 72.5
    },
    ">=10": {
-    "real": 2,
+    "real": 0,
     "null": 0.0,
-    "fold": 6.7
+    "fold": 0.0
    }
   },
   {
    "config": "top10 a3 max150",
    ">=7": {
-    "real": 95,
+    "real": 146,
     "null": 0.6,
-    "fold": 158.3
+    "fold": 243.3
    },
    ">=8": {
-    "real": 50,
+    "real": 58,
     "null": 0.1,
-    "fold": 166.7
+    "fold": 193.3
    },
    ">=9": {
-    "real": 5,
+    "real": 12,
     "null": 0.0,
-    "fold": 16.7
+    "fold": 40.0
    },
    ">=10": {
-    "real": 1,
+    "real": 0,
     "null": 0.0,
-    "fold": 3.3
+    "fold": 0.0
    }
   },
   {
    "config": "top12 a3 max200",
    ">=7": {
-    "real": 212,
-    "null": 62.1,
-    "fold": 3.4
+    "real": 293,
+    "null": 65.8,
+    "fold": 4.4
    },
    ">=8": {
-    "real": 115,
-    "null": 27.3,
-    "fold": 4.2
+    "real": 145,
+    "null": 27.5,
+    "fold": 5.3
    },
    ">=9": {
-    "real": 22,
-    "null": 7.6,
-    "fold": 2.9
+    "real": 45,
+    "null": 7.0,
+    "fold": 6.4
    },
    ">=10": {
     "real": 3,
     "null": 0.9,
-    "fold": 3.3
+    "fold": 3.2
    }
   },
   {
    "config": "top10 a3 max300",
    ">=7": {
-    "real": 218,
-    "null": 91.2,
-    "fold": 2.4
+    "real": 307,
+    "null": 91.4,
+    "fold": 3.4
    },
    ">=8": {
-    "real": 126,
-    "null": 55.8,
-    "fold": 2.3
+    "real": 153,
+    "null": 56.6,
+    "fold": 2.7
    },
    ">=9": {
-    "real": 32,
-    "null": 26.1,
-    "fold": 1.2
+    "real": 52,
+    "null": 25.9,
+    "fold": 2.0
    },
    ">=10": {
-    "real": 6,
-    "null": 6.2,
-    "fold": 1.0
+    "real": 4,
+    "null": 6.5,
+    "fold": 0.6
    }
   },
   {
    "config": "top10 a3 max200 OR5",
    ">=7": {
-    "real": 142,
-    "null": 12.7,
-    "fold": 11.2
+    "real": 216,
+    "null": 13.3,
+    "fold": 16.2
    },
    ">=8": {
-    "real": 78,
-    "null": 3.0,
-    "fold": 26.4
+    "real": 96,
+    "null": 4.0,
+    "fold": 24.3
    },
    ">=9": {
-    "real": 10,
-    "null": 0.2,
-    "fold": 33.3
+    "real": 29,
+    "null": 0.5,
+    "fold": 58.0
    },
    ">=10": {
-    "real": 2,
+    "real": 0,
     "null": 0.1,
-    "fold": 6.7
+    "fold": 0.0
    }
   }
  ],
@@ -124,51 +124,51 @@
  ],
  "n_perm": 20,
  "triviality": {
-  "n_ge8": 78,
-  "housekeeping": 29,
-  "specific": 49,
-  "pct_housekeeping": 37.2,
+  "n_ge8": 96,
+  "housekeeping": 33,
+  "specific": 63,
+  "pct_housekeeping": 34.4,
   "specific_terms": [
-   "antigen processing and presentation of exogenous peptide antigen (GO:0002478)",
-   "antigen processing and presentation of exogenous peptide antigen via MHC class II (GO:0019886)",
-   "antigen processing and presentation of peptide antigen via MHC class II (GO:0002495)",
-   "cellular response to metal ion (GO:0071248)",
+   "antigen receptor-mediated signaling pathway (GO:0050851)",
+   "cellular divalent inorganic cation homeostasis (GO:0072503)",
+   "cellular response to lipopolysaccharide (GO:0071222)",
+   "cellular response to tumor necrosis factor (GO:0071356)",
    "defense response to bacterium (GO:0042742)",
+   "microtubule cytoskeleton organization involved in mitosis (GO:1902850)",
    "muscle contraction (GO:0006936)",
-   "negative regulation of cytokine production (GO:0001818)",
-   "negative regulation of growth (GO:0045926)",
+   "platelet degranulation (GO:0002576)",
+   "protein stabilization (GO:0050821)",
    "regulated exocytosis (GO:0045055)",
-   "regulation of cellular response to stress (GO:0080135)",
-   "response to cytokine (GO:0034097)",
-   "Adrenergic signaling in cardiomyocytes",
+   "regulation of immune response (GO:0050776)",
+   "regulation of mRNA stability (GO:0043488)",
+   "regulation of programmed cell death (GO:0043067)",
    "Alcoholism",
    "Antigen processing and presentation",
-   "Apoptosis",
-   "Cardiac muscle contraction",
    "Cell adhesion molecules",
+   "Chemokine signaling pathway",
    "Estrogen signaling pathway",
    "Hematopoietic cell lineage",
-   "IL-17 signaling pathway",
    "Influenza A",
    "Kaposi sarcoma-associated herpesvirus infection",
    "Leishmaniasis",
+   "Necroptosis",
    "Neutrophil extracellular trap formation",
+   "Osteoclast differentiation",
+   "Pathogenic Escherichia coli infection",
    "Phagosome",
-   "Protein processing in endoplasmic reticulum",
+   "Retrograde endocannabinoid signaling",
    "Rheumatoid arthritis",
+   "Salivary secretion",
    "Staphylococcus aureus infection",
-   "Systemic lupus erythematosus",
    "Th1 and Th2 cell differentiation",
-   "Toxoplasmosis",
+   "Th17 cell differentiation",
    "Tuberculosis",
+   "cGMP-PKG signaling pathway",
+   "Antimicrobial Peptides R-HSA-6803157",
    "Cellular Response To Starvation R-HSA-9711097",
-   "Formation Of A Pool Of Free 40S Subunits R-HSA-72689",
-   "Formation Of Ternary Complex, And Subsequently, 43S Complex R-HSA-72695",
-   "Influenza Infection R-HSA-168255",
-   "Influenza Viral RNA Transcription And Replication R-HSA-168273",
-   "Interferon Signaling R-HSA-913531",
-   "Muscle Contraction R-HSA-397014",
-   "Nonsense Mediated Decay (NMD) Enhanced By Exon Junction Complex (EJC) R-HSA-975957"
+   "Cellular Senescence R-HSA-2559583",
+   "Chromosome Maintenance R-HSA-73886",
+   "Defective CSF2RA Causes SMDP4 R-HSA-5688890"
   ]
  }
 }

@@ -105,16 +105,25 @@ def build_cka(out):
         embs[m] = dict(np.load(p))
     models = [m for m in MODELS if m in embs]
     out_json = {"models": models, "depths": ["0%", "25%", "50%", "75%", "100%"], "residual": {}, "sae": {}}
-    for space, keyfn in (("residual", lambda i: f"res_{i}"), ("sae", lambda i: f"sae_{i}")):
+    # Keys are res_<i>/sae_<i>, i indexing the model's saved layers. A five-layer (depth-matched) run has
+    # i = relative depth directly; an --all-layers run saves every block, so relative depth r is read at
+    # block depth_matched(n_layers)[r]. (Reading key r directly there would compare blocks 0-4.)
+    from common.layers import depth_matched
+    def key_at(m, prefix, r):
+        n = len(embs[m]["layers"]) if "layers" in embs[m] else 5
+        i = r if n <= 5 else depth_matched(n)[r]
+        return f"{prefix}_{i}"
+    out_json["layer_at_depth"] = {m: [int(key_at(m, "res", r).split("_")[1]) for r in range(5)] for m in models}
+    for space, prefix in (("residual", "res"), ("sae", "sae")):
         for r in range(5):
-            k = keyfn(r)
-            if not any(k in embs[m] for m in models):
+            if not any(key_at(m, prefix, r) in embs[m] for m in models):
                 continue
             Mx = [[None] * len(models) for _ in models]
             for i, a in enumerate(models):
                 for j, b in enumerate(models):
-                    if k in embs[a] and k in embs[b]:
-                        Mx[i][j] = round(linear_cka(embs[a][k], embs[b][k]), 3)
+                    ka, kb = key_at(a, prefix, r), key_at(b, prefix, r)
+                    if ka in embs[a] and kb in embs[b]:
+                        Mx[i][j] = round(linear_cka(embs[a][ka], embs[b][kb]), 3)
             out_json[space][str(r)] = Mx
             print(f"{space} rel-depth {r}: CKA done", flush=True)
     json.dump(out_json, open(f"{od}/cka_ts3.json", "w"))

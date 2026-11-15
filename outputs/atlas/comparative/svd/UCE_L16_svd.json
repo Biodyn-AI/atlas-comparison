@@ -1,0 +1,1 @@
+{"model": "UCE", "layer": 16, "d_model": 1280, "d_sae": 5120, "k": 32, "cos_thresh": 0.7, "n_svd_components": 1280, "pct_novel": 1.0, "n_novel": 5120, "mean_maxcos": 0.1257, "median_maxcos": 0.114, "svd_var_at_k": 0.5569, "sae_var": 0.8928, "var_top10": [0.1119, 0.0705, 0.0495, 0.0372, 0.0253, 0.0215, 0.02, 0.0178, 0.0152, 0.0136]}

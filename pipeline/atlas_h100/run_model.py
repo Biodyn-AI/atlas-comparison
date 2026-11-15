@@ -5,6 +5,7 @@ then add UCE/GeneCompass/etc.
 
     python run_model.py --model AIDO --corpus data/corpus.h5ad --device cuda
     python run_model.py --model AIDO --smoke        # 32 cells, quick end-to-end check
+    python run_model.py --model AIDO --all-layers --per-cell 168 --out out_fixed   # corrected sampling
 """
 from __future__ import annotations
 import argparse, importlib, os, sys
@@ -39,6 +40,11 @@ def main():
     ap.add_argument("--all-layers", action="store_true", help="extract + SAE at EVERY layer (not just 5 depth-matched)")
     ap.add_argument("--max-positions", type=int, default=4_000_000,
                     help="cap saved positions/layer (use ~500000 for all-layers to keep disk sane)")
+    ap.add_argument("--per-cell", type=int, default=0,
+                    help="read every cell, keep at most this many positions per cell (seeded); "
+                         "0 = the original corpus-order cap on --max-positions")
+    ap.add_argument("--seed", type=int, default=0, help="position sampling and SAE seed")
+    ap.add_argument("--mid-only", action="store_true", help="only the middle block (n_layers // 2)")
     ap.add_argument("--skip-annotate", action="store_true")
     args = ap.parse_args()
 
@@ -54,6 +60,10 @@ def main():
         total = getattr(adapter, "n_layers", None) or (max(adapter.layers) + 1)
         adapter.layers = tuple(range(total))
         print(f"    all-layers mode: {total} layers")
+    if args.mid_only:                         # the layer the cross-model statistics are read at
+        total = getattr(adapter, "n_layers", None) or (max(adapter.layers) + 1)
+        adapter.layers = (total // 2,)
+        print(f"    mid-only mode: layer {total // 2} of {total}")
 
     adata = sc.read_h5ad(args.corpus)
     if args.smoke:
@@ -61,8 +71,9 @@ def main():
     print(f"==> {args.model}: {adata.n_obs} cells, layers {list(adapter.layers)}")
 
     out_dir = os.path.join(args.out, args.model)
-    pipeline.extract(adapter, adata, out_dir, batch_size=args.batch_size, max_positions=args.max_positions)
-    pipeline.build_catalog(adapter, out_dir, device=args.device)
+    pipeline.extract(adapter, adata, out_dir, batch_size=args.batch_size, max_positions=args.max_positions,
+                     per_cell=args.per_cell, seed=args.seed)
+    pipeline.build_catalog(adapter, out_dir, device=args.device, seed=args.seed)
 
     if not args.skip_annotate:
         annotate_all(os.path.join(out_dir, "feature_catalog_L*.json"),

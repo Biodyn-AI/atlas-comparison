@@ -4,46 +4,46 @@
  "n_perm_heldout": 150,
  "backbone_null": {
   ">=7": {
-   "real": 142,
+   "real": 216,
    "null_mean": 13.16,
-   "null_sd": 3.53,
-   "z": 36.5,
+   "null_sd": 3.55,
+   "z": 57.2,
    "p_emp": 0.00398406374501992,
-   "fold": 10.8
+   "fold": 16.4
   },
   ">=8": {
-   "real": 78,
-   "null_mean": 3.46,
-   "null_sd": 2.04,
-   "z": 36.6,
+   "real": 96,
+   "null_mean": 3.49,
+   "null_sd": 1.92,
+   "z": 48.2,
    "p_emp": 0.00398406374501992,
-   "fold": 22.5
+   "fold": 27.5
   },
   ">=9": {
-   "real": 10,
-   "null_mean": 0.58,
-   "null_sd": 0.78,
-   "z": 12.1,
+   "real": 29,
+   "null_mean": 0.6,
+   "null_sd": 0.86,
+   "z": 32.9,
    "p_emp": 0.00398406374501992,
-   "fold": 17.1
+   "fold": 48.7
   },
   ">=10": {
-   "real": 2,
-   "null_mean": 0.03,
-   "null_sd": 0.18,
-   "z": 11.2,
-   "p_emp": 0.00398406374501992,
-   "fold": 20.0
+   "real": 0,
+   "null_mean": 0.04,
+   "null_sd": 0.21,
+   "z": -0.2,
+   "p_emp": 1.0,
+   "fold": 0.0
   }
  },
  "heldout_null": {
-  "observed_jaccard": 0.5,
-  "backbone_orig": 81,
-  "backbone_heldout": 81,
-  "null_mean": 0.0476,
-  "null_sd": 0.0612,
-  "null_max": 0.333,
-  "p_emp": 0.006622516556291391,
-  "fold": 10.5
+  "observed_jaccard": 0.522,
+  "backbone_orig": 97,
+  "backbone_heldout": 75,
+  "null_mean": 0.035,
+  "null_sd": 0.0976,
+  "null_max": 0.667,
+  "p_emp": 0.019867549668874173,
+  "fold": 14.9
  }
 }

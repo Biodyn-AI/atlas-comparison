@@ -2,101 +2,100 @@
  "null": "configuration model, exact degree preserved",
  "n_perm": 200,
  "models": [
-  "Tahoe",
-  "scGPT",
   "UCE",
+  "Tahoe",
   "C2S",
   "Geneformer"
  ],
  "variants": {
   "R0 baseline (W>=5)": {
    "1": {
-    "n_pairs": 273513,
-    "hits": 168,
-    "precision": 0.000614,
-    "null_precision": 0.0001152,
-    "fold": 5.33,
+    "n_pairs": 320483,
+    "hits": 198,
+    "precision": 0.000618,
+    "null_precision": 0.00011433,
+    "fold": 5.4,
     "p_emp": 0.00498
    },
    "2": {
-    "n_pairs": 11667,
-    "hits": 31,
-    "precision": 0.002657,
-    "null_precision": 9.344e-05,
-    "fold": 28.43,
-    "p_emp": 0.00498
+    "n_pairs": 13531,
+    "hits": 39,
+    "precision": 0.002882,
+    "null_precision": 0.00018728,
+    "fold": 15.39,
+    "p_emp": 0.00995
    }
   },
   "R1 no same-family pairs": {
    "1": {
-    "n_pairs": 248389,
-    "hits": 142,
-    "precision": 0.000572,
-    "null_precision": 0.00012509,
-    "fold": 4.57,
+    "n_pairs": 289342,
+    "hits": 167,
+    "precision": 0.000577,
+    "null_precision": 0.00012263,
+    "fold": 4.71,
     "p_emp": 0.00498
    },
    "2": {
-    "n_pairs": 7287,
-    "hits": 23,
-    "precision": 0.003156,
-    "null_precision": 0.00019081,
-    "fold": 16.54,
+    "n_pairs": 8095,
+    "hits": 29,
+    "precision": 0.003582,
+    "null_precision": 0.00017721,
+    "fold": 20.22,
     "p_emp": 0.00995
    }
   },
   "R2 firing features only": {
    "1": {
-    "n_pairs": 176597,
-    "hits": 138,
-    "precision": 0.000781,
-    "null_precision": 9.962e-05,
-    "fold": 7.84,
+    "n_pairs": 241065,
+    "hits": 167,
+    "precision": 0.000693,
+    "null_precision": 0.00010284,
+    "fold": 6.74,
     "p_emp": 0.00498
    },
    "2": {
-    "n_pairs": 8390,
-    "hits": 25,
-    "precision": 0.00298,
-    "null_precision": 0.00024012,
-    "fold": 12.41,
-    "p_emp": 0.05473
+    "n_pairs": 10476,
+    "hits": 31,
+    "precision": 0.002959,
+    "null_precision": 0.0001016,
+    "fold": 29.13,
+    "p_emp": 0.03483
    }
   },
   "R3 stricter evidence (W>=10)": {
    "1": {
-    "n_pairs": 89269,
-    "hits": 76,
-    "precision": 0.000851,
-    "null_precision": 9.585e-05,
-    "fold": 8.88,
+    "n_pairs": 78835,
+    "hits": 94,
+    "precision": 0.001192,
+    "null_precision": 0.00011379,
+    "fold": 10.48,
     "p_emp": 0.00498
    },
    "2": {
-    "n_pairs": 3950,
-    "hits": 10,
-    "precision": 0.002532,
-    "null_precision": 5.051e-05,
-    "fold": 50.13,
-    "p_emp": 0.00995
+    "n_pairs": 4590,
+    "hits": 16,
+    "precision": 0.003486,
+    "null_precision": 0.00021295,
+    "fold": 16.37,
+    "p_emp": 0.01493
    }
   },
   "R2+R1 firing, no families": {
    "1": {
-    "n_pairs": 153006,
-    "hits": 112,
-    "precision": 0.000732,
-    "null_precision": 0.00010954,
-    "fold": 6.68,
+    "n_pairs": 211320,
+    "hits": 136,
+    "precision": 0.000644,
+    "null_precision": 0.00011099,
+    "fold": 5.8,
     "p_emp": 0.00498
    },
    "2": {
-    "n_pairs": 4503,
-    "hits": 17,
-    "precision": 0.003775,
-    "null_precision": 4.065e-05,
-    "fold": 92.87,
-    "p_emp": 0.00995
+    "n_pairs": 5521,
+    "hits": 21,
+    "precision": 0.003804,
+    "null_precision": 0.00028614,
+    "fold": 13.29,
+    "p_emp": 0.0597
    }
   }
  }
