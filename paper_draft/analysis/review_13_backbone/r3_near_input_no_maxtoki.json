@@ -1,0 +1,120 @@
+{
+ "models": [
+  "C2S",
+  "Geneformer",
+  "UCE",
+  "scGPT",
+  "scFoundation",
+  "Tahoe"
+ ],
+ "slices": {
+  "d0": {
+   ">=5_of_6": {
+    "n": 497,
+    "class_weighted": {
+     "other_housekeeping": 196,
+     "specific": 257,
+     "protein_synthesis": 44
+    }
+   },
+   ">=6_of_6": {
+    "n": 158,
+    "class_weighted": {
+     "other_housekeeping": 52,
+     "specific": 66,
+     "protein_synthesis": 40
+    }
+   }
+  },
+  "d25": {
+   ">=5_of_6": {
+    "n": 702,
+    "class_weighted": {
+     "other_housekeeping": 289,
+     "specific": 368,
+     "protein_synthesis": 45
+    }
+   },
+   ">=6_of_6": {
+    "n": 279,
+    "class_weighted": {
+     "other_housekeeping": 76,
+     "specific": 160,
+     "protein_synthesis": 43
+    }
+   }
+  },
+  "d50": {
+   ">=5_of_6": {
+    "n": 483,
+    "class_weighted": {
+     "other_housekeeping": 204,
+     "specific": 235,
+     "protein_synthesis": 44
+    }
+   },
+   ">=6_of_6": {
+    "n": 219,
+    "class_weighted": {
+     "other_housekeeping": 59,
+     "protein_synthesis": 43,
+     "specific": 117
+    }
+   }
+  },
+  "mid": {
+   ">=5_of_6": {
+    "n": 494,
+    "class_weighted": {
+     "other_housekeeping": 199,
+     "specific": 251,
+     "protein_synthesis": 44
+    }
+   },
+   ">=6_of_6": {
+    "n": 229,
+    "class_weighted": {
+     "other_housekeeping": 53,
+     "protein_synthesis": 43,
+     "specific": 133
+    }
+   }
+  },
+  "d75": {
+   ">=5_of_6": {
+    "n": 285,
+    "class_weighted": {
+     "other_housekeeping": 75,
+     "specific": 166,
+     "protein_synthesis": 44
+    }
+   },
+   ">=6_of_6": {
+    "n": 116,
+    "class_weighted": {
+     "protein_synthesis": 39,
+     "specific": 57,
+     "other_housekeeping": 20
+    }
+   }
+  },
+  "d100": {
+   ">=5_of_6": {
+    "n": 112,
+    "class_weighted": {
+     "other_housekeeping": 21,
+     "protein_synthesis": 39,
+     "specific": 52
+    }
+   },
+   ">=6_of_6": {
+    "n": 49,
+    "class_weighted": {
+     "protein_synthesis": 39,
+     "specific": 9,
+     "other_housekeeping": 1
+    }
+   }
+  }
+ }
+}

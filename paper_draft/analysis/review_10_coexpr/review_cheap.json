@@ -1,0 +1,439 @@
+{
+ "rederived_numbers": [],
+ "n_checked": 0,
+ "n_mismatch": 0,
+ "paired_degmatched": {
+  "Tahoe": {
+   "cofire_only_hits": 62,
+   "coexpr_only_hits": 36,
+   "cofire_only_pairs": 66740,
+   "coexpr_only_pairs": 66722,
+   "p0": 0.5001,
+   "binom_p_two_sided": 0.01117,
+   "fisher_p_independent_samples": 0.0291
+  },
+  "scGPT": {
+   "cofire_only_hits": 1,
+   "coexpr_only_hits": 11,
+   "cofire_only_pairs": 8287,
+   "coexpr_only_pairs": 8283,
+   "p0": 0.5001,
+   "binom_p_two_sided": 0.00341,
+   "fisher_p_independent_samples": 0.01268
+  },
+  "UCE": {
+   "cofire_only_hits": 51,
+   "coexpr_only_hits": 40,
+   "cofire_only_pairs": 86204,
+   "coexpr_only_pairs": 85995,
+   "p0": 0.5006,
+   "binom_p_two_sided": 0.2945,
+   "fisher_p_independent_samples": 0.33808
+  },
+  "C2S": {
+   "cofire_only_hits": 77,
+   "coexpr_only_hits": 46,
+   "cofire_only_pairs": 104788,
+   "coexpr_only_pairs": 104687,
+   "p0": 0.5002,
+   "binom_p_two_sided": 0.00659,
+   "fisher_p_independent_samples": 0.01566
+  },
+  "Geneformer": {
+   "cofire_only_hits": 12,
+   "coexpr_only_hits": 38,
+   "cofire_only_pairs": 48280,
+   "coexpr_only_pairs": 48278,
+   "p0": 0.5,
+   "binom_p_two_sided": 0.0002,
+   "fisher_p_independent_samples": 0.00073
+  },
+  "MaxToki": {
+   "cofire_only_hits": 2,
+   "coexpr_only_hits": 1,
+   "cofire_only_pairs": 15001,
+   "coexpr_only_pairs": 14994,
+   "p0": 0.5001,
+   "binom_p_two_sided": 1.0,
+   "fisher_p_independent_samples": 1.0
+  }
+ },
+ "paired_degmatched_pooled_5_passing": {
+  "cofire_only_hits": 202,
+  "coexpr_only_hits": 160,
+  "cofire_only_pairs": 306012,
+  "coexpr_only_pairs": 305682,
+  "binom_p_two_sided": 0.03104
+ },
+ "paired_nodematched": {
+  "pearson": {
+   "UCE": {
+    "cofire_only_hits": 54,
+    "coexpr_only_hits": 37,
+    "cofire_only_pairs": 87537,
+    "coexpr_only_pairs": 87537,
+    "p0": 0.5,
+    "binom_p_two_sided": 0.09295,
+    "fisher_p_independent_samples": 0.11437
+   },
+   "Tahoe": {
+    "cofire_only_hits": 67,
+    "coexpr_only_hits": 26,
+    "cofire_only_pairs": 69011,
+    "coexpr_only_pairs": 69011,
+    "p0": 0.5,
+    "binom_p_two_sided": 3e-05,
+    "fisher_p_independent_samples": 0.00019
+   },
+   "C2S": {
+    "cofire_only_hits": 84,
+    "coexpr_only_hits": 42,
+    "cofire_only_pairs": 105892,
+    "coexpr_only_pairs": 105892,
+    "p0": 0.5,
+    "binom_p_two_sided": 0.00023,
+    "fisher_p_independent_samples": 0.00058
+   },
+   "Geneformer": {
+    "cofire_only_hits": 14,
+    "coexpr_only_hits": 23,
+    "cofire_only_pairs": 48551,
+    "coexpr_only_pairs": 48551,
+    "p0": 0.5,
+    "binom_p_two_sided": 0.18774,
+    "fisher_p_independent_samples": 0.22195
+   },
+   "MaxToki": {
+    "cofire_only_hits": 2,
+    "coexpr_only_hits": 4,
+    "cofire_only_pairs": 15194,
+    "coexpr_only_pairs": 15194,
+    "p0": 0.5,
+    "binom_p_two_sided": 0.6875,
+    "fisher_p_independent_samples": 0.68747
+   },
+   "tGPT": {
+    "cofire_only_hits": 1,
+    "coexpr_only_hits": 8,
+    "cofire_only_pairs": 7777,
+    "coexpr_only_pairs": 7777,
+    "p0": 0.5,
+    "binom_p_two_sided": 0.03906,
+    "fisher_p_independent_samples": 0.03902
+   }
+  },
+  "spearman": {
+   "UCE": {
+    "cofire_only_hits": 55,
+    "coexpr_only_hits": 47,
+    "cofire_only_pairs": 88066,
+    "coexpr_only_pairs": 88066,
+    "p0": 0.5,
+    "binom_p_two_sided": 0.48843,
+    "fisher_p_independent_samples": 0.50838
+   },
+   "Tahoe": {
+    "cofire_only_hits": 71,
+    "coexpr_only_hits": 35,
+    "cofire_only_pairs": 69657,
+    "coexpr_only_pairs": 69657,
+    "p0": 0.5,
+    "binom_p_two_sided": 0.00061,
+    "fisher_p_independent_samples": 0.00142
+   },
+   "C2S": {
+    "cofire_only_hits": 85,
+    "coexpr_only_hits": 50,
+    "cofire_only_pairs": 106873,
+    "coexpr_only_pairs": 106873,
+    "p0": 0.5,
+    "binom_p_two_sided": 0.00328,
+    "fisher_p_independent_samples": 0.00547
+   },
+   "Geneformer": {
+    "cofire_only_hits": 14,
+    "coexpr_only_hits": 26,
+    "cofire_only_pairs": 48550,
+    "coexpr_only_pairs": 48550,
+    "p0": 0.5,
+    "binom_p_two_sided": 0.08069,
+    "fisher_p_independent_samples": 0.10373
+   },
+   "MaxToki": {
+    "cofire_only_hits": 2,
+    "coexpr_only_hits": 3,
+    "cofire_only_pairs": 15279,
+    "coexpr_only_pairs": 15279,
+    "p0": 0.5,
+    "binom_p_two_sided": 1.0,
+    "fisher_p_independent_samples": 1.0
+   },
+   "tGPT": {
+    "cofire_only_hits": 1,
+    "coexpr_only_hits": 6,
+    "cofire_only_pairs": 8081,
+    "coexpr_only_pairs": 8081,
+    "p0": 0.5,
+    "binom_p_two_sided": 0.125,
+    "fisher_p_independent_samples": 0.12494
+   }
+  },
+  "withincomp": {
+   "UCE": {
+    "cofire_only_hits": 54,
+    "coexpr_only_hits": 55,
+    "cofire_only_pairs": 86894,
+    "coexpr_only_pairs": 86894,
+    "p0": 0.5,
+    "binom_p_two_sided": 1.0,
+    "fisher_p_independent_samples": 1.0
+   },
+   "Tahoe": {
+    "cofire_only_hits": 64,
+    "coexpr_only_hits": 42,
+    "cofire_only_pairs": 68726,
+    "coexpr_only_pairs": 68726,
+    "p0": 0.5,
+    "binom_p_two_sided": 0.04087,
+    "fisher_p_independent_samples": 0.07123
+   },
+   "C2S": {
+    "cofire_only_hits": 81,
+    "coexpr_only_hits": 55,
+    "cofire_only_pairs": 105428,
+    "coexpr_only_pairs": 105428,
+    "p0": 0.5,
+    "binom_p_two_sided": 0.03167,
+    "fisher_p_independent_samples": 0.04769
+   },
+   "Geneformer": {
+    "cofire_only_hits": 14,
+    "coexpr_only_hits": 40,
+    "cofire_only_pairs": 48415,
+    "coexpr_only_pairs": 48415,
+    "p0": 0.5,
+    "binom_p_two_sided": 0.00054,
+    "fisher_p_independent_samples": 0.00106
+   },
+   "MaxToki": {
+    "cofire_only_hits": 2,
+    "coexpr_only_hits": 5,
+    "cofire_only_pairs": 15090,
+    "coexpr_only_pairs": 15090,
+    "p0": 0.5,
+    "binom_p_two_sided": 0.45312,
+    "fisher_p_independent_samples": 0.45307
+   },
+   "tGPT": {
+    "cofire_only_hits": 1,
+    "coexpr_only_hits": 11,
+    "cofire_only_pairs": 7655,
+    "coexpr_only_pairs": 7655,
+    "p0": 0.5,
+    "binom_p_two_sided": 0.00635,
+    "fisher_p_independent_samples": 0.00633
+   }
+  }
+ },
+ "global_topN_own_size": {
+  "per_model": {
+   "UCE": {
+    "N": 91724,
+    "cofire_hits": 60,
+    "pearson": {
+     "hits": 41,
+     "fisher_p": 0.07268
+    },
+    "spearman": {
+     "hits": 47,
+     "fisher_p": 0.24575
+    },
+    "withincomp": {
+     "hits": 55,
+     "fisher_p": 0.70924
+    }
+   },
+   "Tahoe": {
+    "N": 78159,
+    "cofire_hits": 79,
+    "pearson": {
+     "hits": 38,
+     "fisher_p": 0.00019
+    },
+    "spearman": {
+     "hits": 42,
+     "fisher_p": 0.00098
+    },
+    "withincomp": {
+     "hits": 46,
+     "fisher_p": 0.00401
+    }
+   },
+   "C2S": {
+    "N": 117131,
+    "cofire_hits": 93,
+    "pearson": {
+     "hits": 51,
+     "fisher_p": 0.00058
+    },
+    "spearman": {
+     "hits": 57,
+     "fisher_p": 0.0041
+    },
+    "withincomp": {
+     "hits": 63,
+     "fisher_p": 0.0199
+    }
+   },
+   "Geneformer": {
+    "N": 50707,
+    "cofire_hits": 17,
+    "pearson": {
+     "hits": 26,
+     "fisher_p": 0.22195
+    },
+    "spearman": {
+     "hits": 29,
+     "fisher_p": 0.10373
+    },
+    "withincomp": {
+     "hits": 34,
+     "fisher_p": 0.02406
+    }
+   }
+  },
+  "pooled_5_passing": {
+   "cofire": 249,
+   "pearson": 156,
+   "pearson_binom_p_equalN": 0.0,
+   "pearson_without_Tahoe": {
+    "cofire": 170,
+    "coexpr": 118,
+    "binom_p": 0.00259
+   },
+   "spearman": 175,
+   "spearman_binom_p_equalN": 0.00038,
+   "spearman_without_Tahoe": {
+    "cofire": 170,
+    "coexpr": 133,
+    "binom_p": 0.03845
+   },
+   "withincomp": 198,
+   "withincomp_binom_p_equalN": 0.01794,
+   "withincomp_without_Tahoe": {
+    "cofire": 170,
+    "coexpr": 152,
+    "binom_p": 0.34346
+   }
+  },
+  "note": "binomial test on pooled hits at equal total N; ignores pair overlap and gene dependence"
+ },
+ "tahoe_full_null_mc": {
+  "runs": [
+   {
+    "seed": 11,
+    "null_mean": 8.21,
+    "null_sd": 2.872,
+    "fold": 7.19
+   },
+   {
+    "seed": 12,
+    "null_mean": 8.185,
+    "null_sd": 2.904,
+    "fold": 7.21
+   },
+   {
+    "seed": 13,
+    "null_mean": 8.45,
+    "null_sd": 3.074,
+    "fold": 6.98
+   },
+   {
+    "seed": 14,
+    "null_mean": 8.13,
+    "null_sd": 2.772,
+    "fold": 7.26
+   },
+   {
+    "seed": 15,
+    "null_mean": 7.93,
+    "null_sd": 2.882,
+    "fold": 7.44
+   }
+  ],
+  "spread_null_mean": [
+   7.93,
+   8.45
+  ],
+  "notes_T1_value": 3.93,
+  "published_500perm": 4.44,
+  "se_of_mean_200perm": 0.205
+ },
+ "tf_tf_base_rate": {
+  "UCE": {
+   "trrust_edges_in_node_set": 6430,
+   "tf_tf_share_in_node_set": 0.2176,
+   "residual_hits": 29,
+   "residual_tf_tf": 23,
+   "inside_top5_hits": 31,
+   "inside_top5_tf_tf": 19,
+   "residual_tf_tf_or_same_prefix": 24,
+   "binom_p_residual_tf_tf_vs_node_set_rate": 0.0
+  },
+  "Tahoe": {
+   "trrust_edges_in_node_set": 4456,
+   "tf_tf_share_in_node_set": 0.2215,
+   "residual_hits": 14,
+   "residual_tf_tf": 7,
+   "inside_top5_hits": 65,
+   "inside_top5_tf_tf": 17,
+   "residual_tf_tf_or_same_prefix": 7,
+   "binom_p_residual_tf_tf_vs_node_set_rate": 0.02028
+  },
+  "C2S": {
+   "trrust_edges_in_node_set": 4509,
+   "tf_tf_share_in_node_set": 0.2063,
+   "residual_hits": 54,
+   "residual_tf_tf": 24,
+   "inside_top5_hits": 39,
+   "inside_top5_tf_tf": 11,
+   "residual_tf_tf_or_same_prefix": 28,
+   "binom_p_residual_tf_tf_vs_node_set_rate": 7e-05
+  },
+  "Geneformer": {
+   "trrust_edges_in_node_set": 4784,
+   "tf_tf_share_in_node_set": 0.2278,
+   "residual_hits": 5,
+   "residual_tf_tf": 0,
+   "inside_top5_hits": 12,
+   "inside_top5_tf_tf": 4,
+   "residual_tf_tf_or_same_prefix": 0,
+   "binom_p_residual_tf_tf_vs_node_set_rate": 0.59501
+  }
+ },
+ "residual_pooled_4_models": {
+  "models": [
+   "UCE",
+   "Tahoe",
+   "C2S",
+   "Geneformer"
+  ],
+  "hits": 102,
+  "tf_tf": 54
+ },
+ "trrust_edges_touching_salivary": [
+  [
+   "AR",
+   "PIP"
+  ],
+  [
+   "CST5",
+   "VDR"
+  ],
+  [
+   "PIP",
+   "RUNX2"
+  ]
+ ],
+ "n_salivary_genes_checked": 28
+}

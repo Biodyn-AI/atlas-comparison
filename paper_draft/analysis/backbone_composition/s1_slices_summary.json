@@ -1,0 +1,411 @@
+{
+ "annotator": "top10 genes & background, >=3 in GO_BP/KEGG/Reactome set of 5-200 genes, hypergeom, BH<=0.05 (exact copy of recalibrate_final.annotate)",
+ "slices": {
+  "mid": {
+   "layers": {
+    "AIDO": 4,
+    "C2S": 13,
+    "Geneformer": 9,
+    "MaxToki": 5,
+    "UCE": 16,
+    "scGPT": 6,
+    "tGPT": 4,
+    "scFoundation": 6,
+    "GeneCompass": 6,
+    "Tahoe": 16
+   },
+   "n_features": {
+    "AIDO": 1024,
+    "C2S": 9216,
+    "Geneformer": 4608,
+    "MaxToki": 4928,
+    "UCE": 5120,
+    "scGPT": 2048,
+    "tGPT": 3997,
+    "scFoundation": 3072,
+    "GeneCompass": 3072,
+    "Tahoe": 10240
+   },
+   "n_concepts": {
+    "AIDO": 223,
+    "C2S": 2713,
+    "Geneformer": 869,
+    "MaxToki": 154,
+    "UCE": 921,
+    "scGPT": 757,
+    "tGPT": 531,
+    "scFoundation": 442,
+    "GeneCompass": 44,
+    "Tahoe": 1277
+   },
+   "spectrum_exact_k": {
+    "1": 1411,
+    "2": 557,
+    "3": 287,
+    "4": 182,
+    "5": 256,
+    "6": 150,
+    "7": 120,
+    "8": 67,
+    "9": 29,
+    "10": 0
+   },
+   "tiers": {
+    ">=7": 216,
+    ">=8": 96,
+    ">=9": 29,
+    ">=10": 0
+   },
+   "detail_equals_exact": true,
+   "seconds": 10.8
+  },
+  "d0": {
+   "layers": {
+    "AIDO": 0,
+    "C2S": 0,
+    "Geneformer": 0,
+    "MaxToki": 0,
+    "UCE": 0,
+    "scGPT": 0,
+    "tGPT": 0,
+    "scFoundation": 0,
+    "GeneCompass": 0,
+    "Tahoe": 0
+   },
+   "n_features": {
+    "AIDO": 1024,
+    "C2S": 8480,
+    "Geneformer": 4608,
+    "MaxToki": 4928,
+    "UCE": 4937,
+    "scGPT": 2048,
+    "tGPT": 4093,
+    "scFoundation": 3072,
+    "GeneCompass": 3072,
+    "Tahoe": 10239
+   },
+   "n_concepts": {
+    "AIDO": 54,
+    "C2S": 873,
+    "Geneformer": 1043,
+    "MaxToki": 543,
+    "UCE": 2741,
+    "scGPT": 909,
+    "tGPT": 553,
+    "scFoundation": 446,
+    "GeneCompass": 28,
+    "Tahoe": 1453
+   },
+   "spectrum_exact_k": {
+    "1": 1332,
+    "2": 573,
+    "3": 322,
+    "4": 205,
+    "5": 216,
+    "6": 214,
+    "7": 154,
+    "8": 81,
+    "9": 31,
+    "10": 1
+   },
+   "tiers": {
+    ">=7": 267,
+    ">=8": 113,
+    ">=9": 32,
+    ">=10": 1
+   },
+   "detail_equals_exact": true,
+   "seconds": 11.3
+  },
+  "d25": {
+   "layers": {
+    "AIDO": 2,
+    "C2S": 6,
+    "Geneformer": 4,
+    "MaxToki": 2,
+    "UCE": 8,
+    "scGPT": 3,
+    "tGPT": 2,
+    "scFoundation": 3,
+    "GeneCompass": 3,
+    "Tahoe": 8
+   },
+   "n_features": {
+    "AIDO": 1024,
+    "C2S": 9216,
+    "Geneformer": 4608,
+    "MaxToki": 4928,
+    "UCE": 5120,
+    "scGPT": 2048,
+    "tGPT": 4096,
+    "scFoundation": 3072,
+    "GeneCompass": 3072,
+    "Tahoe": 10240
+   },
+   "n_concepts": {
+    "AIDO": 72,
+    "C2S": 3385,
+    "Geneformer": 954,
+    "MaxToki": 480,
+    "UCE": 2734,
+    "scGPT": 889,
+    "tGPT": 485,
+    "scFoundation": 449,
+    "GeneCompass": 28,
+    "Tahoe": 1382
+   },
+   "spectrum_exact_k": {
+    "1": 1423,
+    "2": 1088,
+    "3": 407,
+    "4": 238,
+    "5": 266,
+    "6": 267,
+    "7": 152,
+    "8": 108,
+    "9": 24,
+    "10": 1
+   },
+   "tiers": {
+    ">=7": 285,
+    ">=8": 133,
+    ">=9": 25,
+    ">=10": 1
+   },
+   "detail_equals_exact": true,
+   "seconds": 11.6
+  },
+  "d50": {
+   "layers": {
+    "AIDO": 4,
+    "C2S": 12,
+    "Geneformer": 8,
+    "MaxToki": 5,
+    "UCE": 16,
+    "scGPT": 6,
+    "tGPT": 4,
+    "scFoundation": 6,
+    "GeneCompass": 6,
+    "Tahoe": 16
+   },
+   "n_features": {
+    "AIDO": 1024,
+    "C2S": 9216,
+    "Geneformer": 4608,
+    "MaxToki": 4928,
+    "UCE": 5120,
+    "scGPT": 2048,
+    "tGPT": 3997,
+    "scFoundation": 3072,
+    "GeneCompass": 3072,
+    "Tahoe": 10240
+   },
+   "n_concepts": {
+    "AIDO": 223,
+    "C2S": 2875,
+    "Geneformer": 789,
+    "MaxToki": 154,
+    "UCE": 921,
+    "scGPT": 757,
+    "tGPT": 531,
+    "scFoundation": 442,
+    "GeneCompass": 44,
+    "Tahoe": 1277
+   },
+   "spectrum_exact_k": {
+    "1": 1564,
+    "2": 535,
+    "3": 254,
+    "4": 210,
+    "5": 260,
+    "6": 154,
+    "7": 107,
+    "8": 69,
+    "9": 28,
+    "10": 0
+   },
+   "tiers": {
+    ">=7": 204,
+    ">=8": 97,
+    ">=9": 28,
+    ">=10": 0
+   },
+   "detail_equals_exact": true,
+   "seconds": 11.0
+  },
+  "d75": {
+   "layers": {
+    "AIDO": 5,
+    "C2S": 19,
+    "Geneformer": 13,
+    "MaxToki": 8,
+    "UCE": 24,
+    "scGPT": 8,
+    "tGPT": 5,
+    "scFoundation": 8,
+    "GeneCompass": 8,
+    "Tahoe": 23
+   },
+   "n_features": {
+    "AIDO": 1024,
+    "C2S": 9215,
+    "Geneformer": 4608,
+    "MaxToki": 4928,
+    "UCE": 5120,
+    "scGPT": 2048,
+    "tGPT": 2997,
+    "scFoundation": 3072,
+    "GeneCompass": 3072,
+    "Tahoe": 10240
+   },
+   "n_concepts": {
+    "AIDO": 234,
+    "C2S": 1012,
+    "Geneformer": 889,
+    "MaxToki": 138,
+    "UCE": 525,
+    "scGPT": 521,
+    "tGPT": 394,
+    "scFoundation": 350,
+    "GeneCompass": 38,
+    "Tahoe": 1222
+   },
+   "spectrum_exact_k": {
+    "1": 705,
+    "2": 282,
+    "3": 317,
+    "4": 187,
+    "5": 120,
+    "6": 109,
+    "7": 70,
+    "8": 56,
+    "9": 17,
+    "10": 1
+   },
+   "tiers": {
+    ">=7": 144,
+    ">=8": 74,
+    ">=9": 18,
+    ">=10": 1
+   },
+   "detail_equals_exact": true,
+   "seconds": 7.8
+  },
+  "d100": {
+   "layers": {
+    "AIDO": 7,
+    "C2S": 25,
+    "Geneformer": 17,
+    "MaxToki": 10,
+    "UCE": 32,
+    "scGPT": 11,
+    "tGPT": 7,
+    "scFoundation": 11,
+    "GeneCompass": 11,
+    "Tahoe": 31
+   },
+   "n_features": {
+    "AIDO": 1024,
+    "C2S": 9178,
+    "Geneformer": 4608,
+    "MaxToki": 4928,
+    "UCE": 5120,
+    "scGPT": 2048,
+    "tGPT": 2046,
+    "scFoundation": 3072,
+    "GeneCompass": 3072,
+    "Tahoe": 10239
+   },
+   "n_concepts": {
+    "AIDO": 375,
+    "C2S": 625,
+    "Geneformer": 875,
+    "MaxToki": 139,
+    "UCE": 427,
+    "scGPT": 234,
+    "tGPT": 314,
+    "scFoundation": 156,
+    "GeneCompass": 72,
+    "Tahoe": 1069
+   },
+   "spectrum_exact_k": {
+    "1": 621,
+    "2": 298,
+    "3": 286,
+    "4": 171,
+    "5": 99,
+    "6": 69,
+    "7": 20,
+    "8": 18,
+    "9": 36,
+    "10": 1
+   },
+   "tiers": {
+    ">=7": 75,
+    ">=8": 55,
+    ">=9": 37,
+    ">=10": 1
+   },
+   "detail_equals_exact": true,
+   "seconds": 7.4
+  },
+  "d0_block1": {
+   "layers": {
+    "AIDO": 1,
+    "C2S": 0,
+    "Geneformer": 0,
+    "MaxToki": 0,
+    "UCE": 0,
+    "scGPT": 0,
+    "tGPT": 1,
+    "scFoundation": 0,
+    "GeneCompass": 1,
+    "Tahoe": 0
+   },
+   "n_features": {
+    "AIDO": 1024,
+    "C2S": 8480,
+    "Geneformer": 4608,
+    "MaxToki": 4928,
+    "UCE": 4937,
+    "scGPT": 2048,
+    "tGPT": 4096,
+    "scFoundation": 3072,
+    "GeneCompass": 3072,
+    "Tahoe": 10239
+   },
+   "n_concepts": {
+    "AIDO": 29,
+    "C2S": 873,
+    "Geneformer": 1043,
+    "MaxToki": 543,
+    "UCE": 2741,
+    "scGPT": 909,
+    "tGPT": 394,
+    "scFoundation": 446,
+    "GeneCompass": 43,
+    "Tahoe": 1453
+   },
+   "spectrum_exact_k": {
+    "1": 1344,
+    "2": 562,
+    "3": 325,
+    "4": 203,
+    "5": 283,
+    "6": 187,
+    "7": 130,
+    "8": 92,
+    "9": 4,
+    "10": 0
+   },
+   "tiers": {
+    ">=7": 226,
+    ">=8": 96,
+    ">=9": 4,
+    ">=10": 0
+   },
+   "detail_equals_exact": true,
+   "seconds": 10.9
+  }
+ }
+}

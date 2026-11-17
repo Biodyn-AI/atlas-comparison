@@ -1,0 +1,80 @@
+{
+ "model": "scGPT",
+ "official": "scgpt.tasks.embed_data (CLS embedding, whole-human)",
+ "n_cells": 2000,
+ "official_dim": 512,
+ "reference_pca50": {
+  "cka": 0.6757,
+  "knn15": 0.3482
+ },
+ "layers": {
+  "0": {
+   "cka": 0.5518,
+   "knn15": 0.3318
+  },
+  "1": {
+   "cka": 0.6763,
+   "knn15": 0.3711
+  },
+  "2": {
+   "cka": 0.7455,
+   "knn15": 0.3945
+  },
+  "3": {
+   "cka": 0.7492,
+   "knn15": 0.4101
+  },
+  "4": {
+   "cka": 0.7834,
+   "knn15": 0.4369
+  },
+  "5": {
+   "cka": 0.777,
+   "knn15": 0.4496
+  },
+  "6": {
+   "cka": 0.7717,
+   "knn15": 0.4665
+  },
+  "7": {
+   "cka": 0.7476,
+   "knn15": 0.4566
+  },
+  "8": {
+   "cka": 0.7439,
+   "knn15": 0.4398
+  },
+  "9": {
+   "cka": 0.689,
+   "knn15": 0.4397
+  },
+  "10": {
+   "cka": 0.7046,
+   "knn15": 0.4352
+  },
+  "11": {
+   "cka": 0.7616,
+   "knn15": 0.4344
+  }
+ },
+ "best_layer": 4,
+ "last_layer": 11,
+ "probe_balanced_accuracy": {
+  "official": {
+   "cell_type": 0.8421,
+   "compartment": 0.9211
+  },
+  "ours_last_layer": {
+   "cell_type": 0.8345,
+   "compartment": 0.9308
+  },
+  "ours_best_cka_layer": {
+   "cell_type": 0.8285,
+   "compartment": 0.918
+  },
+  "raw_pca50": {
+   "cell_type": 0.8313,
+   "compartment": 0.951
+  }
+ }
+}

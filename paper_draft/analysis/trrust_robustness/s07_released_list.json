@@ -1,0 +1,368 @@
+{
+ "n_candidates_before_family_filter": 5444,
+ "old_rule": {
+  "n_dropped": 562,
+  "n_kept": 4882,
+  "identical_to_released_list": true,
+  "released_n": 4882
+ },
+ "new_rule": {
+  "n_dropped": 959,
+  "n_kept": 4485
+ },
+ "overlap": {
+  "dropped_by_both": 560,
+  "dropped_only_old": 2,
+  "dropped_only_new": 399,
+  "kept_by_both": 4483
+ },
+ "released_pairs_flagged_by_new_rule": {
+  "n": 399,
+  "by_n_models": {
+   "2": 340,
+   "3": 47,
+   "4": 12
+  },
+  "examples_top": [
+   [
+    "ATP5ME",
+    "ATP5MK"
+   ],
+   [
+    "ATP5MK",
+    "ATP5PF"
+   ],
+   [
+    "S100A13",
+    "S100A16"
+   ],
+   [
+    "NFIC",
+    "NFIX"
+   ],
+   [
+    "ATP5MJ",
+    "ATP5MK"
+   ],
+   [
+    "ATP5ME",
+    "ATP5MJ"
+   ],
+   [
+    "S100A11",
+    "S100A4"
+   ],
+   [
+    "SCGB3A1",
+    "SCGB3A2"
+   ],
+   [
+    "NR2F1",
+    "NR2F2"
+   ],
+   [
+    "S100A6",
+    "S100A9"
+   ],
+   [
+    "AKR1B10",
+    "AKR1C2"
+   ],
+   [
+    "SFTA2",
+    "SFTPB"
+   ],
+   [
+    "S100A1",
+    "S100A13"
+   ],
+   [
+    "S100A4",
+    "S100A8"
+   ],
+   [
+    "S100A2",
+    "S100A6"
+   ],
+   [
+    "S100A2",
+    "S100A4"
+   ],
+   [
+    "S100A3",
+    "S100A6"
+   ],
+   [
+    "S100A3",
+    "S100A4"
+   ],
+   [
+    "SP110",
+    "SP140"
+   ],
+   [
+    "NFIA",
+    "NFIC"
+   ],
+   [
+    "ATP5MF",
+    "ATP5MJ"
+   ],
+   [
+    "IGHD",
+    "IGHM"
+   ],
+   [
+    "SFTA2",
+    "SFTPD"
+   ],
+   [
+    "S100A4",
+    "S100A9"
+   ],
+   [
+    "S100A13",
+    "S100A14"
+   ]
+  ]
+ },
+ "pairs_dropped_only_by_old_rule": [
+  [
+   "LINC01484",
+   "LINC03034"
+  ],
+  [
+   "LINC01320",
+   "LINC02532"
+  ]
+ ],
+ "corrected_list_by_n_models": {
+  "2": 4012,
+  "3": 423,
+  "4": 50
+ },
+ "literature_fields_released_list": {
+  "n_pairs": 4882,
+  "n_with_stored_fields": 4882,
+  "n_testable": 4621,
+  "n_comentioned_uncapped": 4481,
+  "pct_comentioned_uncapped": 96.97,
+  "n_never_comentioned": 140,
+  "n_never_but_both_ge20_papers": 6,
+  "never_but_both_studied": [
+   [
+    "FENDRR",
+    "SLCO2A1"
+   ],
+   [
+    "NEAT1",
+    "SAT1"
+   ],
+   [
+    "GAS5",
+    "SNHG6"
+   ],
+   [
+    "NEAT1",
+    "SRGN"
+   ],
+   [
+    "PAN3",
+    "ZFAND3"
+   ],
+   [
+    "B2M",
+    "NEAT1"
+   ]
+  ]
+ },
+ "literature_fields_corrected_list": {
+  "n_pairs": 4485,
+  "n_with_stored_fields": 4483,
+  "n_testable": 4270,
+  "n_comentioned_uncapped": 4174,
+  "pct_comentioned_uncapped": 97.75,
+  "n_never_comentioned": 96,
+  "n_never_but_both_ge20_papers": 6,
+  "never_but_both_studied": [
+   [
+    "FENDRR",
+    "SLCO2A1"
+   ],
+   [
+    "NEAT1",
+    "SAT1"
+   ],
+   [
+    "GAS5",
+    "SNHG6"
+   ],
+   [
+    "NEAT1",
+    "SRGN"
+   ],
+   [
+    "PAN3",
+    "ZFAND3"
+   ],
+   [
+    "B2M",
+    "NEAT1"
+   ]
+  ]
+ },
+ "literature_fields_corrected_list_note": "only pairs present in the released list carry stored co_mentions/papers; pairs dropped only by the old rule and kept by the new rule have no stored literature fields",
+ "published_hypothesis_pubmed": {
+  "n_pairs_testable": 4621,
+  "observed_pairs_comentioned": 1281,
+  "fold": 2.72,
+  "p_emp": 0.00498,
+  "n_never_comentioned": 140,
+  "n_never_but_both_studied": 6,
+  "observed_pairs_comentioned_uncapped": 4481
+ },
+ "xist_pairs_in_release": [
+  {
+   "pair": [
+    "TSIX",
+    "XIST"
+   ],
+   "papers": [
+    12,
+    2
+   ],
+   "co_mentions": 0,
+   "n_models": 2
+  },
+  {
+   "pair": [
+    "PNISR",
+    "XIST"
+   ],
+   "papers": [
+    53,
+    2
+   ],
+   "co_mentions": 0,
+   "n_models": 2
+  },
+  {
+   "pair": [
+    "NEAT1",
+    "XIST"
+   ],
+   "papers": [
+    691,
+    2
+   ],
+   "co_mentions": 0,
+   "n_models": 2
+  },
+  {
+   "pair": [
+    "DDX17",
+    "XIST"
+   ],
+   "papers": [
+    465,
+    2
+   ],
+   "co_mentions": 0,
+   "n_models": 2
+  },
+  {
+   "pair": [
+    "JPX",
+    "XIST"
+   ],
+   "papers": [
+    24,
+    2
+   ],
+   "co_mentions": 0,
+   "n_models": 2
+  },
+  {
+   "pair": [
+    "LRMDA",
+    "XIST"
+   ],
+   "papers": [
+    19,
+    2
+   ],
+   "co_mentions": 0,
+   "n_models": 2
+  },
+  {
+   "pair": [
+    "SFTPC",
+    "XIST"
+   ],
+   "papers": [
+    253,
+    2
+   ],
+   "co_mentions": 0,
+   "n_models": 2
+  }
+ ],
+ "sample_unmapped_rows": [
+  {
+   "pair": [
+    "MT-CO3",
+    "TPT1"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe"
+   ],
+   "weight": 88,
+   "co_mentions": null,
+   "papers": [
+    null,
+    422
+   ]
+  },
+  {
+   "pair": [
+    "B2M",
+    "MT-CO1"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Geneformer",
+    "Tahoe"
+   ],
+   "weight": 71,
+   "co_mentions": null,
+   "papers": [
+    594,
+    null
+   ]
+  },
+  {
+   "pair": [
+    "FTL",
+    "MT-CO3"
+   ],
+   "n_models": 3,
+   "models": [
+    "C2S",
+    "Tahoe",
+    "UCE"
+   ],
+   "weight": 67,
+   "co_mentions": null,
+   "papers": [
+    305,
+    null
+   ]
+  }
+ ],
+ "capped_literature_test_rerun": false,
+ "capped_literature_test_reason": "gene2pubmed.gz and Homo_sapiens.gene_info.gz (NCBI) are not in the repository and were not downloaded for this analysis, so the capped literature test was not re-run"
+}

@@ -1,0 +1,18 @@
+{
+ "source": "minwoosun/uce-misc protein_embeddings/Homo_sapiens.GRCh38.gene_symbol_to_embedding_ESM2.pt (copy in external/UCE/model_files)",
+ "n_genes": 19790,
+ "dim": 5120,
+ "first_keys": [
+  "A1BG",
+  "A1CF",
+  "A2M",
+  "A2ML1",
+  "A3GALT2",
+  "A4GALT",
+  "A4GNT",
+  "AAAS",
+  "AACS",
+  "AADAC"
+ ],
+ "keys_sorted_alphabetically": true
+}

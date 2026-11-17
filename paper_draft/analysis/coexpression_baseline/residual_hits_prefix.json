@@ -1,0 +1,639 @@
+{
+ "top5pct_r": 0.0803,
+ "n_trrust_tfs": 795,
+ "models": {
+  "AIDO": {
+   "hits_total": 0,
+   "hits_not_top5": 0,
+   "hits_not_top5_same_prefix": 0,
+   "hits_not_top5_other": 0,
+   "hits_not_top5_tf_tf": 0,
+   "hits_top5_tf_tf": 0,
+   "hits_top5": 0,
+   "not_top5_hits": []
+  },
+  "C2S": {
+   "hits_total": 93,
+   "hits_not_top5": 54,
+   "hits_not_top5_same_prefix": 18,
+   "hits_not_top5_other": 36,
+   "hits_not_top5_tf_tf": 24,
+   "hits_top5_tf_tf": 11,
+   "hits_top5": 39,
+   "not_top5_hits": [
+    [
+     "ATF4",
+     "DDIT3",
+     0.0719
+    ],
+    [
+     "ATF3",
+     "DDIT3",
+     0.0716
+    ],
+    [
+     "IRF3",
+     "IRF4",
+     0.0658
+    ],
+    [
+     "TP53",
+     "UHRF1",
+     0.0653
+    ],
+    [
+     "SAP30",
+     "YY1",
+     0.0644
+    ],
+    [
+     "ILF2",
+     "ILF3",
+     0.0641
+    ],
+    [
+     "SP1",
+     "SP3",
+     0.0625
+    ],
+    [
+     "CXCL10",
+     "STAT1",
+     0.0625
+    ],
+    [
+     "JUND",
+     "PLAUR",
+     0.0593
+    ],
+    [
+     "STAT1",
+     "STAT3",
+     0.0546
+    ],
+    [
+     "FGFR1",
+     "RB1",
+     0.0532
+    ],
+    [
+     "IRF3",
+     "IRF7",
+     0.0509
+    ],
+    [
+     "IFIT3",
+     "STAT1",
+     0.0494
+    ],
+    [
+     "BCL2",
+     "TP53",
+     0.0486
+    ],
+    [
+     "BRD3",
+     "BRD7",
+     0.0439
+    ],
+    [
+     "MYC",
+     "TP53",
+     0.0431
+    ],
+    [
+     "BCL2",
+     "MYB",
+     0.0423
+    ],
+    [
+     "CSF1",
+     "NFKB1",
+     0.0413
+    ],
+    [
+     "CDK2",
+     "TP53",
+     0.0301
+    ],
+    [
+     "RB1",
+     "TP53",
+     0.0283
+    ],
+    [
+     "PSMB9",
+     "STAT1",
+     0.0264
+    ],
+    [
+     "ABCB1",
+     "HDAC1",
+     0.0235
+    ],
+    [
+     "TP53",
+     "TP73",
+     0.0229
+    ],
+    [
+     "HIF1A",
+     "MIF",
+     0.0223
+    ],
+    [
+     "STAT1",
+     "STAT2",
+     0.0208
+    ],
+    [
+     "SMAD4",
+     "SMAD7",
+     0.0201
+    ],
+    [
+     "HDAC3",
+     "HDAC4",
+     0.016
+    ],
+    [
+     "IRF3",
+     "IRF5",
+     0.0157
+    ],
+    [
+     "BRD2",
+     "BRD7",
+     0.0124
+    ],
+    [
+     "SMAD3",
+     "SMAD7",
+     0.0123
+    ],
+    [
+     "MYC",
+     "UBE2C",
+     0.0073
+    ],
+    [
+     "KLF4",
+     "KRT19",
+     0.0042
+    ],
+    [
+     "IL2",
+     "ILF2",
+     0.0027
+    ],
+    [
+     "CD44",
+     "TCF4",
+     0.0021
+    ],
+    [
+     "SP1",
+     "SPN",
+     -0.0052
+    ],
+    [
+     "MYC",
+     "RB1",
+     -0.0058
+    ],
+    [
+     "PPBP",
+     "TBP",
+     -0.0065
+    ],
+    [
+     "STAT1",
+     "STAT6",
+     -0.0081
+    ],
+    [
+     "SP1",
+     "SPP1",
+     -0.0085
+    ],
+    [
+     "ATF2",
+     "ATF3",
+     -0.0093
+    ],
+    [
+     "ETV6",
+     "ETV7",
+     -0.0104
+    ],
+    [
+     "ESR1",
+     "ESRRA",
+     -0.0123
+    ],
+    [
+     "MITF",
+     "PMEL",
+     -0.0131
+    ],
+    [
+     "MYB",
+     "MYC",
+     -0.0134
+    ],
+    [
+     "MITF",
+     "TYR",
+     -0.0148
+    ],
+    [
+     "WT1",
+     "WTAP",
+     -0.0197
+    ],
+    [
+     "PTTG1",
+     "PTTG1IP",
+     -0.0214
+    ],
+    [
+     "BCL2L1",
+     "BCL6",
+     -0.0478
+    ],
+    [
+     "HLA-C",
+     "MYC",
+     -0.0613
+    ],
+    [
+     "MITF",
+     "TCF4",
+     -0.0626
+    ],
+    [
+     "ATF3",
+     "CCL5",
+     -0.0645
+    ],
+    [
+     "IL2RA",
+     "RXRA",
+     -0.0668
+    ],
+    [
+     "HIF1A",
+     "HIF3A",
+     -0.0771
+    ],
+    [
+     "CXCR4",
+     "HIF1A",
+     -0.0981
+    ]
+   ]
+  },
+  "Geneformer": {
+   "hits_total": 17,
+   "hits_not_top5": 5,
+   "hits_not_top5_same_prefix": 0,
+   "hits_not_top5_other": 5,
+   "hits_not_top5_tf_tf": 0,
+   "hits_top5_tf_tf": 4,
+   "hits_top5": 12,
+   "not_top5_hits": [
+    [
+     "ATF4",
+     "MAP1LC3B",
+     0.0389
+    ],
+    [
+     "CLCNKA",
+     "KLF15",
+     0.0187
+    ],
+    [
+     "PITX2",
+     "WNT5A",
+     -0.0119
+    ],
+    [
+     "POR",
+     "SMAD4",
+     -0.0464
+    ],
+    [
+     "FBP1",
+     "NFKB1",
+     -0.1825
+    ]
+   ]
+  },
+  "MaxToki": {
+   "hits_total": 2,
+   "hits_not_top5": 2,
+   "hits_not_top5_same_prefix": 1,
+   "hits_not_top5_other": 1,
+   "hits_not_top5_tf_tf": 0,
+   "hits_top5_tf_tf": 0,
+   "hits_top5": 0,
+   "not_top5_hits": [
+    [
+     "HOXB8",
+     "HOXC9",
+     0.0265
+    ],
+    [
+     "GATA1",
+     "PF4",
+     -0.0018
+    ]
+   ]
+  },
+  "UCE": {
+   "hits_total": 60,
+   "hits_not_top5": 29,
+   "hits_not_top5_same_prefix": 8,
+   "hits_not_top5_other": 21,
+   "hits_not_top5_tf_tf": 23,
+   "hits_top5_tf_tf": 19,
+   "hits_top5": 31,
+   "not_top5_hits": [
+    [
+     "ATF4",
+     "DDIT3",
+     0.0719
+    ],
+    [
+     "NR1D1",
+     "RORA",
+     0.0714
+    ],
+    [
+     "DDIT3",
+     "XBP1",
+     0.067
+    ],
+    [
+     "IRF3",
+     "IRF4",
+     0.0658
+    ],
+    [
+     "SP1",
+     "SP3",
+     0.0625
+    ],
+    [
+     "IRF4",
+     "NFKB1",
+     0.0598
+    ],
+    [
+     "STAT1",
+     "STAT3",
+     0.0546
+    ],
+    [
+     "IRF3",
+     "IRF7",
+     0.0509
+    ],
+    [
+     "E2F1",
+     "TERT",
+     0.0507
+    ],
+    [
+     "SERPINB5",
+     "SPDEF",
+     0.0496
+    ],
+    [
+     "NFYA",
+     "SP3",
+     0.0472
+    ],
+    [
+     "CDC6",
+     "E2F3",
+     0.0376
+    ],
+    [
+     "HOXB8",
+     "HOXC9",
+     0.0265
+    ],
+    [
+     "MITF",
+     "PPARGC1A",
+     0.0259
+    ],
+    [
+     "STAT1",
+     "STAT2",
+     0.0208
+    ],
+    [
+     "IRF3",
+     "IRF5",
+     0.0157
+    ],
+    [
+     "NFKB1",
+     "RELA",
+     0.0127
+    ],
+    [
+     "MUC2",
+     "SPDEF",
+     0.0123
+    ],
+    [
+     "ATF5",
+     "DDIT3",
+     0.0089
+    ],
+    [
+     "AR",
+     "ESR1",
+     0.0035
+    ],
+    [
+     "STAT1",
+     "STAT6",
+     -0.0081
+    ],
+    [
+     "ETV6",
+     "ETV7",
+     -0.0104
+    ],
+    [
+     "MEIS1",
+     "PBX2",
+     -0.0144
+    ],
+    [
+     "DMRT1",
+     "EGR1",
+     -0.0158
+    ],
+    [
+     "IRF4",
+     "RELA",
+     -0.0171
+    ],
+    [
+     "E2F1",
+     "HIC1",
+     -0.0178
+    ],
+    [
+     "ESR1",
+     "NR5A2",
+     -0.0242
+    ],
+    [
+     "ESR1",
+     "FOXA1",
+     -0.0329
+    ],
+    [
+     "HNF4A",
+     "RARA",
+     -0.0931
+    ]
+   ]
+  },
+  "scGPT": {
+   "hits_total": 3,
+   "hits_not_top5": 0,
+   "hits_not_top5_same_prefix": 0,
+   "hits_not_top5_other": 0,
+   "hits_not_top5_tf_tf": 0,
+   "hits_top5_tf_tf": 0,
+   "hits_top5": 3,
+   "not_top5_hits": []
+  },
+  "tGPT": {
+   "hits_total": 1,
+   "hits_not_top5": 0,
+   "hits_not_top5_same_prefix": 0,
+   "hits_not_top5_other": 0,
+   "hits_not_top5_tf_tf": 0,
+   "hits_top5_tf_tf": 0,
+   "hits_top5": 1,
+   "not_top5_hits": []
+  },
+  "scFoundation": {
+   "hits_total": 1,
+   "hits_not_top5": 1,
+   "hits_not_top5_same_prefix": 0,
+   "hits_not_top5_other": 1,
+   "hits_not_top5_tf_tf": 0,
+   "hits_top5_tf_tf": 0,
+   "hits_top5": 0,
+   "not_top5_hits": [
+    [
+     "NFKB1",
+     "SQSTM1",
+     0.0562
+    ]
+   ]
+  },
+  "GeneCompass": {
+   "hits_total": 0,
+   "hits_not_top5": 0,
+   "hits_not_top5_same_prefix": 0,
+   "hits_not_top5_other": 0,
+   "hits_not_top5_tf_tf": 0,
+   "hits_top5_tf_tf": 0,
+   "hits_top5": 0,
+   "not_top5_hits": []
+  },
+  "Tahoe": {
+   "hits_total": 79,
+   "hits_not_top5": 14,
+   "hits_not_top5_same_prefix": 1,
+   "hits_not_top5_other": 13,
+   "hits_not_top5_tf_tf": 7,
+   "hits_top5_tf_tf": 17,
+   "hits_top5": 65,
+   "not_top5_hits": [
+    [
+     "IRF1",
+     "STAT1",
+     0.0786
+    ],
+    [
+     "STAT1",
+     "TAP1",
+     0.0752
+    ],
+    [
+     "NR1D1",
+     "RORA",
+     0.0714
+    ],
+    [
+     "ATF4",
+     "NUPR1",
+     0.0701
+    ],
+    [
+     "DDIT3",
+     "XBP1",
+     0.067
+    ],
+    [
+     "FDPS",
+     "SREBF2",
+     0.066
+    ],
+    [
+     "IRF1",
+     "PSMB10",
+     0.0598
+    ],
+    [
+     "STAT1",
+     "XAF1",
+     0.0526
+    ],
+    [
+     "MYL9",
+     "SRF",
+     0.0524
+    ],
+    [
+     "CPT1A",
+     "PPARA",
+     0.0379
+    ],
+    [
+     "STAT1",
+     "STAT2",
+     0.0208
+    ],
+    [
+     "DBP",
+     "TEF",
+     0.012
+    ],
+    [
+     "DBP",
+     "HLF",
+     0.0115
+    ],
+    [
+     "NCBP1",
+     "UPF1",
+     0.0005
+    ]
+   ]
+  }
+ },
+ "trrust_edges_in_cofire_union": 7580,
+ "trrust_share_tf_tf": 0.2173
+}

@@ -1,0 +1,3712 @@
+{
+ "family_map": {
+  "bZIP": "ATF2 ATF3 ATF4 CREB1 CREM DDIT3 FOSL1 FOSL2 JDP2 JUN JUNB XBP1 CEBPE CEBPG",
+  "ETS": "ERG ETS1 ETS2 ETV6 ETV7 FLI1 SPIB SPI1 ELF3",
+  "nuclear receptor": "AR ESR1 ESRRA HNF4A NR1D1 NR2F6 NR5A2 PPARG RORA RXRA NR3C1 PGR",
+  "STAT": "STAT1 STAT2 STAT3 STAT4 STAT6",
+  "IRF": "IRF1 IRF2 IRF3 IRF4 IRF5 IRF7",
+  "bHLH-PAS": "HIF1A HIF3A EPAS1",
+  "bHLH / bHLH-ZIP": "MYC MITF SREBF2",
+  "forkhead": "FOXA2 FOXC1 FOXO1",
+  "RUNT": "RUNX1 RUNX3",
+  "C2H2 zinc finger": "SP1 SP3 KLF2 KLF4 KLF6 KLF10 EGR1 ZBTB7A BCL6 YY1 WT1 ZEB2",
+  "Rel / NF-kB": "NFKB1 REL RELA",
+  "IkB / NF-kB inhibitor": "NFKBIA NFKBIZ",
+  "SMAD": "SMAD3 SMAD4 SMAD7",
+  "homeobox": "HOXA10 HOXC9 HOXB8 MEIS1 PBX2 NKX2-1 EMX2 HNF1A HNF1B POU5F1",
+  "GATA": "GATA2 GATA3",
+  "HDAC": "HDAC1 HDAC3 HDAC4",
+  "CBP/p300": "CREBBP EP300",
+  "BET bromodomain": "BRD2 BRD3 BRD7",
+  "E2F": "E2F1",
+  "HSF": "HSF2",
+  "p53": "TP53",
+  "RB": "RB1",
+  "MHC class II": "HLA-DRA HLA-DMA HLA-DMB HLA-DOA HLA-DQB1 HLA-DRB1 HLA-DPB1"
+ },
+ "per_model": {
+  "UCE": {
+   "n_hits": 60,
+   "n_same_structural_family": 29,
+   "n_shared_prefix_ge2": 15,
+   "n_shared_prefix_ge3": 14,
+   "n_same_family_or_prefix_ge2": 31,
+   "share_same_family_or_prefix_ge2": 0.517,
+   "family_counts": {
+    "ETS": 5,
+    "STAT": 3,
+    "RUNT": 1,
+    "bZIP": 6,
+    "homeobox": 3,
+    "nuclear receptor": 4,
+    "IRF": 4,
+    "CBP/p300": 1,
+    "Rel / NF-kB": 1,
+    "C2H2 zinc finger": 1
+   },
+   "rows": [
+    {
+     "pair": [
+      "CDC6",
+      "E2F1"
+     ],
+     "weight": 39,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "E2F",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "MUC2",
+      "SPDEF"
+     ],
+     "weight": 30,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ETV6",
+      "ETV7"
+     ],
+     "weight": 28,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 3,
+     "struct_family_a": "ETS",
+     "struct_family_b": "ETS",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "FOXA2",
+      "NKX2-1"
+     ],
+     "weight": 27,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "forkhead",
+     "struct_family_b": "homeobox",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ATF3",
+      "EGR1"
+     ],
+     "weight": 25,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "C2H2 zinc finger",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "STAT1",
+      "STAT2"
+     ],
+     "weight": 23,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 4,
+     "struct_family_a": "STAT",
+     "struct_family_b": "STAT",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "RUNX1",
+      "RUNX3"
+     ],
+     "weight": 20,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 4,
+     "struct_family_a": "RUNT",
+     "struct_family_b": "RUNT",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "ATF3",
+      "JUN"
+     ],
+     "weight": 20,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "bZIP",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "ERG",
+      "FLI1"
+     ],
+     "weight": 19,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "ETS",
+     "struct_family_b": "ETS",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "ATF3",
+      "JDP2"
+     ],
+     "weight": 17,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "bZIP",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "SERPINB5",
+      "SPDEF"
+     ],
+     "weight": 16,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 1,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "HOXB8",
+      "HOXC9"
+     ],
+     "weight": 15,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 3,
+     "struct_family_a": "homeobox",
+     "struct_family_b": "homeobox",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "ESR1",
+      "NR5A2"
+     ],
+     "weight": 15,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "nuclear receptor",
+     "struct_family_b": "nuclear receptor",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "ESRRA",
+      "NR2F6"
+     ],
+     "weight": 14,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "nuclear receptor",
+     "struct_family_b": "nuclear receptor",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "ERG",
+      "ETS1"
+     ],
+     "weight": 14,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 1,
+     "struct_family_a": "ETS",
+     "struct_family_b": "ETS",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "E2F1",
+      "E2F8"
+     ],
+     "weight": 13,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 3,
+     "struct_family_a": "E2F",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ERG",
+      "ETS2"
+     ],
+     "weight": 13,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 1,
+     "struct_family_a": "ETS",
+     "struct_family_b": "ETS",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "IL1B",
+      "NFKBIA"
+     ],
+     "weight": 12,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "IkB / NF-kB inhibitor",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "IRF3",
+      "IRF4"
+     ],
+     "weight": 12,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 3,
+     "struct_family_a": "IRF",
+     "struct_family_b": "IRF",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "NR1D1",
+      "RORA"
+     ],
+     "weight": 12,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "nuclear receptor",
+     "struct_family_b": "nuclear receptor",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "CREB1",
+      "CREM"
+     ],
+     "weight": 11,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 3,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "bZIP",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "STAT1",
+      "STAT3"
+     ],
+     "weight": 11,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 4,
+     "struct_family_a": "STAT",
+     "struct_family_b": "STAT",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "FCER2",
+      "PAX5"
+     ],
+     "weight": 11,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "AR",
+      "ESR1"
+     ],
+     "weight": 11,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "nuclear receptor",
+     "struct_family_b": "nuclear receptor",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "IRF3",
+      "IRF7"
+     ],
+     "weight": 11,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 3,
+     "struct_family_a": "IRF",
+     "struct_family_b": "IRF",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "MEIS1",
+      "PBX2"
+     ],
+     "weight": 10,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "homeobox",
+     "struct_family_b": "homeobox",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "ETS1",
+      "FLI1"
+     ],
+     "weight": 10,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "ETS",
+     "struct_family_b": "ETS",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "IRF1",
+      "IRF2"
+     ],
+     "weight": 10,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 3,
+     "struct_family_a": "IRF",
+     "struct_family_b": "IRF",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "EMX2",
+      "HOXA10"
+     ],
+     "weight": 10,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "homeobox",
+     "struct_family_b": "homeobox",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "STAT1",
+      "STAT6"
+     ],
+     "weight": 9,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 4,
+     "struct_family_a": "STAT",
+     "struct_family_b": "STAT",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "ICAM1",
+      "NFKBIA"
+     ],
+     "weight": 9,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "IkB / NF-kB inhibitor",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "IRF3",
+      "IRF5"
+     ],
+     "weight": 9,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 3,
+     "struct_family_a": "IRF",
+     "struct_family_b": "IRF",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "BIRC3",
+      "NFKB1"
+     ],
+     "weight": 8,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ATF4",
+      "DDIT3"
+     ],
+     "weight": 8,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "bZIP",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "DDIT3",
+      "XBP1"
+     ],
+     "weight": 8,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "bZIP",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "IRF4",
+      "RELA"
+     ],
+     "weight": 8,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "IRF",
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "POU2AF1",
+      "SPIB"
+     ],
+     "weight": 8,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "ETS",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "E2F1",
+      "UHRF1"
+     ],
+     "weight": 7,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "E2F",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "NFYA",
+      "SP3"
+     ],
+     "weight": 7,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "C2H2 zinc finger",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CCR4",
+      "FOXP3"
+     ],
+     "weight": 7,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "NFKBIA",
+      "TRAF1"
+     ],
+     "weight": 7,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "IkB / NF-kB inhibitor",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "TCF4",
+      "TP63"
+     ],
+     "weight": 7,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 1,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "FOXP3",
+      "IL2RA"
+     ],
+     "weight": 7,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CREBBP",
+      "EP300"
+     ],
+     "weight": 7,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "CBP/p300",
+     "struct_family_b": "CBP/p300",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "TRAF1"
+     ],
+     "weight": 7,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "Rel / NF-kB",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ATF5",
+      "DDIT3"
+     ],
+     "weight": 6,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "bZIP",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "RELA"
+     ],
+     "weight": 6,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "Rel / NF-kB",
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "IRF4",
+      "NFKB1"
+     ],
+     "weight": 6,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "IRF",
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "FOSL1",
+      "FOSL2"
+     ],
+     "weight": 6,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 4,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "bZIP",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "HNF4A",
+      "RARA"
+     ],
+     "weight": 5,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "nuclear receptor",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "E2F1",
+      "E2F7"
+     ],
+     "weight": 5,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 3,
+     "struct_family_a": "E2F",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "E2F1",
+      "TERT"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "E2F",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "E2F1",
+      "HIC1"
+     ],
+     "weight": 5,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "E2F",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "MITF",
+      "PPARGC1A"
+     ],
+     "weight": 5,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bHLH / bHLH-ZIP",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "SP1",
+      "SP3"
+     ],
+     "weight": 5,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 2,
+     "struct_family_a": "C2H2 zinc finger",
+     "struct_family_b": "C2H2 zinc finger",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "CD79A",
+      "PAX5"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "BLK",
+      "PAX5"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "DMRT1",
+      "EGR1"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "C2H2 zinc finger",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CDC6",
+      "E2F3"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ESR1",
+      "FOXA1"
+     ],
+     "weight": 5,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "nuclear receptor",
+     "struct_family_b": null,
+     "same_structural_family": false
+    }
+   ]
+  },
+  "Tahoe": {
+   "n_hits": 79,
+   "n_same_structural_family": 9,
+   "n_shared_prefix_ge2": 3,
+   "n_shared_prefix_ge3": 3,
+   "n_same_family_or_prefix_ge2": 11,
+   "share_same_family_or_prefix_ge2": 0.139,
+   "family_counts": {
+    "bZIP": 2,
+    "CBP/p300": 1,
+    "ETS": 3,
+    "STAT": 1,
+    "homeobox": 1,
+    "nuclear receptor": 1
+   },
+   "rows": [
+    {
+     "pair": [
+      "SOCS3",
+      "STAT3"
+     ],
+     "weight": 34,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 1,
+     "struct_family_a": null,
+     "struct_family_b": "STAT",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "SKIL",
+      "SMAD7"
+     ],
+     "weight": 32,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 1,
+     "struct_family_a": null,
+     "struct_family_b": "SMAD",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "NFKBIA"
+     ],
+     "weight": 31,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 4,
+     "struct_family_a": "Rel / NF-kB",
+     "struct_family_b": "IkB / NF-kB inhibitor",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "TNFAIP3"
+     ],
+     "weight": 30,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "Rel / NF-kB",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "JUN",
+      "RHOB"
+     ],
+     "weight": 27,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "GLS",
+      "STAT1"
+     ],
+     "weight": 24,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "STAT",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ATF3",
+      "JUN"
+     ],
+     "weight": 24,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "bZIP",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "BIRC3",
+      "NFKB1"
+     ],
+     "weight": 23,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CD83",
+      "NFKB1"
+     ],
+     "weight": 22,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "HCK",
+      "SPI1"
+     ],
+     "weight": 22,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "ETS",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CREBBP",
+      "EP300"
+     ],
+     "weight": 22,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "CBP/p300",
+     "struct_family_b": "CBP/p300",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "ICAM1",
+      "NFKBIA"
+     ],
+     "weight": 21,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "IkB / NF-kB inhibitor",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ATF3",
+      "EGR1"
+     ],
+     "weight": 20,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "C2H2 zinc finger",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "FDPS",
+      "SREBF2"
+     ],
+     "weight": 20,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "bHLH / bHLH-ZIP",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ICAM1",
+      "NFKB1"
+     ],
+     "weight": 20,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "IRF1",
+      "STAT1"
+     ],
+     "weight": 19,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "IRF",
+     "struct_family_b": "STAT",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "SCD",
+      "SREBF1"
+     ],
+     "weight": 18,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 1,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "IRF1",
+      "PSMB9"
+     ],
+     "weight": 17,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "IRF",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "IRF1",
+      "PSMB10"
+     ],
+     "weight": 16,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "IRF",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "FDFT1",
+      "SREBF2"
+     ],
+     "weight": 16,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "bHLH / bHLH-ZIP",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ETS1",
+      "FLI1"
+     ],
+     "weight": 15,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "ETS",
+     "struct_family_b": "ETS",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "EPAS1",
+      "FLT1"
+     ],
+     "weight": 14,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bHLH-PAS",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "HMGCR",
+      "SREBF2"
+     ],
+     "weight": 14,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "bHLH / bHLH-ZIP",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CCL20",
+      "NFKB1"
+     ],
+     "weight": 14,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "GPNMB",
+      "MITF"
+     ],
+     "weight": 14,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "bHLH / bHLH-ZIP",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ESR1",
+      "XBP1"
+     ],
+     "weight": 14,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "nuclear receptor",
+     "struct_family_b": "bZIP",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ERG",
+      "ETS2"
+     ],
+     "weight": 13,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 1,
+     "struct_family_a": "ETS",
+     "struct_family_b": "ETS",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "DBP",
+      "HLF"
+     ],
+     "weight": 13,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "FABP4",
+      "PPARG"
+     ],
+     "weight": 12,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "nuclear receptor",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "FCER2",
+      "PAX5"
+     ],
+     "weight": 12,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "DBP",
+      "TEF"
+     ],
+     "weight": 12,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "HIF1A",
+      "TFRC"
+     ],
+     "weight": 12,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bHLH-PAS",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "AHR",
+      "CYP1B1"
+     ],
+     "weight": 10,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "HDAC9",
+      "MEF2A"
+     ],
+     "weight": 10,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CCNB1",
+      "PTTG1"
+     ],
+     "weight": 9,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "STAT1",
+      "XAF1"
+     ],
+     "weight": 9,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "STAT",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ATF3",
+      "KLF6"
+     ],
+     "weight": 9,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "C2H2 zinc finger",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "HMGA2",
+      "IGF2BP2"
+     ],
+     "weight": 9,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CIITA",
+      "HLA-DOA"
+     ],
+     "weight": 8,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "MHC class II",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CIITA",
+      "HLA-DMB"
+     ],
+     "weight": 8,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "MHC class II",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "IRF1",
+      "TAP1"
+     ],
+     "weight": 8,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "IRF",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "STAT1",
+      "TAP1"
+     ],
+     "weight": 8,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "STAT",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CPT1A",
+      "PPARA"
+     ],
+     "weight": 8,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "LDLR",
+      "SREBF2"
+     ],
+     "weight": 8,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "bHLH / bHLH-ZIP",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "REL",
+      "TNFAIP3"
+     ],
+     "weight": 8,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "Rel / NF-kB",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "STAT1",
+      "STAT2"
+     ],
+     "weight": 8,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 4,
+     "struct_family_a": "STAT",
+     "struct_family_b": "STAT",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "CIITA",
+      "HLA-DQB1"
+     ],
+     "weight": 7,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "MHC class II",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ATF4",
+      "NUPR1"
+     ],
+     "weight": 7,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "HOXB8",
+      "HOXC10"
+     ],
+     "weight": 7,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 3,
+     "struct_family_a": "homeobox",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "BCL6",
+      "FOSL2"
+     ],
+     "weight": 7,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "C2H2 zinc finger",
+     "struct_family_b": "bZIP",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "DDIT3",
+      "XBP1"
+     ],
+     "weight": 7,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "bZIP",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "FOXO1",
+      "IRS2"
+     ],
+     "weight": 7,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "forkhead",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "SOD2"
+     ],
+     "weight": 7,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "Rel / NF-kB",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CXCR4",
+      "KLF2"
+     ],
+     "weight": 7,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "C2H2 zinc finger",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "BIRC3",
+      "REL"
+     ],
+     "weight": 6,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "PLIN2",
+      "PPARG"
+     ],
+     "weight": 6,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 1,
+     "struct_family_a": null,
+     "struct_family_b": "nuclear receptor",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CIITA",
+      "HLA-DMA"
+     ],
+     "weight": 6,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "MHC class II",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "JUNB",
+      "STAT3"
+     ],
+     "weight": 6,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "STAT",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CDH5",
+      "ERG"
+     ],
+     "weight": 6,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "ETS",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "BCL2A1",
+      "REL"
+     ],
+     "weight": 6,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "BLK",
+      "PAX5"
+     ],
+     "weight": 6,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "NCBP1",
+      "UPF1"
+     ],
+     "weight": 6,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CXCR4",
+      "FOXO1"
+     ],
+     "weight": 6,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "forkhead",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "STAT4"
+     ],
+     "weight": 6,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "Rel / NF-kB",
+     "struct_family_b": "STAT",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CDKN1A",
+      "KLF10"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "C2H2 zinc finger",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "MYL9",
+      "SRF"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "FXYD2",
+      "HNF1B"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "homeobox",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "HSPA5",
+      "XBP1"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "bZIP",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "FLI1",
+      "TGFBR2"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "ETS",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ERG",
+      "FLI1"
+     ],
+     "weight": 5,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "ETS",
+     "struct_family_b": "ETS",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "NCF2",
+      "SPI1"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "ETS",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CXCL8",
+      "NFKBIA"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "IkB / NF-kB inhibitor",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ATF3",
+      "KLF4"
+     ],
+     "weight": 5,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "C2H2 zinc finger",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "BCL2A1",
+      "NFKB1"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ICAM1",
+      "REL"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "TAPBP"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "Rel / NF-kB",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "EMX2",
+      "HOXA10"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "homeobox",
+     "struct_family_b": "homeobox",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "NR1D1",
+      "RORA"
+     ],
+     "weight": 5,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "nuclear receptor",
+     "struct_family_b": "nuclear receptor",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "POU2AF1",
+      "TNFRSF17"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    }
+   ]
+  },
+  "C2S": {
+   "n_hits": 93,
+   "n_same_structural_family": 23,
+   "n_shared_prefix_ge2": 32,
+   "n_shared_prefix_ge3": 25,
+   "n_same_family_or_prefix_ge2": 35,
+   "share_same_family_or_prefix_ge2": 0.376,
+   "family_counts": {
+    "RUNT": 1,
+    "STAT": 3,
+    "C2H2 zinc finger": 1,
+    "bHLH-PAS": 1,
+    "ETS": 1,
+    "IRF": 4,
+    "bZIP": 5,
+    "BET bromodomain": 2,
+    "HDAC": 1,
+    "SMAD": 2,
+    "homeobox": 1,
+    "nuclear receptor": 1
+   },
+   "rows": [
+    {
+     "pair": [
+      "RUNX1",
+      "RUNX3"
+     ],
+     "weight": 54,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 4,
+     "struct_family_a": "RUNT",
+     "struct_family_b": "RUNT",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "STAT1",
+      "STAT2"
+     ],
+     "weight": 44,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 4,
+     "struct_family_a": "STAT",
+     "struct_family_b": "STAT",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "SP1",
+      "SP3"
+     ],
+     "weight": 41,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 2,
+     "struct_family_a": "C2H2 zinc finger",
+     "struct_family_b": "C2H2 zinc finger",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "HIF1A",
+      "HIF3A"
+     ],
+     "weight": 40,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 3,
+     "struct_family_a": "bHLH-PAS",
+     "struct_family_b": "bHLH-PAS",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "MYB",
+      "MYC"
+     ],
+     "weight": 34,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 2,
+     "struct_family_a": null,
+     "struct_family_b": "bHLH / bHLH-ZIP",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "TP53",
+      "TP73"
+     ],
+     "weight": 34,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 2,
+     "struct_family_a": "p53",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "STAT1",
+      "STAT6"
+     ],
+     "weight": 29,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 4,
+     "struct_family_a": "STAT",
+     "struct_family_b": "STAT",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "ETV6",
+      "ETV7"
+     ],
+     "weight": 29,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 3,
+     "struct_family_a": "ETS",
+     "struct_family_b": "ETS",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "STAT1",
+      "STAT3"
+     ],
+     "weight": 28,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 4,
+     "struct_family_a": "STAT",
+     "struct_family_b": "STAT",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "IRF1",
+      "IRF2"
+     ],
+     "weight": 28,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 3,
+     "struct_family_a": "IRF",
+     "struct_family_b": "IRF",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "FABP4",
+      "PPARG"
+     ],
+     "weight": 26,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "nuclear receptor",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "SP1",
+      "SPN"
+     ],
+     "weight": 25,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 2,
+     "struct_family_a": "C2H2 zinc finger",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "IRF3",
+      "IRF4"
+     ],
+     "weight": 25,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 3,
+     "struct_family_a": "IRF",
+     "struct_family_b": "IRF",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "IRF3",
+      "IRF5"
+     ],
+     "weight": 24,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 3,
+     "struct_family_a": "IRF",
+     "struct_family_b": "IRF",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "FOSL1",
+      "FOSL2"
+     ],
+     "weight": 24,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 4,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "bZIP",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "ATF2",
+      "ATF3"
+     ],
+     "weight": 22,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 3,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "bZIP",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "ATF3",
+      "ATF4"
+     ],
+     "weight": 22,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 3,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "bZIP",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "CIITA",
+      "HLA-DRA"
+     ],
+     "weight": 20,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "MHC class II",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "BRD3",
+      "BRD7"
+     ],
+     "weight": 20,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 3,
+     "struct_family_a": "BET bromodomain",
+     "struct_family_b": "BET bromodomain",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "IRF3",
+      "IRF7"
+     ],
+     "weight": 20,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 3,
+     "struct_family_a": "IRF",
+     "struct_family_b": "IRF",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "SP1",
+      "SPP1"
+     ],
+     "weight": 17,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 2,
+     "struct_family_a": "C2H2 zinc finger",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "HDAC3",
+      "HDAC4"
+     ],
+     "weight": 16,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 4,
+     "struct_family_a": "HDAC",
+     "struct_family_b": "HDAC",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "RB1",
+      "TP53"
+     ],
+     "weight": 15,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "RB",
+     "struct_family_b": "p53",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "IL2RA",
+      "RXRA"
+     ],
+     "weight": 14,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "nuclear receptor",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "BCL2L1",
+      "BCL6"
+     ],
+     "weight": 13,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 3,
+     "struct_family_a": null,
+     "struct_family_b": "C2H2 zinc finger",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "GATA2",
+      "MS4A2"
+     ],
+     "weight": 13,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "GATA",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "HLA-C",
+      "MYC"
+     ],
+     "weight": 13,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "bHLH / bHLH-ZIP",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "FGFR1",
+      "RB1"
+     ],
+     "weight": 13,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "RB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ERG",
+      "VWF"
+     ],
+     "weight": 13,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "ETS",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "HNF1A",
+      "HNF4A"
+     ],
+     "weight": 13,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 3,
+     "struct_family_a": "homeobox",
+     "struct_family_b": "nuclear receptor",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "TRAF1"
+     ],
+     "weight": 13,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "Rel / NF-kB",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "SMAD4",
+      "SMAD7"
+     ],
+     "weight": 12,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 4,
+     "struct_family_a": "SMAD",
+     "struct_family_b": "SMAD",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "SMAD3",
+      "SMAD7"
+     ],
+     "weight": 12,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 4,
+     "struct_family_a": "SMAD",
+     "struct_family_b": "SMAD",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "CREB1",
+      "CREBBP"
+     ],
+     "weight": 12,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 4,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "CBP/p300",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "MITF",
+      "PMEL"
+     ],
+     "weight": 12,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bHLH / bHLH-ZIP",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "MYC",
+      "UBE2C"
+     ],
+     "weight": 12,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bHLH / bHLH-ZIP",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "NFKBIZ"
+     ],
+     "weight": 12,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 4,
+     "struct_family_a": "Rel / NF-kB",
+     "struct_family_b": "IkB / NF-kB inhibitor",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "TP53",
+      "UHRF1"
+     ],
+     "weight": 11,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "p53",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "BLK",
+      "PAX5"
+     ],
+     "weight": 11,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "PTTG1",
+      "PTTG1IP"
+     ],
+     "weight": 11,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 5,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "EMX2",
+      "HOXA10"
+     ],
+     "weight": 11,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "homeobox",
+     "struct_family_b": "homeobox",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "IL6",
+      "MYC"
+     ],
+     "weight": 10,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "bHLH / bHLH-ZIP",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CD19",
+      "PAX5"
+     ],
+     "weight": 10,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CIITA",
+      "HLA-DMA"
+     ],
+     "weight": 9,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "MHC class II",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ILF2",
+      "ILF3"
+     ],
+     "weight": 9,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 3,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "BRD2",
+      "BRD7"
+     ],
+     "weight": 9,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 3,
+     "struct_family_a": "BET bromodomain",
+     "struct_family_b": "BET bromodomain",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "MITF",
+      "TYR"
+     ],
+     "weight": 9,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bHLH / bHLH-ZIP",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ATF3",
+      "DDIT3"
+     ],
+     "weight": 9,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "bZIP",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "SAP30",
+      "YY1"
+     ],
+     "weight": 9,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "C2H2 zinc finger",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "FCER2",
+      "PAX5"
+     ],
+     "weight": 9,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "WT1",
+      "WTAP"
+     ],
+     "weight": 9,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 2,
+     "struct_family_a": "C2H2 zinc finger",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "BIRC3",
+      "NFKB1"
+     ],
+     "weight": 8,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "BCL2",
+      "TP53"
+     ],
+     "weight": 8,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "p53",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "FOXP3",
+      "IL2RA"
+     ],
+     "weight": 8,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ICAM1",
+      "NFKB1"
+     ],
+     "weight": 8,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ATF4",
+      "DDIT3"
+     ],
+     "weight": 7,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "bZIP",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "SOCS3",
+      "STAT3"
+     ],
+     "weight": 7,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 1,
+     "struct_family_a": null,
+     "struct_family_b": "STAT",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "TGFB1"
+     ],
+     "weight": 7,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "Rel / NF-kB",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CD44",
+      "TCF4"
+     ],
+     "weight": 7,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CDKN1A",
+      "JUNB"
+     ],
+     "weight": 7,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "bZIP",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CXCL10",
+      "STAT1"
+     ],
+     "weight": 7,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "STAT",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "NFKB1",
+      "TNFAIP3"
+     ],
+     "weight": 7,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "Rel / NF-kB",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "JUND",
+      "PLAUR"
+     ],
+     "weight": 6,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "IL2",
+      "ILF2"
+     ],
+     "weight": 6,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 2,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ABCB1",
+      "HDAC1"
+     ],
+     "weight": 6,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "HDAC",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "MYC",
+      "TP53"
+     ],
+     "weight": 6,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bHLH / bHLH-ZIP",
+     "struct_family_b": "p53",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "IFIT3",
+      "STAT1"
+     ],
+     "weight": 6,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "STAT",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "MECOM",
+      "RUNX1"
+     ],
+     "weight": 6,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "RUNT",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ATF3",
+      "KLF6"
+     ],
+     "weight": 6,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "C2H2 zinc finger",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "BACH2",
+      "BCL2"
+     ],
+     "weight": 6,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 1,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ESR1",
+      "ESRRA"
+     ],
+     "weight": 6,
+     "class": "TF-TF same family/prefix",
+     "shared_leading_chars": 3,
+     "struct_family_a": "nuclear receptor",
+     "struct_family_b": "nuclear receptor",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "KLF4",
+      "KRT19"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 1,
+     "struct_family_a": "C2H2 zinc finger",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "BCL2",
+      "MYB"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "HIF1A",
+      "MIF"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bHLH-PAS",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CSF1",
+      "NFKB1"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "MYC",
+      "RB1"
+     ],
+     "weight": 5,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bHLH / bHLH-ZIP",
+     "struct_family_b": "RB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ATF3",
+      "CCL5"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CD83",
+      "NFKB1"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ICAM1",
+      "NFKBIA"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "IkB / NF-kB inhibitor",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "MITF",
+      "TCF4"
+     ],
+     "weight": 5,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bHLH / bHLH-ZIP",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CDK2",
+      "TP53"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "p53",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "PPBP",
+      "TBP"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ATF3",
+      "LDLR"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ATF3",
+      "ID1"
+     ],
+     "weight": 5,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "BCL2",
+      "NFKB1"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "PSMB9",
+      "STAT1"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "STAT",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "MSR1",
+      "SPI1"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "ETS",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "KLF6",
+      "TXNIP"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "C2H2 zinc finger",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "PPARG",
+      "RETN"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "nuclear receptor",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "IL1A",
+      "NFKB1"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "IL1B",
+      "NFKB1"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CXCR4",
+      "HIF1A"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "bHLH-PAS",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "FOXO3",
+      "NFKB1"
+     ],
+     "weight": 5,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": false
+    }
+   ]
+  },
+  "MaxToki": {
+   "n_hits": 2,
+   "n_same_structural_family": 1,
+   "n_shared_prefix_ge2": 1,
+   "n_shared_prefix_ge3": 1,
+   "n_same_family_or_prefix_ge2": 1,
+   "share_same_family_or_prefix_ge2": 0.5,
+   "family_counts": {
+    "homeobox": 1
+   },
+   "rows": [
+    {
+     "pair": [
+      "HOXB8",
+      "HOXC9"
+     ],
+     "weight": 11,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 3,
+     "struct_family_a": "homeobox",
+     "struct_family_b": "homeobox",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "GATA1",
+      "PF4"
+     ],
+     "weight": 10,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    }
+   ]
+  },
+  "Geneformer": {
+   "n_hits": 17,
+   "n_same_structural_family": 1,
+   "n_shared_prefix_ge2": 0,
+   "n_shared_prefix_ge3": 0,
+   "n_same_family_or_prefix_ge2": 1,
+   "share_same_family_or_prefix_ge2": 0.059,
+   "family_counts": {
+    "bZIP": 1
+   },
+   "rows": [
+    {
+     "pair": [
+      "ATF3",
+      "EGR1"
+     ],
+     "weight": 22,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "C2H2 zinc finger",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CD19",
+      "PAX5"
+     ],
+     "weight": 16,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ATF3",
+      "KLF4"
+     ],
+     "weight": 15,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "C2H2 zinc finger",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "BLK",
+      "PAX5"
+     ],
+     "weight": 13,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CIITA",
+      "HLA-DMA"
+     ],
+     "weight": 11,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "MHC class II",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ATF3",
+      "JUN"
+     ],
+     "weight": 10,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": "bZIP",
+     "same_structural_family": true
+    },
+    {
+     "pair": [
+      "SOCS3",
+      "STAT3"
+     ],
+     "weight": 8,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 1,
+     "struct_family_a": null,
+     "struct_family_b": "STAT",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "NCF2",
+      "SPI1"
+     ],
+     "weight": 8,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "ETS",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "FCER2",
+      "PAX5"
+     ],
+     "weight": 7,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CIITA",
+      "HLA-DMB"
+     ],
+     "weight": 6,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "MHC class II",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "PITX2",
+      "WNT5A"
+     ],
+     "weight": 6,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "E2F1",
+      "MCM5"
+     ],
+     "weight": 6,
+     "class": "TF-TF different family",
+     "shared_leading_chars": 0,
+     "struct_family_a": "E2F",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ATF4",
+      "MAP1LC3B"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "bZIP",
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "FBP1",
+      "NFKB1"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "Rel / NF-kB",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "CLCNKA",
+      "KLF15"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": null,
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "FDFT1",
+      "SREBF2"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "bHLH / bHLH-ZIP",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "POR",
+      "SMAD4"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "SMAD",
+     "same_structural_family": false
+    }
+   ]
+  },
+  "scGPT": {
+   "n_hits": 3,
+   "n_same_structural_family": 0,
+   "n_shared_prefix_ge2": 0,
+   "n_shared_prefix_ge3": 0,
+   "n_same_family_or_prefix_ge2": 0,
+   "share_same_family_or_prefix_ge2": 0.0,
+   "family_counts": {},
+   "rows": [
+    {
+     "pair": [
+      "CLDN7",
+      "ELF3"
+     ],
+     "weight": 9,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "ETS",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "ICAM1",
+      "NFKBIA"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "IkB / NF-kB inhibitor",
+     "same_structural_family": false
+    },
+    {
+     "pair": [
+      "FDFT1",
+      "SREBF2"
+     ],
+     "weight": 5,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "bHLH / bHLH-ZIP",
+     "same_structural_family": false
+    }
+   ]
+  },
+  "tGPT": {
+   "n_hits": 1,
+   "n_same_structural_family": 0,
+   "n_shared_prefix_ge2": 0,
+   "n_shared_prefix_ge3": 0,
+   "n_same_family_or_prefix_ge2": 0,
+   "share_same_family_or_prefix_ge2": 0.0,
+   "family_counts": {},
+   "rows": [
+    {
+     "pair": [
+      "KCNMA1",
+      "MITF"
+     ],
+     "weight": 8,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": null,
+     "struct_family_b": "bHLH / bHLH-ZIP",
+     "same_structural_family": false
+    }
+   ]
+  },
+  "scFoundation": {
+   "n_hits": 1,
+   "n_same_structural_family": 0,
+   "n_shared_prefix_ge2": 0,
+   "n_shared_prefix_ge3": 0,
+   "n_same_family_or_prefix_ge2": 0,
+   "share_same_family_or_prefix_ge2": 0.0,
+   "family_counts": {},
+   "rows": [
+    {
+     "pair": [
+      "NFKB1",
+      "SQSTM1"
+     ],
+     "weight": 7,
+     "class": "TF -> non-TF target",
+     "shared_leading_chars": 0,
+     "struct_family_a": "Rel / NF-kB",
+     "struct_family_b": null,
+     "same_structural_family": false
+    }
+   ]
+  }
+ },
+ "tier2": {
+  "n": 40,
+  "n_same_structural_family": 21,
+  "n_shared_prefix_ge2": 12,
+  "n_same_family_or_prefix_ge2": 21,
+  "rows": [
+   {
+    "pair": [
+     "ICAM1",
+     "NFKBIA"
+    ],
+    "n_models": 4,
+    "class": "TF -> non-TF target",
+    "shared_leading_chars": 0,
+    "struct_family_a": null,
+    "struct_family_b": "IkB / NF-kB inhibitor",
+    "same_structural_family": false
+   },
+   {
+    "pair": [
+     "FCER2",
+     "PAX5"
+    ],
+    "n_models": 4,
+    "class": "TF -> non-TF target",
+    "shared_leading_chars": 0,
+    "struct_family_a": null,
+    "struct_family_b": null,
+    "same_structural_family": false
+   },
+   {
+    "pair": [
+     "BLK",
+     "PAX5"
+    ],
+    "n_models": 4,
+    "class": "TF -> non-TF target",
+    "shared_leading_chars": 0,
+    "struct_family_a": null,
+    "struct_family_b": null,
+    "same_structural_family": false
+   },
+   {
+    "pair": [
+     "STAT1",
+     "STAT2"
+    ],
+    "n_models": 3,
+    "class": "TF-TF same family/prefix",
+    "shared_leading_chars": 4,
+    "struct_family_a": "STAT",
+    "struct_family_b": "STAT",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "ATF3",
+     "EGR1"
+    ],
+    "n_models": 3,
+    "class": "TF-TF different family",
+    "shared_leading_chars": 0,
+    "struct_family_a": "bZIP",
+    "struct_family_b": "C2H2 zinc finger",
+    "same_structural_family": false
+   },
+   {
+    "pair": [
+     "ATF3",
+     "JUN"
+    ],
+    "n_models": 3,
+    "class": "TF-TF different family",
+    "shared_leading_chars": 0,
+    "struct_family_a": "bZIP",
+    "struct_family_b": "bZIP",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "SOCS3",
+     "STAT3"
+    ],
+    "n_models": 3,
+    "class": "TF -> non-TF target",
+    "shared_leading_chars": 1,
+    "struct_family_a": null,
+    "struct_family_b": "STAT",
+    "same_structural_family": false
+   },
+   {
+    "pair": [
+     "BIRC3",
+     "NFKB1"
+    ],
+    "n_models": 3,
+    "class": "TF -> non-TF target",
+    "shared_leading_chars": 0,
+    "struct_family_a": null,
+    "struct_family_b": "Rel / NF-kB",
+    "same_structural_family": false
+   },
+   {
+    "pair": [
+     "CIITA",
+     "HLA-DMA"
+    ],
+    "n_models": 3,
+    "class": "TF -> non-TF target",
+    "shared_leading_chars": 0,
+    "struct_family_a": null,
+    "struct_family_b": "MHC class II",
+    "same_structural_family": false
+   },
+   {
+    "pair": [
+     "EMX2",
+     "HOXA10"
+    ],
+    "n_models": 3,
+    "class": "TF -> non-TF target",
+    "shared_leading_chars": 0,
+    "struct_family_a": "homeobox",
+    "struct_family_b": "homeobox",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "FDFT1",
+     "SREBF2"
+    ],
+    "n_models": 3,
+    "class": "TF -> non-TF target",
+    "shared_leading_chars": 0,
+    "struct_family_a": null,
+    "struct_family_b": "bHLH / bHLH-ZIP",
+    "same_structural_family": false
+   },
+   {
+    "pair": [
+     "RUNX1",
+     "RUNX3"
+    ],
+    "n_models": 2,
+    "class": "TF-TF same family/prefix",
+    "shared_leading_chars": 4,
+    "struct_family_a": "RUNT",
+    "struct_family_b": "RUNT",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "ETV6",
+     "ETV7"
+    ],
+    "n_models": 2,
+    "class": "TF-TF same family/prefix",
+    "shared_leading_chars": 3,
+    "struct_family_a": "ETS",
+    "struct_family_b": "ETS",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "SP1",
+     "SP3"
+    ],
+    "n_models": 2,
+    "class": "TF-TF different family",
+    "shared_leading_chars": 2,
+    "struct_family_a": "C2H2 zinc finger",
+    "struct_family_b": "C2H2 zinc finger",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "STAT1",
+     "STAT3"
+    ],
+    "n_models": 2,
+    "class": "TF-TF same family/prefix",
+    "shared_leading_chars": 4,
+    "struct_family_a": "STAT",
+    "struct_family_b": "STAT",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "STAT1",
+     "STAT6"
+    ],
+    "n_models": 2,
+    "class": "TF-TF same family/prefix",
+    "shared_leading_chars": 4,
+    "struct_family_a": "STAT",
+    "struct_family_b": "STAT",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "IRF1",
+     "IRF2"
+    ],
+    "n_models": 2,
+    "class": "TF-TF same family/prefix",
+    "shared_leading_chars": 3,
+    "struct_family_a": "IRF",
+    "struct_family_b": "IRF",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "FABP4",
+     "PPARG"
+    ],
+    "n_models": 2,
+    "class": "TF -> non-TF target",
+    "shared_leading_chars": 0,
+    "struct_family_a": null,
+    "struct_family_b": "nuclear receptor",
+    "same_structural_family": false
+   },
+   {
+    "pair": [
+     "IRF3",
+     "IRF4"
+    ],
+    "n_models": 2,
+    "class": "TF-TF same family/prefix",
+    "shared_leading_chars": 3,
+    "struct_family_a": "IRF",
+    "struct_family_b": "IRF",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "NFKB1",
+     "TNFAIP3"
+    ],
+    "n_models": 2,
+    "class": "TF-TF different family",
+    "shared_leading_chars": 0,
+    "struct_family_a": "Rel / NF-kB",
+    "struct_family_b": null,
+    "same_structural_family": false
+   },
+   {
+    "pair": [
+     "IRF3",
+     "IRF5"
+    ],
+    "n_models": 2,
+    "class": "TF-TF same family/prefix",
+    "shared_leading_chars": 3,
+    "struct_family_a": "IRF",
+    "struct_family_b": "IRF",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "IRF3",
+     "IRF7"
+    ],
+    "n_models": 2,
+    "class": "TF-TF same family/prefix",
+    "shared_leading_chars": 3,
+    "struct_family_a": "IRF",
+    "struct_family_b": "IRF",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "FOSL1",
+     "FOSL2"
+    ],
+    "n_models": 2,
+    "class": "TF-TF same family/prefix",
+    "shared_leading_chars": 4,
+    "struct_family_a": "bZIP",
+    "struct_family_b": "bZIP",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "CREBBP",
+     "EP300"
+    ],
+    "n_models": 2,
+    "class": "TF-TF different family",
+    "shared_leading_chars": 0,
+    "struct_family_a": "CBP/p300",
+    "struct_family_b": "CBP/p300",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "ICAM1",
+     "NFKB1"
+    ],
+    "n_models": 2,
+    "class": "TF -> non-TF target",
+    "shared_leading_chars": 0,
+    "struct_family_a": null,
+    "struct_family_b": "Rel / NF-kB",
+    "same_structural_family": false
+   },
+   {
+    "pair": [
+     "CD83",
+     "NFKB1"
+    ],
+    "n_models": 2,
+    "class": "TF -> non-TF target",
+    "shared_leading_chars": 0,
+    "struct_family_a": null,
+    "struct_family_b": "Rel / NF-kB",
+    "same_structural_family": false
+   },
+   {
+    "pair": [
+     "CD19",
+     "PAX5"
+    ],
+    "n_models": 2,
+    "class": "TF -> non-TF target",
+    "shared_leading_chars": 0,
+    "struct_family_a": null,
+    "struct_family_b": null,
+    "same_structural_family": false
+   },
+   {
+    "pair": [
+     "HOXB8",
+     "HOXC9"
+    ],
+    "n_models": 2,
+    "class": "TF -> non-TF target",
+    "shared_leading_chars": 3,
+    "struct_family_a": "homeobox",
+    "struct_family_b": "homeobox",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "ERG",
+     "ETS2"
+    ],
+    "n_models": 2,
+    "class": "TF-TF different family",
+    "shared_leading_chars": 1,
+    "struct_family_a": "ETS",
+    "struct_family_b": "ETS",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "ETS1",
+     "FLI1"
+    ],
+    "n_models": 2,
+    "class": "TF-TF different family",
+    "shared_leading_chars": 0,
+    "struct_family_a": "ETS",
+    "struct_family_b": "ETS",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "ERG",
+     "FLI1"
+    ],
+    "n_models": 2,
+    "class": "TF-TF different family",
+    "shared_leading_chars": 0,
+    "struct_family_a": "ETS",
+    "struct_family_b": "ETS",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "NFKB1",
+     "TRAF1"
+    ],
+    "n_models": 2,
+    "class": "TF -> non-TF target",
+    "shared_leading_chars": 0,
+    "struct_family_a": "Rel / NF-kB",
+    "struct_family_b": null,
+    "same_structural_family": false
+   },
+   {
+    "pair": [
+     "ATF3",
+     "KLF4"
+    ],
+    "n_models": 2,
+    "class": "TF-TF different family",
+    "shared_leading_chars": 0,
+    "struct_family_a": "bZIP",
+    "struct_family_b": "C2H2 zinc finger",
+    "same_structural_family": false
+   },
+   {
+    "pair": [
+     "NR1D1",
+     "RORA"
+    ],
+    "n_models": 2,
+    "class": "TF-TF different family",
+    "shared_leading_chars": 0,
+    "struct_family_a": "nuclear receptor",
+    "struct_family_b": "nuclear receptor",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "ATF4",
+     "DDIT3"
+    ],
+    "n_models": 2,
+    "class": "TF-TF different family",
+    "shared_leading_chars": 0,
+    "struct_family_a": "bZIP",
+    "struct_family_b": "bZIP",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "ATF3",
+     "KLF6"
+    ],
+    "n_models": 2,
+    "class": "TF-TF different family",
+    "shared_leading_chars": 0,
+    "struct_family_a": "bZIP",
+    "struct_family_b": "C2H2 zinc finger",
+    "same_structural_family": false
+   },
+   {
+    "pair": [
+     "FOXP3",
+     "IL2RA"
+    ],
+    "n_models": 2,
+    "class": "TF -> non-TF target",
+    "shared_leading_chars": 0,
+    "struct_family_a": null,
+    "struct_family_b": null,
+    "same_structural_family": false
+   },
+   {
+    "pair": [
+     "DDIT3",
+     "XBP1"
+    ],
+    "n_models": 2,
+    "class": "TF-TF different family",
+    "shared_leading_chars": 0,
+    "struct_family_a": "bZIP",
+    "struct_family_b": "bZIP",
+    "same_structural_family": true
+   },
+   {
+    "pair": [
+     "CIITA",
+     "HLA-DMB"
+    ],
+    "n_models": 2,
+    "class": "TF -> non-TF target",
+    "shared_leading_chars": 0,
+    "struct_family_a": null,
+    "struct_family_b": "MHC class II",
+    "same_structural_family": false
+   },
+   {
+    "pair": [
+     "NCF2",
+     "SPI1"
+    ],
+    "n_models": 2,
+    "class": "TF -> non-TF target",
+    "shared_leading_chars": 0,
+    "struct_family_a": null,
+    "struct_family_b": "ETS",
+    "same_structural_family": false
+   }
+  ]
+ }
+}

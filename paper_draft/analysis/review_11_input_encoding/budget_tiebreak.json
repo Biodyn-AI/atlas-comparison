@@ -1,0 +1,137 @@
+{
+ "budget": 50707,
+ "random_tie_orders": 1000,
+ "seed": 0,
+ "models": {
+  "C2S": {
+   "published": {
+    "dict_order": "cache insertion order",
+    "cutoff_weight": 7,
+    "n_above_cutoff": 49505,
+    "n_at_cutoff": 12700,
+    "slots_for_tied": 1202,
+    "hits_above_cutoff": 55,
+    "hits_at_cutoff": 7,
+    "hits_dict_order": 55,
+    "hits_alphabetical_ties": 55,
+    "hits_random_ties_mean": 55.66,
+    "hits_random_ties_min_max": [
+     55,
+     58
+    ],
+    "hits_expected_tie_free": 55.66
+   },
+   "clean": {
+    "dict_order": "this script's internal uid order (NOT trrust_lexical.py); hits_alphabetical_ties reproduces trrust_lexical.py",
+    "cutoff_weight": 7,
+    "n_above_cutoff": 45354,
+    "n_at_cutoff": 12322,
+    "slots_for_tied": 5353,
+    "hits_above_cutoff": 53,
+    "hits_at_cutoff": 6,
+    "hits_dict_order": 54,
+    "hits_alphabetical_ties": 57,
+    "hits_random_ties_mean": 55.59,
+    "hits_random_ties_min_max": [
+     53,
+     59
+    ],
+    "hits_expected_tie_free": 55.61
+   }
+  },
+  "UCE": {
+   "published": {
+    "dict_order": "cache insertion order",
+    "cutoff_weight": 6,
+    "n_above_cutoff": 42399,
+    "n_at_cutoff": 17495,
+    "slots_for_tied": 8308,
+    "hits_above_cutoff": 45,
+    "hits_at_cutoff": 4,
+    "hits_dict_order": 49,
+    "hits_alphabetical_ties": 46,
+    "hits_random_ties_mean": 46.92,
+    "hits_random_ties_min_max": [
+     45,
+     49
+    ],
+    "hits_expected_tie_free": 46.9
+   },
+   "clean": {
+    "dict_order": "this script's internal uid order (NOT trrust_lexical.py); hits_alphabetical_ties reproduces trrust_lexical.py",
+    "cutoff_weight": 6,
+    "n_above_cutoff": 41805,
+    "n_at_cutoff": 17439,
+    "slots_for_tied": 8902,
+    "hits_above_cutoff": 45,
+    "hits_at_cutoff": 4,
+    "hits_dict_order": 48,
+    "hits_alphabetical_ties": 47,
+    "hits_random_ties_mean": 47.06,
+    "hits_random_ties_min_max": [
+     45,
+     49
+    ],
+    "hits_expected_tie_free": 47.04
+   }
+  },
+  "Tahoe": {
+   "published": {
+    "dict_order": "cache insertion order",
+    "cutoff_weight": 6,
+    "n_above_cutoff": 42325,
+    "n_at_cutoff": 13108,
+    "slots_for_tied": 8382,
+    "hits_above_cutoff": 54,
+    "hits_at_cutoff": 10,
+    "hits_dict_order": 62,
+    "hits_alphabetical_ties": 60,
+    "hits_random_ties_mean": 60.44,
+    "hits_random_ties_min_max": [
+     55,
+     64
+    ],
+    "hits_expected_tie_free": 60.39
+   },
+   "clean": {
+    "dict_order": "this script's internal uid order (NOT trrust_lexical.py); hits_alphabetical_ties reproduces trrust_lexical.py",
+    "cutoff_weight": 6,
+    "n_above_cutoff": 42147,
+    "n_at_cutoff": 13102,
+    "slots_for_tied": 8560,
+    "hits_above_cutoff": 53,
+    "hits_at_cutoff": 10,
+    "hits_dict_order": 59,
+    "hits_alphabetical_ties": 60,
+    "hits_random_ties_mean": 59.54,
+    "hits_random_ties_min_max": [
+     55,
+     63
+    ],
+    "hits_expected_tie_free": 59.53
+   }
+  },
+  "Geneformer": {
+   "published": {
+    "dict_order": "cache insertion order",
+    "cutoff_weight": 5,
+    "n_above_cutoff": 30531,
+    "n_at_cutoff": 20176,
+    "slots_for_tied": 20176,
+    "hits_above_cutoff": 12,
+    "hits_at_cutoff": 5,
+    "hits_dict_order": 17,
+    "hits_alphabetical_ties": 17,
+    "hits_random_ties_mean": 17.0,
+    "hits_random_ties_min_max": [
+     17,
+     17
+    ],
+    "hits_expected_tie_free": 17.0
+   },
+   "clean": {
+    "note": "clean graph (50651 pairs) smaller than the budget"
+   }
+  }
+ }
+}

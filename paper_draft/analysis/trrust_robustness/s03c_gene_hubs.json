@@ -1,0 +1,476 @@
+{
+ "n_perm": 200,
+ "seed": 0,
+ "models": {
+  "UCE": {
+   "hits": 60,
+   "n_distinct_genes_in_hits": 85,
+   "top_genes": [
+    [
+     "E2F1",
+     6
+    ],
+    [
+     "NFKB1",
+     4
+    ],
+    [
+     "ATF3",
+     3
+    ],
+    [
+     "STAT1",
+     3
+    ],
+    [
+     "ERG",
+     3
+    ],
+    [
+     "ESR1",
+     3
+    ],
+    [
+     "NFKBIA",
+     3
+    ],
+    [
+     "IRF3",
+     3
+    ]
+   ],
+   "share_hits_top1_gene": 0.1,
+   "share_hits_top3_genes": 0.2167,
+   "top1": [
+    "E2F1"
+   ],
+   "top3": [
+    "E2F1",
+    "NFKB1",
+    "ATF3"
+   ],
+   "drop_top1_gene": {
+    "n_pairs": 91677,
+    "hits": 54,
+    "null_mean": 5.565,
+    "null_sd": 2.26,
+    "fold": 9.704,
+    "z": 21.44,
+    "p_emp": 0.00498,
+    "n_perm": 200
+   },
+   "drop_top3_genes": {
+    "n_pairs": 91642,
+    "hits": 47,
+    "null_mean": 5.23,
+    "null_sd": 2.217,
+    "fold": 8.987,
+    "z": 18.84,
+    "p_emp": 0.00498,
+    "n_perm": 200
+   }
+  },
+  "Tahoe": {
+   "hits": 79,
+   "n_distinct_genes_in_hits": 108,
+   "top_genes": [
+    [
+     "NFKB1",
+     10
+    ],
+    [
+     "STAT1",
+     5
+    ],
+    [
+     "ATF3",
+     4
+    ],
+    [
+     "SREBF2",
+     4
+    ],
+    [
+     "IRF1",
+     4
+    ],
+    [
+     "CIITA",
+     4
+    ],
+    [
+     "REL",
+     4
+    ],
+    [
+     "NFKBIA",
+     3
+    ]
+   ],
+   "share_hits_top1_gene": 0.1266,
+   "share_hits_top3_genes": 0.2405,
+   "top1": [
+    "NFKB1"
+   ],
+   "top3": [
+    "NFKB1",
+    "STAT1",
+    "ATF3"
+   ],
+   "drop_top1_gene": {
+    "n_pairs": 78128,
+    "hits": 69,
+    "null_mean": 7.49,
+    "null_sd": 2.634,
+    "fold": 9.212,
+    "z": 23.35,
+    "p_emp": 0.00498,
+    "n_perm": 200
+   },
+   "drop_top3_genes": {
+    "n_pairs": 78065,
+    "hits": 60,
+    "null_mean": 7.215,
+    "null_sd": 2.769,
+    "fold": 8.316,
+    "z": 19.06,
+    "p_emp": 0.00498,
+    "n_perm": 200
+   }
+  },
+  "C2S": {
+   "hits": 93,
+   "n_distinct_genes_in_hits": 125,
+   "top_genes": [
+    [
+     "NFKB1",
+     12
+    ],
+    [
+     "ATF3",
+     7
+    ],
+    [
+     "STAT1",
+     6
+    ],
+    [
+     "MYC",
+     6
+    ],
+    [
+     "TP53",
+     6
+    ],
+    [
+     "BCL2",
+     4
+    ],
+    [
+     "SP1",
+     3
+    ],
+    [
+     "HIF1A",
+     3
+    ]
+   ],
+   "share_hits_top1_gene": 0.129,
+   "share_hits_top3_genes": 0.2688,
+   "top1": [
+    "NFKB1"
+   ],
+   "top3": [
+    "NFKB1",
+    "ATF3",
+    "STAT1"
+   ],
+   "drop_top1_gene": {
+    "n_pairs": 117087,
+    "hits": 81,
+    "null_mean": 15.95,
+    "null_sd": 4.039,
+    "fold": 5.078,
+    "z": 16.1,
+    "p_emp": 0.00498,
+    "n_perm": 200
+   },
+   "drop_top3_genes": {
+    "n_pairs": 117014,
+    "hits": 68,
+    "null_mean": 15.245,
+    "null_sd": 3.523,
+    "fold": 4.46,
+    "z": 14.97,
+    "p_emp": 0.00498,
+    "n_perm": 200
+   }
+  },
+  "MaxToki": {
+   "hits": 2,
+   "n_distinct_genes_in_hits": 4,
+   "top_genes": [
+    [
+     "HOXB8",
+     1
+    ],
+    [
+     "HOXC9",
+     1
+    ],
+    [
+     "GATA1",
+     1
+    ],
+    [
+     "PF4",
+     1
+    ]
+   ],
+   "share_hits_top1_gene": 0.5,
+   "share_hits_top3_genes": 1.0,
+   "top1": [
+    "HOXB8"
+   ],
+   "top3": [
+    "HOXB8",
+    "HOXC9",
+    "GATA1"
+   ],
+   "drop_top1_gene": {
+    "n_pairs": 18937,
+    "hits": 1,
+    "null_mean": 0.72,
+    "null_sd": 0.813,
+    "fold": 1.389,
+    "z": 0.34,
+    "p_emp": 0.52239,
+    "n_perm": 200
+   },
+   "drop_top3_genes": {
+    "n_pairs": 18921,
+    "hits": 0,
+    "null_mean": 0.6,
+    "null_sd": 0.831,
+    "fold": 0.0,
+    "z": -0.72,
+    "p_emp": 1.0,
+    "n_perm": 200
+   }
+  },
+  "Geneformer": {
+   "hits": 17,
+   "n_distinct_genes_in_hits": 29,
+   "top_genes": [
+    [
+     "ATF3",
+     3
+    ],
+    [
+     "PAX5",
+     3
+    ],
+    [
+     "CIITA",
+     2
+    ],
+    [
+     "EGR1",
+     1
+    ],
+    [
+     "CD19",
+     1
+    ],
+    [
+     "KLF4",
+     1
+    ],
+    [
+     "BLK",
+     1
+    ],
+    [
+     "HLA-DMA",
+     1
+    ]
+   ],
+   "share_hits_top1_gene": 0.1765,
+   "share_hits_top3_genes": 0.4706,
+   "top1": [
+    "ATF3"
+   ],
+   "top3": [
+    "ATF3",
+    "PAX5",
+    "CIITA"
+   ],
+   "drop_top1_gene": {
+    "n_pairs": 50685,
+    "hits": 14,
+    "null_mean": 6.94,
+    "null_sd": 2.497,
+    "fold": 2.017,
+    "z": 2.83,
+    "p_emp": 0.01493,
+    "n_perm": 200
+   },
+   "drop_top3_genes": {
+    "n_pairs": 50663,
+    "hits": 9,
+    "null_mean": 6.695,
+    "null_sd": 2.425,
+    "fold": 1.344,
+    "z": 0.95,
+    "p_emp": 0.24378,
+    "n_perm": 200
+   }
+  },
+  "scGPT": {
+   "hits": 3,
+   "n_distinct_genes_in_hits": 6,
+   "top_genes": [
+    [
+     "CLDN7",
+     1
+    ],
+    [
+     "ELF3",
+     1
+    ],
+    [
+     "ICAM1",
+     1
+    ],
+    [
+     "NFKBIA",
+     1
+    ],
+    [
+     "FDFT1",
+     1
+    ],
+    [
+     "SREBF2",
+     1
+    ]
+   ],
+   "share_hits_top1_gene": 0.3333,
+   "share_hits_top3_genes": 0.6667,
+   "top1": [
+    "CLDN7"
+   ],
+   "top3": [
+    "CLDN7",
+    "ELF3",
+    "ICAM1"
+   ],
+   "drop_top1_gene": {
+    "n_pairs": 11506,
+    "hits": 2,
+    "null_mean": 1.66,
+    "null_sd": 1.189,
+    "fold": 1.205,
+    "z": 0.29,
+    "p_emp": 0.50249,
+    "n_perm": 200
+   },
+   "drop_top3_genes": {
+    "n_pairs": 11497,
+    "hits": 1,
+    "null_mean": 1.61,
+    "null_sd": 1.236,
+    "fold": 0.621,
+    "z": -0.49,
+    "p_emp": 0.801,
+    "n_perm": 200
+   }
+  },
+  "tGPT": {
+   "hits": 1,
+   "n_distinct_genes_in_hits": 2,
+   "top_genes": [
+    [
+     "KCNMA1",
+     1
+    ],
+    [
+     "MITF",
+     1
+    ]
+   ],
+   "share_hits_top1_gene": 1.0,
+   "share_hits_top3_genes": 1.0,
+   "top1": [
+    "KCNMA1"
+   ],
+   "top3": [
+    "KCNMA1",
+    "MITF"
+   ],
+   "drop_top1_gene": {
+    "n_pairs": 10496,
+    "hits": 0,
+    "null_mean": 1.0,
+    "null_sd": 1.049,
+    "fold": 0.0,
+    "z": -0.95,
+    "p_emp": 1.0,
+    "n_perm": 200
+   },
+   "drop_top3_genes": {
+    "n_pairs": 10494,
+    "hits": 0,
+    "null_mean": 0.915,
+    "null_sd": 0.915,
+    "fold": 0.0,
+    "z": -1.0,
+    "p_emp": 1.0,
+    "n_perm": 200
+   }
+  },
+  "scFoundation": {
+   "hits": 1,
+   "n_distinct_genes_in_hits": 2,
+   "top_genes": [
+    [
+     "NFKB1",
+     1
+    ],
+    [
+     "SQSTM1",
+     1
+    ]
+   ],
+   "share_hits_top1_gene": 1.0,
+   "share_hits_top3_genes": 1.0,
+   "top1": [
+    "NFKB1"
+   ],
+   "top3": [
+    "NFKB1",
+    "SQSTM1"
+   ],
+   "drop_top1_gene": {
+    "n_pairs": 8265,
+    "hits": 0,
+    "null_mean": 0.835,
+    "null_sd": 0.841,
+    "fold": 0.0,
+    "z": -0.99,
+    "p_emp": 1.0,
+    "n_perm": 200
+   },
+   "drop_top3_genes": {
+    "n_pairs": 8258,
+    "hits": 0,
+    "null_mean": 0.895,
+    "null_sd": 0.857,
+    "fold": 0.0,
+    "z": -1.04,
+    "p_emp": 1.0,
+    "n_perm": 200
+   }
+  }
+ }
+}

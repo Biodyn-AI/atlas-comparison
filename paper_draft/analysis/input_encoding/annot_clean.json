@@ -1,0 +1,210 @@
+{
+ "annotator": "stats_final.py (top10, >=3 genes, GO/KEGG/Reactome 5..200, BH q<=0.05), mid layer",
+ "per_model": {
+  "AIDO": {
+   "mid_layer": 4,
+   "n_features": 1024,
+   "features_tail_into_top10": 0,
+   "annotated_features_raw": 41,
+   "annotated_features_clean": 41,
+   "terms_raw": 223,
+   "terms_clean": 223,
+   "terms_lost": [],
+   "n_terms_lost": 0,
+   "n_terms_gained": 0
+  },
+  "C2S": {
+   "mid_layer": 13,
+   "n_features": 9216,
+   "features_tail_into_top10": 125,
+   "annotated_features_raw": 1533,
+   "annotated_features_clean": 1445,
+   "terms_raw": 2713,
+   "terms_clean": 2552,
+   "terms_lost": [
+    "GO_BP:JNK cascade (GO:0007254)",
+    "GO_BP:RNA splicing, via transesterification reactions (GO:0000375)",
+    "GO_BP:alternative mRNA splicing, via spliceosome (GO:0000380)",
+    "GO_BP:ameboidal-type cell migration (GO:0001667)",
+    "GO_BP:amyloid precursor protein catabolic process (GO:0042987)",
+    "GO_BP:amyloid precursor protein metabolic process (GO:0042982)",
+    "GO_BP:cAMP-mediated signaling (GO:0019933)",
+    "GO_BP:carboxylic acid biosynthetic process (GO:0046394)",
+    "GO_BP:cardiac muscle cell action potential (GO:0086001)",
+    "GO_BP:cell communication by electrical coupling involved in cardiac conduction (GO:0086064)",
+    "GO_BP:cellular senescence (GO:0090398)",
+    "GO_BP:chloride transmembrane transport (GO:1902476)",
+    "GO_BP:cyclic-nucleotide-mediated signaling (GO:0019935)",
+    "GO_BP:double-strand break repair via nonhomologous end joining (GO:0006303)",
+    "GO_BP:drug catabolic process (GO:0042737)",
+    "GO_BP:endosomal vesicle fusion (GO:0034058)",
+    "GO_BP:epoxygenase P450 pathway (GO:0019373)",
+    "GO_BP:establishment of protein localization to organelle (GO:0072594)",
+    "GO_BP:estrogen metabolic process (GO:0008210)",
+    "GO_BP:exogenous drug catabolic process (GO:0042738)",
+    "GO_BP:fat-soluble vitamin catabolic process (GO:0042363)",
+    "GO_BP:granulocyte activation (GO:0036230)",
+    "GO_BP:heterotypic cell-cell adhesion (GO:0034113)",
+    "GO_BP:histone H3-K36 demethylation (GO:0070544)",
+    "GO_BP:histone H3-K4 demethylation (GO:0034720)"
+   ],
+   "n_terms_lost": 161,
+   "n_terms_gained": 0
+  },
+  "Geneformer": {
+   "mid_layer": 9,
+   "n_features": 4608,
+   "features_tail_into_top10": 0,
+   "annotated_features_raw": 429,
+   "annotated_features_clean": 429,
+   "terms_raw": 869,
+   "terms_clean": 869,
+   "terms_lost": [],
+   "n_terms_lost": 0,
+   "n_terms_gained": 0
+  },
+  "MaxToki": {
+   "mid_layer": 5,
+   "n_features": 4928,
+   "features_tail_into_top10": 0,
+   "annotated_features_raw": 123,
+   "annotated_features_clean": 123,
+   "terms_raw": 154,
+   "terms_clean": 154,
+   "terms_lost": [],
+   "n_terms_lost": 0,
+   "n_terms_gained": 0
+  },
+  "UCE": {
+   "mid_layer": 16,
+   "n_features": 5120,
+   "features_tail_into_top10": 4,
+   "annotated_features_raw": 338,
+   "annotated_features_clean": 336,
+   "terms_raw": 921,
+   "terms_clean": 906,
+   "terms_lost": [
+    "GO_BP:peptide antigen assembly with MHC protein complex (GO:0002501)",
+    "GO_BP:regulation of T cell proliferation (GO:0042129)",
+    "GO_BP:regulation of interferon-gamma production (GO:0032649)",
+    "KEGG:Asthma",
+    "KEGG:Autoimmune thyroid disease",
+    "KEGG:Graft-versus-host disease",
+    "KEGG:Inflammatory bowel disease",
+    "KEGG:Intestinal immune network for IgA production",
+    "KEGG:Th1 and Th2 cell differentiation",
+    "KEGG:Type I diabetes mellitus",
+    "Reactome:Costimulation By CD28 Family R-HSA-388841",
+    "Reactome:Generation Of Second Messenger Molecules R-HSA-202433",
+    "Reactome:PD-1 Signaling R-HSA-389948",
+    "Reactome:Phosphorylation Of CD3 And TCR Zeta Chains R-HSA-202427",
+    "Reactome:Translocation Of ZAP-70 To Immunological Synapse R-HSA-202430"
+   ],
+   "n_terms_lost": 15,
+   "n_terms_gained": 0
+  },
+  "scGPT": {
+   "mid_layer": 6,
+   "n_features": 2048,
+   "features_tail_into_top10": 6,
+   "annotated_features_raw": 245,
+   "annotated_features_clean": 244,
+   "terms_raw": 757,
+   "terms_clean": 757,
+   "terms_lost": [],
+   "n_terms_lost": 0,
+   "n_terms_gained": 0
+  },
+  "tGPT": {
+   "mid_layer": 4,
+   "n_features": 3997,
+   "features_tail_into_top10": 1082,
+   "annotated_features_raw": 1170,
+   "annotated_features_clean": 1170,
+   "terms_raw": 531,
+   "terms_clean": 531,
+   "terms_lost": [],
+   "n_terms_lost": 0,
+   "n_terms_gained": 0
+  },
+  "scFoundation": {
+   "mid_layer": 6,
+   "n_features": 3072,
+   "features_tail_into_top10": 1,
+   "annotated_features_raw": 190,
+   "annotated_features_clean": 190,
+   "terms_raw": 442,
+   "terms_clean": 442,
+   "terms_lost": [],
+   "n_terms_lost": 0,
+   "n_terms_gained": 0
+  },
+  "GeneCompass": {
+   "mid_layer": 6,
+   "n_features": 3072,
+   "features_tail_into_top10": 0,
+   "annotated_features_raw": 30,
+   "annotated_features_clean": 30,
+   "terms_raw": 44,
+   "terms_clean": 44,
+   "terms_lost": [],
+   "n_terms_lost": 0,
+   "n_terms_gained": 0
+  },
+  "Tahoe": {
+   "mid_layer": 16,
+   "n_features": 10240,
+   "features_tail_into_top10": 18,
+   "annotated_features_raw": 625,
+   "annotated_features_clean": 622,
+   "terms_raw": 1277,
+   "terms_clean": 1273,
+   "terms_lost": [
+    "GO_BP:antigen processing and presentation of endogenous peptide antigen (GO:0002483)",
+    "GO_BP:positive regulation of cytokine production involved in immune response (GO:0002720)",
+    "GO_BP:protection from natural killer cell mediated cytotoxicity (GO:0042270)",
+    "GO_BP:regulation of T cell cytokine production (GO:0002724)"
+   ],
+   "n_terms_lost": 4,
+   "n_terms_gained": 0
+  }
+ },
+ "backbone_raw": {
+  ">=7": 216,
+  ">=8": 96,
+  ">=9": 29,
+  ">=10": 0
+ },
+ "backbone_clean": {
+  ">=7": 209,
+  ">=8": 95,
+  ">=9": 29,
+  ">=10": 0
+ },
+ "backbone_ge8_lost": [
+  "KEGG:Th1 and Th2 cell differentiation"
+ ],
+ "backbone_ge8_gained": [],
+ "stored_null": {
+  ">=7": {
+   "null_mean": 13.16,
+   "null_sd": 3.55,
+   "real_published": 216
+  },
+  ">=8": {
+   "null_mean": 3.49,
+   "null_sd": 1.92,
+   "real_published": 96
+  },
+  ">=9": {
+   "null_mean": 0.6,
+   "null_sd": 0.86,
+   "real_published": 29
+  },
+  ">=10": {
+   "null_mean": 0.04,
+   "null_sd": 0.21,
+   "real_published": 0
+  }
+ }
+}

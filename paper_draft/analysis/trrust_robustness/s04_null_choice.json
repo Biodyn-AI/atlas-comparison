@@ -1,0 +1,457 @@
+{
+ "n_perm": 200,
+ "n_perm_curve": 100,
+ "swaps_attempted_per_edge": 10,
+ "sanity_small_graph": {
+  "degrees_identical": true,
+  "n_unique": 2881,
+  "n_edges": 2881,
+  "no_self_loops": true,
+  "share_original_edges_kept": 0.0642,
+  "accepted": 24935
+ },
+ "per_model": {
+  "UCE": {
+   "n_pairs": 91724,
+   "hits": 60,
+   "published_stub": {
+    "null_mean": 5.91,
+    "null_sd": 2.43,
+    "fold": 10.15,
+    "p_emp": 0.002,
+    "n_perm": 500
+   },
+   "stub_matching": {
+    "hits": 60,
+    "null_mean": 5.78,
+    "null_sd": 2.526,
+    "fold": 10.381,
+    "z": 21.46,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "null_distinct_pairs_mean": 91584.0,
+    "null_pairs_kept_share": 0.9985
+   },
+   "maslov_sneppen": {
+    "hits": 60,
+    "null_mean": 6.095,
+    "null_sd": 2.507,
+    "fold": 9.844,
+    "z": 21.5,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "accepted_swaps_mean": 911572.0,
+    "accepted_per_edge": 9.94,
+    "share_original_pairs_left_mean": 0.0036
+   }
+  },
+  "Tahoe": {
+   "n_pairs": 78159,
+   "hits": 79,
+   "published_stub": {
+    "null_mean": 8.37,
+    "null_sd": 2.99,
+    "fold": 9.44,
+    "p_emp": 0.002,
+    "n_perm": 500
+   },
+   "stub_matching": {
+    "hits": 79,
+    "null_mean": 8.14,
+    "null_sd": 2.567,
+    "fold": 9.705,
+    "z": 27.6,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "null_distinct_pairs_mean": 78017.6,
+    "null_pairs_kept_share": 0.9982
+   },
+   "maslov_sneppen": {
+    "hits": 79,
+    "null_mean": 8.265,
+    "null_sd": 2.813,
+    "fold": 9.558,
+    "z": 25.14,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "accepted_swaps_mean": 775860.3,
+    "accepted_per_edge": 9.93,
+    "share_original_pairs_left_mean": 0.0043
+   }
+  },
+  "C2S": {
+   "n_pairs": 117131,
+   "hits": 93,
+   "published_stub": {
+    "null_mean": 16.98,
+    "null_sd": 4.23,
+    "fold": 5.48,
+    "p_emp": 0.002,
+    "n_perm": 500
+   },
+   "stub_matching": {
+    "hits": 93,
+    "null_mean": 16.95,
+    "null_sd": 3.946,
+    "fold": 5.487,
+    "z": 19.27,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "null_distinct_pairs_mean": 116524.7,
+    "null_pairs_kept_share": 0.9948
+   },
+   "maslov_sneppen": {
+    "hits": 93,
+    "null_mean": 17.485,
+    "null_sd": 4.2,
+    "fold": 5.319,
+    "z": 17.98,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "accepted_swaps_mean": 1146514.9,
+    "accepted_per_edge": 9.79,
+    "share_original_pairs_left_mean": 0.0156
+   }
+  },
+  "MaxToki": {
+   "n_pairs": 18944,
+   "hits": 2,
+   "published_stub": {
+    "null_mean": 0.79,
+    "null_sd": 0.96,
+    "fold": 2.54,
+    "p_emp": 0.17964,
+    "n_perm": 500
+   },
+   "stub_matching": {
+    "hits": 2,
+    "null_mean": 0.78,
+    "null_sd": 0.826,
+    "fold": 2.564,
+    "z": 1.48,
+    "p_emp": 0.18905,
+    "n_perm": 200,
+    "null_distinct_pairs_mean": 18913.8,
+    "null_pairs_kept_share": 0.9984
+   },
+   "maslov_sneppen": {
+    "hits": 2,
+    "null_mean": 0.82,
+    "null_sd": 0.865,
+    "fold": 2.439,
+    "z": 1.36,
+    "p_emp": 0.199,
+    "n_perm": 200,
+    "accepted_swaps_mean": 188201.7,
+    "accepted_per_edge": 9.93,
+    "share_original_pairs_left_mean": 0.0038
+   }
+  },
+  "Geneformer": {
+   "n_pairs": 50707,
+   "hits": 17,
+   "published_stub": {
+    "null_mean": 6.9,
+    "null_sd": 2.59,
+    "fold": 2.46,
+    "p_emp": 0.002,
+    "n_perm": 500
+   },
+   "stub_matching": {
+    "hits": 17,
+    "null_mean": 6.88,
+    "null_sd": 2.499,
+    "fold": 2.471,
+    "z": 4.05,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "null_distinct_pairs_mean": 50636.0,
+    "null_pairs_kept_share": 0.9986
+   },
+   "maslov_sneppen": {
+    "hits": 17,
+    "null_mean": 6.69,
+    "null_sd": 2.405,
+    "fold": 2.541,
+    "z": 4.29,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "accepted_swaps_mean": 504178.6,
+    "accepted_per_edge": 9.94,
+    "share_original_pairs_left_mean": 0.0031
+   }
+  },
+  "scGPT": {
+   "n_pairs": 11516,
+   "hits": 3,
+   "published_stub": {
+    "null_mean": 1.81,
+    "null_sd": 1.33,
+    "fold": 1.66,
+    "p_emp": 0.26946,
+    "n_perm": 500
+   },
+   "stub_matching": {
+    "hits": 3,
+    "null_mean": 1.75,
+    "null_sd": 1.272,
+    "fold": 1.714,
+    "z": 0.98,
+    "p_emp": 0.27861,
+    "n_perm": 200,
+    "null_distinct_pairs_mean": 11487.1,
+    "null_pairs_kept_share": 0.9975
+   },
+   "maslov_sneppen": {
+    "hits": 3,
+    "null_mean": 1.92,
+    "null_sd": 1.501,
+    "fold": 1.562,
+    "z": 0.72,
+    "p_emp": 0.31841,
+    "n_perm": 200,
+    "accepted_swaps_mean": 113971.8,
+    "accepted_per_edge": 9.9,
+    "share_original_pairs_left_mean": 0.0062
+   }
+  },
+  "tGPT": {
+   "n_pairs": 10498,
+   "hits": 1,
+   "published_stub": {
+    "null_mean": 1.03,
+    "null_sd": 0.99,
+    "fold": 0.97,
+    "p_emp": 0.65269,
+    "n_perm": 500
+   },
+   "stub_matching": {
+    "hits": 1,
+    "null_mean": 0.95,
+    "null_sd": 1.028,
+    "fold": 1.053,
+    "z": 0.05,
+    "p_emp": 0.60199,
+    "n_perm": 200,
+    "null_distinct_pairs_mean": 10175.3,
+    "null_pairs_kept_share": 0.9693
+   },
+   "maslov_sneppen": {
+    "hits": 1,
+    "null_mean": 0.965,
+    "null_sd": 0.961,
+    "fold": 1.036,
+    "z": 0.04,
+    "p_emp": 0.64179,
+    "n_perm": 200,
+    "accepted_swaps_mean": 91904.9,
+    "accepted_per_edge": 8.75,
+    "share_original_pairs_left_mean": 0.087
+   }
+  },
+  "scFoundation": {
+   "n_pairs": 8270,
+   "hits": 1,
+   "published_stub": {
+    "null_mean": 1.03,
+    "null_sd": 1.01,
+    "fold": 0.97,
+    "p_emp": 0.64471,
+    "n_perm": 500
+   },
+   "stub_matching": {
+    "hits": 1,
+    "null_mean": 0.89,
+    "null_sd": 0.876,
+    "fold": 1.124,
+    "z": 0.13,
+    "p_emp": 0.61692,
+    "n_perm": 200,
+    "null_distinct_pairs_mean": 8257.0,
+    "null_pairs_kept_share": 0.9984
+   },
+   "maslov_sneppen": {
+    "hits": 1,
+    "null_mean": 0.915,
+    "null_sd": 0.921,
+    "fold": 1.093,
+    "z": 0.09,
+    "p_emp": 0.62189,
+    "n_perm": 200,
+    "accepted_swaps_mean": 82153.5,
+    "accepted_per_edge": 9.93,
+    "share_original_pairs_left_mean": 0.0044
+   }
+  }
+ },
+ "curve": {
+  "all_ten": {
+   "stub_matching": {
+    "1": {
+     "n_pairs": 395708,
+     "hits": 202,
+     "precision": 0.00051,
+     "null_precision_mean": 0.00010322,
+     "null_precision_sd": 1.498e-05,
+     "null_hits_mean": 43.19,
+     "null_pairs_mean": 418444.3,
+     "null_draws_with_zero_hits": 0,
+     "fold": 4.95,
+     "p_emp": 0.0099,
+     "n_perm": 100
+    },
+    "2": {
+     "n_pairs": 17567,
+     "hits": 40,
+     "precision": 0.002277,
+     "null_precision_mean": 0.00013359,
+     "null_precision_sd": 0.00030622,
+     "null_hits_mean": 0.16,
+     "null_pairs_mean": 1202.2,
+     "null_draws_with_zero_hits": 84,
+     "fold": 17.04,
+     "p_emp": 0.0099,
+     "n_perm": 100
+    },
+    "3": {
+     "n_pairs": 4673,
+     "hits": 11,
+     "precision": 0.002354,
+     "null_precision_mean": 0.0,
+     "null_precision_sd": 0.0,
+     "null_hits_mean": 0.0,
+     "null_pairs_mean": 11.3,
+     "null_draws_with_zero_hits": 100,
+     "fold": null,
+     "p_emp": 0.0099,
+     "n_perm": 100
+    }
+   },
+   "maslov_sneppen": {
+    "1": {
+     "n_pairs": 395708,
+     "hits": 202,
+     "precision": 0.00051,
+     "null_precision_mean": 0.00010025,
+     "null_precision_sd": 1.463e-05,
+     "null_hits_mean": 42.12,
+     "null_pairs_mean": 420149.0,
+     "null_draws_with_zero_hits": 0,
+     "fold": 5.09,
+     "p_emp": 0.0099,
+     "n_perm": 100
+    },
+    "2": {
+     "n_pairs": 17567,
+     "hits": 40,
+     "precision": 0.002277,
+     "null_precision_mean": 7.311e-05,
+     "null_precision_sd": 0.00023258,
+     "null_hits_mean": 0.09,
+     "null_pairs_mean": 1226.4,
+     "null_draws_with_zero_hits": 91,
+     "fold": 31.15,
+     "p_emp": 0.0099,
+     "n_perm": 100
+    },
+    "3": {
+     "n_pairs": 4673,
+     "hits": 11,
+     "precision": 0.002354,
+     "null_precision_mean": 0.0,
+     "null_precision_sd": 0.0,
+     "null_hits_mean": 0.0,
+     "null_pairs_mean": 11.5,
+     "null_draws_with_zero_hits": 100,
+     "fold": null,
+     "p_emp": 0.0099,
+     "n_perm": 100
+    }
+   }
+  },
+  "five_passing": {
+   "stub_matching": {
+    "1": {
+     "n_pairs": 320483,
+     "hits": 198,
+     "precision": 0.000618,
+     "null_precision_mean": 0.00011458,
+     "null_precision_sd": 1.852e-05,
+     "null_hits_mean": 38.51,
+     "null_pairs_mean": 336097.0,
+     "null_draws_with_zero_hits": 0,
+     "fold": 5.39,
+     "p_emp": 0.0099,
+     "n_perm": 100
+    },
+    "2": {
+     "n_pairs": 13531,
+     "hits": 39,
+     "precision": 0.002882,
+     "null_precision_mean": 0.00021044,
+     "null_precision_sd": 0.000522,
+     "null_hits_mean": 0.14,
+     "null_pairs_mean": 665.3,
+     "null_draws_with_zero_hits": 86,
+     "fold": 13.7,
+     "p_emp": 0.0099,
+     "n_perm": 100
+    },
+    "3": {
+     "n_pairs": 2955,
+     "hits": 10,
+     "precision": 0.003384,
+     "null_precision_mean": 0.0,
+     "null_precision_sd": 0.0,
+     "null_hits_mean": 0.0,
+     "null_pairs_mean": 1.6,
+     "null_draws_with_zero_hits": 100,
+     "fold": null,
+     "p_emp": 0.0099,
+     "n_perm": 100
+    }
+   },
+   "maslov_sneppen": {
+    "1": {
+     "n_pairs": 320483,
+     "hits": 198,
+     "precision": 0.000618,
+     "null_precision_mean": 0.00011221,
+     "null_precision_sd": 1.62e-05,
+     "null_hits_mean": 37.82,
+     "null_pairs_mean": 337048.3,
+     "null_draws_with_zero_hits": 0,
+     "fold": 5.51,
+     "p_emp": 0.0099,
+     "n_perm": 100
+    },
+    "2": {
+     "n_pairs": 13531,
+     "hits": 39,
+     "precision": 0.002882,
+     "null_precision_mean": 0.00016464,
+     "null_precision_sd": 0.00046855,
+     "null_hits_mean": 0.11,
+     "null_pairs_mean": 671.1,
+     "null_draws_with_zero_hits": 89,
+     "fold": 17.51,
+     "p_emp": 0.0099,
+     "n_perm": 100
+    },
+    "3": {
+     "n_pairs": 2955,
+     "hits": 10,
+     "precision": 0.003384,
+     "null_precision_mean": 0.0,
+     "null_precision_sd": 0.0,
+     "null_hits_mean": 0.0,
+     "null_pairs_mean": 1.6,
+     "null_draws_with_zero_hits": 100,
+     "fold": null,
+     "p_emp": 0.0099,
+     "n_perm": 100
+    }
+   }
+  }
+ }
+}

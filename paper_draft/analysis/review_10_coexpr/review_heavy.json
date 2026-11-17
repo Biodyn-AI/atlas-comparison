@@ -1,0 +1,2594 @@
+{
+ "n_perm": 200,
+ "corpus": "$ATLAS_CACHE/corpus6k.h5ad",
+ "U": 20195,
+ "P1_recount_6000": {
+  "global_top50707": {
+   "hits": 26,
+   "r_cutoff": 0.5001
+  },
+  "global_top78159": {
+   "hits": 38,
+   "r_cutoff": 0.4609
+  },
+  "nodematched_Tahoe": {
+   "hits": 38,
+   "N": 76120,
+   "r_cutoff": 0.4531
+  },
+  "degmatched": {
+   "UCE": {
+    "N_cofire": 91724,
+    "N_coexpr": 91515,
+    "rounds": 3,
+    "coexpr_hits": 49,
+    "cofire_hits": 60,
+    "paired": {
+     "cofire_only_hits": 51,
+     "coexpr_only_hits": 40,
+     "shared_hits": 9,
+     "cofire_only_pairs": 86204,
+     "coexpr_only_pairs": 85995,
+     "binom_p": 0.2945
+    },
+    "cofire_only_hit_pairs": [
+     [
+      "AR",
+      "ESR1"
+     ],
+     [
+      "ATF3",
+      "JDP2"
+     ],
+     [
+      "ATF4",
+      "DDIT3"
+     ],
+     [
+      "ATF5",
+      "DDIT3"
+     ],
+     [
+      "BIRC3",
+      "NFKB1"
+     ],
+     [
+      "CDC6",
+      "E2F3"
+     ],
+     [
+      "CREB1",
+      "CREM"
+     ],
+     [
+      "CREBBP",
+      "EP300"
+     ],
+     [
+      "DDIT3",
+      "XBP1"
+     ],
+     [
+      "DMRT1",
+      "EGR1"
+     ],
+     [
+      "E2F1",
+      "E2F7"
+     ],
+     [
+      "E2F1",
+      "E2F8"
+     ],
+     [
+      "E2F1",
+      "HIC1"
+     ],
+     [
+      "E2F1",
+      "TERT"
+     ],
+     [
+      "EMX2",
+      "HOXA10"
+     ],
+     [
+      "ERG",
+      "ETS1"
+     ],
+     [
+      "ERG",
+      "ETS2"
+     ],
+     [
+      "ERG",
+      "FLI1"
+     ],
+     [
+      "ESR1",
+      "FOXA1"
+     ],
+     [
+      "ESR1",
+      "NR5A2"
+     ],
+     [
+      "ESRRA",
+      "NR2F6"
+     ],
+     [
+      "ETS1",
+      "FLI1"
+     ],
+     [
+      "ETV6",
+      "ETV7"
+     ],
+     [
+      "FCER2",
+      "PAX5"
+     ],
+     [
+      "FOSL1",
+      "FOSL2"
+     ],
+     [
+      "FOXA2",
+      "NKX2-1"
+     ],
+     [
+      "HNF4A",
+      "RARA"
+     ],
+     [
+      "HOXB8",
+      "HOXC9"
+     ],
+     [
+      "IL1B",
+      "NFKBIA"
+     ],
+     [
+      "IRF1",
+      "IRF2"
+     ],
+     [
+      "IRF3",
+      "IRF4"
+     ],
+     [
+      "IRF3",
+      "IRF5"
+     ],
+     [
+      "IRF3",
+      "IRF7"
+     ],
+     [
+      "IRF4",
+      "NFKB1"
+     ],
+     [
+      "IRF4",
+      "RELA"
+     ],
+     [
+      "MEIS1",
+      "PBX2"
+     ],
+     [
+      "MITF",
+      "PPARGC1A"
+     ],
+     [
+      "MUC2",
+      "SPDEF"
+     ],
+     [
+      "NFKB1",
+      "RELA"
+     ],
+     [
+      "NFKB1",
+      "TRAF1"
+     ],
+     [
+      "NFKBIA",
+      "TRAF1"
+     ],
+     [
+      "NFYA",
+      "SP3"
+     ],
+     [
+      "NR1D1",
+      "RORA"
+     ],
+     [
+      "POU2AF1",
+      "SPIB"
+     ],
+     [
+      "RUNX1",
+      "RUNX3"
+     ],
+     [
+      "SERPINB5",
+      "SPDEF"
+     ],
+     [
+      "SP1",
+      "SP3"
+     ],
+     [
+      "STAT1",
+      "STAT2"
+     ],
+     [
+      "STAT1",
+      "STAT3"
+     ],
+     [
+      "STAT1",
+      "STAT6"
+     ],
+     [
+      "TCF4",
+      "TP63"
+     ]
+    ],
+    "coexpr_only_hit_pairs": [
+     [
+      "ATF3",
+      "KLF4"
+     ],
+     [
+      "ATF4",
+      "TRIB3"
+     ],
+     [
+      "CCNA1",
+      "MYB"
+     ],
+     [
+      "CCNE1",
+      "E2F1"
+     ],
+     [
+      "CD40",
+      "SPIB"
+     ],
+     [
+      "CD40LG",
+      "GATA3"
+     ],
+     [
+      "CD8A",
+      "GATA3"
+     ],
+     [
+      "CDKN1A",
+      "EGR1"
+     ],
+     [
+      "CDKN1A",
+      "KLF4"
+     ],
+     [
+      "CETP",
+      "NR1H3"
+     ],
+     [
+      "CHEK1",
+      "E2F1"
+     ],
+     [
+      "CIITA",
+      "HLA-DMB"
+     ],
+     [
+      "CIITA",
+      "HLA-DOA"
+     ],
+     [
+      "CIITA",
+      "HLA-DPB1"
+     ],
+     [
+      "CIITA",
+      "HLA-DRB1"
+     ],
+     [
+      "CTLA4",
+      "LEF1"
+     ],
+     [
+      "CXCL8",
+      "NFKB1"
+     ],
+     [
+      "CXCL8",
+      "NFKBIA"
+     ],
+     [
+      "E2F1",
+      "FANCA"
+     ],
+     [
+      "E2F1",
+      "HMGA1"
+     ],
+     [
+      "E2F1",
+      "MCM5"
+     ],
+     [
+      "E2F1",
+      "RRM1"
+     ],
+     [
+      "EGR1",
+      "ETS2"
+     ],
+     [
+      "EGR1",
+      "LDLR"
+     ],
+     [
+      "EOMES",
+      "IFNG"
+     ],
+     [
+      "ETS2",
+      "ICAM1"
+     ],
+     [
+      "GATA2",
+      "IL1RL1"
+     ],
+     [
+      "GATA2",
+      "MS4A2"
+     ],
+     [
+      "HBB",
+      "KLF1"
+     ],
+     [
+      "HSPA5",
+      "XBP1"
+     ],
+     [
+      "IER3",
+      "NFKB1"
+     ],
+     [
+      "IGF2",
+      "WT1"
+     ],
+     [
+      "IL1B",
+      "NFKB1"
+     ],
+     [
+      "IRF1",
+      "TAPBP"
+     ],
+     [
+      "KLF4",
+      "THBD"
+     ],
+     [
+      "LMO3",
+      "NKX2-1"
+     ],
+     [
+      "NFKB1",
+      "NFKBIA"
+     ],
+     [
+      "NFKB1",
+      "TNFAIP3"
+     ],
+     [
+      "NKX2-1",
+      "SFTPB"
+     ],
+     [
+      "POU2AF1",
+      "TNFRSF17"
+     ]
+    ],
+    "genes_in_discordant_hits_top5": [
+     [
+      "E2F1",
+      10
+     ],
+     [
+      "NFKB1",
+      9
+     ],
+     [
+      "EGR1",
+      4
+     ],
+     [
+      "NFKBIA",
+      4
+     ],
+     [
+      "CIITA",
+      4
+     ]
+    ],
+    "leave_top_hub_out": {
+     "hub": "E2F1",
+     "cofire_only": 47,
+     "coexpr_only": 34,
+     "binom_p": 0.1821
+    }
+   },
+   "Tahoe": {
+    "N_cofire": 76120,
+    "N_coexpr": 76102,
+    "rounds": 3,
+    "coexpr_hits": 53,
+    "cofire_hits": 79,
+    "paired": {
+     "cofire_only_hits": 62,
+     "coexpr_only_hits": 36,
+     "shared_hits": 17,
+     "cofire_only_pairs": 66740,
+     "coexpr_only_pairs": 66722,
+     "binom_p": 0.01117
+    },
+    "cofire_only_hit_pairs": [
+     [
+      "AHR",
+      "CYP1B1"
+     ],
+     [
+      "ATF3",
+      "KLF6"
+     ],
+     [
+      "ATF4",
+      "NUPR1"
+     ],
+     [
+      "BCL2A1",
+      "NFKB1"
+     ],
+     [
+      "BCL2A1",
+      "REL"
+     ],
+     [
+      "BCL6",
+      "FOSL2"
+     ],
+     [
+      "BIRC3",
+      "NFKB1"
+     ],
+     [
+      "BIRC3",
+      "REL"
+     ],
+     [
+      "CCL20",
+      "NFKB1"
+     ],
+     [
+      "CD83",
+      "NFKB1"
+     ],
+     [
+      "CDH5",
+      "ERG"
+     ],
+     [
+      "CDKN1A",
+      "KLF10"
+     ],
+     [
+      "CIITA",
+      "HLA-DMA"
+     ],
+     [
+      "CIITA",
+      "HLA-DQB1"
+     ],
+     [
+      "CPT1A",
+      "PPARA"
+     ],
+     [
+      "CREBBP",
+      "EP300"
+     ],
+     [
+      "CXCR4",
+      "FOXO1"
+     ],
+     [
+      "CXCR4",
+      "KLF2"
+     ],
+     [
+      "DBP",
+      "HLF"
+     ],
+     [
+      "DBP",
+      "TEF"
+     ],
+     [
+      "DDIT3",
+      "XBP1"
+     ],
+     [
+      "EMX2",
+      "HOXA10"
+     ],
+     [
+      "EPAS1",
+      "FLT1"
+     ],
+     [
+      "ERG",
+      "ETS2"
+     ],
+     [
+      "ERG",
+      "FLI1"
+     ],
+     [
+      "ESR1",
+      "XBP1"
+     ],
+     [
+      "ETS1",
+      "FLI1"
+     ],
+     [
+      "FABP4",
+      "PPARG"
+     ],
+     [
+      "FCER2",
+      "PAX5"
+     ],
+     [
+      "FDFT1",
+      "SREBF2"
+     ],
+     [
+      "FDPS",
+      "SREBF2"
+     ],
+     [
+      "FOXO1",
+      "IRS2"
+     ],
+     [
+      "FXYD2",
+      "HNF1B"
+     ],
+     [
+      "GLS",
+      "STAT1"
+     ],
+     [
+      "GPNMB",
+      "MITF"
+     ],
+     [
+      "HDAC9",
+      "MEF2A"
+     ],
+     [
+      "HIF1A",
+      "TFRC"
+     ],
+     [
+      "HMGA2",
+      "IGF2BP2"
+     ],
+     [
+      "HMGCR",
+      "SREBF2"
+     ],
+     [
+      "HOXB8",
+      "HOXC10"
+     ],
+     [
+      "ICAM1",
+      "REL"
+     ],
+     [
+      "IRF1",
+      "PSMB10"
+     ],
+     [
+      "IRF1",
+      "STAT1"
+     ],
+     [
+      "IRF1",
+      "TAP1"
+     ],
+     [
+      "JUN",
+      "RHOB"
+     ],
+     [
+      "JUNB",
+      "STAT3"
+     ],
+     [
+      "LDLR",
+      "SREBF2"
+     ],
+     [
+      "MYL9",
+      "SRF"
+     ],
+     [
+      "NCBP1",
+      "UPF1"
+     ],
+     [
+      "NFKB1",
+      "SOD2"
+     ],
+     [
+      "NFKB1",
+      "STAT4"
+     ],
+     [
+      "NFKB1",
+      "TAPBP"
+     ],
+     [
+      "NR1D1",
+      "RORA"
+     ],
+     [
+      "PLIN2",
+      "PPARG"
+     ],
+     [
+      "POU2AF1",
+      "TNFRSF17"
+     ],
+     [
+      "REL",
+      "TNFAIP3"
+     ],
+     [
+      "SCD",
+      "SREBF1"
+     ],
+     [
+      "SKIL",
+      "SMAD7"
+     ],
+     [
+      "SOCS3",
+      "STAT3"
+     ],
+     [
+      "STAT1",
+      "STAT2"
+     ],
+     [
+      "STAT1",
+      "TAP1"
+     ],
+     [
+      "STAT1",
+      "XAF1"
+     ]
+    ],
+    "coexpr_only_hit_pairs": [
+     [
+      "ATF4",
+      "TRIB3"
+     ],
+     [
+      "ATM",
+      "BCL2"
+     ],
+     [
+      "BACH2",
+      "BCL2"
+     ],
+     [
+      "CD40LG",
+      "GATA3"
+     ],
+     [
+      "CD79A",
+      "PAX5"
+     ],
+     [
+      "CDKN1A",
+      "EGR1"
+     ],
+     [
+      "CDKN1A",
+      "KLF4"
+     ],
+     [
+      "CTNNB1",
+      "PPARD"
+     ],
+     [
+      "CTSS",
+      "SPI1"
+     ],
+     [
+      "CXCL8",
+      "NFKB1"
+     ],
+     [
+      "CXCR4",
+      "ETS1"
+     ],
+     [
+      "DEK",
+      "YY1"
+     ],
+     [
+      "E2F1",
+      "UHRF1"
+     ],
+     [
+      "E2F3",
+      "HIF1A"
+     ],
+     [
+      "EGR1",
+      "ETS2"
+     ],
+     [
+      "EPAS1",
+      "HIF3A"
+     ],
+     [
+      "ETS1",
+      "LCK"
+     ],
+     [
+      "ETS2",
+      "ICAM1"
+     ],
+     [
+      "FOSL2",
+      "TIMP1"
+     ],
+     [
+      "GATA2",
+      "IL1RL1"
+     ],
+     [
+      "GLI2",
+      "MUC5AC"
+     ],
+     [
+      "ICAM1",
+      "STAT3"
+     ],
+     [
+      "IER3",
+      "NFKB1"
+     ],
+     [
+      "IL1B",
+      "NFKB1"
+     ],
+     [
+      "IL1B",
+      "NFKBIA"
+     ],
+     [
+      "IRF1",
+      "TAPBP"
+     ],
+     [
+      "KLF4",
+      "THBD"
+     ],
+     [
+      "KLF6",
+      "PMAIP1"
+     ],
+     [
+      "LMO3",
+      "NKX2-1"
+     ],
+     [
+      "MCL1",
+      "NFKB1"
+     ],
+     [
+      "MCL1",
+      "STAT3"
+     ],
+     [
+      "MNDA",
+      "SPI1"
+     ],
+     [
+      "NFKB1",
+      "NFKBIZ"
+     ],
+     [
+      "NKX2-1",
+      "SFTPB"
+     ],
+     [
+      "NR3C1",
+      "RPS6KA3"
+     ],
+     [
+      "STAT3",
+      "ZFP36"
+     ]
+    ],
+    "genes_in_discordant_hits_top5": [
+     [
+      "NFKB1",
+      12
+     ],
+     [
+      "STAT3",
+      5
+     ],
+     [
+      "STAT1",
+      5
+     ],
+     [
+      "REL",
+      4
+     ],
+     [
+      "IRF1",
+      4
+     ]
+    ],
+    "leave_top_hub_out": {
+     "hub": "NFKB1",
+     "cofire_only": 55,
+     "coexpr_only": 31,
+     "binom_p": 0.01267
+    }
+   },
+   "C2S": {
+    "N_cofire": 114350,
+    "N_coexpr": 114249,
+    "rounds": 3,
+    "coexpr_hits": 62,
+    "cofire_hits": 93,
+    "paired": {
+     "cofire_only_hits": 77,
+     "coexpr_only_hits": 46,
+     "shared_hits": 16,
+     "cofire_only_pairs": 104788,
+     "coexpr_only_pairs": 104687,
+     "binom_p": 0.00659
+    },
+    "cofire_only_hit_pairs": [
+     [
+      "ABCB1",
+      "HDAC1"
+     ],
+     [
+      "ATF2",
+      "ATF3"
+     ],
+     [
+      "ATF3",
+      "ATF4"
+     ],
+     [
+      "ATF3",
+      "CCL5"
+     ],
+     [
+      "ATF3",
+      "DDIT3"
+     ],
+     [
+      "ATF3",
+      "ID1"
+     ],
+     [
+      "ATF3",
+      "KLF6"
+     ],
+     [
+      "ATF4",
+      "DDIT3"
+     ],
+     [
+      "BCL2",
+      "MYB"
+     ],
+     [
+      "BCL2",
+      "NFKB1"
+     ],
+     [
+      "BCL2",
+      "TP53"
+     ],
+     [
+      "BCL2L1",
+      "BCL6"
+     ],
+     [
+      "BIRC3",
+      "NFKB1"
+     ],
+     [
+      "BRD2",
+      "BRD7"
+     ],
+     [
+      "BRD3",
+      "BRD7"
+     ],
+     [
+      "CD19",
+      "PAX5"
+     ],
+     [
+      "CD44",
+      "TCF4"
+     ],
+     [
+      "CD83",
+      "NFKB1"
+     ],
+     [
+      "CDK2",
+      "TP53"
+     ],
+     [
+      "CREB1",
+      "CREBBP"
+     ],
+     [
+      "CSF1",
+      "NFKB1"
+     ],
+     [
+      "CXCL10",
+      "STAT1"
+     ],
+     [
+      "CXCR4",
+      "HIF1A"
+     ],
+     [
+      "EMX2",
+      "HOXA10"
+     ],
+     [
+      "ESR1",
+      "ESRRA"
+     ],
+     [
+      "ETV6",
+      "ETV7"
+     ],
+     [
+      "FCER2",
+      "PAX5"
+     ],
+     [
+      "FGFR1",
+      "RB1"
+     ],
+     [
+      "FOSL1",
+      "FOSL2"
+     ],
+     [
+      "FOXO3",
+      "NFKB1"
+     ],
+     [
+      "HDAC3",
+      "HDAC4"
+     ],
+     [
+      "HIF1A",
+      "HIF3A"
+     ],
+     [
+      "HIF1A",
+      "MIF"
+     ],
+     [
+      "HLA-C",
+      "MYC"
+     ],
+     [
+      "HNF1A",
+      "HNF4A"
+     ],
+     [
+      "IFIT3",
+      "STAT1"
+     ],
+     [
+      "IL1A",
+      "NFKB1"
+     ],
+     [
+      "IL2",
+      "ILF2"
+     ],
+     [
+      "IL2RA",
+      "RXRA"
+     ],
+     [
+      "ILF2",
+      "ILF3"
+     ],
+     [
+      "IRF1",
+      "IRF2"
+     ],
+     [
+      "IRF3",
+      "IRF4"
+     ],
+     [
+      "IRF3",
+      "IRF5"
+     ],
+     [
+      "IRF3",
+      "IRF7"
+     ],
+     [
+      "JUND",
+      "PLAUR"
+     ],
+     [
+      "KLF4",
+      "KRT19"
+     ],
+     [
+      "KLF6",
+      "TXNIP"
+     ],
+     [
+      "MECOM",
+      "RUNX1"
+     ],
+     [
+      "MITF",
+      "PMEL"
+     ],
+     [
+      "MITF",
+      "TCF4"
+     ],
+     [
+      "MITF",
+      "TYR"
+     ],
+     [
+      "MSR1",
+      "SPI1"
+     ],
+     [
+      "MYB",
+      "MYC"
+     ],
+     [
+      "MYC",
+      "RB1"
+     ],
+     [
+      "MYC",
+      "TP53"
+     ],
+     [
+      "MYC",
+      "UBE2C"
+     ],
+     [
+      "NFKB1",
+      "TGFB1"
+     ],
+     [
+      "NFKB1",
+      "TRAF1"
+     ],
+     [
+      "PPARG",
+      "RETN"
+     ],
+     [
+      "PPBP",
+      "TBP"
+     ],
+     [
+      "PSMB9",
+      "STAT1"
+     ],
+     [
+      "PTTG1",
+      "PTTG1IP"
+     ],
+     [
+      "RB1",
+      "TP53"
+     ],
+     [
+      "RUNX1",
+      "RUNX3"
+     ],
+     [
+      "SAP30",
+      "YY1"
+     ],
+     [
+      "SMAD3",
+      "SMAD7"
+     ],
+     [
+      "SMAD4",
+      "SMAD7"
+     ],
+     [
+      "SOCS3",
+      "STAT3"
+     ],
+     [
+      "SP1",
+      "SP3"
+     ],
+     [
+      "SP1",
+      "SPN"
+     ],
+     [
+      "SP1",
+      "SPP1"
+     ],
+     [
+      "STAT1",
+      "STAT2"
+     ],
+     [
+      "STAT1",
+      "STAT3"
+     ],
+     [
+      "STAT1",
+      "STAT6"
+     ],
+     [
+      "TP53",
+      "TP73"
+     ],
+     [
+      "TP53",
+      "UHRF1"
+     ],
+     [
+      "WT1",
+      "WTAP"
+     ]
+    ],
+    "coexpr_only_hit_pairs": [
+     [
+      "ACTG2",
+      "MYOCD"
+     ],
+     [
+      "ATF3",
+      "KLF4"
+     ],
+     [
+      "CCL4",
+      "CREM"
+     ],
+     [
+      "CCNB1",
+      "PTTG1"
+     ],
+     [
+      "CD79A",
+      "PAX5"
+     ],
+     [
+      "CDKN1A",
+      "KLF4"
+     ],
+     [
+      "CEBPB",
+      "S100A9"
+     ],
+     [
+      "CEBPE",
+      "LTF"
+     ],
+     [
+      "CETP",
+      "NR1H3"
+     ],
+     [
+      "CIITA",
+      "HLA-DMB"
+     ],
+     [
+      "CREM",
+      "DUSP4"
+     ],
+     [
+      "CXCL8",
+      "NFKB1"
+     ],
+     [
+      "CXCL8",
+      "NFKBIA"
+     ],
+     [
+      "ELANE",
+      "MYB"
+     ],
+     [
+      "EOMES",
+      "IFNG"
+     ],
+     [
+      "ETS2",
+      "ICAM1"
+     ],
+     [
+      "ETV6",
+      "STAT3"
+     ],
+     [
+      "FOSL2",
+      "TIMP1"
+     ],
+     [
+      "FOXO1",
+      "TXNIP"
+     ],
+     [
+      "FXN",
+      "SRF"
+     ],
+     [
+      "GATA2",
+      "IL1RL1"
+     ],
+     [
+      "GNAS",
+      "YY1"
+     ],
+     [
+      "HBB",
+      "KLF1"
+     ],
+     [
+      "HCFC1",
+      "YY1"
+     ],
+     [
+      "HIF1A",
+      "VEGFA"
+     ],
+     [
+      "HLA-A",
+      "IRF1"
+     ],
+     [
+      "ICAM1",
+      "STAT3"
+     ],
+     [
+      "IER3",
+      "NFKB1"
+     ],
+     [
+      "IGF2",
+      "WT1"
+     ],
+     [
+      "IL1B",
+      "NFKBIA"
+     ],
+     [
+      "IL6",
+      "ZFP36"
+     ],
+     [
+      "JUNB",
+      "NFKB1"
+     ],
+     [
+      "JUNB",
+      "STAT3"
+     ],
+     [
+      "KLF4",
+      "THBD"
+     ],
+     [
+      "KLF6",
+      "PMAIP1"
+     ],
+     [
+      "KRT5",
+      "TFAP2A"
+     ],
+     [
+      "LDLR",
+      "SREBF2"
+     ],
+     [
+      "MYC",
+      "WDR5"
+     ],
+     [
+      "NCF2",
+      "SPI1"
+     ],
+     [
+      "NFKB1",
+      "NFKBIA"
+     ],
+     [
+      "NFKB1",
+      "PTGS2"
+     ],
+     [
+      "NFKBIA",
+      "S100A6"
+     ],
+     [
+      "NKX2-1",
+      "SFTPB"
+     ],
+     [
+      "NPM1",
+      "RPL3"
+     ],
+     [
+      "STAT3",
+      "ZFP36"
+     ],
+     [
+      "VEGFA",
+      "ZFP36L1"
+     ]
+    ],
+    "genes_in_discordant_hits_top5": [
+     [
+      "NFKB1",
+      13
+     ],
+     [
+      "ATF3",
+      7
+     ],
+     [
+      "STAT1",
+      6
+     ],
+     [
+      "MYC",
+      6
+     ],
+     [
+      "TP53",
+      6
+     ]
+    ],
+    "leave_top_hub_out": {
+     "hub": "NFKB1",
+     "cofire_only": 69,
+     "coexpr_only": 41,
+     "binom_p": 0.00972
+    }
+   },
+   "Geneformer": {
+    "N_cofire": 50366,
+    "N_coexpr": 50364,
+    "rounds": 3,
+    "coexpr_hits": 43,
+    "cofire_hits": 17,
+    "paired": {
+     "cofire_only_hits": 12,
+     "coexpr_only_hits": 38,
+     "shared_hits": 5,
+     "cofire_only_pairs": 48280,
+     "coexpr_only_pairs": 48278,
+     "binom_p": 0.0002
+    },
+    "cofire_only_hit_pairs": [
+     [
+      "ATF4",
+      "MAP1LC3B"
+     ],
+     [
+      "CD19",
+      "PAX5"
+     ],
+     [
+      "CIITA",
+      "HLA-DMA"
+     ],
+     [
+      "CIITA",
+      "HLA-DMB"
+     ],
+     [
+      "CLCNKA",
+      "KLF15"
+     ],
+     [
+      "E2F1",
+      "MCM5"
+     ],
+     [
+      "FBP1",
+      "NFKB1"
+     ],
+     [
+      "FCER2",
+      "PAX5"
+     ],
+     [
+      "FDFT1",
+      "SREBF2"
+     ],
+     [
+      "PITX2",
+      "WNT5A"
+     ],
+     [
+      "POR",
+      "SMAD4"
+     ],
+     [
+      "SOCS3",
+      "STAT3"
+     ]
+    ],
+    "coexpr_only_hit_pairs": [
+     [
+      "AGR2",
+      "FOXA1"
+     ],
+     [
+      "ATF4",
+      "DDIT3"
+     ],
+     [
+      "ATF4",
+      "TRIB3"
+     ],
+     [
+      "CD40LG",
+      "GATA3"
+     ],
+     [
+      "CD79A",
+      "PAX5"
+     ],
+     [
+      "CDKN1A",
+      "EGR1"
+     ],
+     [
+      "CDKN1A",
+      "KLF4"
+     ],
+     [
+      "CIITA",
+      "HLA-DOA"
+     ],
+     [
+      "CIITA",
+      "HLA-DPB1"
+     ],
+     [
+      "CIITA",
+      "HLA-DRB1"
+     ],
+     [
+      "CTSS",
+      "SPI1"
+     ],
+     [
+      "CXCL8",
+      "NFKB1"
+     ],
+     [
+      "CXCL8",
+      "NFKBIA"
+     ],
+     [
+      "EGR1",
+      "ETS2"
+     ],
+     [
+      "EGR1",
+      "LDLR"
+     ],
+     [
+      "ERN1",
+      "XBP1"
+     ],
+     [
+      "ETS2",
+      "ICAM1"
+     ],
+     [
+      "FABP4",
+      "PPARG"
+     ],
+     [
+      "FOSL2",
+      "TIMP1"
+     ],
+     [
+      "GATA2",
+      "IL1RL1"
+     ],
+     [
+      "HCK",
+      "SPI1"
+     ],
+     [
+      "HSPA5",
+      "XBP1"
+     ],
+     [
+      "ICAM1",
+      "NFKB1"
+     ],
+     [
+      "ICAM1",
+      "NFKBIA"
+     ],
+     [
+      "ICAM1",
+      "STAT3"
+     ],
+     [
+      "IER3",
+      "NFKB1"
+     ],
+     [
+      "IL2",
+      "SATB1"
+     ],
+     [
+      "KLF6",
+      "PMAIP1"
+     ],
+     [
+      "MCL1",
+      "NFKB1"
+     ],
+     [
+      "MCL1",
+      "STAT3"
+     ],
+     [
+      "MNDA",
+      "SPI1"
+     ],
+     [
+      "NFKB1",
+      "NFKBIA"
+     ],
+     [
+      "NFKB1",
+      "NFKBIZ"
+     ],
+     [
+      "NFKB1",
+      "TNFAIP3"
+     ],
+     [
+      "NR3C1",
+      "RPS6KA3"
+     ],
+     [
+      "POU2F2",
+      "SPIB"
+     ],
+     [
+      "STAT3",
+      "ZFP36"
+     ],
+     [
+      "VEGFA",
+      "ZFP36L1"
+     ]
+    ],
+    "genes_in_discordant_hits_top5": [
+     [
+      "NFKB1",
+      8
+     ],
+     [
+      "CIITA",
+      5
+     ],
+     [
+      "STAT3",
+      4
+     ],
+     [
+      "ICAM1",
+      4
+     ],
+     [
+      "PAX5",
+      3
+     ]
+    ],
+    "leave_top_hub_out": {
+     "hub": "NFKB1",
+     "cofire_only": 11,
+     "coexpr_only": 31,
+     "binom_p": 0.00191
+    }
+   }
+  }
+ },
+ "wall_s": 2297.0,
+ "P2_prefix": {
+  "minc_rule": "gene needs count > 0 in >= 3 cells of the prefix (else column zeroed); genes = U",
+  "cells_seen": {
+   "UCE": 6000,
+   "Tahoe": 6000,
+   "C2S": 6000,
+   "Geneformer": 6000
+  },
+  "models": {
+   "UCE": {
+    "K_cells": 6000,
+    "U_genes_usable_in_prefix": 20195,
+    "cofire_in_U_hits": 60,
+    "global_topN": {
+     "n_pairs": 91724,
+     "hits": 41,
+     "null_mean": 7.92,
+     "null_sd": 2.458,
+     "fold": 5.177,
+     "p_emp": 0.00498,
+     "n_perm": 200,
+     "seed": 7001,
+     "r_cutoff": 0.446,
+     "cofire_published_hits": 60
+    },
+    "node_matched": {
+     "n_pairs": 91724,
+     "hits": 43,
+     "null_mean": 9.035,
+     "null_sd": 2.708,
+     "fold": 4.759,
+     "p_emp": 0.00498,
+     "n_perm": 200,
+     "seed": 7002,
+     "r_cutoff": 0.4335
+    },
+    "node_matched_paired": {
+     "cofire_only_hits": 54,
+     "coexpr_only_hits": 37,
+     "shared_hits": 6,
+     "cofire_only_pairs": 87537,
+     "coexpr_only_pairs": 87537,
+     "binom_p": 0.09295
+    },
+    "deg_matched": {
+     "n_pairs": 91515,
+     "hits": 49,
+     "null_mean": 6.025,
+     "null_sd": 2.39,
+     "fold": 8.133,
+     "p_emp": 0.00498,
+     "n_perm": 200,
+     "seed": 7003,
+     "fill": 0.9977,
+     "rounds": 3
+    },
+    "deg_matched_paired": {
+     "cofire_only_hits": 51,
+     "coexpr_only_hits": 40,
+     "shared_hits": 9,
+     "cofire_only_pairs": 86204,
+     "coexpr_only_pairs": 85995,
+     "binom_p": 0.2945
+    },
+    "global_topN_minc1": {
+     "hits": 41,
+     "r_cutoff": 0.446,
+     "genes_usable": 20195
+    },
+    "global_topN_minc10": {
+     "hits": 41,
+     "r_cutoff": 0.446,
+     "genes_usable": 20195
+    }
+   },
+   "Tahoe": {
+    "K_cells": 6000,
+    "U_genes_usable_in_prefix": 20195,
+    "cofire_in_U_hits": 79,
+    "global_topN": {
+     "n_pairs": 78159,
+     "hits": 38,
+     "null_mean": 6.285,
+     "null_sd": 2.228,
+     "fold": 6.046,
+     "p_emp": 0.00498,
+     "n_perm": 200,
+     "seed": 7006,
+     "r_cutoff": 0.4609,
+     "cofire_published_hits": 79
+    },
+    "node_matched": {
+     "n_pairs": 76120,
+     "hits": 38,
+     "null_mean": 7.44,
+     "null_sd": 2.535,
+     "fold": 5.108,
+     "p_emp": 0.00498,
+     "n_perm": 200,
+     "seed": 7007,
+     "r_cutoff": 0.4531
+    },
+    "node_matched_paired": {
+     "cofire_only_hits": 67,
+     "coexpr_only_hits": 26,
+     "shared_hits": 12,
+     "cofire_only_pairs": 69011,
+     "coexpr_only_pairs": 69011,
+     "binom_p": 3e-05
+    },
+    "deg_matched": {
+     "n_pairs": 76102,
+     "hits": 53,
+     "null_mean": 8.59,
+     "null_sd": 2.848,
+     "fold": 6.17,
+     "p_emp": 0.00498,
+     "n_perm": 200,
+     "seed": 7008,
+     "fill": 0.9998,
+     "rounds": 3
+    },
+    "deg_matched_paired": {
+     "cofire_only_hits": 62,
+     "coexpr_only_hits": 36,
+     "shared_hits": 17,
+     "cofire_only_pairs": 66740,
+     "coexpr_only_pairs": 66722,
+     "binom_p": 0.01117
+    },
+    "global_topN_minc1": {
+     "hits": 38,
+     "r_cutoff": 0.4609,
+     "genes_usable": 20195
+    },
+    "global_topN_minc10": {
+     "hits": 38,
+     "r_cutoff": 0.4609,
+     "genes_usable": 20195
+    }
+   },
+   "C2S": {
+    "K_cells": 6000,
+    "U_genes_usable_in_prefix": 20195,
+    "cofire_in_U_hits": 93,
+    "global_topN": {
+     "n_pairs": 117131,
+     "hits": 51,
+     "null_mean": 9.815,
+     "null_sd": 2.793,
+     "fold": 5.196,
+     "p_emp": 0.00498,
+     "n_perm": 200,
+     "seed": 7011,
+     "r_cutoff": 0.4236,
+     "cofire_published_hits": 93
+    },
+    "node_matched": {
+     "n_pairs": 114350,
+     "hits": 51,
+     "null_mean": 10.075,
+     "null_sd": 2.896,
+     "fold": 5.062,
+     "p_emp": 0.00498,
+     "n_perm": 200,
+     "seed": 7012,
+     "r_cutoff": 0.4119
+    },
+    "node_matched_paired": {
+     "cofire_only_hits": 84,
+     "coexpr_only_hits": 42,
+     "shared_hits": 9,
+     "cofire_only_pairs": 105892,
+     "coexpr_only_pairs": 105892,
+     "binom_p": 0.00023
+    },
+    "deg_matched": {
+     "n_pairs": 114249,
+     "hits": 62,
+     "null_mean": 17.01,
+     "null_sd": 4.342,
+     "fold": 3.645,
+     "p_emp": 0.00498,
+     "n_perm": 200,
+     "seed": 7013,
+     "fill": 0.9991,
+     "rounds": 3
+    },
+    "deg_matched_paired": {
+     "cofire_only_hits": 77,
+     "coexpr_only_hits": 46,
+     "shared_hits": 16,
+     "cofire_only_pairs": 104788,
+     "coexpr_only_pairs": 104687,
+     "binom_p": 0.00659
+    },
+    "global_topN_minc1": {
+     "hits": 51,
+     "r_cutoff": 0.4236,
+     "genes_usable": 20195
+    },
+    "global_topN_minc10": {
+     "hits": 51,
+     "r_cutoff": 0.4236,
+     "genes_usable": 20195
+    }
+   },
+   "Geneformer": {
+    "K_cells": 6000,
+    "U_genes_usable_in_prefix": 20195,
+    "cofire_in_U_hits": 17,
+    "global_topN": {
+     "n_pairs": 50707,
+     "hits": 26,
+     "null_mean": 4.15,
+     "null_sd": 1.912,
+     "fold": 6.265,
+     "p_emp": 0.00498,
+     "n_perm": 200,
+     "seed": 7016,
+     "r_cutoff": 0.5001,
+     "cofire_published_hits": 17
+    },
+    "node_matched": {
+     "n_pairs": 50366,
+     "hits": 26,
+     "null_mean": 4.985,
+     "null_sd": 2.058,
+     "fold": 5.216,
+     "p_emp": 0.00498,
+     "n_perm": 200,
+     "seed": 7017,
+     "r_cutoff": 0.4787
+    },
+    "node_matched_paired": {
+     "cofire_only_hits": 14,
+     "coexpr_only_hits": 23,
+     "shared_hits": 3,
+     "cofire_only_pairs": 48551,
+     "coexpr_only_pairs": 48551,
+     "binom_p": 0.18774
+    },
+    "deg_matched": {
+     "n_pairs": 50364,
+     "hits": 43,
+     "null_mean": 7.07,
+     "null_sd": 2.652,
+     "fold": 6.082,
+     "p_emp": 0.00498,
+     "n_perm": 200,
+     "seed": 7018,
+     "fill": 1.0,
+     "rounds": 3
+    },
+    "deg_matched_paired": {
+     "cofire_only_hits": 12,
+     "coexpr_only_hits": 38,
+     "shared_hits": 5,
+     "cofire_only_pairs": 48280,
+     "coexpr_only_pairs": 48278,
+     "binom_p": 0.0002
+    },
+    "global_topN_minc1": {
+     "hits": 26,
+     "r_cutoff": 0.5001,
+     "genes_usable": 20195
+    },
+    "global_topN_minc10": {
+     "hits": 26,
+     "r_cutoff": 0.5001,
+     "genes_usable": 20195
+    }
+   }
+  }
+ },
+ "P3_unrestricted_universe": {
+  "n_genes": 23136,
+  "n_genes_outside_U": 2941,
+  "trrust_edges_in_universe": 7440,
+  "global": {
+   "91724": {
+    "n_pairs": 91724,
+    "hits": 41,
+    "null_mean": 7.66,
+    "null_sd": 2.697,
+    "fold": 5.352,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "seed": 7021,
+    "r_cutoff": 0.4475,
+    "pairs_with_gene_outside_U": 1428,
+    "U_restricted_hits_notes": 41
+   },
+   "78159": {
+    "n_pairs": 78159,
+    "hits": 37,
+    "null_mean": 6.445,
+    "null_sd": 2.286,
+    "fold": 5.741,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "seed": 7022,
+    "r_cutoff": 0.4622,
+    "pairs_with_gene_outside_U": 1147,
+    "U_restricted_hits_notes": 38
+   },
+   "117131": {
+    "n_pairs": 117131,
+    "hits": 49,
+    "null_mean": 9.335,
+    "null_sd": 2.913,
+    "fold": 5.249,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "seed": 7023,
+    "r_cutoff": 0.4253,
+    "pairs_with_gene_outside_U": 2073,
+    "U_restricted_hits_notes": 51
+   },
+   "50707": {
+    "n_pairs": 50707,
+    "hits": 26,
+    "null_mean": 3.935,
+    "null_sd": 1.926,
+    "fold": 6.607,
+    "p_emp": 0.00498,
+    "n_perm": 200,
+    "seed": 7024,
+    "r_cutoff": 0.5013,
+    "pairs_with_gene_outside_U": 666,
+    "U_restricted_hits_notes": 26
+   }
+  }
+ },
+ "P2b_prefix_sensitivity": {
+  "what": "degree-matched co-expression on the prefix: (a) gene filter >= 10 cells in the prefix instead of >= 3; (b) twice the estimated prefix (in case the token estimate is too low), filter >= 3",
+  "runs": {
+   "Tahoe|K264|minc10": {
+    "K_cells": 264,
+    "minc": 10,
+    "genes_usable": 12214,
+    "cofire_in_U_hits": 59,
+    "deg_matched": {
+     "n_pairs": 40678,
+     "hits": 28,
+     "null_mean": 4.445,
+     "null_sd": 2.19,
+     "fold": 6.299,
+     "p_emp": 0.00498,
+     "n_perm": 200,
+     "seed": 7001,
+     "fill": 0.999
+    },
+    "deg_matched_paired": {
+     "cofire_only_hits": 46,
+     "coexpr_only_hits": 15,
+     "shared_hits": 13,
+     "cofire_only_pairs": 36134,
+     "coexpr_only_pairs": 36094,
+     "binom_p": 9e-05
+    }
+   },
+   "scGPT|K424|minc10": {
+    "K_cells": 424,
+    "minc": 10,
+    "genes_usable": 13560,
+    "cofire_in_U_hits": 10,
+    "deg_matched": {
+     "n_pairs": 7866,
+     "hits": 3,
+     "null_mean": 0.805,
+     "null_sd": 0.853,
+     "fold": 3.727,
+     "p_emp": 0.02985,
+     "n_perm": 200,
+     "seed": 7002,
+     "fill": 0.9986
+    },
+    "deg_matched_paired": {
+     "cofire_only_hits": 7,
+     "coexpr_only_hits": 0,
+     "shared_hits": 3,
+     "cofire_only_pairs": 6552,
+     "coexpr_only_pairs": 6541,
+     "binom_p": 0.01563
+    }
+   },
+   "UCE|K496|minc10": {
+    "K_cells": 496,
+    "minc": 10,
+    "genes_usable": 14026,
+    "cofire_in_U_hits": 43,
+    "deg_matched": {
+     "n_pairs": 69877,
+     "hits": 41,
+     "null_mean": 3.98,
+     "null_sd": 2.022,
+     "fold": 10.302,
+     "p_emp": 0.00498,
+     "n_perm": 200,
+     "seed": 7003,
+     "fill": 0.9805
+    },
+    "deg_matched_paired": {
+     "cofire_only_hits": 37,
+     "coexpr_only_hits": 35,
+     "shared_hits": 6,
+     "cofire_only_pairs": 67472,
+     "coexpr_only_pairs": 66085,
+     "binom_p": 0.90666
+    }
+   },
+   "C2S|K984|minc10": {
+    "K_cells": 984,
+    "minc": 10,
+    "genes_usable": 15726,
+    "cofire_in_U_hits": 83,
+    "deg_matched": {
+     "n_pairs": 134888,
+     "hits": 72,
+     "null_mean": 20.98,
+     "null_sd": 4.927,
+     "fold": 3.432,
+     "p_emp": 0.00498,
+     "n_perm": 200,
+     "seed": 7004,
+     "fill": 0.9244
+    },
+    "deg_matched_paired": {
+     "cofire_only_hits": 67,
+     "coexpr_only_hits": 56,
+     "shared_hits": 16,
+     "cofire_only_pairs": 133200,
+     "coexpr_only_pairs": 122174,
+     "binom_p": 0.65214
+    }
+   },
+   "Geneformer|K264|minc10": {
+    "K_cells": 264,
+    "minc": 10,
+    "genes_usable": 12214,
+    "cofire_in_U_hits": 12,
+    "deg_matched": {
+     "n_pairs": 20083,
+     "hits": 14,
+     "null_mean": 3.085,
+     "null_sd": 1.769,
+     "fold": 4.538,
+     "p_emp": 0.00498,
+     "n_perm": 200,
+     "seed": 7005,
+     "fill": 0.9997
+    },
+    "deg_matched_paired": {
+     "cofire_only_hits": 8,
+     "coexpr_only_hits": 10,
+     "shared_hits": 4,
+     "cofire_only_pairs": 19048,
+     "coexpr_only_pairs": 19042,
+     "binom_p": 0.64755
+    }
+   },
+   "Tahoe|K528|minc3": {
+    "K_cells": 528,
+    "minc": 3,
+    "genes_usable": 17176,
+    "cofire_in_U_hits": 59,
+    "deg_matched": {
+     "n_pairs": 40633,
+     "hits": 33,
+     "null_mean": 4.4,
+     "null_sd": 2.216,
+     "fold": 7.5,
+     "p_emp": 0.00498,
+     "n_perm": 200,
+     "seed": 7006,
+     "fill": 0.9979
+    },
+    "deg_matched_paired": {
+     "cofire_only_hits": 42,
+     "coexpr_only_hits": 16,
+     "shared_hits": 17,
+     "cofire_only_pairs": 35278,
+     "coexpr_only_pairs": 35193,
+     "binom_p": 0.00086
+    }
+   },
+   "Geneformer|K528|minc3": {
+    "K_cells": 528,
+    "minc": 3,
+    "genes_usable": 17176,
+    "cofire_in_U_hits": 12,
+    "deg_matched": {
+     "n_pairs": 20089,
+     "hits": 13,
+     "null_mean": 3.015,
+     "null_sd": 1.592,
+     "fold": 4.312,
+     "p_emp": 0.00498,
+     "n_perm": 200,
+     "seed": 7007,
+     "fill": 1.0
+    },
+    "deg_matched_paired": {
+     "cofire_only_hits": 7,
+     "coexpr_only_hits": 8,
+     "shared_hits": 5,
+     "cofire_only_pairs": 18946,
+     "coexpr_only_pairs": 18946,
+     "binom_p": 1.0
+    }
+   },
+   "scGPT|K848|minc3": {
+    "K_cells": 848,
+    "minc": 3,
+    "genes_usable": 17774,
+    "cofire_in_U_hits": 10,
+    "deg_matched": {
+     "n_pairs": 7872,
+     "hits": 5,
+     "null_mean": 0.85,
+     "null_sd": 0.963,
+     "fold": 5.882,
+     "p_emp": 0.00498,
+     "n_perm": 200,
+     "seed": 7008,
+     "fill": 0.9994
+    },
+    "deg_matched_paired": {
+     "cofire_only_hits": 6,
+     "coexpr_only_hits": 1,
+     "shared_hits": 4,
+     "cofire_only_pairs": 5406,
+     "coexpr_only_pairs": 5401,
+     "binom_p": 0.125
+    }
+   }
+  }
+ },
+ "P2c_prefix_hub_check": {
+  "what": "degree-matched on the estimated prefix (floor >= 3 cells): discordant hits with the most frequent gene, then the two most frequent genes, removed",
+  "models": {
+   "Tahoe": {
+    "K": 264,
+    "paired": {
+     "cofire_only_hits": 45,
+     "coexpr_only_hits": 19,
+     "shared_hits": 14,
+     "cofire_only_pairs": 35881,
+     "coexpr_only_pairs": 35830,
+     "binom_p": 0.00156
+    },
+    "top_genes": [
+     [
+      "NFKB1",
+      11
+     ],
+     [
+      "IRF1",
+      5
+     ],
+     [
+      "SREBF2",
+      4
+     ],
+     [
+      "STAT1",
+      4
+     ],
+     [
+      "STAT3",
+      4
+     ],
+     [
+      "ICAM1",
+      4
+     ]
+    ],
+    "drop_top1": {
+     "genes": [
+      "NFKB1"
+     ],
+     "cofire_only": 36,
+     "coexpr_only": 17,
+     "binom_p": 0.01266
+    },
+    "drop_top2": {
+     "genes": [
+      "NFKB1",
+      "IRF1"
+     ],
+     "cofire_only": 31,
+     "coexpr_only": 17,
+     "binom_p": 0.05947
+    },
+    "cofire_only_hit_pairs": [
+     [
+      "ATF3",
+      "KLF6"
+     ],
+     [
+      "BCL6",
+      "STAT3"
+     ],
+     [
+      "BIRC3",
+      "NFKB1"
+     ],
+     [
+      "BIRC3",
+      "REL"
+     ],
+     [
+      "CCL20",
+      "NFKB1"
+     ],
+     [
+      "CD83",
+      "NFKB1"
+     ],
+     [
+      "CDKN1A",
+      "KLF10"
+     ],
+     [
+      "CIITA",
+      "HLA-DMA"
+     ],
+     [
+      "CIITA",
+      "HLA-DMB"
+     ],
+     [
+      "CIITA",
+      "HLA-DOA"
+     ],
+     [
+      "CIITA",
+      "HLA-DRA"
+     ],
+     [
+      "CLDN7",
+      "ELF3"
+     ],
+     [
+      "CREBBP",
+      "EP300"
+     ],
+     [
+      "CXCL8",
+      "NFKB1"
+     ],
+     [
+      "CXCL8",
+      "NFKBIA"
+     ],
+     [
+      "CXCR4",
+      "KLF2"
+     ],
+     [
+      "EMX2",
+      "HOXA10"
+     ],
+     [
+      "ETS1",
+      "FLI1"
+     ],
+     [
+      "FCER2",
+      "PAX5"
+     ],
+     [
+      "FDFT1",
+      "SREBF2"
+     ],
+     [
+      "FDPS",
+      "SREBF2"
+     ],
+     [
+      "FOXO1",
+      "IRS2"
+     ],
+     [
+      "FXYD2",
+      "HNF1B"
+     ],
+     [
+      "GLS",
+      "STAT1"
+     ],
+     [
+      "HCK",
+      "SPI1"
+     ],
+     [
+      "HMGCR",
+      "SREBF2"
+     ],
+     [
+      "ICAM1",
+      "NFKB1"
+     ],
+     [
+      "ICAM1",
+      "REL"
+     ],
+     [
+      "IL1B",
+      "NFKB1"
+     ],
+     [
+      "IL1B",
+      "NFKBIA"
+     ],
+     [
+      "IRF1",
+      "PSMB10"
+     ],
+     [
+      "IRF1",
+      "PSMB9"
+     ],
+     [
+      "IRF1",
+      "STAT1"
+     ],
+     [
+      "IRF1",
+      "STAT2"
+     ],
+     [
+      "IRF1",
+      "TAP1"
+     ],
+     [
+      "LDLR",
+      "SREBF2"
+     ],
+     [
+      "NFKB1",
+      "SOD2"
+     ],
+     [
+      "NFKB1",
+      "STAT4"
+     ],
+     [
+      "NFKB1",
+      "TRAF1"
+     ],
+     [
+      "NFKBIA",
+      "TRAF1"
+     ],
+     [
+      "REL",
+      "TNFAIP3"
+     ],
+     [
+      "SKIL",
+      "SMAD7"
+     ],
+     [
+      "SOCS3",
+      "STAT3"
+     ],
+     [
+      "STAT1",
+      "STAT2"
+     ],
+     [
+      "STAT1",
+      "XAF1"
+     ]
+    ],
+    "coexpr_only_hit_pairs": [
+     [
+      "ACP5",
+      "MITF"
+     ],
+     [
+      "BACH2",
+      "BCL2"
+     ],
+     [
+      "CCL3",
+      "NFKB1"
+     ],
+     [
+      "CCND2",
+      "MYC"
+     ],
+     [
+      "CDH5",
+      "ERG"
+     ],
+     [
+      "CTLA4",
+      "LEF1"
+     ],
+     [
+      "CTSS",
+      "SPI1"
+     ],
+     [
+      "CXCR4",
+      "ETS1"
+     ],
+     [
+      "E2F1",
+      "MCM5"
+     ],
+     [
+      "E2F1",
+      "TYMS"
+     ],
+     [
+      "E2F1",
+      "UHRF1"
+     ],
+     [
+      "EGR1",
+      "ETS2"
+     ],
+     [
+      "EPAS1",
+      "HIF3A"
+     ],
+     [
+      "ETS2",
+      "ICAM1"
+     ],
+     [
+      "ICAM1",
+      "STAT3"
+     ],
+     [
+      "MCL1",
+      "NFKB1"
+     ],
+     [
+      "MCL1",
+      "STAT3"
+     ],
+     [
+      "MNDA",
+      "SPI1"
+     ],
+     [
+      "SF1",
+      "SF3B1"
+     ]
+    ]
+   },
+   "scGPT": {
+    "K": 424,
+    "paired": {
+     "cofire_only_hits": 5,
+     "coexpr_only_hits": 0,
+     "shared_hits": 5,
+     "cofire_only_pairs": 5590,
+     "coexpr_only_pairs": 5567,
+     "binom_p": 0.0625
+    },
+    "top_genes": [
+     [
+      "E2F1",
+      3
+     ],
+     [
+      "LEFTY1",
+      1
+     ],
+     [
+      "POU5F1",
+      1
+     ],
+     [
+      "EGR1",
+      1
+     ],
+     [
+      "IFNG",
+      1
+     ],
+     [
+      "KIF2C",
+      1
+     ]
+    ],
+    "drop_top1": {
+     "genes": [
+      "E2F1"
+     ],
+     "cofire_only": 2,
+     "coexpr_only": 0,
+     "binom_p": 0.5
+    },
+    "drop_top2": {
+     "genes": [
+      "E2F1",
+      "LEFTY1"
+     ],
+     "cofire_only": 1,
+     "coexpr_only": 0,
+     "binom_p": 1.0
+    },
+    "cofire_only_hit_pairs": [
+     [
+      "BIRC5",
+      "E2F1"
+     ],
+     [
+      "E2F1",
+      "KIF2C"
+     ],
+     [
+      "E2F1",
+      "RRM2"
+     ],
+     [
+      "EGR1",
+      "IFNG"
+     ],
+     [
+      "LEFTY1",
+      "POU5F1"
+     ]
+    ],
+    "coexpr_only_hit_pairs": []
+   }
+  }
+ }
+}

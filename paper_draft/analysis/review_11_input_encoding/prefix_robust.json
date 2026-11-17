@@ -1,0 +1,929 @@
+{
+ "R_mid": 100,
+ "seed": 0,
+ "excluded_prefixes": [
+  "SLC",
+  "MT-",
+  "ZNF",
+  "ATP",
+  "MAP",
+  "EIF",
+  "PPP",
+  "NDU",
+  "MYO",
+  "HSP",
+  "TUB",
+  "KCN",
+  "COL",
+  "KRT",
+  "LIN",
+  "STK",
+  "TME",
+  "ANK",
+  "SFT",
+  "MIR"
+ ],
+ "exclusion_rule": "top-20 prefixes by summed 'same prefix, different HGNC group' pair counts over the ten models (prefix_examples.json top_prefixes, which lists each model's top 12)",
+ "models": {
+  "AIDO": {
+   "pooled_clean_same_p3_pairs": 1854,
+   "pooled_clean_top_prefixes_all_same_p3": [
+    [
+     "ZNF",
+     480
+    ],
+    [
+     "MT-",
+     182
+    ],
+    [
+     "ATP",
+     153
+    ],
+    [
+     "SLC",
+     134
+    ],
+    [
+     "TME",
+     74
+    ],
+    [
+     "RPL",
+     68
+    ],
+    [
+     "RPS",
+     61
+    ],
+    [
+     "KRT",
+     41
+    ],
+    [
+     "FAM",
+     39
+    ],
+    [
+     "HLA",
+     23
+    ],
+    [
+     "NDU",
+     21
+    ],
+    [
+     "SFT",
+     19
+    ]
+   ],
+   "mid": {
+    "layer": 4,
+    "n_features": 1024,
+    "n_pairs": 46080,
+    "metrics": {
+     "p3_diffgrp": {
+      "obs": 0.001433,
+      "null_mean": 0.001019,
+      "null_sd": 0.000173,
+      "fold": 1.407,
+      "z": 2.4,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     },
+     "p3_diffgrp_excl": {
+      "obs": 0.000414,
+      "null_mean": 0.000352,
+      "null_sd": 9.6e-05,
+      "fold": 1.176,
+      "z": 0.64,
+      "p_emp": 0.21782,
+      "n_perm": 100,
+      "direction": "greater"
+     },
+     "p3_all_excl": {
+      "obs": 0.001931,
+      "null_mean": 0.000918,
+      "null_sd": 0.000136,
+      "fold": 2.104,
+      "z": 7.48,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     }
+    }
+   }
+  },
+  "C2S": {
+   "pooled_clean_same_p3_pairs": 374984,
+   "pooled_clean_top_prefixes_all_same_p3": [
+    [
+     "RPL",
+     24991
+    ],
+    [
+     "LIN",
+     16894
+    ],
+    [
+     "SLC",
+     15807
+    ],
+    [
+     "RPS",
+     13115
+    ],
+    [
+     "ZNF",
+     12527
+    ],
+    [
+     "MT-",
+     8663
+    ],
+    [
+     "TME",
+     7302
+    ],
+    [
+     "ATP",
+     6369
+    ],
+    [
+     "EIF",
+     4875
+    ],
+    [
+     "HLA",
+     4679
+    ],
+    [
+     "NDU",
+     4642
+    ],
+    [
+     "FAM",
+     4388
+    ]
+   ],
+   "mid": {
+    "layer": 13,
+    "n_features": 9091,
+    "n_pairs": 375667,
+    "metrics": {
+     "p3_diffgrp": {
+      "obs": 0.010449,
+      "null_mean": 0.001173,
+      "null_sd": 6e-05,
+      "fold": 8.91,
+      "z": 154.64,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     },
+     "p3_diffgrp_excl": {
+      "obs": 0.005273,
+      "null_mean": 0.000374,
+      "null_sd": 3.2e-05,
+      "fold": 14.098,
+      "z": 152.67,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     },
+     "p3_all_excl": {
+      "obs": 0.03161,
+      "null_mean": 0.001101,
+      "null_sd": 4.9e-05,
+      "fold": 28.699,
+      "z": 627.8,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     }
+    }
+   }
+  },
+  "Geneformer": {
+   "pooled_clean_same_p3_pairs": 25908,
+   "pooled_clean_top_prefixes_all_same_p3": [
+    [
+     "RPL",
+     3971
+    ],
+    [
+     "MT-",
+     2182
+    ],
+    [
+     "ZNF",
+     1912
+    ],
+    [
+     "RPS",
+     1751
+    ],
+    [
+     "SLC",
+     1459
+    ],
+    [
+     "HLA",
+     1438
+    ],
+    [
+     "ATP",
+     704
+    ],
+    [
+     "MT1",
+     691
+    ],
+    [
+     "TME",
+     653
+    ],
+    [
+     "MRP",
+     603
+    ],
+    [
+     "NDU",
+     470
+    ],
+    [
+     "EIF",
+     414
+    ]
+   ],
+   "mid": {
+    "layer": 9,
+    "n_features": 4606,
+    "n_pairs": 203691,
+    "metrics": {
+     "p3_diffgrp": {
+      "obs": 0.001405,
+      "null_mean": 0.000952,
+      "null_sd": 7e-05,
+      "fold": 1.475,
+      "z": 6.46,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     },
+     "p3_diffgrp_excl": {
+      "obs": 0.000468,
+      "null_mean": 0.000345,
+      "null_sd": 4.2e-05,
+      "fold": 1.356,
+      "z": 2.9,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     },
+     "p3_all_excl": {
+      "obs": 0.003638,
+      "null_mean": 0.000926,
+      "null_sd": 6.8e-05,
+      "fold": 3.929,
+      "z": 39.62,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     }
+    }
+   }
+  },
+  "MaxToki": {
+   "pooled_clean_same_p3_pairs": 10330,
+   "pooled_clean_top_prefixes_all_same_p3": [
+    [
+     "ZNF",
+     2844
+    ],
+    [
+     "SLC",
+     998
+    ],
+    [
+     "TME",
+     552
+    ],
+    [
+     "RPL",
+     361
+    ],
+    [
+     "MRP",
+     359
+    ],
+    [
+     "SFT",
+     335
+    ],
+    [
+     "MT-",
+     278
+    ],
+    [
+     "PRB",
+     208
+    ],
+    [
+     "KCN",
+     167
+    ],
+    [
+     "FAM",
+     166
+    ],
+    [
+     "LRR",
+     162
+    ],
+    [
+     "RPS",
+     152
+    ]
+   ],
+   "mid": {
+    "layer": 5,
+    "n_features": 4928,
+    "n_pairs": 203905,
+    "metrics": {
+     "p3_diffgrp": {
+      "obs": 0.00159,
+      "null_mean": 0.001424,
+      "null_sd": 9.6e-05,
+      "fold": 1.117,
+      "z": 1.72,
+      "p_emp": 0.0396,
+      "n_perm": 100,
+      "direction": "greater"
+     },
+     "p3_diffgrp_excl": {
+      "obs": 0.000437,
+      "null_mean": 0.000392,
+      "null_sd": 4.8e-05,
+      "fold": 1.114,
+      "z": 0.93,
+      "p_emp": 0.12871,
+      "n_perm": 100,
+      "direction": "greater"
+     },
+     "p3_all_excl": {
+      "obs": 0.00156,
+      "null_mean": 0.001019,
+      "null_sd": 7.1e-05,
+      "fold": 1.531,
+      "z": 7.65,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     }
+    }
+   }
+  },
+  "UCE": {
+   "pooled_clean_same_p3_pairs": 194167,
+   "pooled_clean_top_prefixes_all_same_p3": [
+    [
+     "ZNF",
+     27919
+    ],
+    [
+     "SLC",
+     14251
+    ],
+    [
+     "RPL",
+     7470
+    ],
+    [
+     "MT-",
+     7004
+    ],
+    [
+     "RPS",
+     3445
+    ],
+    [
+     "TME",
+     3255
+    ],
+    [
+     "RAB",
+     3089
+    ],
+    [
+     "IGH",
+     2830
+    ],
+    [
+     "HLA",
+     2325
+    ],
+    [
+     "KCN",
+     2073
+    ],
+    [
+     "ATP",
+     1717
+    ],
+    [
+     "MRP",
+     1591
+    ]
+   ],
+   "mid": {
+    "layer": 16,
+    "n_features": 5116,
+    "n_pairs": 230220,
+    "metrics": {
+     "p3_diffgrp": {
+      "obs": 0.002574,
+      "null_mean": 0.001452,
+      "null_sd": 8.9e-05,
+      "fold": 1.773,
+      "z": 12.66,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     },
+     "p3_diffgrp_excl": {
+      "obs": 0.000666,
+      "null_mean": 0.000366,
+      "null_sd": 4.6e-05,
+      "fold": 1.822,
+      "z": 6.6,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     },
+     "p3_all_excl": {
+      "obs": 0.006533,
+      "null_mean": 0.000934,
+      "null_sd": 6.8e-05,
+      "fold": 6.997,
+      "z": 82.64,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     }
+    }
+   }
+  },
+  "scGPT": {
+   "pooled_clean_same_p3_pairs": 23226,
+   "pooled_clean_top_prefixes_all_same_p3": [
+    [
+     "RPL",
+     3883
+    ],
+    [
+     "LIN",
+     3262
+    ],
+    [
+     "MT-",
+     2692
+    ],
+    [
+     "RPS",
+     1752
+    ],
+    [
+     "HLA",
+     1231
+    ],
+    [
+     "ZNF",
+     707
+    ],
+    [
+     "MT1",
+     678
+    ],
+    [
+     "HSP",
+     632
+    ],
+    [
+     "TRB",
+     598
+    ],
+    [
+     "IGH",
+     520
+    ],
+    [
+     "SLC",
+     359
+    ],
+    [
+     "IGL",
+     265
+    ]
+   ],
+   "mid": {
+    "layer": 6,
+    "n_features": 2042,
+    "n_pairs": 91890,
+    "metrics": {
+     "p3_diffgrp": {
+      "obs": 0.003621,
+      "null_mean": 0.001352,
+      "null_sd": 0.000166,
+      "fold": 2.679,
+      "z": 13.71,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     },
+     "p3_diffgrp_excl": {
+      "obs": 0.000735,
+      "null_mean": 0.000396,
+      "null_sd": 7.8e-05,
+      "fold": 1.857,
+      "z": 4.33,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     },
+     "p3_all_excl": {
+      "obs": 0.013832,
+      "null_mean": 0.00169,
+      "null_sd": 0.000151,
+      "fold": 8.186,
+      "z": 80.59,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     }
+    }
+   }
+  },
+  "tGPT": {
+   "pooled_clean_same_p3_pairs": 14042,
+   "pooled_clean_top_prefixes_all_same_p3": [
+    [
+     "RPL",
+     7315
+    ],
+    [
+     "RPS",
+     3522
+    ],
+    [
+     "SLC",
+     458
+    ],
+    [
+     "ZNF",
+     216
+    ],
+    [
+     "SFT",
+     166
+    ],
+    [
+     "S10",
+     136
+    ],
+    [
+     "NDU",
+     122
+    ],
+    [
+     "TME",
+     99
+    ],
+    [
+     "CCL",
+     93
+    ],
+    [
+     "KRT",
+     61
+    ],
+    [
+     "HSP",
+     55
+    ],
+    [
+     "MT1",
+     50
+    ]
+   ],
+   "mid": {
+    "layer": 4,
+    "n_features": 3864,
+    "n_pairs": 140132,
+    "metrics": {
+     "p3_diffgrp": {
+      "obs": 0.001282,
+      "null_mean": 0.0007,
+      "null_sd": 6.9e-05,
+      "fold": 1.832,
+      "z": 8.42,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     },
+     "p3_diffgrp_excl": {
+      "obs": 0.000366,
+      "null_mean": 0.000286,
+      "null_sd": 4.9e-05,
+      "fold": 1.28,
+      "z": 1.63,
+      "p_emp": 0.0495,
+      "n_perm": 100,
+      "direction": "greater"
+     },
+     "p3_all_excl": {
+      "obs": 0.026753,
+      "null_mean": 0.010113,
+      "null_sd": 0.000286,
+      "fold": 2.645,
+      "z": 58.18,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     }
+    }
+   }
+  },
+  "scFoundation": {
+   "pooled_clean_same_p3_pairs": 6987,
+   "pooled_clean_top_prefixes_all_same_p3": [
+    [
+     "ZNF",
+     782
+    ],
+    [
+     "SLC",
+     689
+    ],
+    [
+     "MT-",
+     641
+    ],
+    [
+     "RPL",
+     606
+    ],
+    [
+     "RPS",
+     378
+    ],
+    [
+     "HLA",
+     256
+    ],
+    [
+     "HSP",
+     255
+    ],
+    [
+     "TME",
+     236
+    ],
+    [
+     "MT1",
+     225
+    ],
+    [
+     "ATP",
+     133
+    ],
+    [
+     "CCD",
+     109
+    ],
+    [
+     "NDU",
+     91
+    ]
+   ],
+   "mid": {
+    "layer": 6,
+    "n_features": 3071,
+    "n_pairs": 138195,
+    "metrics": {
+     "p3_diffgrp": {
+      "obs": 0.001855,
+      "null_mean": 0.00122,
+      "null_sd": 9e-05,
+      "fold": 1.52,
+      "z": 7.01,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     },
+     "p3_diffgrp_excl": {
+      "obs": 0.000422,
+      "null_mean": 0.000356,
+      "null_sd": 5.4e-05,
+      "fold": 1.184,
+      "z": 1.22,
+      "p_emp": 0.10891,
+      "n_perm": 100,
+      "direction": "greater"
+     },
+     "p3_all_excl": {
+      "obs": 0.003206,
+      "null_mean": 0.000926,
+      "null_sd": 7.7e-05,
+      "fold": 3.461,
+      "z": 29.42,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     }
+    }
+   }
+  },
+  "GeneCompass": {
+   "pooled_clean_same_p3_pairs": 10287,
+   "pooled_clean_top_prefixes_all_same_p3": [
+    [
+     "LIN",
+     4986
+    ],
+    [
+     "ZNF",
+     1207
+    ],
+    [
+     "MIR",
+     793
+    ],
+    [
+     "SLC",
+     654
+    ],
+    [
+     "FAM",
+     272
+    ],
+    [
+     "TME",
+     215
+    ],
+    [
+     "KCN",
+     162
+    ],
+    [
+     "LRR",
+     113
+    ],
+    [
+     "CCD",
+     107
+    ],
+    [
+     "ATP",
+     82
+    ],
+    [
+     "SNO",
+     80
+    ],
+    [
+     "KRT",
+     78
+    ]
+   ],
+   "mid": {
+    "layer": 6,
+    "n_features": 3072,
+    "n_pairs": 136965,
+    "metrics": {
+     "p3_diffgrp": {
+      "obs": 0.002225,
+      "null_mean": 0.001887,
+      "null_sd": 0.000134,
+      "fold": 1.179,
+      "z": 2.52,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     },
+     "p3_diffgrp_excl": {
+      "obs": 0.000434,
+      "null_mean": 0.000511,
+      "null_sd": 7.6e-05,
+      "fold": 0.85,
+      "z": -1.0,
+      "p_emp": 0.82178,
+      "n_perm": 100,
+      "direction": "greater"
+     },
+     "p3_all_excl": {
+      "obs": 0.001029,
+      "null_mean": 0.001197,
+      "null_sd": 9.8e-05,
+      "fold": 0.86,
+      "z": -1.71,
+      "p_emp": 0.9802,
+      "n_perm": 100,
+      "direction": "greater"
+     }
+    }
+   }
+  },
+  "Tahoe": {
+   "pooled_clean_same_p3_pairs": 128547,
+   "pooled_clean_top_prefixes_all_same_p3": [
+    [
+     "ZNF",
+     18506
+    ],
+    [
+     "RPL",
+     14337
+    ],
+    [
+     "LIN",
+     9163
+    ],
+    [
+     "MT-",
+     8594
+    ],
+    [
+     "SLC",
+     6675
+    ],
+    [
+     "RPS",
+     6422
+    ],
+    [
+     "HLA",
+     2828
+    ],
+    [
+     "ATP",
+     2387
+    ],
+    [
+     "TME",
+     2384
+    ],
+    [
+     "PSM",
+     2339
+    ],
+    [
+     "NDU",
+     1637
+    ],
+    [
+     "MT1",
+     1415
+    ]
+   ],
+   "mid": {
+    "layer": 16,
+    "n_features": 10226,
+    "n_pairs": 377153,
+    "metrics": {
+     "p3_diffgrp": {
+      "obs": 0.002992,
+      "null_mean": 0.001229,
+      "null_sd": 6.8e-05,
+      "fold": 2.436,
+      "z": 25.83,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     },
+     "p3_diffgrp_excl": {
+      "obs": 0.001111,
+      "null_mean": 0.000372,
+      "null_sd": 3.9e-05,
+      "fold": 2.984,
+      "z": 18.78,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     },
+     "p3_all_excl": {
+      "obs": 0.006045,
+      "null_mean": 0.001007,
+      "null_sd": 5.4e-05,
+      "fold": 6.002,
+      "z": 92.81,
+      "p_emp": 0.0099,
+      "n_perm": 100,
+      "direction": "greater"
+     }
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,255 @@
+{
+ "design": "Popularity-only predictors for the held-out TRRUST test (the paper's 'gene popularity' baseline,",
+ "n_perm": 200,
+ "budget": 50707,
+ "models": {
+  "AIDO": {
+   "graph_size": 500,
+   "n_featured_genes": 17040,
+   "HUB": {
+    "n_pairs": 500,
+    "hits": 0,
+    "null_mean": 0.0,
+    "fold": null,
+    "p_emp": 1.0
+   },
+   "HUB_budget": null,
+   "CLIQUE": {
+    "n_pairs": 500,
+    "hits": 0,
+    "null_mean": 0.0,
+    "fold": null,
+    "p_emp": 1.0
+   },
+   "CLIQUE_budget": null
+  },
+  "C2S": {
+   "graph_size": 117131,
+   "n_featured_genes": 16392,
+   "HUB": {
+    "n_pairs": 117131,
+    "hits": 29,
+    "null_mean": 24.235,
+    "fold": 1.2,
+    "p_emp": 0.18905
+   },
+   "HUB_budget": {
+    "n_pairs": 50707,
+    "hits": 10,
+    "null_mean": 8.57,
+    "fold": 1.17,
+    "p_emp": 0.37313
+   },
+   "CLIQUE": {
+    "n_pairs": 117131,
+    "hits": 36,
+    "null_mean": 22.39,
+    "fold": 1.61,
+    "p_emp": 0.00498
+   },
+   "CLIQUE_budget": {
+    "n_pairs": 50707,
+    "hits": 4,
+    "null_mean": 2.535,
+    "fold": 1.58,
+    "p_emp": 0.16915
+   }
+  },
+  "Geneformer": {
+   "graph_size": 50707,
+   "n_featured_genes": 16513,
+   "HUB": {
+    "n_pairs": 50707,
+    "hits": 4,
+    "null_mean": 3.755,
+    "fold": 1.07,
+    "p_emp": 0.57214
+   },
+   "HUB_budget": {
+    "n_pairs": 50707,
+    "hits": 4,
+    "null_mean": 3.9,
+    "fold": 1.03,
+    "p_emp": 0.55721
+   },
+   "CLIQUE": {
+    "n_pairs": 50707,
+    "hits": 4,
+    "null_mean": 2.585,
+    "fold": 1.55,
+    "p_emp": 0.199
+   },
+   "CLIQUE_budget": {
+    "n_pairs": 50707,
+    "hits": 4,
+    "null_mean": 2.585,
+    "fold": 1.55,
+    "p_emp": 0.18408
+   }
+  },
+  "MaxToki": {
+   "graph_size": 18944,
+   "n_featured_genes": 16502,
+   "HUB": {
+    "n_pairs": 18944,
+    "hits": 1,
+    "null_mean": 1.005,
+    "fold": 1.0,
+    "p_emp": 0.99502
+   },
+   "HUB_budget": null,
+   "CLIQUE": {
+    "n_pairs": 18944,
+    "hits": 1,
+    "null_mean": 0.64,
+    "fold": 1.56,
+    "p_emp": 0.64179
+   },
+   "CLIQUE_budget": null
+  },
+  "UCE": {
+   "graph_size": 91724,
+   "n_featured_genes": 15842,
+   "HUB": {
+    "n_pairs": 91724,
+    "hits": 10,
+    "null_mean": 8.7,
+    "fold": 1.15,
+    "p_emp": 0.33831
+   },
+   "HUB_budget": {
+    "n_pairs": 50707,
+    "hits": 7,
+    "null_mean": 5.305,
+    "fold": 1.32,
+    "p_emp": 0.24378
+   },
+   "CLIQUE": {
+    "n_pairs": 91724,
+    "hits": 14,
+    "null_mean": 8.945,
+    "fold": 1.57,
+    "p_emp": 0.00995
+   },
+   "CLIQUE_budget": {
+    "n_pairs": 50707,
+    "hits": 7,
+    "null_mean": 4.425,
+    "fold": 1.58,
+    "p_emp": 0.04975
+   }
+  },
+  "scGPT": {
+   "graph_size": 11516,
+   "n_featured_genes": 15109,
+   "HUB": {
+    "n_pairs": 11516,
+    "hits": 6,
+    "null_mean": 2.6,
+    "fold": 2.31,
+    "p_emp": 0.02488
+   },
+   "HUB_budget": null,
+   "CLIQUE": {
+    "n_pairs": 11516,
+    "hits": 3,
+    "null_mean": 1.94,
+    "fold": 1.55,
+    "p_emp": 0.25871
+   },
+   "CLIQUE_budget": null
+  },
+  "tGPT": {
+   "graph_size": 10498,
+   "n_featured_genes": 6622,
+   "HUB": {
+    "n_pairs": 10498,
+    "hits": 1,
+    "null_mean": 0.965,
+    "fold": 1.04,
+    "p_emp": 0.70149
+   },
+   "HUB_budget": null,
+   "CLIQUE": {
+    "n_pairs": 10498,
+    "hits": 0,
+    "null_mean": 0.0,
+    "fold": null,
+    "p_emp": 1.0
+   },
+   "CLIQUE_budget": null
+  },
+  "scFoundation": {
+   "graph_size": 8270,
+   "n_featured_genes": 16112,
+   "HUB": {
+    "n_pairs": 8270,
+    "hits": 0,
+    "null_mean": 0.475,
+    "fold": 0.0,
+    "p_emp": 1.0
+   },
+   "HUB_budget": null,
+   "CLIQUE": {
+    "n_pairs": 8270,
+    "hits": 0,
+    "null_mean": 0.0,
+    "fold": null,
+    "p_emp": 1.0
+   },
+   "CLIQUE_budget": null
+  },
+  "GeneCompass": {
+   "graph_size": 33938,
+   "n_featured_genes": 8984,
+   "HUB": {
+    "n_pairs": 33938,
+    "hits": 0,
+    "null_mean": 0.19,
+    "fold": 0.0,
+    "p_emp": 1.0
+   },
+   "HUB_budget": null,
+   "CLIQUE": {
+    "n_pairs": 33938,
+    "hits": 0,
+    "null_mean": 0.0,
+    "fold": null,
+    "p_emp": 1.0
+   },
+   "CLIQUE_budget": null
+  },
+  "Tahoe": {
+   "graph_size": 78159,
+   "n_featured_genes": 20538,
+   "HUB": {
+    "n_pairs": 78159,
+    "hits": 10,
+    "null_mean": 6.74,
+    "fold": 1.48,
+    "p_emp": 0.05473
+   },
+   "HUB_budget": {
+    "n_pairs": 50707,
+    "hits": 8,
+    "null_mean": 5.265,
+    "fold": 1.52,
+    "p_emp": 0.08955
+   },
+   "CLIQUE": {
+    "n_pairs": 78159,
+    "hits": 11,
+    "null_mean": 6.885,
+    "fold": 1.6,
+    "p_emp": 0.00995
+   },
+   "CLIQUE_budget": {
+    "n_pairs": 50707,
+    "hits": 7,
+    "null_mean": 4.505,
+    "fold": 1.55,
+    "p_emp": 0.06468
+   }
+  }
+ }
+}

@@ -1,0 +1,1009 @@
+{
+ "stored_grid_rows": [
+  {
+   "source": "recalibrate.json:configs",
+   "config": "no-PPI max100 a>=3 OR>=10",
+   "tier": "10 of 10 (core)",
+   "real": 0,
+   "null_mean": 0.0,
+   "null_sd": 0.0,
+   "n_perm": 20,
+   "real_rate_pct": 2.4,
+   "rand_rate_pct": 0.1,
+   "z_stored": 0.0,
+   "fold": null
+  },
+  {
+   "source": "recalibrate.json:configs",
+   "config": "no-PPI max100 a>=3",
+   "tier": "10 of 10 (core)",
+   "real": 0,
+   "null_mean": 0.0,
+   "null_sd": 0.0,
+   "n_perm": 20,
+   "real_rate_pct": 2.4,
+   "rand_rate_pct": 0.1,
+   "z_stored": 0.0,
+   "fold": null
+  },
+  {
+   "source": "recalibrate.json:configs",
+   "config": "no-PPI max200 a>=3 OR>=5",
+   "tier": "10 of 10 (core)",
+   "real": 0,
+   "null_mean": 0.0,
+   "null_sd": 0.0,
+   "n_perm": 20,
+   "real_rate_pct": 3.0,
+   "rand_rate_pct": 0.3,
+   "z_stored": 0.0,
+   "fold": null
+  },
+  {
+   "source": "recalibrate.json:configs",
+   "config": "no-PPI max200 a>=3",
+   "tier": "10 of 10 (core)",
+   "real": 0,
+   "null_mean": 0.0,
+   "null_sd": 0.0,
+   "n_perm": 20,
+   "real_rate_pct": 3.0,
+   "rand_rate_pct": 0.3,
+   "z_stored": 0.0,
+   "fold": null
+  },
+  {
+   "source": "recalibrate.json:configs",
+   "config": "no-PPI max200 a>=2",
+   "tier": "10 of 10 (core)",
+   "real": 58,
+   "null_mean": 123.7,
+   "null_sd": 15.6,
+   "n_perm": 20,
+   "real_rate_pct": 24.4,
+   "rand_rate_pct": 23.8,
+   "z_stored": -4.2,
+   "fold": 0.47
+  },
+  {
+   "source": "recalibrate2.json:configs",
+   "config": "top5 max200 a>=2 OR>=10",
+   "tier": "10 of 10 (core)",
+   "real": 58,
+   "null_mean": 128.2,
+   "null_sd": 14.7,
+   "n_perm": 20,
+   "real_rate_pct": 24.4,
+   "rand_rate_pct": 23.8,
+   "z_stored": -4.8,
+   "fold": 0.45
+  },
+  {
+   "source": "recalibrate2.json:configs",
+   "config": "top5 max200 a>=2 OR>=20",
+   "tier": "10 of 10 (core)",
+   "real": 58,
+   "null_mean": 124.9,
+   "null_sd": 9.4,
+   "n_perm": 20,
+   "real_rate_pct": 24.4,
+   "rand_rate_pct": 23.9,
+   "z_stored": -7.1,
+   "fold": 0.46
+  },
+  {
+   "source": "recalibrate2.json:configs",
+   "config": "top5 max100 a>=2 OR>=20",
+   "tier": "10 of 10 (core)",
+   "real": 5,
+   "null_mean": 4.9,
+   "null_sd": 2.1,
+   "n_perm": 20,
+   "real_rate_pct": 16.4,
+   "rand_rate_pct": 12.9,
+   "z_stored": 0.0,
+   "fold": 1.02
+  },
+  {
+   "source": "recalibrate2.json:configs",
+   "config": "top10 max200 a>=3",
+   "tier": "10 of 10 (core)",
+   "real": 0,
+   "null_mean": 0.1,
+   "null_sd": 0.2,
+   "n_perm": 20,
+   "real_rate_pct": 9.4,
+   "rand_rate_pct": 3.0,
+   "z_stored": -0.2,
+   "fold": 0.0
+  },
+  {
+   "source": "recalibrate2.json:configs",
+   "config": "top10 max200 a>=3 OR>=10",
+   "tier": "10 of 10 (core)",
+   "real": 0,
+   "null_mean": 0.1,
+   "null_sd": 0.3,
+   "n_perm": 20,
+   "real_rate_pct": 9.4,
+   "rand_rate_pct": 3.1,
+   "z_stored": -0.3,
+   "fold": 0.0
+  },
+  {
+   "source": "recalibrate2.json:configs",
+   "config": "top20 max300 a>=4",
+   "tier": "10 of 10 (core)",
+   "real": 3,
+   "null_mean": 0.8,
+   "null_sd": 0.9,
+   "n_perm": 20,
+   "real_rate_pct": 11.7,
+   "rand_rate_pct": 2.8,
+   "z_stored": 2.4,
+   "fold": 3.75
+  },
+  {
+   "source": "recalibrate_robust.json:grid",
+   "config": "top10 a3 max200",
+   "tier": ">=7",
+   "real": 216,
+   "null_mean": 13.7,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 15.8
+  },
+  {
+   "source": "recalibrate_robust.json:grid",
+   "config": "top10 a3 max200",
+   "tier": ">=8",
+   "real": 96,
+   "null_mean": 4.2,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 22.6
+  },
+  {
+   "source": "recalibrate_robust.json:grid",
+   "config": "top10 a3 max200",
+   "tier": ">=9",
+   "real": 29,
+   "null_mean": 0.4,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 72.5
+  },
+  {
+   "source": "recalibrate_robust.json:grid",
+   "config": "top10 a3 max200",
+   "tier": ">=10",
+   "real": 0,
+   "null_mean": 0.0,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 0.0
+  },
+  {
+   "source": "recalibrate_robust.json:grid",
+   "config": "top10 a3 max150",
+   "tier": ">=7",
+   "real": 146,
+   "null_mean": 0.6,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 243.3
+  },
+  {
+   "source": "recalibrate_robust.json:grid",
+   "config": "top10 a3 max150",
+   "tier": ">=8",
+   "real": 58,
+   "null_mean": 0.1,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 193.3
+  },
+  {
+   "source": "recalibrate_robust.json:grid",
+   "config": "top10 a3 max150",
+   "tier": ">=9",
+   "real": 12,
+   "null_mean": 0.0,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 40.0
+  },
+  {
+   "source": "recalibrate_robust.json:grid",
+   "config": "top10 a3 max150",
+   "tier": ">=10",
+   "real": 0,
+   "null_mean": 0.0,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 0.0
+  },
+  {
+   "source": "recalibrate_robust.json:grid",
+   "config": "top12 a3 max200",
+   "tier": ">=7",
+   "real": 293,
+   "null_mean": 65.8,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 4.4
+  },
+  {
+   "source": "recalibrate_robust.json:grid",
+   "config": "top12 a3 max200",
+   "tier": ">=8",
+   "real": 145,
+   "null_mean": 27.5,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 5.3
+  },
+  {
+   "source": "recalibrate_robust.json:grid",
+   "config": "top12 a3 max200",
+   "tier": ">=9",
+   "real": 45,
+   "null_mean": 7.0,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 6.4
+  },
+  {
+   "source": "recalibrate_robust.json:grid",
+   "config": "top12 a3 max200",
+   "tier": ">=10",
+   "real": 3,
+   "null_mean": 0.9,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 3.2
+  },
+  {
+   "source": "recalibrate_robust.json:grid",
+   "config": "top10 a3 max300",
+   "tier": ">=7",
+   "real": 307,
+   "null_mean": 91.4,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 3.4
+  },
+  {
+   "source": "recalibrate_robust.json:grid",
+   "config": "top10 a3 max300",
+   "tier": ">=8",
+   "real": 153,
+   "null_mean": 56.6,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 2.7
+  },
+  {
+   "source": "recalibrate_robust.json:grid",
+   "config": "top10 a3 max300",
+   "tier": ">=9",
+   "real": 52,
+   "null_mean": 25.9,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 2.0
+  },
+  {
+   "source": "recalibrate_robust.json:grid",
+   "config": "top10 a3 max300",
+   "tier": ">=10",
+   "real": 4,
+   "null_mean": 6.5,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 0.6
+  },
+  {
+   "source": "recalibrate_robust.json:grid",
+   "config": "top10 a3 max200 OR5",
+   "tier": ">=7",
+   "real": 216,
+   "null_mean": 13.3,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 16.2
+  },
+  {
+   "source": "recalibrate_robust.json:grid",
+   "config": "top10 a3 max200 OR5",
+   "tier": ">=8",
+   "real": 96,
+   "null_mean": 4.0,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 24.3
+  },
+  {
+   "source": "recalibrate_robust.json:grid",
+   "config": "top10 a3 max200 OR5",
+   "tier": ">=9",
+   "real": 29,
+   "null_mean": 0.5,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 58.0
+  },
+  {
+   "source": "recalibrate_robust.json:grid",
+   "config": "top10 a3 max200 OR5",
+   "tier": ">=10",
+   "real": 0,
+   "null_mean": 0.1,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 0.0
+  },
+  {
+   "source": "kegg_robust.json:full_GO_KEGG_Reactome",
+   "config": "top10 a3 max200",
+   "tier": ">=7",
+   "real": 216,
+   "null_mean": 13.7,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 15.8
+  },
+  {
+   "source": "kegg_robust.json:full_GO_KEGG_Reactome",
+   "config": "top10 a3 max200",
+   "tier": ">=8",
+   "real": 96,
+   "null_mean": 4.2,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 22.6
+  },
+  {
+   "source": "kegg_robust.json:full_GO_KEGG_Reactome",
+   "config": "top10 a3 max200",
+   "tier": ">=9",
+   "real": 29,
+   "null_mean": 0.4,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 72.5
+  },
+  {
+   "source": "kegg_robust.json:full_GO_KEGG_Reactome",
+   "config": "top10 a3 max200",
+   "tier": ">=10",
+   "real": 0,
+   "null_mean": 0.0,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 0.0
+  },
+  {
+   "source": "kegg_robust.json:dropKEGG_GO_Reactome",
+   "config": "top10 a3 max200 (no KEGG)",
+   "tier": ">=7",
+   "real": 155,
+   "null_mean": 10.2,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 15.2
+  },
+  {
+   "source": "kegg_robust.json:dropKEGG_GO_Reactome",
+   "config": "top10 a3 max200 (no KEGG)",
+   "tier": ">=8",
+   "real": 72,
+   "null_mean": 2.8,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 25.7
+  },
+  {
+   "source": "kegg_robust.json:dropKEGG_GO_Reactome",
+   "config": "top10 a3 max200 (no KEGG)",
+   "tier": ">=9",
+   "real": 24,
+   "null_mean": 0.8,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 32.0
+  },
+  {
+   "source": "kegg_robust.json:dropKEGG_GO_Reactome",
+   "config": "top10 a3 max200 (no KEGG)",
+   "tier": ">=10",
+   "real": 0,
+   "null_mean": 0.0,
+   "null_sd": null,
+   "n_perm": 20,
+   "fold_stored_floor0.3": 0.0
+  },
+  {
+   "source": "stats_final.json:backbone_null",
+   "config": "top10 a3 max200 (headline)",
+   "tier": ">=7",
+   "real": 216,
+   "null_mean": 13.16,
+   "null_sd": 3.55,
+   "n_perm": 250,
+   "p_emp": 0.00398406374501992,
+   "fold_stored_floor0.1": 16.4
+  },
+  {
+   "source": "stats_final.json:backbone_null",
+   "config": "top10 a3 max200 (headline)",
+   "tier": ">=8",
+   "real": 96,
+   "null_mean": 3.49,
+   "null_sd": 1.92,
+   "n_perm": 250,
+   "p_emp": 0.00398406374501992,
+   "fold_stored_floor0.1": 27.5
+  },
+  {
+   "source": "stats_final.json:backbone_null",
+   "config": "top10 a3 max200 (headline)",
+   "tier": ">=9",
+   "real": 29,
+   "null_mean": 0.6,
+   "null_sd": 0.86,
+   "n_perm": 250,
+   "p_emp": 0.00398406374501992,
+   "fold_stored_floor0.1": 48.7
+  },
+  {
+   "source": "stats_final.json:backbone_null",
+   "config": "top10 a3 max200 (headline)",
+   "tier": ">=10",
+   "real": 0,
+   "null_mean": 0.04,
+   "null_sd": 0.21,
+   "n_perm": 250,
+   "p_emp": 1.0,
+   "fold_stored_floor0.1": 0.0
+  },
+  {
+   "source": "degree_null.json:tiers (degree-matched null)",
+   "config": "top10 a3 max200 (headline)",
+   "tier": ">=7",
+   "real": 216,
+   "null_mean": 10.84,
+   "null_sd": 4.14,
+   "n_perm": 250,
+   "p_emp": 0.00398406374501992,
+   "fold_stored_floor0.1": 19.9
+  },
+  {
+   "source": "degree_null.json:tiers (degree-matched null)",
+   "config": "top10 a3 max200 (headline)",
+   "tier": ">=8",
+   "real": 96,
+   "null_mean": 1.95,
+   "null_sd": 1.57,
+   "n_perm": 250,
+   "p_emp": 0.00398406374501992,
+   "fold_stored_floor0.1": 49.2
+  },
+  {
+   "source": "degree_null.json:tiers (degree-matched null)",
+   "config": "top10 a3 max200 (headline)",
+   "tier": ">=9",
+   "real": 29,
+   "null_mean": 0.2,
+   "null_sd": 0.49,
+   "n_perm": 250,
+   "p_emp": 0.00398406374501992,
+   "fold_stored_floor0.1": 145.0
+  },
+  {
+   "source": "degree_null.json:tiers (degree-matched null)",
+   "config": "top10 a3 max200 (headline)",
+   "tier": ">=10",
+   "real": 0,
+   "null_mean": 0.01,
+   "null_sd": 0.09,
+   "n_perm": 250,
+   "p_emp": 1.0,
+   "fold_stored_floor0.1": 0.0
+  }
+ ],
+ "new_nulls_250perm": {
+  "mid_cap200": {
+   "cap": 200,
+   "top": 10,
+   "n_perm": 250,
+   "tiers": {
+    ">=7": {
+     "real": 216,
+     "null_mean": 13.164,
+     "null_sd": 3.545,
+     "null_max": 28,
+     "fold_raw": 16.41,
+     "fold_floor0.1": 16.4,
+     "z": 57.2,
+     "p_emp": 0.00398
+    },
+    ">=8": {
+     "real": 96,
+     "null_mean": 3.488,
+     "null_sd": 1.919,
+     "null_max": 11,
+     "fold_raw": 27.52,
+     "fold_floor0.1": 27.5,
+     "z": 48.2,
+     "p_emp": 0.00398
+    },
+    ">=9": {
+     "real": 29,
+     "null_mean": 0.596,
+     "null_sd": 0.863,
+     "null_max": 7,
+     "fold_raw": 48.66,
+     "fold_floor0.1": 48.7,
+     "z": 32.9,
+     "p_emp": 0.00398
+    },
+    ">=10": {
+     "real": 0,
+     "null_mean": 0.044,
+     "null_sd": 0.205,
+     "null_max": 1,
+     "fold_raw": 0.0,
+     "fold_floor0.1": 0.0,
+     "z": -0.2,
+     "p_emp": 1.0
+    }
+   },
+   "programmes_fullset_complete_J>=0.3": {
+    "real": 51,
+    "null_mean": 3.264,
+    "null_sd": 1.688,
+    "fold_raw": 15.63,
+    "p_emp": 0.00398
+   },
+   "programmes_fullset_complete_J>=0.5": {
+    "real": 59,
+    "null_mean": 3.284,
+    "null_sd": 1.714,
+    "fold_raw": 17.97,
+    "p_emp": 0.00398
+   }
+  },
+  "mid_cap150": {
+   "cap": 150,
+   "top": 10,
+   "n_perm": 250,
+   "tiers": {
+    ">=7": {
+     "real": 146,
+     "null_mean": 0.5,
+     "null_sd": 0.7,
+     "null_max": 3,
+     "fold_raw": 292.0,
+     "fold_floor0.1": 292.0,
+     "z": 207.9,
+     "p_emp": 0.00398
+    },
+    ">=8": {
+     "real": 58,
+     "null_mean": 0.068,
+     "null_sd": 0.252,
+     "null_max": 1,
+     "fold_raw": 852.94,
+     "fold_floor0.1": 580.0,
+     "z": 230.1,
+     "p_emp": 0.00398
+    },
+    ">=9": {
+     "real": 12,
+     "null_mean": 0.012,
+     "null_sd": 0.109,
+     "null_max": 1,
+     "fold_raw": 1000.0,
+     "fold_floor0.1": 120.0,
+     "z": 110.1,
+     "p_emp": 0.00398
+    },
+    ">=10": {
+     "real": 0,
+     "null_mean": 0.0,
+     "null_sd": 0.0,
+     "null_max": 0,
+     "fold_raw": null,
+     "fold_floor0.1": 0.0,
+     "z": 0.0,
+     "p_emp": 1.0
+    }
+   },
+   "programmes_fullset_complete_J>=0.3": {
+    "real": 29,
+    "null_mean": 0.068,
+    "null_sd": 0.252,
+    "fold_raw": 426.47,
+    "p_emp": 0.00398
+   },
+   "programmes_fullset_complete_J>=0.5": {
+    "real": 34,
+    "null_mean": 0.068,
+    "null_sd": 0.252,
+    "fold_raw": 500.0,
+    "p_emp": 0.00398
+   }
+  },
+  "mid_cap300": {
+   "cap": 300,
+   "top": 10,
+   "n_perm": 250,
+   "tiers": {
+    ">=7": {
+     "real": 307,
+     "null_mean": 91.64,
+     "null_sd": 6.081,
+     "null_max": 112,
+     "fold_raw": 3.35,
+     "fold_floor0.1": 3.4,
+     "z": 35.4,
+     "p_emp": 0.00398
+    },
+    ">=8": {
+     "real": 153,
+     "null_mean": 56.54,
+     "null_sd": 5.2,
+     "null_max": 68,
+     "fold_raw": 2.71,
+     "fold_floor0.1": 2.7,
+     "z": 18.5,
+     "p_emp": 0.00398
+    },
+    ">=9": {
+     "real": 52,
+     "null_mean": 26.668,
+     "null_sd": 4.447,
+     "null_max": 41,
+     "fold_raw": 1.95,
+     "fold_floor0.1": 1.9,
+     "z": 5.7,
+     "p_emp": 0.00398
+    },
+    ">=10": {
+     "real": 4,
+     "null_mean": 6.516,
+     "null_sd": 2.51,
+     "null_max": 14,
+     "fold_raw": 0.61,
+     "fold_floor0.1": 0.6,
+     "z": -1.0,
+     "p_emp": 0.89641
+    }
+   },
+   "programmes_fullset_complete_J>=0.3": {
+    "real": 89,
+    "null_mean": 45.484,
+    "null_sd": 4.153,
+    "fold_raw": 1.96,
+    "p_emp": 0.00398
+   },
+   "programmes_fullset_complete_J>=0.5": {
+    "real": 107,
+    "null_mean": 48.34,
+    "null_sd": 4.55,
+    "fold_raw": 2.21,
+    "p_emp": 0.00398
+   }
+  },
+  "mid_cap200_top12": {
+   "cap": 200,
+   "top": 12,
+   "n_perm": 250,
+   "tiers": {
+    ">=7": {
+     "real": 293,
+     "null_mean": 67.004,
+     "null_sd": 6.312,
+     "null_max": 87,
+     "fold_raw": 4.37,
+     "fold_floor0.1": 4.4,
+     "z": 35.8,
+     "p_emp": 0.00398
+    },
+    ">=8": {
+     "real": 145,
+     "null_mean": 29.38,
+     "null_sd": 4.95,
+     "null_max": 42,
+     "fold_raw": 4.94,
+     "fold_floor0.1": 4.9,
+     "z": 23.4,
+     "p_emp": 0.00398
+    },
+    ">=9": {
+     "real": 45,
+     "null_mean": 8.376,
+     "null_sd": 2.851,
+     "null_max": 16,
+     "fold_raw": 5.37,
+     "fold_floor0.1": 5.4,
+     "z": 12.8,
+     "p_emp": 0.00398
+    },
+    ">=10": {
+     "real": 3,
+     "null_mean": 1.108,
+     "null_sd": 1.032,
+     "null_max": 5,
+     "fold_raw": 2.71,
+     "fold_floor0.1": 2.7,
+     "z": 1.8,
+     "p_emp": 0.10359
+    }
+   },
+   "programmes_fullset_complete_J>=0.3": {
+    "real": 84,
+    "null_mean": 26.108,
+    "null_sd": 4.123,
+    "fold_raw": 3.22,
+    "p_emp": 0.00398
+   },
+   "programmes_fullset_complete_J>=0.5": {
+    "real": 97,
+    "null_mean": 26.796,
+    "null_sd": 4.267,
+    "fold_raw": 3.62,
+    "p_emp": 0.00398
+   }
+  },
+  "mid_7models_cap200": {
+   "cap": 200,
+   "top": 10,
+   "n_perm": 250,
+   "tiers": {
+    ">=5": {
+     "real": 517,
+     "null_mean": 34.624,
+     "null_sd": 6.129,
+     "null_max": 55,
+     "fold_raw": 14.93,
+     "fold_floor0.1": 14.9,
+     "z": 78.7,
+     "p_emp": 0.00398
+    },
+    ">=6": {
+     "real": 270,
+     "null_mean": 9.24,
+     "null_sd": 3.208,
+     "null_max": 21,
+     "fold_raw": 29.22,
+     "fold_floor0.1": 29.2,
+     "z": 81.3,
+     "p_emp": 0.00398
+    },
+    ">=7": {
+     "real": 25,
+     "null_mean": 1.172,
+     "null_sd": 1.155,
+     "null_max": 5,
+     "fold_raw": 21.33,
+     "fold_floor0.1": 21.3,
+     "z": 20.6,
+     "p_emp": 0.00398
+    }
+   },
+   "programmes_fullset_complete_J>=0.3": {
+    "real": 144,
+    "null_mean": 8.496,
+    "null_sd": 2.797,
+    "fold_raw": 16.95,
+    "p_emp": 0.00398
+   },
+   "programmes_fullset_complete_J>=0.5": {
+    "real": 182,
+    "null_mean": 8.596,
+    "null_sd": 2.864,
+    "fold_raw": 21.17,
+    "p_emp": 0.00398
+   }
+  }
+ },
+ "composition_real_ge8": {
+  "mid_cap150": {
+   "n_ge8": 58,
+   "class_weighted": {
+    "protein_synthesis": 28,
+    "specific": 24,
+    "other_housekeeping": 6
+   },
+   "class_union": {
+    "protein_synthesis": 27,
+    "specific": 25,
+    "other_housekeeping": 6
+   },
+   "share_protein_synthesis_weighted": 0.483,
+   "n_distinct_dominant_labels": 17,
+   "dominant_label_counts": {
+    "translation_machinery": 28,
+    "MHC_class_II": 6,
+    "histone": 4,
+    "oxphos_mito": 3,
+    "plasma_protein": 2,
+    "MHC_class_I": 2,
+    "other": 2,
+    "mixed": 2,
+    "metallothionein": 1,
+    "chemokine": 1,
+    "cell_cycle": 1,
+    "muscle_contractile": 1,
+    "proteasome": 1,
+    "heat_shock_chaperone": 1,
+    "immediate_early_AP1": 1,
+    "salivary_antimicrobial": 1,
+    "S100_alarmin": 1
+   },
+   "programmes": {
+    "hit_weighted|complete|J>=0.3": 23,
+    "features|complete|J>=0.3": 26,
+    "full_sets|complete|J>=0.3": 29,
+    "hit_weighted|complete|J>=0.5": 28,
+    "features|complete|J>=0.5": 29,
+    "full_sets|complete|J>=0.5": 34
+   },
+   "programmes_by_class_hit_weighted_J>=0.3": {
+    "protein_synthesis": 5,
+    "specific": 14,
+    "other_housekeeping": 4
+   }
+  },
+  "mid_cap200": {
+   "n_ge8": 96,
+   "class_weighted": {
+    "protein_synthesis": 42,
+    "specific": 42,
+    "other_housekeeping": 12
+   },
+   "class_union": {
+    "protein_synthesis": 39,
+    "specific": 45,
+    "other_housekeeping": 12
+   },
+   "share_protein_synthesis_weighted": 0.438,
+   "n_distinct_dominant_labels": 18,
+   "dominant_label_counts": {
+    "translation_machinery": 42,
+    "histone": 8,
+    "MHC_class_II": 8,
+    "mixed": 6,
+    "MHC_class_I": 5,
+    "proteasome": 4,
+    "oxphos_mito": 4,
+    "chemokine": 3,
+    "salivary_antimicrobial": 2,
+    "cell_cycle": 2,
+    "muscle_contractile": 2,
+    "plasma_protein": 2,
+    "heat_shock_chaperone": 2,
+    "other": 2,
+    "metallothionein": 1,
+    "immediate_early_AP1": 1,
+    "calmodulin_Ca_pump": 1,
+    "S100_alarmin": 1
+   },
+   "programmes": {
+    "hit_weighted|complete|J>=0.3": 37,
+    "features|complete|J>=0.3": 41,
+    "full_sets|complete|J>=0.3": 51,
+    "hit_weighted|complete|J>=0.5": 48,
+    "features|complete|J>=0.5": 51,
+    "full_sets|complete|J>=0.5": 59
+   },
+   "programmes_by_class_hit_weighted_J>=0.3": {
+    "protein_synthesis": 6,
+    "specific": 25,
+    "other_housekeeping": 6
+   }
+  },
+  "mid_cap300": {
+   "n_ge8": 153,
+   "class_weighted": {
+    "specific": 83,
+    "protein_synthesis": 48,
+    "other_housekeeping": 22
+   },
+   "class_union": {
+    "specific": 92,
+    "protein_synthesis": 44,
+    "other_housekeeping": 17
+   },
+   "share_protein_synthesis_weighted": 0.314,
+   "n_distinct_dominant_labels": 19,
+   "dominant_label_counts": {
+    "translation_machinery": 48,
+    "mixed": 33,
+    "proteasome": 11,
+    "oxphos_mito": 9,
+    "chemokine": 8,
+    "MHC_class_I": 8,
+    "histone": 8,
+    "MHC_class_II": 8,
+    "other": 4,
+    "salivary_antimicrobial": 2,
+    "cell_cycle": 2,
+    "muscle_contractile": 2,
+    "plasma_protein": 2,
+    "heat_shock_chaperone": 2,
+    "S100_alarmin": 2,
+    "metallothionein": 1,
+    "immediate_early_AP1": 1,
+    "calmodulin_Ca_pump": 1,
+    "keratin": 1
+   },
+   "programmes": {
+    "hit_weighted|complete|J>=0.3": 69,
+    "features|complete|J>=0.3": 75,
+    "full_sets|complete|J>=0.3": 89,
+    "hit_weighted|complete|J>=0.5": 89,
+    "features|complete|J>=0.5": 94,
+    "full_sets|complete|J>=0.5": 107
+   },
+   "programmes_by_class_hit_weighted_J>=0.3": {
+    "protein_synthesis": 6,
+    "other_housekeeping": 10,
+    "specific": 53
+   }
+  },
+  "mid_cap200_top12": {
+   "n_ge8": 145,
+   "class_weighted": {
+    "protein_synthesis": 44,
+    "specific": 89,
+    "other_housekeeping": 12
+   },
+   "class_union": {
+    "protein_synthesis": 41,
+    "specific": 94,
+    "other_housekeeping": 10
+   },
+   "share_protein_synthesis_weighted": 0.303,
+   "n_distinct_dominant_labels": 20,
+   "dominant_label_counts": {
+    "translation_machinery": 44,
+    "mixed": 19,
+    "chemokine": 12,
+    "histone": 9,
+    "proteasome": 8,
+    "MHC_class_II": 8,
+    "MHC_class_I": 7,
+    "other": 7,
+    "plasma_protein": 5,
+    "heat_shock_chaperone": 5,
+    "oxphos_mito": 4,
+    "cell_cycle": 3,
+    "S100_alarmin": 3,
+    "metallothionein": 2,
+    "salivary_antimicrobial": 2,
+    "interferon_ISG": 2,
+    "muscle_contractile": 2,
+    "complement": 1,
+    "immediate_early_AP1": 1,
+    "calmodulin_Ca_pump": 1
+   },
+   "programmes": {
+    "hit_weighted|complete|J>=0.3": 71,
+    "features|complete|J>=0.3": 76,
+    "full_sets|complete|J>=0.3": 84,
+    "hit_weighted|complete|J>=0.5": 86,
+    "features|complete|J>=0.5": 90,
+    "full_sets|complete|J>=0.5": 97
+   },
+   "programmes_by_class_hit_weighted_J>=0.3": {
+    "protein_synthesis": 7,
+    "specific": 58,
+    "other_housekeeping": 6
+   }
+  }
+ },
+ "note": "fold_raw = real / null mean with no floor; stored folds use floors 0.3 (recalibrate_robust, kegg_robust) or 0.1 (stats_final, degree_null)."
+}

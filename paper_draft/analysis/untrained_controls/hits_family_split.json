@@ -1,0 +1,26 @@
+{
+ "trained:UCE": {
+  "hits": 60,
+  "family_or_lookalike": 31
+ },
+ "trained:Geneformer": {
+  "hits": 17,
+  "family_or_lookalike": 1
+ },
+ "untrained_model:UCE": {
+  "hits": 32,
+  "family_or_lookalike": 18
+ },
+ "untrained_model:Geneformer": {
+  "hits": 1,
+  "family_or_lookalike": 0
+ },
+ "random_sae:UCE": {
+  "hits": 34,
+  "family_or_lookalike": 6
+ },
+ "random_sae:Geneformer": {
+  "hits": 12,
+  "family_or_lookalike": 0
+ }
+}

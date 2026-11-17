@@ -1,0 +1,454 @@
+{
+ "AIDO": {
+  "flagged_top10": 2,
+  "flagged_and_fired_ge100": 1,
+  "share": 0.5,
+  "genes_in_those_tails": [
+   [
+    "ATP5F1C",
+    1
+   ],
+   [
+    "ATP5PB",
+    1
+   ],
+   [
+    "ATP5IF1",
+    1
+   ],
+   [
+    "ATP5F1B",
+    1
+   ],
+   [
+    "ATP5MG",
+    1
+   ],
+   [
+    "ATP5ME",
+    1
+   ],
+   [
+    "ATP5PF",
+    1
+   ],
+   [
+    "ATP5MF",
+    1
+   ],
+   [
+    "ATP5MC3",
+    1
+   ],
+   [
+    "ATP5F1D",
+    1
+   ],
+   [
+    "BABAM2",
+    1
+   ],
+   [
+    "ATP5MC2",
+    1
+   ]
+  ]
+ },
+ "C2S": {
+  "flagged_top10": 18145,
+  "flagged_and_fired_ge100": 2265,
+  "share": 0.1248,
+  "genes_in_those_tails": [
+   [
+    "MT-TN",
+    65
+   ],
+   [
+    "MT-TP",
+    60
+   ],
+   [
+    "MT-TH",
+    59
+   ],
+   [
+    "MT-TA",
+    55
+   ],
+   [
+    "MT-TE",
+    55
+   ],
+   [
+    "MT-TK",
+    54
+   ],
+   [
+    "MT-TY",
+    53
+   ],
+   [
+    "S100A7",
+    52
+   ],
+   [
+    "S100A3",
+    52
+   ],
+   [
+    "S100A4",
+    51
+   ],
+   [
+    "S100A2",
+    51
+   ],
+   [
+    "S100A12",
+    51
+   ]
+  ]
+ },
+ "Geneformer": {
+  "flagged_top10": 21,
+  "flagged_and_fired_ge100": 21,
+  "share": 1.0,
+  "genes_in_those_tails": [
+   [
+    "HOXB7",
+    8
+   ],
+   [
+    "HOXA7",
+    8
+   ],
+   [
+    "HOXB8",
+    8
+   ],
+   [
+    "HOXC6",
+    8
+   ],
+   [
+    "HOXC8",
+    8
+   ],
+   [
+    "HOXD8",
+    8
+   ],
+   [
+    "HOXD3",
+    8
+   ],
+   [
+    "HOXC9",
+    8
+   ],
+   [
+    "H2BC4",
+    8
+   ],
+   [
+    "H2AC4",
+    8
+   ],
+   [
+    "H2AC11",
+    8
+   ],
+   [
+    "H1-5",
+    8
+   ]
+  ]
+ },
+ "MaxToki": {
+  "flagged_top10": 2,
+  "flagged_and_fired_ge100": 2,
+  "share": 1.0,
+  "genes_in_those_tails": [
+   [
+    "HOXC10",
+    1
+   ],
+   [
+    "HOXA7",
+    1
+   ],
+   [
+    "HOXA10",
+    1
+   ],
+   [
+    "HOXA9",
+    1
+   ],
+   [
+    "HOXC9",
+    1
+   ],
+   [
+    "HOXC6",
+    1
+   ],
+   [
+    "HOXC8",
+    1
+   ],
+   [
+    "HOXD9",
+    1
+   ],
+   [
+    "HOXB7",
+    1
+   ],
+   [
+    "SMAD7",
+    1
+   ],
+   [
+    "HOXA4",
+    1
+   ],
+   [
+    "HOXA1",
+    1
+   ]
+  ]
+ },
+ "UCE": {
+  "flagged_top10": 2064,
+  "flagged_and_fired_ge100": 417,
+  "share": 0.202,
+  "genes_in_those_tails": [
+   [
+    "H2AC16",
+    62
+   ],
+   [
+    "H2AC17",
+    60
+   ],
+   [
+    "H2AC13",
+    60
+   ],
+   [
+    "H2AC15",
+    60
+   ],
+   [
+    "H2BC9",
+    60
+   ],
+   [
+    "H2AC11",
+    57
+   ],
+   [
+    "H2BC14",
+    53
+   ],
+   [
+    "H2AC8",
+    52
+   ],
+   [
+    "H2BC10",
+    52
+   ],
+   [
+    "H2BC17",
+    52
+   ],
+   [
+    "H2BC3",
+    51
+   ],
+   [
+    "H2BC6",
+    51
+   ]
+  ]
+ },
+ "scGPT": {
+  "flagged_top10": 35,
+  "flagged_and_fired_ge100": 35,
+  "share": 1.0,
+  "genes_in_those_tails": [
+   [
+    "MT-ND1",
+    29
+   ],
+   [
+    "MT-RNR1",
+    29
+   ],
+   [
+    "MT-ND3",
+    29
+   ],
+   [
+    "MT-ATP6",
+    28
+   ],
+   [
+    "MT-ND4",
+    28
+   ],
+   [
+    "MT-ND2",
+    28
+   ],
+   [
+    "MT-ND5",
+    28
+   ],
+   [
+    "MT-CYB",
+    28
+   ],
+   [
+    "MT-CO1",
+    28
+   ],
+   [
+    "MT-CO2",
+    28
+   ],
+   [
+    "MT-ND4L",
+    28
+   ],
+   [
+    "MT-CO3",
+    27
+   ]
+  ]
+ },
+ "tGPT": {
+  "flagged_top10": 4204,
+  "flagged_and_fired_ge100": 0,
+  "share": 0.0,
+  "genes_in_those_tails": []
+ },
+ "scFoundation": {
+  "flagged_top10": 3,
+  "flagged_and_fired_ge100": 3,
+  "share": 1.0,
+  "genes_in_those_tails": [
+   [
+    "MT-ND4L",
+    2
+   ],
+   [
+    "MT-RNR2",
+    2
+   ],
+   [
+    "MT-RNR1",
+    2
+   ],
+   [
+    "MT-ATP8",
+    2
+   ],
+   [
+    "MT-ND5",
+    2
+   ],
+   [
+    "MT-CYB",
+    2
+   ],
+   [
+    "MT-ATP6",
+    2
+   ],
+   [
+    "MT-CO2",
+    2
+   ],
+   [
+    "MT-ND6",
+    2
+   ],
+   [
+    "MT-ND4",
+    2
+   ],
+   [
+    "MT-ND1",
+    2
+   ],
+   [
+    "MT-CO3",
+    2
+   ]
+  ]
+ },
+ "GeneCompass": {
+  "flagged_top10": 0,
+  "flagged_and_fired_ge100": 0,
+  "share": 0.0,
+  "genes_in_those_tails": []
+ },
+ "Tahoe": {
+  "flagged_top10": 1681,
+  "flagged_and_fired_ge100": 274,
+  "share": 0.163,
+  "genes_in_those_tails": [
+   [
+    "MT-ND2",
+    143
+   ],
+   [
+    "MT-ND6",
+    143
+   ],
+   [
+    "MT-CO1",
+    142
+   ],
+   [
+    "MT-CYB",
+    142
+   ],
+   [
+    "MT-ND1",
+    142
+   ],
+   [
+    "MT-ATP6",
+    142
+   ],
+   [
+    "MT-CO3",
+    142
+   ],
+   [
+    "MT-ND5",
+    142
+   ],
+   [
+    "MT-ND4L",
+    142
+   ],
+   [
+    "MT-ATP8",
+    142
+   ],
+   [
+    "MT-ND3",
+    142
+   ],
+   [
+    "MT-ND4",
+    141
+   ]
+  ]
+ }
+}
